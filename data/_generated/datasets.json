@@ -1,0 +1,114 @@
+{
+  "settings": {
+    "defaultDatasetName": "sars-cov-2",
+    "defaultDatasetNameFriendly": "SARS-CoV-2"
+  },
+  "datasets": [
+    {
+      "name": "flu-h1n1-pdm-ha",
+      "nameFriendly": "Influenza H1N1 PDM HA",
+      "description": "Hemagglutinin segment of Influenza A virus subtype H1N1. This strain was responsible for the \"swine flu\" pandemic in 2009.",
+      "versions": [
+        {
+          "datetime": "2021-06-25T00:00:00Z",
+          "comment": "Added configuration for the new QC checks.",
+          "compatibility": {
+            "nextcladeCli": {
+              "min": "1.3.0",
+              "max": null
+            },
+            "nextcladeWeb": {
+              "min": "1.5.0",
+              "max": null
+            }
+          },
+          "files": {
+            "geneMap": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/files/genemap.gff",
+            "primers": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/files/primers.csv",
+            "qc": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/files/qc.json",
+            "reference": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/files/reference.fasta",
+            "sequences": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/files/sequences.fasta",
+            "tree": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/files/tree.json"
+          },
+          "zipBundle": "/flu-h1n1-pdm-ha/versions/2021-06-25T00:00:00Z/zip-bundle/nextclade_dataset_flu-h1n1-pdm-ha_2021-06-25T00:00:00Z.zip"
+        },
+        {
+          "datetime": "2021-06-20T00:00:00Z",
+          "comment": "Initial version",
+          "compatibility": {
+            "nextcladeCli": {
+              "min": "1.2.0",
+              "max": null
+            },
+            "nextcladeWeb": {
+              "min": "1.4.0",
+              "max": null
+            }
+          },
+          "files": {
+            "geneMap": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/files/genemap.gff",
+            "primers": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/files/primers.csv",
+            "qc": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/files/qc.json",
+            "reference": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/files/reference.fasta",
+            "sequences": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/files/sequences.fasta",
+            "tree": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/files/tree.json"
+          },
+          "zipBundle": "/flu-h1n1-pdm-ha/versions/2021-06-20T00:00:00Z/zip-bundle/nextclade_dataset_flu-h1n1-pdm-ha_2021-06-20T00:00:00Z.zip"
+        }
+      ]
+    },
+    {
+      "name": "sars-cov-2",
+      "nameFriendly": "SARS-CoV-2",
+      "description": "Severe acute respiratory syndrome coronavirus 2. The strain that caused COVID-19 pandemic.",
+      "versions": [
+        {
+          "datetime": "2021-06-25T00:00:00Z",
+          "comment": "Added configuration for the new QC checks.",
+          "compatibility": {
+            "nextcladeCli": {
+              "min": "1.3.0",
+              "max": null
+            },
+            "nextcladeWeb": {
+              "min": "1.5.0",
+              "max": null
+            }
+          },
+          "files": {
+            "geneMap": "/sars-cov-2/versions/2021-06-25T00:00:00Z/files/genemap.gff",
+            "primers": "/sars-cov-2/versions/2021-06-25T00:00:00Z/files/primers.csv",
+            "qc": "/sars-cov-2/versions/2021-06-25T00:00:00Z/files/qc.json",
+            "reference": "/sars-cov-2/versions/2021-06-25T00:00:00Z/files/reference.fasta",
+            "sequences": "/sars-cov-2/versions/2021-06-25T00:00:00Z/files/sequences.fasta",
+            "tree": "/sars-cov-2/versions/2021-06-25T00:00:00Z/files/tree.json"
+          },
+          "zipBundle": "/sars-cov-2/versions/2021-06-25T00:00:00Z/zip-bundle/nextclade_dataset_sars-cov-2_2021-06-25T00:00:00Z.zip"
+        },
+        {
+          "datetime": "2021-06-20T00:00:00Z",
+          "comment": "Initial version.",
+          "compatibility": {
+            "nextcladeCli": {
+              "min": "1.2.0",
+              "max": null
+            },
+            "nextcladeWeb": {
+              "min": "1.4.0",
+              "max": null
+            }
+          },
+          "files": {
+            "geneMap": "/sars-cov-2/versions/2021-06-20T00:00:00Z/files/genemap.gff",
+            "primers": "/sars-cov-2/versions/2021-06-20T00:00:00Z/files/primers.csv",
+            "qc": "/sars-cov-2/versions/2021-06-20T00:00:00Z/files/qc.json",
+            "reference": "/sars-cov-2/versions/2021-06-20T00:00:00Z/files/reference.fasta",
+            "sequences": "/sars-cov-2/versions/2021-06-20T00:00:00Z/files/sequences.fasta",
+            "tree": "/sars-cov-2/versions/2021-06-20T00:00:00Z/files/tree.json"
+          },
+          "zipBundle": "/sars-cov-2/versions/2021-06-20T00:00:00Z/zip-bundle/nextclade_dataset_sars-cov-2_2021-06-20T00:00:00Z.zip"
+        }
+      ]
+    }
+  ]
+}
