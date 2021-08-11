@@ -5,6 +5,36 @@
   },
   "datasets": [
     {
+      "name": "flu_vic_ha",
+      "nameFriendly": "Influenza B Victoria HA",
+      "description": "",
+      "versions": [
+        {
+          "datetime": "2021-08-11T19:47:59Z",
+          "comment": "Initial version",
+          "compatibility": {
+            "nextcladeCli": {
+              "min": "1.2.0",
+              "max": null
+            },
+            "nextcladeWeb": {
+              "min": "1.4.0",
+              "max": null
+            }
+          },
+          "files": {
+            "geneMap": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/files/genemap.gff",
+            "primers": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/files/primers.csv",
+            "qc": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/files/qc.json",
+            "reference": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/files/reference.fasta",
+            "sequences": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/files/sequences.fasta",
+            "tree": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/files/tree.json"
+          },
+          "zipBundle": "/flu_vic_ha/versions/2021-08-11T19:47:59Z/zip-bundle/nextclade_dataset_flu_vic_ha_2021-08-11T19:47:59Z.zip"
+        }
+      ]
+    },
+    {
       "name": "flu-h1n1-pdm-ha",
       "nameFriendly": "Influenza H1N1 PDM HA",
       "description": "Hemagglutinin segment of Influenza A virus subtype H1N1. This strain was responsible for the \"swine flu\" pandemic in 2009.",
