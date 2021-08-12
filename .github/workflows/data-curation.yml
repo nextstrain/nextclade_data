@@ -31,10 +31,10 @@ jobs:
           popd >/dev/null
           aws --version
 
-      - name: index
+      - name: rebuild
         run: |
           set -x
-          ./scripts/index
+          ./scripts/rebuild
 
       - name: download
         run: |
