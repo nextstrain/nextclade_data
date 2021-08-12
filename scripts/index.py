@@ -7,7 +7,7 @@ import shutil
 from typing import List
 
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
-PROJECT_ROOT_DIR = os.path.realpath(os.path.join(THIS_DIR, "..", "..", ".."))
+PROJECT_ROOT_DIR = os.path.realpath(os.path.join(THIS_DIR, ".."))
 
 DATA_LOCAL_DIR = os.environ.get("DATA_LOCAL_DIR",os.path.realpath(os.path.join(PROJECT_ROOT_DIR,"data_local")))
 DATASETS_JSON_PATH = os.path.realpath(os.path.join(DATA_LOCAL_DIR, "_generated", "datasets.json"))
