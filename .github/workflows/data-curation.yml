@@ -40,7 +40,6 @@ jobs:
         run: |
           set -x
           ./scripts/download
-          ls -al
 
       - name: compare
         run: |
