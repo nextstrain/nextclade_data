@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Uploads fresh data repo to AWS S3
+
 BASH_DEBUG="${BASH_DEBUG:=}"
 ([ "${BASH_DEBUG}" == "true" ] || [ "${BASH_DEBUG}" == "1" ] ) && set -o xtrace
 set -o errexit

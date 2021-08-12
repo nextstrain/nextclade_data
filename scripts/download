@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Downloads data repo from AWS S3. Useful for comparison and for understanding what data is there currently.
+
 BASH_DEBUG="${BASH_DEBUG:=}"
 ([ "${BASH_DEBUG}" == "true" ] || [ "${BASH_DEBUG}" == "1" ] ) && set -o xtrace
 set -o errexit

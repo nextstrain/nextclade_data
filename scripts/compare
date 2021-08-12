@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Compares S3-downloaded data repo and freshly generated data repo.
+# Provides list of added, deleted and modified files as well as the diff of the index file
+
 BASH_DEBUG="${BASH_DEBUG:=}"
 ([ "${BASH_DEBUG}" == "true" ] || [ "${BASH_DEBUG}" == "1" ] ) && set -o xtrace
 set -o errexit

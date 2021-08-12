@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""
+Builds a fresh data repo from source data
+"""
+
 import fnmatch
 import json
 import os
