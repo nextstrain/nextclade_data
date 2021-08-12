@@ -19,6 +19,10 @@ if [ -f "${PROJECT_ROOT_DIR}/.env" ]; then
   source "${PROJECT_ROOT_DIR}/.env"
 fi
 
+if [ "${VERBOSE:=0}" == "1" ]; then
+set -x
+fi
+
 
 export AWS_PAGER=''
 DATA_OUTPUT_DIR="${PROJECT_ROOT_DIR}/data_output"

@@ -6,6 +6,14 @@ on:
 jobs:
   Deploy-Datasets:
     runs-on: ubuntu-20.04
+
+    env:
+      VERBOSE: 1
+      DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
+      DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
     steps:
       - uses: actions/checkout@v2
         with:
@@ -13,21 +21,21 @@ jobs:
 
       - name: index
         run: |
+          set -x
           ./scripts/index
 
-      - name: index
+      - name: download
         run: |
+          set -x
           ./scripts/download
+          ls -al
 
-      - name: index
+      - name: compare
         run: |
+          set -x
           ./scripts/compare
 
-      - name: index
+      - name: upload
         run: |
+          set -x
           ./scripts/upload
-
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}

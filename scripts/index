@@ -19,6 +19,9 @@ if [ -f "${PROJECT_ROOT_DIR}/.env" ]; then
   source "${PROJECT_ROOT_DIR}/.env"
 fi
 
+if [ "${VERBOSE:=0}" == "1" ]; then
+set -x
+fi
 
 export DATA_LOCAL_DIR="${PROJECT_ROOT_DIR}/${DATA_LOCAL_RELATIVE:-data_local}"
 

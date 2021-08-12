@@ -19,6 +19,11 @@ if [ -f "${PROJECT_ROOT_DIR}/.env" ]; then
   source "${PROJECT_ROOT_DIR}/.env"
 fi
 
+if [ "${VERBOSE:=0}" == "1" ]; then
+set -x
+fi
+
+
 : "${DATA_FULL_DOMAIN:?The DATA_FULL_DOMAIN environment variable is required.}"
 
 DATA_LOCAL_DIR="${PROJECT_ROOT_DIR}/${DATA_LOCAL_RELATIVE:-data_local}"
