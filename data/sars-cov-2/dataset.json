@@ -1,5 +1,5 @@
 {
+  "description": "Severe acute respiratory syndrome coronavirus 2. The strain that caused COVID-19 pandemic.",
   "name": "sars-cov-2",
-  "nameFriendly": "SARS-CoV-2",
-  "description": "Severe acute respiratory syndrome coronavirus 2. The strain that caused COVID-19 pandemic."
+  "nameFriendly": "SARS-CoV-2"
 }
