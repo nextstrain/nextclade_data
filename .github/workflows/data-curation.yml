@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-20.04
 
     env:
-      VERBOSE: 1
+      VERBOSE: 0
+      PYTHONUNBUFFERED: 1
       DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
       DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
