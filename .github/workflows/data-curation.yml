@@ -13,11 +13,22 @@ jobs:
       DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: us-east-2
 
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
+
+      - name: install awscli
+        run: |
+          set -x
+          pushd /tmp >/dev/null
+            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip -oqq awscliv2.zip
+            sudo ./aws/install --update
+          popd >/dev/null
+          aws --version
 
       - name: index
         run: |
