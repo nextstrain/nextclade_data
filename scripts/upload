@@ -41,8 +41,8 @@ pushd "${DATA_TEMP_DIR}" >/dev/null
   find . -type f ! -name '*.gz' -exec gzip -f "{}" \;
 popd >/dev/null
 
-aws s3 sync "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.gz" --content-encoding "gzip"
+aws s3 sync --only-show-errors "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.gz" --content-encoding "gzip"
 
-aws s3 sync "${DATA_OUTPUT_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.zip"
+aws s3 sync --only-show-errors "${DATA_OUTPUT_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.zip"
 
 aws cloudfront create-invalidation --distribution-id "${DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID}" --paths "/*" >/dev/null
