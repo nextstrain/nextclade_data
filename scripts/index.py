@@ -9,11 +9,15 @@ from typing import List
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT_DIR = os.path.realpath(os.path.join(THIS_DIR, ".."))
 
-DATA_LOCAL_DIR = os.environ.get("DATA_LOCAL_DIR",os.path.realpath(os.path.join(PROJECT_ROOT_DIR,"data_local")))
-DATASETS_JSON_PATH = os.path.realpath(os.path.join(DATA_LOCAL_DIR, "_generated", "datasets.json"))
-SETTINGS_JSON_PATH = os.path.realpath(os.path.join(DATA_LOCAL_DIR, "settings.json"))
+DATA_INPUT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT_DIR, "data"))
+DATA_OUTPUT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT_DIR, "data_output"))
 
-print(f"DATA_LOCAL_DIR = {DATA_LOCAL_DIR}")
+SETTINGS_JSON_PATH = os.path.realpath(os.path.join(DATA_INPUT_DIR, "settings.json"))
+INDEX_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "index.json"))
+
+print(f"DATA_INPUT_DIR = {DATA_INPUT_DIR}")
+print(f"DATA_OUTPUT_DIR = {DATA_OUTPUT_DIR}")
+
 
 def find_files(pattern, here):
     for path, dirs, files in os.walk(os.path.abspath(here)):
@@ -32,6 +36,8 @@ def find_dirs_here(here):
 
 
 if __name__ == '__main__':
+    shutil.rmtree(DATA_OUTPUT_DIR, ignore_errors=True)
+
     print("indexing...")
     with open(SETTINGS_JSON_PATH, 'r') as f:
         settings_json = json.load(f)
@@ -41,7 +47,7 @@ if __name__ == '__main__':
     defaultDatasetNameFriendly = None
 
     datasets = []
-    for dataset_json_path in find_files(pattern="dataset.json", here=DATA_LOCAL_DIR):
+    for dataset_json_path in find_files(pattern="dataset.json", here=DATA_INPUT_DIR):
         print(f"dataset_json_path: {dataset_json_path}")
         with open(dataset_json_path, 'r') as f:
             dataset_json: dict = json.load(f)
@@ -71,12 +77,12 @@ if __name__ == '__main__':
             zip_base = f"nextclade_dataset_{dataset_name}_{version_datetime}"
             zip_filename = f"{zip_base}.zip"
 
-            zip_base_path = os.path.join(DATA_LOCAL_DIR, zip_dir, zip_base)
+            zip_base_path = os.path.join(DATA_OUTPUT_DIR, zip_dir, zip_base)
             os.makedirs(os.path.dirname(zip_base_path), exist_ok=True)
             shutil.make_archive(
                 base_name=zip_base_path,
                 format='zip',
-                root_dir=os.path.realpath(os.path.join(DATA_LOCAL_DIR, files_dir))
+                root_dir=os.path.realpath(os.path.join(DATA_INPUT_DIR, files_dir))
             )
             version.update({"files": files, "zipBundle": f"/{zip_dir}/{zip_filename}"})
 
@@ -87,8 +93,8 @@ if __name__ == '__main__':
     datasets_json = dict()
     datasets_json.update({"settings": settings})
     datasets_json.update({"datasets": datasets})
-    os.makedirs(os.path.dirname(DATASETS_JSON_PATH), exist_ok=True)
-    with open(DATASETS_JSON_PATH, "w") as f:
+    os.makedirs(os.path.dirname(INDEX_JSON_PATH), exist_ok=True)
+    with open(INDEX_JSON_PATH, "w") as f:
         json.dump(datasets_json, f, indent=2)
     
-    print(f"dumped index to {DATASETS_JSON_PATH}")
+    print(f"dumped index to {INDEX_JSON_PATH}")
