@@ -164,7 +164,7 @@ if __name__ == '__main__':
     settings.update({'defaultDatasetNameFriendly': defaultDatasetNameFriendly})
 
     # Sort datasets alphabetically
-    datasets.sort(key=lambda x: x["name"])
+    datasets.sort(key=lambda x: x["nameFriendly"])
     # Move default dataset to the beginning
     datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
 
