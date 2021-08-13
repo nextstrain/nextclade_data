@@ -1,0 +1,22 @@
+{
+  "datetime": "2021-08-13T14:36:34Z",
+  "comment": "Initial version",
+  "compatibility": {
+    "nextcladeCli": {
+      "min": "1.2.0",
+      "max": null
+    },
+    "nextcladeWeb": {
+      "min": "1.4.0",
+      "max": null
+    }
+  },
+  "files": {
+    "geneMap": "genemap.gff",
+    "primers": "primers.csv",
+    "qc": "qc.json",
+    "reference": "reference.fasta",
+    "sequences": "sequences.fasta",
+    "tree": "tree.json"
+  }
+}
