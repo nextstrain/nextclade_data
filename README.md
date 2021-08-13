@@ -75,6 +75,7 @@ During rebuild, some files copied to datasets repository as is, others are modif
  - A dataset version directory name should match the tag
 
 
+
 ### Adding new dataset
 
 - Add a directory `data/<dataset_name>`, where `<dataset_name>` is the unique dataset name.
@@ -103,3 +104,8 @@ During rebuild, some files copied to datasets repository as is, others are modif
  - Remove `dataset.json` corresponding to this dataset (optionally, the dataset directory too) and commit to git.
 
 > ⚠️ Once committed and pushed to GitHub, all the files, source and generated become public. If any sensitive information was exposed, or if something needs to be deleted, ask someone with direct access to AWS to delete manually.
+
+
+## Testing datasets locally
+
+The guide in [Test datasets locally](https://github.com/nextstrain/nextclade/blob/master/docs/dev/datasets-local.md) describes how to change the datasets server URL used by Nextclade and Nextclade CLI as well as how to run a local dataset server. This is useful for testing the datasets modifications locally.
