@@ -2,3 +2,6 @@
 /data_output
 /data_temp
 \.env
+
+**/zip-bundle/
+**/_generated/

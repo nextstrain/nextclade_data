@@ -79,7 +79,7 @@ During rebuild, some files copied to the dataset repository output directory as 
 - Proceed to adding a dataset version as described in [Adding a version of the dataset](#adding-a-version-of-the-dataset).
 
 ### Adding a version of the dataset
-- Add a directory `data/<dataset_name>/<version_tag>`, where `<version_tag>` is the current datetime. Datetime precision is not required, write manually or try this and tweak slightly to match existing tags:
+- Add a directory `data/<dataset_name>/<version_tag>`, where `<version_tag>` is the current datetime. Datetime precision is not required, write manually or try this and tweak slightly to match existing tags (use `gdate` instead of `date` on MacOS):
      ```bash
      echo "$(date --iso-8601=seconds)Z"
      echo "$(date +"%Y-%m-%dT%H:%M:%S")Z"
