@@ -1,14 +1,10 @@
-<h1 id="dataset-curation" align="center">
-💾 Dataset curation
+<h1 id="nextclade-datasets" align="center">
+💾 Nextclade Datasets
 </h1>
 
 These are the tools for curating public Nextclade datasets.
 
 > ⚠️ This functionality is meant for the maintainers of Nextclade. We do not support using this outside of the team, but you can try anyways (you will need your own server infrastructure for that).
-
-
-> ⚠️ Note that the data is shared among all users of Nextclade, including CLI and Web users. Data corruption or incorrect format or content of JSON files will break Nextclade for everyone on the planet.
-
 
 
 <h2 id="dataset-curators-guide" align="center">
@@ -18,13 +14,13 @@ These are the tools for curating public Nextclade datasets.
 Dataset curation process is automated using GitHub Actions. The GitHub Actions workflow is described
 in [.github/workflows/data-curation.yml](.github/workflows/data-curation.yml). It runs on every push to the repository.
 
-The result of the curation process produces complete fresh data repository, including new index file, and uploads it to remote server, so that the data becomes available for Nextclade users.
+The Github Action rebuilds a fresh, complete data repository, including the new `index.json` file. It then uploads data repository to a remote server, so that the new data becomes available for Nextclade users. The process can also be reproduced locally, for verification the of results. 
 
 
 ### Data source
 
-View the contents of the `data/` directory. It contains source data for creating datasets repository.
-During rebuild, some files copied to datasets repository as is, others are modified of generated on the fly. 
+View the contents of the `data/` directory. It contains the source data for creating a complete dataset repository.
+During rebuild, some files copied to the dataset repository output directory as is, others are modified, or generated on the fly. 
 
  ```
  data
@@ -92,8 +88,8 @@ During rebuild, some files copied to datasets repository as is, others are modif
      ```
 - Add `metadata.json` describing the new version tag. If there are breaking changes, adjust `compatibility` fields accordingly.
 - Add files under `files/` in this subdirectory. File list should match the `files` entry in `metadata.json`.
-- Rebuild locally by running `./scripts/rebuild`
-- If the result is satisfactory, commit files to git. This will launch the automated rebuild and will upload the resulting fresh data repo to the remote server.
+- Rebuild locally by running `./scripts/rebuild`, observe the result in the `data_output/` directory.
+- If the result is satisfactory, commit `data/` files to git. This will launch the automated rebuild and will upload the resulting fresh data repo to the remote server.
 - Wait up to 5-10 minutes for Cloudfront cache to be updated
 - Verify that the modified data is available in Nextclade Web and Nextclade CLI
 
