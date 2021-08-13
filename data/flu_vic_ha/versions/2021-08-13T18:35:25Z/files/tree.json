@@ -42,6 +42,36 @@
       "continent",
       "country"
     ],
+    "genome_annotations": {
+      "HA1": {
+        "end": 1094,
+        "seqid": "CY018813.1",
+        "start": 57,
+        "strand": "+",
+        "type": "gene"
+      },
+      "HA2": {
+        "end": 1769,
+        "seqid": "CY018813.1",
+        "start": 1095,
+        "strand": "+",
+        "type": "gene"
+      },
+      "SigPep": {
+        "end": 56,
+        "seqid": "CY018813.1",
+        "start": 12,
+        "strand": "+",
+        "type": "gene"
+      },
+      "nuc": {
+        "end": 1842,
+        "seqid": "CY018813.1",
+        "start": 1,
+        "strand": "+",
+        "type": "source"
+      }
+    },
     "maintainers": [
       {
         "name": "Cornelius Roemer",
@@ -53,7 +83,8 @@
       }
     ],
     "panels": [
-      "tree"
+      "tree",
+      "entropy"
     ],
     "title": "Genomic epidemiology of Influenza",
     "updated": "2021-08-13"
