@@ -1,2 +1,4 @@
-data/_generated/
-**/zip-bundle/
+/data_downloaded
+/data_output
+/data_temp
+\.env

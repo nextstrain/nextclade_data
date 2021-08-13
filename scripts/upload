@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Uploads fresh data repo to AWS S3
+
+BASH_DEBUG="${BASH_DEBUG:=}"
+([ "${BASH_DEBUG}" == "true" ] || [ "${BASH_DEBUG}" == "1" ] ) && set -o xtrace
+set -o errexit
+set -o nounset
+set -o pipefail
+shopt -s dotglob
+trap "exit" INT
+
+# Directory where this script resides
+THIS_DIR=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+
+# Where the source code is
+PROJECT_ROOT_DIR="$(realpath ${THIS_DIR}/..)"
+
+source "${PROJECT_ROOT_DIR}/.env.example"
+if [ -f "${PROJECT_ROOT_DIR}/.env" ]; then
+  source "${PROJECT_ROOT_DIR}/.env"
+fi
+
+if [ "${VERBOSE:=0}" == "1" ]; then
+set -x
+fi
+
+
+export AWS_PAGER=''
+DATA_OUTPUT_DIR="${PROJECT_ROOT_DIR}/data_output"
+DATA_TEMP_DIR="${PROJECT_ROOT_DIR}/data_temp"
+
+: "${DATA_AWS_S3_BUCKET:?The DATA_AWS_S3_BUCKET environment variable is required.}"
+: "${DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID:?The DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID environment variable is required.}"
+
+
+rm -rf "${DATA_TEMP_DIR}"
+mkdir -p "${DATA_TEMP_DIR}"
+
+rsync --archive --exclude='*.zip' "${DATA_OUTPUT_DIR}/" "${DATA_TEMP_DIR}/"
+
+pushd "${DATA_TEMP_DIR}" >/dev/null
+  find . -type f ! -name '*.gz' -exec gzip -f "{}" \;
+popd >/dev/null
+
+aws s3 sync --only-show-errors "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.gz" --content-encoding "gzip"
+
+aws s3 sync --only-show-errors "${DATA_OUTPUT_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.zip"
+
+aws cloudfront create-invalidation --distribution-id "${DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID}" --paths "/*" >/dev/null
