@@ -58,17 +58,17 @@ def json_write(obj, filepath):
 
 def get_paths(dataset_json, version):
     dataset_name = dataset_json["name"]
-    version_datetime = version["datetime"]
+    version_tag = version["tag"]
     versions_dir = f"{dataset_name}/versions"
-    files_dir = f"{versions_dir}/{version_datetime}/files"
+    files_dir = f"{versions_dir}/{version_tag}/files"
     files = {f"{filetype}": f"/{files_dir}/{filename}" for
              filetype, filename in version['files'].items()}
 
     input_files_dir_abs = os.path.realpath(os.path.join(DATA_INPUT_DIR, files_dir))
     output_files_dir_abs = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, files_dir))
 
-    zip_dir = f"{versions_dir}/{version_datetime}/zip-bundle"
-    zip_base = f"nextclade_dataset_{dataset_name}_{version_datetime}"
+    zip_dir = f"{versions_dir}/{version_tag}/zip-bundle"
+    zip_base = f"nextclade_dataset_{dataset_name}_{version_tag}"
     zip_filename = f"{zip_base}.zip"
     zip_bundle_url = f"/{zip_dir}/{zip_filename}"
 
@@ -132,10 +132,10 @@ if __name__ == '__main__':
                 version_json: dict = json.load(f)
             versions.append(version_json)
 
-        versions.sort(key=lambda x: x["datetime"], reverse=True)
+        versions.sort(key=lambda x: x["tag"], reverse=True)
 
         for i, version in enumerate(versions):
-            tag = version["datetime"]
+            tag = version["tag"]
             paths = get_paths(dataset_json, version)
 
             # Generate `tag.json` inside output directory
