@@ -1,0 +1,22 @@
+{
+  "datetime": "2021-08-16T10:27:12Z",
+  "comment": "Increase tree size to 1000",
+  "compatibility": {
+    "nextcladeCli": {
+      "min": "1.2.0",
+      "max": null
+    },
+    "nextcladeWeb": {
+      "min": "1.4.0",
+      "max": null
+    }
+  },
+  "files": {
+    "geneMap": "genemap.gff",
+    "primers": "primers.csv",
+    "qc": "qc.json",
+    "reference": "reference.fasta",
+    "sequences": "sequences.fasta",
+    "tree": "tree.json"
+  }
+}
