@@ -30,7 +30,7 @@ During rebuild, some files copied to the dataset repository output directory as 
  │       └── 2021-08-11T19:47:59Z
  │           └── files
  │               ├── genemap.gff
- │               ├── metadata.json
+ │               ├── tag.json
  │               ├── primers.csv
  │               ├── qc.json
  │               ├── reference.fasta
@@ -42,7 +42,7 @@ During rebuild, some files copied to the dataset repository output directory as 
  │       ├── 2021-06-20T00:00:00Z
  │       │   └── files
  │       │       ├── genemap.gff
- │       │       ├── metadata.json
+ │       │       ├── tag.json
  │       │       ├── primers.csv
  │       │       ├── qc.json
  │       │       ├── reference.fasta
@@ -51,7 +51,7 @@ During rebuild, some files copied to the dataset repository output directory as 
  │       └── 2021-06-25T00:00:00Z
  │           └── files
  │               ├── genemap.gff
- │               ├── metadata.json
+ │               ├── tag.json
  │               ├── primers.csv
  │               ├── qc.json
  │               ├── reference.fasta
@@ -65,8 +65,8 @@ During rebuild, some files copied to the dataset repository output directory as 
  - Each directory contains a dataset
  - Each dataset is described by a `dataset.json` file. The `name` property of the `dataset.json` should match the directory name of the dataset.
  - Each dataset contains multiple versions, each under `versions/` subdirectory
- - Each dataset version is identified by a tag and described by `metadata.json` file.
- - Each dataset version contains a set of files in `files/` subdirectory. The `files` property in `metadata.json` should list these files.
+ - Each dataset version is identified by a tag and described by `tag.json` file.
+ - Each dataset version contains a set of files in `files/` subdirectory. The `files` property in `tag.json` should list these files.
  - A dataset version is uniquely identified by a tag (`datetime` currently)
  - A dataset version directory name should match the tag
 
@@ -86,8 +86,8 @@ During rebuild, some files copied to the dataset repository output directory as 
      echo "python3 -c "import datetime; print(datetime.datetime.now().isoformat())"
    2021-08-13T01:03:28.052350"
      ```
-- Add `metadata.json` describing the new version tag. If there are breaking changes, adjust `compatibility` fields accordingly.
-- Add files under `files/` in this subdirectory. File list should match the `files` entry in `metadata.json`.
+- Add `tag.json` describing the new version tag. If there are breaking changes, adjust `compatibility` fields accordingly.
+- Add files under `files/` in this subdirectory. File list should match the `files` entry in `tag.json`.
 - Rebuild locally by running `./scripts/rebuild`, observe the result in the `data_output/` directory.
 - If the result is satisfactory, commit `data/` files to git. This will launch the automated rebuild and will upload the resulting fresh data repo to the remote server.
 - Wait up to 5-10 minutes for Cloudfront cache to be updated
