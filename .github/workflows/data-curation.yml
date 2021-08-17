@@ -2,10 +2,14 @@ on:
   push:
     branches:
       - master
+      - staging
+      - release
 
 jobs:
   Deploy-Datasets:
     runs-on: ubuntu-20.04
+
+    environment: ${GITHUB_REF##*/}
 
     env:
       VERBOSE: 0
