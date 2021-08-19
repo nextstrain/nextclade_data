@@ -20,5 +20,6 @@
     "sequences": "sequences.fasta",
     "tree": "tree.json"
   },
+  "metadata": {},
   "referenceSequence": "A/California/07/2009"
 }
