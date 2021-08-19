@@ -1,5 +1,5 @@
 {
-  "description": "",
+  "description": "Influenza B Yamagata, HA segment",
   "enabled": true,
   "name": "flu_yam_ha",
   "nameFriendly": "Influenza B Yamagata HA"

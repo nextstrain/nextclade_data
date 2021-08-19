@@ -1,5 +1,5 @@
 {
-  "description": "",
+  "description": "Influenza A H1N1pdm, HA segment",
   "enabled": true,
   "name": "flu_h1n1pdm_ha",
   "nameFriendly": "Influenza A H1N1pdm HA"
