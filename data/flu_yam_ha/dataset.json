@@ -1,5 +1,6 @@
 {
   "description": "",
+  "enabled": true,
   "name": "flu_yam_ha",
   "nameFriendly": "Influenza B Yamagata HA"
 }

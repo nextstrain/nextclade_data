@@ -1,5 +1,6 @@
 {
   "description": "",
+  "enabled": true,
   "name": "flu_vic_ha",
   "nameFriendly": "Influenza B Victoria HA"
 }

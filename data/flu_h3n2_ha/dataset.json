@@ -1,5 +1,6 @@
 {
   "description": "",
+  "enabled": true,
   "name": "flu_h3n2_ha",
   "nameFriendly": "Influenza A H3N2 HA"
 }
