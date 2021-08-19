@@ -1,0 +1,23 @@
+{
+  "tag": "2021-08-19T13:31:30Z",
+  "comment": "feat: add reference sequence info",
+  "compatibility": {
+    "nextcladeCli": {
+      "min": "1.2.0",
+      "max": null
+    },
+    "nextcladeWeb": {
+      "min": "1.4.0",
+      "max": null
+    }
+  },
+  "files": {
+    "geneMap": "genemap.gff",
+    "primers": "primers.csv",
+    "qc": "qc.json",
+    "reference": "reference.fasta",
+    "sequences": "sequences.fasta",
+    "tree": "tree.json"
+  },
+  "referenceSequence": "A/California/07/2009"
+}
