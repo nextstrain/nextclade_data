@@ -1,5 +1,5 @@
 {
-  "description": "",
+  "description": "Influenza B Victoria, HA segment",
   "enabled": true,
   "name": "flu_vic_ha",
   "nameFriendly": "Influenza B Victoria HA"
