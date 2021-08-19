@@ -61,8 +61,9 @@ def get_paths(dataset_json, version):
     version_tag = version["tag"]
     versions_dir = f"{dataset_name}/versions"
     files_dir = f"{versions_dir}/{version_tag}/files"
-    files = {f"{filetype}": f"/{files_dir}/{filename}" for
-             filetype, filename in version['files'].items()}
+    filenames = version['files'].copy()
+    filenames["tag"] = "tag.json"
+    files = {f"{filetype}": f"/{files_dir}/{filename}" for filetype, filename in filenames.items()}
 
     input_files_dir_abs = os.path.realpath(os.path.join(DATA_INPUT_DIR, files_dir))
     output_files_dir_abs = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, files_dir))
