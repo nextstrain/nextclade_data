@@ -1,6 +1,6 @@
 {
   "tag": "2021-06-25T00:00:00Z",
-  "comment": "Initial version.",
+  "comment": "Initial release.",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.2.0",

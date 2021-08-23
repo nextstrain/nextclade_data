@@ -1,6 +1,6 @@
 {
   "tag": "2021-08-19T13:31:30Z",
-  "comment": "feat: add reference sequence info",
+  "comment": "Initial release.",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.2.0",
