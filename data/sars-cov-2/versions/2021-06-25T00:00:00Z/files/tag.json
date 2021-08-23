@@ -20,6 +20,5 @@
     "sequences": "sequences.fasta",
     "tree": "tree.json"
   },
-  "metadata": {},
-  "referenceSequence": "Wuhan-Hu-1 (MN908947)"
+  "metadata": {}
 }

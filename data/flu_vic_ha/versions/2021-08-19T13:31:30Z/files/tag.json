@@ -20,6 +20,5 @@
     "sequences": "sequences.fasta",
     "tree": "tree.json"
   },
-  "metadata": {},
-  "referenceSequence": "B/Brisbane/60/2008"
+  "metadata": {}
 }

@@ -20,6 +20,5 @@
     "sequences": "sequences.fasta",
     "tree": "tree.json"
   },
-  "metadata": {},
-  "referenceSequence": "A/Wisconsin/67/2005"
+  "metadata": {}
 }

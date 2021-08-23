@@ -3,5 +3,6 @@
   "enabled": true,
   "metadata": {},
   "name": "flu_vic_ha",
-  "nameFriendly": "Influenza B Victoria HA"
+  "nameFriendly": "Influenza B Victoria HA",
+  "referenceSequence": "B/Brisbane/60/2008"
 }

@@ -3,5 +3,6 @@
   "enabled": true,
   "metadata": {},
   "name": "sars-cov-2",
-  "nameFriendly": "SARS-CoV-2"
+  "nameFriendly": "SARS-CoV-2",
+  "referenceSequence": "Wuhan-Hu-1 (MN908947)"
 }
