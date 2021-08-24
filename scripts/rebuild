@@ -61,7 +61,7 @@ def json_write(obj, filepath):
 
 def get_paths(dataset_json, dataset_ref_json, version):
     dataset_name = dataset_json["name"]
-    ref_accession = dataset_ref_json["metadata"][REFERENCE]["accession"]
+    ref_accession = dataset_ref_json[REFERENCE]["accession"]
     version_tag = version["tag"]
     versions_dir = f"datasets/{dataset_name}/{REFERENCES}/{ref_accession}/versions"
     files_dir = f"{versions_dir}/{version_tag}/files"
