@@ -1,9 +1,10 @@
 {
   "enabled": true,
-  "metadata": {},
-  "reference": {
-    "source": "genbank",
-    "accession": "CY115183",
-    "strainName": "B/Wisconsin/01/2010"
+  "metadata": {
+    "reference": {
+      "source": "genbank",
+      "accession": "CY115183",
+      "strainName": "B/Wisconsin/01/2010"
+    }
   }
 }

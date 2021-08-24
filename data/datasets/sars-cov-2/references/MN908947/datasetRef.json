@@ -1,9 +1,10 @@
 {
   "enabled": true,
-  "metadata": {},
-  "reference": {
-    "source": "genbank",
-    "accession": "MN908947",
-    "strainName": "Wuhan-Hu-1/2019"
+  "metadata": {
+    "reference": {
+      "source": "genbank",
+      "accession": "MN908947",
+      "strainName": "Wuhan-Hu-1/2019"
+    }
   }
 }
