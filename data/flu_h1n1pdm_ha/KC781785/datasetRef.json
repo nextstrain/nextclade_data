@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "KC781785",
+    "strainName": "A/California/07/2009"
+  }
+}
