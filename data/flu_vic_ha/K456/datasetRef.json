@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "K456",
+    "strainName": "K/456/00/0000"
+  }
+}
