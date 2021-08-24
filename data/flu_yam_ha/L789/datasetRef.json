@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "L789",
+    "strainName": "L/789/00/0000"
+  }
+}
