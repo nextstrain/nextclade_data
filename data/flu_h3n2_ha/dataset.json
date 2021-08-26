@@ -1,8 +1,0 @@
-{
-  "description": "Influenza A H3N2, HA segment",
-  "enabled": true,
-  "metadata": {},
-  "name": "flu_h3n2_ha",
-  "nameFriendly": "Influenza A H3N2 HA",
-  "referenceSequence": "A/Wisconsin/67/2005"
-}

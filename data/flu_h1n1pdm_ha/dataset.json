@@ -1,8 +1,0 @@
-{
-  "description": "Influenza A H1N1pdm, HA segment",
-  "enabled": true,
-  "metadata": {},
-  "name": "flu_h1n1pdm_ha",
-  "nameFriendly": "Influenza A H1N1pdm HA",
-  "referenceSequence": "A/California/07/2009"
-}

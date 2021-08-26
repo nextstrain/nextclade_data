@@ -1,8 +1,0 @@
-{
-  "description": "Influenza B Yamagata, HA segment",
-  "enabled": true,
-  "metadata": {},
-  "name": "flu_yam_ha",
-  "nameFriendly": "Influenza B Yamagata HA",
-  "referenceSequence": "B/Wisconsin/01/2010"
-}

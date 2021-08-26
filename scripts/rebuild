@@ -14,7 +14,6 @@ from typing import List
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT_DIR = os.path.realpath(os.path.join(THIS_DIR, ".."))
 
-
 # Source data will be taken from this directory (relative to the project root)
 # Committed to repository. Modify files there.
 DATA_INPUT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT_DIR, "data"))
@@ -25,6 +24,10 @@ DATA_OUTPUT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT_DIR, "data_output")
 
 SETTINGS_JSON_PATH = os.path.realpath(os.path.join(DATA_INPUT_DIR, "settings.json"))
 INDEX_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "index.json"))
+
+# In case we want to change these words
+REFERENCE = "reference"
+REFERENCES = "references"
 
 from collections import namedtuple
 
@@ -56,10 +59,11 @@ def json_write(obj, filepath):
         f.write("\n")
 
 
-def get_paths(dataset_json, version):
+def get_paths(dataset_json, dataset_ref_json, version):
     dataset_name = dataset_json["name"]
+    ref_accession = dataset_ref_json[REFERENCE]["accession"]
     version_tag = version["tag"]
-    versions_dir = f"{dataset_name}/versions"
+    versions_dir = f"datasets/{dataset_name}/{REFERENCES}/{ref_accession}/versions"
     files_dir = f"{versions_dir}/{version_tag}/files"
     filenames = version['files'].copy()
     filenames["tag"] = "tag.json"
@@ -69,7 +73,7 @@ def get_paths(dataset_json, version):
     output_files_dir_abs = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, files_dir))
 
     zip_dir = f"{versions_dir}/{version_tag}/zip-bundle"
-    zip_base = f"nextclade_dataset_{dataset_name}_{version_tag}"
+    zip_base = f"nextclade_dataset_{dataset_name}_{ref_accession}_{version_tag}"
     zip_filename = f"{zip_base}.zip"
     zip_bundle_url = f"/{zip_dir}/{zip_filename}"
 
@@ -95,8 +99,8 @@ def copy_dataset_version_files(version, src_dir, dst_dir):
         shutil.copy2(input_filepath, output_filepath)
 
 
-def make_zip_bundle(dataset_json, version):
-    paths = get_paths(dataset_json, version)
+def make_zip_bundle(dataset_json, dataset_ref_json, version):
+    paths = get_paths(dataset_json, dataset_ref_json, version)
     os.makedirs(os.path.dirname(paths.zip_base_path), exist_ok=True)
     shutil.make_archive(
         base_name=paths.zip_base_path,
@@ -116,7 +120,7 @@ if __name__ == '__main__':
     defaultDatasetNameFriendly = None
 
     datasets = []
-    for dataset_json_path in find_files(pattern="dataset.json", here=DATA_INPUT_DIR):
+    for dataset_json_path in find_files(pattern="dataset.json", here=os.path.join(DATA_INPUT_DIR, "datasets")):
         with open(dataset_json_path, 'r') as f:
             dataset_json: dict = json.load(f)
         dataset_json_original = dataset_json.copy()
@@ -125,41 +129,53 @@ if __name__ == '__main__':
         if dataset_name == defaultDatasetName:
             defaultDatasetNameFriendly = dataset_json['nameFriendly']
 
-        # Read data descriptions for the tags
-        dir = os.path.dirname(dataset_json_path)
-        versions: List[dict] = []
-        for tag_path in find_files("tag.json", dir):
-            with open(tag_path, 'r') as f:
-                version_json: dict = json.load(f)
-            versions.append(version_json)
+        dataset_dir = os.path.dirname(dataset_json_path)
+        dataset_refs: List[dict] = []
+        for dataset_ref_json_path in find_files(pattern="datasetRef.json", here=dataset_dir):
 
-        versions.sort(key=lambda x: x["tag"], reverse=True)
+            with open(dataset_ref_json_path, 'r') as f:
+                dataset_ref_json: dict = json.load(f)
 
-        for i, version in enumerate(versions):
-            tag = version["tag"]
-            paths = get_paths(dataset_json, version)
+            dataset_ref_dir = os.path.dirname(dataset_ref_json_path)
 
-            # Generate `tag.json` inside output directory
-            tag_json = {**version_json, **dataset_json}
-            tag_json_path = os.path.join(paths.output_files_dir_abs, "tag.json")
-            json_write(tag_json, tag_json_path)
+            # Read data descriptions for the tags
+            versions: List[dict] = []
+            for tag_path in find_files("tag.json", dataset_ref_dir):
+                with open(tag_path, 'r') as f:
+                    version_json: dict = json.load(f)
+                versions.append(version_json)
 
-            # Copy files, including `tag.json` into output directory
-            copy_dataset_version_files(version, src_dir=paths.input_files_dir_abs, dst_dir=paths.output_files_dir_abs)
+            versions.sort(key=lambda x: x["tag"], reverse=True)
 
-            # Zip output directory
-            make_zip_bundle(dataset_json, version)
+            for i, version in enumerate(versions):
+                tag = version["tag"]
+                paths = get_paths(dataset_json, dataset_ref_json, version)
 
-            # Copy latest version output directory to directory `latest`
-            # (assumes `versions` are sorted by tag, reversed!)
-            if i == 0:
-                this_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, tag)
-                latest_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, "latest")
-                shutil.copytree(this_version_dir, latest_version_dir)
+                # Generate `tag.json` inside output directory
+                tag_metadata = {**version_json["metadata"], **dataset_json["metadata"], **dataset_ref_json["metadata"]}
+                tag_json = {**version_json, **dataset_json, **dataset_ref_json, "metadata": tag_metadata}
+                tag_json_path = os.path.join(paths.output_files_dir_abs, "tag.json")
+                json_write(tag_json, tag_json_path)
 
-            version.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
+                # Copy files, including `tag.json` into output directory
+                copy_dataset_version_files(version, src_dir=paths.input_files_dir_abs,
+                                           dst_dir=paths.output_files_dir_abs)
 
-        dataset = {**dataset_json, "versions": versions}
+                # Zip output directory
+                make_zip_bundle(dataset_json, dataset_ref_json, version)
+
+                # Copy latest version output directory to directory `latest`
+                # (assumes `versions` are sorted by tag, reversed!)
+                if i == 0:
+                    this_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, tag)
+                    latest_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, "latest")
+                    shutil.copytree(this_version_dir, latest_version_dir)
+
+                version.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
+
+            dataset_refs.append({**dataset_ref_json, "versions": versions})
+
+        dataset = {**dataset_json, "datasetRefs": dataset_refs}
         datasets.append(dataset)
 
     settings.update({'defaultDatasetNameFriendly': defaultDatasetNameFriendly})
