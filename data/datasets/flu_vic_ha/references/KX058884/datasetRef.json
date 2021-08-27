@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "KX058884",
+    "strainName": "B/Brisbane/60/2008"
+  }
+}

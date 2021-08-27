@@ -1,5 +1,0 @@
-##gff-version 3
-##sequence-region U26830.1
-CY114381	.	gene	15	62	.	+	0	gene_name "SigPep"
-CY114381	.	gene	63	1049	.	+	0	gene_name "HA1"
-CY114381	.	gene	1050	1712	.	+	0	gene_name "HA2"
