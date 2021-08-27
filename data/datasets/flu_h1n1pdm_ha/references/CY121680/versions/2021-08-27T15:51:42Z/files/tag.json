@@ -11,6 +11,7 @@
       "max": null
     }
   },
+  "enabled": true,
   "files": {
     "geneMap": "genemap.gff",
     "primers": "primers.csv",
