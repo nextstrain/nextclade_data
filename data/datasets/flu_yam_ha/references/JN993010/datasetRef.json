@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "JN993010",
+    "strainName": "B/Wisconsin/01/2010"
+  }
+}
