@@ -1,4 +1,5 @@
 {
+  "defaultGene": "HA1",
   "defaultRef": "CY121680",
   "enabled": true,
   "metadata": {},

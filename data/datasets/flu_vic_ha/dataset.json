@@ -1,4 +1,5 @@
 {
+  "defaultGene": "HA1",
   "defaultRef": "KX058884",
   "enabled": true,
   "metadata": {},
