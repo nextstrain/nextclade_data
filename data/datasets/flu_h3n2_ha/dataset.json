@@ -2,6 +2,7 @@
   "defaultGene": "HA1",
   "defaultRef": "CY163680",
   "enabled": true,
+  "geneOrderPreference": ["HA1", "HA2"],
   "metadata": {},
   "name": "flu_h3n2_ha",
   "nameFriendly": "Influenza A H3N2 HA"
