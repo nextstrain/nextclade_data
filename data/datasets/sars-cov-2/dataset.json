@@ -1,6 +1,5 @@
 {
   "defaultRef": "MN908947",
-  "description": "Severe acute respiratory syndrome coronavirus 2, the virus that causes COVID-19",
   "enabled": true,
   "metadata": {},
   "name": "sars-cov-2",

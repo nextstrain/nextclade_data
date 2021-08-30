@@ -1,6 +1,5 @@
 {
   "defaultRef": "JN993010",
-  "description": "Influenza B Yamagata, HA segment",
   "enabled": true,
   "metadata": {},
   "name": "flu_yam_ha",
