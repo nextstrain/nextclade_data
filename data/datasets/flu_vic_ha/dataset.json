@@ -1,6 +1,5 @@
 {
   "defaultRef": "KX058884",
-  "description": "Influenza B Victoria, HA segment",
   "enabled": true,
   "metadata": {},
   "name": "flu_vic_ha",
