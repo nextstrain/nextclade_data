@@ -1,7 +1,8 @@
 {
+  "defaultGene": "HA1",
   "defaultRef": "KX058884",
-  "description": "Influenza B Victoria, HA segment",
   "enabled": true,
+  "geneOrderPreference": ["HA1", "HA2"],
   "metadata": {},
   "name": "flu_vic_ha",
   "nameFriendly": "Influenza B Victoria HA"

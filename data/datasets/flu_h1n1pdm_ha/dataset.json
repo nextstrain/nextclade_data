@@ -1,7 +1,8 @@
 {
+  "defaultGene": "HA1",
   "defaultRef": "CY121680",
-  "description": "Influenza A H1N1pdm, HA segment",
   "enabled": true,
+  "geneOrderPreference": ["HA1", "HA2"],
   "metadata": {},
   "name": "flu_h1n1pdm_ha",
   "nameFriendly": "Influenza A H1N1pdm HA"

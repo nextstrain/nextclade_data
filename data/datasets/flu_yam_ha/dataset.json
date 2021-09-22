@@ -1,7 +1,8 @@
 {
+  "defaultGene": "HA1",
   "defaultRef": "JN993010",
-  "description": "Influenza B Yamagata, HA segment",
   "enabled": true,
+  "geneOrderPreference": ["HA1", "HA2"],
   "metadata": {},
   "name": "flu_yam_ha",
   "nameFriendly": "Influenza B Yamagata HA"

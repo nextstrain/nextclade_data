@@ -1,7 +1,21 @@
 {
+  "defaultGene": "S",
   "defaultRef": "MN908947",
-  "description": "Severe acute respiratory syndrome coronavirus 2. The strain that caused the COVID-19 pandemic.",
   "enabled": true,
+  "geneOrderPreference": [
+    "S",
+    "ORF1a",
+    "ORF1b",
+    "ORF3a",
+    "ORF6",
+    "ORF7a",
+    "ORF7b",
+    "ORF8",
+    "ORF9b",
+    "E",
+    "M",
+    "N"
+  ],
   "metadata": {},
   "name": "sars-cov-2",
   "nameFriendly": "SARS-CoV-2"
