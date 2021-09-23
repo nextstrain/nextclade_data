@@ -23,10 +23,17 @@
   "frameShifts": {
     "enabled": true,
     "ignoredFrameShifts": [
-      {
-        "geneName": "ORF3a",
-        "codonRange": {"begin": 256, "end": 276}
-      }
+      { "geneName": "ORF3a", "codonRange": {"begin": 256, "end": 276} },
+      { "geneName": "ORF3a", "codonRange": {"begin": 259, "end": 276} },
+      { "geneName": "ORF7a", "codonRange": {"begin": 62, "end": 122} },
+      { "geneName": "ORF7a", "codonRange": {"begin": 63, "end": 122} },
+      { "geneName": "ORF7a", "codonRange": {"begin": 77, "end": 122} },
+      { "geneName": "ORF7a", "codonRange": {"begin": 102, "end": 122} },
+      { "geneName": "ORF7b", "codonRange": {"begin": 42, "end": 44} },
+      { "geneName": "ORF8", "codonRange": {"begin": 108, "end": 122} },
+      { "geneName": "ORF8", "codonRange": {"begin": 120, "end": 122} },
+      { "geneName": "ORF8", "codonRange": {"begin": 121, "end": 122} },
+      { "geneName": "ORF8", "codonRange": {"begin": 122, "end": 123} }
     ]
   },
   "stopCodons": {
