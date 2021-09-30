@@ -2,7 +2,7 @@
 
 ### SARS-CoV-2 
 
-#### New dataset version (tag `2021-09-30T20:13:05Z`)
+#### New dataset version (tag `2021-09-30T08:13:05Z`)
 
  - Clades: changed name of clade "21H" to "21H (Mu)", as it has been designated a VOC by WHO
  - Reference tree: masked a number of mutations that were either homoplasic (occurred independently in multiple lineages) or were error-prone (in Delta), to prevent these mutations from distorting the tree.
