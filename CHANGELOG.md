@@ -1,3 +1,18 @@
+## 2021-10-11
+
+### SARS-CoV-2 
+
+#### New dataset version (tag `2021-10-11T19:00:32Z`)
+
+ - Clades: Two Delta subclades have been designated by Nextstrain and are now included in Nextclade, see announcement:
+> We've just updated Nextstrain clade designations to partition clade 21A (corresponding to the Delta WHO variant) into subclades 21I and 21J following our previously defined rules for defining clades when mutational and frequency thresholds are met.
+> Clade 21I is still a Delta variant virus, but possesses additional spike mutation A222V and ORF1a mutations P1640L, A3209V, V3718A and T3750I. 
+> Clade 21J is still a Delta variant virus, but possesses additional ORF1a mutations A1306S, P2046L, P2287S, V2930L, T3255I and T3646A, ORF7b mutation T40I, as well as N mutation G215C. Clade 21J is now the predominate form of Delta with an estimated ~79% global frequency. 
+> Clade defining mutations for clades 21I and 21J can be found in our public GitHub repo at: https://github.com/nextstrain/ncov/blob/master/defaults/clades.tsv#L102.
+ - Reference tree: Data has been updated to sequences submitted to Genbank by the first week of October.
+ - Reference tree: Pango lineages designated until 2021-10-10 have been sampled into the tree, including among others: AY.4.1-3, AY.34-39 [see pango release changes](https://github.com/cov-lineages/pango-designation/compare/v1.2.77...v1.2.84)
+
+
 ## 2021-09-30
 
 ### SARS-CoV-2 
