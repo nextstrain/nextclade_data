@@ -174,7 +174,7 @@ if __name__ == '__main__':
 
                 version_json.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
 
-            dataset_refs.append({**dataset_ref_json, "version_jsons": version_jsons})
+            dataset_refs.append({**dataset_ref_json, "versions": version_jsons})
 
         dataset = {**dataset_json, "datasetRefs": dataset_refs}
         datasets.append(dataset)
