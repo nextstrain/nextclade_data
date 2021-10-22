@@ -139,15 +139,16 @@ if __name__ == '__main__':
             dataset_ref_dir = os.path.dirname(dataset_ref_json_path)
 
             # Read data descriptions for the tags
-            versions: List[dict] = []
+            version_jsons: List[dict] = []
             for tag_path in find_files("tag.json", dataset_ref_dir):
                 with open(tag_path, 'r') as f:
                     version_json: dict = json.load(f)
-                versions.append(version_json)
+                version_jsons.append(version_json)
 
-            versions.sort(key=lambda x: x["tag"], reverse=True)
+            del version_json
+            version_jsons.sort(key=lambda x: x["tag"], reverse=True)
 
-            for i, version_json in enumerate(versions):
+            for i, version_json in enumerate(version_jsons):
                 tag = version_json["tag"]
                 paths = get_paths(dataset_json, dataset_ref_json, version_json)
 
@@ -165,7 +166,7 @@ if __name__ == '__main__':
                 make_zip_bundle(dataset_json, dataset_ref_json, version_json)
 
                 # Copy latest version output directory to directory `latest`
-                # (assumes `versions` are sorted by tag, reversed!)
+                # (assumes `version_jsons` are sorted by tag, reversed!)
                 if i == 0:
                     this_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, tag)
                     latest_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, "latest")
@@ -173,7 +174,7 @@ if __name__ == '__main__':
 
                 version_json.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
 
-            dataset_refs.append({**dataset_ref_json, "versions": versions})
+            dataset_refs.append({**dataset_ref_json, "versions": version_jsons})
 
         dataset = {**dataset_json, "datasetRefs": dataset_refs}
         datasets.append(dataset)
