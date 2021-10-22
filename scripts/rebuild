@@ -152,8 +152,8 @@ if __name__ == '__main__':
                 paths = get_paths(dataset_json, dataset_ref_json, version)
 
                 # Generate `tag.json` inside output directory
-                tag_metadata = {**version_json["metadata"], **dataset_json["metadata"], **dataset_ref_json["metadata"]}
-                tag_json = {**version_json, **dataset_json, **dataset_ref_json, "metadata": tag_metadata}
+                tag_metadata = {**version["metadata"], **dataset_json["metadata"], **dataset_ref_json["metadata"]}
+                tag_json = {**version, **dataset_json, **dataset_ref_json, "metadata": tag_metadata}
                 tag_json_path = os.path.join(paths.output_files_dir_abs, "tag.json")
                 json_write(tag_json, tag_json_path)
 
