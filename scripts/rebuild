@@ -147,9 +147,9 @@ if __name__ == '__main__':
 
             versions.sort(key=lambda x: x["tag"], reverse=True)
 
-            for i, version in enumerate(versions):
-                tag = version["tag"]
-                paths = get_paths(dataset_json, dataset_ref_json, version)
+            for i, version_json in enumerate(versions):
+                tag = version_json["tag"]
+                paths = get_paths(dataset_json, dataset_ref_json, version_json)
 
                 # Generate `tag.json` inside output directory
                 tag_metadata = {**version_json["metadata"], **dataset_json["metadata"], **dataset_ref_json["metadata"]}
@@ -158,11 +158,11 @@ if __name__ == '__main__':
                 json_write(tag_json, tag_json_path)
 
                 # Copy files, including `tag.json` into output directory
-                copy_dataset_version_files(version, src_dir=paths.input_files_dir_abs,
+                copy_dataset_version_files(version_json, src_dir=paths.input_files_dir_abs,
                                            dst_dir=paths.output_files_dir_abs)
 
                 # Zip output directory
-                make_zip_bundle(dataset_json, dataset_ref_json, version)
+                make_zip_bundle(dataset_json, dataset_ref_json, version_json)
 
                 # Copy latest version output directory to directory `latest`
                 # (assumes `versions` are sorted by tag, reversed!)
@@ -171,7 +171,7 @@ if __name__ == '__main__':
                     latest_version_dir = os.path.join(DATA_OUTPUT_DIR, paths.versions_dir, "latest")
                     shutil.copytree(this_version_dir, latest_version_dir)
 
-                version.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
+                version_json.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
 
             dataset_refs.append({**dataset_ref_json, "versions": versions})
 
