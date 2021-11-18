@@ -134,11 +134,11 @@ Each environment draws data from the corresponding AWS S3 bucket.
  - Submit a Pull request with proposed changes
  - Ask for someone to review it
  - In case of positive review (or if the changes are already agreed), merge this Pull request to the master branch
- - Manually verify of the changes in the master environment:
+ - Manually verify the changes in the master environment:
      - on https://master.clades.nextstrain.org
      - see "Testing datasets locally" section above on how to test with Nextclade CLI
  - If verification is successful, merge master branch to staging branch using "fast-forward only" option (see the example steps for release branch below)
- - Manually verify of the changes in the staging environment
+ - Manually verify the changes in the staging environment
  - if verification is successful, merge master branch to release branch using "fast-forward only" option (see the example steps for release branch below)
 
 If at any step in the process an error is found, or more features need to be implemented before releasing, start over from the beginning of this list.
