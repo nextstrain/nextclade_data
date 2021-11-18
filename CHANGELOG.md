@@ -1,4 +1,4 @@
-## 2021-10-16
+## 2021-11-16
 
 ### SARS-CoV-2
 
@@ -13,6 +13,8 @@
 
 - Reference tree: Data has been updated to sequences submitted to Genbank by mid November
 - Reference tree: Pango lineages designated until 2021-11-04 have been sampled into the tree
+
+## 2021-10-11
 
 ### SARS-CoV-2
 
