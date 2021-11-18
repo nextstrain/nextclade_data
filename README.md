@@ -173,7 +173,7 @@ It is often helpful to visualize the correctness of the branch state on every st
 
 ### Creating a git tag
 
-By convention, git tags are created on every release and the name of the tag consist of a date in format `YYYY-MM-DD` (e.g. `2021-11-18`).
+By convention, git tags are created on every release and the name of the tag consist of a date in format `YYYY-MM-DD` (e.g. `2021-11-18`). Updates of the staging branch don't need tags.
 
 Commands to create and push the tag:
 
