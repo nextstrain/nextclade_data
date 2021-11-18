@@ -105,3 +105,83 @@ During rebuild, some files copied to the dataset repository output directory as 
 ## Testing datasets locally
 
 The guide in [Test datasets locally](https://github.com/nextstrain/nextclade/blob/master/docs/dev/datasets-local.md) describes how to change the datasets server URL used by Nextclade and Nextclade CLI as well as how to run a local dataset server. This is useful for testing the datasets modifications locally.
+
+
+## Maintenance
+
+The data is deployed automatically to 3 independent environments:
+
+ - master
+ - staging
+ - release
+
+There are 3 corresponding git branches with the same names. Upon a push or a merge to one of these branches branch, [the GitHub Action](https://github.com/nextstrain/nextclade_data/blob/master/.github/workflows/data-curation.yml) starts and deploys the data to the corresponding AWS S3 bucket in the Nextstrain organization. Each bucket acts as a static file server and has an AWS Cloudfront distribution attached to it for edge caching, as well as an AWS Lambda@Edge function, to modify HTTP headers. Each Cloudfront distribution have a domain name assigned to it:
+
+ - data.master.clades.nextstrain.org
+ - data.staging.clades.nextstrain.org
+ - data.release.clades.nextstrain.org
+
+Nextclade Web also has the 3 environments with the domain names derived from environment names:
+
+ - master.clades.nextstrain.org
+ - staging.clades.nextstrain.org
+ - release.clades.nextstrain.org
+ 
+Each environment draws data from the corresponding AWS S3 bucket. 
+
+### Dataset release process
+
+ - Submit a Pull request with proposed changes
+ - Ask for someone to review it
+ - In case of positive review (or if the changes are already agreed), merge this Pull request to the master branch
+ - Manually verify of the changes in the master environment:
+     - on https://master.clades.nextstrain.org
+     - see "Testing datasets locally" section above on how to test with Nextclade CLI
+ - If verification is successful, merge master branch to staging branch using "fast-forward only" option (see the example steps for release branch below)
+ - Manually verify of the changes in the staging environment
+ - if verification is successful, merge master branch to release branch using "fast-forward only" option (see the example steps for release branch below)
+
+If at any step in the process an error is found, or more features need to be implemented before releasing, start over from the beginning of this list.
+
+Most of the time fast-forward merge should be possible. If it's not, then there might be a problem in git repo and unintended changes might be released. In this case, ask someone in Nextstrain org for help and for review of your plan before proceeding further.
+
+
+### Fast-forward merge
+
+Terminal commands for the "merge master branch to staging branch using fast-forward only option" step of the release process (for staging branch replace every occurrence of word "release" with word "staging"):
+
+```bash
+# Make sure that you local machine has the latest changes from the remote server
+git pull --all
+
+# Switch to release branch
+git checkout release
+
+# Fast-forward release branch to master locally
+git merge master release --ff-only
+
+# Push release branch to the remote server
+git push origin release
+
+```
+
+It is often helpful to visualize the correctness of the branch state on every step by using a GUI git client, such as GitKraken, SourceTree, and [others](https://git-scm.com/downloads/guis).
+
+
+### Creating a git tag
+
+By convention, git tags are created on every release and the name of the tag consist of a date in format `YYYY-MM-DD` (e.g. `2021-11-18`).
+
+Commands to create and push the tag:
+
+```bash
+# Create a tag locally
+git tag $(date '+%F')
+
+# Push the tags to the remote server
+git push --tags
+```
+
+### Infrastructure
+
+AWS S3 buckets, AWS Cloudfront distributions, AWS Lambda and domain names are managed internally by Nextstrain AWS admins. Ping them on Slack if you need help.
