@@ -163,6 +163,9 @@ git merge master release --ff-only
 # Push release branch to the remote server
 git push origin release
 
+# Switch away from the release branch to avoid accidental commits later
+git checkout master
+
 ```
 
 It is often helpful to visualize the correctness of the branch state on every step by using a GUI git client, such as GitKraken, SourceTree, and [others](https://git-scm.com/downloads/guis).
