@@ -1,4 +1,18 @@
-## 2021-10-11
+## 2021-10-16
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2021-11-16T16:38:05Z`)
+
+##### Changes
+
+- Reference tree: Recombinant pango lineages (= those starting with `X`) have been excluded in order to reduce clade misassignment noise, in particular for short sequences like just `S`. Only one recombinant has been designated so far (`XA`) and it broke up the branch leading up to Alpha exerting bad influence that warranted removal.
+- The lists of known, (likely) biological and thus acceptable frame shifts and stop codons have been extended. The ~20 most common frame shifts and ~40 most common stop codons on genes `ORF3a/6/7a/7b/8` are now declared known. Common frame shifts and stops on `ORF1a/b` and `S` are not declared known since these are most likely sequencing artefacts and not biological.
+
+##### Updates
+
+- Reference tree: Data has been updated to sequences submitted to Genbank by mid November
+- Reference tree: Pango lineages designated until 2021-11-04 have been sampled into the tree
 
 ### SARS-CoV-2
 
