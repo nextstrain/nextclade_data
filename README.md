@@ -151,6 +151,7 @@ Most of the time fast-forward merge should be possible. If it's not, then there 
 Terminal commands for the "merge master branch to staging branch using fast-forward only option" step of the release process (for staging branch replace every occurrence of word "release" with word "staging"):
 
 ```bash
+# If you have forks, make sure to set `git config --global checkout.defaultRemote origin`
 # Make sure that you local machine has the latest changes from the remote server
 git pull --all
 
