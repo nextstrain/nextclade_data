@@ -138,7 +138,7 @@ Each environment draws data from the corresponding AWS S3 bucket.
      - on https://master.clades.nextstrain.org
      - see "Testing datasets locally" section above on how to test with Nextclade CLI
  - If verification is successful, merge master branch to staging branch using "fast-forward only" option (see the example steps for release branch below)
- - Manually verify the changes in the staging environment
+ - Manually verify the changes in the staging environment: https://staging.clades.nextstrain.org
  - if verification is successful, merge master branch to release branch using "fast-forward only" option (see the example steps for release branch below)
 
 If at any step in the process an error is found, or more features need to be implemented before releasing, start over from the beginning of this list.
