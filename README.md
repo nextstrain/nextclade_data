@@ -140,6 +140,7 @@ Each environment draws data from the corresponding AWS S3 bucket.
  - If verification is successful, merge master branch to staging branch using "fast-forward only" option (see the example steps for release branch below)
  - Manually verify the changes in the staging environment: https://staging.clades.nextstrain.org
  - if verification is successful, merge master branch to release branch using "fast-forward only" option (see the example steps for release branch below)
+ - make release either manually on Github or using `gh` CLI: `gh release create 2021-11-16 -d -t 2021-11-16 --target release -n ''` before editing the changelog and converting from draft to actual release
 
 If at any step in the process an error is found, or more features need to be implemented before releasing, start over from the beginning of this list.
 
