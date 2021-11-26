@@ -1,3 +1,19 @@
+## 2021-11-26
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2021-11-26T14:02:45Z`)
+
+##### Changes
+
+- Data source: GISAID data is now used to generate the reference tree. This switch is necessary, because the new clade 21K (B.1.1.529) is only present in GISAID data, thus far.
+
+##### Updates
+
+- New clade: 21K (B.1.1.529) has been added to the reference tree
+- Reference tree: Data has been updated to sequences submitted to GISAID by 2021-11-24
+- Reference tree: Pango lineages designated until 2021-11-24 have been sampled into the tree
+
 ## 2021-11-16
 
 ### SARS-CoV-2
