@@ -2,7 +2,7 @@
 
 ### SARS-CoV-2
 
-#### New dataset version (tag `2021-11-27T11:21:07Z`)
+#### New dataset version (tag `2021-11-27T11:53:22Z`)
 
 ##### Changes
 
