@@ -1,3 +1,13 @@
+## 2021-11-27
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2021-11-27T11:21:07Z`)
+
+##### Changes
+
+- Clades: `21K` is renamed `21K (Omicron)` in line with WHO elevation to VOC status
+
 ## 2021-11-26
 
 ### SARS-CoV-2
