@@ -45,7 +45,7 @@ popd >/dev/null
 
 aws s3 sync --cache-control "public, must-revalidate, proxy-revalidate, max-age=0" --content-encoding "gzip" --only-show-errors "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "index.json.gz"
 
-aws s3 sync --cache-control "public, max-age=86400" --content-encoding "gzip" --only-show-errors "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*.zip" --exclude "index.json.gz"--include "*.gz"
+aws s3 sync --cache-control "public, max-age=86400" --content-encoding "gzip" --only-show-errors "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*.zip" --exclude "index.json.gz" --include "*.gz"
 
 aws s3 sync --cache-control "public, max-age=86400" --only-show-errors "${DATA_OUTPUT_DIR}" "${DATA_AWS_S3_BUCKET}" --exclude "*" --include "*.zip"
 
