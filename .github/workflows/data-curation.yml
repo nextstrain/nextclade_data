@@ -55,3 +55,10 @@ jobs:
         run: |
           set -x
           ./scripts/upload
+
+      - name: create git tag
+        if: github.ref == 'refs/heads/staging'
+        run: |
+          set -x
+          git tag $(TZ=UTC date "+%Y-%m-%d--%H-%M-%S--%Z")
+          git push --tags

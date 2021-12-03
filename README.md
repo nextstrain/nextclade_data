@@ -172,21 +172,6 @@ git checkout master
 
 It is often helpful to visualize the correctness of the branch state on every step by using a GUI git client, such as GitKraken, SourceTree, and [others](https://git-scm.com/downloads/guis).
 
-
-### Creating a git tag
-
-By convention, git tags are created on every release and the name of the tag consist of a date in format `YYYY-MM-DD` (e.g. `2021-11-18`). Updates of the staging branch don't need tags.
-
-Commands to create and push the tag:
-
-```bash
-# Create a tag locally
-git tag $(date '+%F')
-
-# Push the tags to the remote server
-git push --tags
-```
-
 ### Infrastructure
 
 AWS S3 buckets, AWS Cloudfront distributions, AWS Lambda and domain names are managed internally by Nextstrain AWS admins. Ping them on Slack if you need help.
