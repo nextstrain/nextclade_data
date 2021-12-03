@@ -1,3 +1,13 @@
+## 2021-12-03--00-14-37--UTC
+
+### General
+
+- Added explicit cache-control headers
+
+### SARS-CoV-2
+
+- Sample sequences: Added two `21K (Omicron)` sequences
+
 ## 2021-11-27
 
 ### SARS-CoV-2
