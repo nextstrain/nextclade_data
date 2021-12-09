@@ -1,3 +1,13 @@
+## 2021-12-09
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2021-12-09T18:09:18Z`)
+
+- Clades: Omicron is split into `21K (Omicron)` (pango `BA.1`) and `21L` (pango `BA.2`). The minor clade `21L` is at this point not called Omicron by WHO so it does not get the Omicron label for now.
+- Reference tree: Data has been updated to early December
+- Pango lineages designated until early December have been sampled in
+
 ## 2021-12-03--00-14-37--UTC
 
 ### General
@@ -5,6 +15,8 @@
 - Added explicit cache-control headers
 
 ### SARS-CoV-2
+
+#### New dataset version (tag `2021-12-03T00:20:15Z`)
 
 - Sample sequences: Added two `21K (Omicron)` sequences
 
