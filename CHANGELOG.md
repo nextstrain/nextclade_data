@@ -13,6 +13,7 @@
 
 - Clades: `21M (Omicron)` added as Omicron catch all equivalent to pango `B.1.1.529`
 - Clades: `21L` elevated to `21L (Omicron)` in line with WHO practice
+- QC: Fixed known frameshift `ORF7b:3` (was erroneously `ORF7a:3`)
 
 ## 2021-12-09
 
