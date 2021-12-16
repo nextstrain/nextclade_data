@@ -1,3 +1,12 @@
+## 2021-12-16
+
+### Influenza
+
+#### New dataset version (tag `2021-12-16T20:15:53Z`)
+
+- Clades: New WHO clades names are used
+- Reference tree: Data source is now GISAID which means better global coverage
+
 ## 2021-12-09
 
 ### SARS-CoV-2
