@@ -8,7 +8,7 @@
   "missingData": {
     "enabled": false,
     "missingDataThreshold": 100,
-    "scoreBias": 10 
+    "scoreBias": 10
   },
   "snpClusters": {
     "enabled": false,
@@ -28,4 +28,3 @@
     "ignoredStopCodons": []
   }
 }
-  
