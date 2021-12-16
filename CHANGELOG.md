@@ -7,6 +7,13 @@
 - Clades: New WHO clades names are used
 - Reference tree: Data source is now GISAID which means better global coverage
 
+### SARS-CoV-2
+
+#### New dataset version (tag `2021-12-16T20:57:35Z`)
+
+- Clades: `21M (Omicron)` added as Omicron catch all equivalent to pango `B.1.1.529`
+- Clades: `21L` elevated to `21L (Omicron)` in line with WHO practice
+
 ## 2021-12-09
 
 ### SARS-CoV-2
