@@ -157,16 +157,22 @@ Terminal commands for the "merge master branch to staging branch using fast-forw
 git pull --all
 
 # Switch to release branch
-git checkout release
+git checkout staging
 
 # Fast-forward release branch to master locally
-git merge master release --ff-only
+git merge master staging --ff-only
 
 # Push release branch to the remote server
+git push origin staging
+
+git checkout release
+git merge master release --ff-only
 git push origin release
 
 # Switch away from the release branch to avoid accidental commits later
 git checkout master
+
+
 
 ```
 
