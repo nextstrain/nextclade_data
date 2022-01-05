@@ -1,3 +1,13 @@
+## 2022-01-05
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2022-01-05T19:54:31Z`)
+
+- Reference tree: Added more Omicron sequences, from all of BA.1/BA.2/BA.3
+- Reference tree: General data update with new pango lineages
+- Sample sequences: Added BA.2 and BA.3 to sample sequences
+
 ## 2021-12-16
 
 ### Influenza
