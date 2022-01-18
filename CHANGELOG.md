@@ -1,3 +1,18 @@
+## 2022-01-18
+
+### New dataset version (tag `2022-01-18T12:00:00Z`)
+
+- Backwards incompatibility: New datasets no longer work for Nextclade versions before 1.10.0
+
+#### SARS-CoV-2
+
+- Files: added `virus_properties.json` containing common mutations per clade
+- QC: higher penalty for private mutations that are reversions or common in other clades
+
+#### Influenza
+
+- Files: Stub `virus_properties.json` added to be compatible with new Nextclade version 1.10.0
+
 ## 2022-01-05
 
 ### SARS-CoV-2
