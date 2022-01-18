@@ -1,6 +1,6 @@
 {
   "tag": "2022-01-18T12:00:00Z",
-  "comment": "feat: enables reversion and labeled mutations highlighted",
+  "comment": "Enables reversion and labeled mutation highlighting",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.10.0",
