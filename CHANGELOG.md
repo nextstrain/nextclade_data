@@ -1,3 +1,11 @@
+## 2022-02-07
+
+### New dataset version (tag `2022-02-07T12:00:00Z`)
+
+#### SARS-CoV-2
+
+- Reference tree: Updated with new data. New algorithm for choosing how many of each pango lineage to include improves coverage of common and recent lineages. Every pango lineage that's included gets one relatively basal (early) sequence to keep number of false positive reversions down.
+
 ## 2022-01-18
 
 ### New dataset version (tag `2022-01-18T12:00:00Z`)
