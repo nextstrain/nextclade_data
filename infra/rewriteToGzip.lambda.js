@@ -9,7 +9,6 @@ exports.handler = (event, context, callback) => {
   // Here we rewrite the URL to get the corresponding .gz files.
   if(!request.uri.endsWith('.zip')) {
     request.uri += '.gz'
-    callback(null, request)
   }
 
   callback(null, request)
