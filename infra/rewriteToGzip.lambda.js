@@ -11,4 +11,6 @@ exports.handler = (event, context, callback) => {
     request.uri += '.gz'
     callback(null, request)
   }
+
+  callback(null, request)
 }
