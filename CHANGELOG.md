@@ -1,3 +1,13 @@
+## 2022-03-14
+
+### New dataset version (tag `2022-03-14T12:00:00Z`)
+
+#### SARS-CoV-2
+
+- Pango lineages: Nextclade now assigns sequences a pango lineage, similar to how clades are assigned. Output is visible in both web and tsv/csv output (column `Nextclade_pango`). The classifier is about 98% accurate for sequences from the past 12 months. Older lineages are deprioritised, and accuracy is thus worse. Read more about the method and validation against pangoLEARN and UShER in this report: [Nextclade as pango lineage classifier: Methods and Validation](https://docs.nextstrain.org/projects/nextclade/en/latest/user/algorithm/nextclade-pango.html).
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.2.132, featuring lineages like `BA.2.3`, `BA.1.17` and `BA.1.1.16`.
+- Reference tree: Every pango lineage that's sampled in gets a synthetic sequence that is chosen to represent a hypothetical common ancestor of the lineage, according to the sequences listed as members in the pango-designation repo.
+
 ## 2022-02-07
 
 ### New dataset version (tag `2022-02-07T12:00:00Z`)
