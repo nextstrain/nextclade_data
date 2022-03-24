@@ -1,3 +1,19 @@
+## 2022-03-24
+
+### New dataset version (tag `2022-03-24T12:00:00Z`)
+
+#### SARS-CoV-2
+
+- Recombinants: Recombinant Pango lineages are now included in the reference tree. Each recombinant is attached to the root node so as not to spawn false internal nodes in the tree that would attract bad sequences. As long as recombinants do not qualify for a Nextstrain clade, they will receive the place holder clade name `recombinant`. Pango lineages are provided if present. Beware that new unnamed recombinants with similar donors but slightly different breakpoint will attach to existing recombinants in the reference tree and thus get a wrong Pango lineage. A number of reversions and labeled mutations is a sign that you may have a similar but different recombinant.
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.2.133, featuring Omicron recombinants like `XD`, `XE` and `XF`.
+- QC: `qc.json` was updated with the most common stop codons and frameshifts that appear to be real and not artefacts (in ORFs 3a, 6, 7a, 7b,8, 9b)
+- QC: `virus_properties.json` was updated and now contains more mutations that are common in `21K` which should help identifying recombinants
+
+#### SARS-CoV-2 without recombinants
+
+- New dataset: Now that recombinants are included in the default SARS-CoV-2 tree, it is no longer easy to identify breakpoints and donors of new recombinants if they attach to existing recombinants on the tree. To facilitate the analysis of new potential recombinants, we have added a new dataset named "SARS-CoV-2 without recombinants" that does not include recombinants and can thus be used for recombinant analysis as before the inclusion of recombinants. This dataset should only be used for recombinant analysis, it will receive less attention than the main (default) SARS-CoV-2 dataset.
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.2.133, except recombinants (lineages starting with `X`).
+
 ## 2022-03-14
 
 ### New dataset version (tag `2022-03-14T12:00:00Z`)
