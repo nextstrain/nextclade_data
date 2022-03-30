@@ -1,3 +1,12 @@
+## 2022-03-31
+
+### New dataset version (tag `2022-03-31T12:00:00Z`)
+
+#### SARS-CoV-2 (with and without recombinants)
+
+- Pango lineages: New lineages added up till [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.2.137 are now included, including among others `BA.1.18-19`, `BA.2.4-BA.2.8` and `XG-XK` (in the default build, excluded from special "without recombinants" dataset).
+- Dataset: The sampling of sequences has changed slightly. Previously, every Nextstrain clade got around 30 random sequences belonging to this clade causing quite a bit of movement between releases. This is no longer the case. The tree is thus slightly smaller. The change is most noticeable for small Nextstrain clades like `20F`.
+
 ## 2022-03-24
 
 ### New dataset version (tag `2022-03-24T12:00:00Z`)
