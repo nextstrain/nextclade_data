@@ -1,3 +1,12 @@
+## 2022-04-08
+
+### New dataset version (tag `2022-04-08T12:00:00Z`)
+
+#### SARS-CoV-2 (with and without recombinants)
+
+- Pango lineages: New lineages added up till [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.4 are now included, including among others `BA.4-5`, `BA.2.9-BA.2.13` and `XM-XS` (in the default build, excluded from special "without recombinants" dataset). For now, `BA.4-5` are included in Nextstrain clade `21L`, together with `BA.2` which is the most similar Omicron.
+- Reference tree: The first 100 and last 200 sites (with respect to Wuhan reference) are now masked in the reference tree to reduce noise due to sites like `21` that were artifactually polymorphic.
+
 ## 2022-03-31
 
 ### New dataset version (tag `2022-03-31T12:00:00Z`)
