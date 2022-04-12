@@ -1,6 +1,6 @@
 {
   "tag": "2022-04-08T12:00:00Z",
-  "comment": "New pango lineages included, pango-designation release v1.3",
+  "comment": "New pango lineages included, pango-designation release v1.4",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.10.0",
