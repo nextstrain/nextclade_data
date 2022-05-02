@@ -174,10 +174,11 @@ if __name__ == '__main__':
 
                 version_json.update({"files": paths.files, "zipBundle": paths.zip_bundle_url, "latest": i == 0})
 
-            dataset_refs.append({**dataset_ref_json, "versions": version_jsons})
+            for version_json in version_jsons:
+                dataset_refs.append({**dataset_ref_json, **version_json})
 
-        dataset = {**dataset_json, "datasetRefs": dataset_refs}
-        datasets.append(dataset)
+        for dataset_ref in dataset_refs:
+            datasets.append({**dataset_json, **dataset_ref})
 
     settings.update({'defaultDatasetNameFriendly': defaultDatasetNameFriendly})
 
@@ -186,7 +187,7 @@ if __name__ == '__main__':
     # Move default dataset to the beginning
     datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
 
-    datasets_json = dict()
-    datasets_json.update({"settings": settings})
-    datasets_json.update({"datasets": datasets})
-    json_write(datasets_json, INDEX_JSON_PATH)
+    index_json = dict()
+    index_json.update({"settings": settings})
+    index_json.update({"datasets": datasets})
+    json_write(index_json, INDEX_JSON_PATH)
