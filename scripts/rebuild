@@ -177,10 +177,33 @@ if __name__ == '__main__':
             for version_json in version_jsons:
                 dataset_refs.append({**dataset_ref_json, **version_json})
 
-        for dataset_ref in dataset_refs:
-            datasets.append({**dataset_json, **dataset_ref})
 
-    settings.update({'defaultDatasetNameFriendly': defaultDatasetNameFriendly})
+        for dataset_ref in dataset_refs:
+            # HACK: converts from old hierarchical object format to flat attributes
+            # TODO: decide how to reorganize the hierarchical objects and folder structure in the git repo and rewrite this
+            attributes = {
+                "name": { "value": dataset_name, "isDefault": dataset_name == defaultDatasetName },
+                "nameFriendly": {"value": dataset_json["nameFriendly"], "isDefault": dataset_json["nameFriendly"] == defaultDatasetNameFriendly },
+                "reference": { "value":  dataset_ref["reference"]["accession"], "isDefault": dataset_ref["reference"]["accession"] == dataset_json["defaultRef"] },
+                "tag": { "value": dataset_ref["tag"], "isDefault": dataset_ref["latest"] },
+            }
+
+            # TODO: figure out where 'enabled' field should come from
+            dataset = {**dataset_json, **dataset_ref, "attributes": attributes}
+
+            # HACK: omits properties that have been moved into the attributes just above
+            dataset = {k: v for k, v in dataset.items() if k in [
+                "enabled",
+                "attributes",
+                "comment",
+                "compatibility",
+                "defaultGene",
+                "files",
+                "geneOrderPreference",
+                "zipBundle",
+            ]}
+
+            datasets.append(dataset)
 
     # Sort datasets alphabetically
     datasets.sort(key=lambda x: x["nameFriendly"])
@@ -188,6 +211,6 @@ if __name__ == '__main__':
     datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
 
     index_json = dict()
-    index_json.update({"settings": settings})
+    index_json.update({"schema": "2.0.0"})
     index_json.update({"datasets": datasets})
     json_write(index_json, INDEX_JSON_PATH)
