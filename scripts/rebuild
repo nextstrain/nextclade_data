@@ -191,6 +191,19 @@ if __name__ == '__main__':
             # TODO: figure out where 'enabled' field should come from
             dataset = {**dataset_json, **dataset_ref, "attributes": attributes}
 
+            # HACK: converts files to the new format
+            # TODO: modify original dataset files instead
+            def convert_files(files):
+                def get_filename(url):
+                    return url.split("/")[-1]
+
+                def remove_leading_slash(url):
+                    return url.lstrip("/")
+
+                return {get_filename(url): remove_leading_slash(url) for _, url in files.items()}
+
+            dataset["files"] = convert_files(dataset["files"])
+
             # HACK: omits properties that have been moved into the attributes just above
             dataset = {k: v for k, v in dataset.items() if k in [
                 "enabled",
