@@ -218,10 +218,8 @@ if __name__ == '__main__':
 
             datasets.append(dataset)
 
-    # Sort datasets alphabetically
-    datasets.sort(key=lambda x: x["nameFriendly"])
-    # Move default dataset to the beginning
-    datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
+    datasets.sort(key=lambda x: x["attributes"]["name"]["value"])
+    datasets.sort(key=lambda x: x["attributes"]["name"]["value"].startswith("sars-cov-2"), reverse=True)
 
     index_json = dict()
     index_json.update({"schema": "2.0.0"})
