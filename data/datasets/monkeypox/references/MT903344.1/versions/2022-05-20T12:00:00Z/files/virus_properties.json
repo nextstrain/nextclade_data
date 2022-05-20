@@ -6,6 +6,7 @@
     "max_indel": 5000,
     "seed_spacing": 1000,
     "terminal_bandwidth": 200,
-    "excess_bandwidth": 18
+    "excess_bandwidth": 18,
+    "gap_alignment_side": "left"
   }
 }
