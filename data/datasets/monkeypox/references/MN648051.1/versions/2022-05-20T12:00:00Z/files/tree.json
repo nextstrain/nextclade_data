@@ -1366,10 +1366,7 @@
         "type": "categorical"
       }
     ],
-    "filters": [
-      "country",
-      "host"
-    ],
+    "filters": ["country", "host"],
     "geo_resolutions": [
       {
         "key": "country",
@@ -1385,15 +1382,14 @@
         }
       }
     ],
-    "panels": [
-      "tree",
-      "map",
-      "entropy"
-    ]
+    "panels": ["tree", "map", "entropy"]
   },
   "tree": {
     "name": "NODE_0000000",
     "node_attrs": {
+      "clade_membership": {
+        "value": ""
+      },
       "div": 0,
       "country": {
         "value": "United Kingdom",
@@ -1412,6 +1408,9 @@
         "name": "MPXV-UK_P2",
         "node_attrs": {
           "div": 0,
+          "clade_membership": {
+            "value": ""
+          },
           "accession": "MT903344.1",
           "country": {
             "value": "United Kingdom",
@@ -1471,6 +1470,9 @@
           {
             "name": "Israel_2018",
             "node_attrs": {
+              "clade_membership": {
+                "value": ""
+              },
               "div": 8,
               "accession": "MN648051",
               "country": {
@@ -1585,12 +1587,8 @@
                   "T173364-",
                   "G177360A"
                 ],
-                "MPXV-UK_P2-025": [
-                  "F36S"
-                ],
-                "MPXV-UK_P2-153": [
-                  "E56V"
-                ],
+                "MPXV-UK_P2-025": ["F36S"],
+                "MPXV-UK_P2-153": ["E56V"],
                 "MPXV-UK_P2-171": [
                   "M16X",
                   "D17-",
@@ -1605,9 +1603,7 @@
                   "T26-",
                   "*101X"
                 ],
-                "MPXV-UK_P2-178": [
-                  "D540N"
-                ]
+                "MPXV-UK_P2-178": ["D540N"]
               },
               "labels": {
                 "aa": "MPXV-UK_P2-025: F36S; MPXV-UK_P2-153: E56V; MPXV-UK_P2-171: M16X, D17-, S18-, D19-, T20-, D21-, T22-, D23-, T24-, D25-, T26-, *101X; MPXV-UK_P2-178: D540N"
@@ -1617,6 +1613,9 @@
           {
             "name": "MPXV-UK_P3",
             "node_attrs": {
+              "clade_membership": {
+                "value": ""
+              },
               "div": 0,
               "accession": "MT903345.1",
               "country": {
