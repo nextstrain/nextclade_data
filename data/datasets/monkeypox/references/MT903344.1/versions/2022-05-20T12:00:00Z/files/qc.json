@@ -2,8 +2,8 @@
   "schemaVersion": "1.2.0",
   "privateMutations": {
     "enabled": true,
-    "typical": 5,
-    "cutoff": 40
+    "typical": 40,
+    "cutoff": 10
   },
   "missingData": {
     "enabled": true,
