@@ -1430,6 +1430,9 @@
       {
         "name": "NODE_0000001",
         "node_attrs": {
+          "clade_membership": {
+            "value": ""
+          },
           "div": 0,
           "country": {
             "value": "United Kingdom",
