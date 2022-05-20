@@ -183,6 +183,8 @@ if __name__ == '__main__':
 
     # Sort datasets alphabetically
     datasets.sort(key=lambda x: x["nameFriendly"])
+    # Move monkeypox to the front, if it exists
+    datasets.sort(key=lambda x: x["name"] == "monkeypox", reverse=True)
     # Move default dataset to the beginning
     datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
 
