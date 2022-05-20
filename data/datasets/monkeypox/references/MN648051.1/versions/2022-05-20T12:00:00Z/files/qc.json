@@ -17,14 +17,14 @@
     "scoreWeight": 50
   },
   "mixedSites": {
-    "enabled": true,
+    "enabled": false,
     "mixedSitesThreshold": 4
   },
   "frameShifts": {
-    "enabled": true
+    "enabled": false
   },
   "stopCodons": {
-    "enabled": true,
+    "enabled": false,
     "ignoredStopCodons": []
   }
 }
