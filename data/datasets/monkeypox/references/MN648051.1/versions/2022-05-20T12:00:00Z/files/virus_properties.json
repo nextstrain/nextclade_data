@@ -1,5 +1,9 @@
 {
   "schemaVersion": "1.10.0",
   "nucMutLabelMap": {},
-  "nucMutLabelMapReverse": {}
+  "nucMutLabelMapReverse": {},
+  "alignmentParams": {
+    "max_indel": 5000,
+    "seed_spacing": 1000
+  }
 }

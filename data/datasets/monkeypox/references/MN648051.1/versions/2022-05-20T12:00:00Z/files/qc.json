@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
   "privateMutations": {
-    "enabled": true,
+    "enabled": false,
     "typical": 5,
     "cutoff": 15
   },
