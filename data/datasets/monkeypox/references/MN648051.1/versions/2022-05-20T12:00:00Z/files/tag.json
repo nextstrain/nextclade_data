@@ -13,8 +13,12 @@
   },
   "enabled": true,
   "files": {
+    "geneMap": "genemap.gff",
+    "primers": "primers.csv",
+    "qc": "qc.json",
     "reference": "reference.fasta",
     "sequences": "sequences.fasta",
+    "tree": "tree.json",
     "virusPropertiesJson": "virus_properties.json"
   },
   "metadata": {}
