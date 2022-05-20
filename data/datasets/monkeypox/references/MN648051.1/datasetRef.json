@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "MN648051.1",
+    "strainName": "Israel/MN648051.1/2018"
+  }
+}
