@@ -6,7 +6,12 @@
         "name": "Genbank"
       }
     ],
-    "extensions": [],
+    "extensions": {
+      "nextclade": {
+        "clade_node_attrs": [
+        ]
+      }
+    },
     "display_defaults": {
       "branch_label": "clade",
       "color_by": "clade_membership",
