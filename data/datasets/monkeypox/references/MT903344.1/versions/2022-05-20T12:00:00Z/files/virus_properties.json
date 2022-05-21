@@ -5,8 +5,8 @@
   "alignmentParams": {
     "max_indel": 5000,
     "seed_spacing": 1000,
-    "terminal_bandwidth": 200,
-    "excess_bandwidth": 18,
+    "terminal_bandwidth": 100,
+    "excess_bandwidth": 3,
     "gap_alignment_side": "Left"
   }
 }
