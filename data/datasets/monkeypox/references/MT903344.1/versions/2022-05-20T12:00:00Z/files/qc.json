@@ -21,11 +21,11 @@
     "mixedSitesThreshold": 40
   },
   "frameShifts": {
-    "enabled": false,
+    "enabled": true,
     "scoreWeight": 10
   },
   "stopCodons": {
-    "enabled": false,
+    "enabled": true,
     "scoreWeight": 10,
     "ignoredStopCodons": []
   }
