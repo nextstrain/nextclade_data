@@ -2,8 +2,8 @@
   "schemaVersion": "1.2.0",
   "privateMutations": {
     "enabled": true,
-    "typical": 40,
-    "cutoff": 10
+    "typical": 5,
+    "cutoff": 50
   },
   "missingData": {
     "enabled": true,
@@ -21,10 +21,12 @@
     "mixedSitesThreshold": 40
   },
   "frameShifts": {
-    "enabled": false
+    "enabled": true,
+    "scoreWeight": 10
   },
   "stopCodons": {
-    "enabled": false,
+    "enabled": true,
+    "scoreWeight": 10,
     "ignoredStopCodons": []
   }
 }
