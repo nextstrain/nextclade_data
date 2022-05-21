@@ -1374,21 +1374,17 @@
       {
         "key": "country",
         "demes": {
-          "United Kingdom": {
-            "latitude": 54.542713,
-            "longitude": -2.384858
-          },
           "Portugal": {
             "latitude": 39.6945,
             "longitude": -8.13057
           },
-          "Belgium": {
-            "latitude": 50.6407351,
-            "longitude": 4.66696
-          },
           "Israel": {
             "latitude": 31.5,
             "longitude": 34.75
+          },
+          "United Kingdom": {
+            "latitude": 54.542713,
+            "longitude": -2.384858
           }
         }
       }
@@ -1416,11 +1412,11 @@
         "node_attrs": {
           "div": 0,
           "accession": "MT903344.1",
-          "country": {
-            "value": "United Kingdom"
-          },
           "host": {
             "value": "human"
+          },
+          "country": {
+            "value": "United Kingdom"
           },
           "clade_membership": {
             "value": ""
@@ -1495,11 +1491,11 @@
             "node_attrs": {
               "div": 0,
               "accession": "MT903345.1",
-              "country": {
-                "value": "United Kingdom"
-              },
               "host": {
                 "value": "human"
+              },
+              "country": {
+                "value": "United Kingdom"
               },
               "clade_membership": {
                 "value": ""
@@ -1704,11 +1700,11 @@
                     "node_attrs": {
                       "div": 36,
                       "accession": "ON563414.1",
-                      "country": {
-                        "value": "United States"
-                      },
                       "host": {
                         "value": "human"
+                      },
+                      "country": {
+                        "value": "United States"
                       },
                       "clade_membership": {
                         "value": ""
@@ -1744,11 +1740,11 @@
                     "node_attrs": {
                       "div": 36,
                       "accession": "XXXXXXXX",
-                      "country": {
-                        "value": "Portugal"
-                      },
                       "host": {
                         "value": "human"
+                      },
+                      "country": {
+                        "value": "Portugal"
                       },
                       "clade_membership": {
                         "value": ""
@@ -1802,15 +1798,98 @@
                 },
                 "children": [
                   {
+                    "name": "Israel_2018",
+                    "node_attrs": {
+                      "div": 8,
+                      "accession": "MN648051",
+                      "host": {
+                        "value": "Human"
+                      },
+                      "country": {
+                        "value": "Israel"
+                      },
+                      "clade_membership": {
+                        "value": ""
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C8781T",
+                          "C91372T",
+                          "T133089-",
+                          "T133090-",
+                          "T133091-",
+                          "T133092-",
+                          "T133093-",
+                          "T133094-",
+                          "A147604T",
+                          "G150579A",
+                          "A173349-",
+                          "T173350-",
+                          "A173351-",
+                          "T173352-",
+                          "A173353-",
+                          "T173354-",
+                          "A173355-",
+                          "T173356-",
+                          "A173357-",
+                          "T173358-",
+                          "A173359-",
+                          "T173360-",
+                          "A173361-",
+                          "T173362-",
+                          "A173363-",
+                          "T173364-",
+                          "G177360A",
+                          "-179164A",
+                          "-179165T",
+                          "-179166A",
+                          "-179167T",
+                          "-179168A",
+                          "-179169C",
+                          "-179170A",
+                          "-179171T",
+                          "-179172T",
+                          "-179173A",
+                          "-179174T",
+                          "-179175A",
+                          "-179176T",
+                          "-179177A",
+                          "-179178C",
+                          "-179179A",
+                          "-179180T",
+                          "-179181T",
+                          "-179182A",
+                          "-179183T",
+                          "-179184A",
+                          "-179185T",
+                          "-179186A",
+                          "-179187C",
+                          "-179188A"
+                        ],
+                        "MPXV-UK_P2-153": [
+                          "E56V"
+                        ],
+                        "MPXV-UK_P2-178": [
+                          "D540N"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "MPXV-UK_P2-153: E56V; MPXV-UK_P2-178: D540N"
+                      }
+                    }
+                  },
+                  {
                     "name": "MPXV-UK_P1",
                     "node_attrs": {
                       "div": 6,
                       "accession": "MT903343.1",
-                      "country": {
-                        "value": "United Kingdom"
-                      },
                       "host": {
                         "value": "human"
+                      },
+                      "country": {
+                        "value": "United Kingdom"
                       },
                       "clade_membership": {
                         "value": ""
@@ -1834,158 +1913,6 @@
                         "aa": "MPXV-UK_P2-029: A142V; MPXV-UK_P2-096: E207K"
                       }
                     }
-                  },
-                  {
-                    "name": "NODE_0000005",
-                    "node_attrs": {
-                      "div": 3,
-                      "clade_membership": {
-                        "value": ""
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "T133089-",
-                          "T133090-",
-                          "T133091-",
-                          "T133092-",
-                          "T133093-",
-                          "T133094-"
-                        ]
-                      }
-                    },
-                    "children": [
-                      {
-                        "name": "Belgium/ITM_MPX_1/2022",
-                        "node_attrs": {
-                          "div": 3,
-                          "accession": "XXXXXXXX",
-                          "country": {
-                            "value": "Belgium"
-                          },
-                          "host": {
-                            "value": "human"
-                          },
-                          "clade_membership": {
-                            "value": ""
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "T173255-",
-                              "G173256-",
-                              "A173257-",
-                              "T173258-",
-                              "G173259-",
-                              "C173260-",
-                              "T173261-",
-                              "G173262-",
-                              "G173263-",
-                              "T173264-",
-                              "T173265-",
-                              "A173266-",
-                              "T173267-",
-                              "T173268-",
-                              "A173269-",
-                              "T173270-",
-                              "A173271-",
-                              "C173272-",
-                              "A173273-",
-                              "T173274-",
-                              "G173275-",
-                              "T173276-",
-                              "G173277-",
-                              "T173278-",
-                              "T173279-",
-                              "T173280-",
-                              "T173281-",
-                              "A173282-",
-                              "G173283-",
-                              "A173284-"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "name": "Israel_2018",
-                        "node_attrs": {
-                          "div": 8,
-                          "accession": "MN648051",
-                          "country": {
-                            "value": "Israel"
-                          },
-                          "host": {
-                            "value": "Human"
-                          },
-                          "clade_membership": {
-                            "value": ""
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "C8781T",
-                              "C91372T",
-                              "A147604T",
-                              "G150579A",
-                              "A173349-",
-                              "T173350-",
-                              "A173351-",
-                              "T173352-",
-                              "A173353-",
-                              "T173354-",
-                              "A173355-",
-                              "T173356-",
-                              "A173357-",
-                              "T173358-",
-                              "A173359-",
-                              "T173360-",
-                              "A173361-",
-                              "T173362-",
-                              "A173363-",
-                              "T173364-",
-                              "G177360A",
-                              "-179164A",
-                              "-179165T",
-                              "-179166A",
-                              "-179167T",
-                              "-179168A",
-                              "-179169C",
-                              "-179170A",
-                              "-179171T",
-                              "-179172T",
-                              "-179173A",
-                              "-179174T",
-                              "-179175A",
-                              "-179176T",
-                              "-179177A",
-                              "-179178C",
-                              "-179179A",
-                              "-179180T",
-                              "-179181T",
-                              "-179182A",
-                              "-179183T",
-                              "-179184A",
-                              "-179185T",
-                              "-179186A",
-                              "-179187C",
-                              "-179188A"
-                            ],
-                            "MPXV-UK_P2-153": [
-                              "E56V"
-                            ],
-                            "MPXV-UK_P2-178": [
-                              "D540N"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "MPXV-UK_P2-153: E56V; MPXV-UK_P2-178: D540N"
-                          }
-                        }
-                      }
-                    ]
                   }
                 ]
               }
