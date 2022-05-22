@@ -3,11 +3,11 @@
   "comment": "First Monkeypox dataset, experimental",
   "compatibility": {
     "nextcladeCli": {
-      "min": "2.0.0",
+      "min": "1.999.0",
       "max": null
     },
     "nextcladeWeb": {
-      "min": "2.0.0",
+      "min": "1.999.0",
       "max": null
     }
   },
