@@ -1370,6 +1370,11 @@
     },
     "colorings": [
       {
+        "key": "clade_membership",
+        "title": "Clade",
+        "type": "categorical"
+      },
+      {
         "key": "outbreak_associated",
         "title": "Outbreak Associated",
         "type": "categorical"
@@ -1412,7 +1417,8 @@
     "filters": [
       "country",
       "host",
-      "outbreak_associated"
+      "outbreak_associated",
+      "clades"
     ],
     "geo_resolutions": [
       {
@@ -1422,6 +1428,10 @@
             "latitude": 31.5,
             "longitude": 34.75
           },
+          "Portugal": {
+            "latitude": 39.6945,
+            "longitude": -8.13057
+          },
           "USA": {
             "latitude": 39.7837304,
             "longitude": -100.4458824
@@ -1429,10 +1439,6 @@
           "United Kingdom": {
             "latitude": 54.542713,
             "longitude": -2.384858
-          },
-          "Portugal": {
-            "latitude": 39.6945,
-            "longitude": -8.13057
           }
         }
       }
@@ -1448,11 +1454,14 @@
     "node_attrs": {
       "div": 0,
       "clade_membership": {
-        "value": "WA"
+        "value": "2018_outbreak"
       }
     },
     "branch_attrs": {
-      "mutations": {}
+      "mutations": {},
+      "labels": {
+        "clade": "2018_outbreak"
+      }
     },
     "children": [
       {
@@ -1460,20 +1469,20 @@
         "node_attrs": {
           "div": 0,
           "accession": "MT903344.1",
-          "region": {
-            "value": "Europe"
-          },
           "outbreak_associated": {
             "value": "no"
+          },
+          "clade_membership": {
+            "value": "2018_outbreak"
+          },
+          "region": {
+            "value": "Europe"
           },
           "country": {
             "value": "United Kingdom"
           },
           "host": {
             "value": "human"
-          },
-          "clade_membership": {
-            "value": "WA"
           }
         },
         "branch_attrs": {
@@ -1485,7 +1494,7 @@
         "node_attrs": {
           "div": 0,
           "clade_membership": {
-            "value": "WA"
+            "value": "2018_outbreak"
           }
         },
         "branch_attrs": {
@@ -1522,20 +1531,20 @@
             "node_attrs": {
               "div": 0,
               "accession": "MT903345.1",
-              "region": {
-                "value": "Europe"
-              },
               "outbreak_associated": {
                 "value": "no"
+              },
+              "clade_membership": {
+                "value": "2018_outbreak"
+              },
+              "region": {
+                "value": "Europe"
               },
               "country": {
                 "value": "United Kingdom"
               },
               "host": {
                 "value": "human"
-              },
-              "clade_membership": {
-                "value": "WA"
               }
             },
             "branch_attrs": {
@@ -1575,7 +1584,7 @@
             "node_attrs": {
               "div": 0,
               "clade_membership": {
-                "value": "WA"
+                "value": "2018_outbreak"
               }
             },
             "branch_attrs": {
@@ -1619,7 +1628,7 @@
                 "node_attrs": {
                   "div": 3,
                   "clade_membership": {
-                    "value": "WA"
+                    "value": "2018_outbreak"
                   }
                 },
                 "branch_attrs": {
@@ -1664,20 +1673,20 @@
                     "node_attrs": {
                       "div": 8,
                       "accession": "MN648051",
-                      "region": {
-                        "value": "West Asia"
-                      },
                       "outbreak_associated": {
                         "value": "no"
+                      },
+                      "clade_membership": {
+                        "value": "2018_outbreak"
+                      },
+                      "region": {
+                        "value": "West Asia"
                       },
                       "country": {
                         "value": "Israel"
                       },
                       "host": {
                         "value": "human"
-                      },
-                      "clade_membership": {
-                        "value": "WA"
                       }
                     },
                     "branch_attrs": {
@@ -2134,20 +2143,20 @@
                     "node_attrs": {
                       "div": 6,
                       "accession": "MT903343.1",
-                      "region": {
-                        "value": "Europe"
-                      },
                       "outbreak_associated": {
                         "value": "no"
+                      },
+                      "clade_membership": {
+                        "value": "2018_outbreak"
+                      },
+                      "region": {
+                        "value": "Europe"
                       },
                       "country": {
                         "value": "United Kingdom"
                       },
                       "host": {
                         "value": "human"
-                      },
-                      "clade_membership": {
-                        "value": "WA"
                       }
                     },
                     "branch_attrs": {
@@ -2209,7 +2218,7 @@
                 "node_attrs": {
                   "div": 46,
                   "clade_membership": {
-                    "value": "WA"
+                    "value": "2022_outbreak"
                   }
                 },
                 "branch_attrs": {
@@ -2370,7 +2379,8 @@
                     ]
                   },
                   "labels": {
-                    "aa": "MPXV-UK_P2-001: S105L; MPXV-UK_P2-002: S54F; MPXV-UK_P2-003: D264N; MPXV-UK_P2-012: A423D; MPXV-UK_P2-031: R48C; MPXV-UK_P2-037: P78S; MPXV-UK_P2-040: E125K; MPXV-UK_P2-041: E353K; MPXV-UK_P2-055: L108F; MPXV-UK_P2-056: D56N; MPXV-UK_P2-076: S30L, D88N; MPXV-UK_P2-077: M142I; MPXV-UK_P2-081: E162K; MPXV-UK_P2-128: E62K, R243Q; MPXV-UK_P2-133: S307L; MPXV-UK_P2-157: H221Y; MPXV-UK_P2-182: D209N, P722S, M1741I; MPXV-UK_P2-188: D264N; MPXV-UK_P2-189: S54F; MPXV-UK_P2-190: S105L"
+                    "aa": "MPXV-UK_P2-001: S105L; MPXV-UK_P2-002: S54F; MPXV-UK_P2-003: D264N; MPXV-UK_P2-012: A423D; MPXV-UK_P2-031: R48C; MPXV-UK_P2-037: P78S; MPXV-UK_P2-040: E125K; MPXV-UK_P2-041: E353K; MPXV-UK_P2-055: L108F; MPXV-UK_P2-056: D56N; MPXV-UK_P2-076: S30L, D88N; MPXV-UK_P2-077: M142I; MPXV-UK_P2-081: E162K; MPXV-UK_P2-128: E62K, R243Q; MPXV-UK_P2-133: S307L; MPXV-UK_P2-157: H221Y; MPXV-UK_P2-182: D209N, P722S, M1741I; MPXV-UK_P2-188: D264N; MPXV-UK_P2-189: S54F; MPXV-UK_P2-190: S105L",
+                    "clade": "2022_outbreak"
                   }
                 },
                 "children": [
@@ -2379,7 +2389,7 @@
                     "node_attrs": {
                       "div": 46,
                       "clade_membership": {
-                        "value": "WA"
+                        "value": "2022_outbreak"
                       }
                     },
                     "branch_attrs": {
@@ -2391,20 +2401,20 @@
                         "node_attrs": {
                           "div": 46,
                           "accession": "XXXXXXXX",
-                          "region": {
-                            "value": "Europe"
-                          },
                           "outbreak_associated": {
                             "value": "yes"
+                          },
+                          "clade_membership": {
+                            "value": "2022_outbreak"
+                          },
+                          "region": {
+                            "value": "Europe"
                           },
                           "country": {
                             "value": "Portugal"
                           },
                           "host": {
                             "value": "human"
-                          },
-                          "clade_membership": {
-                            "value": "WA"
                           }
                         },
                         "branch_attrs": {
@@ -2416,7 +2426,7 @@
                         "node_attrs": {
                           "div": 46,
                           "clade_membership": {
-                            "value": "WA"
+                            "value": "2022_outbreak"
                           }
                         },
                         "branch_attrs": {
@@ -2428,20 +2438,20 @@
                             "node_attrs": {
                               "div": 46,
                               "accession": "XXXXXXXX",
-                              "region": {
-                                "value": "Europe"
-                              },
                               "outbreak_associated": {
                                 "value": "yes"
+                              },
+                              "clade_membership": {
+                                "value": "2022_outbreak"
+                              },
+                              "region": {
+                                "value": "Europe"
                               },
                               "country": {
                                 "value": "Portugal"
                               },
                               "host": {
                                 "value": "human"
-                              },
-                              "clade_membership": {
-                                "value": "WA"
                               }
                             },
                             "branch_attrs": {
@@ -2453,7 +2463,7 @@
                             "node_attrs": {
                               "div": 46,
                               "clade_membership": {
-                                "value": "WA"
+                                "value": "2022_outbreak"
                               }
                             },
                             "branch_attrs": {
@@ -2482,20 +2492,20 @@
                                 "node_attrs": {
                                   "div": 46,
                                   "accession": "XXXXXXXX",
-                                  "region": {
-                                    "value": "Europe"
-                                  },
                                   "outbreak_associated": {
                                     "value": "yes"
+                                  },
+                                  "clade_membership": {
+                                    "value": "2022_outbreak"
+                                  },
+                                  "region": {
+                                    "value": "Europe"
                                   },
                                   "country": {
                                     "value": "Portugal"
                                   },
                                   "host": {
                                     "value": "human"
-                                  },
-                                  "clade_membership": {
-                                    "value": "WA"
                                   }
                                 },
                                 "branch_attrs": {
@@ -2934,7 +2944,7 @@
                                 "node_attrs": {
                                   "div": 46,
                                   "clade_membership": {
-                                    "value": "WA"
+                                    "value": "2022_outbreak"
                                   }
                                 },
                                 "branch_attrs": {
@@ -2946,20 +2956,20 @@
                                     "node_attrs": {
                                       "div": 46,
                                       "accession": "ON563414",
-                                      "region": {
-                                        "value": "North America"
-                                      },
                                       "outbreak_associated": {
                                         "value": "yes"
+                                      },
+                                      "clade_membership": {
+                                        "value": "2022_outbreak"
+                                      },
+                                      "region": {
+                                        "value": "North America"
                                       },
                                       "country": {
                                         "value": "USA"
                                       },
                                       "host": {
                                         "value": "human"
-                                      },
-                                      "clade_membership": {
-                                        "value": "WA"
                                       }
                                     },
                                     "branch_attrs": {
@@ -3048,20 +3058,20 @@
                                     "node_attrs": {
                                       "div": 48,
                                       "accession": "XXXXXXXX",
-                                      "region": {
-                                        "value": "Europe"
-                                      },
                                       "outbreak_associated": {
                                         "value": "yes"
+                                      },
+                                      "clade_membership": {
+                                        "value": "2022_outbreak"
+                                      },
+                                      "region": {
+                                        "value": "Europe"
                                       },
                                       "country": {
                                         "value": "Portugal"
                                       },
                                       "host": {
                                         "value": "human"
-                                      },
-                                      "clade_membership": {
-                                        "value": "WA"
                                       }
                                     },
                                     "branch_attrs": {
@@ -3095,7 +3105,7 @@
                     "node_attrs": {
                       "div": 46,
                       "clade_membership": {
-                        "value": "WA"
+                        "value": "2022_outbreak"
                       }
                     },
                     "branch_attrs": {
@@ -3117,20 +3127,20 @@
                         "node_attrs": {
                           "div": 47,
                           "accession": "XXXXXXXX",
-                          "region": {
-                            "value": "Europe"
-                          },
                           "outbreak_associated": {
                             "value": "yes"
+                          },
+                          "clade_membership": {
+                            "value": "2022_outbreak"
+                          },
+                          "region": {
+                            "value": "Europe"
                           },
                           "country": {
                             "value": "Portugal"
                           },
                           "host": {
                             "value": "human"
-                          },
-                          "clade_membership": {
-                            "value": "WA"
                           }
                         },
                         "branch_attrs": {
@@ -3152,7 +3162,7 @@
                         "node_attrs": {
                           "div": 46,
                           "clade_membership": {
-                            "value": "WA"
+                            "value": "2022_outbreak"
                           }
                         },
                         "branch_attrs": {
@@ -3164,20 +3174,20 @@
                             "node_attrs": {
                               "div": 46,
                               "accession": "XXXXXXXX",
-                              "region": {
-                                "value": "Europe"
-                              },
                               "outbreak_associated": {
                                 "value": "yes"
+                              },
+                              "clade_membership": {
+                                "value": "2022_outbreak"
+                              },
+                              "region": {
+                                "value": "Europe"
                               },
                               "country": {
                                 "value": "Portugal"
                               },
                               "host": {
                                 "value": "human"
-                              },
-                              "clade_membership": {
-                                "value": "WA"
                               }
                             },
                             "branch_attrs": {
@@ -3189,7 +3199,7 @@
                             "node_attrs": {
                               "div": 46,
                               "clade_membership": {
-                                "value": "WA"
+                                "value": "2022_outbreak"
                               }
                             },
                             "branch_attrs": {
@@ -3201,7 +3211,7 @@
                                 "node_attrs": {
                                   "div": 46,
                                   "clade_membership": {
-                                    "value": "WA"
+                                    "value": "2022_outbreak"
                                   }
                                 },
                                 "branch_attrs": {
@@ -3213,20 +3223,20 @@
                                     "node_attrs": {
                                       "div": 46,
                                       "accession": "XXXXXXXX",
-                                      "region": {
-                                        "value": "Europe"
-                                      },
                                       "outbreak_associated": {
                                         "value": "yes"
+                                      },
+                                      "clade_membership": {
+                                        "value": "2022_outbreak"
+                                      },
+                                      "region": {
+                                        "value": "Europe"
                                       },
                                       "country": {
                                         "value": "Portugal"
                                       },
                                       "host": {
                                         "value": "human"
-                                      },
-                                      "clade_membership": {
-                                        "value": "WA"
                                       }
                                     },
                                     "branch_attrs": {
@@ -3238,20 +3248,20 @@
                                     "node_attrs": {
                                       "div": 46,
                                       "accession": "XXXXXXXX",
-                                      "region": {
-                                        "value": "Europe"
-                                      },
                                       "outbreak_associated": {
                                         "value": "yes"
+                                      },
+                                      "clade_membership": {
+                                        "value": "2022_outbreak"
+                                      },
+                                      "region": {
+                                        "value": "Europe"
                                       },
                                       "country": {
                                         "value": "Portugal"
                                       },
                                       "host": {
                                         "value": "human"
-                                      },
-                                      "clade_membership": {
-                                        "value": "WA"
                                       }
                                     },
                                     "branch_attrs": {
@@ -3265,7 +3275,7 @@
                                 "node_attrs": {
                                   "div": 48,
                                   "clade_membership": {
-                                    "value": "WA"
+                                    "value": "2022_outbreak"
                                   }
                                 },
                                 "branch_attrs": {
@@ -4509,20 +4519,20 @@
                                     "node_attrs": {
                                       "div": 49,
                                       "accession": "XXXXXXXX",
-                                      "region": {
-                                        "value": "Europe"
-                                      },
                                       "outbreak_associated": {
                                         "value": "yes"
+                                      },
+                                      "clade_membership": {
+                                        "value": "2022_outbreak"
+                                      },
+                                      "region": {
+                                        "value": "Europe"
                                       },
                                       "country": {
                                         "value": "Portugal"
                                       },
                                       "host": {
                                         "value": "human"
-                                      },
-                                      "clade_membership": {
-                                        "value": "WA"
                                       }
                                     },
                                     "branch_attrs": {
@@ -4538,20 +4548,20 @@
                                     "node_attrs": {
                                       "div": 49,
                                       "accession": "XXXXXXXX",
-                                      "region": {
-                                        "value": "Europe"
-                                      },
                                       "outbreak_associated": {
                                         "value": "yes"
+                                      },
+                                      "clade_membership": {
+                                        "value": "2022_outbreak"
+                                      },
+                                      "region": {
+                                        "value": "Europe"
                                       },
                                       "country": {
                                         "value": "Portugal"
                                       },
                                       "host": {
                                         "value": "human"
-                                      },
-                                      "clade_membership": {
-                                        "value": "WA"
                                       }
                                     },
                                     "branch_attrs": {
