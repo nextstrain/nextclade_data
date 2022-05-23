@@ -7,14 +7,14 @@
   },
   "missingData": {
     "enabled": true,
-    "missingDataThreshold": 15000,
-    "scoreBias": 2000
+    "missingDataThreshold": 20000,
+    "scoreBias": 1000
   },
   "snpClusters": {
     "enabled": true,
     "windowSize": 100,
     "clusterCutOff": 5,
-    "scoreWeight": 50
+    "scoreWeight": 20
   },
   "mixedSites": {
     "enabled": true,
@@ -22,11 +22,11 @@
   },
   "frameShifts": {
     "enabled": true,
-    "scoreWeight": 10
+    "scoreWeight": 20
   },
   "stopCodons": {
     "enabled": true,
-    "scoreWeight": 10,
+    "scoreWeight": 40,
     "ignoredStopCodons": []
   }
 }
