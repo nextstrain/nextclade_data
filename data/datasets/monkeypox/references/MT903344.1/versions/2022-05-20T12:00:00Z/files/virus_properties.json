@@ -7,6 +7,6 @@
     "seed_spacing": 1000,
     "terminal_bandwidth": 100,
     "excess_bandwidth": 3,
-    "gap_alignment_side": "Left"
+    "gap_alignment_side": "left"
   }
 }
