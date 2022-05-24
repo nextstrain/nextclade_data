@@ -132,12 +132,20 @@ def build_dataset_v2(dataset_json, dataset_ref):
     # HACK: converts from old hierarchical object format to flat attributes
     # TODO: decide how to reorganize the hierarchical objects and folder structure in the git repo and rewrite this
     attributes = {
-        "name": {"value": dataset_name, "isDefault": dataset_name == defaultDatasetName},
-        "nameFriendly": {"value": dataset_json["nameFriendly"],
-                         "isDefault": dataset_json["nameFriendly"] == defaultDatasetNameFriendly},
-        "reference": {"value": dataset_ref["reference"]["accession"],
-                      "isDefault": dataset_ref["reference"]["accession"] == dataset_json["defaultRef"]},
-        "tag": {"value": dataset_ref["tag"], "isDefault": dataset_ref["latest"]},
+        "name": {
+            "value": dataset_name,
+            "valueFriendly": dataset_json["nameFriendly"],
+            "isDefault": dataset_name == defaultDatasetName
+        },
+        "reference": {
+            "value": dataset_ref["reference"]["accession"],
+            "valueFriendly": dataset_ref["reference"]["strainName"],
+            "isDefault": dataset_ref["reference"]["accession"] == dataset_json["defaultRef"]
+        },
+        "tag": {
+            "value": dataset_ref["tag"],
+            "isDefault": dataset_ref["latest"]
+        },
     }
 
     # TODO: figure out where 'enabled' field should come from
