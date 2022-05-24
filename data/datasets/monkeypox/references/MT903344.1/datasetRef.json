@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "MT903344.1",
+    "strainName": "MPXV-UK_P2/2018"
+  }
+}
