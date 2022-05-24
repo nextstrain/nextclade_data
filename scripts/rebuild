@@ -24,6 +24,7 @@ DATA_OUTPUT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT_DIR, "data_output")
 
 SETTINGS_JSON_PATH = os.path.realpath(os.path.join(DATA_INPUT_DIR, "settings.json"))
 INDEX_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "index.json"))
+INDEX_V2_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "index_v2.json"))
 
 # In case we want to change these words
 REFERENCE = "reference"
@@ -108,6 +109,79 @@ def make_zip_bundle(dataset_json, dataset_ref_json, version):
         root_dir=paths.zip_src_dir
     )
 
+def build_dataset_v1(dataset_json, dataset_refs):
+    dataset = {**dataset_json, "datasetRefs": dataset_refs}
+    return dataset
+
+def postprocess_datasets_v1(datasets, settings):
+    # Sort datasets alphabetically
+    datasets.sort(key=lambda x: x["nameFriendly"])
+    # Move monkeypox to the front, if it exists
+    datasets.sort(key=lambda x: x["name"] == "monkeypox", reverse=True)
+    # Move default dataset to the beginning
+    datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
+
+    datasets_json = dict()
+    datasets_json.update({"settings": settings})
+    datasets_json.update({"datasets": datasets})
+
+    return datasets_json
+
+
+def build_dataset_v2(dataset_json, dataset_refs):
+    for dataset_ref in dataset_refs:
+        # HACK: converts from old hierarchical object format to flat attributes
+        # TODO: decide how to reorganize the hierarchical objects and folder structure in the git repo and rewrite this
+        attributes = {
+            "name": {"value": dataset_name, "isDefault": dataset_name == defaultDatasetName},
+            "nameFriendly": {"value": dataset_json["nameFriendly"],
+                             "isDefault": dataset_json["nameFriendly"] == defaultDatasetNameFriendly},
+            "reference": {"value": dataset_ref["reference"]["accession"],
+                          "isDefault": dataset_ref["reference"]["accession"] == dataset_json["defaultRef"]},
+            "tag": {"value": dataset_ref["tag"], "isDefault": dataset_ref["latest"]},
+        }
+
+        # TODO: figure out where 'enabled' field should come from
+        dataset = {**dataset_json, **dataset_ref, "attributes": attributes}
+
+        # HACK: converts files to the new format
+        # TODO: modify original dataset files instead
+        def convert_files(files):
+            def get_filename(url):
+                return url.split("/")[-1]
+
+            def remove_leading_slash(url):
+                return url.lstrip("/")
+
+            return {get_filename(url): remove_leading_slash(url) for _, url in files.items()}
+
+        dataset["files"] = convert_files(dataset["files"])
+
+        # HACK: omits properties that have been moved into the attributes just above
+        dataset = {k: v for k, v in dataset.items() if k in [
+            "enabled",
+            "attributes",
+            "comment",
+            "compatibility",
+            "defaultGene",
+            "files",
+            "geneOrderPreference",
+            "zipBundle",
+        ]}
+
+        return dataset
+
+def postprocess_datasets_v2(datasets_v2, _):
+    datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"])
+    datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"].startswith("monkeypox"), reverse=True)
+    datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"].startswith("sars-cov-2"), reverse=True)
+
+    index_json = dict()
+    index_json.update({"schema": "2.0.0"})
+    index_json.update({"datasets": datasets_v2})
+
+    return index_json
+
 
 if __name__ == '__main__':
     shutil.rmtree(DATA_OUTPUT_DIR, ignore_errors=True)
@@ -120,6 +194,7 @@ if __name__ == '__main__':
     defaultDatasetNameFriendly = None
 
     datasets = []
+    datasets_v2 = []
     for dataset_json_path in find_files(pattern="dataset.json", here=os.path.join(DATA_INPUT_DIR, "datasets")):
         with open(dataset_json_path, 'r') as f:
             dataset_json: dict = json.load(f)
@@ -131,6 +206,7 @@ if __name__ == '__main__':
 
         dataset_dir = os.path.dirname(dataset_json_path)
         dataset_refs: List[dict] = []
+        dataset_refs_v2: List[dict] = []
         for dataset_ref_json_path in find_files(pattern="datasetRef.json", here=dataset_dir):
 
             with open(dataset_ref_json_path, 'r') as f:
@@ -176,19 +252,16 @@ if __name__ == '__main__':
 
             dataset_refs.append({**dataset_ref_json, "versions": version_jsons})
 
-        dataset = {**dataset_json, "datasetRefs": dataset_refs}
-        datasets.append(dataset)
+            for version_json in version_jsons:
+                dataset_refs_v2.append({**dataset_ref_json, **version_json})
+
+        datasets.append(build_dataset_v1(dataset_json, dataset_refs))
+        datasets_v2.append(build_dataset_v2(dataset_json, dataset_refs_v2))
 
     settings.update({'defaultDatasetNameFriendly': defaultDatasetNameFriendly})
 
-    # Sort datasets alphabetically
-    datasets.sort(key=lambda x: x["nameFriendly"])
-    # Move monkeypox to the front, if it exists
-    datasets.sort(key=lambda x: x["name"] == "monkeypox", reverse=True)
-    # Move default dataset to the beginning
-    datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
+    index_v1_json = postprocess_datasets_v1(datasets, settings)
+    json_write(index_v1_json, INDEX_JSON_PATH)
 
-    datasets_json = dict()
-    datasets_json.update({"settings": settings})
-    datasets_json.update({"datasets": datasets})
-    json_write(datasets_json, INDEX_JSON_PATH)
+    index_v2_json = postprocess_datasets_v2(datasets_v2, settings)
+    json_write(index_v2_json, INDEX_V2_JSON_PATH)
