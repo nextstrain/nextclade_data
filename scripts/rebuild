@@ -148,8 +148,15 @@ def build_dataset_v2(dataset_json, dataset_ref):
         },
     }
 
+    params = {
+        "defaultGene": dataset_json.get("defaultGene"),
+        "geneOrderPreference": dataset_json.get("geneOrderPreference"),
+    }
+
+    params = { k: v for k, v in params.items() if v is not None }
+
     # TODO: figure out where 'enabled' field should come from
-    dataset = {**dataset_json, **dataset_ref, "attributes": attributes}
+    dataset = {**dataset_json, **dataset_ref, "attributes": attributes, "params": params}
 
     # HACK: converts files to the new format
     # TODO: modify original dataset files instead
@@ -170,9 +177,8 @@ def build_dataset_v2(dataset_json, dataset_ref):
         "attributes",
         "comment",
         "compatibility",
-        "defaultGene",
         "files",
-        "geneOrderPreference",
+        "params",
         "zipBundle",
     ]}
 
