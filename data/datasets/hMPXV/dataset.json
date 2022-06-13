@@ -2,6 +2,6 @@
   "defaultRef": "NC_063383.1",
   "enabled": true,
   "metadata": {},
-  "name": "hpxv",
-  "nameFriendly": "Monkeypox (HPXV)"
+  "name": "hMPXV",
+  "nameFriendly": "Human Monkeypox (hMPXV)"
 }
