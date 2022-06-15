@@ -4,9 +4,9 @@
   "nucMutLabelMapReverse": {},
   "alignmentParams": {
     "max_indel": 20000,
-    "seed_spacing": 1000,
-    "terminal_bandwidth": 100,
-    "excess_bandwidth": 3,
+    "seed_spacing": 500,
+    "terminal_bandwidth": 500,
+    "excess_bandwidth": 20,
     "gap_alignment_side": "left"
   }
 }
