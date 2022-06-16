@@ -8,6 +8,8 @@ import fnmatch
 import json
 import os
 import shutil
+from collections import defaultdict
+
 
 from typing import List
 
@@ -113,11 +115,22 @@ def build_dataset_v1(dataset_json, dataset_refs):
     dataset = {**dataset_json, "datasetRefs": dataset_refs}
     return dataset
 
+# Ordering of datasets
+position = {
+  'sars-cov-2': 4,
+  'MPXV': 3,
+  'hMPXV': 2,
+  'hMPXV_B1': 1,
+  'sars-cov-2-no-recomb': -1000
+}
+position = defaultdict(int, position)
+
 def postprocess_datasets_v1(datasets, settings):
+
     # Sort datasets alphabetically
-    datasets.sort(key=lambda x: x["nameFriendly"])
+    datasets.sort(key=lambda x: x["nameFriendly"],reverse=True)
     # Move monkeypox to the front, if it exists
-    datasets.sort(key=lambda x: x["name"] == "monkeypox", reverse=True)
+    datasets.sort(key=lambda x: position[x["name"]])
     # Move default dataset to the beginning
     datasets.sort(key=lambda x: x["name"] == defaultDatasetName, reverse=True)
 
@@ -186,8 +199,8 @@ def build_dataset_v2(dataset_json, dataset_ref):
 
 def postprocess_datasets_v2(datasets_v2, _):
     datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"])
-    datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"].startswith("monkeypox"), reverse=True)
-    datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"].startswith("sars-cov-2"), reverse=True)
+    datasets_v2.sort(key=lambda x: position[x["attributes"]["name"]["value"]], reverse=True)
+    datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"] == "sars-cov-2", reverse=True)
 
     index_json = dict()
     index_json.update({"schema": "2.0.0"})
