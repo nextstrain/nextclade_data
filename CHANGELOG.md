@@ -1,3 +1,11 @@
+## 2022-06-16
+
+### New dataset version (tag `2022-06-16T12:00:00Z`)
+
+#### MPXV All Clades
+
+- Reduced number of sample sequences to reduce number of markers and therefore improve web display performance
+
 ## 2022-06-14
 
 ### 3 Monkeypox (MPXV) datasets introduced
