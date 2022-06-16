@@ -1,6 +1,6 @@
 {
-  "tag": "2022-05-20T12:00:00Z",
-  "comment": "First Monkeypox dataset, experimental",
+  "tag": "2022-06-14T12:00:00Z",
+  "comment": "Clade B.1 dataset",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.999.0",

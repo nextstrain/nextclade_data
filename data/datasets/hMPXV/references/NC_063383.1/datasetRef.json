@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "NC_063383.1",
+    "strainName": "MPXV-M5312_HM12_Rivers"
+  }
+}

@@ -1,3 +1,36 @@
+## 2022-06-14
+
+### 3 Monkeypox (MPXV) datasets introduced
+
+Three MPXV datasets are added with differing zoom levels containing:
+
+- MPXV (All clades)
+- hMPXV-1 (part of clade 3, source of 2017/2018/2022 outbreaks)
+- hMPXV-1 B.1 (2022 outbreak lineage)
+
+All 3 use the coordinate system of the recently designated NCBI Monkeypox reference sequence NC_063383 (MPXV-M5312_HM12_Rivers).
+
+However, SNPs from two different ref sequences are added to the "all clades" and B.1 datasets to reduce the number of total mutations.
+
+The B.1 datset uses SNPs of ON563414.3 (MPXV_USA_2022_MA001) on top of a NC_063383 backbone.
+
+The "all clades" build uses the SNPs of a reconstructed ancestral MPXV sequence that is the inferred most recent common ancestor of clades 1, 2 and 3, rooted with a Cowpox outgroup.
+
+Only the MPXV (All clades) dataset can assign all clades 1, 2 and 3.
+The hMPXV-1 dataset can be used if all viruses are from hMPXV-1.
+The B.1 dataset is useful for 2022 outbreak sequences but will not be able to assign anything but B.1 lineages.
+
+Gene annotations follow the annotation used by NC_063383 and is of the form `OPG001` (for OrthoPox Gene 001).
+Since the alignment reference is always in NC_063383 coordinates, nucleotide and protein mutation position should usually be identical in alignments done with all three datasets.
+
+Quality control parameters are subject to change, especially since "known" frame shifts and stop codons have not been annotated. For example, clade 1 sequences will always show around 7 frame shifts, yet these do not indicate quality problems.
+
+### New dataset version (tag `2022-06-14T12:00:00Z`)
+
+#### SARS-CoV-2
+
+- Pango lineages: New lineages added up till [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.9 and beyond are now included, including among others `BA.5.1-BA.5.3`, `BA.2.35-BA.2.48` and `XV-XY`
+
 ## 2022-04-28
 
 ### New dataset version (tag `2022-04-28T12:00:00Z`)

@@ -1,13 +1,13 @@
 {
-  "tag": "2022-06-03T12:00:00Z",
-  "comment": "Data update",
+  "tag": "2022-06-14T12:00:00Z",
+  "comment": "hMPXV-1 dataset",
   "compatibility": {
     "nextcladeCli": {
-      "min": "1.10.0",
+      "min": "1.999.0",
       "max": null
     },
     "nextcladeWeb": {
-      "min": "1.13.0",
+      "min": "1.999.0",
       "max": null
     }
   },
