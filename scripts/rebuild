@@ -126,6 +126,9 @@ position = {
 position = defaultdict(int, position)
 
 def postprocess_datasets_v1(datasets, settings):
+    # mpx datasets are not compatible with v1
+    # TODO: should probably filter by version instead, but it is a bit more involved due to nested dict structure
+    datasets = list(filter(lambda dataset: "mpx" not in dataset["name"].lower(), datasets))
 
     # Sort datasets alphabetically
     datasets.sort(key=lambda x: x["nameFriendly"],reverse=True)
