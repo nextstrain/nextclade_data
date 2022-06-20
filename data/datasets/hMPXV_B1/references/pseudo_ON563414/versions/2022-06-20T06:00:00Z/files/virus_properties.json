@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.10.0",
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
+  "alignmentParams": {
+    "max_indel": 20000,
+    "seed_spacing": 500,
+    "terminal_bandwidth": 500,
+    "excess_bandwidth": 20,
+    "gap_alignment_side": "left"
+  }
+}
