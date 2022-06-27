@@ -1,3 +1,11 @@
+## 2022-06-27
+
+### New dataset version (tag `2022-06-27T12:00:00Z`)
+
+#### SARS-CoV-2
+
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.11, featuring a host of new BA.2, BA.4 and BA.5 sublineages and recombinants.
+
 ## 2022-06-16
 
 ### New dataset version (tag `2022-06-16T12:00:00Z`)
