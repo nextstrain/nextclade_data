@@ -1,5 +1,8 @@
 {
   "schemaVersion": "1.10.0",
+  "alignmentParams": {
+    "retry_reverse_complement": true
+  },
   "nucMutLabelMap": {
     "21T": ["21K"],
     "44T": ["21L"],

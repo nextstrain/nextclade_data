@@ -5,6 +5,7 @@
 #### SARS-CoV-2
 
 - Pango lineages: In this release, Nextclade can assign Pango lineages up to [pango-designation release](https://github.com/cov-lineages/pango-designation/releases) v1.11, featuring a host of new BA.2, BA.4 and BA.5 sublineages and recombinants.
+- Alignment params: Retry reverse complement flag is now set to true, so that reverse complement is tried if seed matching fails.
 
 ## 2022-06-16
 
