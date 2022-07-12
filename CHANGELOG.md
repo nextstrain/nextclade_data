@@ -1,3 +1,21 @@
+## 2022-07-12
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2022-07-12T12:00:00Z`)
+
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to BA.2.75
+- Alignment params: Retry reverse complement flag is now set to true, so that reverse complement is tried if seed matching fails.
+- Fixes: Some synthetic pango lineage sequences had wrong mutations, this is now fixed through a manually curated override file.
+
+## 2022-06-29
+
+### MPXV B.1
+
+#### New dataset version (tag `2022-06-29T12:00:00Z`)
+
+- Increased number of B.1 samples from ~100 to ~200 to improve phylogenetic placement of analyzed 2022 outbreak sequences
+
 ## 2022-06-27
 
 ### New dataset version (tag `2022-06-27T12:00:00Z`)
