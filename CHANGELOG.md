@@ -1,3 +1,11 @@
+## 2022-07-12
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2022-07-12T12:00:00Z`)
+
+- Fix: BA.2.75 lacked the characteristic S:R493Q reversion in the previous release, this is now fixed. This is the only change, otherwise this dataset is identical to `2022-07-11T12:00:00Z`.
+
 ## 2022-07-11
 
 ### SARS-CoV-2
