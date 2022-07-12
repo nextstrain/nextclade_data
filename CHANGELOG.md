@@ -1,8 +1,8 @@
-## 2022-07-12
+## 2022-07-11
 
 ### SARS-CoV-2
 
-#### New dataset version (tag `2022-07-12T12:00:00Z`)
+#### New dataset version (tag `2022-07-11T12:00:00Z`)
 
 - Pango lineages: In this release, Nextclade can assign Pango lineages up to BA.2.75
 - Alignment params: Retry reverse complement flag is now set to true, so that reverse complement is tried if seed matching fails.
