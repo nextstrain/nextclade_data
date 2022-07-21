@@ -1,3 +1,12 @@
+## 2022-07-21
+
+### SARS-CoV-2
+
+#### New dataset version (tag `2022-07-21T12:00:00Z`)
+
+- Clades: BA.2.75 has been given the Nextstrain clade name `22D`. Read more about the reasoning for the decision to give this lineage a name here <https://github.com/nextstrain/ncov/pull/984>
+- This is the only change to the dataset, so other than the clade changing for BA.2.75 nothing else should change.
+
 ## 2022-07-12
 
 ### SARS-CoV-2
