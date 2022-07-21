@@ -1,6 +1,6 @@
 {
-  "tag": "2022-07-12T12:00:00Z",
-  "comment": "Fix: Force S:493 reversion in BA.2.75",
+  "tag": "2022-07-21T12:00:00Z",
+  "comment": "Give BA.2.75 Nextstrain clade name 22D",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.10.0",
