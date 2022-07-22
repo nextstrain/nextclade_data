@@ -1,11 +1,14 @@
-## 2022-07-21
+## 2022-07-22
 
-### SARS-CoV-2
+### SARS-CoV-2 and SARS-CoV-2-no-recomb
 
-#### New dataset version (tag `2022-07-21T12:00:00Z`)
+#### New dataset version (tag `2022-07-22T12:00:00Z`)
 
 - Clades: BA.2.75 has been given the Nextstrain clade name `22D`. Read more about the reasoning for the decision to give this lineage a name here <https://github.com/nextstrain/ncov/pull/984>
-- This is the only change to the dataset, so other than the clade changing for BA.2.75 nothing else should change.
+- Data update: New pango lineages are included up to commit <https://github.com/cov-lineages/pango-designation/compare/65cb2e04de0dc311600b396f7119babeb051b40e...42134608ae645853c333591ddadc345bfaf7ec13>)
+- Fix: BA.2.38 no longer contains `6091T` as defining mutation, should therefore catch many more Indian BA.2.38 (report by @silcn in https://github.com/nextstrain/nextclade/issues/935)
+- Fix: Genemap format now correct, compliant with GFF3, see https://github.com/nextstrain/nextclade_data/issues/33 (report by @huddlej)
+- virus_properties.json has been updated, including clade `22D`
 
 ## 2022-07-12
 
@@ -21,7 +24,7 @@
 
 #### New dataset version (tag `2022-07-11T12:00:00Z`)
 
-- Pango lineages: In this release, Nextclade can assign Pango lineages up to BA.2.75
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to BA.2.75 (commit https://github.com/cov-lineages/pango-designation/commit/65cb2e04de0dc311600b396f7119babeb051b40e)
 - Alignment params: Retry reverse complement flag is now set to true, so that reverse complement is tried if seed matching fails.
 - Fixes: Some synthetic pango lineage sequences had wrong mutations, this is now fixed through a manually curated override file.
 
