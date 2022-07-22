@@ -1,6 +1,6 @@
 {
-  "tag": "2022-07-21T12:00:00Z",
-  "comment": "Give BA.2.75 Nextstrain clade name 22D",
+  "tag": "2022-07-22T12:00:00Z",
+  "comment": "Data update and BA.2.75 gets Nextstrain clade name 22D",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.10.0",
