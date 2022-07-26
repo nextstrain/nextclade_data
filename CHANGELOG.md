@@ -10,6 +10,8 @@ Beware that Nextclade v2.0.0 until v2.3.0 have had a bug that means this dataset
 
 You will have to upgrade to Nextclade v2.3.1 or use Nextclade v1 to use this dataset.
 
+## 2022-07-26
+
 ### SARS-CoV-2 and SARS-CoV-2-no-recomb
 
 #### Bug fix release (tag `2022-07-26T12:00:00Z`)
