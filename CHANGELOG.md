@@ -1,4 +1,14 @@
-## 2022-07-26
+## 2022-07-27
+
+### Influenza Yamagata HA
+
+#### Bug fix release (tag `2022-07-27T12:00:00Z`)
+
+Fix: The old tree used an incorrect genemap which caused Nextclade to crash. Now it works again.
+
+Beware that Nextclade v2.0.0 until v2.3.0 have had a bug that means this dataset will crash.
+
+You will have to upgrade to Nextclade v2.3.1 or use Nextclade v1 to use this dataset.
 
 ### SARS-CoV-2 and SARS-CoV-2-no-recomb
 
