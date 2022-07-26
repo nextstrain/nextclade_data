@@ -1,3 +1,19 @@
+## 2022-07-26
+
+### SARS-CoV-2 and SARS-CoV-2-no-recomb
+
+#### Bug fix release (tag `2022-07-26T12:00:00Z`)
+
+Fix: Ancestral reconstruction of mutations was wrong due to recombinants attaching directly to the root and causing the root mutations to be different from Wuhan.
+
+This caused:
+
+- _displayed_ mutations in Auspice to be wrong for all tips since around the time recombinants were first included in the tree (since `2022-03-24T12:00:00Z`)
+- Some of the _calculated_ reconstructed mutations on _recombinants_ to be wrong, affecting nearest neighbor placement of _some_ recombinants.
+
+The fix will cause a few recombinants to become recombinants and improve QC values of some recombinants but should not have large effects overall.
+The biggest perceived impact will be that mutations displayed by Auspice will now be correct.
+
 ## 2022-07-22
 
 ### SARS-CoV-2 and SARS-CoV-2-no-recomb
