@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "BA.2",
+    "strainName": "BA.2"
+  }
+}
