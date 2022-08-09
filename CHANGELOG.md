@@ -1,3 +1,21 @@
+# CHANGELOG
+
+## 2022-08-09
+
+### New dataset version (tag `2022-08-09T12:00:00Z`)
+
+#### All Monkeypox datasets
+
+The datasets now include  hMPXV-1 lineages B.1.1 to B.1.5. See details in https://github.com/nextstrain/monkeypox/pull/95
+
+Sequences released to Genbank up to 2022-08-08 have been included in the new trees.
+
+A B.1.5 sequence from Genbank has been added to the example sequences
+
+##### MPXV (All clades)
+
+Sequence KJ642615 (W-Nigeria/1971) has been excluded as it appears to be recombinant of clade 2 and clade 3. See details in https://github.com/nextstrain/monkeypox/pull/102 - this sequence is not present in the other datasets, so no change there
+
 ## 2022-07-27
 
 ### Influenza Yamagata HA
