@@ -16,6 +16,20 @@ A B.1.5 sequence from Genbank has been added to the example sequences
 
 Sequence KJ642615 (W-Nigeria/1971) has been excluded as it appears to be recombinant of clade 2 and clade 3. See details in https://github.com/nextstrain/monkeypox/pull/102 - this sequence is not present in the other datasets, so no change there
 
+### Experimental, SARS-CoV-2 dataset relative to BA.2 (`sars-cov-2-21L`)
+
+This release includes a new type of SARS-CoV-2 dataset that is recommended for web use only.
+
+It uses the Wuhan reference but with the SNPs that occur in BA.2.
+
+This way, the mutation view is less overloaded and individual Spike mutations are easier to spot by eye.
+
+Only lineages that descend from BA.2, BA.4 or BA.5 are included in this dataset.
+
+Please do not use this dataset for tools that rely on data continuity as the dataset is comparatively new and brittle and may not be maintained indenfinitely.
+
+The current version has the tag `2022-07-26T12:00:00` and name `sars-cov-2-21L`
+
 ## 2022-07-27
 
 ### Influenza Yamagata HA
