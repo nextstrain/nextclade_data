@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## 2022-18-09
+
+### Monkeypox datasets
+
+#### New dataset version (tag `2022-08-19T12:00:00Z`)
+
+##### All monkeypox datasets
+
+Clade names now follow the convention agreed during WHO consultation:
+
+- Clade 1 -> Clade I
+- Clade 2 -> Clade IIa
+- Clade 3 -> Clade IIb
+
+The common ancestor of clade IIa and clade IIb is called clade II.
+
+The clade/lineage hierarchy now has a middle level called `outbreak`. For now there is just one outbreak called `hMPXV-1` but in the future other clusters that may be worth naming may get an `outbreak` name - even if they don't get lineages of their own.
+
+This middle level is output into Nextclade web and TSV/CSV files in the same way as `lineages`. The field is called `outbreak`. If a sequence does not belong to an outbreak, the field will be empty.
+
+Sequences released by Genbank up to 2022-08-18 are included in the new dataset.
+
+##### MPXV (All clades)
+
+The reconstructed ancestor is now assigned clade `outgroup` - until now the clade field was empty.
+
+The reference.fasta ID has been renamed to `reconstructed_ancestral_mpox_in_NC_063383_coordinates` as requested in issue [#35](https://github.com/nextstrain/nextclade_data/issues/35). This should not impact most users - the change only affects the name of the reference sequence as output to the alignment if you use Nextclade-CLI and include the `--include-reference` flag.
+
+##### hMPXV-1 B.1 dataset
+
+The reference.fasta ID has been renamed to `MPXV_USA_2022_MA001_in_NC_063383_coordinates`, see above for a description of the impact (for most people none).
+
 ## 2022-08-09
 
 ### New dataset version (tag `2022-08-09T12:00:00Z`)
