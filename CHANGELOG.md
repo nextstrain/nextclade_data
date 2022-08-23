@@ -1,6 +1,14 @@
 # CHANGELOG
 
-## 2022-18-09
+## 2022-08-23
+
+### New dataset version (tag `2022-08-23T12:00:00Z`)
+
+#### All SARS-CoV-2 datasets
+
+- Data update: New pango lineages are included up to commit <https://github.com/cov-lineages/pango-designation/compare/42134608ae645853c333591ddadc345bfaf7ec13...fcad365d2fc11507a793c97e7ff26059d093c79f>)
+
+## 2022-08-19
 
 ### Monkeypox datasets
 
