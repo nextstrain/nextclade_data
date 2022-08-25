@@ -27,6 +27,9 @@
   "stopCodons": {
     "enabled": true,
     "scoreWeight": 40,
-    "ignoredStopCodons": []
+    "ignoredStopCodons": [
+      { "geneName": "NBT03_gp175", "codon": 188 },
+      { "geneName": "OPG015", "codon": 188 }
+    ]
   }
 }
