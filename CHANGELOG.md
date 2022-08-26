@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2022-08-26
+
+### New dataset version (tag `2022-08-26T12:00:00Z`)
+
+#### All Monkeypox datasets
+
+- New lineages B.1.6-B.1.8 have been added, see this PR for details: <https://github.com/mpxv-lineages/lineage-designation/pull/13/files>.
+- Lineages are now colored using color ordering, making it easier to spot lineages that are closely related on the Auspice tree.
+
 ## 2022-08-23
 
 ### New dataset version (tag `2022-08-23T12:00:00Z`)
