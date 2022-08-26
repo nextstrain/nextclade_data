@@ -1,6 +1,6 @@
 {
-  "tag": "2022-08-25T12:00:00Z",
-  "comment": "Add lineages B.1.6 - B.1.8",
+  "tag": "2022-08-26T12:00:00Z",
+  "comment": "Updated clade names to WHO announcement, introduce outbreak level",
   "compatibility": {
     "nextcladeCli": {
       "min": "2.0.0-alpha.0",
