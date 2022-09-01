@@ -27,6 +27,7 @@ DATA_OUTPUT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT_DIR, "data_output")
 SETTINGS_JSON_PATH = os.path.realpath(os.path.join(DATA_INPUT_DIR, "settings.json"))
 INDEX_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "index.json"))
 INDEX_V2_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "index_v2.json"))
+NOT_FOUND_JSON_PATH = os.path.realpath(os.path.join(DATA_OUTPUT_DIR, "404.json"))
 
 # In case we want to change these words
 REFERENCE = "reference"
@@ -296,3 +297,6 @@ if __name__ == '__main__':
 
     index_v2_json = postprocess_datasets_v2(datasets_v2, settings)
     json_write(index_v2_json, INDEX_V2_JSON_PATH)
+
+    not_found_json = { "status": 404, "message": "Not found" }
+    json_write(not_found_json, NOT_FOUND_JSON_PATH)

@@ -26,6 +26,10 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: install dependencies
+        run: |
+          sudo apt-get install brotli pigz parallel rename --yes -qq >/dev/null
+
       - name: install awscli
         run: |
           set -x
