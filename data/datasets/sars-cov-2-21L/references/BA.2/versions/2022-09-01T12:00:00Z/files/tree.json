@@ -2,7 +2,7 @@
   "version": "v2",
   "meta": {
     "title": "SARS-CoV-2 phylogeny",
-    "updated": "2022-09-02",
+    "updated": "2022-09-03",
     "build_url": "https://github.com/neherlab/nextclade_data_workflows",
     "data_provenance": [
       {
@@ -355,6 +355,41 @@
         },
         "children": [
           {
+            "name": "BA.2.15",
+            "node_attrs": {
+              "div": 3,
+              "author": {
+                "author": "?",
+                "value": "?"
+              },
+              "clade_membership": {
+                "value": "21L (Omicron)"
+              },
+              "Nextclade_pango": {
+                "value": "BA.2.15"
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "C9714T",
+                  "G21753T",
+                  "C27944T"
+                ],
+                "ORF1a": [
+                  "T3150I"
+                ],
+                "S": [
+                  "W64L"
+                ]
+              },
+              "labels": {
+                "aa": "ORF1a: T3150I; S: W64L",
+                "spike_mutations": "W64L"
+              }
+            }
+          },
+          {
             "name": "BA.2.16",
             "node_attrs": {
               "div": 1,
@@ -390,41 +425,6 @@
               },
               "labels": {
                 "aa": "N: T296I; ORF1a: V84-, M85-"
-              }
-            }
-          },
-          {
-            "name": "BA.2.15",
-            "node_attrs": {
-              "div": 3,
-              "author": {
-                "author": "?",
-                "value": "?"
-              },
-              "clade_membership": {
-                "value": "21L (Omicron)"
-              },
-              "Nextclade_pango": {
-                "value": "BA.2.15"
-              }
-            },
-            "branch_attrs": {
-              "mutations": {
-                "nuc": [
-                  "C9714T",
-                  "G21753T",
-                  "C27944T"
-                ],
-                "ORF1a": [
-                  "T3150I"
-                ],
-                "S": [
-                  "W64L"
-                ]
-              },
-              "labels": {
-                "aa": "ORF1a: T3150I; S: W64L",
-                "spike_mutations": "W64L"
               }
             }
           },
@@ -813,6 +813,37 @@
                         },
                         "children": [
                           {
+                            "name": "BA.4.3",
+                            "node_attrs": {
+                              "div": 10,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "22A (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.4.3"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C203T",
+                                  "T1453C",
+                                  "C21365T"
+                                ],
+                                "ORF1b": [
+                                  "P2633L"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1b: P2633L"
+                              }
+                            }
+                          },
+                          {
                             "name": "BA.4.4",
                             "node_attrs": {
                               "div": 8,
@@ -876,38 +907,6 @@
                             }
                           },
                           {
-                            "name": "BA.4.6",
-                            "node_attrs": {
-                              "div": 10,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "22A (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BA.4.6"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {
-                                "nuc": [
-                                  "C8140T",
-                                  "C14599T",
-                                  "G22599C"
-                                ],
-                                "S": [
-                                  "R346T"
-                                ]
-                              },
-                              "labels": {
-                                "aa": "S: R346T",
-                                "spike_mutations": "R346T"
-                              }
-                            }
-                          },
-                          {
                             "name": "BA.4.7",
                             "node_attrs": {
                               "div": 11,
@@ -944,7 +943,7 @@
                             }
                           },
                           {
-                            "name": "BA.4.3",
+                            "name": "BA.4.6",
                             "node_attrs": {
                               "div": 10,
                               "author": {
@@ -955,22 +954,23 @@
                                 "value": "22A (Omicron)"
                               },
                               "Nextclade_pango": {
-                                "value": "BA.4.3"
+                                "value": "BA.4.6"
                               }
                             },
                             "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "C203T",
-                                  "T1453C",
-                                  "C21365T"
+                                  "C8140T",
+                                  "C14599T",
+                                  "G22599C"
                                 ],
-                                "ORF1b": [
-                                  "P2633L"
+                                "S": [
+                                  "R346T"
                                 ]
                               },
                               "labels": {
-                                "aa": "ORF1b: P2633L"
+                                "aa": "S: R346T",
+                                "spike_mutations": "R346T"
                               }
                             }
                           }
@@ -1041,9 +1041,9 @@
                             }
                           },
                           {
-                            "name": "BA.4.1.3",
+                            "name": "BA.4.1.4",
                             "node_attrs": {
-                              "div": 10,
+                              "div": 8,
                               "author": {
                                 "author": "?",
                                 "value": "?"
@@ -1052,25 +1052,21 @@
                                 "value": "22A (Omicron)"
                               },
                               "Nextclade_pango": {
-                                "value": "BA.4.1.3"
+                                "value": "BA.4.1.4"
                               }
                             },
                             "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "A2435G",
-                                  "C11758T",
-                                  "C28435T"
+                                  "G25266T"
                                 ],
-                                "ORF1a": [
-                                  "R724G"
-                                ],
-                                "ORF9b": [
-                                  "P51L"
+                                "S": [
+                                  "C1235F"
                                 ]
                               },
                               "labels": {
-                                "aa": "ORF1a: R724G; ORF9b: P51L"
+                                "aa": "S: C1235F",
+                                "spike_mutations": "C1235F"
                               }
                             }
                           },
@@ -1134,9 +1130,9 @@
                             }
                           },
                           {
-                            "name": "BA.4.1.4",
+                            "name": "BA.4.1.3",
                             "node_attrs": {
-                              "div": 8,
+                              "div": 10,
                               "author": {
                                 "author": "?",
                                 "value": "?"
@@ -1145,21 +1141,25 @@
                                 "value": "22A (Omicron)"
                               },
                               "Nextclade_pango": {
-                                "value": "BA.4.1.4"
+                                "value": "BA.4.1.3"
                               }
                             },
                             "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "G25266T"
+                                  "A2435G",
+                                  "C11758T",
+                                  "C28435T"
                                 ],
-                                "S": [
-                                  "C1235F"
+                                "ORF1a": [
+                                  "R724G"
+                                ],
+                                "ORF9b": [
+                                  "P51L"
                                 ]
                               },
                               "labels": {
-                                "aa": "S: C1235F",
-                                "spike_mutations": "C1235F"
+                                "aa": "ORF1a: R724G; ORF9b: P51L"
                               }
                             }
                           },
@@ -1654,6 +1654,25 @@
                     },
                     "children": [
                       {
+                        "name": "BA.5.6",
+                        "node_attrs": {
+                          "div": 15,
+                          "author": {
+                            "author": "?",
+                            "value": "?"
+                          },
+                          "clade_membership": {
+                            "value": "22B (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.5.6"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        }
+                      },
+                      {
                         "name": "BA.5.6.1",
                         "node_attrs": {
                           "div": 17,
@@ -1681,25 +1700,6 @@
                           "labels": {
                             "aa": "ORF1b: M1839I"
                           }
-                        }
-                      },
-                      {
-                        "name": "BA.5.6",
-                        "node_attrs": {
-                          "div": 15,
-                          "author": {
-                            "author": "?",
-                            "value": "?"
-                          },
-                          "clade_membership": {
-                            "value": "22B (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.5.6"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {}
                         }
                       },
                       {
@@ -1930,25 +1930,6 @@
                     },
                     "children": [
                       {
-                        "name": "BA.5.3",
-                        "node_attrs": {
-                          "div": 13,
-                          "author": {
-                            "author": "?",
-                            "value": "?"
-                          },
-                          "clade_membership": {
-                            "value": "22B (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.5.3"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {}
-                        }
-                      },
-                      {
                         "name": "BA.5.3.3",
                         "node_attrs": {
                           "div": 15,
@@ -2067,6 +2048,25 @@
                           "labels": {
                             "aa": "ORF1a: G82-, H83-, V84-, M85-, V86-, S2193F; ORF7a: F54X, A55-, L56-, T57-, C58-, F59-, S60-, T61-, Q62-, F63-, A64-, F65-, A66-, C67-, P68-, D69-, G70-, V71X, *122X"
                           }
+                        }
+                      },
+                      {
+                        "name": "BA.5.3",
+                        "node_attrs": {
+                          "div": 13,
+                          "author": {
+                            "author": "?",
+                            "value": "?"
+                          },
+                          "clade_membership": {
+                            "value": "22B (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.5.3"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
                         }
                       },
                       {
@@ -2193,37 +2193,6 @@
                             }
                           },
                           {
-                            "name": "BE.2",
-                            "node_attrs": {
-                              "div": 17,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "22B (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BE.2"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {
-                                "nuc": [
-                                  "C2910T",
-                                  "A10399G",
-                                  "C13342T"
-                                ],
-                                "ORF1a": [
-                                  "T882I"
-                                ]
-                              },
-                              "labels": {
-                                "aa": "ORF1a: T882I"
-                              }
-                            }
-                          },
-                          {
                             "name": "BE.3",
                             "node_attrs": {
                               "div": 17,
@@ -2258,6 +2227,37 @@
                             }
                           },
                           {
+                            "name": "BE.2",
+                            "node_attrs": {
+                              "div": 17,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "22B (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BE.2"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C2910T",
+                                  "A10399G",
+                                  "C13342T"
+                                ],
+                                "ORF1a": [
+                                  "T882I"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: T882I"
+                              }
+                            }
+                          },
+                          {
                             "name": "NODE_0000017",
                             "node_attrs": {
                               "div": 15,
@@ -2282,6 +2282,25 @@
                               }
                             },
                             "children": [
+                              {
+                                "name": "BE.1",
+                                "node_attrs": {
+                                  "div": 15,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22B (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BE.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                }
+                              },
                               {
                                 "name": "BE.1.2",
                                 "node_attrs": {
@@ -2311,25 +2330,6 @@
                                     "aa": "S: R346T",
                                     "spike_mutations": "R346T"
                                   }
-                                }
-                              },
-                              {
-                                "name": "BE.1",
-                                "node_attrs": {
-                                  "div": 15,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22B (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BE.1"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {}
                                 }
                               },
                               {
@@ -2630,9 +2630,9 @@
                         }
                       },
                       {
-                        "name": "BA.5.1.14",
+                        "name": "BA.5.1.13",
                         "node_attrs": {
-                          "div": 14,
+                          "div": 15,
                           "author": {
                             "author": "?",
                             "value": "?"
@@ -2641,20 +2641,55 @@
                             "value": "22B (Omicron)"
                           },
                           "Nextclade_pango": {
-                            "value": "BA.5.1.14"
+                            "value": "BA.5.1.13"
                           }
                         },
                         "branch_attrs": {
                           "mutations": {
                             "nuc": [
-                              "G7452T"
+                              "A2903G",
+                              "G22882T"
                             ],
                             "ORF1a": [
-                              "S2396I"
+                              "I880V"
+                            ],
+                            "S": [
+                              "K440N"
                             ]
                           },
                           "labels": {
-                            "aa": "ORF1a: S2396I"
+                            "aa": "ORF1a: I880V; S: K440N",
+                            "spike_mutations": "K440N"
+                          }
+                        }
+                      },
+                      {
+                        "name": "BA.5.1.15",
+                        "node_attrs": {
+                          "div": 15,
+                          "author": {
+                            "author": "?",
+                            "value": "?"
+                          },
+                          "clade_membership": {
+                            "value": "22B (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.5.1.15"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C10183T",
+                              "C10790T"
+                            ],
+                            "ORF1a": [
+                              "H3509Y"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF1a: H3509Y"
                           }
                         }
                       },
@@ -2721,9 +2756,9 @@
                         }
                       },
                       {
-                        "name": "BA.5.1.13",
+                        "name": "BA.5.1.14",
                         "node_attrs": {
-                          "div": 15,
+                          "div": 14,
                           "author": {
                             "author": "?",
                             "value": "?"
@@ -2732,25 +2767,20 @@
                             "value": "22B (Omicron)"
                           },
                           "Nextclade_pango": {
-                            "value": "BA.5.1.13"
+                            "value": "BA.5.1.14"
                           }
                         },
                         "branch_attrs": {
                           "mutations": {
                             "nuc": [
-                              "A2903G",
-                              "G22882T"
+                              "G7452T"
                             ],
                             "ORF1a": [
-                              "I880V"
-                            ],
-                            "S": [
-                              "K440N"
+                              "S2396I"
                             ]
                           },
                           "labels": {
-                            "aa": "ORF1a: I880V; S: K440N",
-                            "spike_mutations": "K440N"
+                            "aa": "ORF1a: S2396I"
                           }
                         }
                       },
@@ -2804,36 +2834,6 @@
                         }
                       },
                       {
-                        "name": "BA.5.1.15",
-                        "node_attrs": {
-                          "div": 15,
-                          "author": {
-                            "author": "?",
-                            "value": "?"
-                          },
-                          "clade_membership": {
-                            "value": "22B (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.5.1.15"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "C10183T",
-                              "C10790T"
-                            ],
-                            "ORF1a": [
-                              "H3509Y"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "ORF1a: H3509Y"
-                          }
-                        }
-                      },
-                      {
                         "name": "BA.5.1.2",
                         "node_attrs": {
                           "div": 14,
@@ -2859,6 +2859,36 @@
                           },
                           "labels": {
                             "aa": "ORF6: V5I"
+                          }
+                        }
+                      },
+                      {
+                        "name": "BA.5.1.3",
+                        "node_attrs": {
+                          "div": 14,
+                          "author": {
+                            "author": "?",
+                            "value": "?"
+                          },
+                          "clade_membership": {
+                            "value": "22B (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.5.1.3"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "G22427A"
+                            ],
+                            "S": [
+                              "V289I"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "S: V289I",
+                            "spike_mutations": "V289I"
                           }
                         }
                       },
@@ -2899,38 +2929,6 @@
                         }
                       },
                       {
-                        "name": "BA.5.1.5",
-                        "node_attrs": {
-                          "div": 16,
-                          "author": {
-                            "author": "?",
-                            "value": "?"
-                          },
-                          "clade_membership": {
-                            "value": "22B (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.5.1.5"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "C16428T",
-                              "C25350A",
-                              "G29868A"
-                            ],
-                            "S": [
-                              "P1263Q"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "S: P1263Q",
-                            "spike_mutations": "P1263Q"
-                          }
-                        }
-                      },
-                      {
                         "name": "BA.5.1.6",
                         "node_attrs": {
                           "div": 15,
@@ -2961,9 +2959,9 @@
                         }
                       },
                       {
-                        "name": "BA.5.1.3",
+                        "name": "BA.5.1.5",
                         "node_attrs": {
-                          "div": 14,
+                          "div": 16,
                           "author": {
                             "author": "?",
                             "value": "?"
@@ -2972,21 +2970,23 @@
                             "value": "22B (Omicron)"
                           },
                           "Nextclade_pango": {
-                            "value": "BA.5.1.3"
+                            "value": "BA.5.1.5"
                           }
                         },
                         "branch_attrs": {
                           "mutations": {
                             "nuc": [
-                              "G22427A"
+                              "C16428T",
+                              "C25350A",
+                              "G29868A"
                             ],
                             "S": [
-                              "V289I"
+                              "P1263Q"
                             ]
                           },
                           "labels": {
-                            "aa": "S: V289I",
-                            "spike_mutations": "V289I"
+                            "aa": "S: P1263Q",
+                            "spike_mutations": "P1263Q"
                           }
                         }
                       },
@@ -3064,86 +3064,6 @@
                       {
                         "name": "NODE_0000021",
                         "node_attrs": {
-                          "div": 15,
-                          "clade_membership": {
-                            "value": "22B (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.5.1.10"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "A11781G",
-                              "C28462T"
-                            ],
-                            "ORF1a": [
-                              "K3839R"
-                            ],
-                            "ORF9b": [
-                              "T60I"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "ORF1a: K3839R; ORF9b: T60I"
-                          }
-                        },
-                        "children": [
-                          {
-                            "name": "BA.5.1.10",
-                            "node_attrs": {
-                              "div": 15,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "22B (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BA.5.1.10"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {}
-                            }
-                          },
-                          {
-                            "name": "BK.1",
-                            "node_attrs": {
-                              "div": 17,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "22B (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BK.1"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {
-                                "nuc": [
-                                  "G1820A",
-                                  "G29868A"
-                                ],
-                                "ORF1a": [
-                                  "G519S"
-                                ]
-                              },
-                              "labels": {
-                                "aa": "ORF1a: G519S"
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "name": "NODE_0000022",
-                        "node_attrs": {
                           "div": 14,
                           "clade_membership": {
                             "value": "22B (Omicron)"
@@ -3220,6 +3140,86 @@
                               },
                               "labels": {
                                 "aa": "ORF1b: M454V; ORF6: D6G"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NODE_0000022",
+                        "node_attrs": {
+                          "div": 15,
+                          "clade_membership": {
+                            "value": "22B (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.5.1.10"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "A11781G",
+                              "C28462T"
+                            ],
+                            "ORF1a": [
+                              "K3839R"
+                            ],
+                            "ORF9b": [
+                              "T60I"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF1a: K3839R; ORF9b: T60I"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "BA.5.1.10",
+                            "node_attrs": {
+                              "div": 15,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "22B (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.5.1.10"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
+                          },
+                          {
+                            "name": "BK.1",
+                            "node_attrs": {
+                              "div": 17,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "22B (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BK.1"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "G1820A",
+                                  "G29868A"
+                                ],
+                                "ORF1a": [
+                                  "G519S"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: G519S"
                               }
                             }
                           }
@@ -3812,36 +3812,6 @@
                                 }
                               },
                               {
-                                "name": "BF.17",
-                                "node_attrs": {
-                                  "div": 16,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22B (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BF.17"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "T1570C",
-                                      "G8903A"
-                                    ],
-                                    "ORF1a": [
-                                      "D2880N"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "ORF1a: D2880N"
-                                  }
-                                }
-                              },
-                              {
                                 "name": "BF.14",
                                 "node_attrs": {
                                   "div": 17,
@@ -3932,6 +3902,36 @@
                                 }
                               },
                               {
+                                "name": "BF.17",
+                                "node_attrs": {
+                                  "div": 16,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22B (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BF.17"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T1570C",
+                                      "G8903A"
+                                    ],
+                                    "ORF1a": [
+                                      "D2880N"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1a: D2880N"
+                                  }
+                                }
+                              },
+                              {
                                 "name": "BF.19",
                                 "node_attrs": {
                                   "div": 18,
@@ -3968,6 +3968,36 @@
                                 }
                               },
                               {
+                                "name": "BF.4",
+                                "node_attrs": {
+                                  "div": 15,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22B (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BF.4"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "A22337G"
+                                    ],
+                                    "S": [
+                                      "T259A"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "S: T259A",
+                                    "spike_mutations": "T259A"
+                                  }
+                                }
+                              },
+                              {
                                 "name": "BF.6",
                                 "node_attrs": {
                                   "div": 17,
@@ -3996,36 +4026,6 @@
                                   "labels": {
                                     "aa": "S: G181A",
                                     "spike_mutations": "G181A"
-                                  }
-                                }
-                              },
-                              {
-                                "name": "BF.4",
-                                "node_attrs": {
-                                  "div": 15,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22B (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BF.4"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "A22337G"
-                                    ],
-                                    "S": [
-                                      "T259A"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "S: T259A",
-                                    "spike_mutations": "T259A"
                                   }
                                 }
                               },
@@ -4697,6 +4697,25 @@
                                         },
                                         "children": [
                                           {
+                                            "name": "BF.3",
+                                            "node_attrs": {
+                                              "div": 17,
+                                              "author": {
+                                                "author": "?",
+                                                "value": "?"
+                                              },
+                                              "clade_membership": {
+                                                "value": "22B (Omicron)"
+                                              },
+                                              "Nextclade_pango": {
+                                                "value": "BF.3"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            }
+                                          },
+                                          {
                                             "name": "BF.3.1",
                                             "node_attrs": {
                                               "div": 19,
@@ -4725,25 +4744,6 @@
                                                 "aa": "S: G446S",
                                                 "spike_mutations": "G446S"
                                               }
-                                            }
-                                          },
-                                          {
-                                            "name": "BF.3",
-                                            "node_attrs": {
-                                              "div": 17,
-                                              "author": {
-                                                "author": "?",
-                                                "value": "?"
-                                              },
-                                              "clade_membership": {
-                                                "value": "22B (Omicron)"
-                                              },
-                                              "Nextclade_pango": {
-                                                "value": "BF.3"
-                                              }
-                                            },
-                                            "branch_attrs": {
-                                              "mutations": {}
                                             }
                                           }
                                         ]
@@ -4948,6 +4948,36 @@
                 }
               },
               {
+                "name": "BA.2.27",
+                "node_attrs": {
+                  "div": 3,
+                  "author": {
+                    "author": "?",
+                    "value": "?"
+                  },
+                  "clade_membership": {
+                    "value": "21L (Omicron)"
+                  },
+                  "Nextclade_pango": {
+                    "value": "BA.2.27"
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "T2C",
+                      "G3514A"
+                    ],
+                    "ORF1a": [
+                      "M1083I"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "ORF1a: M1083I"
+                  }
+                }
+              },
+              {
                 "name": "BA.2.29",
                 "node_attrs": {
                   "div": 2,
@@ -5012,36 +5042,6 @@
                 }
               },
               {
-                "name": "BA.2.27",
-                "node_attrs": {
-                  "div": 3,
-                  "author": {
-                    "author": "?",
-                    "value": "?"
-                  },
-                  "clade_membership": {
-                    "value": "21L (Omicron)"
-                  },
-                  "Nextclade_pango": {
-                    "value": "BA.2.27"
-                  }
-                },
-                "branch_attrs": {
-                  "mutations": {
-                    "nuc": [
-                      "T2C",
-                      "G3514A"
-                    ],
-                    "ORF1a": [
-                      "M1083I"
-                    ]
-                  },
-                  "labels": {
-                    "aa": "ORF1a: M1083I"
-                  }
-                }
-              },
-              {
                 "name": "BA.2.30",
                 "node_attrs": {
                   "div": 3,
@@ -5075,6 +5075,35 @@
                 }
               },
               {
+                "name": "BA.2.31",
+                "node_attrs": {
+                  "div": 2,
+                  "author": {
+                    "author": "?",
+                    "value": "?"
+                  },
+                  "clade_membership": {
+                    "value": "21L (Omicron)"
+                  },
+                  "Nextclade_pango": {
+                    "value": "BA.2.31"
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G12071A"
+                    ],
+                    "ORF1a": [
+                      "D3936N"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "ORF1a: D3936N"
+                  }
+                }
+              },
+              {
                 "name": "BA.2.32",
                 "node_attrs": {
                   "div": 3,
@@ -5101,35 +5130,6 @@
                   },
                   "labels": {
                     "aa": "ORF7a: A66S"
-                  }
-                }
-              },
-              {
-                "name": "BA.2.31",
-                "node_attrs": {
-                  "div": 2,
-                  "author": {
-                    "author": "?",
-                    "value": "?"
-                  },
-                  "clade_membership": {
-                    "value": "21L (Omicron)"
-                  },
-                  "Nextclade_pango": {
-                    "value": "BA.2.31"
-                  }
-                },
-                "branch_attrs": {
-                  "mutations": {
-                    "nuc": [
-                      "G12071A"
-                    ],
-                    "ORF1a": [
-                      "D3936N"
-                    ]
-                  },
-                  "labels": {
-                    "aa": "ORF1a: D3936N"
                   }
                 }
               },
@@ -5370,38 +5370,6 @@
                 }
               },
               {
-                "name": "BA.2.50",
-                "node_attrs": {
-                  "div": 4,
-                  "author": {
-                    "author": "?",
-                    "value": "?"
-                  },
-                  "clade_membership": {
-                    "value": "21L (Omicron)"
-                  },
-                  "Nextclade_pango": {
-                    "value": "BA.2.50"
-                  }
-                },
-                "branch_attrs": {
-                  "mutations": {
-                    "nuc": [
-                      "C2749T",
-                      "C13620T",
-                      "T22197C"
-                    ],
-                    "S": [
-                      "L212S"
-                    ]
-                  },
-                  "labels": {
-                    "aa": "S: L212S",
-                    "spike_mutations": "L212S"
-                  }
-                }
-              },
-              {
                 "name": "BA.2.58",
                 "node_attrs": {
                   "div": 2,
@@ -5537,9 +5505,9 @@
                 }
               },
               {
-                "name": "BA.2.62",
+                "name": "BA.2.64",
                 "node_attrs": {
-                  "div": 2,
+                  "div": 4,
                   "author": {
                     "author": "?",
                     "value": "?"
@@ -5548,20 +5516,22 @@
                     "value": "21L (Omicron)"
                   },
                   "Nextclade_pango": {
-                    "value": "BA.2.62"
+                    "value": "BA.2.64"
                   }
                 },
                 "branch_attrs": {
                   "mutations": {
                     "nuc": [
-                      "C25669T"
+                      "C3961T",
+                      "G11266T",
+                      "T28678C"
                     ],
-                    "ORF3a": [
-                      "H93Y"
+                    "ORF1a": [
+                      "L3667F"
                     ]
                   },
                   "labels": {
-                    "aa": "ORF3a: H93Y"
+                    "aa": "ORF1a: L3667F"
                   }
                 }
               },
@@ -5595,9 +5565,9 @@
                 }
               },
               {
-                "name": "BA.2.64",
+                "name": "BA.2.62",
                 "node_attrs": {
-                  "div": 4,
+                  "div": 2,
                   "author": {
                     "author": "?",
                     "value": "?"
@@ -5606,22 +5576,20 @@
                     "value": "21L (Omicron)"
                   },
                   "Nextclade_pango": {
-                    "value": "BA.2.64"
+                    "value": "BA.2.62"
                   }
                 },
                 "branch_attrs": {
                   "mutations": {
                     "nuc": [
-                      "C3961T",
-                      "G11266T",
-                      "T28678C"
+                      "C25669T"
                     ],
-                    "ORF1a": [
-                      "L3667F"
+                    "ORF3a": [
+                      "H93Y"
                     ]
                   },
                   "labels": {
-                    "aa": "ORF1a: L3667F"
+                    "aa": "ORF3a: H93Y"
                   }
                 }
               },
@@ -5827,25 +5795,6 @@
                 },
                 "children": [
                   {
-                    "name": "BA.2.23",
-                    "node_attrs": {
-                      "div": 2,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.23"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {}
-                    }
-                  },
-                  {
                     "name": "BA.2.23.1",
                     "node_attrs": {
                       "div": 4,
@@ -5879,6 +5828,25 @@
                       "labels": {
                         "aa": "N: Q39L; ORF1a: S2535L; ORF9b: N36Y"
                       }
+                    }
+                  },
+                  {
+                    "name": "BA.2.23",
+                    "node_attrs": {
+                      "div": 2,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.23"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
                     }
                   }
                 ]
@@ -6183,6 +6151,88 @@
                     "value": "21L (Omicron)"
                   },
                   "Nextclade_pango": {
+                    "value": "BA.2"
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "C13620T"
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "BA.2.49",
+                    "node_attrs": {
+                      "div": 4,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.49"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C22792T",
+                          "A29403T"
+                        ],
+                        "N": [
+                          "D377V"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "N: D377V"
+                      }
+                    }
+                  },
+                  {
+                    "name": "BA.2.50",
+                    "node_attrs": {
+                      "div": 4,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.50"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C2749T",
+                          "T22197C"
+                        ],
+                        "S": [
+                          "L212S"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "S: L212S",
+                        "spike_mutations": "L212S"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "NODE_0000043",
+                "node_attrs": {
+                  "div": 2,
+                  "clade_membership": {
+                    "value": "21L (Omicron)"
+                  },
+                  "Nextclade_pango": {
                     "value": "BA.2.56"
                   }
                 },
@@ -6255,7 +6305,7 @@
                 ]
               },
               {
-                "name": "NODE_0000043",
+                "name": "NODE_0000044",
                 "node_attrs": {
                   "div": 2,
                   "clade_membership": {
@@ -6432,7 +6482,7 @@
                 ]
               },
               {
-                "name": "NODE_0000044",
+                "name": "NODE_0000045",
                 "node_attrs": {
                   "div": 2,
                   "clade_membership": {
@@ -6558,7 +6608,7 @@
                 ]
               },
               {
-                "name": "NODE_0000045",
+                "name": "BA.2.10_internal",
                 "node_attrs": {
                   "div": 2,
                   "clade_membership": {
@@ -6737,7 +6787,7 @@
                     }
                   },
                   {
-                    "name": "NODE_0000046",
+                    "name": "NODE_0000047",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -6867,7 +6917,7 @@
                 ]
               },
               {
-                "name": "NODE_0000047",
+                "name": "NODE_0000048",
                 "node_attrs": {
                   "div": 3,
                   "clade_membership": {
@@ -6896,9 +6946,9 @@
                 },
                 "children": [
                   {
-                    "name": "BA.2.3.1",
+                    "name": "BA.2.3",
                     "node_attrs": {
-                      "div": 4,
+                      "div": 3,
                       "author": {
                         "author": "?",
                         "value": "?"
@@ -6907,22 +6957,11 @@
                         "value": "21L (Omicron)"
                       },
                       "Nextclade_pango": {
-                        "value": "BA.2.3.1"
+                        "value": "BA.2.3"
                       }
                     },
                     "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C23591G"
-                        ],
-                        "S": [
-                          "Q677E"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "S: Q677E",
-                        "spike_mutations": "Q677E"
-                      }
+                      "mutations": {}
                     }
                   },
                   {
@@ -6951,6 +6990,65 @@
                       },
                       "labels": {
                         "aa": "ORF3a: W128C"
+                      }
+                    }
+                  },
+                  {
+                    "name": "BA.2.3.11",
+                    "node_attrs": {
+                      "div": 4,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.3.11"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C13326T"
+                        ],
+                        "ORF1a": [
+                          "T4354I"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1a: T4354I"
+                      }
+                    }
+                  },
+                  {
+                    "name": "BA.2.3.1",
+                    "node_attrs": {
+                      "div": 4,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.3.1"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C23591G"
+                        ],
+                        "S": [
+                          "Q677E"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "S: Q677E",
+                        "spike_mutations": "Q677E"
                       }
                     }
                   },
@@ -6989,84 +7087,6 @@
                     }
                   },
                   {
-                    "name": "BA.2.3",
-                    "node_attrs": {
-                      "div": 3,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.3"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {}
-                    }
-                  },
-                  {
-                    "name": "BA.2.3.11",
-                    "node_attrs": {
-                      "div": 4,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.3.11"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C13326T"
-                        ],
-                        "ORF1a": [
-                          "T4354I"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "ORF1a: T4354I"
-                      }
-                    }
-                  },
-                  {
-                    "name": "BA.2.3.14",
-                    "node_attrs": {
-                      "div": 5,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.3.14"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "T2845C",
-                          "A9930C"
-                        ],
-                        "ORF1a": [
-                          "D3222A"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "ORF1a: D3222A"
-                      }
-                    }
-                  },
-                  {
                     "name": "BA.2.3.13",
                     "node_attrs": {
                       "div": 5,
@@ -7097,7 +7117,7 @@
                     }
                   },
                   {
-                    "name": "BA.2.3.17",
+                    "name": "BA.2.3.14",
                     "node_attrs": {
                       "div": 5,
                       "author": {
@@ -7108,24 +7128,21 @@
                         "value": "21L (Omicron)"
                       },
                       "Nextclade_pango": {
-                        "value": "BA.2.3.17"
+                        "value": "BA.2.3.14"
                       }
                     },
                     "branch_attrs": {
                       "mutations": {
                         "nuc": [
-                          "G2659T",
-                          "C13730T"
+                          "T2845C",
+                          "A9930C"
                         ],
                         "ORF1a": [
-                          "K798N"
-                        ],
-                        "ORF1b": [
-                          "A88V"
+                          "D3222A"
                         ]
                       },
                       "labels": {
-                        "aa": "ORF1a: K798N; ORF1b: A88V"
+                        "aa": "ORF1a: D3222A"
                       }
                     }
                   },
@@ -7250,6 +7267,39 @@
                     }
                   },
                   {
+                    "name": "BA.2.3.17",
+                    "node_attrs": {
+                      "div": 5,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.3.17"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "G2659T",
+                          "C13730T"
+                        ],
+                        "ORF1a": [
+                          "K798N"
+                        ],
+                        "ORF1b": [
+                          "A88V"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1a: K798N; ORF1b: A88V"
+                      }
+                    }
+                  },
+                  {
                     "name": "BA.2.3.2",
                     "node_attrs": {
                       "div": 4,
@@ -7313,7 +7363,7 @@
                   {
                     "name": "BA.2.3.20",
                     "node_attrs": {
-                      "div": 22,
+                      "div": 24,
                       "author": {
                         "author": "?",
                         "value": "?"
@@ -7346,6 +7396,8 @@
                           "C22916A",
                           "T22942G",
                           "G23012A",
+                          "C23013G",
+                          "G23040A",
                           "C28550A"
                         ],
                         "ORF1a": [
@@ -7371,12 +7423,42 @@
                           "N450D",
                           "L452M",
                           "N460K",
-                          "A484T"
+                          "A484R",
+                          "R493Q"
                         ]
                       },
                       "labels": {
-                        "aa": "ORF1a: T727I, I1714T, M2169V, T2174I, T2648I, Q3922R; ORF1b: T1404M; ORF9b: D89E; S: M153T, N164K, H245N, G257D, K444R, N450D, L452M, N460K, A484T",
-                        "spike_mutations": "M153T, N164K, H245N, G257D, K444R, N450D, L452M, N460K, A484T"
+                        "aa": "ORF1a: T727I, I1714T, M2169V, T2174I, T2648I, Q3922R; ORF1b: T1404M; ORF9b: D89E; S: M153T, N164K, H245N, G257D, K444R, N450D, L452M, N460K, A484R, R493Q",
+                        "spike_mutations": "M153T, N164K, H245N, G257D, K444R, N450D, L452M, N460K, A484R, R493Q"
+                      }
+                    }
+                  },
+                  {
+                    "name": "BA.2.3.5",
+                    "node_attrs": {
+                      "div": 4,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.3.5"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C936T"
+                        ],
+                        "ORF1a": [
+                          "T224I"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1a: T224I"
                       }
                     }
                   },
@@ -7419,95 +7501,6 @@
                     }
                   },
                   {
-                    "name": "BA.2.3.6",
-                    "node_attrs": {
-                      "div": 5,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.3.6"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C4990T",
-                          "C22326T"
-                        ],
-                        "S": [
-                          "S255F"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "S: S255F",
-                        "spike_mutations": "S255F"
-                      }
-                    }
-                  },
-                  {
-                    "name": "BA.2.3.5",
-                    "node_attrs": {
-                      "div": 4,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.3.5"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C936T"
-                        ],
-                        "ORF1a": [
-                          "T224I"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "ORF1a: T224I"
-                      }
-                    }
-                  },
-                  {
-                    "name": "BA.2.3.9",
-                    "node_attrs": {
-                      "div": 4,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.3.9"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "G28986T"
-                        ],
-                        "N": [
-                          "G238V"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "N: G238V"
-                      }
-                    }
-                  },
-                  {
                     "name": "BA.2.3.8",
                     "node_attrs": {
                       "div": 9,
@@ -7543,7 +7536,67 @@
                     }
                   },
                   {
-                    "name": "NODE_0000048",
+                    "name": "BA.2.3.6",
+                    "node_attrs": {
+                      "div": 5,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.3.6"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C4990T",
+                          "C22326T"
+                        ],
+                        "S": [
+                          "S255F"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "S: S255F",
+                        "spike_mutations": "S255F"
+                      }
+                    }
+                  },
+                  {
+                    "name": "BA.2.3.9",
+                    "node_attrs": {
+                      "div": 4,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.3.9"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "G28986T"
+                        ],
+                        "N": [
+                          "G238V"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "N: G238V"
+                      }
+                    }
+                  },
+                  {
+                    "name": "NODE_0000049",
                     "node_attrs": {
                       "div": 4,
                       "clade_membership": {
@@ -7653,7 +7706,7 @@
                 ]
               },
               {
-                "name": "NODE_0000049",
+                "name": "NODE_0000050",
                 "node_attrs": {
                   "div": 2,
                   "clade_membership": {
@@ -7853,36 +7906,6 @@
                     }
                   },
                   {
-                    "name": "BA.2.49",
-                    "node_attrs": {
-                      "div": 4,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.49"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C13620T",
-                          "A29403T"
-                        ],
-                        "N": [
-                          "D377V"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "N: D377V"
-                      }
-                    }
-                  },
-                  {
                     "name": "BA.2.47",
                     "node_attrs": {
                       "div": 5,
@@ -7945,7 +7968,7 @@
                     }
                   },
                   {
-                    "name": "BA.2.52",
+                    "name": "BA.2.51",
                     "node_attrs": {
                       "div": 3,
                       "author": {
@@ -7956,13 +7979,13 @@
                         "value": "21L (Omicron)"
                       },
                       "Nextclade_pango": {
-                        "value": "BA.2.52"
+                        "value": "BA.2.51"
                       }
                     },
                     "branch_attrs": {
                       "mutations": {
                         "nuc": [
-                          "T2228C",
+                          "C23802T",
                           "-29734G",
                           "-29735A",
                           "-29736G",
@@ -7990,12 +8013,13 @@
                           "-29758T",
                           "-29759G"
                         ],
-                        "ORF1a": [
-                          "C655R"
+                        "S": [
+                          "T747I"
                         ]
                       },
                       "labels": {
-                        "aa": "ORF1a: C655R"
+                        "aa": "S: T747I",
+                        "spike_mutations": "T747I"
                       }
                     }
                   },
@@ -8064,7 +8088,7 @@
                     }
                   },
                   {
-                    "name": "BA.2.51",
+                    "name": "BA.2.52",
                     "node_attrs": {
                       "div": 3,
                       "author": {
@@ -8075,13 +8099,13 @@
                         "value": "21L (Omicron)"
                       },
                       "Nextclade_pango": {
-                        "value": "BA.2.51"
+                        "value": "BA.2.52"
                       }
                     },
                     "branch_attrs": {
                       "mutations": {
                         "nuc": [
-                          "C23802T",
+                          "T2228C",
                           "-29734G",
                           "-29735A",
                           "-29736G",
@@ -8109,13 +8133,12 @@
                           "-29758T",
                           "-29759G"
                         ],
-                        "S": [
-                          "T747I"
+                        "ORF1a": [
+                          "C655R"
                         ]
                       },
                       "labels": {
-                        "aa": "S: T747I",
-                        "spike_mutations": "T747I"
+                        "aa": "ORF1a: C655R"
                       }
                     }
                   },
@@ -8160,35 +8183,6 @@
                     }
                   },
                   {
-                    "name": "BA.2.7",
-                    "node_attrs": {
-                      "div": 3,
-                      "author": {
-                        "author": "?",
-                        "value": "?"
-                      },
-                      "clade_membership": {
-                        "value": "21L (Omicron)"
-                      },
-                      "Nextclade_pango": {
-                        "value": "BA.2.7"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C6636T"
-                        ],
-                        "ORF1a": [
-                          "T2124I"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "ORF1a: T2124I"
-                      }
-                    }
-                  },
-                  {
                     "name": "BA.2.69",
                     "node_attrs": {
                       "div": 3,
@@ -8218,9 +8212,9 @@
                     }
                   },
                   {
-                    "name": "BA.2.72",
+                    "name": "BA.2.7",
                     "node_attrs": {
-                      "div": 4,
+                      "div": 3,
                       "author": {
                         "author": "?",
                         "value": "?"
@@ -8229,22 +8223,20 @@
                         "value": "21L (Omicron)"
                       },
                       "Nextclade_pango": {
-                        "value": "BA.2.72"
+                        "value": "BA.2.7"
                       }
                     },
                     "branch_attrs": {
                       "mutations": {
                         "nuc": [
-                          "T22197C",
-                          "C24865T"
+                          "C6636T"
                         ],
-                        "S": [
-                          "L212S"
+                        "ORF1a": [
+                          "T2124I"
                         ]
                       },
                       "labels": {
-                        "aa": "S: L212S",
-                        "spike_mutations": "L212S"
+                        "aa": "ORF1a: T2124I"
                       }
                     }
                   },
@@ -8305,9 +8297,9 @@
                     }
                   },
                   {
-                    "name": "BA.2.81",
+                    "name": "BA.2.72",
                     "node_attrs": {
-                      "div": 6,
+                      "div": 4,
                       "author": {
                         "author": "?",
                         "value": "?"
@@ -8316,27 +8308,22 @@
                         "value": "21L (Omicron)"
                       },
                       "Nextclade_pango": {
-                        "value": "BA.2.81"
+                        "value": "BA.2.72"
                       }
                     },
                     "branch_attrs": {
                       "mutations": {
                         "nuc": [
-                          "G6337T",
-                          "T14171C",
-                          "C17502T",
-                          "C22916A"
-                        ],
-                        "ORF1b": [
-                          "I235T"
+                          "T22197C",
+                          "C24865T"
                         ],
                         "S": [
-                          "L452M"
+                          "L212S"
                         ]
                       },
                       "labels": {
-                        "aa": "ORF1b: I235T; S: L452M",
-                        "spike_mutations": "L452M"
+                        "aa": "S: L212S",
+                        "spike_mutations": "L212S"
                       }
                     }
                   },
@@ -8408,7 +8395,43 @@
                     }
                   },
                   {
-                    "name": "NODE_0000050",
+                    "name": "BA.2.81",
+                    "node_attrs": {
+                      "div": 6,
+                      "author": {
+                        "author": "?",
+                        "value": "?"
+                      },
+                      "clade_membership": {
+                        "value": "21L (Omicron)"
+                      },
+                      "Nextclade_pango": {
+                        "value": "BA.2.81"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "G6337T",
+                          "T14171C",
+                          "C17502T",
+                          "C22916A"
+                        ],
+                        "ORF1b": [
+                          "I235T"
+                        ],
+                        "S": [
+                          "L452M"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1b: I235T; S: L452M",
+                        "spike_mutations": "L452M"
+                      }
+                    }
+                  },
+                  {
+                    "name": "NODE_0000051",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -8432,25 +8455,6 @@
                       }
                     },
                     "children": [
-                      {
-                        "name": "BA.2.25",
-                        "node_attrs": {
-                          "div": 3,
-                          "author": {
-                            "author": "?",
-                            "value": "?"
-                          },
-                          "clade_membership": {
-                            "value": "21L (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.2.25"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {}
-                        }
-                      },
                       {
                         "name": "BA.2.25.1",
                         "node_attrs": {
@@ -8480,11 +8484,30 @@
                             "aa": "ORF3a: V97I"
                           }
                         }
+                      },
+                      {
+                        "name": "BA.2.25",
+                        "node_attrs": {
+                          "div": 3,
+                          "author": {
+                            "author": "?",
+                            "value": "?"
+                          },
+                          "clade_membership": {
+                            "value": "21L (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.2.25"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        }
                       }
                     ]
                   },
                   {
-                    "name": "NODE_0000051",
+                    "name": "NODE_0000052",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -8560,7 +8583,7 @@
                         }
                       },
                       {
-                        "name": "NODE_0000052",
+                        "name": "NODE_0000053",
                         "node_attrs": {
                           "div": 4,
                           "clade_membership": {
@@ -8585,25 +8608,6 @@
                           }
                         },
                         "children": [
-                          {
-                            "name": "BA.2.13",
-                            "node_attrs": {
-                              "div": 4,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "21L (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BA.2.13"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {}
-                            }
-                          },
                           {
                             "name": "BA.2.13.1",
                             "node_attrs": {
@@ -8644,13 +8648,32 @@
                                 "spike_mutations": "T941S"
                               }
                             }
+                          },
+                          {
+                            "name": "BA.2.13",
+                            "node_attrs": {
+                              "div": 4,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "21L (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.2.13"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
                           }
                         ]
                       }
                     ]
                   },
                   {
-                    "name": "NODE_0000053",
+                    "name": "NODE_0000054",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -8782,35 +8805,6 @@
                         }
                       },
                       {
-                        "name": "BA.2.9.5",
-                        "node_attrs": {
-                          "div": 4,
-                          "author": {
-                            "author": "?",
-                            "value": "?"
-                          },
-                          "clade_membership": {
-                            "value": "21L (Omicron)"
-                          },
-                          "Nextclade_pango": {
-                            "value": "BA.2.9.5"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "T4443C"
-                            ],
-                            "ORF1a": [
-                              "V1393A"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "ORF1a: V1393A"
-                          }
-                        }
-                      },
-                      {
                         "name": "BA.2.9.4",
                         "node_attrs": {
                           "div": 7,
@@ -8847,7 +8841,36 @@
                         }
                       },
                       {
-                        "name": "NODE_0000054",
+                        "name": "BA.2.9.5",
+                        "node_attrs": {
+                          "div": 4,
+                          "author": {
+                            "author": "?",
+                            "value": "?"
+                          },
+                          "clade_membership": {
+                            "value": "21L (Omicron)"
+                          },
+                          "Nextclade_pango": {
+                            "value": "BA.2.9.5"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "T4443C"
+                            ],
+                            "ORF1a": [
+                              "V1393A"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF1a: V1393A"
+                          }
+                        }
+                      },
+                      {
+                        "name": "NODE_0000055",
                         "node_attrs": {
                           "div": 4,
                           "clade_membership": {
@@ -8976,7 +8999,7 @@
                 ]
               },
               {
-                "name": "NODE_0000055",
+                "name": "NODE_0000056",
                 "node_attrs": {
                   "div": 2,
                   "clade_membership": {
@@ -9265,7 +9288,7 @@
                     }
                   },
                   {
-                    "name": "NODE_0000056",
+                    "name": "NODE_0000057",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -9314,7 +9337,7 @@
                         }
                       },
                       {
-                        "name": "NODE_0000057",
+                        "name": "NODE_0000058",
                         "node_attrs": {
                           "div": 6,
                           "clade_membership": {
@@ -9345,25 +9368,6 @@
                           }
                         },
                         "children": [
-                          {
-                            "name": "BA.2.79",
-                            "node_attrs": {
-                              "div": 6,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "21L (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BA.2.79"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {}
-                            }
-                          },
                           {
                             "name": "BA.2.79.1",
                             "node_attrs": {
@@ -9396,13 +9400,32 @@
                                 "aa": "ORF1a: T2016I; ORF1b: I1416V"
                               }
                             }
+                          },
+                          {
+                            "name": "BA.2.79",
+                            "node_attrs": {
+                              "div": 6,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "21L (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.2.79"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
                           }
                         ]
                       }
                     ]
                   },
                   {
-                    "name": "NODE_0000058",
+                    "name": "NODE_0000059",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -9490,7 +9513,7 @@
                         }
                       },
                       {
-                        "name": "NODE_0000059",
+                        "name": "NODE_0000060",
                         "node_attrs": {
                           "div": 4,
                           "clade_membership": {
@@ -9535,7 +9558,7 @@
                             }
                           },
                           {
-                            "name": "NODE_0000060",
+                            "name": "NODE_0000061",
                             "node_attrs": {
                               "div": 6,
                               "clade_membership": {
@@ -9638,7 +9661,7 @@
                     ]
                   },
                   {
-                    "name": "NODE_0000061",
+                    "name": "NODE_0000062",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -9684,7 +9707,7 @@
                         }
                       },
                       {
-                        "name": "NODE_0000062",
+                        "name": "NODE_0000063",
                         "node_attrs": {
                           "div": 3,
                           "clade_membership": {
@@ -9785,7 +9808,7 @@
                         ]
                       },
                       {
-                        "name": "NODE_0000063",
+                        "name": "NODE_0000064",
                         "node_attrs": {
                           "div": 8,
                           "clade_membership": {
@@ -9891,7 +9914,7 @@
                     ]
                   },
                   {
-                    "name": "NODE_0000064",
+                    "name": "NODE_0000065",
                     "node_attrs": {
                       "div": 4,
                       "clade_membership": {
@@ -9972,7 +9995,7 @@
                         }
                       },
                       {
-                        "name": "NODE_0000065",
+                        "name": "22C",
                         "node_attrs": {
                           "div": 5,
                           "clade_membership": {
@@ -10018,7 +10041,7 @@
                             }
                           },
                           {
-                            "name": "NODE_0000066",
+                            "name": "NODE_0000067",
                             "node_attrs": {
                               "div": 7,
                               "clade_membership": {
@@ -10037,6 +10060,40 @@
                               }
                             },
                             "children": [
+                              {
+                                "name": "BG.1",
+                                "node_attrs": {
+                                  "div": 10,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22C (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BG.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C6070T",
+                                      "A6458G",
+                                      "G16207A"
+                                    ],
+                                    "ORF1a": [
+                                      "N2065D"
+                                    ],
+                                    "ORF1b": [
+                                      "A914T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1a: N2065D; ORF1b: A914T"
+                                  }
+                                }
+                              },
                               {
                                 "name": "BG.2",
                                 "node_attrs": {
@@ -10087,40 +10144,6 @@
                                 }
                               },
                               {
-                                "name": "BG.1",
-                                "node_attrs": {
-                                  "div": 10,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22C (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BG.1"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "C6070T",
-                                      "A6458G",
-                                      "G16207A"
-                                    ],
-                                    "ORF1a": [
-                                      "N2065D"
-                                    ],
-                                    "ORF1b": [
-                                      "A914T"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "ORF1a: N2065D; ORF1b: A914T"
-                                  }
-                                }
-                              },
-                              {
                                 "name": "BG.3",
                                 "node_attrs": {
                                   "div": 9,
@@ -10147,36 +10170,6 @@
                                   },
                                   "labels": {
                                     "aa": "ORF1a: T2967A"
-                                  }
-                                }
-                              },
-                              {
-                                "name": "BG.5",
-                                "node_attrs": {
-                                  "div": 9,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22C (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BG.5"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "C44T",
-                                      "A12180G"
-                                    ],
-                                    "ORF1a": [
-                                      "D3972G"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "ORF1a: D3972G"
                                   }
                                 }
                               },
@@ -10216,6 +10209,36 @@
                                   },
                                   "labels": {
                                     "aa": "N: P162L; ORF1a: I2278T; ORF1b: L1504F"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "BG.5",
+                                "node_attrs": {
+                                  "div": 9,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22C (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BG.5"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C44T",
+                                      "A12180G"
+                                    ],
+                                    "ORF1a": [
+                                      "D3972G"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1a: D3972G"
                                   }
                                 }
                               },
@@ -10263,7 +10286,7 @@
                     ]
                   },
                   {
-                    "name": "NODE_0000067",
+                    "name": "NODE_0000068",
                     "node_attrs": {
                       "div": 3,
                       "clade_membership": {
@@ -10318,7 +10341,7 @@
                         }
                       },
                       {
-                        "name": "NODE_0000068",
+                        "name": "NODE_0000069",
                         "node_attrs": {
                           "div": 18,
                           "clade_membership": {
@@ -10345,33 +10368,7 @@
                               "G22898A",
                               "T22942G",
                               "G23040A",
-                              "A26275G",
-                              "-29734G",
-                              "-29735A",
-                              "-29736G",
-                              "-29737G",
-                              "-29738C",
-                              "-29739C",
-                              "-29740A",
-                              "-29741C",
-                              "-29742G",
-                              "-29743C",
-                              "-29744G",
-                              "-29745G",
-                              "-29746A",
-                              "-29747G",
-                              "-29748T",
-                              "-29749A",
-                              "-29750C",
-                              "-29751G",
-                              "-29752A",
-                              "-29753T",
-                              "-29754C",
-                              "-29755G",
-                              "-29756A",
-                              "-29757G",
-                              "-29758T",
-                              "-29759G"
+                              "A26275G"
                             ],
                             "E": [
                               "T11A"
@@ -10418,38 +10415,35 @@
                               }
                             },
                             "branch_attrs": {
-                              "mutations": {}
-                            }
-                          },
-                          {
-                            "name": "BA.2.75.4",
-                            "node_attrs": {
-                              "div": 21,
-                              "author": {
-                                "author": "?",
-                                "value": "?"
-                              },
-                              "clade_membership": {
-                                "value": "22D (Omicron)"
-                              },
-                              "Nextclade_pango": {
-                                "value": "BA.2.75.4"
-                              }
-                            },
-                            "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "C9532T",
-                                  "G19962T",
-                                  "T22917G"
-                                ],
-                                "S": [
-                                  "L452R"
+                                  "-29734G",
+                                  "-29735A",
+                                  "-29736G",
+                                  "-29737G",
+                                  "-29738C",
+                                  "-29739C",
+                                  "-29740A",
+                                  "-29741C",
+                                  "-29742G",
+                                  "-29743C",
+                                  "-29744G",
+                                  "-29745G",
+                                  "-29746A",
+                                  "-29747G",
+                                  "-29748T",
+                                  "-29749A",
+                                  "-29750C",
+                                  "-29751G",
+                                  "-29752A",
+                                  "-29753T",
+                                  "-29754C",
+                                  "-29755G",
+                                  "-29756A",
+                                  "-29757G",
+                                  "-29758T",
+                                  "-29759G"
                                 ]
-                              },
-                              "labels": {
-                                "aa": "S: L452R",
-                                "spike_mutations": "L452R"
                               }
                             }
                           },
@@ -10474,7 +10468,33 @@
                                   "C5192T",
                                   "G22599C",
                                   "T23019C",
-                                  "G25157A"
+                                  "G25157A",
+                                  "-29734G",
+                                  "-29735A",
+                                  "-29736G",
+                                  "-29737G",
+                                  "-29738C",
+                                  "-29739C",
+                                  "-29740A",
+                                  "-29741C",
+                                  "-29742G",
+                                  "-29743C",
+                                  "-29744G",
+                                  "-29745G",
+                                  "-29746A",
+                                  "-29747G",
+                                  "-29748T",
+                                  "-29749A",
+                                  "-29750C",
+                                  "-29751G",
+                                  "-29752A",
+                                  "-29753T",
+                                  "-29754C",
+                                  "-29755G",
+                                  "-29756A",
+                                  "-29757G",
+                                  "-29758T",
+                                  "-29759G"
                                 ],
                                 "S": [
                                   "R346T",
@@ -10489,163 +10509,123 @@
                             }
                           },
                           {
-                            "name": "NODE_0000069",
+                            "name": "BA.2.75.6",
                             "node_attrs": {
                               "div": 19,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
                               "clade_membership": {
                                 "value": "22D (Omicron)"
                               },
                               "Nextclade_pango": {
-                                "value": "BA.2.75.1"
+                                "value": "BA.2.75.6"
                               }
                             },
                             "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "A23283T",
-                                  "G29734-",
-                                  "A29735-",
-                                  "G29736-",
-                                  "G29737-",
-                                  "C29738-",
-                                  "C29739-",
-                                  "A29740-",
-                                  "C29741-",
-                                  "G29742-",
-                                  "C29743-",
-                                  "G29744-",
-                                  "G29745-",
-                                  "A29746-",
-                                  "G29747-",
-                                  "T29748-",
-                                  "A29749-",
-                                  "C29750-",
-                                  "G29751-",
-                                  "A29752-",
-                                  "T29753-",
-                                  "C29754-",
-                                  "G29755-",
-                                  "A29756-",
-                                  "G29757-",
-                                  "T29758-",
-                                  "G29759-"
+                                  "G22599C",
+                                  "-29734G",
+                                  "-29735A",
+                                  "-29736G",
+                                  "-29737G",
+                                  "-29738C",
+                                  "-29739C",
+                                  "-29740A",
+                                  "-29741C",
+                                  "-29742G",
+                                  "-29743C",
+                                  "-29744G",
+                                  "-29745G",
+                                  "-29746A",
+                                  "-29747G",
+                                  "-29748T",
+                                  "-29749A",
+                                  "-29750C",
+                                  "-29751G",
+                                  "-29752A",
+                                  "-29753T",
+                                  "-29754C",
+                                  "-29755G",
+                                  "-29756A",
+                                  "-29757G",
+                                  "-29758T",
+                                  "-29759G"
                                 ],
                                 "S": [
-                                  "D574V"
+                                  "R346T"
                                 ]
                               },
                               "labels": {
-                                "aa": "S: D574V",
-                                "spike_mutations": "D574V"
+                                "aa": "S: R346T",
+                                "spike_mutations": "R346T"
+                              }
+                            }
+                          },
+                          {
+                            "name": "BA.2.75.7",
+                            "node_attrs": {
+                              "div": 19,
+                              "author": {
+                                "author": "?",
+                                "value": "?"
+                              },
+                              "clade_membership": {
+                                "value": "22D (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.2.75.7"
                               }
                             },
-                            "children": [
-                              {
-                                "name": "BA.2.75.1",
-                                "node_attrs": {
-                                  "div": 19,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22D (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BA.2.75.1"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {}
-                                }
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T23019C"
+                                ],
+                                "S": [
+                                  "F486S"
+                                ]
                               },
-                              {
-                                "name": "BL.1",
-                                "node_attrs": {
-                                  "div": 20,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22D (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BL.1"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "G22599C"
-                                    ],
-                                    "S": [
-                                      "R346T"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "S: R346T",
-                                    "spike_mutations": "R346T"
-                                  }
-                                }
+                              "labels": {
+                                "aa": "S: F486S",
+                                "spike_mutations": "F486S"
                               }
-                            ]
+                            }
                           },
                           {
                             "name": "NODE_0000070",
                             "node_attrs": {
-                              "div": 19,
+                              "div": 21,
                               "clade_membership": {
                                 "value": "22D (Omicron)"
                               },
                               "Nextclade_pango": {
-                                "value": "BA.2.75.3"
+                                "value": "BA.2.75.4"
                               }
                             },
                             "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "G18583A",
-                                  "G29734-",
-                                  "A29735-",
-                                  "G29736-",
-                                  "G29737-",
-                                  "C29738-",
-                                  "C29739-",
-                                  "A29740-",
-                                  "C29741-",
-                                  "G29742-",
-                                  "C29743-",
-                                  "G29744-",
-                                  "G29745-",
-                                  "A29746-",
-                                  "G29747-",
-                                  "T29748-",
-                                  "A29749-",
-                                  "C29750-",
-                                  "G29751-",
-                                  "A29752-",
-                                  "T29753-",
-                                  "C29754-",
-                                  "G29755-",
-                                  "A29756-",
-                                  "G29757-",
-                                  "T29758-",
-                                  "G29759-"
+                                  "C9532T",
+                                  "G19962T",
+                                  "T22917G"
                                 ],
-                                "ORF1b": [
-                                  "V1706I"
+                                "S": [
+                                  "L452R"
                                 ]
                               },
                               "labels": {
-                                "aa": "ORF1b: V1706I"
+                                "aa": "S: L452R",
+                                "spike_mutations": "L452R"
                               }
                             },
                             "children": [
                               {
-                                "name": "BA.2.75.3",
+                                "name": "BA.2.75.4",
                                 "node_attrs": {
-                                  "div": 19,
+                                  "div": 21,
                                   "author": {
                                     "author": "?",
                                     "value": "?"
@@ -10654,40 +10634,70 @@
                                     "value": "22D (Omicron)"
                                   },
                                   "Nextclade_pango": {
-                                    "value": "BA.2.75.3"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {}
-                                }
-                              },
-                              {
-                                "name": "BM.1",
-                                "node_attrs": {
-                                  "div": 20,
-                                  "author": {
-                                    "author": "?",
-                                    "value": "?"
-                                  },
-                                  "clade_membership": {
-                                    "value": "22D (Omicron)"
-                                  },
-                                  "Nextclade_pango": {
-                                    "value": "BM.1"
+                                    "value": "BA.2.75.4"
                                   }
                                 },
                                 "branch_attrs": {
                                   "mutations": {
                                     "nuc": [
-                                      "T23019C"
+                                      "-29734G",
+                                      "-29735A",
+                                      "-29736G",
+                                      "-29737G",
+                                      "-29738C",
+                                      "-29739C",
+                                      "-29740A",
+                                      "-29741C",
+                                      "-29742G",
+                                      "-29743C",
+                                      "-29744G",
+                                      "-29745G",
+                                      "-29746A",
+                                      "-29747G",
+                                      "-29748T",
+                                      "-29749A",
+                                      "-29750C",
+                                      "-29751G",
+                                      "-29752A",
+                                      "-29753T",
+                                      "-29754C",
+                                      "-29755G",
+                                      "-29756A",
+                                      "-29757G",
+                                      "-29758T",
+                                      "-29759G"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "name": "BR.1",
+                                "node_attrs": {
+                                  "div": 23,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BR.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G8602A",
+                                      "A22893T"
                                     ],
                                     "S": [
-                                      "F486S"
+                                      "K444M"
                                     ]
                                   },
                                   "labels": {
-                                    "aa": "S: F486S",
-                                    "spike_mutations": "F486S"
+                                    "aa": "S: K444M",
+                                    "spike_mutations": "K444M"
                                   }
                                 }
                               }
@@ -10707,7 +10717,33 @@
                             "branch_attrs": {
                               "mutations": {
                                 "nuc": [
-                                  "A22629C"
+                                  "A22629C",
+                                  "-29734G",
+                                  "-29735A",
+                                  "-29736G",
+                                  "-29737G",
+                                  "-29738C",
+                                  "-29739C",
+                                  "-29740A",
+                                  "-29741C",
+                                  "-29742G",
+                                  "-29743C",
+                                  "-29744G",
+                                  "-29745G",
+                                  "-29746A",
+                                  "-29747G",
+                                  "-29748T",
+                                  "-29749A",
+                                  "-29750C",
+                                  "-29751G",
+                                  "-29752A",
+                                  "-29753T",
+                                  "-29754C",
+                                  "-29755G",
+                                  "-29756A",
+                                  "-29757G",
+                                  "-29758T",
+                                  "-29759G"
                                 ],
                                 "S": [
                                   "K356T"
@@ -10770,6 +10806,485 @@
                                     "spike_mutations": "R346T, F490S"
                                   }
                                 }
+                              },
+                              {
+                                "name": "NODE_0000072",
+                                "node_attrs": {
+                                  "div": 22,
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BN.2"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C44T",
+                                      "A28761T",
+                                      "G29868C"
+                                    ],
+                                    "N": [
+                                      "Q163L"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "N: Q163L"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "BN.2",
+                                    "node_attrs": {
+                                      "div": 22,
+                                      "author": {
+                                        "author": "?",
+                                        "value": "?"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22D (Omicron)"
+                                      },
+                                      "Nextclade_pango": {
+                                        "value": "BN.2"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    }
+                                  },
+                                  {
+                                    "name": "BN.2.1",
+                                    "node_attrs": {
+                                      "div": 24,
+                                      "author": {
+                                        "author": "?",
+                                        "value": "?"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22D (Omicron)"
+                                      },
+                                      "Nextclade_pango": {
+                                        "value": "BN.2.1"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C21707T",
+                                          "T23031C",
+                                          "G29734-",
+                                          "A29735-",
+                                          "G29736-",
+                                          "G29737-",
+                                          "C29738-",
+                                          "C29739-",
+                                          "A29740-",
+                                          "C29741-",
+                                          "G29742-",
+                                          "C29743-",
+                                          "G29744-",
+                                          "G29745-",
+                                          "A29746-",
+                                          "G29747-",
+                                          "T29748-",
+                                          "A29749-",
+                                          "C29750-",
+                                          "G29751-",
+                                          "A29752-",
+                                          "T29753-",
+                                          "C29754-",
+                                          "G29755-",
+                                          "A29756-",
+                                          "G29757-",
+                                          "T29758-",
+                                          "G29759-"
+                                        ],
+                                        "S": [
+                                          "H49Y",
+                                          "F490S"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "S: H49Y, F490S",
+                                        "spike_mutations": "H49Y, F490S"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NODE_0000073",
+                            "node_attrs": {
+                              "div": 19,
+                              "clade_membership": {
+                                "value": "22D (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.2.75.1"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "A23283T"
+                                ],
+                                "S": [
+                                  "D574V"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "S: D574V",
+                                "spike_mutations": "D574V"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "BA.2.75.1",
+                                "node_attrs": {
+                                  "div": 19,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BA.2.75.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                }
+                              },
+                              {
+                                "name": "BL.1",
+                                "node_attrs": {
+                                  "div": 20,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BL.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G22599C"
+                                    ],
+                                    "S": [
+                                      "R346T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "S: R346T",
+                                    "spike_mutations": "R346T"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "BL.4",
+                                "node_attrs": {
+                                  "div": 22,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BL.4"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C11224T",
+                                      "A22720G",
+                                      "C27527T"
+                                    ],
+                                    "ORF7a": [
+                                      "P45L"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF7a: P45L"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "22612T",
+                                "node_attrs": {
+                                  "div": 21,
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BA.2.75.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G204A",
+                                      "A26612T"
+                                    ]
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "BL.2",
+                                    "node_attrs": {
+                                      "div": 22,
+                                      "author": {
+                                        "author": "?",
+                                        "value": "?"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22D (Omicron)"
+                                      },
+                                      "Nextclade_pango": {
+                                        "value": "BL.2"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G22599C"
+                                        ],
+                                        "S": [
+                                          "R346T"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "S: R346T",
+                                        "spike_mutations": "R346T"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "BL.3",
+                                    "node_attrs": {
+                                      "div": 22,
+                                      "author": {
+                                        "author": "?",
+                                        "value": "?"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22D (Omicron)"
+                                      },
+                                      "Nextclade_pango": {
+                                        "value": "BL.3"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C8318T"
+                                        ],
+                                        "ORF1a": [
+                                          "P2685S"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "ORF1a: P2685S"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NODE_0000075",
+                            "node_attrs": {
+                              "div": 19,
+                              "clade_membership": {
+                                "value": "22D (Omicron)"
+                              },
+                              "Nextclade_pango": {
+                                "value": "BA.2.75.3"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "G18583A"
+                                ],
+                                "ORF1b": [
+                                  "V1706I"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1b: V1706I"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "BA.2.75.3",
+                                "node_attrs": {
+                                  "div": 19,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BA.2.75.3"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                }
+                              },
+                              {
+                                "name": "BM.2",
+                                "node_attrs": {
+                                  "div": 21,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BM.2"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G22599C",
+                                      "C28657T"
+                                    ],
+                                    "S": [
+                                      "R346T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "S: R346T",
+                                    "spike_mutations": "R346T"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "BM.3",
+                                "node_attrs": {
+                                  "div": 21,
+                                  "author": {
+                                    "author": "?",
+                                    "value": "?"
+                                  },
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BM.3"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C176T",
+                                      "C18421T"
+                                    ],
+                                    "ORF1b": [
+                                      "P1652S"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1b: P1652S"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000076",
+                                "node_attrs": {
+                                  "div": 20,
+                                  "clade_membership": {
+                                    "value": "22D (Omicron)"
+                                  },
+                                  "Nextclade_pango": {
+                                    "value": "BM.1"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T23019C"
+                                    ],
+                                    "S": [
+                                      "F486S"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "S: F486S",
+                                    "spike_mutations": "F486S"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "BM.1",
+                                    "node_attrs": {
+                                      "div": 20,
+                                      "author": {
+                                        "author": "?",
+                                        "value": "?"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22D (Omicron)"
+                                      },
+                                      "Nextclade_pango": {
+                                        "value": "BM.1"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    }
+                                  },
+                                  {
+                                    "name": "BM.1.1",
+                                    "node_attrs": {
+                                      "div": 21,
+                                      "author": {
+                                        "author": "?",
+                                        "value": "?"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22D (Omicron)"
+                                      },
+                                      "Nextclade_pango": {
+                                        "value": "BM.1.1"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G22599C"
+                                        ],
+                                        "S": [
+                                          "R346T"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "S: R346T",
+                                        "spike_mutations": "R346T"
+                                      }
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           }
