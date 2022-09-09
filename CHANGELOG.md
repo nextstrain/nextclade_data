@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2022-09-09
+
+### New dataset version (tag `2022-09-09T12:00:00Z`)
+
+#### All SARS-CoV-2 datasets
+
+- Data update: New pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/fcad365...efabcb6> for new desigantions that are included
+
+#### Experimental BA.2 dataset (sars-cov-2-21L)
+
+(Use this dataset via web as it is not guaranteed to be continued as the other datasets)
+
+- Unaliased column: To help sort Nextclade web results by Pango lineage in a way that respects the meaning of aliases, there is now an unaliased column included, that writes out full lineage names as if there were no alias, e.g. BA.5.2 becomes B.1.1.529.5.2 and so forth. This has the additional advantage that you can learn what new aliases stand for.
+
 ## 2022-08-26
 
 ### New dataset version (tag `2022-08-26T12:00:00Z`)
