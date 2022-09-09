@@ -1,6 +1,6 @@
 {
-  "tag": "2022-09-01T12:00:00Z",
-  "comment": "Include pango lineages up to 2022-09-01",
+  "tag": "2022-09-09T12:00:00Z",
+  "comment": "Include pango lineages up to 2022-09-08",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.10.0",
