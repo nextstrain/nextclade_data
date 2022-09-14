@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2022-09-13
+
+### New dataset version (tag `2022-09-13T12:00:00Z`)
+
+#### All monkeypox datasets
+
+- New lineages A.2.1 and B.1.9 have been added, see here for details: <https://github.com/mpxv-lineages/lineage-designation/blob/master/designation_records/B.1.9-A.2.1_2022-09-13.md>
+
 ## 2022-09-09
 
 ### New dataset version (tag `2022-09-09T12:00:00Z`)
