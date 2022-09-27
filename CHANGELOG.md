@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## 2022-09-27
+
+### New dataset version (tag `2022-09-27T12:00:00Z`)
+
+#### All SARS-CoV-2 datasets
+
+- Data update: New Pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/efabcb6...cfe736> for new desigantions that are included
+
+##### BA.2 dataset (experimental)
+
+- Reversions to wild type (Wuhan-Hu-1) are now labelled as `rev` to make it easier to spot problematic sequences
+- The dataset now contains antibody escape and ACE2 binding data from two repositories of Jesse Bloom's group on Github: <https://jbloomlab.github.io/SARS-CoV-2-RBD_DMS_Omicron/epistatic-shifts/> and <https://jbloomlab.github.io/SARS2_RBD_Ab_escape_maps/escape-calc/>
+
+#### Monkeypox datasets
+
+- New lineages A.2.2 and B.1.10-B.1.12 have been added, see here for details: <https://github.com/mpxv-lineages/lineage-designation/blob/master/designation_records/B.1.10-A.2.2_2022-09-26.md>
+
+##### hMPXV B.1 dataset
+
+- Mutations to a genotype found in MPXV-UK_P2 or MPXV-M5312_HM12_Rivers are now "labelled" as `rev` (reversion to reference). This should help identify wrong calls to reference when using the B.1 dataset. Until now, these artefacts were only visible as `reversions` when using the hMPXV or all-clades datasets.
+
+##### MPXV (All clades)
+
+- Frame shifts and stop codons that are encountered in a majority of sequences from clades IIa or I are now annotated as "known" mutations, which means that they do not influence the quality score. This should help increase the signal to noise ratio when uploading sequences from either of the clades.
+
 ## 2022-09-13
 
 ### New dataset version (tag `2022-09-13T12:00:00Z`)
