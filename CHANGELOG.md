@@ -7,6 +7,7 @@
 #### All SARS-CoV-2 datasets
 
 - Data update: New Pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/efabcb6...cfe736> for new desigantions that are included
+- Identical sequences have been removed from B.1* lineages to reduce size of that part of the tree from ~1.6k to ~800.
 
 ##### BA.2 dataset (experimental)
 

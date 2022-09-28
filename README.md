@@ -181,3 +181,13 @@ It is often helpful to visualize the correctness of the branch state on every st
 ### Infrastructure
 
 AWS S3 buckets, AWS Cloudfront distributions, AWS Lambda and domain names are managed internally by Nextstrain AWS admins. Ping them on Slack if you need help.
+
+### Copying from staging into the appropriate folder
+
+```sh
+aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2_21L.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/{timestamp}/files/tree.json 
+
+aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/{timestamp}/files/tree.json
+
+aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2-no-recomb.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/{timestamp}/files/tree.json
+```
