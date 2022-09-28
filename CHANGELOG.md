@@ -12,7 +12,7 @@
 ##### BA.2 dataset (experimental)
 
 - Reversions to wild type (Wuhan-Hu-1) are now labelled as `rev` to make it easier to spot problematic sequences
-- The dataset now contains antibody escape and ACE2 binding data from two repositories of Jesse Bloom's group on Github: <https://jbloomlab.github.io/SARS-CoV-2-RBD_DMS_Omicron/epistatic-shifts/> and <https://jbloomlab.github.io/SARS2_RBD_Ab_escape_maps/escape-calc/>
+- The dataset now contains antibody escape and ACE2 binding data from two repositories of Jesse Bloom's group on Github: <https://jbloomlab.github.io/SARS-CoV-2-RBD_DMS_Omicron/epistatic-shifts/> and <https://jbloomlab.github.io/SARS2_RBD_Ab_escape_maps/escape-calc/>. For more information, please refer to: <https://doi.org/10.1093/ve/veac021>, <https://doi.org/10.1101/2022.09.15.507787> and <https://doi.org/10.1101/2022.09.20.508745>.
 
 #### Monkeypox datasets
 
