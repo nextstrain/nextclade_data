@@ -7,7 +7,7 @@
 #### New dataset version (tag `2022-10-19T12:00:00Z`)
 
 - New clade `22E (Omicron)` (BQ.1*) added, see <https://github.com/nextstrain/ncov/pull/1012> for details
-- The SARS-CoV-2 trees are now purely based on Pango consensus sequences, and no longer contain any actual sequences. This makes builds mroe stable and helps mitigate issues with sequence artefacts. For the Omicron part of the tree, no actual sequences were ever included, so this change only affects the pre-Omicron part of the reference tree.
+- The SARS-CoV-2 trees are now purely based on Pango consensus sequences, and no longer contain any actual sequences. This makes builds more stable and helps mitigate issues with sequence artefacts. For the Omicron part of the tree, no actual sequences were ever included, so this change only affects the pre-Omicron part of the reference tree.
 - This release contains the first recombinant sublineages. These work in the same way as the other sublineages.
 - Data update: New Pango lineages, with designation date between 2022-09-25 and 2022-10-19 are now included, unfold below to see all the lineages:
 
@@ -174,7 +174,7 @@
 
 #### All SARS-CoV-2 datasets
 
-- Data update: New Pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/efabcb6...cfe736> for new desigantions that are included
+- Data update: New Pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/efabcb6...cfe736> for new designations that are included
 - Identical sequences have been removed from B.1* lineages to reduce size of that part of the tree from ~1.6k to ~800.
 
 ##### BA.2 dataset (experimental)
@@ -208,7 +208,7 @@
 
 #### All SARS-CoV-2 datasets
 
-- Data update: New pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/fcad365...efabcb6> for new desigantions that are included
+- Data update: New pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/fcad365...efabcb6> for new designations that are included
 
 #### Experimental BA.2 dataset (sars-cov-2-21L)
 
@@ -291,7 +291,7 @@ This way, the mutation view is less overloaded and individual Spike mutations ar
 
 Only lineages that descend from BA.2, BA.4 or BA.5 are included in this dataset.
 
-Please do not use this dataset for tools that rely on data continuity as the dataset is comparatively new and brittle and may not be maintained indenfinitely.
+Please do not use this dataset for tools that rely on data continuity as the dataset is comparatively new and brittle and may not be maintained indefinitely.
 
 The current version has the tag `2022-07-26T12:00:00` and name `sars-cov-2-21L`
 
@@ -392,7 +392,7 @@ All 3 use the coordinate system of the recently designated NCBI Monkeypox refere
 
 However, SNPs from two different ref sequences are added to the "all clades" and B.1 datasets to reduce the number of total mutations.
 
-The B.1 datset uses SNPs of ON563414.3 (MPXV_USA_2022_MA001) on top of a NC_063383 backbone.
+The B.1 dataset uses SNPs of ON563414.3 (MPXV_USA_2022_MA001) on top of a NC_063383 backbone.
 
 The "all clades" build uses the SNPs of a reconstructed ancestral MPXV sequence that is the inferred most recent common ancestor of clades 1, 2 and 3, rooted with a Cowpox outgroup.
 
