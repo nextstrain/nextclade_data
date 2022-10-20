@@ -1,5 +1,173 @@
 # CHANGELOG
 
+## 2022-10-19
+
+### All SARS-CoV-2 datasets
+
+#### New dataset version (tag `2022-10-19T12:00:00Z`)
+
+- New clade `22E (Omicron)` (BQ.1*) added, see <https://github.com/nextstrain/ncov/pull/1012> for details
+- The SARS-CoV-2 trees are now purely based on Pango consensus sequences, and no longer contain any actual sequences. This makes builds mroe stable and helps mitigate issues with sequence artefacts. For the Omicron part of the tree, no actual sequences were ever included, so this change only affects the pre-Omicron part of the reference tree.
+- This release contains the first recombinant sublineages. These work in the same way as the other sublineages.
+- Data update: New Pango lineages, with designation date between 2022-09-25 and 2022-10-19 are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary>New Pango lineages included in this release</summary>
+
+  - BA.5.2.26 (designation date: 2022-09-29)
+  - BA.5.2.27 (designation date: 2022-09-29)
+  - BA.5.2.28 (designation date: 2022-09-29)
+  - BA.5.1.22 (designation date: 2022-09-29)
+  - BA.5.1.23 (designation date: 2022-09-29)
+  - BA.5.1.24 (designation date: 2022-09-29)
+  - BA.5.1.25 (designation date: 2022-09-29)
+  - BF.26 (designation date: 2022-09-29)
+  - BF.27 (designation date: 2022-09-29)
+  - BF.28 (designation date: 2022-09-29)
+  - CA.2 (designation date: 2022-09-30)
+  - BA.2.75.9 (designation date: 2022-09-30)
+  - CB.1 (designation date: 2022-09-30)
+  - BL.1.3 (designation date: 2022-09-30)
+  - BS.1.1 (designation date: 2022-09-30)
+  - BA.2.85 (designation date: 2022-09-30)
+  - BA.5.2.29 (designation date: 2022-09-30)
+  - BE.4 (designation date: 2022-09-30)
+  - BE.4.1 (designation date: 2022-09-30)
+  - BE.4.1.1 (designation date: 2022-09-30)
+  - BE.1.1.2 (designation date: 2022-09-30)
+  - CC.1 (designation date: 2022-09-30)
+  - BA.5.2.30 (designation date: 2022-09-30)
+  - BA.5.2.31 (designation date: 2022-09-30)
+  - CD.1 (designation date: 2022-09-30)
+  - CD.2 (designation date: 2022-09-30)
+  - BA.5.2.32 (designation date: 2022-09-30)
+  - BA.5.2.33 (designation date: 2022-09-30)
+  - CE.1 (designation date: 2022-09-30)
+  - BA.5.1.26 (designation date: 2022-09-30)
+  - BA.5.1.27 (designation date: 2022-09-30)
+  - BA.5.1.28 (designation date: 2022-09-30)
+  - CF.1 (designation date: 2022-09-30)
+  - CG.1 (designation date: 2022-10-03)
+  - XBB.1 (designation date: 2022-10-03)
+  - BQ.1.4 (designation date: 2022-10-03)
+  - XBC.1 (designation date: 2022-10-03)
+  - BF.7.1 (designation date: 2022-10-05)
+  - BA.5.3.5 (designation date: 2022-10-07)
+  - BA.5.1.29 (designation date: 2022-10-07)
+  - BQ.1.5 (designation date: 2022-10-11)
+  - BQ.1.6 (designation date: 2022-10-11)
+  - BQ.1.7 (designation date: 2022-10-11)
+  - BQ.1.8 (designation date: 2022-10-11)
+  - BQ.1.9 (designation date: 2022-10-11)
+  - BA.5.6.3 (designation date: 2022-10-11)
+  - BG.7 (designation date: 2022-10-11)
+  - BA.4.6.2 (designation date: 2022-10-11)
+  - BE.4.2 (designation date: 2022-10-11)
+  - BA.4.6.3 (designation date: 2022-10-11)
+  - CH.1 (designation date: 2022-10-11)
+  - CH.2 (designation date: 2022-10-11)
+  - CJ.1 (designation date: 2022-10-11)
+  - CK.1 (designation date: 2022-10-11)
+  - CL.1 (designation date: 2022-10-11)
+  - CM.1 (designation date: 2022-10-11)
+  - BR.4 (designation date: 2022-10-12)
+  - CN.1 (designation date: 2022-10-12)
+  - BA.5.2.34 (designation date: 2022-10-12)
+  - XBD (designation date: 2022-10-12)
+  - BA.2.38.4 (designation date: 2022-10-12)
+  - BF.29 (designation date: 2022-10-12)
+  - CH.1.1 (designation date: 2022-10-13)
+  - BQ.1.10 (designation date: 2022-10-13)
+  - BQ.1.11 (designation date: 2022-10-13)
+  - BQ.1.12 (designation date: 2022-10-13)
+  - BQ.1.13 (designation date: 2022-10-13)
+  - BQ.1.14 (designation date: 2022-10-13)
+  - BQ.1.15 (designation date: 2022-10-13)
+  - BQ.1.16 (designation date: 2022-10-13)
+  - XAY.1 (designation date: 2022-10-13)
+  - XAY.2 (designation date: 2022-10-13)
+  - BA.2.3.21 (designation date: 2022-10-13)
+  - CM.2 (designation date: 2022-10-13)
+  - BQ.2 (designation date: 2022-10-13)
+  - BQ.1.17 (designation date: 2022-10-13)
+  - CP.1 (designation date: 2022-10-13)
+  - CP.1.1 (designation date: 2022-10-13)
+  - BA.5.2.35 (designation date: 2022-10-13)
+  - BE.5 (designation date: 2022-10-13)
+  - CQ.1 (designation date: 2022-10-13)
+  - BF.7.2 (designation date: 2022-10-13)
+  - BN.1.1 (designation date: 2022-10-13)
+  - CR.1 (designation date: 2022-10-13)
+  - CR.2 (designation date: 2022-10-13)
+  - CS.1 (designation date: 2022-10-14)
+  - BL.2.1 (designation date: 2022-10-14)
+  - BF.7.3 (designation date: 2022-10-14)
+  - BF.30 (designation date: 2022-10-14)
+  - BM.2.1 (designation date: 2022-10-14)
+  - BM.2.2 (designation date: 2022-10-14)
+  - BM.2.3 (designation date: 2022-10-14)
+  - BM.6 (designation date: 2022-10-14)
+  - BA.4.6.4 (designation date: 2022-10-14)
+  - XBC.2 (designation date: 2022-10-14)
+  - BN.1.2 (designation date: 2022-10-15)
+  - BN.1.1.1 (designation date: 2022-10-15)
+  - BN.1.3 (designation date: 2022-10-15)
+  - BN.3 (designation date: 2022-10-15)
+  - BR.1.1 (designation date: 2022-10-15)
+  - BR.1.2 (designation date: 2022-10-15)
+  - BA.2.75.10 (designation date: 2022-10-15)
+  - BM.1.1.2 (designation date: 2022-10-15)
+  - BQ.1.1.1 (designation date: 2022-10-15)
+  - BQ.1.18 (designation date: 2022-10-15)
+  - BQ.1.8.1 (designation date: 2022-10-15)
+  - BQ.1.8.2 (designation date: 2022-10-15)
+  - BQ.1.10.1 (designation date: 2022-10-15)
+  - XBB.2 (designation date: 2022-10-15)
+  - XBB.3 (designation date: 2022-10-15)
+  - XBB.1.1 (designation date: 2022-10-15)
+  - BA.5.2.36 (designation date: 2022-10-15)
+  - CT.1 (designation date: 2022-10-15)
+  - BN.3.1 (designation date: 2022-10-15)
+  - BN.4 (designation date: 2022-10-15)
+  - BN.5 (designation date: 2022-10-15)
+  - BN.6 (designation date: 2022-10-15)
+  - CA.3 (designation date: 2022-10-15)
+  - CA.4 (designation date: 2022-10-15)
+  - CA.5 (designation date: 2022-10-15)
+  - BM.1.1.3 (designation date: 2022-10-15)
+  - CM.3 (designation date: 2022-10-15)
+  - BQ.1.19 (designation date: 2022-10-15)
+  - BU.2 (designation date: 2022-10-15)
+  - BL.1.4 (designation date: 2022-10-16)
+  - BQ.1.20 (designation date: 2022-10-16)
+  - CA.6 (designation date: 2022-10-16)
+  - BF.11.1 (designation date: 2022-10-16)
+  - BF.11.3 (designation date: 2022-10-16)
+  - BF.11.2 (designation date: 2022-10-16)
+  - BF.11.4 (designation date: 2022-10-16)
+  - BF.11.5 (designation date: 2022-10-16)
+  - BF.7.4 (designation date: 2022-10-16)
+  - BF.7.5 (designation date: 2022-10-16)
+  - BF.7.6 (designation date: 2022-10-16)
+  - BF.7.8 (designation date: 2022-10-16)
+  - BF.7.7 (designation date: 2022-10-16)
+  - BF.7.9 (designation date: 2022-10-16)
+  - BF.7.10 (designation date: 2022-10-16)
+  - BF.7.11 (designation date: 2022-10-16)
+  - BF.7.12 (designation date: 2022-10-16)
+  - BE.1.4 (designation date: 2022-10-16)
+  - BE.1.4.2 (designation date: 2022-10-16)
+  - BE.1.4.1 (designation date: 2022-10-16)
+  - BE.1.4.3 (designation date: 2022-10-16)
+  - BE.1.4.4 (designation date: 2022-10-16)
+  - CU.1 (designation date: 2022-10-16)
+  - XBB.1.2 (designation date: 2022-10-17)
+  - BT.2 (designation date: 2022-10-17)
+  - BA.5.6.4 (designation date: 2022-10-17)
+  - BA.5.2.37 (designation date: 2022-10-17)
+  - BQ.1.1.2 (designation date: 2022-10-19)
+  </details>
+
 ## 2022-09-27
 
 ### New dataset version (tag `2022-09-27T12:00:00Z`)
@@ -103,7 +271,7 @@ The reference.fasta ID has been renamed to `MPXV_USA_2022_MA001_in_NC_063383_coo
 
 #### All Monkeypox datasets
 
-The datasets now include  hMPXV-1 lineages B.1.1 to B.1.5. See details in https://github.com/nextstrain/monkeypox/pull/95
+The datasets now include  hMPXV-1 lineages B.1.1 to B.1.5. See details in <https://github.com/nextstrain/monkeypox/pull/95>
 
 Sequences released to Genbank up to 2022-08-08 have been included in the new trees.
 
@@ -111,7 +279,7 @@ A B.1.5 sequence from Genbank has been added to the example sequences
 
 ##### MPXV (All clades)
 
-Sequence KJ642615 (W-Nigeria/1971) has been excluded as it appears to be recombinant of clade 2 and clade 3. See details in https://github.com/nextstrain/monkeypox/pull/102 - this sequence is not present in the other datasets, so no change there
+Sequence KJ642615 (W-Nigeria/1971) has been excluded as it appears to be recombinant of clade 2 and clade 3. See details in <https://github.com/nextstrain/monkeypox/pull/102> - this sequence is not present in the other datasets, so no change there
 
 ### Experimental, SARS-CoV-2 dataset relative to BA.2 (`sars-cov-2-21L`)
 
@@ -163,8 +331,8 @@ The biggest perceived impact will be that mutations displayed by Auspice will no
 
 - Clades: BA.2.75 has been given the Nextstrain clade name `22D`. Read more about the reasoning for the decision to give this lineage a name here <https://github.com/nextstrain/ncov/pull/984>
 - Data update: New pango lineages are included up to commit <https://github.com/cov-lineages/pango-designation/compare/65cb2e04de0dc311600b396f7119babeb051b40e...42134608ae645853c333591ddadc345bfaf7ec13>)
-- Fix: BA.2.38 no longer contains `6091T` as defining mutation, should therefore catch many more Indian BA.2.38 (report by @silcn in https://github.com/nextstrain/nextclade/issues/935)
-- Fix: Genemap format now correct, compliant with GFF3, see https://github.com/nextstrain/nextclade_data/issues/33 (report by @huddlej)
+- Fix: BA.2.38 no longer contains `6091T` as defining mutation, should therefore catch many more Indian BA.2.38 (report by @silcn in <https://github.com/nextstrain/nextclade/issues/935>)
+- Fix: Genemap format now correct, compliant with GFF3, see <https://github.com/nextstrain/nextclade_data/issues/33> (report by @huddlej)
 - virus_properties.json has been updated, including clade `22D`
 
 ## 2022-07-12
@@ -181,7 +349,7 @@ The biggest perceived impact will be that mutations displayed by Auspice will no
 
 #### New dataset version (tag `2022-07-11T12:00:00Z`)
 
-- Pango lineages: In this release, Nextclade can assign Pango lineages up to BA.2.75 (commit https://github.com/cov-lineages/pango-designation/commit/65cb2e04de0dc311600b396f7119babeb051b40e)
+- Pango lineages: In this release, Nextclade can assign Pango lineages up to BA.2.75 (commit <https://github.com/cov-lineages/pango-designation/commit/65cb2e04de0dc311600b396f7119babeb051b40e>)
 - Alignment params: Retry reverse complement flag is now set to true, so that reverse complement is tried if seed matching fails.
 - Fixes: Some synthetic pango lineage sequences had wrong mutations, this is now fixed through a manually curated override file.
 
