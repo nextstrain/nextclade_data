@@ -106,6 +106,7 @@ rule refine:
         tree = rules.tree.output.tree,
         alignment = rules.align.output,
         metadata = input_metadata
+    params:
         root_name = reference_name
     output:
         tree = "results/tree.nwk",
@@ -119,7 +120,7 @@ rule refine:
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
             --keep-polytomies \
-            --root {input.root_name}
+            --root {params.root_name}
         """
 
 rule ancestral:
