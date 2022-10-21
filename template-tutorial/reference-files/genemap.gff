@@ -1,0 +1,3 @@
+## sequence-region refSequenceNameHere 1 10000 
+## seqname	source	feature	start	end	score	strand	frame	attribute
+refSequenceNameHere	feature	gene	0	100	.	+	0	gene=foo

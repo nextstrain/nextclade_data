@@ -1,0 +1,23 @@
+{
+  "title": "Pathogen name here",
+  "colorings": [
+    {
+      "key": "clade_membership",
+      "title": "Clade Membership",
+      "type": "categorical"
+    },
+    {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "date",
+      "title": "Date",
+      "type": "continuous"
+    }
+  ],
+  "panels": ["tree", "entropy"],
+  "display_defaults": {},
+  "filters": ["clade_membership", "gt", "date"]
+}

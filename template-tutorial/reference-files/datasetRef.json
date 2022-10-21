@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "AB_012345",
+    "strainName": "refSequenceNameHere"
+  }
+}

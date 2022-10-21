@@ -1,0 +1,3 @@
+## missing data should be filled with ? unless it is a date -- these should be filled with Xs as shown. strain and at least the year are required for all samples. clade_membership is required for at least a representative subset of samples.
+strain	accession	country	division	location	date	clade_membership
+STRAIN/NAME/REQUIRED	?	?	?	?	2018-XX-XX	OMICRON
