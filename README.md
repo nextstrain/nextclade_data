@@ -182,6 +182,7 @@ AWS S3 buckets, AWS Cloudfront distributions, AWS Lambda and domain names are ma
 ### Copying from staging into the appropriate folder
 
 ```sh
+TIMESTAMP="2022-10-27T12:00:00Z"
 aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2_21L.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$TIMESTAMP/files/tree.json 
 
 aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$TIMESTAMP/files/tree.json
@@ -189,7 +190,7 @@ aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/ne
 aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2-no-recomb.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$TIMESTAMP/files/tree.json
 ```
 
-### Creating new dataset version
+### Creating a new dataset version
 
 ```sh
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/2022-10-04T12:00:00Z /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/2022-10-19T12:00:00Z
