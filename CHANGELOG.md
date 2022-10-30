@@ -1,5 +1,61 @@
 # CHANGELOG
 
+## 2022-10-27
+
+### All SARS-CoV-2 datasets
+
+#### New dataset version (tag `2022-10-27T12:00:00Z`)
+
+- Phase 1 of migration of clade labels started: We will migrate clade labels from being a composite of Nextstrain clade, WHO name and legacy names (e.g. `20J (Gamma, V3)`) to a set of independent clade labels.
+  Phase 1 does not make braking changes. `clade` remains composite as in the past. However, 3 new clade columns are introduced (in the TSV/CSV only so far): `clade_nextstrain` (e.g. `20J`) and `clade_who` (e.g. `Gamma`) and `clade_legacy` (e.g. `20J (Gamma, V3`).
+  If you don't want to change your code, you can future proof it by starting to use `clade_legacy` instead of `clade`, which is identical at the moment, but in the mid-term (earliest a month) `clade` may change. However, `clade_legacy` will remain part of the dataset for much longer.
+  If you want to start using new split clades, you can start using `clade_nextstrain` and `clade_who` from now on.
+  Phase 2 which will happen at the earliest in a month (2022-12-01) will involve changing `clade` from being composite and identical with `clade_legacy` to being identical with `clade_nextstrain`.
+  Phase 3 which will happen at the earliest in 6 months (2022-04-01) may involve dropping `clade_legacy` and `clade_nextstrain`.
+- New clade `22F (Omicron)` (XBB) added, see <https://github.com/nextstrain/ncov/pull/1020> for details, e.g. on the reasons for elevation
+- Data update: New Pango lineages, with designation date between 2022-09-20 and 2022-10-27 are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary>New Pango lineages included in this release</summary>
+
+  - XBB.4 (2022-10-20)
+  - XBB.3.1 (2022-10-20)
+  - XBB.5 (2022-10-20)
+  - BQ.1.1.3 (2022-10-20)
+  - BQ.1.1.4 (2022-10-20)
+  - BQ.1.1.5 (2022-10-20)
+  - BQ.1.1.6 (2022-10-20)
+  - BQ.1.1.7 (2022-10-20)
+  - BQ.1.1.8 (2022-10-20)
+  - BQ.1.1.9 (2022-10-20)
+  - BQ.1.1.10 (2022-10-20)
+  - BN.1.2.1 (2022-10-20)
+  - BN.1.4 (2022-10-20)
+  - BN.1.5 (2022-10-20)
+  - BN.1.6 (2022-10-20)
+  - CK.2 (2022-10-20)
+  - CK.2.1 (2022-10-20)
+  - CK.2.1.1 (2022-10-20)
+  - CQ.2 (2022-10-20)
+  - BQ.1.1.11 (2022-10-21)
+  - BQ.1.1.12 (2022-10-21)
+  - BY.1.1 (2022-10-21)
+  - BY.1.1.1 (2022-10-21)
+  - BY.1.2 (2022-10-21)
+  - BY.1.2.1 (2022-10-21)
+  - CM.4 (2022-10-21)
+  - CM.5 (2022-10-21)
+  - CM.6 (2022-10-21)
+  - XBE (2022-10-22)
+  - BU.3 (2022-10-23)
+  - BA.5.1.30 (2022-10-23)
+  - CV.1 (2022-10-23)
+  - XBB.1.3 (2022-10-23)
+  - BQ.1.1.13 (2022-10-23)
+  - CA.7 (2022-10-24)
+
+  </details>
+
 ## 2022-10-19
 
 ### All SARS-CoV-2 datasets
