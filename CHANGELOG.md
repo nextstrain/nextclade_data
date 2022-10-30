@@ -13,6 +13,8 @@
   Phase 2 which will happen at the earliest in a month (2022-12-01) will involve changing `clade` from being composite and identical with `clade_legacy` to being identical with `clade_nextstrain`.
   Phase 3 which will happen at the earliest in 6 months (2022-04-01) may involve dropping `clade_legacy` and `clade_nextstrain`.
 - New clade `22F (Omicron)` (XBB) added, see <https://github.com/nextstrain/ncov/pull/1020> for details, e.g. on the reasons for elevation
+- `virus_properties.json` has been updated with mutations characteristic of clades `22E` (BQ.1) and `22F` (XBB) to enable detection of contamination/recombination involving these clades
+- `qc.json` has been updated with common frameshifts and stop codons that appear in hundreds of sequences and plausibly occur in viable virus
 - Data update: New Pango lineages, with designation date between 2022-09-20 and 2022-10-27 are now included, unfold below to see all the lineages:
 
   <details>
