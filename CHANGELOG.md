@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2022-11-03
+
+### All monkeypox datasets
+
+#### New dataset version (tag `2022-11-03T00:00:00Z`)
+
+- New monkeypox lineages A.2.3, A.3, B.1.13 and B.1.14 were added to the dataset, see https://github.com/mpxv-lineages/lineage-designation/pull/28 for details on these lineages.
+
 ## 2022-10-27
 
 ### All SARS-CoV-2 datasets
