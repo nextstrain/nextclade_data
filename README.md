@@ -201,4 +201,3 @@ cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-no-rec
 
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$OLD /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$NEW
 ```
-
