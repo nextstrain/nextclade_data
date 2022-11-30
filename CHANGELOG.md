@@ -1,5 +1,165 @@
 # CHANGELOG
 
+## 2022-11-15
+
+### All SARS-CoV-2 datasets
+
+#### New dataset version (tag `2022-11-15T12:00:00Z`)
+
+- Data update: New Pango lineages, with designation date between 2022-10-27 and 2022-11-14 are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary>New Pango lineages included in this release, with designation date in parentheses</summary>
+
+  - BQ.1.1.14 (2022-10-31)
+  - CW.1 (2022-10-31)
+  - BQ.1.1.15 (2022-10-31)
+  - BQ.1.1.16 (2022-10-31)
+  - BQ.1.1.17 (2022-10-31)
+  - BQ.1.1.18 (2022-10-31)
+  - BQ.1.1.19 (2022-10-31)
+  - BN.1.3.1 (2022-10-31)
+  - BF.7.4.1 (2022-10-31)
+  - BF.31 (2022-11-01)
+  - BF.31.1 (2022-11-01)
+  - BF.32 (2022-11-01)
+  - BQ.1.21 (2022-11-01)
+  - CY.1 (2022-11-01)
+  - BA.2.9.7 (2022-11-01)
+  - BQ.1.22 (2022-11-02)
+  - BF.7.4.2 (2022-11-02)
+  - CP.1.2 (2022-11-02)
+  - CP.1.3 (2022-11-02)
+  - CP.2 (2022-11-02)
+  - CP.3 (2022-11-02)
+  - CP.4 (2022-11-02)
+  - CP.5 (2022-11-02)
+  - CP.6 (2022-11-02)
+  - CR.1.1 (2022-11-02)
+  - BS.1.2 (2022-11-02)
+  - CM.5.1 (2022-11-02)
+  - BL.5 (2022-11-02)
+  - XAY.1.1 (2022-11-03)
+  - BQ.1.1.20 (2022-11-03)
+  - BQ.1.1.21 (2022-11-03)
+  - BQ.1.1.22 (2022-11-03)
+  - CZ.1 (2022-11-03)
+  - XBB.4.1 (2022-11-03)
+  - BQ.1.23 (2022-11-03)
+  - BA.5.2.38 (2022-11-03)
+  - DA.1 (2022-11-03)
+  - BF.7.13 (2022-11-03)
+  - BF.7.13.1 (2022-11-03)
+  - BF.7.13.2 (2022-11-03)
+  - XBF (2022-11-03)
+  - CA.3.1 (2022-11-03)
+  - CM.7 (2022-11-04)
+  - BA.5.2.39 (2022-11-04)
+  - DB.1 (2022-11-04)
+  - BF.33 (2022-11-04)
+  - BA.4.6.5 (2022-11-04)
+  - DC.1 (2022-11-04)
+  - BQ.1.1.23 (2022-11-04)
+  - BQ.1.1.24 (2022-11-04)
+  - DD.1 (2022-11-04)
+  - BE.6 (2022-11-04)
+  - BE.7 (2022-11-04)
+  - BE.8 (2022-11-04)
+  - BA.5.11 (2022-11-04)
+  - DB.2 (2022-11-04)
+  - BQ.1.24 (2022-11-04)
+  - BA.5.2.40 (2022-11-04)
+  - BQ.1.25 (2022-11-05)
+  - CQ.1.1 (2022-11-05)
+  - CR.1.2 (2022-11-05)
+  - DE.1 (2022-11-05)
+  - DE.2 (2022-11-05)
+  - CM.8 (2022-11-05)
+  - DF.1 (2022-11-06)
+  - XBB.1.4 (2022-11-06)
+  - BF.34 (2022-11-08)
+  - XBB.1.5 (2022-11-08)
+  - DG.1 (2022-11-09)
+  - DH.1 (2022-11-09)
+  - BR.2.1 (2022-11-09)
+  - BN.1.7 (2022-11-10)
+  - CM.8.1 (2022-11-10)
+  - CM.9 (2022-11-10)
+  - CM.6.1 (2022-11-10)
+  - BE.9 (2022-11-12)
+  - BQ.1.26 (2022-11-12)
+  - BF.7.5.1 (2022-11-13)
+  - BA.5.2.41 (2022-11-13)
+  - CK.3 (2022-11-14)
+
+  </details>
+
+## 2022-11-03
+
+### All monkeypox datasets
+
+#### New dataset version (tag `2022-11-03T00:00:00Z`)
+
+- New monkeypox lineages A.2.3, A.3, B.1.13 and B.1.14 were added to the dataset, see https://github.com/mpxv-lineages/lineage-designation/pull/28 for details on these lineages.
+
+## 2022-10-27
+
+### All SARS-CoV-2 datasets
+
+#### New dataset version (tag `2022-10-27T12:00:00Z`)
+
+- Phase 1 of migration of clade labels started: We will migrate clade labels from being a composite of Nextstrain clade, WHO name and legacy names (e.g. `20J (Gamma, V3)`) to a set of independent clade labels.
+  Phase 1 does not make braking changes. `clade` remains composite as in the past. However, 3 new clade columns are introduced (in the TSV/CSV only so far): `clade_nextstrain` (e.g. `20J`) and `clade_who` (e.g. `Gamma`) and `clade_legacy` (e.g. `20J (Gamma, V3`).
+  If you don't want to change your code, you can future proof it by starting to use `clade_legacy` instead of `clade`, which is identical at the moment, but in the mid-term (earliest a month) `clade` may change. However, `clade_legacy` will remain part of the dataset for much longer.
+  If you want to start using new split clades, you can start using `clade_nextstrain` and `clade_who` from now on.
+  Phase 2 which will happen at the earliest in a month (2022-12-01) will involve changing `clade` from being composite and identical with `clade_legacy` to being identical with `clade_nextstrain`.
+  Phase 3 which will happen at the earliest in 6 months (2022-04-01) may involve dropping `clade_legacy` and `clade_nextstrain`.
+- New clade `22F (Omicron)` (XBB) added, see <https://github.com/nextstrain/ncov/pull/1020> for details, e.g. on the reasons for elevation
+- `virus_properties.json` has been updated with mutations characteristic of clades `22E` (BQ.1) and `22F` (XBB) to enable detection of contamination/recombination involving these clades
+- `qc.json` has been updated with common frameshifts and stop codons that appear in hundreds of sequences and plausibly occur in viable virus
+- Data update: New Pango lineages, with designation date between 2022-09-20 and 2022-10-27 are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary>New Pango lineages included in this release</summary>
+
+  - XBB.4 (2022-10-20)
+  - XBB.3.1 (2022-10-20)
+  - XBB.5 (2022-10-20)
+  - BQ.1.1.3 (2022-10-20)
+  - BQ.1.1.4 (2022-10-20)
+  - BQ.1.1.5 (2022-10-20)
+  - BQ.1.1.6 (2022-10-20)
+  - BQ.1.1.7 (2022-10-20)
+  - BQ.1.1.8 (2022-10-20)
+  - BQ.1.1.9 (2022-10-20)
+  - BQ.1.1.10 (2022-10-20)
+  - BN.1.2.1 (2022-10-20)
+  - BN.1.4 (2022-10-20)
+  - BN.1.5 (2022-10-20)
+  - BN.1.6 (2022-10-20)
+  - CK.2 (2022-10-20)
+  - CK.2.1 (2022-10-20)
+  - CK.2.1.1 (2022-10-20)
+  - CQ.2 (2022-10-20)
+  - BQ.1.1.11 (2022-10-21)
+  - BQ.1.1.12 (2022-10-21)
+  - BY.1.1 (2022-10-21)
+  - BY.1.1.1 (2022-10-21)
+  - BY.1.2 (2022-10-21)
+  - BY.1.2.1 (2022-10-21)
+  - CM.4 (2022-10-21)
+  - CM.5 (2022-10-21)
+  - CM.6 (2022-10-21)
+  - XBE (2022-10-22)
+  - BU.3 (2022-10-23)
+  - BA.5.1.30 (2022-10-23)
+  - CV.1 (2022-10-23)
+  - XBB.1.3 (2022-10-23)
+  - BQ.1.1.13 (2022-10-23)
+  - CA.7 (2022-10-24)
+
+  </details>
+
 ## 2022-10-19
 
 ### All SARS-CoV-2 datasets

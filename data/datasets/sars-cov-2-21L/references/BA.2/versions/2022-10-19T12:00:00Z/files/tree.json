@@ -649,11 +649,6 @@
         "key": "partiallyAliased",
         "title": "Unaliased Pango Lineage",
         "type": "categorical"
-      },
-      {
-        "key": "partiallyAliased",
-        "title": "Unaliased Pango Lineage",
-        "type": "categorical"
       }
     ],
     "filters": [
