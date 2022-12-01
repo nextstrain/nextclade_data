@@ -1,0 +1,41 @@
+{
+  "version": "v2",
+  "meta": {
+    "title": "Dummy tree",
+    "updated": "2022-10-20",
+    "build_url": "",
+    "data_provenance": [
+      {
+        "name": "Genbank"
+      }
+    ],
+    "maintainers": [],
+    "display_defaults": {
+      "color_by": "clade_membership",
+      "distance_measure": "div",
+      "map_triplicate": false,
+      "branch_label": "clade",
+      "transmission_lines": false
+    },
+    "genome_annotations": {},
+    "description": "",
+    "colorings": [],
+    "filters": ["new_node", "clade_membership"],
+    "panels": ["tree", "entropy"]
+  },
+  "tree": {
+    "name": "REFERENCE",
+    "node_attrs": {
+      "div": 0,
+      "clade_membership": {
+        "value": ""
+      }
+    },
+    "branch_attrs": {
+      "mutations": {},
+      "labels": {
+        "clade": ""
+      }
+    }
+  }
+}
