@@ -8,7 +8,7 @@ See instructions [here](https://docs.nextstrain.org/projects/nextclade/en/stable
 
 ### 2. Choose a well-annotated reference sequence
 
-We recommend using NCBI's refseq database as a starting point. Save this reference sequence as the only entry in `./speciesNameHere/references/referenceAccessionHere/versions/timestampHere/reference.fasta`
+We recommend using NCBI's refseq database as a starting point. Save this reference sequence as the only entry in `./reference-files/reference.fasta`
 
 ### 3. Make your gene map by filling in the template file `genemap.gff`
 
@@ -32,7 +32,7 @@ NC_009824 feature gene 340 912 . + 0 gene=C
 
 See the [main docs](https://docs.nextstrain.org/projects/nextclade/en/stable/user/algorithm/07-quality-control.html) for an explanation of each QC rule.
 
-As a starting point, we've initialized this file with values we think are generally appropriate for a viral genome ~10kb long.
+As a starting point, we've initialized this file with the values we use for SARS-CoV-2.
 
 ### 5. [Optional] Fill in `primers.csv` and/or `virus_properties.json`
 
@@ -47,7 +47,7 @@ nextclade dataset get --name sars-cov-2 --output-dir foo
 Try out your new reference dataset by running:
 
 ```
-nextclade run -D ./speciesNameHere/references/referenceAccessionHere/versions/timestampHere/ -O foo/bar/ input_sequences.fasta
+nextclade run -D ./reference-files/ -O foo/bar/ input_sequences.fasta
 ```
 
 Note that while a list of lineages and an output tree will still be provided, it will not be informative and should not be used.
