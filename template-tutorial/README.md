@@ -99,7 +99,7 @@ Note that the white space in these genbank files is important for parsing and is
 
 Places these files into the directory `references-files/` as `reference.fasta` and `reference.gb`
 
-#### 10. Build your reference tree
+### 10. Build your reference tree
 
 At the top of the file `prepare-reference-tree/Snakefile`, update:
 
@@ -119,7 +119,7 @@ Snakemake .
 
 This should create an output tree JSON file in `reference-files/tree.json`. Examine this tree in your browser at `https://auspice.us` to verify that the tree looks reasonable. If relevant, color by `clade_membership` to verify that your clade assignments look correct.
 
-11. Test run!
+### 11. Test run!
 
 `nextclade run -D ./reference-files/ -O foo/bar/ input-sequences.fasta`
 
@@ -131,7 +131,15 @@ This should create an output tree JSON file in `reference-files/tree.json`. Exam
 git clone https://github.com/nextstrain/nextclade_data.git
 ```
 
-### 13. Set up your directory structure
+### 13. Update descriptive JSON files to help others understand your dataset
+
+- `dataset.json` lists the species name and which reference sequence to use by default for that species
+- `datasetRef.json` describes each reference sequence and where it came from
+- `tag.json` describes each "release" or version of the reference dataset bundle as a whole
+
+Take a look at the template files provided. As always, if you have questions please feel free to get in touch via our [discussion board](https://discussion.nextstrain.org)!
+
+### 14. Set up your directory structure
 
 For others to use your dataset directly through nextclade, you'll need to restructure your directory a bit so that it looks like:
 
@@ -151,14 +159,6 @@ nextclade_data/data/datasets/speciesNameHere/
 
 E.g., the path to `reference.fasta` for the `sars-cov-2` dataset looks like:
 `nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/2021-06-25T00:00:00Z/files/reference.fasta`
-
-### 14. Update descriptive JSON files to help others understand your dataset
-
-- `dataset.json` lists the species name and which reference sequence to use by default for that species
-- `datasetRef.json` describes each reference sequence and where it came from
-- `tag.json` describes each "release" or version of the reference dataset bundle as a whole
-
-Take a look at the template files provided. As always, if you have questions please feel free to get in touch via our [discussion board](https://discussion.nextstrain.org)!
 
 ### 15. Make a pull request!
 
