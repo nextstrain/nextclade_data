@@ -12,7 +12,7 @@ We recommend using NCBI's refseq database as a starting point. Save this referen
 
 ### 3. Make your gene map by filling in the template file `genemap.gff`
 
-Based on the genbank record of your reference sequence, create your `genemap.gff`. The jupyter notebook in `scripts/genbankToGff.ipynb` may be helpful for this step.
+Based on the genbank record of your reference sequence, create your `genemap.gff`.
 
 - This is a tab-delimited file, not comma- or space-delimited.
 - `seqname` is always the name of your reference sequence
@@ -95,7 +95,7 @@ Note that the annotations in the genbank file need to match the annotations in t
                                     /gene="C"
 ```
 
-Note that the white space in these genbank files is important for parsing and is very difficult to keep track of when editing by hand. Be very careful as you're making these edits! The notebook in `helperScripts/relabelGenbankFeatures.ipynb` may be helpful for this step.
+Note that the white space in these genbank files is important for parsing and is very difficult to keep track of when editing by hand. Be very careful as you're making these edits!
 
 Places these files into the directory `references-files/` as `reference.fasta` and `reference.gb`
 
