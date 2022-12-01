@@ -145,16 +145,16 @@ For others to use your dataset directly through nextclade, you'll need to restru
 
 ```
 nextclade_data/data/datasets/speciesNameHere/
-|__dataset.json
-|__references/accessionNumberHere/
-   |__datasetRef.json
-   |__versions/timeStampHere/
-      |__reference.fasta
-      |__genemap.gff
-      |__primers.csv
-      |__tree.json
-      |__qc.json
-      |__tag.json
+                              └──dataset.json
+                              └──references/accessionNumberHere/
+                                            ├──datasetRef.json
+                                            └──versions/timeStampHere/
+                                                        ├──reference.fasta
+                                                        ├──genemap.gff
+                                                        ├──primers.csv
+                                                        ├──tree.json
+                                                        ├──qc.json
+                                                        └──tag.json
 ```
 
 E.g., the path to `reference.fasta` for the `sars-cov-2` dataset looks like:
