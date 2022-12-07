@@ -18,7 +18,8 @@
     "qc": "qc.json",
     "reference": "reference.fasta",
     "sequences": "sequences.fasta",
-    "tree": "tree.json"
+    "tree": "tree.json",
+    "virusPropertiesJson": "virus_properties.json"
   },
   "metadata": {}
 }
