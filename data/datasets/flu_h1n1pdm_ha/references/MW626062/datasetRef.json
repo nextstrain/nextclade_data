@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "MW626062",
+    "strainName": "A/Wisconsin/588/2019"
+  }
+}
