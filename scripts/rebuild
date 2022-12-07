@@ -206,6 +206,8 @@ def postprocess_datasets_v2(datasets_v2, _):
     datasets_v2.sort(key=lambda x: position[x["attributes"]["name"]["value"]], reverse=True)
     datasets_v2.sort(key=lambda x: x["attributes"]["name"]["value"] == "sars-cov-2", reverse=True)
 
+    datasets_v2 = [ { "id": str(i), **dataset } for i, dataset in enumerate(datasets_v2) ]
+
     index_json = dict()
     index_json.update({"schema": "2.0.0"})
     index_json.update({"datasets": datasets_v2})
