@@ -3,12 +3,15 @@
   "privateMutations": {
     "enabled": true,
     "typical": 5,
-    "cutoff": 15
+    "cutoff": 15,
+    "weightLabeledSubstitutions": 2,
+    "weightReversionSubstitutions": 1,
+    "weightUnlabeledSubstitutions": 1
   },
   "missingData": {
     "enabled": false,
     "missingDataThreshold": 100,
-    "scoreBias": 10 
+    "scoreBias": 10
   },
   "snpClusters": {
     "enabled": false,
