@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## 2022-12-09
+
+### Influenza datasets
+
+#### New dataset version (tag `2022-12-07T08:35:53Z`)
+
+#### A/H3N2: Update and addition of new reference sequence A/Darwin/6/2021
+
+The existing dataset with reference sequence A/Wisconsin/67/2005 (CY163680) was updated to reflect recently circulating viruses.
+A new dataset with reference sequence A/Darwin/6/2021 (EPI1857216), the current vaccine strain, was added.
+In this latter data set, sequences are aligned to A/Darwin/6/2021 and mutations are called relative to this reference sequence.
+This additional data set allows the more direct identification of changes relative to the vaccine virus.
+
+#### A/H1N1dpm: Update and addition of new reference sequence A/Wisconsin/588/2019
+
+The existing dataset with reference sequence A/California/07/2009 (CY121680) was updated to reflect recently circulating viruses.
+A new dataset with reference sequence A/Wisconsin/599/2019 (MW626062), the current vaccine strain, was added.
+In this latter data set, sequences are aligned to A/Wisconsin/599/2019 and mutations are called relative to this reference sequence.
+This additional data set allows the more direct identification of changes relative to the vaccine virus.
+
+#### B/Vic: Update
+
+The existing dataset with reference sequence B/Brisbane/60/2008 (KX058884) was updated to reflect recently circulating viruses.
+
+
+
 ## 2022-11-15
 
 ### All SARS-CoV-2 datasets
