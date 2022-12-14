@@ -1,6 +1,50 @@
 # CHANGELOG
 
-## 2022-12-09
+## 2022-12-14
+
+### All SARS-CoV-2 datasets
+
+#### New dataset version (tag `2022-12-14T12:00:00Z`)
+
+- Data update: 28 new Pango lineages, with designation date between 2022-11-14 and 2022-12-10 are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary> 28 new Pango lineages included in this release, with designation date in parentheses</summary>
+
+  - XBG (2022-11-14)
+  - BA.5.1.31 (2022-11-15)
+  - XBH (2022-11-16)
+  - BW.1.1 (2022-11-20)
+  - BN.1.8 (2022-11-22)
+  - BQ.1.1.25 (2022-11-22)
+  - CM.2.1 (2022-11-22)
+  - DJ.1 (2022-11-23)
+  - DJ.1.1 (2022-11-23)
+  - BA.5.2.42 (2022-11-23)
+  - XBB.1.4.1 (2022-11-25)
+  - BA.5.2.43 (2022-11-26)
+  - BN.1.9 (2022-11-28)
+  - CH.1.1.1 (2022-11-29)
+  - CH.1.1.2 (2022-11-29)
+  - BA.5.2.44 (2022-11-29)
+  - DK.1 (2022-11-30)
+  - BQ.1.1.26 (2022-12-01)
+  - XBJ (2022-12-01)
+  - CH.3 (2022-12-01)
+  - BQ.1.1.27 (2022-12-02)
+  - DL.1 (2022-12-03)
+  - BA.5.2.45 (2022-12-03)
+  - BQ.1.1.28 (2022-12-04)
+  - BQ.1.26.1 (2022-12-04)
+  - CV.2 (2022-12-06)
+  - DM.1 (2022-12-07)
+  - DJ.1.2 (2022-12-10)
+
+  </details>
+
+- Added 5 new XBB.1.5 example sequences
+
+## 2022-12-07
 
 ### Influenza datasets
 
@@ -23,8 +67,6 @@ This additional data set allows the more direct identification of changes relati
 #### B/Vic: Update
 
 The existing dataset with reference sequence B/Brisbane/60/2008 (KX058884) was updated to reflect recently circulating viruses.
-
-
 
 ## 2022-11-15
 
