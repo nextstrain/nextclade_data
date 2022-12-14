@@ -179,25 +179,25 @@ It is often helpful to visualize the correctness of the branch state on every st
 
 AWS S3 buckets, AWS Cloudfront distributions, AWS Lambda and domain names are managed internally by Nextstrain AWS admins. Ping them on Slack if you need help.
 
-### Copying from staging into the appropriate folder
-
-```sh
-NEW="2022-11-15T12:00:00Z"
-aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2_21L.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$NEW/files/tree.json 
-
-aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$NEW/files/tree.json
-
-aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2-no-recomb.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$NEW/files/tree.json
-```
-
 ### Creating a new dataset version
 
 ```sh
-OLD="2022-10-27T12:00:00Z"
-NEW="2022-11-15T12:00:00Z"
+OLD="2022-11-15T12:00:00Z"
+NEW="2022-12-14T12:00:00Z"
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$OLD /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$NEW
 
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$OLD /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$NEW
 
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$OLD /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$NEW
+```
+
+### Copying from staging into the appropriate folder
+
+```sh
+NEW="2022-12-14T12:00:00Z"
+aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2_21L.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$NEW/files/tree.json 
+
+aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$NEW/files/tree.json
+
+aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2-no-recomb.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$NEW/files/tree.json
 ```
