@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2022-12-22
+
+### Addition of RSV A and RSV B datasets
+
+#### New dataset version (tag `2022-12-20T22:00:12Z`)
+
+First release of RSV A and RSV A datasets by Laura Urbanska.
+With permission of the authors, these datasets use the reference sequences hRSV/A/England/397/2017 for RSV-A and hRSV/B/Australia/VIC-RCH056/2019 for RSV-B.
+The datasets implement two clade designation each.
+One is primarily based on the G gene and was proposed by [Goya et al](https://onlinelibrary.wiley.com/doi/abs/10.1111/irv.12715), the other is based on the entire genome and was proposed by [Ramaekers et al](https://doi.org/10.1093/ve/veaa052).
+
+
 ## 2022-12-14
 
 ### All SARS-CoV-2 datasets
