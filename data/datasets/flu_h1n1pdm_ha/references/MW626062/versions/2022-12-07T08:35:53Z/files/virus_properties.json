@@ -1,5 +1,16 @@
 {
-    "schemaVersion": "1.10.0",
-    "nucMutLabelMap": {},
-    "nucMutLabelMapReverse": {}
-  }
+  "schemaVersion": "1.10.0",
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "Glycosylation motifs",
+      "motifs": [
+        "N[^P][ST][^P]"
+      ]
+    }
+  ]
+}

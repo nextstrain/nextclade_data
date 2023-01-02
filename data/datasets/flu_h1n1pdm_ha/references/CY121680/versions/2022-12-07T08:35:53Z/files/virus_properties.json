@@ -10,24 +10,6 @@
       "description": "Glycosylation motifs",
       "motifs": [
         "N[^P][ST][^P]"
-      ],
-      "includeGenes": [
-        {
-          "gene": "HA1",
-          "ranges": [
-            {
-              "begin": 15,
-              "end": 30
-            },
-            {
-              "begin": 150,
-              "end": 280
-            }
-          ]
-        },
-        {
-          "gene": "HA2"
-        }
       ]
     }
   ]
