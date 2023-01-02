@@ -1,5 +1,34 @@
 {
-    "schemaVersion": "1.10.0",
-    "nucMutLabelMap": {},
-    "nucMutLabelMapReverse": {}
-  }
+  "schemaVersion": "1.10.0",
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "Glycosylation motifs",
+      "motifs": [
+        "N[^P][ST][^P]"
+      ],
+      "includeGenes": [
+        {
+          "gene": "HA1",
+          "ranges": [
+            {
+              "begin": 15,
+              "end": 30
+            },
+            {
+              "begin": 150,
+              "end": 280
+            }
+          ]
+        },
+        {
+          "gene": "HA2"
+        }
+      ]
+    }
+  ]
+}
