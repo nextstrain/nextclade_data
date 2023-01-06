@@ -5,6 +5,9 @@ trap "exit" INT
 
 # Uploads fresh data repo to AWS S3
 
+# Increase number of attempts AWS CLI does. This is useful for Cloudfront commands which have increased failure rates for no reason.
+export AWS_MAX_ATTEMPTS=10
+
 # Directory where this script resides
 THIS_DIR=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
 

@@ -1,5 +1,85 @@
 # CHANGELOG
 
+## 2022-12-22
+
+### Addition of RSV A and RSV B datasets
+
+#### New dataset version (tag `2022-12-20T22:00:12Z`)
+
+First release of RSV A and RSV A datasets by Laura Urbanska.
+With permission of the authors, these datasets use the reference sequences hRSV/A/England/397/2017 for RSV-A and hRSV/B/Australia/VIC-RCH056/2019 for RSV-B.
+The datasets implement two clade designation each.
+One is primarily based on the G gene and was proposed by [Goya et al](https://onlinelibrary.wiley.com/doi/abs/10.1111/irv.12715), the other is based on the entire genome and was proposed by [Ramaekers et al](https://doi.org/10.1093/ve/veaa052).
+
+
+## 2022-12-14
+
+### All SARS-CoV-2 datasets
+
+#### New dataset version (tag `2022-12-14T12:00:00Z`)
+
+- Data update: 28 new Pango lineages, with designation date between 2022-11-14 and 2022-12-10 are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary> 28 new Pango lineages included in this release, with designation date in parentheses</summary>
+
+  - XBG (2022-11-14)
+  - BA.5.1.31 (2022-11-15)
+  - XBH (2022-11-16)
+  - BW.1.1 (2022-11-20)
+  - BN.1.8 (2022-11-22)
+  - BQ.1.1.25 (2022-11-22)
+  - CM.2.1 (2022-11-22)
+  - DJ.1 (2022-11-23)
+  - DJ.1.1 (2022-11-23)
+  - BA.5.2.42 (2022-11-23)
+  - XBB.1.4.1 (2022-11-25)
+  - BA.5.2.43 (2022-11-26)
+  - BN.1.9 (2022-11-28)
+  - CH.1.1.1 (2022-11-29)
+  - CH.1.1.2 (2022-11-29)
+  - BA.5.2.44 (2022-11-29)
+  - DK.1 (2022-11-30)
+  - BQ.1.1.26 (2022-12-01)
+  - XBJ (2022-12-01)
+  - CH.3 (2022-12-01)
+  - BQ.1.1.27 (2022-12-02)
+  - DL.1 (2022-12-03)
+  - BA.5.2.45 (2022-12-03)
+  - BQ.1.1.28 (2022-12-04)
+  - BQ.1.26.1 (2022-12-04)
+  - CV.2 (2022-12-06)
+  - DM.1 (2022-12-07)
+  - DJ.1.2 (2022-12-10)
+
+  </details>
+
+- Added 5 new XBB.1.5 example sequences
+
+## 2022-12-07
+
+### Influenza datasets
+
+#### New dataset version (tag `2022-12-07T08:35:53Z`)
+
+#### A/H3N2: Update and addition of new reference sequence A/Darwin/6/2021
+
+The existing dataset with reference sequence A/Wisconsin/67/2005 (CY163680) was updated to reflect recently circulating viruses.
+A new dataset with reference sequence A/Darwin/6/2021 (EPI1857216), the current vaccine strain, was added.
+In this latter data set, sequences are aligned to A/Darwin/6/2021 and mutations are called relative to this reference sequence.
+This additional data set allows the more direct identification of changes relative to the vaccine virus.
+
+#### A/H1N1dpm: Update and addition of new reference sequence A/Wisconsin/588/2019
+
+The existing dataset with reference sequence A/California/07/2009 (CY121680) was updated to reflect recently circulating viruses.
+A new dataset with reference sequence A/Wisconsin/599/2019 (MW626062), the current vaccine strain, was added.
+In this latter data set, sequences are aligned to A/Wisconsin/599/2019 and mutations are called relative to this reference sequence.
+This additional data set allows the more direct identification of changes relative to the vaccine virus.
+
+#### B/Vic: Update
+
+The existing dataset with reference sequence B/Brisbane/60/2008 (KX058884) was updated to reflect recently circulating viruses.
+
 ## 2022-11-15
 
 ### All SARS-CoV-2 datasets
