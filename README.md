@@ -182,8 +182,8 @@ AWS S3 buckets, AWS Cloudfront distributions, AWS Lambda and domain names are ma
 ### Creating a new dataset version
 
 ```sh
-OLD="2022-11-15T12:00:00Z"
-NEW="2022-12-14T12:00:00Z"
+OLD="2022-12-14T12:00:00Z"
+NEW="2023-01-09T12:00:00Z"
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$OLD /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$NEW
 
 cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$OLD /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$NEW
@@ -194,7 +194,7 @@ cp -pr /Users/corneliusromer/code/nextclade_data/data/datasets/sars-cov-2-21L/re
 ### Copying from staging into the appropriate folder
 
 ```sh
-NEW="2022-12-14T12:00:00Z"
+NEW="2023-01-09T12:00:00Z"
 aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2_21L.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-21L/references/BA.2/versions/$NEW/files/tree.json 
 
 aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2/references/MN908947/versions/$NEW/files/tree.json
