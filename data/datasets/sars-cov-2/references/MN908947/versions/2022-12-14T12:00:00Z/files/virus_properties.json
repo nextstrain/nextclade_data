@@ -1,5 +1,17 @@
 {
   "schemaVersion": "1.10.0",
+    "aaMotifs": [
+      {
+        "name": "glycosylation",
+        "nameShort": "Glyc.",
+        "nameFriendly": "Glycosylation",
+        "description": "N-linked glycosylation motifs (N-X-S/T with X any aa other than P)",
+        "include_genes": [{"gene":"S"}],
+        "motifs": [
+        "N[^P][ST]"
+        ]
+      }
+    ],  
   "nucMutLabelMap": {
     "21T": ["21K"],
     "44T": ["21L", "22B"],
