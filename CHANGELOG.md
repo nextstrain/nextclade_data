@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2023-01-19
+
+### Influenza datasets
+
+#### New clade definitions for default influenza datasets (tag `2023-01-19T12:00:00Z`)
+
+The default influenza datasets were updated to include recent consensus on clade definitions.
+In addition, these data sets contain a `short_clade`  column which omits the long prefix and definition of glycosylation motifs for a future software release.
+The legacy data sets with the older reference sequences will be updated once the new clade definitions are implemented on the Nextstrain main site.
+
+
 ## 2023-01-09
 
 ### All SARS-CoV-2 datasets
