@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2023-01-26
+
+### Monkeypox datasets
+
+#### New dataset version (tag `2023-01-26T12:00:00Z`)
+
+- New monkeypox lineages B.1.15, B.1.16, and B.1.17 were added to the datasets, see <https://github.com/mpxv-lineages/lineage-designation/pull/31> for details on these lineages.
+
 ## 2023-01-19
 
 ### Influenza datasets
