@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2023-01-26
+## 2023-01-27
 
 ### Seasonal flu datasets
 
@@ -9,8 +9,6 @@
 - fixes the omitted A/H3N2 clade 2d (very rare, had dropped out)
 - adds more contextual sequences to the trees
 - adds NA datasets for A/H3N2, A/H1N1pdm, B/Vic
-
-## 2023-01-26
 
 ### Monkeypox datasets
 
