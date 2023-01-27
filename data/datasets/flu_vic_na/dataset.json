@@ -1,0 +1,9 @@
+{
+  "defaultGene": "NA",
+  "defaultRef": "CY073894",
+  "enabled": true,
+  "geneOrderPreference": ["NA"],
+  "metadata": {},
+  "name": "flu_vic_na",
+  "nameFriendly": "Influenza B/Vic NA (Neuraminidase)"
+}
