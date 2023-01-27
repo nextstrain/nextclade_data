@@ -20,9 +20,9 @@
       }
     ],
     "display_defaults": {
-      "color_by": "clade_membership",
+      "color_by": "region",
       "distance_measure": "div",
-      "branch_label": "clade"
+      "branch_label": "aa"
     },
     "genome_annotations": {
       "NA": {
@@ -122,18 +122,7 @@
     "panels": [
       "tree",
       "entropy"
-    ],
-    "extensions": {
-      "nextclade": {
-        "clade_node_attrs": [
-          {
-            "name": "short_clade",
-            "displayName": "Abbreviated clade name",
-            "description": "For recent subclades with long names, the prefix describing their history is omitted."
-          }
-        ]
-      }
-    }
+    ]
   },
   "tree": {
     "name": "NODE_0000441",
