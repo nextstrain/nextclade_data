@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2023-02-01
+
+### Seasonal flu datasets
+
+#### New dataset version (tag `2023-02-01T12:00:00Z`)
+
+ - removes a synonymous mutation from the definition of A/H3N2 clade 2a.3b. Some viruses that should be in this clade didn't have this change.
+ - adds glycosylation to the remaining flu data sets
+
 ## 2023-01-27
 
 ### Seasonal flu datasets
