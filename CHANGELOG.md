@@ -2,12 +2,79 @@
 
 ## 2023-02-01
 
-### Seasonal flu datasets
+### New dataset version (tag `2023-02-01T12:00:00Z`)
 
-#### New dataset version (tag `2023-02-01T12:00:00Z`)
+#### SARS-CoV-2 datasets
 
- - removes a synonymous mutation from the definition of A/H3N2 clade 2a.3b. Some viruses that should be in this clade didn't have this change.
- - adds glycosylation to the remaining flu data sets
+- Change: Values output into the `clade` column of Nextclade csv/tsv files change from composite type: `20H (Beta, V2)` to simple year-letter: `20H`. If you do not want this change, simply use the column `clade_legacy` that is also output into the csv/tsv files. Other clade types are unchanged: `clade_nextstrain` (now same as `clade`), `clade_who` and `Nextclade_pango`.
+- New Nextstrain clade `23A` added, equivalent to Pango lineage `XBB.1.5`, see <https://github.com/nextstrain/ncov/pull/1043> for details
+- Data update: 55 new Pango lineages, with designation date between 2023-01-10 and 2023-01-31, are now included, unfold below to see all the lineages:
+
+  <details>
+    <summary> Newly included lineages, with designation date in parentheses</summary>
+
+  - DU.1 (2023-01-12)
+  - CH.1.1.5 (2023-01-13)
+  - BQ.1.1.35 (2023-01-14)
+  - DV.1 (2023-01-14)
+  - BQ.1.1.36 (2023-01-14)
+  - XBN (2023-01-14)
+  - BA.5.1.32 (2023-01-15)
+  - BA.5.2.50 (2023-01-21)
+  - DW.1 (2023-01-23)
+  - BQ.1.1.37 (2023-01-23)
+  - BQ.1.1.38 (2023-01-24)
+  - BF.7.14.1 (2023-01-25)
+  - BQ.1.11.1 (2023-01-26)
+  - BR.5 (2023-01-27)
+  - BQ.1.1.39 (2023-01-27)
+  - BQ.1.2.1 (2023-01-28)
+  - DV.2 (2023-01-28)
+  - DV.3 (2023-01-28)
+  - CH.1.1.6 (2023-01-28)
+  - CH.1.1.7 (2023-01-28)
+  - CH.1.1.8 (2023-01-28)
+  - CH.1.1.9 (2023-01-28)
+  - BN.1.10 (2023-01-28)
+  - BN.1.11 (2023-01-28)
+  - BQ.1.1.40 (2023-01-28)
+  - BQ.1.1.41 (2023-01-28)
+  - BQ.1.1.42 (2023-01-28)
+  - BQ.1.1.43 (2023-01-28)
+  - BQ.1.1.44 (2023-01-28)
+  - BQ.1.1.45 (2023-01-28)
+  - BQ.1.1.46 (2023-01-28)
+  - BQ.1.1.47 (2023-01-28)
+  - CM.8.1.2 (2023-01-28)
+  - CM.8.1.1 (2023-01-28)
+  - DS.2 (2023-01-28)
+  - XBB.1.10 (2023-01-28)
+  - DY.1 (2023-01-28)
+  - BF.7.14.2 (2023-01-28)
+  - BF.7.14.3 (2023-01-28)
+  - DZ.1 (2023-01-28)
+  - XBB.1.5.1 (2023-01-28)
+  - XBB.1.5.2 (2023-01-29)
+  - XBB.1.5.3 (2023-01-29)
+  - DN.1.1.1 (2023-01-30)
+  - DN.1.1.2 (2023-01-30)
+  - XBP (2023-01-30)
+  - BQ.1.1.48 (2023-01-30)
+  - BQ.1.1.49 (2023-01-30)
+  - DZ.2 (2023-01-31)
+  - XBB.7 (2023-01-31)
+  - XBB.2.3 (2023-01-31)
+  - XBB.1.11 (2023-01-31)
+  - XBB.1.11.1 (2023-01-31)
+  - DY.1.1 (2023-01-31)
+  - DJ.1.1.1 (2023-01-31)
+
+  </details>
+
+#### Seasonal flu datasets
+
+- removes a synonymous mutation from the definition of A/H3N2 clade 2a.3b. Some viruses that should be in this clade didn't have this change.
+- adds glycosylation to the remaining flu data sets
 
 ## 2023-01-27
 
