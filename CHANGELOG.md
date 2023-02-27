@@ -193,8 +193,6 @@
 
 </details>
 
-## 2023-02-03
-
 ### New dataset version (tag `2023-02-03T12:00:00Z`)
 
 #### RSV A and B data sets
