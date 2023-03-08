@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Upcoming
+
+### Internal
+
+Add robots.txt to prevent data endpoints from indexing by search engines.
+
+
 ## 2023-02-25
 
 ### New dataset version (tag `2023-02-25T12:00:00Z`)
