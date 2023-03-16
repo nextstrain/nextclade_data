@@ -1,5 +1,46 @@
 # CHANGELOG
 
+## 2023-03-16
+
+### New dataset version (tag `2023-03-16T12:00:00Z`)
+
+#### SARS-CoV-2 datasets
+
+- Placement priors: Every tree node is now annotated with a `placement_prior`, an approximate probability (on log10 scale) that a random sequence is attached to this node. For this dataset, the prior was caluclated after placing 300k sequences on the tree. A value of `-10` is chosen when no sequence in the sample attached to a node. The placement priors will improve placement accuracy of incomplete sequences (such as Spike only) - but only with a recent version of Nextclade (probably 2.13.0 and above). In that release, we will introduce a new placement tie-breaking feature: when a query sequence can attach to multiple nodes with equal number of mismatches, the sequence will be attached to the reference tree node with the highest prior. This is in contrast to the previous naive tie breaking logic which always chose the node with the fewest number of parent nodes. This lead to a bias towards attaching to recombinants. See <https://github.com/neherlab/nextclade_data_workflows/pull/38> for the code calculating the placement priors, and <https://github.com/nextstrain/nextclade/pull/1119> to see how the priors are used in Nextclade.
+- Pango lineages desiganted between 2023-02-24 and 2023-03-15 are now included, unfold below to see a list of them:
+
+<details>
+  <summary> Newly included lineages, with designation date in parentheses</summary>
+
+- XBB.2.6 (2023-02-26)
+- XBB.8 (2023-02-26)
+- EM.1 (2023-02-26)
+- XBB.1.5.15 (2023-02-26)
+- EK.2 (2023-02-26)
+- XBB.1.5.16 (2023-02-26)
+- XBB.1.5.17 (2023-02-26)
+- XBB.1.5.18 (2023-02-26)
+- XBB.1.5.19 (2023-02-26)
+- XBB.1.5.20 (2023-02-26)
+- XBB.1.5.21 (2023-02-26)
+- EN.1 (2023-02-26)
+- EP.2 (2023-02-26)
+- EP.1 (2023-02-26)
+- XBC.1.5 (2023-02-26)
+- EQ.1 (2023-02-28)
+- CY.2 (2023-02-28)
+- CP.7 (2023-03-02)
+- BQ.1.1.71 (2023-03-03)
+- XBB.1.16 (2023-03-05)
+- ER.1 (2023-03-05)
+- ER.1.1 (2023-03-07)
+- ES.1 (2023-03-09)
+- CH.1.1.15 (2023-03-09)
+- BF.7.4.3 (2023-03-10)
+- BQ.1.32 (2023-03-11)
+
+</details>
+
 ## 2023-02-25
 
 ### New dataset version (tag `2023-02-25T12:00:00Z`)
