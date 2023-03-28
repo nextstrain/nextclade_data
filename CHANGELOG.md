@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2023-03-28
+
+### Internal
+
+- A typo in the configuration of the default reference sequence configuration for Flu H1N1pdm NA dataset prevented the dataset from being downloaded by Nextclade CLI. This is now fixed. This only affects dataset server infrastruture (index file) and does not change dataset files, so no new version of any dataset is released. See [#70](https://github.com/nextstrain/nextclade_data/pull/70).
+
 ## 2023-03-16
 
 ### New dataset version (tag `2023-03-16T12:00:00Z`)
