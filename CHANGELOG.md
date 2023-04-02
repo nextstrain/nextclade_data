@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2023-04-02
+
+### New dataset version (tag `2023-04-02T12:00:00Z`)
+
+#### Influenza virus datasets
+
+All Influenza virus datasets were updated with more recent sequences. The trees now include more older reference viruses for more robust designation of older clades.
+The B/Vic annotation of the HA segment was fixed -- it was previously off by 3 nucleotides resulting in amino acid numbering being off by one.
+
+
 ## 2023-03-28
 
 ### Internal
