@@ -12,6 +12,7 @@
 
 <details>
   <summary> Newly included lineages, with designation date in parentheses</summary>
+
 - ET.1 (2023-03-16)
 - XBC.1.6 (2023-03-16)
 - XBB.1.17 (2023-03-18)
