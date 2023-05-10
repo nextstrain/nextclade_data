@@ -4,6 +4,7 @@ on:
       - master
       - staging
       - release
+  workflow_dispatch:
 
 jobs:
   Deploy-Datasets:
