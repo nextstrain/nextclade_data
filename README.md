@@ -104,7 +104,7 @@ During rebuild, some files copied to the dataset repository output directory as 
 
 ## Testing datasets locally
 
-The guide in [Test datasets locally](https://github.com/nextstrain/nextclade/blob/master/docs/dev/datasets-local.md) describes how to change the datasets server URL used by Nextclade and Nextclade CLI as well as how to run a local dataset server. This is useful for testing the datasets modifications locally.
+The guide in [Test datasets locally](https://github.com/nextstrain/nextclade/blob/master/docs/dev/developer-guide.md#trying-custom-datasets-locally) describes how to change the datasets server URL used by Nextclade and Nextclade CLI as well as how to run a local dataset server. This is useful for testing the datasets modifications locally.
 
 
 ## Maintenance
