@@ -1,7 +1,7 @@
 {
   "defaultGene": "S",
   "defaultRef": "MN908947",
-  "enabled": true,
+  "enabled": false,
   "geneOrderPreference": [
     "S",
     "ORF1a",
@@ -18,5 +18,5 @@
   ],
   "metadata": {},
   "name": "sars-cov-2-no-recomb",
-  "nameFriendly": "SARS-CoV-2 without recombinants"
+  "nameFriendly": "(Deprecated) SARS-CoV-2 without recombinants"
 }
