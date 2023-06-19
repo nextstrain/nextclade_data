@@ -2,9 +2,9 @@
 
 ## 2023-06-16
 
-### New SARS-CoV-2 dataset version (tag `2023-05-16T12:00:00Z`)
+### New SARS-CoV-2 dataset version (tag `2023-06-16T12:00:00Z`)
 
-- Pango lineages designated between 2023-05-09 and 2023-05-15 are now included, unfold below to see a list with designation dates:
+- Pango lineages designated between 2023-05-09 and 2023-06-15 are now included, unfold below to see a list with designation dates:
 
 <details>
   <summary> Newly included lineages, with designation date in parentheses</summary>
