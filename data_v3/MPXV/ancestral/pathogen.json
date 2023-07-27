@@ -19,10 +19,6 @@
   "deprecated": false,
   "enabled": true,
   "experimental": false,
-  "mutLabels": {
-    "nucMutLabelMap": {}
-  },
-  "primers": [],
   "qc": {
     "frameShifts": {
       "enabled": true,

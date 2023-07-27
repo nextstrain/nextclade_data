@@ -44,6 +44,30 @@ def dict_remove_many(obj: dict, keys: List[str]):
     dict_remove(obj, key)
 
 
+def list_cleanup(data):
+  new_data = []
+  for v in data:
+    if isinstance(v, dict):
+      v = dict_cleanup(v)
+    elif isinstance(v, list):
+      v = list_cleanup(v)
+    if v not in (None, str(), list(), dict(),):
+      new_data.append(v)
+  return new_data
+
+
+def dict_cleanup(data):
+  new_data = {}
+  for k, v in data.items():
+    if isinstance(v, dict):
+      v = dict_cleanup(v)
+    elif isinstance(v, list):
+      v = list_cleanup(v)
+    if v not in (None, str(), list(), dict(),):
+      new_data[k] = v
+  return new_data
+
+
 def find_files(pattern, here):
   for path, dirs, files in os.walk(os.path.abspath(here)):
     for filename in fnmatch.filter(files, pattern):
@@ -148,6 +172,8 @@ def process_pathogen_json(inputs, output_pathogen_json_path):
     "reference",
     "tag",
   ])
+
+  pathogen_json = dict_cleanup(pathogen_json)
 
   json_write(pathogen_json, output_pathogen_json_path)
 

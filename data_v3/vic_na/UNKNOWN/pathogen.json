@@ -12,10 +12,6 @@
   "deprecated": false,
   "enabled": true,
   "experimental": true,
-  "mutLabels": {
-    "nucMutLabelMap": {}
-  },
-  "primers": [],
   "qc": {
     "frameShifts": {
       "enabled": true
@@ -44,8 +40,7 @@
       "windowSize": 100
     },
     "stopCodons": {
-      "enabled": true,
-      "ignoredStopCodons": []
+      "enabled": true
     }
   },
   "schemaVersion": "3.0.0"

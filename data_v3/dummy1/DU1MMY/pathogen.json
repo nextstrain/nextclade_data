@@ -16,10 +16,5 @@
   "geneOrderPreference": [
     "HA1"
   ],
-  "mutLabels": {
-    "nucMutLabelMap": {}
-  },
-  "primers": [],
-  "qc": {},
   "schemaVersion": "3.0.0"
 }

@@ -128146,7 +128146,6 @@
       "nameFriendly": "ACE2 binding"
     }
   ],
-  "primers": [],
   "qc": {
     "frameShifts": {
       "enabled": true,

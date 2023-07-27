@@ -224,7 +224,6 @@
       ]
     }
   },
-  "primers": [],
   "qc": {
     "frameShifts": {
       "enabled": true,
