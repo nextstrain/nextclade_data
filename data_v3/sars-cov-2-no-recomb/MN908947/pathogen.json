@@ -2157,220 +2157,420 @@
   },
   "primers": [
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_RdRp_F",
-      "Sequence": "GTGARATGGTCATGTGTGGCGG",
-      "Target": "RdRp"
+      "source": "Charité (Germany)",
+      "target": "RdRp",
+      "name": "Charité_RdRp_F",
+      "refOligonuc": "GTGAAATGGTCATGTGTGGCGG",
+      "primerOligonuc": "GTGARATGGTCATGTGTGGCGG",
+      "range": {
+        "begin": 15430,
+        "end": 15452
+      },
+      "nonAcgts": [
+        "5R"
+      ]
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_S_RdRp_P",
-      "Sequence": "CAGGTGGAACCTCATCAGGAGATGC",
-      "Target": "RdRp"
+      "source": "Charité (Germany)",
+      "target": "RdRp",
+      "name": "Charité_S_RdRp_P",
+      "refOligonuc": "CAGGTGGAACCTCATCAGGAGATGC",
+      "primerOligonuc": "CAGGTGGAACCTCATCAGGAGATGC",
+      "range": {
+        "begin": 15469,
+        "end": 15494
+      }
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_RdRp_R",
-      "Sequence": "CARATGTTAAASACACTATTAGCATA",
-      "Target": "RdRp"
+      "source": "Charité (Germany)",
+      "target": "RdRp",
+      "name": "Charité_RdRp_R",
+      "refOligonuc": "TATGCTAATAGTGTTTTTAACATTTG",
+      "primerOligonuc": "TATGCTAATAGTGTSTTTAACATYTG",
+      "range": {
+        "begin": 15504,
+        "end": 15530
+      },
+      "nonAcgts": [
+        "15S",
+        "24Y"
+      ]
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_E_F",
-      "Sequence": "ACAGGTACGTTAATAGTTAATAGCGT",
-      "Target": "E"
+      "source": "Charité (Germany)",
+      "target": "E",
+      "name": "Charité_E_F",
+      "refOligonuc": "ACAGGTACGTTAATAGTTAATAGCGT",
+      "primerOligonuc": "ACAGGTACGTTAATAGTTAATAGCGT",
+      "range": {
+        "begin": 26268,
+        "end": 26294
+      }
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_E_P",
-      "Sequence": "ACACTAGCCATCCTTACTGCGCTTCG",
-      "Target": "E"
+      "source": "Charité (Germany)",
+      "target": "E",
+      "name": "Charité_E_P",
+      "refOligonuc": "ACACTAGCCATCCTTACTGCGCTTCG",
+      "primerOligonuc": "ACACTAGCCATCCTTACTGCGCTTCG",
+      "range": {
+        "begin": 26331,
+        "end": 26357
+      }
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_E_R",
-      "Sequence": "ATATTGCAGCAGTACGCACACA",
-      "Target": "E"
+      "source": "Charité (Germany)",
+      "target": "E",
+      "name": "Charité_E_R",
+      "refOligonuc": "TGTGTGCGTACTGCTGCAATAT",
+      "primerOligonuc": "TGTGTGCGTACTGCTGCAATAT",
+      "range": {
+        "begin": 26359,
+        "end": 26381
+      }
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_N_F",
-      "Sequence": "CACATTGGCACCCGCAATC",
-      "Target": "N"
+      "source": "Charité (Germany)",
+      "target": "N",
+      "name": "Charité_N_F",
+      "refOligonuc": "CACATTGGCACCCGCAATC",
+      "primerOligonuc": "CACATTGGCACCCGCAATC",
+      "range": {
+        "begin": 28705,
+        "end": 28724
+      }
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_N_P",
-      "Sequence": "ACTTCCTCAAGGAACAACATTGCCA",
-      "Target": "N"
+      "source": "Charité (Germany)",
+      "target": "N",
+      "name": "Charité_N_P",
+      "refOligonuc": "ACTTCCTCAAGGAACAACATTGCCA",
+      "primerOligonuc": "ACTTCCTCAAGGAACAACATTGCCA",
+      "range": {
+        "begin": 28752,
+        "end": 28777
+      }
     },
     {
-      "Country (Institute)": "Charit\u00e9 (Germany)",
-      "Oligonucleotide": "Charit\u00e9_N_R",
-      "Sequence": "GAGGAACGAGAAGAGGCTTG",
-      "Target": "N"
+      "source": "Charité (Germany)",
+      "target": "N",
+      "name": "Charité_N_R",
+      "refOligonuc": "CAAGCCTCTTCTCGTTCCTC",
+      "primerOligonuc": "CAAGCCTCTTCTCGTTCCTC",
+      "range": {
+        "begin": 28813,
+        "end": 28833
+      }
     },
     {
-      "Country (Institute)": "HKU (Hong Kong)",
-      "Oligonucleotide": "HKU_ORF_F",
-      "Sequence": "TGGGGYTTTACRGGTAACCT",
-      "Target": "ORF1b-nsp14"
+      "source": "HKU (Hong Kong)",
+      "target": "ORF1b-nsp14",
+      "name": "HKU_ORF_F",
+      "refOligonuc": "TGGGGTTTTACAGGTAACCT",
+      "primerOligonuc": "TGGGGYTTTACRGGTAACCT",
+      "range": {
+        "begin": 18777,
+        "end": 18797
+      },
+      "nonAcgts": [
+        "6Y",
+        "12R"
+      ]
     },
     {
-      "Country (Institute)": "HKU (Hong Kong)",
-      "Oligonucleotide": "HKU_ORF_P",
-      "Sequence": "TAGTTGTGATGCWATCATGACTAG",
-      "Target": "ORF1b-nsp14"
+      "source": "HKU (Hong Kong)",
+      "target": "ORF1b-nsp14",
+      "name": "HKU_ORF_P",
+      "refOligonuc": "TAGTTGTGATGCAATCATGACTAG",
+      "primerOligonuc": "TAGTTGTGATGCWATCATGACTAG",
+      "range": {
+        "begin": 18848,
+        "end": 18872
+      },
+      "nonAcgts": [
+        "13W"
+      ]
     },
     {
-      "Country (Institute)": "HKU (Hong Kong)",
-      "Oligonucleotide": "HKU_ORF_R",
-      "Sequence": "AACRCGCTTAACAAAGCACTC",
-      "Target": "ORF1b-nsp14"
+      "source": "HKU (Hong Kong)",
+      "target": "ORF1b-nsp14",
+      "name": "HKU_ORF_R",
+      "refOligonuc": "GAGTGCTTTGTTAAGCGTGTT",
+      "primerOligonuc": "GAGTGCTTTGTTAAGCGYGTT",
+      "range": {
+        "begin": 18888,
+        "end": 18909
+      },
+      "nonAcgts": [
+        "18Y"
+      ]
     },
     {
-      "Country (Institute)": "HKU (Hong Kong)",
-      "Oligonucleotide": "HKU_N_F",
-      "Sequence": "TAATCAGACAAGGAACTGATTA",
-      "Target": "N"
+      "source": "HKU (Hong Kong)",
+      "target": "N",
+      "name": "HKU_N_F",
+      "refOligonuc": "TAATCAGACAAGGAACTGATTA",
+      "primerOligonuc": "TAATCAGACAAGGAACTGATTA",
+      "range": {
+        "begin": 29144,
+        "end": 29166
+      }
     },
     {
-      "Country (Institute)": "HKU (Hong Kong)",
-      "Oligonucleotide": "HKU_N_P",
-      "Sequence": "GCAAATTGTGCAATTTGCGG",
-      "Target": "N"
+      "source": "HKU (Hong Kong)",
+      "target": "N",
+      "name": "HKU_N_P",
+      "refOligonuc": "CCGCAAATTGCACAATTTGC",
+      "primerOligonuc": "CCGCAAATTGCACAATTTGC",
+      "range": {
+        "begin": 29176,
+        "end": 29196
+      }
     },
     {
-      "Country (Institute)": "HKU (Hong Kong)",
-      "Oligonucleotide": "HKU_N_R",
-      "Sequence": "CGAAGGTGTGACTTCCATG",
-      "Target": "N"
+      "source": "HKU (Hong Kong)",
+      "target": "N",
+      "name": "HKU_N_R",
+      "refOligonuc": "CATGGAAGTCACACCTTCG",
+      "primerOligonuc": "CATGGAAGTCACACCTTCG",
+      "range": {
+        "begin": 29235,
+        "end": 29254
+      }
     },
     {
-      "Country (Institute)": "China CDC (China)",
-      "Oligonucleotide": "ChinaCDC_N_F",
-      "Sequence": "GGGGAACTTCTCCTGCTAGAAT",
-      "Target": "N"
+      "source": "China CDC (China)",
+      "target": "N",
+      "name": "ChinaCDC_N_F",
+      "refOligonuc": "GGGGAACTTCTCCTGCTAGAAT",
+      "primerOligonuc": "GGGGAACTTCTCCTGCTAGAAT",
+      "range": {
+        "begin": 28880,
+        "end": 28902
+      }
     },
     {
-      "Country (Institute)": "China CDC (China)",
-      "Oligonucleotide": "ChinaCDC_N_P",
-      "Sequence": "TTGCTGCTGCTTGACAGATT",
-      "Target": "N"
+      "source": "China CDC (China)",
+      "target": "N",
+      "name": "ChinaCDC_N_P",
+      "refOligonuc": "TTGCTGCTGCTTGACAGATT",
+      "primerOligonuc": "TTGCTGCTGCTTGACAGATT",
+      "range": {
+        "begin": 28933,
+        "end": 28953
+      }
     },
     {
-      "Country (Institute)": "China CDC (China)",
-      "Oligonucleotide": "ChinaCDC_N_R",
-      "Sequence": "CAGACATTTTGCTCTCAAGCTG",
-      "Target": "N"
+      "source": "China CDC (China)",
+      "target": "N",
+      "name": "ChinaCDC_N_R",
+      "refOligonuc": "CAGCTTGAGAGCAAAATGTCTG",
+      "primerOligonuc": "CAGCTTGAGAGCAAAATGTCTG",
+      "range": {
+        "begin": 28957,
+        "end": 28979
+      }
     },
     {
-      "Country (Institute)": "China CDC (China)",
-      "Oligonucleotide": "ChinaCDC_ORF_F",
-      "Sequence": "CCCTGTGGGTTTTACACTTAA",
-      "Target": "ORF1ab-nsp10"
+      "source": "China CDC (China)",
+      "target": "ORF1ab-nsp10",
+      "name": "ChinaCDC_ORF_F",
+      "refOligonuc": "CCCTGTGGGTTTTACACTTAA",
+      "primerOligonuc": "CCCTGTGGGTTTTACACTTAA",
+      "range": {
+        "begin": 13341,
+        "end": 13362
+      }
     },
     {
-      "Country (Institute)": "China CDC (China)",
-      "Oligonucleotide": "ChinaCDC_ORF_P",
-      "Sequence": "CCGTCTGCGGTATGTGGAAAGGTTATGG",
-      "Target": "ORF1ab-nsp10"
+      "source": "China CDC (China)",
+      "target": "ORF1ab-nsp10",
+      "name": "ChinaCDC_ORF_P",
+      "refOligonuc": "CCGTCTGCGGTATGTGGAAAGGTTATGG",
+      "primerOligonuc": "CCGTCTGCGGTATGTGGAAAGGTTATGG",
+      "range": {
+        "begin": 13376,
+        "end": 13404
+      }
     },
     {
-      "Country (Institute)": "China CDC (China)",
-      "Oligonucleotide": "ChinaCDC_ORF_R",
-      "Sequence": "ACGATTGTGCATCAGCTGA",
-      "Target": "ORF1ab-nsp10"
+      "source": "China CDC (China)",
+      "target": "ORF1ab-nsp10",
+      "name": "ChinaCDC_ORF_R",
+      "refOligonuc": "TCAGCTGATGCACAATCGT",
+      "primerOligonuc": "TCAGCTGATGCACAATCGT",
+      "range": {
+        "begin": 13441,
+        "end": 13460
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N1_F",
-      "Sequence": "GACCCCAAAATCAGCGAAAT",
-      "Target": "N1"
+      "source": "US CDC (United States)",
+      "target": "N1",
+      "name": "USCDC_N1_F",
+      "refOligonuc": "GACCCCAAAATCAGCGAAAT",
+      "primerOligonuc": "GACCCCAAAATCAGCGAAAT",
+      "range": {
+        "begin": 28286,
+        "end": 28306
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N1_P",
-      "Sequence": "ACCCCGCATTACGTTTGGTGGACC",
-      "Target": "N1"
+      "source": "US CDC (United States)",
+      "target": "N1",
+      "name": "USCDC_N1_P",
+      "refOligonuc": "ACCCCGCATTACGTTTGGTGGACC",
+      "primerOligonuc": "ACCCCGCATTACGTTTGGTGGACC",
+      "range": {
+        "begin": 28308,
+        "end": 28332
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N1_R",
-      "Sequence": "TCTGGTTACTGCCAGTTGAATCTG",
-      "Target": "N1"
+      "source": "US CDC (United States)",
+      "target": "N1",
+      "name": "USCDC_N1_R",
+      "refOligonuc": "CAGATTCAACTGGCAGTAACCAGA",
+      "primerOligonuc": "CAGATTCAACTGGCAGTAACCAGA",
+      "range": {
+        "begin": 28334,
+        "end": 28358
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N2_F",
-      "Sequence": "TTACAAACATTGGCCGCAAA",
-      "Target": "N2"
+      "source": "US CDC (United States)",
+      "target": "N2",
+      "name": "USCDC_N2_F",
+      "refOligonuc": "TTACAAACATTGGCCGCAAA",
+      "primerOligonuc": "TTACAAACATTGGCCGCAAA",
+      "range": {
+        "begin": 29163,
+        "end": 29183
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N2_P",
-      "Sequence": "ACAATTTGCCCCCAGCGCTTCAG",
-      "Target": "N2"
+      "source": "US CDC (United States)",
+      "target": "N2",
+      "name": "USCDC_N2_P",
+      "refOligonuc": "ACAATTTGCCCCCAGCGCTTCAG",
+      "primerOligonuc": "ACAATTTGCCCCCAGCGCTTCAG",
+      "range": {
+        "begin": 29187,
+        "end": 29210
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N2_R",
-      "Sequence": "GCGCGACATTCCGAAGAA",
-      "Target": "N2"
+      "source": "US CDC (United States)",
+      "target": "N2",
+      "name": "USCDC_N2_R",
+      "refOligonuc": "TTCTTCGGAATGTCGCGC",
+      "primerOligonuc": "TTCTTCGGAATGTCGCGC",
+      "range": {
+        "begin": 29212,
+        "end": 29230
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N3_F",
-      "Sequence": "GGGAGCCTTGAATACACCAAAA",
-      "Target": "N3"
+      "source": "US CDC (United States)",
+      "target": "N3",
+      "name": "USCDC_N3_F",
+      "refOligonuc": "GGGAGCCTTGAATACACCAAAA",
+      "primerOligonuc": "GGGAGCCTTGAATACACCAAAA",
+      "range": {
+        "begin": 28680,
+        "end": 28702
+      }
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N3_P",
-      "Sequence": "AYCACATTGGCACCCGCAATCCTG",
-      "Target": "N3"
+      "source": "US CDC (United States)",
+      "target": "N3",
+      "name": "USCDC_N3_P",
+      "refOligonuc": "ATCACATTGGCACCCGCAATCCTG",
+      "primerOligonuc": "AYCACATTGGCACCCGCAATCCTG",
+      "range": {
+        "begin": 28703,
+        "end": 28727
+      },
+      "nonAcgts": [
+        "2Y"
+      ]
     },
     {
-      "Country (Institute)": "US CDC (United States)",
-      "Oligonucleotide": "USCDC_N3_R",
-      "Sequence": "TGTAGCACGATTGCAGCATTG",
-      "Target": "N3"
+      "source": "US CDC (United States)",
+      "target": "N3",
+      "name": "USCDC_N3_R",
+      "refOligonuc": "CAATGCTGCAATCGTGCTACA",
+      "primerOligonuc": "CAATGCTGCAATCGTGCTACA",
+      "range": {
+        "begin": 28731,
+        "end": 28752
+      }
     },
     {
-      "Country (Institute)": "Institut Pasteur, Paris (France)",
-      "Oligonucleotide": "Pasteur_IP2_F",
-      "Sequence": "ATGAGCTTAGTCCTGTTG",
-      "Target": "RdRp"
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp",
+      "name": "Pasteur_IP2_F",
+      "refOligonuc": "ATGAGCTTAGTCCTGTTG",
+      "primerOligonuc": "ATGAGCTTAGTCCTGTTG",
+      "range": {
+        "begin": 12689,
+        "end": 12707
+      }
     },
     {
-      "Country (Institute)": "Institut Pasteur, Paris (France)",
-      "Oligonucleotide": "Pasteur_IP2_P",
-      "Sequence": "AGATGTCTTGTGCTGCCGGTA",
-      "Target": "RdRp"
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp",
+      "name": "Pasteur_IP2_P",
+      "refOligonuc": "AGATGTCTTGTGCTGCCGGTA",
+      "primerOligonuc": "AGATGTCTTGTGCTGCCGGTA",
+      "range": {
+        "begin": 12716,
+        "end": 12737
+      }
     },
     {
-      "Country (Institute)": "Institut Pasteur, Paris (France)",
-      "Oligonucleotide": "Pasteur_IP2_R",
-      "Sequence": "CTCCCTTTGTTGTGTTGT",
-      "Target": "RdRp"
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp",
+      "name": "Pasteur_IP2_R",
+      "refOligonuc": "ACAACACAACAAAGGGAG",
+      "primerOligonuc": "ACAACACAACAAAGGGAG",
+      "range": {
+        "begin": 12779,
+        "end": 12797
+      }
     },
     {
-      "Country (Institute)": "Institut Pasteur, Paris (France)",
-      "Oligonucleotide": "Pasteur_IP4_F",
-      "Sequence": "GGTAACTGGTATGATTTCG",
-      "Target": "RdRp"
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp",
+      "name": "Pasteur_IP4_F",
+      "refOligonuc": "GGTAACTGGTATGATTTCG",
+      "primerOligonuc": "GGTAACTGGTATGATTTCG",
+      "range": {
+        "begin": 14079,
+        "end": 14098
+      }
     },
     {
-      "Country (Institute)": "Institut Pasteur, Paris (France)",
-      "Oligonucleotide": "Pasteur_IP4_P",
-      "Sequence": "TCATACAAACCACGCCAGG",
-      "Target": "RdRp"
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp",
+      "name": "Pasteur_IP4_P",
+      "refOligonuc": "TCATACAAACCACGCCAGG",
+      "primerOligonuc": "TCATACAAACCACGCCAGG",
+      "range": {
+        "begin": 14104,
+        "end": 14123
+      }
     },
     {
-      "Country (Institute)": "Institut Pasteur, Paris (France)",
-      "Oligonucleotide": "Pasteur_IP4_R",
-      "Sequence": "CTGGTCAAGGTTAATATAGG",
-      "Target": "RdRp"
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp",
+      "name": "Pasteur_IP4_R",
+      "refOligonuc": "CCTATATTAACCTTGACCAG",
+      "primerOligonuc": "CCTATATTAACCTTGACCAG",
+      "range": {
+        "begin": 14166,
+        "end": 14186
+      }
     }
   ],
   "qc": {
