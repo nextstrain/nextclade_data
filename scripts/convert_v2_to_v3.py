@@ -8,13 +8,15 @@ import fnmatch
 import json
 import os
 import shutil
-from os.path import join, dirname
+from functools import reduce
+from os.path import join, dirname, exists, basename
 from collections import namedtuple
 from typing import List
 
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT_DIR = os.path.realpath(join(THIS_DIR, ".."))
-DATA_V2_INPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data"))
+DATA_V2_INPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data/datasets"))
+DATA_V2_EXPERIMENTAL_INPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data/datasets_experimental"))
 DATA_V3_OUTPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data_v3"))
 
 
@@ -26,6 +28,10 @@ def dict_set(obj: dict, key_path: List[str], value):
   for key in key_path[:-1]:
     obj = obj.setdefault(key, {})
   obj[key_path[-1]] = value
+
+
+def dict_get(obj: dict, keys: List[str]):
+  return reduce(lambda d, key: d.get(key) if d else None, keys, obj)
 
 
 def dict_remove(obj: dict, key: str):
@@ -123,7 +129,7 @@ def process_pathogen_json(inputs, output_pathogen_json_path):
       "nucMutLabelMap": virus_properties.get("nucMutLabelMap"),
     },
     **virus_properties,
-    "experimental": False,
+    "experimental": tag_json.get("experimental") or False,
     "deprecated": False,
     "schemaVersion": "3.0.0",
   }
@@ -146,11 +152,10 @@ def process_pathogen_json(inputs, output_pathogen_json_path):
   json_write(pathogen_json, output_pathogen_json_path)
 
 
-if __name__ == '__main__':
-  for dataset_json_path in find_files("dataset.json", join(DATA_V2_INPUT_DIR, "datasets")):
+def convert_datasets_mature():
+  for dataset_json_path in find_files("dataset.json", DATA_V2_INPUT_DIR):
     with open(dataset_json_path, 'r') as f:
       dataset_json: dict = json.load(f)
-    dataset_json_original = dataset_json.copy()
 
     dataset_dir = os.path.dirname(dataset_json_path)
     for dataset_ref_json_path in find_files("datasetRef.json", dataset_dir):
@@ -174,7 +179,7 @@ if __name__ == '__main__':
       ref_accession = tag_json["reference"]["accession"]
       tag = tag_json["tag"]
 
-      input_dir = join(DATA_V2_INPUT_DIR, "datasets", name, "references", ref_accession, "versions", tag, "files")
+      input_dir = join(DATA_V2_INPUT_DIR, name, "references", ref_accession, "versions", tag, "files")
       output_dir = join(DATA_V3_OUTPUT_DIR, name, ref_accession)
 
       copy(join(input_dir, 'genemap.gff'), join(output_dir, "genome_annotation.gff3"))
@@ -187,12 +192,62 @@ if __name__ == '__main__':
       tree = json_read(join(input_dir, 'tree.json'))
 
       process_tree_json(tree, virus_properties, join(output_dir, 'tree.json'))
-      process_pathogen_json(
-        {
-          "tag_json": tag_json,
-          "qc": qc,
-          "virus_properties": virus_properties,
-          "primers": primers,
-        },
+
+      process_pathogen_json({
+        "tag_json": tag_json,
+        "qc": qc,
+        "virus_properties": virus_properties,
+        "primers": primers,
+      },
         join(output_dir, "pathogen.json")
       )
+
+
+def convert_datasets_experimental():
+  for tag_path in find_files("tag.json", DATA_V2_EXPERIMENTAL_INPUT_DIR):
+    tag_json = json_read(tag_path)
+
+    name = basename(dirname(dirname(tag_path)))
+    ref_accession = dict_get(tag_json, ["reference", "accession"]) or "UNKNOWN"
+
+    tag_json = {
+      **tag_json,
+      "name": name,
+      "nameFriendly": "UNKNOWN",
+      "reference": {
+        "accession": ref_accession,
+        "strainName": "UNKNOWN",
+      },
+      "experimental": True,
+    }
+
+    input_dir = join(DATA_V2_EXPERIMENTAL_INPUT_DIR, name, "files")
+    output_dir = join(DATA_V3_OUTPUT_DIR, name, ref_accession)
+
+    copy(join(input_dir, 'genemap.gff'), join(output_dir, "genome_annotation.gff3"))
+    copy(join(input_dir, 'reference.fasta'), output_dir)
+
+    sequences_fasta_path = join(input_dir, 'sequences.fasta')
+    if exists(sequences_fasta_path):
+      copy(sequences_fasta_path, output_dir)
+
+    qc = json_read(join(input_dir, 'qc.json'))
+    virus_properties = json_read(join(input_dir, 'virus_properties.json'))
+    primers = csv_read(join(input_dir, 'primers.csv'))
+    tree = json_read(join(input_dir, 'tree.json'))
+
+    process_tree_json(tree, virus_properties, join(output_dir, 'tree.json'))
+
+    process_pathogen_json({
+      "tag_json": tag_json,
+      "qc": qc,
+      "virus_properties": virus_properties,
+      "primers": primers,
+    },
+      join(output_dir, "pathogen.json")
+    )
+
+
+if __name__ == '__main__':
+  convert_datasets_mature()
+  convert_datasets_experimental()
