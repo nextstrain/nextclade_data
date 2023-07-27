@@ -1,0 +1,58 @@
+{
+  "attributes": {
+    "name": {
+      "value": "rsv_a",
+      "valueFriendly": "RSV-A"
+    },
+    "reference": {
+      "value": "EPI_ISL_412866",
+      "valueFriendly": "hRSV/A/England/397/2017"
+    }
+  },
+  "defaultGene": "F",
+  "deprecated": false,
+  "enabled": true,
+  "experimental": false,
+  "geneOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ],
+  "mutLabels": {
+    "nucMutLabelMap": {}
+  },
+  "primers": [],
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 1000,
+      "scoreBias": 100
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 8
+    },
+    "privateMutations": {
+      "cutoff": 25,
+      "enabled": true,
+      "typical": 10,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": []
+    }
+  },
+  "schemaVersion": "3.0.0"
+}

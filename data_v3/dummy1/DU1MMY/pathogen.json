@@ -1,0 +1,25 @@
+{
+  "attributes": {
+    "name": {
+      "value": "dummy1",
+      "valueFriendly": "UNKNOWN"
+    },
+    "reference": {
+      "value": "DU1MMY",
+      "valueFriendly": "UNKNOWN"
+    }
+  },
+  "defaultGene": "HA1",
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "geneOrderPreference": [
+    "HA1"
+  ],
+  "mutLabels": {
+    "nucMutLabelMap": {}
+  },
+  "primers": [],
+  "qc": {},
+  "schemaVersion": "3.0.0"
+}

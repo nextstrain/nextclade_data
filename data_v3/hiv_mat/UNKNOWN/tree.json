@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "build_url": "https://github.com/neherlab/nextclade_dataset_template",
+    "colorings": [
+      {
+        "key": "clade_membership",
+        "title": "Clade",
+        "type": "categorical"
+      },
+      {
+        "key": "gt",
+        "title": "Genotype",
+        "type": "categorical"
+      }
+    ],
+    "data_provenance": [
+      {
+        "name": "fictional data"
+      }
+    ],
+    "display_defaults": {
+      "branch_label": "clade",
+      "color_by": "clade_membership",
+      "distance_measure": "div"
+    },
+    "extensions": {
+      "nextclade": {
+        "clade_node_attrs": [
+          {
+            "description": "Clades based on the G gene and Goya et al, IRV, 2019.",
+            "displayName": "G_clade (Goya et al)",
+            "hideInWeb": false,
+            "name": "G_clade"
+          }
+        ]
+      }
+    },
+    "filters": [
+      "clade_membership"
+    ],
+    "maintainers": [
+      {
+        "name": "optional: Your Name",
+        "url": "optional url to your website"
+      }
+    ],
+    "panels": [
+      "tree"
+    ],
+    "title": "Dummy nextclade reference tree",
+    "updated": "2023-01-01"
+  },
+  "tree": {
+    "branch_attrs": {
+      "labels": {
+        "clade": ""
+      },
+      "mutations": {
+        "nuc": []
+      }
+    },
+    "children": [],
+    "name": "NODE_0000000",
+    "node_attrs": {
+      "G_clade": {
+        "value": "GA3.0.0"
+      },
+      "clade_membership": {
+        "value": "unassigned"
+      },
+      "div": 0
+    }
+  },
+  "version": "v2"
+}
