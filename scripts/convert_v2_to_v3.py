@@ -89,10 +89,10 @@ def json_read(json_path) -> dict:
     return json.load(f)
 
 
-def json_write(obj, filepath):
+def json_write(obj, filepath, no_sort_keys=False):
   ensure_dir(filepath)
   with open(filepath, "w") as f:
-    json.dump(obj, f, indent=2, sort_keys=True)
+    json.dump(obj, f, indent=2, sort_keys=not no_sort_keys)
     f.write("\n")
 
 
@@ -124,7 +124,7 @@ def process_tree_json(tree: dict, virus_properties: dict, output_tree_json_path:
     dict_set(tree, ["meta", "extensions", "nextclade", "placement_mask_ranges"], placementMaskRanges)
   meta = dict_cleanup(dict_get(tree, ["meta"]))
   dict_set(tree, ["meta"], meta)
-  json_write(tree, output_tree_json_path)
+  json_write(tree, output_tree_json_path, no_sort_keys=True)
 
 
 def process_pathogen_json(inputs, output_pathogen_json_path):

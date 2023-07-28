@@ -1,13 +1,20 @@
 {
   "meta": {
+    "title": "Dummy nextclade reference tree",
     "data_provenance": [
       {
         "name": "fictional data"
       }
-    ],
-    "title": "Dummy nextclade reference tree"
+    ]
   },
   "tree": {
+    "name": "NODE_0000000",
+    "node_attrs": {
+      "div": 0,
+      "clade_membership": {
+        "value": "unassigned"
+      }
+    },
     "branch_attrs": {
       "mutations": {
         "nuc": []
@@ -15,94 +22,87 @@
     },
     "children": [
       {
+        "name": "A",
+        "node_attrs": {
+          "div": 0.016666666666666666,
+          "clade_membership": {
+            "value": "unassigned"
+          }
+        },
         "branch_attrs": {
           "mutations": {
-            "HA1": [
-              "K1G"
-            ],
             "nuc": [
               "A1G",
               "A2G"
+            ],
+            "HA1": [
+              "K1G"
             ]
           }
         },
-        "children": [],
-        "name": "A",
-        "node_attrs": {
-          "clade_membership": {
-            "value": "unassigned"
-          },
-          "div": 0.016666666666666666
-        }
+        "children": []
       },
       {
+        "name": "NODE_0000001",
+        "node_attrs": {
+          "div": 0.008333333333333333,
+          "clade_membership": {
+            "value": "unassigned"
+          }
+        },
         "branch_attrs": {
           "mutations": {
-            "HA1": [
-              "K1N"
-            ],
             "nuc": [
               "A3C"
+            ],
+            "HA1": [
+              "K1N"
             ]
           }
         },
         "children": [
           {
-            "branch_attrs": {
-              "mutations": {
-                "HA1": [
-                  "K2Q"
-                ],
-                "nuc": [
-                  "A4C"
-                ]
-              }
-            },
-            "children": [],
             "name": "B",
             "node_attrs": {
+              "div": 0.016666666666666666,
               "clade_membership": {
                 "value": "unassigned"
-              },
-              "div": 0.016666666666666666
-            }
-          },
-          {
+              }
+            },
             "branch_attrs": {
               "mutations": {
-                "HA1": [
-                  "K2R"
-                ],
                 "nuc": [
-                  "A5G"
+                  "A4C"
+                ],
+                "HA1": [
+                  "K2Q"
                 ]
               }
             },
-            "children": [],
+            "children": []
+          },
+          {
             "name": "C",
             "node_attrs": {
+              "div": 0.016666666666666666,
               "clade_membership": {
                 "value": "unassigned"
-              },
-              "div": 0.016666666666666666
-            }
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "A5G"
+                ],
+                "HA1": [
+                  "K2R"
+                ]
+              }
+            },
+            "children": []
           }
-        ],
-        "name": "NODE_0000001",
-        "node_attrs": {
-          "clade_membership": {
-            "value": "unassigned"
-          },
-          "div": 0.008333333333333333
-        }
+        ]
       }
-    ],
-    "name": "NODE_0000000",
-    "node_attrs": {
-      "clade_membership": {
-        "value": "unassigned"
-      },
-      "div": 0
-    }
+    ]
   }
 }

@@ -1,6 +1,25 @@
 {
+  "version": "v2",
   "meta": {
+    "title": "Dummy nextclade reference tree",
+    "updated": "2023-01-01",
     "build_url": "https://github.com/neherlab/nextclade_dataset_template",
+    "data_provenance": [
+      {
+        "name": "fictional data"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "optional: Your Name",
+        "url": "optional url to your website"
+      }
+    ],
+    "display_defaults": {
+      "color_by": "clade_membership",
+      "distance_measure": "div",
+      "branch_label": "clade"
+    },
     "colorings": [
       {
         "key": "clade_membership",
@@ -13,63 +32,44 @@
         "type": "categorical"
       }
     ],
-    "data_provenance": [
-      {
-        "name": "fictional data"
-      }
-    ],
-    "display_defaults": {
-      "branch_label": "clade",
-      "color_by": "clade_membership",
-      "distance_measure": "div"
-    },
-    "extensions": {
-      "nextclade": {
-        "clade_node_attrs": [
-          {
-            "description": "Clades based on the G gene and Goya et al, IRV, 2019.",
-            "displayName": "G_clade (Goya et al)",
-            "hideInWeb": false,
-            "name": "G_clade"
-          }
-        ]
-      }
-    },
     "filters": [
       "clade_membership"
-    ],
-    "maintainers": [
-      {
-        "name": "optional: Your Name",
-        "url": "optional url to your website"
-      }
     ],
     "panels": [
       "tree"
     ],
-    "title": "Dummy nextclade reference tree",
-    "updated": "2023-01-01"
+    "extensions": {
+      "nextclade": {
+        "clade_node_attrs": [
+          {
+            "name": "G_clade",
+            "displayName": "G_clade (Goya et al)",
+            "description": "Clades based on the G gene and Goya et al, IRV, 2019.",
+            "hideInWeb": false
+          }
+        ]
+      }
+    }
   },
   "tree": {
-    "branch_attrs": {
-      "labels": {
-        "clade": ""
-      },
-      "mutations": {
-        "nuc": []
-      }
-    },
-    "children": [],
     "name": "NODE_0000000",
     "node_attrs": {
-      "G_clade": {
-        "value": "GA3.0.0"
-      },
+      "div": 0,
       "clade_membership": {
         "value": "unassigned"
       },
-      "div": 0
-    }
-  },
-  "version": "v2"
+      "G_clade": {
+        "value": "GA3.0.0"
+      }
+    },
+    "branch_attrs": {
+      "mutations": {
+        "nuc": []
+      },
+      "labels": {
+        "clade": ""
+      }
+    },
+    "children": []
+  }
 }
