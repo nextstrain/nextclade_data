@@ -122,6 +122,8 @@ def process_tree_json(tree: dict, virus_properties: dict, output_tree_json_path:
   placementMaskRanges = virus_properties.get("placementMaskRanges")
   if placementMaskRanges is not None:
     dict_set(tree, ["meta", "extensions", "nextclade", "placement_mask_ranges"], placementMaskRanges)
+  meta = dict_cleanup(dict_get(tree, ["meta"]))
+  dict_set(tree, ["meta"], meta)
   json_write(tree, output_tree_json_path)
 
 

@@ -85,9 +85,6 @@
       "color_by": "clade_membership",
       "distance_measure": "div"
     },
-    "extensions": {
-      "nextclade": {}
-    },
     "filters": [
       "region",
       "country",
