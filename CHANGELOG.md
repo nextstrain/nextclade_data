@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2023-08-01
+
+### New Mpox datasets (tag `2023-08-01T12:00:00Z`)
+
+- Mpox datasets (`MPXV`, `hMPXV`, `hMPXV_B1`) now contain newly designate B.1 sublineages:
+  - C.1 (alias of B.1.3.1)
+  - B.1.18
+  - B.1.19
+  - B.1.20
+  See <https://github.com/mpxv-lineages/lineage-designation/pull/33> for details
+- Datasets have been updated to include sequences uploaded since the last release in January 2023
+
 ## 2023-06-16
 
 ### New SARS-CoV-2 dataset version (tag `2023-06-16T12:00:00Z`)
