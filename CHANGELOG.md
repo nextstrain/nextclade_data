@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2023-08-02
+
+### Minor fix for SARS-CoV-2-21L dataset (tag `2023-08-02T12:00:00Z`)
+
+- The SARS-CoV-2-21L dataset (`SARS-CoV-2-21L`) has been updated to show correct mutations in the auspice.json file. Nextclade output other than the tree json will not change in this release. It is mostly necessary for Nextclade version 3. Nothing else is changed, e.g. no new lineages.
+
 ## 2023-08-01
 
 ### New Mpox datasets (tag `2023-08-01T12:00:00Z`)
