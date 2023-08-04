@@ -3,11 +3,13 @@ import fnmatch
 import json
 import os
 import shutil
-from collections import namedtuple
+from collections import namedtuple, Counter
 from datetime import datetime
 from functools import reduce
 from os.path import join, dirname
-from typing import List
+from typing import List, Iterable, TypeVar
+
+T = TypeVar('T')
 
 
 def dict_to_namedtuple(name, dic):
@@ -63,6 +65,14 @@ def dict_cleanup(data):
     if v not in (None, str(), list(), dict(),):
       new_data[k] = v
   return new_data
+
+
+def find_duplicates(it: Iterable[T]) -> List[T]:
+  return [x for x, occurrences in Counter(it).items() if occurrences > 1]
+
+
+def format_list(it: Iterable, sep: str = ", ") -> str:
+  return sep.join(map(lambda x: f"\"{x}\"", it))
 
 
 def find_files(pattern, here):

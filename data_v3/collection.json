@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "id": "nextstrain",
+    "title": "Nextstrain",
+    "description": "Set of default Nextclade datasets maintained by Nextstrain team",
+    "maintainers": [
+      {
+        "name": "Nextstrain team",
+        "url": "https://nextstrain.org"
+      }
+    ],
+    "urls": [
+      {
+        "name": "source",
+        "url": "https://github.com/nextstrain/nextclade_data"
+      },
+      {
+        "name": "bugs",
+        "url": "https://github.com/nextstrain/nextclade_data/issues"
+      },
+      {
+        "name": "readme",
+        "url": "https://github.com/nextstrain/nextclade_data/blob/master/README.md"
+      },
+      {
+        "name": "changelog",
+        "url": "https://github.com/nextstrain/nextclade_data/blob/master/CHANGELOG.md"
+      }
+    ]
+  },
+  "dataset_order": [
+    "sars-cov-2/MN908947",
+    "sars-cov-2-21L/BA.2",
+    "flu_h1n1pdm_ha/CY121680",
+    "flu_h1n1pdm_ha/MW626062",
+    "flu_h1n1pdm_na/MW626056",
+    "flu_h3n2_ha/CY163680",
+    "flu_h3n2_ha/EPI1857216",
+    "flu_h3n2_na/EPI1857215",
+    "flu_vic_ha/KX058884",
+    "flu_vic_na/CY073894",
+    "flu_yam_ha/JN993010",
+    "rsv_a/EPI_ISL_412866",
+    "rsv_b/EPI_ISL_1653999",
+    "MPXV/ancestral",
+    "hMPXV/NC_063383.1",
+    "hMPXV_B1/pseudo_ON563414",
+    "sars-cov-2-no-recomb/MN908947",
+    "h1_na/UNKNOWN",
+    "hbv/UNKNOWN",
+    "hiv/UNKNOWN",
+    "hiv_mat/UNKNOWN",
+    "rsv-a/UNKNOWN",
+    "sc2-big/MN908947",
+    "sc2/UNKNOWN",
+    "sc2_mat/UNKNOWN",
+    "vic_na/UNKNOWN",
+    "dummy1/DU1MMY"
+  ]
+}

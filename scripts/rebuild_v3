@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+
+"""
+Builds a fresh data repo from source data
+"""
+import logging
+import subprocess
+from copy import deepcopy
+from os.path import dirname, realpath, join, relpath, isfile
+from urllib.parse import quote
+from utils import json_read, find_files, dict_get_required, json_write, now_iso, dict_remove_many, find_duplicates, \
+  format_list, dict_get
+
+logging.basicConfig(level=logging.INFO)
+l = logging.getLogger(__file__)
+
+THIS_DIR = dirname(realpath(__file__))
+PROJECT_ROOT_DIR = realpath(join(THIS_DIR, ".."))
+DATA_INPUT_DIR = realpath(join(PROJECT_ROOT_DIR, "data_v3"))
+
+
+def run(command):
+  res = subprocess.run(command, shell=True, check=False, capture_output=True, text=True)
+  if res.returncode != 0 or res.stderr:
+    raise ValueError(
+      f"The external process failed:\n  Command:'{command}'\n  Return code: {res.returncode}\n  Message: {str(res.stderr) or str(res.stdout)}")
+  stdout = res.stdout.strip()
+  if len(stdout) == 0:
+    return None
+  return stdout
+
+
+def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
+  other = []
+
+  tree_json_path = join(dataset_dir, "tree.json")
+  has_tree = isfile(tree_json_path)
+  if has_tree:
+    tree_json = json_read(tree_json_path)
+    if dict_get(tree_json, ["extensions", "nextclade", "clade_node_attrs"]) is not None:
+      other.append("customClades")
+
+  if dict_get(pathogen_json, ["mutLabels"]) is not None:
+    other.append("mutLabels")
+
+  if dict_get(pathogen_json, ["phenotypeData"]) is not None:
+    other.append("phenotypeData")
+
+  if dict_get(pathogen_json, ["aaMotifs"]) is not None:
+    other.append("aaMotifs")
+
+  qc = []
+  for k, q in (dict_get(pathogen_json, ["qc"]) or {}).items():
+    if dict_get(q, ["enabled"]):
+      qc.append(k)
+
+  return {
+    "examples": isfile(join(dataset_dir, "sequences.fasta")),
+    "genomeAnotation": isfile(join(dataset_dir, "genome_annotation.gff3")),
+    "tree": has_tree,
+    "qc": qc,
+    "primers": dict_get(pathogen_json, ["primers"]) is not None,
+    "other": other
+  }
+
+
+def index_one_dataset(pathogen_json_path: str):
+  pathogen_json = json_read(pathogen_json_path)
+  dataset_dir = dirname(pathogen_json_path)
+  path = relpath(dataset_dir, DATA_INPUT_DIR)
+
+  dict_get_required(pathogen_json, ["attributes", "name", "value"])
+  dict_get_required(pathogen_json, ["attributes", "name", "valueFriendly"])
+  dict_get_required(pathogen_json, ["attributes", "reference", "value"])
+  dict_get_required(pathogen_json, ["attributes", "reference", "valueFriendly"])
+
+  return {
+    "path": path,
+    "url": quote(path),
+    "deprecated": dict_get_required(pathogen_json, ["deprecated"]),
+    "enabled": dict_get_required(pathogen_json, ["enabled"]),
+    "experimental": dict_get_required(pathogen_json, ["experimental"]),
+    "attributes": dict_get_required(pathogen_json, ["attributes"]),
+    "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
+    "updatedAt": dict_get_required(pathogen_json, ["updatedAt"]),
+  }
+
+
+def get_new_dataset_order(datasets, dataset_order):
+  paths = list(map(lambda d: d["path"], datasets))
+
+  dupes = find_duplicates(dataset_order)
+  if len(dupes):
+    raise ValueError(
+      f"The '.dataset_order' list in 'collection.json' contains duplicated entries: {format_list(dupes)}. "
+      f"Please make sure the entries are unique, to avoid ambiguity."
+    )
+
+  extra = set(dataset_order).difference(set(paths))
+  if len(extra):
+    raise ValueError(
+      f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
+      f"{format_list(extra)}. "
+      f"Please double check the existence of datasets and the spelling of their paths in the '.dataset_order' list. "
+      f"The full list of datasets that are found:\n  {format_list(paths)}."
+    )
+
+  missing = set(paths).difference(set(dataset_order))
+  if len(missing):
+    l.info(
+      f"Adding '.dataset_order' entries to 'collection.json' for the following datasets: {format_list(missing)}. "
+      f"Please reorder them manually as needed. This order is used when displaying datasets of the colelction in the user interface."
+    )
+    dataset_order += list(missing)
+  return dataset_order
+
+
+def sort_datasets(datasets, dataset_order):
+  return [dataset for x in dataset_order for dataset in datasets if dataset["path"] == x]
+
+
+def make_index():
+  collection_json = json_read(join(DATA_INPUT_DIR, "collection.json"))
+
+  datasets = []
+  for pathogen_json_path in find_files("pathogen.json", DATA_INPUT_DIR):
+    try:
+      datasets.append(index_one_dataset(pathogen_json_path))
+    except Exception as e:
+      raise ValueError(f"When processing '{pathogen_json_path}'") from e
+
+  dataset_order = get_new_dataset_order(datasets, dict_get_required(collection_json, ["dataset_order"]) or [])
+  datasets = sort_datasets(datasets, dataset_order)
+
+  collection_json = {
+    **collection_json,
+    "dataset_order": dataset_order,
+  }
+
+  collection_info = deepcopy(collection_json)
+  dict_remove_many(collection_info, ["dataset_order"])
+  index_json = {
+    **collection_info,
+    "datasets": datasets,
+    "updatedAt": now_iso(),
+    "schemaVersion": "3.0.0",
+  }
+
+  json_write(collection_json, join(DATA_INPUT_DIR, "collection.json"), no_sort_keys=True)
+  json_write(index_json, join(DATA_INPUT_DIR, "index.json"), no_sort_keys=True)
+
+
+if __name__ == '__main__':
+  make_index()

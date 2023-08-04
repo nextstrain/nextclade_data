@@ -1,0 +1,908 @@
+{
+  "meta": {
+    "id": "nextstrain",
+    "title": "Nextstrain",
+    "description": "Set of default Nextclade datasets maintained by Nextstrain team",
+    "maintainers": [
+      {
+        "name": "Nextstrain team",
+        "url": "https://nextstrain.org"
+      }
+    ],
+    "urls": [
+      {
+        "name": "source",
+        "url": "https://github.com/nextstrain/nextclade_data"
+      },
+      {
+        "name": "bugs",
+        "url": "https://github.com/nextstrain/nextclade_data/issues"
+      },
+      {
+        "name": "readme",
+        "url": "https://github.com/nextstrain/nextclade_data/blob/master/README.md"
+      },
+      {
+        "name": "changelog",
+        "url": "https://github.com/nextstrain/nextclade_data/blob/master/CHANGELOG.md"
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "path": "sars-cov-2/MN908947",
+      "url": "sars-cov-2/MN908947",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "sars-cov-2",
+          "valueFriendly": "SARS-CoV-2"
+        },
+        "reference": {
+          "value": "MN908947",
+          "valueFriendly": "Wuhan-Hu-1/2019"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "primers": true,
+        "other": [
+          "mutLabels"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:53Z"
+    },
+    {
+      "path": "sars-cov-2-21L/BA.2",
+      "url": "sars-cov-2-21L/BA.2",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "sars-cov-2-21L",
+          "valueFriendly": "SARS-CoV-2 relative to BA.2"
+        },
+        "reference": {
+          "value": "BA.2",
+          "valueFriendly": "BA.2"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "mutLabels",
+          "phenotypeData"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:52Z"
+    },
+    {
+      "path": "flu_h1n1pdm_ha/CY121680",
+      "url": "flu_h1n1pdm_ha/CY121680",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_h1n1pdm_ha",
+          "valueFriendly": "Influenza A H1N1pdm HA"
+        },
+        "reference": {
+          "value": "CY121680",
+          "valueFriendly": "A/California/07/2009"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:54Z"
+    },
+    {
+      "path": "flu_h1n1pdm_ha/MW626062",
+      "url": "flu_h1n1pdm_ha/MW626062",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_h1n1pdm_ha",
+          "valueFriendly": "Influenza A H1N1pdm HA"
+        },
+        "reference": {
+          "value": "MW626062",
+          "valueFriendly": "A/Wisconsin/588/2019"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:54Z"
+    },
+    {
+      "path": "flu_h1n1pdm_na/MW626056",
+      "url": "flu_h1n1pdm_na/MW626056",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_h1n1pdm_na",
+          "valueFriendly": "Influenza A H1N1pdm NA (Neuraminidase)"
+        },
+        "reference": {
+          "value": "MW626056",
+          "valueFriendly": "A/Wisconsin/588/2019"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "flu_h3n2_ha/CY163680",
+      "url": "flu_h3n2_ha/CY163680",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_h3n2_ha",
+          "valueFriendly": "Influenza A H3N2 HA"
+        },
+        "reference": {
+          "value": "CY163680",
+          "valueFriendly": "A/Wisconsin/67/2005"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:51Z"
+    },
+    {
+      "path": "flu_h3n2_ha/EPI1857216",
+      "url": "flu_h3n2_ha/EPI1857216",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_h3n2_ha",
+          "valueFriendly": "Influenza A H3N2 HA"
+        },
+        "reference": {
+          "value": "EPI1857216",
+          "valueFriendly": "A/Darwin/6/2021"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "phenotypeData",
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:51Z"
+    },
+    {
+      "path": "flu_h3n2_na/EPI1857215",
+      "url": "flu_h3n2_na/EPI1857215",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_h3n2_na",
+          "valueFriendly": "Influenza A H3N2 NA (Neuraminidase)"
+        },
+        "reference": {
+          "value": "EPI1857215",
+          "valueFriendly": "A/Darwin/6/2021"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:54Z"
+    },
+    {
+      "path": "flu_vic_ha/KX058884",
+      "url": "flu_vic_ha/KX058884",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_vic_ha",
+          "valueFriendly": "Influenza B Victoria HA"
+        },
+        "reference": {
+          "value": "KX058884",
+          "valueFriendly": "B/Brisbane/60/2008"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:53Z"
+    },
+    {
+      "path": "flu_vic_na/CY073894",
+      "url": "flu_vic_na/CY073894",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_vic_na",
+          "valueFriendly": "Influenza B/Vic NA (Neuraminidase)"
+        },
+        "reference": {
+          "value": "CY073894",
+          "valueFriendly": "B/Brisbane/60/2008"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:53Z"
+    },
+    {
+      "path": "flu_yam_ha/JN993010",
+      "url": "flu_yam_ha/JN993010",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "flu_yam_ha",
+          "valueFriendly": "Influenza B Yamagata HA"
+        },
+        "reference": {
+          "value": "JN993010",
+          "valueFriendly": "B/Wisconsin/01/2010"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "rsv_a/EPI_ISL_412866",
+      "url": "rsv_a/EPI_ISL_412866",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "rsv_a",
+          "valueFriendly": "RSV-A"
+        },
+        "reference": {
+          "value": "EPI_ISL_412866",
+          "valueFriendly": "hRSV/A/England/397/2017"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:52Z"
+    },
+    {
+      "path": "rsv_b/EPI_ISL_1653999",
+      "url": "rsv_b/EPI_ISL_1653999",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "rsv_b",
+          "valueFriendly": "RSV-B"
+        },
+        "reference": {
+          "value": "EPI_ISL_1653999",
+          "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:49Z"
+    },
+    {
+      "path": "MPXV/ancestral",
+      "url": "MPXV/ancestral",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "MPXV",
+          "valueFriendly": "Monkeypox (All Clades)"
+        },
+        "reference": {
+          "value": "ancestral",
+          "valueFriendly": "Reconstructed ancestral MPXV"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:52Z"
+    },
+    {
+      "path": "hMPXV/NC_063383.1",
+      "url": "hMPXV/NC_063383.1",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "hMPXV",
+          "valueFriendly": "Human Monkeypox (hMPXV)"
+        },
+        "reference": {
+          "value": "NC_063383.1",
+          "valueFriendly": "MPXV-M5312_HM12_Rivers"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:50Z"
+    },
+    {
+      "path": "hMPXV_B1/pseudo_ON563414",
+      "url": "hMPXV_B1/pseudo_ON563414",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "hMPXV_B1",
+          "valueFriendly": "Human Monkeypox Lineage B.1*"
+        },
+        "reference": {
+          "value": "pseudo_ON563414",
+          "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": [
+          "mutLabels"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:54Z"
+    },
+    {
+      "path": "sars-cov-2-no-recomb/MN908947",
+      "url": "sars-cov-2-no-recomb/MN908947",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": false,
+      "attributes": {
+        "name": {
+          "value": "sars-cov-2-no-recomb",
+          "valueFriendly": "(Deprecated) SARS-CoV-2 without recombinants"
+        },
+        "reference": {
+          "value": "MN908947",
+          "valueFriendly": "Wuhan-Hu-1/2019"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "primers": true,
+        "other": [
+          "mutLabels"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:50Z"
+    },
+    {
+      "path": "h1_na/UNKNOWN",
+      "url": "h1_na/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "h1_na",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": false,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "hbv/UNKNOWN",
+      "url": "hbv/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "hbv",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "hiv/UNKNOWN",
+      "url": "hiv/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "hiv",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "hiv_mat/UNKNOWN",
+      "url": "hiv_mat/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "hiv_mat",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "rsv-a/UNKNOWN",
+      "url": "rsv-a/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "rsv-a",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": false,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "sc2-big/MN908947",
+      "url": "sc2-big/MN908947",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "sc2-big",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "MN908947",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "primers": true,
+        "other": [
+          "mutLabels"
+        ]
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "sc2/UNKNOWN",
+      "url": "sc2/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "sc2",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": false,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "sc2_mat/UNKNOWN",
+      "url": "sc2_mat/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "sc2_mat",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": false,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "vic_na/UNKNOWN",
+      "url": "vic_na/UNKNOWN",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "vic_na",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": false,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    },
+    {
+      "path": "dummy1/DU1MMY",
+      "url": "dummy1/DU1MMY",
+      "deprecated": false,
+      "enabled": true,
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "dummy1",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "DU1MMY",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "capabilities": {
+        "examples": true,
+        "genomeAnotation": true,
+        "tree": true,
+        "qc": [],
+        "primers": false,
+        "other": []
+      },
+      "updatedAt": "2023-08-03T21:50:55Z"
+    }
+  ],
+  "updatedAt": "2023-08-04T00:28:31Z",
+  "schemaVersion": "3.0.0"
+}
