@@ -201,3 +201,12 @@ aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2.json - | gzcat >~/code/ne
 
 aws s3 cp s3://nextstrain-staging/nextclade_sars-cov-2-no-recomb.json - | gzcat >~/code/nextclade_data/data/datasets/sars-cov-2-no-recomb/references/MN908947/versions/$NEW/files/tree.json
 ```
+
+### Testing datasets
+
+```bash
+./scripts/rebuild
+npx serve@latest --cors --listen=tcp://0.0.0.0:27722 data_output/ &
+open -a "Brave Browser.app" -n --args  " https://clades.nextstrain.org?dataset-server=http://localhost:27722"
+fg
+```
