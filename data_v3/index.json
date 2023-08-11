@@ -32,9 +32,6 @@
     {
       "path": "sars-cov-2/MN908947",
       "url": "sars-cov-2/MN908947",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "sars-cov-2",
@@ -46,9 +43,15 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta",
+          "readme": "README.md",
+          "changelog": "CHANGELOG.md"
+        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -67,9 +70,6 @@
     {
       "path": "sars-cov-2-21L/BA.2",
       "url": "sars-cov-2-21L/BA.2",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "sars-cov-2-21L",
@@ -81,9 +81,13 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -92,7 +96,6 @@
           "snpClusters",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "mutLabels",
           "phenotypeData"
@@ -103,9 +106,6 @@
     {
       "path": "flu_h1n1pdm_ha/CY121680",
       "url": "flu_h1n1pdm_ha/CY121680",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_h1n1pdm_ha",
@@ -117,16 +117,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -136,9 +139,6 @@
     {
       "path": "flu_h1n1pdm_ha/MW626062",
       "url": "flu_h1n1pdm_ha/MW626062",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_h1n1pdm_ha",
@@ -150,16 +150,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -169,9 +172,6 @@
     {
       "path": "flu_h1n1pdm_na/MW626056",
       "url": "flu_h1n1pdm_na/MW626056",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_h1n1pdm_na",
@@ -183,16 +183,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -202,9 +205,6 @@
     {
       "path": "flu_h3n2_ha/CY163680",
       "url": "flu_h3n2_ha/CY163680",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_h3n2_ha",
@@ -216,16 +216,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -235,9 +238,6 @@
     {
       "path": "flu_h3n2_ha/EPI1857216",
       "url": "flu_h3n2_ha/EPI1857216",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_h3n2_ha",
@@ -249,16 +249,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "phenotypeData",
           "aaMotifs"
@@ -269,9 +272,6 @@
     {
       "path": "flu_h3n2_na/EPI1857215",
       "url": "flu_h3n2_na/EPI1857215",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_h3n2_na",
@@ -283,16 +283,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -302,9 +305,6 @@
     {
       "path": "flu_vic_ha/KX058884",
       "url": "flu_vic_ha/KX058884",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_vic_ha",
@@ -316,16 +316,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -335,9 +338,6 @@
     {
       "path": "flu_vic_na/CY073894",
       "url": "flu_vic_na/CY073894",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_vic_na",
@@ -349,16 +349,19 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "aaMotifs"
         ]
@@ -368,9 +371,6 @@
     {
       "path": "flu_yam_ha/JN993010",
       "url": "flu_yam_ha/JN993010",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "flu_yam_ha",
@@ -382,26 +382,25 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "rsv_a/EPI_ISL_412866",
       "url": "rsv_a/EPI_ISL_412866",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "rsv_a",
@@ -413,26 +412,25 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:52Z"
     },
     {
       "path": "rsv_b/EPI_ISL_1653999",
       "url": "rsv_b/EPI_ISL_1653999",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "rsv_b",
@@ -444,26 +442,25 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:49Z"
     },
     {
       "path": "MPXV/ancestral",
       "url": "MPXV/ancestral",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "MPXV",
@@ -475,27 +472,26 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "missingData",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:52Z"
     },
     {
       "path": "hMPXV/NC_063383.1",
       "url": "hMPXV/NC_063383.1",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "hMPXV",
@@ -507,9 +503,13 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -517,18 +517,13 @@
           "privateMutations",
           "snpClusters",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:50Z"
     },
     {
       "path": "hMPXV_B1/pseudo_ON563414",
       "url": "hMPXV_B1/pseudo_ON563414",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
       "attributes": {
         "name": {
           "value": "hMPXV_B1",
@@ -540,9 +535,13 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -551,7 +550,6 @@
           "snpClusters",
           "stopCodons"
         ],
-        "primers": false,
         "other": [
           "mutLabels"
         ]
@@ -561,9 +559,7 @@
     {
       "path": "sars-cov-2-no-recomb/MN908947",
       "url": "sars-cov-2-no-recomb/MN908947",
-      "deprecated": false,
-      "enabled": true,
-      "experimental": false,
+      "deprecated": true,
       "attributes": {
         "name": {
           "value": "sars-cov-2-no-recomb",
@@ -575,9 +571,13 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -596,8 +596,6 @@
     {
       "path": "h1_na/UNKNOWN",
       "url": "h1_na/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -610,25 +608,24 @@
         }
       },
       "capabilities": {
-        "examples": false,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "hbv/UNKNOWN",
       "url": "hbv/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -641,25 +638,25 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "hiv/UNKNOWN",
       "url": "hiv/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -672,25 +669,25 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "hiv_mat/UNKNOWN",
       "url": "hiv_mat/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -703,25 +700,25 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "rsv-a/UNKNOWN",
       "url": "rsv-a/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -734,25 +731,24 @@
         }
       },
       "capabilities": {
-        "examples": false,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "sc2-big/MN908947",
       "url": "sc2-big/MN908947",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -765,9 +761,13 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -786,8 +786,6 @@
     {
       "path": "sc2/UNKNOWN",
       "url": "sc2/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -800,25 +798,24 @@
         }
       },
       "capabilities": {
-        "examples": false,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "sc2_mat/UNKNOWN",
       "url": "sc2_mat/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -831,25 +828,24 @@
         }
       },
       "capabilities": {
-        "examples": false,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "vic_na/UNKNOWN",
       "url": "vic_na/UNKNOWN",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -862,25 +858,24 @@
         }
       },
       "capabilities": {
-        "examples": false,
-        "genomeAnotation": true,
-        "tree": true,
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json"
+        },
         "qc": [
           "frameShifts",
           "mixedSites",
           "privateMutations",
           "stopCodons"
-        ],
-        "primers": false,
-        "other": []
+        ]
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     },
     {
       "path": "dummy1/DU1MMY",
       "url": "dummy1/DU1MMY",
-      "deprecated": false,
-      "enabled": true,
       "experimental": true,
       "attributes": {
         "name": {
@@ -893,16 +888,17 @@
         }
       },
       "capabilities": {
-        "examples": true,
-        "genomeAnotation": true,
-        "tree": true,
-        "qc": [],
-        "primers": false,
-        "other": []
+        "files": {
+          "reference": "reference.fasta",
+          "genomeAnnotation": "genome_annotation.gff3",
+          "treeJson": "tree.json",
+          "pathogenJson": "pathogen.json",
+          "examples": "sequences.fasta"
+        }
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     }
   ],
-  "updatedAt": "2023-08-04T00:28:31Z",
+  "updatedAt": "2023-08-11T06:39:58Z",
   "schemaVersion": "3.0.0"
 }

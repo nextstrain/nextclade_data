@@ -9,7 +9,7 @@ from copy import deepcopy
 from os.path import dirname, realpath, join, relpath, isfile
 from urllib.parse import quote
 from utils import json_read, find_files, dict_get_required, json_write, now_iso, dict_remove_many, find_duplicates, \
-  format_list, dict_get
+  format_list, dict_get, dict_cleanup
 
 logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
@@ -30,12 +30,21 @@ def run(command):
   return stdout
 
 
-def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
-  other = []
+def check_file(dataset_dir, filename):
+  if isfile(join(dataset_dir, filename)):
+    return filename
+  return None
 
+
+def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
+  reference_fasta_path = join(dataset_dir, "reference.fasta")
+  if not isfile(reference_fasta_path):
+    raise FileNotFoundError(f"Reference sequence must be present, but not found: {reference_fasta_path}")
+
+  other = []
   tree_json_path = join(dataset_dir, "tree.json")
-  has_tree = isfile(tree_json_path)
-  if has_tree:
+  has_tree_json = isfile(join(dataset_dir, "tree.json"))
+  if has_tree_json:
     tree_json = json_read(tree_json_path)
     if dict_get(tree_json, ["extensions", "nextclade", "clade_node_attrs"]) is not None:
       other.append("customClades")
@@ -54,14 +63,20 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
     if dict_get(q, ["enabled"]):
       qc.append(k)
 
-  return {
-    "examples": isfile(join(dataset_dir, "sequences.fasta")),
-    "genomeAnotation": isfile(join(dataset_dir, "genome_annotation.gff3")),
-    "tree": has_tree,
+  return dict_cleanup({
+    "files": {
+      "reference": "reference.fasta",
+      "genomeAnnotation": check_file(dataset_dir, "genome_annotation.gff3"),
+      "treeJson": check_file(dataset_dir, "tree.json"),
+      "pathogenJson": check_file(dataset_dir, "pathogen.json"),
+      "examples": check_file(dataset_dir, "sequences.fasta"),
+      "readme": check_file(dataset_dir, "README.md"),
+      "changelog": check_file(dataset_dir, "CHANGELOG.md"),
+    },
     "qc": qc,
-    "primers": dict_get(pathogen_json, ["primers"]) is not None,
+    "primers": True if len(dict_get(pathogen_json, ["primers"]) or []) > 0 else None,
     "other": other
-  }
+  })
 
 
 def index_one_dataset(pathogen_json_path: str):
@@ -74,16 +89,16 @@ def index_one_dataset(pathogen_json_path: str):
   dict_get_required(pathogen_json, ["attributes", "reference", "value"])
   dict_get_required(pathogen_json, ["attributes", "reference", "valueFriendly"])
 
-  return {
+  return dict_cleanup({
     "path": path,
     "url": quote(path),
-    "deprecated": dict_get_required(pathogen_json, ["deprecated"]),
-    "enabled": dict_get_required(pathogen_json, ["enabled"]),
-    "experimental": dict_get_required(pathogen_json, ["experimental"]),
+    "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else None,
+    "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else None,
+    "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else None,
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
     "updatedAt": dict_get_required(pathogen_json, ["updatedAt"]),
-  }
+  })
 
 
 def get_new_dataset_order(datasets, dataset_order):
