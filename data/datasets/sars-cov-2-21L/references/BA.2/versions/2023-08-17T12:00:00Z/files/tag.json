@@ -1,6 +1,6 @@
 {
   "tag": "2023-08-17T12:00:00Z",
-  "comment": "Update to include variant BA.2.86",
+  "comment": "Update to include lineage BA.2.86",
   "compatibility": {
     "nextcladeCli": {
       "min": "1.10.0",
