@@ -1,5 +1,13 @@
 # CHANGELOG
 
+
+## 2023-08-09
+
+### New SARS-CoV-2 dataset version (tag `2023-08-17T12:00:00Z`)
+Ad-hoc update to include the [saltation variant BA.2.86](https://github.com/cov-lineages/pango-designation/issues/2183).
+Note that this is not a regular data set update, but an update outside of the usual cycle specifically to enable detection of the BA.2.86.
+
+
 ## 2023-08-09
 
 ### New SARS-CoV-2 dataset version (tag `2023-08-09T12:00:00Z`)
