@@ -1,18 +1,16 @@
 # CHANGELOG
 
-
-## 2023-08-17
+## _NEXT_
 
 ### New influenza dataset version (tag `2023-08-10T12:00:00Z`)
 All seasonal influenza datasets were updated to include an additional subclade designation the provides a more fine-grained breakdown of the currently circulating diversity.
 These subclades are suggested using a [computational pipeline](https://github.com/neherlab/flu_clades) and follow a Pango-style nomenclature, albeit without hard automatic aliasing.
 
-
+## 2023-08-17
 
 ### New SARS-CoV-2 dataset version (tag `2023-08-17T12:00:00Z`)
 Ad-hoc update to include the [saltation variant BA.2.86](https://github.com/cov-lineages/pango-designation/issues/2183).
 Note that this is not a regular data set update, but an update outside of the usual cycle specifically to enable detection of the BA.2.86.
-
 
 ## 2023-08-09
 
