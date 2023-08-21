@@ -4,7 +4,6 @@
 Builds a fresh data repo from source data
 """
 import logging
-import subprocess
 from copy import deepcopy
 from os.path import dirname, realpath, join, relpath, isfile
 from urllib.parse import quote
@@ -17,17 +16,6 @@ l = logging.getLogger(__file__)
 THIS_DIR = dirname(realpath(__file__))
 PROJECT_ROOT_DIR = realpath(join(THIS_DIR, ".."))
 DATA_INPUT_DIR = realpath(join(PROJECT_ROOT_DIR, "data_v3"))
-
-
-def run(command):
-  res = subprocess.run(command, shell=True, check=False, capture_output=True, text=True)
-  if res.returncode != 0 or res.stderr:
-    raise ValueError(
-      f"The external process failed:\n  Command:'{command}'\n  Return code: {res.returncode}\n  Message: {str(res.stderr) or str(res.stdout)}")
-  stdout = res.stdout.strip()
-  if len(stdout) == 0:
-    return None
-  return stdout
 
 
 def check_file(dataset_dir, filename):
@@ -97,7 +85,8 @@ def index_one_dataset(pathogen_json_path: str):
     "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else None,
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
-    "updatedAt": dict_get_required(pathogen_json, ["updatedAt"]),
+    "updatedAt": dict_get(pathogen_json, ["updatedAt"]),
+    # "schemaVersion": dict_get(pathogen_json, ["schemaVersion"]),
   })
 
 
