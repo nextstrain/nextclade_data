@@ -86,7 +86,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -122,7 +123,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -155,7 +157,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -188,7 +191,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -221,7 +225,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -254,7 +259,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -288,7 +294,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -321,7 +328,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -354,7 +362,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -387,7 +396,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -417,7 +427,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -447,7 +458,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -477,7 +489,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -508,7 +521,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -540,7 +554,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -576,7 +591,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -612,7 +628,8 @@
           "reference": "reference.fasta",
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json"
+          "pathogenJson": "pathogen.json",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -643,7 +660,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -674,7 +692,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -705,7 +724,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -735,7 +755,8 @@
           "reference": "reference.fasta",
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json"
+          "pathogenJson": "pathogen.json",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -766,7 +787,8 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -802,7 +824,8 @@
           "reference": "reference.fasta",
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json"
+          "pathogenJson": "pathogen.json",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -832,7 +855,8 @@
           "reference": "reference.fasta",
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json"
+          "pathogenJson": "pathogen.json",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -862,7 +886,8 @@
           "reference": "reference.fasta",
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json"
+          "pathogenJson": "pathogen.json",
+          "changelog": "CHANGELOG.md"
         },
         "qc": [
           "frameShifts",
@@ -893,12 +918,13 @@
           "genomeAnnotation": "genome_annotation.gff3",
           "treeJson": "tree.json",
           "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta"
+          "examples": "sequences.fasta",
+          "changelog": "CHANGELOG.md"
         }
       },
       "updatedAt": "2023-08-03T21:50:55Z"
     }
   ],
-  "updatedAt": "2023-08-11T06:39:58Z",
+  "updatedAt": "2023-08-21T14:28:13Z",
   "schemaVersion": "3.0.0"
 }
