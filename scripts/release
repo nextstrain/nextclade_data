@@ -40,6 +40,24 @@ def main():
   tag = iso_to_iso_safe(updated_at)
   git_check_tag(tag)
 
+  release_infos = prepare_dataset_release_infos(datasets, tag, updated_at)
+
+  if len(release_infos) == 0:
+    l.info("No dataset modifications detected. Will not release anything.")
+    return
+
+  json_write({**index_json, "datasets": datasets, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
+
+  release_notes = aggregate_release_notes(release_infos)
+
+  create_release_package(release_notes)
+
+  commit_hash = commit_changes(tag, release_infos)
+
+  publish_to_github_releases(tag, commit_hash, release_notes)
+
+
+def prepare_dataset_release_infos(datasets, tag, updated_at):
   release_infos = []
   for pathogen_json_path in find_files("pathogen.json", DATA_INPUT_DIR):
     dataset_dir = dirname(pathogen_json_path)
@@ -47,8 +65,7 @@ def main():
 
     i_dataset = find_index_by(lambda dataset: dataset["path"] == dataset_dir_rel, datasets)
     if i_dataset is None:
-      raise ValueError(
-        f"Dataset at '{dataset_dir_rel}' not found in the dataset index ({index_json_path}). Try to reindex datasets first.")
+      raise ValueError(f"Dataset at '{dataset_dir_rel}' not found in the dataset index. Try to reindex datasets first.")
 
     dataset = datasets[i_dataset]
     versions = dict_get(dataset, ["versions"]) or []
@@ -69,33 +86,32 @@ def main():
     json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
     create_dataset_package(dataset, tag, dataset_dir)
+  return release_infos
 
-  if len(release_infos) == 0:
-    l.info("No dataset modifications detected. Will not release anything.")
-    return
 
-  json_write({**index_json, "datasets": datasets, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
-
+def aggregate_release_notes(release_infos):
   dataset_names_friendly = format_list(
     unique([get_dataset_name_friendly(release_info["dataset"]) for release_info in release_infos]),
     sep="\n", marker="- ", quote=False
   )
-
   release_notes = f"This release contains changes for datasets:\n\n{dataset_names_friendly}\n\n\n"
   for release_info in release_infos:
     release_notes += f'\n{release_info["release_notes"]}\n\n'
+  return release_notes
 
-  create_release_package(release_notes)
-  release_files = list(find_files("*", join(DATA_OUTPUT_DIR, "github_releases")))
 
+def commit_changes(tag, release_infos):
   l.info(f"Commiting changes for '{tag}'")
   dataset_names = format_list(
     unique([get_dataset_name(release_info["dataset"]) for release_info in release_infos]),
     sep="\n", marker="- ", quote=False
   )
-  commit_hash = git_commit_and_push(commit_message=f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_names}")
+  return git_commit_and_push(commit_message=f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_names}")
 
-  l.info(f"Releasing '{tag}' (commit: '{commit_hash}') to GitHub Releases")
+
+def publish_to_github_releases(tag, commit_hash, release_notes):
+  l.info(f"Publishing to GitHub Releases: tag: '{tag}', commit: '{commit_hash}'")
+  release_files = list(find_files("*", join(DATA_OUTPUT_DIR, "github_releases")))
   github_create_release(
     repo=REPO,
     version=tag,
@@ -126,12 +142,9 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
   return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
 
 
-def get_dataset_name(dataset):
-  return dict_get_required(dataset, ["attributes", "name", "value"])
-
-
-def get_dataset_name_friendly(dataset):
-  return dict_get(dataset, ["attributes", "name", "valueFriendly"]) or get_dataset_name(dataset)
+def create_release_package(release_notes):
+  copy(join(DATA_INPUT_DIR, "index.json"), join(DATA_OUTPUT_DIR, "server/"))
+  file_write(release_notes, join(DATA_OUTPUT_DIR, "github_releases", "CHANGELOG.md"))
 
 
 def create_dataset_package(dataset, tag, dataset_dir):
@@ -149,9 +162,12 @@ def create_dataset_package(dataset, tag, dataset_dir):
   copy(f"{zip_basename}.zip", join(DATA_OUTPUT_DIR, "github_releases", f"{path_safe}__{tag}.zip"))
 
 
-def create_release_package(release_notes):
-  copy(join(DATA_INPUT_DIR, "index.json"), join(DATA_OUTPUT_DIR, "server/"))
-  file_write(release_notes, join(DATA_OUTPUT_DIR, "github_releases", "CHANGELOG.md"))
+def get_dataset_name(dataset):
+  return dict_get_required(dataset, ["attributes", "name", "value"])
+
+
+def get_dataset_name_friendly(dataset):
+  return dict_get(dataset, ["attributes", "name", "valueFriendly"]) or get_dataset_name(dataset)
 
 
 if __name__ == '__main__':
