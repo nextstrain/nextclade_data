@@ -6,10 +6,12 @@ Releases a new version of a dataset
 import logging
 from os.path import dirname, realpath, join, relpath
 
-from utils import json_read, find_files, dict_get, git_get_initial_commit_hash, git_get_modified_files, first, \
-  find_index_by, json_write, now_iso, git_check_tag, iso_to_iso_safe, file_read, file_write, \
-  dict_get_required, dict_set, git_commit_all, github_create_release, git_push, git_dir_is_clean, \
-  git_get_dirty_files, git_pull, unique, copy, make_zip
+from lib.changelog import changelog_prepare
+from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first
+from lib.fs import json_read, find_files, json_write, file_write, copy, make_zip
+from lib.date import now_iso, iso_to_iso_safe
+from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
+  git_get_initial_commit_hash, git_commit_all, git_push, github_create_release, git_pull
 
 REPO = "neherlab/nextclade_data"
 THIS_DIR = dirname(realpath(__file__))
@@ -19,52 +21,6 @@ DATA_OUTPUT_DIR = realpath(join(PROJECT_ROOT_DIR, "data_v3_output"))
 
 logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
-
-
-def changelog_prepare(dataset, updated_at, changelog_path):
-  path = dataset["path"]
-  release_notes = changelog_get_unreleased_section(changelog_path)
-  if len(release_notes) == 0:
-    raise ValueError(
-      f"Cannot release dataset '{path}' without changelog. Please modify file '{changelog_path}': add '## Unreleased' section and briefly summarize the changes being released"
-    )
-
-  full_changelog = file_read(changelog_path).replace(f"## Unreleased", f"## {updated_at}")
-  file_write(full_changelog, changelog_path)
-
-  attr_table = format_dataset_attributes_md_table(dataset)
-  release_notes = release_notes.replace(
-    "## Unreleased",
-    f"""### {path}\n\n{attr_table}""".strip("\n ")
-  )
-
-  return release_notes
-
-
-def changelog_get_unreleased_section(changelog_path: str):
-  release_notes = ""
-  found_release_notes_block = False
-  with open(changelog_path) as f:
-    for line in f:
-      if not found_release_notes_block and line.startswith("## Unreleased"):
-        found_release_notes_block = True
-        release_notes += line
-      elif found_release_notes_block:
-        if line.startswith("## "):
-          return release_notes
-        else:
-          release_notes += line
-  return release_notes.strip()
-
-
-def format_dataset_attributes_md_table(dataset):
-  attr_table = f"| {'attribute':20} | {'value':20} | {'value friendly':40} |\n"
-  attr_table += f"| {'-' * 20} | {'-' * 20} | {'-' * 40} |\n"
-  for attr_name, attr_val in dict_get_required(dataset, ["attributes"]).items():
-    value = attr_val["value"]
-    value_friendly = dict_get(attr_val, ["valueFriendly"]) or ""
-    attr_table += f'| {attr_name:20} | {value:20} | {value_friendly:40} |\n'
-  return attr_table
 
 
 def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at):
@@ -94,13 +50,13 @@ def get_dataset_name(dataset):
 
 
 def main():
-  # if not git_dir_is_clean():
-  #   dirty_files = "\n  ".join(git_get_dirty_files())
-  #   raise ValueError(
-  #     f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first:\n  {dirty_files}"
-  #   )
-  #
-  # git_pull()
+  if not git_dir_is_clean():
+    dirty_files = "\n  ".join(git_get_dirty_files())
+    raise ValueError(
+      f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first:\n  {dirty_files}"
+    )
+
+  git_pull()
 
   index_json_path = join(DATA_INPUT_DIR, "index.json")
   index_json = json_read(index_json_path)

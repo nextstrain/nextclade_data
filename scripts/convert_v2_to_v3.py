@@ -8,8 +8,8 @@ import os
 from os.path import join, dirname, exists, basename
 from typing import List
 
-from utils import json_read, find_files, json_write, now_iso, dict_set, dict_cleanup, dict_get, dict_remove_many, copy, \
-  csv_read
+from lib.utils import json_read, find_files, json_write, now_iso, dict_set, dict_cleanup, dict_get, dict_remove_many, \
+  copy, csv_read
 
 THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT_DIR = os.path.realpath(join(THIS_DIR, ".."))

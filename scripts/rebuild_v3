@@ -7,8 +7,10 @@ import logging
 from copy import deepcopy
 from os.path import dirname, realpath, join, relpath, isfile
 from urllib.parse import quote
-from utils import json_read, find_files, dict_get_required, json_write, now_iso, dict_remove_many, find_duplicates, \
-  format_list, dict_get, dict_cleanup
+
+from lib.container import dict_get_required, dict_remove_many, find_duplicates, format_list, dict_get, dict_cleanup
+from lib.fs import json_read, find_files, json_write
+from lib.date import now_iso
 
 logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
