@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## _NEXT_
+## 2023-08-22
 
 ### New influenza dataset version (tag `2023-08-10T12:00:00Z`)
 All seasonal influenza datasets were updated to include an additional subclade designation the provides a more fine-grained breakdown of the currently circulating diversity.
