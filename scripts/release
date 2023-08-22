@@ -7,11 +7,11 @@ import logging
 from os.path import dirname, realpath, join, relpath
 
 from lib.changelog import changelog_prepare
-from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first
-from lib.fs import json_read, find_files, json_write, file_write, copy, make_zip
+from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list
 from lib.date import now_iso, iso_to_iso_safe
+from lib.fs import json_read, find_files, json_write, file_write, copy, make_zip
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
-  git_get_initial_commit_hash, git_commit_all, git_push, github_create_release, git_pull
+  git_get_initial_commit_hash, github_create_release, git_pull, git_commit_and_push
 
 REPO = "neherlab/nextclade_data"
 THIS_DIR = dirname(realpath(__file__))
@@ -21,32 +21,6 @@ DATA_OUTPUT_DIR = realpath(join(PROJECT_ROOT_DIR, "data_v3_output"))
 
 logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
-
-
-def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at):
-  modified_files = list(git_get_modified_files(from_revision=last_version, dirs=dataset_dir))
-
-  if len(modified_files) == 0:
-    return None
-
-  path = dataset["path"]
-  l.info(f"Preparing release of '{path}'")
-
-  changelog_path = relpath(join(dataset_dir, "CHANGELOG.md"), PROJECT_ROOT_DIR)
-
-  if changelog_path not in modified_files:
-    raise ValueError(
-      f"Cannot release dataset '{path}' without changelog. Please add or modify file '{changelog_path}': add '## Unreleased' section and briefly summarize the changes being released"
-    )
-
-  release_notes = changelog_prepare(dataset, updated_at, changelog_path)
-
-  return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
-
-
-def get_dataset_name(dataset):
-  return dict_get(dataset, ["attributes", "name", "valueFriendly"]) \
-    or dict_get_required(dataset, ["attributes", "name", "value"])
 
 
 def main():
@@ -102,12 +76,12 @@ def main():
 
   json_write({**index_json, "datasets": datasets, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
 
-  dataset_names = ", ".join(unique([
-    get_dataset_name(release_info["dataset"])
-    for release_info in release_infos
-  ]))
+  dataset_names_friendly = format_list(
+    unique([get_dataset_name_friendly(release_info["dataset"]) for release_info in release_infos]),
+    sep="\n", marker="- ", quote=False
+  )
 
-  release_notes = f"This release contains changes for datasets: {dataset_names}\n\n\n"
+  release_notes = f"This release contains changes for datasets:\n\n{dataset_names_friendly}\n\n\n"
   for release_info in release_infos:
     release_notes += f'\n{release_info["release_notes"]}\n\n'
 
@@ -115,9 +89,13 @@ def main():
   release_files = list(find_files("*", join(DATA_OUTPUT_DIR, "github_releases")))
 
   l.info(f"Commiting changes for '{tag}'")
-  commit_hash = git_commit_all(f"chore: release '{tag}'")
-  l.info(f"Releasing '{tag}' (commit: '{commit_hash}')")
-  git_push()
+  dataset_names = format_list(
+    unique([get_dataset_name(release_info["dataset"]) for release_info in release_infos]),
+    sep="\n", marker="- ", quote=False
+  )
+  commit_hash = git_commit_and_push(commit_message=f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_names}")
+
+  l.info(f"Releasing '{tag}' (commit: '{commit_hash}') to GitHub Releases")
   github_create_release(
     repo=REPO,
     version=tag,
@@ -127,9 +105,33 @@ def main():
   )
 
 
-def create_release_package(release_notes):
-  copy(join(DATA_INPUT_DIR, "index.json"), join(DATA_OUTPUT_DIR, "server/"))
-  file_write(release_notes, join(DATA_OUTPUT_DIR, "github_releases", "CHANGELOG.md"))
+def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at):
+  modified_files = list(git_get_modified_files(from_revision=last_version, dirs=dataset_dir))
+
+  if len(modified_files) == 0:
+    return None
+
+  path = dataset["path"]
+  l.info(f"Preparing release of '{path}'")
+
+  changelog_path = relpath(join(dataset_dir, "CHANGELOG.md"), PROJECT_ROOT_DIR)
+
+  if changelog_path not in modified_files:
+    raise ValueError(
+      f"Cannot release dataset '{path}' without changelog. Please add or modify file '{changelog_path}': add '## Unreleased' section and briefly summarize the changes being released"
+    )
+
+  release_notes = changelog_prepare(dataset, updated_at, changelog_path)
+
+  return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
+
+
+def get_dataset_name(dataset):
+  return dict_get_required(dataset, ["attributes", "name", "value"])
+
+
+def get_dataset_name_friendly(dataset):
+  return dict_get(dataset, ["attributes", "name", "valueFriendly"]) or get_dataset_name(dataset)
 
 
 def create_dataset_package(dataset, tag, dataset_dir):
@@ -145,6 +147,11 @@ def create_dataset_package(dataset, tag, dataset_dir):
 
   path_safe = path.replace("/", "__")
   copy(f"{zip_basename}.zip", join(DATA_OUTPUT_DIR, "github_releases", f"{path_safe}__{tag}.zip"))
+
+
+def create_release_package(release_notes):
+  copy(join(DATA_INPUT_DIR, "index.json"), join(DATA_OUTPUT_DIR, "server/"))
+  file_write(release_notes, join(DATA_OUTPUT_DIR, "github_releases", "CHANGELOG.md"))
 
 
 if __name__ == '__main__':

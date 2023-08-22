@@ -73,6 +73,12 @@ def git_commit_all(commit_message: str):
   return git_get_current_commit_hash()
 
 
+def git_commit_and_push(commit_message):
+  commit_hash = git_commit_all(commit_message)
+  git_push()
+  return commit_hash
+
+
 def github_create_release(repo: str, version: str, commit_hash: str, release_notes: str, files=None):
   if files is None:
     files = []

@@ -80,5 +80,7 @@ def find_duplicates(it: Iterable[T]) -> List[T]:
   return [x for x, occurrences in Counter(it).items() if occurrences > 1]
 
 
-def format_list(it: Iterable, sep: str = ", ") -> str:
-  return sep.join(map(lambda x: f"\"{x}\"", it))
+def format_list(it: Iterable, sep: str = ", ", marker="", quote="'") -> str:
+  if quote == False or quote is None:
+    quote = ""
+  return sep.join(map(lambda x: f"{quote}{marker}{x}{quote}", it))
