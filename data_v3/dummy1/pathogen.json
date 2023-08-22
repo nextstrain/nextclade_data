@@ -1,0 +1,21 @@
+{
+  "attributes": {
+    "name": {
+      "value": "dummy1",
+      "valueFriendly": "dummy1"
+    },
+    "reference": {
+      "value": "DU1MMY",
+      "valueFriendly": "DU1MMY"
+    }
+  },
+  "defaultGene": "HA1",
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "geneOrderPreference": [
+    "HA1"
+  ],
+  "schemaVersion": "3.0.0",
+  "updatedAt": "2023-08-22T10:15:35Z"
+}

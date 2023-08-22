@@ -2157,420 +2157,420 @@
   },
   "primers": [
     {
-      "source": "Charité (Germany)",
-      "target": "RdRp",
       "name": "Charité_RdRp_F",
-      "refOligonuc": "GTGAAATGGTCATGTGTGGCGG",
+      "nonAcgts": [
+        "5R"
+      ],
       "primerOligonuc": "GTGARATGGTCATGTGTGGCGG",
       "range": {
         "begin": 15430,
         "end": 15452
       },
-      "nonAcgts": [
-        "5R"
-      ]
+      "refOligonuc": "GTGAAATGGTCATGTGTGGCGG",
+      "source": "Charité (Germany)",
+      "target": "RdRp"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "RdRp",
       "name": "Charité_S_RdRp_P",
-      "refOligonuc": "CAGGTGGAACCTCATCAGGAGATGC",
       "primerOligonuc": "CAGGTGGAACCTCATCAGGAGATGC",
       "range": {
         "begin": 15469,
         "end": 15494
-      }
+      },
+      "refOligonuc": "CAGGTGGAACCTCATCAGGAGATGC",
+      "source": "Charité (Germany)",
+      "target": "RdRp"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "RdRp",
       "name": "Charité_RdRp_R",
-      "refOligonuc": "TATGCTAATAGTGTTTTTAACATTTG",
+      "nonAcgts": [
+        "15S",
+        "24Y"
+      ],
       "primerOligonuc": "TATGCTAATAGTGTSTTTAACATYTG",
       "range": {
         "begin": 15504,
         "end": 15530
       },
-      "nonAcgts": [
-        "15S",
-        "24Y"
-      ]
+      "refOligonuc": "TATGCTAATAGTGTTTTTAACATTTG",
+      "source": "Charité (Germany)",
+      "target": "RdRp"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "E",
       "name": "Charité_E_F",
-      "refOligonuc": "ACAGGTACGTTAATAGTTAATAGCGT",
       "primerOligonuc": "ACAGGTACGTTAATAGTTAATAGCGT",
       "range": {
         "begin": 26268,
         "end": 26294
-      }
+      },
+      "refOligonuc": "ACAGGTACGTTAATAGTTAATAGCGT",
+      "source": "Charité (Germany)",
+      "target": "E"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "E",
       "name": "Charité_E_P",
-      "refOligonuc": "ACACTAGCCATCCTTACTGCGCTTCG",
       "primerOligonuc": "ACACTAGCCATCCTTACTGCGCTTCG",
       "range": {
         "begin": 26331,
         "end": 26357
-      }
+      },
+      "refOligonuc": "ACACTAGCCATCCTTACTGCGCTTCG",
+      "source": "Charité (Germany)",
+      "target": "E"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "E",
       "name": "Charité_E_R",
-      "refOligonuc": "TGTGTGCGTACTGCTGCAATAT",
       "primerOligonuc": "TGTGTGCGTACTGCTGCAATAT",
       "range": {
         "begin": 26359,
         "end": 26381
-      }
+      },
+      "refOligonuc": "TGTGTGCGTACTGCTGCAATAT",
+      "source": "Charité (Germany)",
+      "target": "E"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "N",
       "name": "Charité_N_F",
-      "refOligonuc": "CACATTGGCACCCGCAATC",
       "primerOligonuc": "CACATTGGCACCCGCAATC",
       "range": {
         "begin": 28705,
         "end": 28724
-      }
+      },
+      "refOligonuc": "CACATTGGCACCCGCAATC",
+      "source": "Charité (Germany)",
+      "target": "N"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "N",
       "name": "Charité_N_P",
-      "refOligonuc": "ACTTCCTCAAGGAACAACATTGCCA",
       "primerOligonuc": "ACTTCCTCAAGGAACAACATTGCCA",
       "range": {
         "begin": 28752,
         "end": 28777
-      }
+      },
+      "refOligonuc": "ACTTCCTCAAGGAACAACATTGCCA",
+      "source": "Charité (Germany)",
+      "target": "N"
     },
     {
-      "source": "Charité (Germany)",
-      "target": "N",
       "name": "Charité_N_R",
-      "refOligonuc": "CAAGCCTCTTCTCGTTCCTC",
       "primerOligonuc": "CAAGCCTCTTCTCGTTCCTC",
       "range": {
         "begin": 28813,
         "end": 28833
-      }
+      },
+      "refOligonuc": "CAAGCCTCTTCTCGTTCCTC",
+      "source": "Charité (Germany)",
+      "target": "N"
     },
     {
-      "source": "HKU (Hong Kong)",
-      "target": "ORF1b-nsp14",
       "name": "HKU_ORF_F",
-      "refOligonuc": "TGGGGTTTTACAGGTAACCT",
+      "nonAcgts": [
+        "6Y",
+        "12R"
+      ],
       "primerOligonuc": "TGGGGYTTTACRGGTAACCT",
       "range": {
         "begin": 18777,
         "end": 18797
       },
-      "nonAcgts": [
-        "6Y",
-        "12R"
-      ]
+      "refOligonuc": "TGGGGTTTTACAGGTAACCT",
+      "source": "HKU (Hong Kong)",
+      "target": "ORF1b-nsp14"
     },
     {
-      "source": "HKU (Hong Kong)",
-      "target": "ORF1b-nsp14",
       "name": "HKU_ORF_P",
-      "refOligonuc": "TAGTTGTGATGCAATCATGACTAG",
+      "nonAcgts": [
+        "13W"
+      ],
       "primerOligonuc": "TAGTTGTGATGCWATCATGACTAG",
       "range": {
         "begin": 18848,
         "end": 18872
       },
-      "nonAcgts": [
-        "13W"
-      ]
+      "refOligonuc": "TAGTTGTGATGCAATCATGACTAG",
+      "source": "HKU (Hong Kong)",
+      "target": "ORF1b-nsp14"
     },
     {
-      "source": "HKU (Hong Kong)",
-      "target": "ORF1b-nsp14",
       "name": "HKU_ORF_R",
-      "refOligonuc": "GAGTGCTTTGTTAAGCGTGTT",
+      "nonAcgts": [
+        "18Y"
+      ],
       "primerOligonuc": "GAGTGCTTTGTTAAGCGYGTT",
       "range": {
         "begin": 18888,
         "end": 18909
       },
-      "nonAcgts": [
-        "18Y"
-      ]
+      "refOligonuc": "GAGTGCTTTGTTAAGCGTGTT",
+      "source": "HKU (Hong Kong)",
+      "target": "ORF1b-nsp14"
     },
     {
-      "source": "HKU (Hong Kong)",
-      "target": "N",
       "name": "HKU_N_F",
-      "refOligonuc": "TAATCAGACAAGGAACTGATTA",
       "primerOligonuc": "TAATCAGACAAGGAACTGATTA",
       "range": {
         "begin": 29144,
         "end": 29166
-      }
+      },
+      "refOligonuc": "TAATCAGACAAGGAACTGATTA",
+      "source": "HKU (Hong Kong)",
+      "target": "N"
     },
     {
-      "source": "HKU (Hong Kong)",
-      "target": "N",
       "name": "HKU_N_P",
-      "refOligonuc": "CCGCAAATTGCACAATTTGC",
       "primerOligonuc": "CCGCAAATTGCACAATTTGC",
       "range": {
         "begin": 29176,
         "end": 29196
-      }
+      },
+      "refOligonuc": "CCGCAAATTGCACAATTTGC",
+      "source": "HKU (Hong Kong)",
+      "target": "N"
     },
     {
-      "source": "HKU (Hong Kong)",
-      "target": "N",
       "name": "HKU_N_R",
-      "refOligonuc": "CATGGAAGTCACACCTTCG",
       "primerOligonuc": "CATGGAAGTCACACCTTCG",
       "range": {
         "begin": 29235,
         "end": 29254
-      }
+      },
+      "refOligonuc": "CATGGAAGTCACACCTTCG",
+      "source": "HKU (Hong Kong)",
+      "target": "N"
     },
     {
-      "source": "China CDC (China)",
-      "target": "N",
       "name": "ChinaCDC_N_F",
-      "refOligonuc": "GGGGAACTTCTCCTGCTAGAAT",
       "primerOligonuc": "GGGGAACTTCTCCTGCTAGAAT",
       "range": {
         "begin": 28880,
         "end": 28902
-      }
+      },
+      "refOligonuc": "GGGGAACTTCTCCTGCTAGAAT",
+      "source": "China CDC (China)",
+      "target": "N"
     },
     {
-      "source": "China CDC (China)",
-      "target": "N",
       "name": "ChinaCDC_N_P",
-      "refOligonuc": "TTGCTGCTGCTTGACAGATT",
       "primerOligonuc": "TTGCTGCTGCTTGACAGATT",
       "range": {
         "begin": 28933,
         "end": 28953
-      }
+      },
+      "refOligonuc": "TTGCTGCTGCTTGACAGATT",
+      "source": "China CDC (China)",
+      "target": "N"
     },
     {
-      "source": "China CDC (China)",
-      "target": "N",
       "name": "ChinaCDC_N_R",
-      "refOligonuc": "CAGCTTGAGAGCAAAATGTCTG",
       "primerOligonuc": "CAGCTTGAGAGCAAAATGTCTG",
       "range": {
         "begin": 28957,
         "end": 28979
-      }
+      },
+      "refOligonuc": "CAGCTTGAGAGCAAAATGTCTG",
+      "source": "China CDC (China)",
+      "target": "N"
     },
     {
-      "source": "China CDC (China)",
-      "target": "ORF1ab-nsp10",
       "name": "ChinaCDC_ORF_F",
-      "refOligonuc": "CCCTGTGGGTTTTACACTTAA",
       "primerOligonuc": "CCCTGTGGGTTTTACACTTAA",
       "range": {
         "begin": 13341,
         "end": 13362
-      }
+      },
+      "refOligonuc": "CCCTGTGGGTTTTACACTTAA",
+      "source": "China CDC (China)",
+      "target": "ORF1ab-nsp10"
     },
     {
-      "source": "China CDC (China)",
-      "target": "ORF1ab-nsp10",
       "name": "ChinaCDC_ORF_P",
-      "refOligonuc": "CCGTCTGCGGTATGTGGAAAGGTTATGG",
       "primerOligonuc": "CCGTCTGCGGTATGTGGAAAGGTTATGG",
       "range": {
         "begin": 13376,
         "end": 13404
-      }
+      },
+      "refOligonuc": "CCGTCTGCGGTATGTGGAAAGGTTATGG",
+      "source": "China CDC (China)",
+      "target": "ORF1ab-nsp10"
     },
     {
-      "source": "China CDC (China)",
-      "target": "ORF1ab-nsp10",
       "name": "ChinaCDC_ORF_R",
-      "refOligonuc": "TCAGCTGATGCACAATCGT",
       "primerOligonuc": "TCAGCTGATGCACAATCGT",
       "range": {
         "begin": 13441,
         "end": 13460
-      }
+      },
+      "refOligonuc": "TCAGCTGATGCACAATCGT",
+      "source": "China CDC (China)",
+      "target": "ORF1ab-nsp10"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N1",
       "name": "USCDC_N1_F",
-      "refOligonuc": "GACCCCAAAATCAGCGAAAT",
       "primerOligonuc": "GACCCCAAAATCAGCGAAAT",
       "range": {
         "begin": 28286,
         "end": 28306
-      }
+      },
+      "refOligonuc": "GACCCCAAAATCAGCGAAAT",
+      "source": "US CDC (United States)",
+      "target": "N1"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N1",
       "name": "USCDC_N1_P",
-      "refOligonuc": "ACCCCGCATTACGTTTGGTGGACC",
       "primerOligonuc": "ACCCCGCATTACGTTTGGTGGACC",
       "range": {
         "begin": 28308,
         "end": 28332
-      }
+      },
+      "refOligonuc": "ACCCCGCATTACGTTTGGTGGACC",
+      "source": "US CDC (United States)",
+      "target": "N1"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N1",
       "name": "USCDC_N1_R",
-      "refOligonuc": "CAGATTCAACTGGCAGTAACCAGA",
       "primerOligonuc": "CAGATTCAACTGGCAGTAACCAGA",
       "range": {
         "begin": 28334,
         "end": 28358
-      }
+      },
+      "refOligonuc": "CAGATTCAACTGGCAGTAACCAGA",
+      "source": "US CDC (United States)",
+      "target": "N1"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N2",
       "name": "USCDC_N2_F",
-      "refOligonuc": "TTACAAACATTGGCCGCAAA",
       "primerOligonuc": "TTACAAACATTGGCCGCAAA",
       "range": {
         "begin": 29163,
         "end": 29183
-      }
+      },
+      "refOligonuc": "TTACAAACATTGGCCGCAAA",
+      "source": "US CDC (United States)",
+      "target": "N2"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N2",
       "name": "USCDC_N2_P",
-      "refOligonuc": "ACAATTTGCCCCCAGCGCTTCAG",
       "primerOligonuc": "ACAATTTGCCCCCAGCGCTTCAG",
       "range": {
         "begin": 29187,
         "end": 29210
-      }
+      },
+      "refOligonuc": "ACAATTTGCCCCCAGCGCTTCAG",
+      "source": "US CDC (United States)",
+      "target": "N2"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N2",
       "name": "USCDC_N2_R",
-      "refOligonuc": "TTCTTCGGAATGTCGCGC",
       "primerOligonuc": "TTCTTCGGAATGTCGCGC",
       "range": {
         "begin": 29212,
         "end": 29230
-      }
+      },
+      "refOligonuc": "TTCTTCGGAATGTCGCGC",
+      "source": "US CDC (United States)",
+      "target": "N2"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N3",
       "name": "USCDC_N3_F",
-      "refOligonuc": "GGGAGCCTTGAATACACCAAAA",
       "primerOligonuc": "GGGAGCCTTGAATACACCAAAA",
       "range": {
         "begin": 28680,
         "end": 28702
-      }
+      },
+      "refOligonuc": "GGGAGCCTTGAATACACCAAAA",
+      "source": "US CDC (United States)",
+      "target": "N3"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N3",
       "name": "USCDC_N3_P",
-      "refOligonuc": "ATCACATTGGCACCCGCAATCCTG",
+      "nonAcgts": [
+        "2Y"
+      ],
       "primerOligonuc": "AYCACATTGGCACCCGCAATCCTG",
       "range": {
         "begin": 28703,
         "end": 28727
       },
-      "nonAcgts": [
-        "2Y"
-      ]
+      "refOligonuc": "ATCACATTGGCACCCGCAATCCTG",
+      "source": "US CDC (United States)",
+      "target": "N3"
     },
     {
-      "source": "US CDC (United States)",
-      "target": "N3",
       "name": "USCDC_N3_R",
-      "refOligonuc": "CAATGCTGCAATCGTGCTACA",
       "primerOligonuc": "CAATGCTGCAATCGTGCTACA",
       "range": {
         "begin": 28731,
         "end": 28752
-      }
+      },
+      "refOligonuc": "CAATGCTGCAATCGTGCTACA",
+      "source": "US CDC (United States)",
+      "target": "N3"
     },
     {
-      "source": "Institut Pasteur, Paris (France)",
-      "target": "RdRp",
       "name": "Pasteur_IP2_F",
-      "refOligonuc": "ATGAGCTTAGTCCTGTTG",
       "primerOligonuc": "ATGAGCTTAGTCCTGTTG",
       "range": {
         "begin": 12689,
         "end": 12707
-      }
+      },
+      "refOligonuc": "ATGAGCTTAGTCCTGTTG",
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp"
     },
     {
-      "source": "Institut Pasteur, Paris (France)",
-      "target": "RdRp",
       "name": "Pasteur_IP2_P",
-      "refOligonuc": "AGATGTCTTGTGCTGCCGGTA",
       "primerOligonuc": "AGATGTCTTGTGCTGCCGGTA",
       "range": {
         "begin": 12716,
         "end": 12737
-      }
+      },
+      "refOligonuc": "AGATGTCTTGTGCTGCCGGTA",
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp"
     },
     {
-      "source": "Institut Pasteur, Paris (France)",
-      "target": "RdRp",
       "name": "Pasteur_IP2_R",
-      "refOligonuc": "ACAACACAACAAAGGGAG",
       "primerOligonuc": "ACAACACAACAAAGGGAG",
       "range": {
         "begin": 12779,
         "end": 12797
-      }
+      },
+      "refOligonuc": "ACAACACAACAAAGGGAG",
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp"
     },
     {
-      "source": "Institut Pasteur, Paris (France)",
-      "target": "RdRp",
       "name": "Pasteur_IP4_F",
-      "refOligonuc": "GGTAACTGGTATGATTTCG",
       "primerOligonuc": "GGTAACTGGTATGATTTCG",
       "range": {
         "begin": 14079,
         "end": 14098
-      }
+      },
+      "refOligonuc": "GGTAACTGGTATGATTTCG",
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp"
     },
     {
-      "source": "Institut Pasteur, Paris (France)",
-      "target": "RdRp",
       "name": "Pasteur_IP4_P",
-      "refOligonuc": "TCATACAAACCACGCCAGG",
       "primerOligonuc": "TCATACAAACCACGCCAGG",
       "range": {
         "begin": 14104,
         "end": 14123
-      }
+      },
+      "refOligonuc": "TCATACAAACCACGCCAGG",
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp"
     },
     {
-      "source": "Institut Pasteur, Paris (France)",
-      "target": "RdRp",
       "name": "Pasteur_IP4_R",
-      "refOligonuc": "CCTATATTAACCTTGACCAG",
       "primerOligonuc": "CCTATATTAACCTTGACCAG",
       "range": {
         "begin": 14166,
         "end": 14186
-      }
+      },
+      "refOligonuc": "CCTATATTAACCTTGACCAG",
+      "source": "Institut Pasteur, Paris (France)",
+      "target": "RdRp"
     }
   ],
   "qc": {
@@ -5110,5 +5110,5 @@
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2023-08-03T21:50:50Z"
+  "updatedAt": "2023-08-22T10:15:35Z"
 }

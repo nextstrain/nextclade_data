@@ -1,0 +1,16 @@
+{
+  "attributes": {
+    "name": {
+      "value": "flu/yam/pb2",
+      "valueFriendly": "UNKNOWN"
+    },
+    "reference": {
+      "value": "UNKNOWN",
+      "valueFriendly": "UNKNOWN"
+    }
+  },
+  "deprecated": false,
+  "experimental": true,
+  "schemaVersion": "3.0.0",
+  "updatedAt": "2023-08-22T10:15:35Z"
+}
