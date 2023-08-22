@@ -142,6 +142,14 @@ def ensure_dir(file_path):
   mkdir(dir_path)
 
 
+def make_zip(input_dir, out_zip):
+  shutil.make_archive(
+    base_name=out_zip,
+    format='zip',
+    root_dir=input_dir,
+  )
+
+
 def now():
   return datetime.utcnow()
 
@@ -254,7 +262,10 @@ def git_commit_all(commit_message: str):
   return git_get_current_commit_hash()
 
 
-def github_create_release(repo: str, version: str, commit_hash: str, release_notes: str):
+def github_create_release(repo: str, version: str, commit_hash: str, release_notes: str, files=None):
+  if files is None:
+    files = []
+  files = " ".join(quote(files))
   run(
     f"""
     gh release create \
@@ -263,6 +274,7 @@ def github_create_release(repo: str, version: str, commit_hash: str, release_not
       --title "{version}" \
       --target "{commit_hash}" \
       --notes-file - \
+      {files}
     """,
     stdin=release_notes
   )

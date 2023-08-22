@@ -9,13 +9,13 @@ from os.path import dirname, realpath, join, relpath
 from utils import json_read, find_files, dict_get, git_get_initial_commit_hash, git_get_modified_files, first, \
   find_index_by, json_write, now_iso, git_check_tag, iso_to_iso_safe, file_read, file_write, \
   dict_get_required, dict_set, git_commit_all, github_create_release, git_push, git_dir_is_clean, \
-  git_get_dirty_files, git_pull, unique
+  git_get_dirty_files, git_pull, unique, copy, make_zip
 
 REPO = "neherlab/nextclade_data"
 THIS_DIR = dirname(realpath(__file__))
 PROJECT_ROOT_DIR = realpath(join(THIS_DIR, ".."))
 DATA_INPUT_DIR = realpath(join(PROJECT_ROOT_DIR, "data_v3"))
-DATA_INPUT_DIR_OLD = realpath(join(PROJECT_ROOT_DIR, "data"))
+DATA_OUTPUT_DIR = realpath(join(PROJECT_ROOT_DIR, "data_v3_output"))
 
 logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
@@ -85,7 +85,7 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
 
   release_notes = changelog_prepare(dataset, updated_at, changelog_path)
 
-  return {"dataset": dataset, "release_notes": release_notes}
+  return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
 
 
 def get_dataset_name(dataset):
@@ -94,13 +94,13 @@ def get_dataset_name(dataset):
 
 
 def main():
-  if not git_dir_is_clean():
-    dirty_files = "\n  ".join(git_get_dirty_files())
-    raise ValueError(
-      f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first:\n  {dirty_files}"
-    )
-
-  git_pull()
+  # if not git_dir_is_clean():
+  #   dirty_files = "\n  ".join(git_get_dirty_files())
+  #   raise ValueError(
+  #     f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first:\n  {dirty_files}"
+  #   )
+  #
+  # git_pull()
 
   index_json_path = join(DATA_INPUT_DIR, "index.json")
   index_json = json_read(index_json_path)
@@ -138,6 +138,8 @@ def main():
     dict_set(pathogen_json, ["updatedAt"], updated_at)
     json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
+    create_dataset_package(dataset, tag, dataset_dir)
+
   if len(release_infos) == 0:
     l.info("No dataset modifications detected. Will not release anything.")
     return
@@ -153,11 +155,40 @@ def main():
   for release_info in release_infos:
     release_notes += f'\n{release_info["release_notes"]}\n\n'
 
+  create_release_package(release_notes)
+  release_files = list(find_files("*", join(DATA_OUTPUT_DIR, "github_releases")))
+
   l.info(f"Commiting changes for '{tag}'")
-  commit_hash = git_commit_all(f"chore: prepare release")
+  commit_hash = git_commit_all(f"chore: release '{tag}'")
   l.info(f"Releasing '{tag}' (commit: '{commit_hash}')")
   git_push()
-  github_create_release(repo=REPO, version=tag, commit_hash=commit_hash, release_notes=release_notes)
+  github_create_release(
+    repo=REPO,
+    version=tag,
+    commit_hash=commit_hash,
+    release_notes=release_notes,
+    files=release_files
+  )
+
+
+def create_release_package(release_notes):
+  copy(join(DATA_INPUT_DIR, "index.json"), join(DATA_OUTPUT_DIR, "server/"))
+  file_write(release_notes, join(DATA_OUTPUT_DIR, "github_releases", "CHANGELOG.md"))
+
+
+def create_dataset_package(dataset, tag, dataset_dir):
+  path = dataset["path"]
+  files = dataset["capabilities"]["files"]
+  out_dir = join(DATA_OUTPUT_DIR, "server", path, tag)
+  for _, file in files.items():
+    file = join(dataset_dir, file)
+    copy(file, f"{out_dir}/")  # trailing slash is required if destination is a directory
+
+  zip_basename = join(out_dir, "dataset")
+  make_zip(dataset_dir, zip_basename)
+
+  path_safe = path.replace("/", "__")
+  copy(f"{zip_basename}.zip", join(DATA_OUTPUT_DIR, "github_releases", f"{path_safe}__{tag}.zip"))
 
 
 if __name__ == '__main__':

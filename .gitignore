@@ -1,6 +1,7 @@
 /data_downloaded
 /data_output
 /data_temp
+/data_v3_output
 \.env
 .DS_Store
 .vscode
