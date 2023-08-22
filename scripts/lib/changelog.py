@@ -13,7 +13,7 @@ def changelog_prepare(dataset, updated_at, changelog_path):
   full_changelog = file_read(changelog_path).replace(f"## Unreleased", f"## {updated_at}")
   file_write(full_changelog, changelog_path)
 
-  attr_table = format_dataset_attributes_md_table(dataset)
+  attr_table = format_dataset_attributes_md_table(dict_get_required(dataset, ["attributes"]))
   release_notes = release_notes.replace(
     "## Unreleased",
     f"""### {path}\n\n{attr_table}""".strip("\n ")
@@ -38,10 +38,10 @@ def changelog_get_unreleased_section(changelog_path: str):
   return release_notes.strip()
 
 
-def format_dataset_attributes_md_table(dataset):
+def format_dataset_attributes_md_table(attributes):
   attr_table = f"| {'attribute':20} | {'value':20} | {'value friendly':40} |\n"
   attr_table += f"| {'-' * 20} | {'-' * 20} | {'-' * 40} |\n"
-  for attr_name, attr_val in dict_get_required(dataset, ["attributes"]).items():
+  for attr_name, attr_val in attributes.items():
     value = attr_val["value"]
     value_friendly = dict_get(attr_val, ["valueFriendly"]) or ""
     attr_table += f'| {attr_name:20} | {value:20} | {value_friendly:40} |\n'

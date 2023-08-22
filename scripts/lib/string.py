@@ -15,3 +15,10 @@ def append(s: List[str], symbol: str):
 
 def prepend(s: List[str], symbol: str):
   return list(f"{symbol}{s}")
+
+
+def removesuffix(s, suffix):
+  if s.endswith(suffix):
+    return s[:-len(suffix)]
+  else:
+    return s

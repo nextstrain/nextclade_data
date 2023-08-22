@@ -132,7 +132,7 @@ def sort_datasets(datasets, dataset_order):
   return [dataset for x in dataset_order for dataset in datasets if dataset["path"] == x]
 
 
-def make_index():
+def main():
   if not git_dir_is_clean():
     dirty_files = "\n  ".join(git_get_dirty_files())
     raise ValueError(
@@ -305,4 +305,4 @@ def get_dataset_name_friendly(dataset):
 
 
 if __name__ == '__main__':
-  make_index()
+  main()
