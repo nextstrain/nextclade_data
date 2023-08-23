@@ -52,7 +52,7 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
   if isfile(pathogen_json_path):
     primers = dict_get(json_read(pathogen_json_path), ["primers"])
 
-  if isfile(join(output_dir, "tree.json")):
+  if isfile(join(input_dir, "tree.json")):
     tree = json_read(join(input_dir, 'tree.json'))
     process_tree_json(tree, virus_properties, join(output_dir, 'tree.json'))
 
