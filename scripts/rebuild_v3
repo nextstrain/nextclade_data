@@ -21,12 +21,6 @@ logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
 
 
-def check_file(dataset_dir, filename):
-  if isfile(join(dataset_dir, filename)):
-    return filename
-  return None
-
-
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   reference_fasta_path = join(dataset_dir, "reference.fasta")
   if not isfile(reference_fasta_path):
@@ -55,15 +49,6 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
       qc.append(k)
 
   return dict_cleanup({
-    "files": {
-      "reference": "reference.fasta",
-      "genomeAnnotation": check_file(dataset_dir, "genome_annotation.gff3"),
-      "treeJson": check_file(dataset_dir, "tree.json"),
-      "pathogenJson": check_file(dataset_dir, "pathogen.json"),
-      "examples": check_file(dataset_dir, "sequences.fasta"),
-      "readme": check_file(dataset_dir, "README.md"),
-      "changelog": check_file(dataset_dir, "CHANGELOG.md"),
-    },
     "qc": qc,
     "primers": True if len(dict_get(pathogen_json, ["primers"]) or []) > 0 else None,
     "other": other
@@ -87,6 +72,7 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else None,
     "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else None,
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
+    "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
     "updatedAt": updated_at,
     # "schemaVersion": dict_get(pathogen_json, ["schemaVersion"]),
@@ -243,7 +229,7 @@ def prepare_dataset_release_infos(args, datasets, tag, updated_at):
     dict_set(pathogen_json, ["updatedAt"], updated_at)
     json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
-    create_dataset_package(args, dataset, tag, dataset_dir)
+    create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir)
   return release_infos
 
 
@@ -306,9 +292,9 @@ def create_release_package(args, release_notes):
   file_write(release_notes, join(args.output_dir, "github_releases", "CHANGELOG.md"))
 
 
-def create_dataset_package(args, dataset, tag, dataset_dir):
+def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   path = dataset["path"]
-  files = dataset["capabilities"]["files"]
+  files = pathogen_json["files"]
   out_dir = join(args.output_dir, "server", path, tag)
   for _, file in files.items():
     file = join(dataset_dir, file)

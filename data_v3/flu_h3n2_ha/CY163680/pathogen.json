@@ -38,6 +38,14 @@
   "deprecated": false,
   "enabled": true,
   "experimental": false,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
   "geneOrderPreference": [
     "HA1",
     "HA2"
@@ -74,5 +82,5 @@
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2023-08-22T10:15:35Z"
+  "updatedAt": "2023-08-23T12:09:46Z"
 }

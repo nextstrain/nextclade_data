@@ -21,6 +21,12 @@ DATA_V2_EXPERIMENTAL_INPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data/d
 DATA_V3_OUTPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data_v3"))
 
 
+def check_file(dataset_dir, filename):
+  if isfile(join(dataset_dir, filename)):
+    return filename
+  return None
+
+
 def process_tree_json(tree: dict, virus_properties: dict, output_tree_json_path: str):
   placementMaskRanges = virus_properties.get("placementMaskRanges")
   if placementMaskRanges is not None:
@@ -69,40 +75,6 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
 
   dict_remove_many(qc, ["schemaVersion"])
 
-  pathogen_json = {
-    **tag_json,
-    "updatedAt": now_iso(),
-    "attributes": attributes,
-    "primers": primers,
-    "qc": qc,
-    "mutLabels": {
-      "nucMutLabelMap": virus_properties.get("nucMutLabelMap"),
-    },
-    **virus_properties,
-    "experimental": tag_json.get("experimental") or False,
-    "deprecated": False,
-    "schemaVersion": "3.0.0",
-  }
-
-  dict_remove_many(pathogen_json, [
-    "comment",
-    "compatibility",
-    "defaultRef",
-    "files",
-    "metadata",
-    "name",
-    "nameFriendly",
-    "nucMutLabelMap",
-    "nucMutLabelMapReverse",
-    "placementMaskRanges",
-    "reference",
-    "tag",
-  ])
-
-  pathogen_json = dict_cleanup(pathogen_json)
-
-  json_write(pathogen_json, join(output_dir, "pathogen.json"))
-
   readme_path = join(output_dir, "README.md")
   if not isfile(readme_path):
     attr_table = format_dataset_attributes_md_table(attributes)
@@ -126,6 +98,47 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
       "## Unreleased\n\nInitial release for Nextclade v3!\n\nThis dataset is converted from the corresponding older dataset for Nextclade v2. You can find old versions of datasets here: https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets\n\nRead more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
       changelog_path
     )
+
+  pathogen_json = {
+    **tag_json,
+    "files": {
+      "reference": "reference.fasta",
+      "genomeAnnotation": check_file(output_dir, "genome_annotation.gff3"),
+      "treeJson": check_file(output_dir, "tree.json"),
+      "examples": check_file(output_dir, "sequences.fasta"),
+      "readme": check_file(output_dir, "README.md"),
+      "changelog": check_file(output_dir, "CHANGELOG.md"),
+    },
+    "updatedAt": now_iso(),
+    "attributes": attributes,
+    "primers": primers,
+    "qc": qc,
+    "mutLabels": {
+      "nucMutLabelMap": virus_properties.get("nucMutLabelMap"),
+    },
+    **virus_properties,
+    "experimental": tag_json.get("experimental") or False,
+    "deprecated": False,
+    "schemaVersion": "3.0.0",
+  }
+
+  dict_remove_many(pathogen_json, [
+    "comment",
+    "compatibility",
+    "defaultRef",
+    "metadata",
+    "name",
+    "nameFriendly",
+    "nucMutLabelMap",
+    "nucMutLabelMapReverse",
+    "placementMaskRanges",
+    "reference",
+    "tag",
+  ])
+
+  pathogen_json = dict_cleanup(pathogen_json)
+
+  json_write(pathogen_json, join(output_dir, "pathogen.json"))
 
 
 def convert_datasets_mature():

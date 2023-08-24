@@ -42,16 +42,15 @@
           "valueFriendly": "Wuhan-Hu-1/2019"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "readme": "README.md",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -65,7 +64,10 @@
           "mutLabels"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:53Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
       "path": "sars-cov-2-21L/BA.2",
@@ -80,15 +82,15 @@
           "valueFriendly": "BA.2"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -102,373 +104,10 @@
           "phenotypeData"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:52Z"
-    },
-    {
-      "path": "flu_h1n1pdm_ha/CY121680",
-      "url": "flu_h1n1pdm_ha/CY121680",
-      "attributes": {
-        "name": {
-          "value": "flu_h1n1pdm_ha",
-          "valueFriendly": "Influenza A H1N1pdm HA"
-        },
-        "reference": {
-          "value": "CY121680",
-          "valueFriendly": "A/California/07/2009"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:54Z"
-    },
-    {
-      "path": "flu_h1n1pdm_ha/MW626062",
-      "url": "flu_h1n1pdm_ha/MW626062",
-      "attributes": {
-        "name": {
-          "value": "flu_h1n1pdm_ha",
-          "valueFriendly": "Influenza A H1N1pdm HA"
-        },
-        "reference": {
-          "value": "MW626062",
-          "valueFriendly": "A/Wisconsin/588/2019"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:54Z"
-    },
-    {
-      "path": "flu_h1n1pdm_na/MW626056",
-      "url": "flu_h1n1pdm_na/MW626056",
-      "attributes": {
-        "name": {
-          "value": "flu_h1n1pdm_na",
-          "valueFriendly": "Influenza A H1N1pdm NA (Neuraminidase)"
-        },
-        "reference": {
-          "value": "MW626056",
-          "valueFriendly": "A/Wisconsin/588/2019"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:55Z"
-    },
-    {
-      "path": "flu_h3n2_ha/CY163680",
-      "url": "flu_h3n2_ha/CY163680",
-      "attributes": {
-        "name": {
-          "value": "flu_h3n2_ha",
-          "valueFriendly": "Influenza A H3N2 HA"
-        },
-        "reference": {
-          "value": "CY163680",
-          "valueFriendly": "A/Wisconsin/67/2005"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:51Z"
-    },
-    {
-      "path": "flu_h3n2_ha/EPI1857216",
-      "url": "flu_h3n2_ha/EPI1857216",
-      "attributes": {
-        "name": {
-          "value": "flu_h3n2_ha",
-          "valueFriendly": "Influenza A H3N2 HA"
-        },
-        "reference": {
-          "value": "EPI1857216",
-          "valueFriendly": "A/Darwin/6/2021"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "phenotypeData",
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:51Z"
-    },
-    {
-      "path": "flu_h3n2_na/EPI1857215",
-      "url": "flu_h3n2_na/EPI1857215",
-      "attributes": {
-        "name": {
-          "value": "flu_h3n2_na",
-          "valueFriendly": "Influenza A H3N2 NA (Neuraminidase)"
-        },
-        "reference": {
-          "value": "EPI1857215",
-          "valueFriendly": "A/Darwin/6/2021"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:54Z"
-    },
-    {
-      "path": "flu_vic_ha/KX058884",
-      "url": "flu_vic_ha/KX058884",
-      "attributes": {
-        "name": {
-          "value": "flu_vic_ha",
-          "valueFriendly": "Influenza B Victoria HA"
-        },
-        "reference": {
-          "value": "KX058884",
-          "valueFriendly": "B/Brisbane/60/2008"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:53Z"
-    },
-    {
-      "path": "flu_vic_na/CY073894",
-      "url": "flu_vic_na/CY073894",
-      "attributes": {
-        "name": {
-          "value": "flu_vic_na",
-          "valueFriendly": "Influenza B/Vic NA (Neuraminidase)"
-        },
-        "reference": {
-          "value": "CY073894",
-          "valueFriendly": "B/Brisbane/60/2008"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ],
-        "other": [
-          "aaMotifs"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:53Z"
-    },
-    {
-      "path": "flu_yam_ha/JN993010",
-      "url": "flu_yam_ha/JN993010",
-      "attributes": {
-        "name": {
-          "value": "flu_yam_ha",
-          "valueFriendly": "Influenza B Yamagata HA"
-        },
-        "reference": {
-          "value": "JN993010",
-          "valueFriendly": "B/Wisconsin/01/2010"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:55Z"
-    },
-    {
-      "path": "rsv_a/EPI_ISL_412866",
-      "url": "rsv_a/EPI_ISL_412866",
-      "attributes": {
-        "name": {
-          "value": "rsv_a",
-          "valueFriendly": "RSV-A"
-        },
-        "reference": {
-          "value": "EPI_ISL_412866",
-          "valueFriendly": "hRSV/A/England/397/2017"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:52Z"
-    },
-    {
-      "path": "rsv_b/EPI_ISL_1653999",
-      "url": "rsv_b/EPI_ISL_1653999",
-      "attributes": {
-        "name": {
-          "value": "rsv_b",
-          "valueFriendly": "RSV-B"
-        },
-        "reference": {
-          "value": "EPI_ISL_1653999",
-          "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "mixedSites",
-          "privateMutations",
-          "stopCodons"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:49Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
       "path": "MPXV/ancestral",
@@ -483,15 +122,15 @@
           "valueFriendly": "Reconstructed ancestral MPXV"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -500,7 +139,10 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:52Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
       "path": "hMPXV/NC_063383.1",
@@ -515,15 +157,15 @@
           "valueFriendly": "MPXV-M5312_HM12_Rivers"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -533,7 +175,10 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:50Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
       "path": "hMPXV_B1/pseudo_ON563414",
@@ -548,15 +193,15 @@
           "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -569,12 +214,413 @@
           "mutLabels"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:54Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "rsv_a/EPI_ISL_412866",
+      "url": "rsv_a/EPI_ISL_412866",
+      "attributes": {
+        "name": {
+          "value": "rsv_a",
+          "valueFriendly": "RSV-A"
+        },
+        "reference": {
+          "value": "EPI_ISL_412866",
+          "valueFriendly": "hRSV/A/England/397/2017"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "rsv_b/EPI_ISL_1653999",
+      "url": "rsv_b/EPI_ISL_1653999",
+      "attributes": {
+        "name": {
+          "value": "rsv_b",
+          "valueFriendly": "RSV-B"
+        },
+        "reference": {
+          "value": "EPI_ISL_1653999",
+          "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_h1n1pdm_ha/CY121680",
+      "url": "flu_h1n1pdm_ha/CY121680",
+      "attributes": {
+        "name": {
+          "value": "flu_h1n1pdm_ha",
+          "valueFriendly": "Influenza A H1N1pdm HA"
+        },
+        "reference": {
+          "value": "CY121680",
+          "valueFriendly": "A/California/07/2009"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_h1n1pdm_ha/MW626062",
+      "url": "flu_h1n1pdm_ha/MW626062",
+      "attributes": {
+        "name": {
+          "value": "flu_h1n1pdm_ha",
+          "valueFriendly": "Influenza A H1N1pdm HA"
+        },
+        "reference": {
+          "value": "MW626062",
+          "valueFriendly": "A/Wisconsin/588/2019"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_h1n1pdm_na/MW626056",
+      "url": "flu_h1n1pdm_na/MW626056",
+      "attributes": {
+        "name": {
+          "value": "flu_h1n1pdm_na",
+          "valueFriendly": "Influenza A H1N1pdm NA (Neuraminidase)"
+        },
+        "reference": {
+          "value": "MW626056",
+          "valueFriendly": "A/Wisconsin/588/2019"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_h3n2_ha/CY163680",
+      "url": "flu_h3n2_ha/CY163680",
+      "attributes": {
+        "name": {
+          "value": "flu_h3n2_ha",
+          "valueFriendly": "Influenza A H3N2 HA"
+        },
+        "reference": {
+          "value": "CY163680",
+          "valueFriendly": "A/Wisconsin/67/2005"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_h3n2_ha/EPI1857216",
+      "url": "flu_h3n2_ha/EPI1857216",
+      "attributes": {
+        "name": {
+          "value": "flu_h3n2_ha",
+          "valueFriendly": "Influenza A H3N2 HA"
+        },
+        "reference": {
+          "value": "EPI1857216",
+          "valueFriendly": "A/Darwin/6/2021"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "phenotypeData",
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_h3n2_na/EPI1857215",
+      "url": "flu_h3n2_na/EPI1857215",
+      "attributes": {
+        "name": {
+          "value": "flu_h3n2_na",
+          "valueFriendly": "Influenza A H3N2 NA (Neuraminidase)"
+        },
+        "reference": {
+          "value": "EPI1857215",
+          "valueFriendly": "A/Darwin/6/2021"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_vic_ha/KX058884",
+      "url": "flu_vic_ha/KX058884",
+      "attributes": {
+        "name": {
+          "value": "flu_vic_ha",
+          "valueFriendly": "Influenza B Victoria HA"
+        },
+        "reference": {
+          "value": "KX058884",
+          "valueFriendly": "B/Brisbane/60/2008"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_vic_na/CY073894",
+      "url": "flu_vic_na/CY073894",
+      "attributes": {
+        "name": {
+          "value": "flu_vic_na",
+          "valueFriendly": "Influenza B/Vic NA (Neuraminidase)"
+        },
+        "reference": {
+          "value": "CY073894",
+          "valueFriendly": "B/Brisbane/60/2008"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ],
+        "other": [
+          "aaMotifs"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu_yam_ha/JN993010",
+      "url": "flu_yam_ha/JN993010",
+      "attributes": {
+        "name": {
+          "value": "flu_yam_ha",
+          "valueFriendly": "Influenza B Yamagata HA"
+        },
+        "reference": {
+          "value": "JN993010",
+          "valueFriendly": "B/Wisconsin/01/2010"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "mixedSites",
+          "privateMutations",
+          "stopCodons"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
       "path": "sars-cov-2-no-recomb/MN908947",
       "url": "sars-cov-2-no-recomb/MN908947",
-      "deprecated": true,
       "attributes": {
         "name": {
           "value": "sars-cov-2-no-recomb",
@@ -585,15 +631,15 @@
           "valueFriendly": "Wuhan-Hu-1/2019"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "missingData",
@@ -607,11 +653,41 @@
           "mutLabels"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:50Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "h1_na/UNKNOWN",
-      "url": "h1_na/UNKNOWN",
+      "path": "dummy1",
+      "url": "dummy1",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "dummy1",
+          "valueFriendly": "dummy1"
+        },
+        "reference": {
+          "value": "DU1MMY",
+          "valueFriendly": "DU1MMY"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "h1_na",
+      "url": "h1_na",
       "experimental": true,
       "attributes": {
         "name": {
@@ -623,14 +699,14 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -638,11 +714,14 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "hbv/UNKNOWN",
-      "url": "hbv/UNKNOWN",
+      "path": "hbv",
+      "url": "hbv",
       "experimental": true,
       "attributes": {
         "name": {
@@ -654,15 +733,15 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -670,11 +749,14 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "hiv/UNKNOWN",
-      "url": "hiv/UNKNOWN",
+      "path": "hiv",
+      "url": "hiv",
       "experimental": true,
       "attributes": {
         "name": {
@@ -686,15 +768,15 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -702,11 +784,14 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "hiv_mat/UNKNOWN",
-      "url": "hiv_mat/UNKNOWN",
+      "path": "hiv_mat",
+      "url": "hiv_mat",
       "experimental": true,
       "attributes": {
         "name": {
@@ -718,15 +803,15 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -734,11 +819,14 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "rsv-a/UNKNOWN",
-      "url": "rsv-a/UNKNOWN",
+      "path": "rsv-a",
+      "url": "rsv-a",
       "experimental": true,
       "attributes": {
         "name": {
@@ -750,14 +838,14 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -765,49 +853,14 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "sc2-big/MN908947",
-      "url": "sc2-big/MN908947",
-      "experimental": true,
-      "attributes": {
-        "name": {
-          "value": "sc2-big",
-          "valueFriendly": "UNKNOWN"
-        },
-        "reference": {
-          "value": "MN908947",
-          "valueFriendly": "UNKNOWN"
-        }
-      },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
-        },
-        "qc": [
-          "frameShifts",
-          "missingData",
-          "mixedSites",
-          "privateMutations",
-          "snpClusters",
-          "stopCodons"
-        ],
-        "primers": true,
-        "other": [
-          "mutLabels"
-        ]
-      },
-      "updatedAt": "2023-08-03T21:50:55Z"
-    },
-    {
-      "path": "sc2/UNKNOWN",
-      "url": "sc2/UNKNOWN",
+      "path": "sc2",
+      "url": "sc2",
       "experimental": true,
       "attributes": {
         "name": {
@@ -819,14 +872,14 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -834,11 +887,54 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "sc2_mat/UNKNOWN",
-      "url": "sc2_mat/UNKNOWN",
+      "path": "sc2-big",
+      "url": "sc2-big",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "sars-cov-2",
+          "valueFriendly": "sars-cov-2"
+        },
+        "reference": {
+          "value": "MN908947",
+          "valueFriendly": "MN908947"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
+      "capabilities": {
+        "qc": [
+          "frameShifts",
+          "missingData",
+          "mixedSites",
+          "privateMutations",
+          "snpClusters",
+          "stopCodons"
+        ],
+        "other": [
+          "mutLabels"
+        ]
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "sc2_mat",
+      "url": "sc2_mat",
       "experimental": true,
       "attributes": {
         "name": {
@@ -850,14 +946,14 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -865,11 +961,14 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "vic_na/UNKNOWN",
-      "url": "vic_na/UNKNOWN",
+      "path": "vic_na",
+      "url": "vic_na",
       "experimental": true,
       "attributes": {
         "name": {
@@ -881,14 +980,14 @@
           "valueFriendly": "UNKNOWN"
         }
       },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta",
+        "treeJson": "tree.json"
+      },
       "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "changelog": "CHANGELOG.md"
-        },
         "qc": [
           "frameShifts",
           "mixedSites",
@@ -896,35 +995,863 @@
           "stopCodons"
         ]
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     },
     {
-      "path": "dummy1/DU1MMY",
-      "url": "dummy1/DU1MMY",
+      "path": "adenovirus/hadv-a",
+      "url": "adenovirus/hadv-a",
       "experimental": true,
       "attributes": {
         "name": {
-          "value": "dummy1",
+          "value": "adenovirus/hadv-a",
           "valueFriendly": "UNKNOWN"
         },
         "reference": {
-          "value": "DU1MMY",
+          "value": "UNKNOWN",
           "valueFriendly": "UNKNOWN"
         }
       },
-      "capabilities": {
-        "files": {
-          "reference": "reference.fasta",
-          "genomeAnnotation": "genome_annotation.gff3",
-          "treeJson": "tree.json",
-          "pathogenJson": "pathogen.json",
-          "examples": "sequences.fasta",
-          "changelog": "CHANGELOG.md"
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "ebola",
+      "url": "ebola",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "ebola",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
         }
       },
-      "updatedAt": "2023-08-03T21:50:55Z"
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "enterovirus/d68",
+      "url": "enterovirus/d68",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "enterovirus/d68",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/ha",
+      "url": "flu/h1n1pdm/ha",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/ha",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/na",
+      "url": "flu/h1n1pdm/na",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/na",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/np",
+      "url": "flu/h1n1pdm/np",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/np",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/ns",
+      "url": "flu/h1n1pdm/ns",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/ns",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/pa",
+      "url": "flu/h1n1pdm/pa",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/pa",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/pb1",
+      "url": "flu/h1n1pdm/pb1",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/pb1",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h1n1pdm/pb2",
+      "url": "flu/h1n1pdm/pb2",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h1n1pdm/pb2",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/ha",
+      "url": "flu/h3n2/ha",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/ha",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/ma",
+      "url": "flu/h3n2/ma",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/ma",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/na",
+      "url": "flu/h3n2/na",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/na",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/np",
+      "url": "flu/h3n2/np",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/np",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/ns",
+      "url": "flu/h3n2/ns",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/ns",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/pa",
+      "url": "flu/h3n2/pa",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/pa",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/pb1",
+      "url": "flu/h3n2/pb1",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/pb1",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/h3n2/pb2",
+      "url": "flu/h3n2/pb2",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/h3n2/pb2",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/ha",
+      "url": "flu/vic/ha",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/ha",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/na",
+      "url": "flu/vic/na",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/na",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/np",
+      "url": "flu/vic/np",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/np",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/ns",
+      "url": "flu/vic/ns",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/ns",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/pa",
+      "url": "flu/vic/pa",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/pa",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/pb1",
+      "url": "flu/vic/pb1",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/pb1",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/vic/pb2",
+      "url": "flu/vic/pb2",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/vic/pb2",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/ha",
+      "url": "flu/yam/ha",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/ha",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/na",
+      "url": "flu/yam/na",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/na",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/np",
+      "url": "flu/yam/np",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/np",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/ns",
+      "url": "flu/yam/ns",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/ns",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/pa",
+      "url": "flu/yam/pa",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/pa",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/pb1",
+      "url": "flu/yam/pb1",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/pb1",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "flu/yam/pb2",
+      "url": "flu/yam/pb2",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "flu/yam/pb2",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
+    },
+    {
+      "path": "zika",
+      "url": "zika",
+      "experimental": true,
+      "attributes": {
+        "name": {
+          "value": "zika",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
+      },
+      "files": {
+        "changelog": "CHANGELOG.md",
+        "examples": "sequences.fasta",
+        "genomeAnnotation": "genome_annotation.gff3",
+        "readme": "README.md",
+        "reference": "reference.fasta"
+      },
+      "updatedAt": "2023-08-23T12:09:46Z",
+      "versions": [
+        "2023-08-23--12-09-46Z"
+      ]
     }
   ],
-  "updatedAt": "2023-08-21T14:28:13Z",
+  "updatedAt": "2023-08-23T12:09:46Z",
   "schemaVersion": "3.0.0"
 }
