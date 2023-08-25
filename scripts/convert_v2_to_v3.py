@@ -10,7 +10,6 @@ from typing import List
 
 from lib.changelog import format_dataset_attributes_md_table
 from lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
-from lib.date import now_iso
 from lib.fs import json_write, find_files, copy, json_read, file_write
 from lib.string import removesuffix
 
@@ -109,7 +108,6 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
       "readme": check_file(output_dir, "README.md"),
       "changelog": check_file(output_dir, "CHANGELOG.md"),
     },
-    "updatedAt": now_iso(),
     "attributes": attributes,
     "primers": primers,
     "qc": qc,
