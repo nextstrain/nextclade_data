@@ -251,12 +251,11 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
 
       release_infos.append(release_info)
 
-    version = {"updatedAt": updated_at, "tag": tag}
+    version = dict_cleanup({"updatedAt": None if tag == "unreleased" else updated_at, "tag": tag})
     versions.insert(0, version)
     dict_set(dataset, ["versions"], versions)
     dict_set(dataset, ["version"], version)
 
-    version = dict_cleanup({"updatedAt": None if tag == "unreleased" else updated_at, "tag": tag})
     dict_set(pathogen_json, ["version"], version)
     json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 

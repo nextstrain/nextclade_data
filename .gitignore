@@ -1,9 +1,9 @@
 /data_downloaded
 /data_output
 /data_temp
-/data_v3_output
 /data_v3_temp
 \.env
 .DS_Store
 .vscode
 *.pyc
+*.zip
