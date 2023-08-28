@@ -82,7 +82,7 @@ jobs:
       - name: "Deploy dataset server"
         if: ${{ endsWith(github.ref, '/master') || endsWith(github.ref, '/staging') || endsWith(github.ref, '/release') }}
         run: |
-          ./scripts/upload
+          ./scripts/upload 'data_output/'
 
       - name: "Upload build artifacts: dataset server"
         uses: actions/upload-artifact@v3
