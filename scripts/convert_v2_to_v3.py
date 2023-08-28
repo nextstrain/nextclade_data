@@ -3,22 +3,15 @@
 """
 Converts datasets from v2 to v3 format
 """
+import argparse
 import json
-import os
 from os.path import join, dirname, isfile, relpath
 from typing import List
-
 from lib.changelog import format_dataset_attributes_md_table
 from lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
 from lib.date import now_iso
 from lib.fs import json_write, find_files, copy, json_read, file_write
 from lib.string import removesuffix
-
-THIS_DIR = os.path.dirname(os.path.realpath(__file__))
-PROJECT_ROOT_DIR = os.path.realpath(join(THIS_DIR, ".."))
-DATA_V2_INPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data/datasets"))
-DATA_V2_EXPERIMENTAL_INPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data/datasets_experimental"))
-DATA_V3_OUTPUT_DIR = os.path.realpath(join(PROJECT_ROOT_DIR, "data_v3"))
 
 
 def check_file(dataset_dir, filename):
@@ -36,7 +29,13 @@ def process_tree_json(tree: dict, virus_properties: dict, output_tree_json_path:
   json_write(tree, output_tree_json_path, no_sort_keys=True)
 
 
-def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
+def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, params_individual=None):
+  if params is None:
+    params = {}
+
+  if params_individual is None:
+    params_individual = {}
+
   copy(join(input_dir, 'reference.fasta'), output_dir)
 
   if isfile(join(input_dir, 'genemap.gff')):
@@ -88,14 +87,20 @@ def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
       ref = f" based on reference \"{ref}\""
 
     file_write(
-      f"# Nextclade dataset for \"{name}\"{ref} ({path})\n\n\n## Dataset attributes\n\n{attr_table}\n\n## What is Nextclade dataset\n\nRead more about Nextclade datasets in Nextclade documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
+      f"# Nextclade dataset for \"{name}\"{ref} ({path})\n\n\n## Dataset attributes\n\n{attr_table}\n\n## What is "
+      f"Nextclade dataset\n\nRead more about Nextclade datasets in Nextclade documentation: "
+      f"https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
       readme_path
     )
 
   changelog_path = join(output_dir, "CHANGELOG.md")
   if not isfile(changelog_path):
     file_write(
-      "## Unreleased\n\nInitial release for Nextclade v3!\n\nThis dataset is converted from the corresponding older dataset for Nextclade v2. You can find old versions of datasets here: https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets\n\nRead more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
+      "## Unreleased\n\nInitial release for Nextclade v3!\n\nThis dataset is converted from the corresponding older "
+      "dataset for Nextclade v2. You can find old versions of datasets here: "
+      "https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets\n\nRead more about "
+      "Nextclade datasets in the documentation: "
+      "https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
       changelog_path
     )
 
@@ -121,8 +126,11 @@ def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
       "nucMutLabelMap": virus_properties.get("nucMutLabelMap"),
     },
     **virus_properties,
+    "official": tag_json.get("official") or False,
     "experimental": tag_json.get("experimental") or False,
-    "deprecated": False,
+    "deprecated": tag_json.get("deprecated") or False,
+    **params,
+    **(dict_get(params_individual, [path]) or {}),
   }
 
   dict_remove_many(pathogen_json, [
@@ -144,13 +152,19 @@ def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
   json_write(pathogen_json, join(output_dir, "pathogen.json"))
 
 
-def convert_datasets_mature(updated_at):
-  for dataset_json_path in find_files("dataset.json", DATA_V2_INPUT_DIR):
+def convert_datasets_mature(input_dir, output_dir, params=None, params_individual=None):
+  if params is None:
+    params = {}
+
+  if params_individual is None:
+    params_individual = {}
+
+  for dataset_json_path in find_files("dataset.json", input_dir):
     dataset_json = json_read(dataset_json_path)
-    dataset_dir = os.path.dirname(dataset_json_path)
+    dataset_dir = dirname(dataset_json_path)
     for dataset_ref_json_path in find_files("datasetRef.json", dataset_dir):
       dataset_ref_json = json_read(dataset_ref_json_path)
-      dataset_ref_dir = os.path.dirname(dataset_ref_json_path)
+      dataset_ref_dir = dirname(dataset_ref_json_path)
 
       version_jsons: List[dict] = []
       for tag_path in find_files("tag.json", dataset_ref_dir):
@@ -161,25 +175,30 @@ def convert_datasets_mature(updated_at):
       version_jsons.sort(key=lambda x: x["tag"], reverse=True)
       last_version_json = version_jsons[0]
 
-      tag_json = {**last_version_json, **dataset_json, **dataset_ref_json}
+      tag_json = {
+        **last_version_json,
+        **dataset_json,
+        **dataset_ref_json,
+      }
+
       name = tag_json["name"]
       ref_accession = tag_json["reference"]["accession"]
       tag = tag_json["tag"]
       path = f"{name}/{ref_accession}"
 
-      input_dir = f'{join(DATA_V2_INPUT_DIR, name, "references", ref_accession, "versions", tag, "files")}/'
-      output_dir = f'{join(DATA_V3_OUTPUT_DIR, path)}/'
+      full_input_dir = f'{join(input_dir, name, "references", ref_accession, "versions", tag, "files")}/'
+      full_output_dir = f'{join(output_dir, path)}/'
 
-      process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir)
+      process_pathogen_json(tag_json, path, full_input_dir, full_output_dir, params, params_individual)
 
 
-def convert_datasets_experimental(updated_at):
-  for ref_fasta_path in find_files("reference.fasta", DATA_V2_EXPERIMENTAL_INPUT_DIR):
-    input_dir = f"{dirname(ref_fasta_path)}/"
-    path = removesuffix(relpath(input_dir, DATA_V2_EXPERIMENTAL_INPUT_DIR), "/files")
-    output_dir = f"{join(DATA_V3_OUTPUT_DIR, path)}/"
+def convert_datasets_experimental(input_dir, output_dir, params):
+  for ref_fasta_path in find_files("reference.fasta", input_dir):
+    full_input_dir = f"{dirname(ref_fasta_path)}/"
+    path = removesuffix(relpath(full_input_dir, input_dir), "/files")
+    full_output_dir = f"{join(output_dir, path)}/"
 
-    tag_json_path = join(input_dir, "tag.json")
+    tag_json_path = join(full_input_dir, "tag.json")
     tag_json = {}
     if isfile(tag_json_path):
       tag_json = json_read(tag_json_path)
@@ -198,13 +217,39 @@ def convert_datasets_experimental(updated_at):
         "strainName": strain_name,
       },
       "experimental": True,
+      **params,
     }
 
-    process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir)
+    process_pathogen_json(tag_json, path, full_input_dir, full_output_dir)
+
+
+def parse_args():
+  parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  parser.add_argument('--input-dir', required=True, help='Directory with datasets in the old format')
+  parser.add_argument('--output-dir', required=True, help='Where to output datasets in the new format')
+  return parser.parse_args()
 
 
 if __name__ == '__main__':
+  args = parse_args()
+
   updated_at = now_iso()
 
-  convert_datasets_mature(updated_at)
-  convert_datasets_experimental(updated_at)
+  convert_datasets_mature(
+    input_dir=join(args.input_dir, "datasets"),
+    output_dir=join(args.output_dir, "nextstrain"),
+    params={"official": True},
+    params_individual={"sars-cov-2-21L/BA.2": {"deprecated": True}},
+  )
+
+  convert_datasets_experimental(
+    input_dir=join(args.input_dir, "datasets_experimental"),
+    output_dir=join(args.output_dir, "nextstrain"),
+    params={"official": True, "experimental": True},
+  )
+
+  convert_datasets_experimental(
+    input_dir=join(args.input_dir, "datasets_community"),
+    output_dir=join(args.output_dir, "community"),
+    params={"experimental": True},
+  )

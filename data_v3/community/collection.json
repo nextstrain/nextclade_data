@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "id": "community",
+    "title": "Community",
+    "description": "Set of datasets provided by community members",
+    "urls": [
+      {
+        "name": "source",
+        "url": "https://github.com/nextstrain/nextclade_data"
+      },
+      {
+        "name": "contact",
+        "url": "https://github.com/nextstrain/nextclade_data/issues"
+      }
+    ]
+  },
+  "dataset_order": [
+    "community/adenovirus/hadv-a"
+  ]
+}

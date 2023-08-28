@@ -1,0 +1,24 @@
+{
+  "attributes": {
+    "name": {
+      "value": "ebola",
+      "valueFriendly": "UNKNOWN"
+    },
+    "reference": {
+      "value": "UNKNOWN",
+      "valueFriendly": "UNKNOWN"
+    }
+  },
+  "deprecated": false,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta"
+  },
+  "official": true,
+  "schemaVersion": "3.0.0"
+}

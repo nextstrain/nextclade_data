@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "id": "nextstrain",
+    "title": "Nextstrain",
+    "description": "Set of official Nextclade datasets maintained by Nextstrain team",
+    "maintainers": [
+      {
+        "name": "Nextstrain team",
+        "url": "https://nextstrain.org"
+      }
+    ],
+    "urls": [
+      {
+        "name": "source",
+        "url": "https://github.com/nextstrain/nextclade_data"
+      },
+      {
+        "name": "contact",
+        "url": "https://github.com/nextstrain/nextclade_data/issues"
+      }
+    ]
+  },
+  "dataset_order": [
+    "nextstrain/sars-cov-2/MN908947",
+    "nextstrain/sars-cov-2-21L/BA.2",
+    "nextstrain/MPXV/ancestral",
+    "nextstrain/hMPXV/NC_063383.1",
+    "nextstrain/hMPXV_B1/pseudo_ON563414",
+    "nextstrain/rsv_a/EPI_ISL_412866",
+    "nextstrain/rsv_b/EPI_ISL_1653999",
+    "nextstrain/flu_h1n1pdm_ha/CY121680",
+    "nextstrain/flu_h1n1pdm_ha/MW626062",
+    "nextstrain/flu_h1n1pdm_na/MW626056",
+    "nextstrain/flu_h3n2_ha/CY163680",
+    "nextstrain/flu_h3n2_ha/EPI1857216",
+    "nextstrain/flu_h3n2_na/EPI1857215",
+    "nextstrain/flu_vic_ha/KX058884",
+    "nextstrain/flu_vic_na/CY073894",
+    "nextstrain/flu_yam_ha/JN993010",
+    "nextstrain/sars-cov-2-no-recomb/MN908947",
+    "nextstrain/dummy1",
+    "nextstrain/h1_na",
+    "nextstrain/hbv",
+    "nextstrain/hiv",
+    "nextstrain/hiv_mat",
+    "nextstrain/rsv-a",
+    "nextstrain/sc2",
+    "nextstrain/sc2-big",
+    "nextstrain/sc2_mat",
+    "nextstrain/vic_na",
+    "nextstrain/ebola",
+    "nextstrain/enterovirus/d68",
+    "nextstrain/flu/h1n1pdm/ha",
+    "nextstrain/flu/h1n1pdm/na",
+    "nextstrain/flu/h1n1pdm/np",
+    "nextstrain/flu/h1n1pdm/ns",
+    "nextstrain/flu/h1n1pdm/pa",
+    "nextstrain/flu/h1n1pdm/pb1",
+    "nextstrain/flu/h1n1pdm/pb2",
+    "nextstrain/flu/h3n2/ha",
+    "nextstrain/flu/h3n2/ma",
+    "nextstrain/flu/h3n2/na",
+    "nextstrain/flu/h3n2/np",
+    "nextstrain/flu/h3n2/ns",
+    "nextstrain/flu/h3n2/pa",
+    "nextstrain/flu/h3n2/pb1",
+    "nextstrain/flu/h3n2/pb2",
+    "nextstrain/flu/vic/ha",
+    "nextstrain/flu/vic/na",
+    "nextstrain/flu/vic/np",
+    "nextstrain/flu/vic/ns",
+    "nextstrain/flu/vic/pa",
+    "nextstrain/flu/vic/pb1",
+    "nextstrain/flu/vic/pb2",
+    "nextstrain/flu/yam/ha",
+    "nextstrain/flu/yam/na",
+    "nextstrain/flu/yam/np",
+    "nextstrain/flu/yam/ns",
+    "nextstrain/flu/yam/pa",
+    "nextstrain/flu/yam/pb1",
+    "nextstrain/flu/yam/pb2",
+    "nextstrain/zika"
+  ]
+}

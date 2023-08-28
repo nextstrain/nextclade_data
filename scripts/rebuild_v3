@@ -69,6 +69,7 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
   return dict_cleanup({
     "path": path,
     "url": quote(path),
+    "official": True if dict_get(pathogen_json, ["official"]) == True else False,
     "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else False,
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
     "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else False,
@@ -91,7 +92,8 @@ def get_new_dataset_order(datasets, dataset_order):
     )
 
   extra = set(dataset_order).difference(set(paths))
-  if len(extra):
+
+  if len(extra) > 0:
     raise ValueError(
       f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
       f"{format_list(extra)}. "
@@ -103,7 +105,7 @@ def get_new_dataset_order(datasets, dataset_order):
   if len(missing):
     l.info(
       f"Adding '.dataset_order' entries to 'collection.json' for the following datasets: {format_list(missing)}. "
-      f"Please reorder them manually as needed. This order is used when displaying datasets of the colelction in the "
+      f"Please reorder them manually as needed. This order is used when displaying datasets of the collection in the "
       f"user interface."
     )
     dataset_order += list(missing)
@@ -121,6 +123,10 @@ def parse_args():
   parser.add_argument('--output-dir', required=True, help='Where to output prepared files')
   parser.add_argument('--temp-dir', default=join(getcwd(), "data_v3_temp"),
                       help='Where to temporarily store release files')
+
+  parser.add_argument('--no-pull', action='store_false',
+                      help="Skip pulling latest changes from remote. Note that if "
+                           "there are incomatible chanhes this can create hard to resolve merge conflicts.")
   parser.add_argument('--allow-dirty', action='store_true',
                       help="Allow working directory to contain uncommited files. Note that these files will also be "
                            "commited and can potentially be released along with the datasets",
@@ -152,16 +158,47 @@ def main():
       f"override (not recommended):\n  {dirty_files}"
     )
 
-  git_pull()
+  if args.no_pull:
+    git_pull()
 
   updated_at = now_iso()
   tag = iso_to_iso_safe(updated_at)
   git_check_tag(tag)
 
-  collection_json = json_read(join(args.input_dir, "collection.json"))
+  collections = []
+  release_infos = []
+  for collection_json_path in find_files("collection.json", args.input_dir):
+    collection, release_infos = process_one_collection(collection_json_path, args, tag, updated_at)
+    collections.append(collection)
+    release_infos.extend(release_infos)
+
+  # if len(release_infos) == 0:
+  #   l.info("No dataset modifications detected. Will not release anything.")
+  #   return
+
+  index_json = {
+    "schemaVersion": "3.0.0",
+    "collections": collections,
+    "updatedAt": updated_at,
+  }
+
+  index_json_path = join(args.output_dir, "index.json")
+  json_write({**index_json, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
+
+  if args.commit:
+    commit_hash = commit_changes(tag, release_infos)
+
+    if args.release:
+      release_notes = aggregate_release_notes(release_infos)
+      publish_to_github_releases(args, tag, commit_hash, release_notes)
+
+
+def process_one_collection(collection_json_path, args, tag, updated_at):
+  collection_json = json_read(collection_json_path)
+  collection_dir = dirname(collection_json_path)
 
   datasets = []
-  for pathogen_json_path in find_files("pathogen.json", args.input_dir):
+  for pathogen_json_path in find_files("pathogen.json", collection_dir):
     try:
       datasets.append(index_one_dataset(args, pathogen_json_path, updated_at))
     except Exception as e:
@@ -174,39 +211,27 @@ def main():
     **collection_json,
     "dataset_order": dataset_order,
   }
+  json_write(collection_json, collection_json_path, no_sort_keys=True)
+
+  release_infos = prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at)
 
   collection_info = deepcopy(collection_json)
+
   dict_remove_many(collection_info, ["dataset_order"])
   dict_remove_many(collection_info, ["schemaVersion"])
-  index_json = {
-    "schemaVersion": "3.0.0",
+
+  collection_info = {
     **collection_info,
     "datasets": datasets,
-    "updatedAt": updated_at,
   }
 
-  json_write(collection_json, join(args.input_dir, "collection.json"), no_sort_keys=True)
-
-  release_infos = prepare_dataset_release_infos(args, datasets, tag, updated_at)
-
-  if len(release_infos) == 0:
-    l.info("No dataset modifications detected. Will not release anything.")
-    return
-
-  index_json_path = join(args.output_dir, "index.json")
-  json_write({**index_json, "datasets": datasets, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
-
-  if args.commit:
-    commit_hash = commit_changes(tag, release_infos)
-
-    if args.release:
-      release_notes = aggregate_release_notes(release_infos)
-      publish_to_github_releases(args, tag, commit_hash, release_notes)
+  return collection_info, release_infos
 
 
-def prepare_dataset_release_infos(args, datasets, tag, updated_at):
+def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at):
   release_infos = []
-  for pathogen_json_path in find_files("pathogen.json", args.input_dir):
+  for pathogen_json_path in find_files("pathogen.json", collection_dir):
+    pathogen_json = json_read(pathogen_json_path)
     dataset_dir = dirname(pathogen_json_path)
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 
@@ -215,25 +240,27 @@ def prepare_dataset_release_infos(args, datasets, tag, updated_at):
       raise ValueError(f"Dataset at '{dataset_dir_rel}' not found in the dataset index. Try to reindex datasets first.")
 
     dataset = datasets[i_dataset]
-    versions = dict_get(dataset, ["versions"]) or []
-    last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
 
-    release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
-    if release_info is None:
-      continue
+    if args.release:
+      versions = dict_get(dataset, ["versions"]) or []
+      last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
 
-    release_infos.append(release_info)
+      release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
+      if release_info is None:
+        continue
 
-    version = {"updatedAt": updated_at, "tag": tag}
-    versions.insert(0, version)
-    dict_set(dataset, ["versions"], versions)
-    dict_set(dataset, ["version"], version)
+      release_infos.append(release_info)
 
-    pathogen_json = json_read(pathogen_json_path)
-    dict_set(pathogen_json, ["version"], version)
-    json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
+      version = {"updatedAt": updated_at, "tag": tag}
+      versions.insert(0, version)
+      dict_set(dataset, ["versions"], versions)
+      dict_set(dataset, ["version"], version)
+
+      dict_set(pathogen_json, ["version"], version)
+      json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
     create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir)
+
   return release_infos
 
 
@@ -273,19 +300,19 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
   modified_files = list(git_get_modified_files(from_revision=last_version, dirs=dataset_dir))
   modified_files = list(map(lambda f: realpath(f), modified_files))
 
-  if len(modified_files) == 0:
-    return None
+  # if len(modified_files) == 0:
+  #   return None
 
   path = dataset["path"]
   l.info(f"Preparing release of '{path}'")
 
   changelog_path = join(dataset_dir, "CHANGELOG.md")
 
-  if changelog_path not in modified_files:
-    raise ValueError(
-      f"Cannot release dataset '{path}' without changelog. Please add or modify file '{changelog_path}': add '## "
-      f"Unreleased' section and briefly summarize the changes being released"
-    )
+  # if changelog_path not in modified_files:
+  #   raise ValueError(
+  #     f"Cannot release dataset '{path}' without changelog. Please add or modify file '{changelog_path}': add '## "
+  #     f"Unreleased' section and briefly summarize the changes being released"
+  #   )
 
   release_notes = changelog_prepare(dataset, updated_at, changelog_path)
 
