@@ -15,6 +15,7 @@
   "files": {
     "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
     "readme": "README.md",
     "reference": "reference.fasta",
     "treeJson": "tree.json"
