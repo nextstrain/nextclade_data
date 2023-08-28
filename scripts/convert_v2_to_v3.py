@@ -107,6 +107,7 @@ def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
     **tag_json,
     "files": {
       "reference": "reference.fasta",
+      "pathogenJson": "pathogen.json",
       "genomeAnnotation": check_file(output_dir, "genome_annotation.gff3"),
       "treeJson": check_file(output_dir, "tree.json"),
       "examples": check_file(output_dir, "sequences.fasta"),
@@ -122,7 +123,6 @@ def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
     **virus_properties,
     "experimental": tag_json.get("experimental") or False,
     "deprecated": False,
-    "version": updated_at,
   }
 
   dict_remove_many(pathogen_json, [

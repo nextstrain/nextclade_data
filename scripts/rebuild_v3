@@ -295,11 +295,14 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
 def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   path = dataset["path"]
   files = pathogen_json["files"]
+
+  dict_get_required(files, ["reference.fasta"])
+  dict_get_required(files, ["pathogen.json"])
+
   out_dir = join(args.output_dir, path, tag)
   for _, file in files.items():
     file = join(dataset_dir, file)
     copy(file, f"{out_dir}/")  # trailing slash is required if destination is a directory
-  copy(join(dataset_dir, "pathogen.json"), f"{out_dir}/")
 
   zip_basename = join(out_dir, "dataset")
   make_zip(dataset_dir, zip_basename)
