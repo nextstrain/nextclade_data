@@ -16,7 +16,7 @@ from lib.container import dict_get, dict_get_required, dict_set, unique, find_in
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fs import json_read, find_files, json_write, copy, make_zip
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
-  git_get_initial_commit_hash, github_create_release, git_pull, git_commit_and_push
+  git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
 
 logging.basicConfig(level=logging.INFO)
 l = logging.getLogger(__file__)
@@ -144,6 +144,12 @@ def parse_args():
   if args.release and not args.repo:
     parser.error("--release requires --repo")
 
+  if args.release:
+    args.push = True
+
+  if args.push:
+    args.commit = True
+
   return args
 
 
@@ -185,11 +191,14 @@ def main():
   json_write({**index_json, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
 
   if args.commit:
-    commit_hash = commit_changes(tag, release_infos)
+    commit_hash = commit_changes(args, tag, release_infos)
 
-    if args.release:
-      release_notes = aggregate_release_notes(release_infos)
-      publish_to_github_releases(args, tag, commit_hash, release_notes)
+    if args.push:
+      git_push()
+
+      if args.release:
+        release_notes = aggregate_release_notes(release_infos)
+        publish_to_github_releases(args, tag, commit_hash, release_notes)
 
 
 def process_one_collection(collection_json_path, args, tag, updated_at):
@@ -275,13 +284,18 @@ def aggregate_release_notes(release_infos):
   return release_notes
 
 
-def commit_changes(tag, release_infos):
+def commit_changes(args, tag, release_infos):
   l.info(f"Commiting changes for '{tag}'")
-  dataset_names = format_list(
-    unique([get_dataset_name(release_info["dataset"]) for release_info in release_infos]),
-    sep="\n", marker="- ", quote=False
-  )
-  return git_commit_and_push(commit_message=f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_names}")
+
+  commit_message = "chore: rebuild"
+  if args.release:
+    dataset_names = format_list(
+      unique([get_dataset_name(release_info["dataset"]) for release_info in release_infos]),
+      sep="\n", marker="- ", quote=False
+    )
+    commit_message = f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_names}"
+
+  return git_commit_all(commit_message)
 
 
 def publish_to_github_releases(args, tag, commit_hash, release_notes):

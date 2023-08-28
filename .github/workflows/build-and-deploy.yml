@@ -1,0 +1,92 @@
+on:
+  push:
+  pull_request:
+  repository_dispatch:
+    types: build-and-deploy
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: cli-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash -euxo pipefail {0}
+
+env:
+  GITHUB_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
+  VERBOSE: 1
+
+jobs:
+  build-and-deploy-datasets:
+    runs-on: ubuntu-22.04
+
+    environment:
+      name: ${{ github.ref }}
+
+    env:
+      VERBOSE: 0
+      PYTHONUNBUFFERED: 1
+      DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
+      DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: us-east-2
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 50
+          submodules: true
+
+      - name: "Install system dependencies"
+        run: |
+          sudo apt-get install brotli pigz parallel rename --yes -qq >/dev/null
+
+      - name: "Install awscli"
+        run: |
+          pushd /tmp >/dev/null
+            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip -oqq awscliv2.zip
+            sudo ./aws/install --update
+          popd >/dev/null
+          aws --version
+
+      - name: "Authenticate git"
+        run: |
+          export GITHUB_TOKEN="${{ secrets.GH_TOKEN_NEXTSTRAIN_BOT_REPO }}"
+          export BOT_GIT_USER_EMAIL="${{ secrets.BOT_GIT_USER_EMAIL }}"
+          export BOT_GIT_USER_NAME="${{ secrets.BOT_GIT_USER_NAME }}"
+
+          : ${GITHUB_TOKEN?"The env var GITHUB_TOKEN is required"}
+          : ${BOT_GIT_USER_EMAIL?"The env var BOT_GIT_USER_EMAIL is required"}
+          : ${BOT_GIT_USER_NAME?"The env var BOT_GIT_USER_NAME is required"}
+
+          git config --global user.email "${BOT_GIT_USER_EMAIL}"
+          git config --global user.name "${BOT_GIT_USER_NAME}"
+
+          gh auth setup-git >/dev/null
+
+      - name: "Rebuild, commit and push datasets"
+        if: github.ref != 'refs/heads/release'
+        run: |
+          ./scripts/rebuild_v3 --input-dir 'data_v3' --output-dir 'data_v3_output' --push --repo="${GITHUB_REPOSITORY}"
+
+      - name: "Rebuild, commit, push and deploy datasets"
+        if: github.ref == 'refs/heads/release'
+        run: |
+          ./scripts/rebuild_v3 --input-dir 'data_v3' --output-dir 'data_v3_output' --release --repo="${GITHUB_REPOSITORY}"
+
+      - name: "Upload build artifacts: dataset server"
+        uses: actions/upload-artifact@v3
+        with:
+          name: server
+          path: ./data_v3_output/*
+
+      - name: "Upload build artifacts: zip archives"
+        uses: actions/upload-artifact@v3
+        with:
+          name: zips
+          path: ./data_v3_temp/*
