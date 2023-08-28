@@ -296,8 +296,8 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   path = dataset["path"]
   files = pathogen_json["files"]
 
-  dict_get_required(files, ["reference.fasta"])
-  dict_get_required(files, ["pathogen.json"])
+  dict_get_required(files, ["reference"])
+  dict_get_required(files, ["pathogenJson"])
 
   out_dir = join(args.output_dir, path, tag)
   for _, file in files.items():
