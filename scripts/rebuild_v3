@@ -162,7 +162,7 @@ def main():
     git_pull()
 
   updated_at = now_iso()
-  tag = iso_to_iso_safe(updated_at)
+  tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
   git_check_tag(tag)
 
   collections = []
