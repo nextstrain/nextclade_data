@@ -25,12 +25,14 @@ fi
 
 
 export AWS_PAGER=''
-DATA_OUTPUT_DIR="${PROJECT_ROOT_DIR}/data_output"
-DATA_TEMP_DIR="${PROJECT_ROOT_DIR}/data_temp"
+
+export DATA_OUTPUT_DIR="${1:? "Usage: ${0} <DATA_OUTPUT_DIR> [DATA_TEMP_DIR]"}"
+export DATA_TEMP_DIR="${2:-${PROJECT_ROOT_DIR}/upload_temp}"
 
 : "${DATA_AWS_S3_BUCKET:?The DATA_AWS_S3_BUCKET environment variable is required.}"
 : "${DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID:?The DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID environment variable is required.}"
 
+DATA_VERSION="v3"
 
 rm -rf "${DATA_TEMP_DIR}"
 mkdir -p "${DATA_TEMP_DIR}"
@@ -44,45 +46,45 @@ popd >/dev/null
 
 
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "no-cache" \
   --metadata-directive REPLACE \
   --exclude "*" \
   --include "*.json" \
   --exclude "*/*" \
-  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "no-cache" \
   --content-encoding gzip \
   --metadata-directive REPLACE \
   --exclude "*" \
   --include "*.json.gz" \
   --exclude "*/*" \
-  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "no-cache" \
   --content-encoding br \
   --metadata-directive REPLACE \
   --exclude "*" \
   --include "*.json.br" \
   --exclude "*/*" \
-  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
 
 
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "public, max-age=86400" \
   --metadata-directive REPLACE \
   --exclude "*.br" \
   --exclude "*.gz" \
   --exclude "index*.json*" \
   --exclude "404.json*" \
-  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "public, max-age=86400" \
   --content-encoding gzip \
   --metadata-directive REPLACE \
@@ -90,9 +92,9 @@ aws s3 sync --delete --only-show-errors \
   --include "*.gz" \
   --exclude "index*.json*" \
   --exclude "404.json*" \
-  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "public, max-age=86400" \
   --content-encoding br \
   --metadata-directive REPLACE \
@@ -100,17 +102,17 @@ aws s3 sync --delete --only-show-errors \
   --include "*.br" \
   --exclude "index*.json*" \
   --exclude "404.json*" \
-  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_TEMP_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
 
 
 
-aws s3 sync --delete --only-show-errors \
+aws s3 sync --only-show-errors \
   --cache-control "public, max-age=86400" \
   --metadata-directive REPLACE \
   --exclude "*" \
   --include "*.zip" \
-  "${DATA_OUTPUT_DIR}" "${DATA_AWS_S3_BUCKET}"
+  "${DATA_OUTPUT_DIR}" "${DATA_AWS_S3_BUCKET}/${DATA_VERSION}"
 
 
 aws cloudfront create-invalidation \

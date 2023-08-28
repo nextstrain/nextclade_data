@@ -56,7 +56,11 @@ def git_add_all():
 
 
 def git_commit(commit_message: str):
-  run(f"git commit -q -m '{commit_message}'")
+  try:
+    run(f"git commit -q -m '{commit_message}'")
+  except ValueError as e:
+    if not "nothing to commit, working tree clean" in str(e):
+      raise e
 
 
 def git_push():

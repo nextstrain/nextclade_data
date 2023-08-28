@@ -72,21 +72,21 @@ jobs:
       - name: "Rebuild, commit and push datasets"
         if: github.ref != 'refs/heads/release'
         run: |
-          ./scripts/rebuild_v3 --input-dir 'data_v3' --output-dir 'data_v3_output' --push --repo="${GITHUB_REPOSITORY}"
+          ./scripts/rebuild_v3 --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
 
       - name: "Rebuild, commit, push and deploy datasets"
         if: github.ref == 'refs/heads/release'
         run: |
-          ./scripts/rebuild_v3 --input-dir 'data_v3' --output-dir 'data_v3_output' --release --repo="${GITHUB_REPOSITORY}"
+          ./scripts/rebuild_v3 --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
 
       - name: "Upload build artifacts: dataset server"
         uses: actions/upload-artifact@v3
         with:
           name: server
-          path: ./data_v3_output/*
+          path: ./data_output/*
 
       - name: "Upload build artifacts: zip archives"
         uses: actions/upload-artifact@v3
         with:
           name: zips
-          path: ./data_v3_temp/*
+          path: ./data_temp/*
