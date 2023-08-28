@@ -1,9 +1,0 @@
-{
-  "defaultGene": "HA1",
-  "defaultRef": "MW626062",
-  "enabled": true,
-  "geneOrderPreference": ["HA1", "HA2"],
-  "metadata": {},
-  "name": "flu_h1n1pdm_ha",
-  "nameFriendly": "Influenza A H1N1pdm HA"
-}

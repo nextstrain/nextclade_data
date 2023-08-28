@@ -1,9 +1,0 @@
-{
-  "defaultGene": "F",
-  "defaultRef": "EPI_ISL_412866",
-  "enabled": true,
-  "geneOrderPreference": ["F", "G", "L"],
-  "metadata": {},
-  "name": "rsv_a",
-  "nameFriendly": "RSV-A"
-}

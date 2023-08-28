@@ -1,9 +1,0 @@
-{
-  "enabled": true,
-  "metadata": {},
-  "reference": {
-    "source": "genbank",
-    "accession": "CY163680",
-    "strainName": "A/Wisconsin/67/2005"
-  }
-}

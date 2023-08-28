@@ -1,9 +1,0 @@
-{
-    "enabled": true,
-    "metadata": {},
-    "reference": {
-      "source": "gisaid",
-      "accession": "EPI1857215",
-      "strainName": "A/Darwin/6/2021"
-    }
-  }

@@ -1,9 +1,0 @@
-{
-  "enabled": true,
-  "metadata": {},
-  "reference": {
-    "source": "genbank",
-    "accession": "ancestral",
-    "strainName": "Reconstructed ancestral MPXV"
-  }
-}

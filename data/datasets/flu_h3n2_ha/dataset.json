@@ -1,9 +1,0 @@
-{
-  "defaultGene": "HA1",
-  "defaultRef": "EPI1857216",
-  "enabled": true,
-  "geneOrderPreference": ["HA1", "HA2"],
-  "metadata": {},
-  "name": "flu_h3n2_ha",
-  "nameFriendly": "Influenza A H3N2 HA"
-}

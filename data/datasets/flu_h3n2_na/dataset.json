@@ -1,9 +1,0 @@
-{
-  "defaultGene": "NA",
-  "defaultRef": "EPI1857215",
-  "enabled": true,
-  "geneOrderPreference": ["NA"],
-  "metadata": {},
-  "name": "flu_h3n2_na",
-  "nameFriendly": "Influenza A H3N2 NA (Neuraminidase)"
-}

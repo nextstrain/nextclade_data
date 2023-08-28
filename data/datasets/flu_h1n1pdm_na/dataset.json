@@ -1,9 +1,0 @@
-{
-  "defaultGene": "NA",
-  "defaultRef": "MW626056",
-  "enabled": true,
-  "geneOrderPreference": ["NA"],
-  "metadata": {},
-  "name": "flu_h1n1pdm_na",
-  "nameFriendly": "Influenza A H1N1pdm NA (Neuraminidase)"
-}

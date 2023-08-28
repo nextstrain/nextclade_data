@@ -1,9 +1,0 @@
-{
-  "enabled": true,
-  "metadata": {},
-  "reference": {
-    "source": "genbank",
-    "accession": "CY121680",
-    "strainName": "A/California/07/2009"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "enabled": true,
-  "metadata": {},
-  "reference": {
-    "source": "genbank",
-    "accession": "pseudo_ON563414",
-    "strainName": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
-  }
-}
