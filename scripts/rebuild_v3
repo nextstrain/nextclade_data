@@ -76,7 +76,6 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
-    "updatedAt": updated_at,
     # "schemaVersion": dict_get(pathogen_json, ["schemaVersion"]),
   })
 
@@ -178,8 +177,8 @@ def main():
 
   index_json = {
     "schemaVersion": "3.0.0",
-    "collections": collections,
     "updatedAt": updated_at,
+    "collections": collections,
   }
 
   index_json_path = join(args.output_dir, "index.json")
