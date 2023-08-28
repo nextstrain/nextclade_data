@@ -6,6 +6,7 @@ Builds a fresh data repo from source data
 import argparse
 import logging
 from copy import deepcopy
+from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
 from urllib.parse import quote
 
@@ -13,7 +14,7 @@ from lib.changelog import changelog_prepare
 from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup
 from lib.date import now_iso, iso_to_iso_safe
-from lib.fs import json_read, find_files, json_write, file_write, copy, make_zip
+from lib.fs import json_read, find_files, json_write, copy, make_zip
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_and_push
 
@@ -68,9 +69,9 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
   return dict_cleanup({
     "path": path,
     "url": quote(path),
-    "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else None,
-    "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else None,
-    "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else None,
+    "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else False,
+    "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
+    "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else False,
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
@@ -102,7 +103,8 @@ def get_new_dataset_order(datasets, dataset_order):
   if len(missing):
     l.info(
       f"Adding '.dataset_order' entries to 'collection.json' for the following datasets: {format_list(missing)}. "
-      f"Please reorder them manually as needed. This order is used when displaying datasets of the colelction in the user interface."
+      f"Please reorder them manually as needed. This order is used when displaying datasets of the colelction in the "
+      f"user interface."
     )
     dataset_order += list(missing)
   return dataset_order
@@ -113,17 +115,19 @@ def sort_datasets(datasets, dataset_order):
 
 
 def parse_args():
-  parser = argparse.ArgumentParser()
+  parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
   parser.add_argument('--input-dir', required=True, help='Directory of source files of a dataset collection')
   parser.add_argument('--output-dir', required=True, help='Where to output prepared files')
+  parser.add_argument('--temp-dir', default=join(getcwd(), "data_v3_temp"),
+                      help='Where to temporarily store release files')
   parser.add_argument('--allow-dirty', action='store_true',
-                      help="Allow working directory to contain uncommited files. Note that these files will also be commited and can potentially be released along with the datasets",
+                      help="Allow working directory to contain uncommited files. Note that these files will also be "
+                           "commited and can potentially be released along with the datasets",
                       )
   parser.add_argument('--commit', action='store_true', help="Commit updates into the repository")
   parser.add_argument('--push', action='store_true', help="Push updates into the remote repository. Implies --commit")
-  parser.add_argument('--release', action='store_true', help="Release updates. Implies --commit and --push"
-                      )
+  parser.add_argument('--release', action='store_true', help="Release updates. Implies --commit and --push")
   parser.add_argument('--repo', required=False,
                       help="GitHub repo to push and to release to. You need to have write permission for that."
                       )
@@ -144,7 +148,8 @@ def main():
   if not args.allow_dirty and not git_dir_is_clean():
     dirty_files = "\n  ".join(git_get_dirty_files())
     raise ValueError(
-      f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to override (not recommended):\n  {dirty_files}"
+      f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
+      f"override (not recommended):\n  {dirty_files}"
     )
 
   git_pull()
@@ -172,11 +177,12 @@ def main():
 
   collection_info = deepcopy(collection_json)
   dict_remove_many(collection_info, ["dataset_order"])
+  dict_remove_many(collection_info, ["schemaVersion"])
   index_json = {
+    "schemaVersion": "3.0.0",
     **collection_info,
     "datasets": datasets,
     "updatedAt": updated_at,
-    "schemaVersion": "3.0.0",
   }
 
   json_write(collection_json, join(args.input_dir, "collection.json"), no_sort_keys=True)
@@ -187,17 +193,14 @@ def main():
     l.info("No dataset modifications detected. Will not release anything.")
     return
 
-  index_json_path = join(args.input_dir, "index.json")
+  index_json_path = join(args.output_dir, "index.json")
   json_write({**index_json, "datasets": datasets, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
-
-  release_notes = aggregate_release_notes(release_infos)
-
-  create_release_package(args, release_notes)
 
   if args.commit:
     commit_hash = commit_changes(tag, release_infos)
 
     if args.release:
+      release_notes = aggregate_release_notes(release_infos)
       publish_to_github_releases(args, tag, commit_hash, release_notes)
 
 
@@ -221,12 +224,13 @@ def prepare_dataset_release_infos(args, datasets, tag, updated_at):
 
     release_infos.append(release_info)
 
-    versions.insert(0, tag)
+    version = {"updatedAt": updated_at, "tag": tag}
+    versions.insert(0, version)
     dict_set(dataset, ["versions"], versions)
-    dict_set(dataset, ["updatedAt"], updated_at)
+    dict_set(dataset, ["version"], version)
 
     pathogen_json = json_read(pathogen_json_path)
-    dict_set(pathogen_json, ["updatedAt"], updated_at)
+    dict_set(pathogen_json, ["version"], version)
     json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
     create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir)
@@ -255,7 +259,7 @@ def commit_changes(tag, release_infos):
 
 def publish_to_github_releases(args, tag, commit_hash, release_notes):
   l.info(f"Publishing to GitHub Releases: tag: '{tag}', commit: '{commit_hash}'")
-  release_files = list(find_files("*", join(args.output_dir, "github_releases")))
+  release_files = list(find_files("*", join(args.temp_dir)))
   github_create_release(
     repo=args.repo,
     version=tag,
@@ -279,7 +283,8 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
 
   if changelog_path not in modified_files:
     raise ValueError(
-      f"Cannot release dataset '{path}' without changelog. Please add or modify file '{changelog_path}': add '## Unreleased' section and briefly summarize the changes being released"
+      f"Cannot release dataset '{path}' without changelog. Please add or modify file '{changelog_path}': add '## "
+      f"Unreleased' section and briefly summarize the changes being released"
     )
 
   release_notes = changelog_prepare(dataset, updated_at, changelog_path)
@@ -287,15 +292,10 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
   return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
 
 
-def create_release_package(args, release_notes):
-  copy(join(args.input_dir, "index.json"), join(args.output_dir, "server/"))
-  file_write(release_notes, join(args.output_dir, "github_releases", "CHANGELOG.md"))
-
-
 def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   path = dataset["path"]
   files = pathogen_json["files"]
-  out_dir = join(args.output_dir, "server", path, tag)
+  out_dir = join(args.output_dir, path, tag)
   for _, file in files.items():
     file = join(dataset_dir, file)
     copy(file, f"{out_dir}/")  # trailing slash is required if destination is a directory
@@ -305,7 +305,7 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   make_zip(dataset_dir, zip_basename)
 
   path_safe = path.replace("/", "__")
-  copy(f"{zip_basename}.zip", join(args.output_dir, "github_releases", f"{path_safe}__{tag}.zip"))
+  copy(f"{zip_basename}.zip", join(args.temp_dir, f"{path_safe}__{tag}.zip"))
 
 
 def get_dataset_name(dataset):

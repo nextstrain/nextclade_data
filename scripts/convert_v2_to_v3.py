@@ -10,6 +10,7 @@ from typing import List
 
 from lib.changelog import format_dataset_attributes_md_table
 from lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
+from lib.date import now_iso
 from lib.fs import json_write, find_files, copy, json_read, file_write
 from lib.string import removesuffix
 
@@ -35,7 +36,7 @@ def process_tree_json(tree: dict, virus_properties: dict, output_tree_json_path:
   json_write(tree, output_tree_json_path, no_sort_keys=True)
 
 
-def process_pathogen_json(tag_json, path, input_dir, output_dir):
+def process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir):
   copy(join(input_dir, 'reference.fasta'), output_dir)
 
   if isfile(join(input_dir, 'genemap.gff')):
@@ -98,7 +99,11 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
       changelog_path
     )
 
+  dict_remove_many(tag_json, ["schemaVersion"])
+  dict_remove_many(virus_properties, ["schemaVersion"])
+
   pathogen_json = {
+    "schemaVersion": "3.0.0",
     **tag_json,
     "files": {
       "reference": "reference.fasta",
@@ -117,7 +122,7 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
     **virus_properties,
     "experimental": tag_json.get("experimental") or False,
     "deprecated": False,
-    "schemaVersion": "3.0.0",
+    "version": updated_at,
   }
 
   dict_remove_many(pathogen_json, [
@@ -139,7 +144,7 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir):
   json_write(pathogen_json, join(output_dir, "pathogen.json"))
 
 
-def convert_datasets_mature():
+def convert_datasets_mature(updated_at):
   for dataset_json_path in find_files("dataset.json", DATA_V2_INPUT_DIR):
     dataset_json = json_read(dataset_json_path)
     dataset_dir = os.path.dirname(dataset_json_path)
@@ -165,10 +170,10 @@ def convert_datasets_mature():
       input_dir = f'{join(DATA_V2_INPUT_DIR, name, "references", ref_accession, "versions", tag, "files")}/'
       output_dir = f'{join(DATA_V3_OUTPUT_DIR, path)}/'
 
-      process_pathogen_json(tag_json, path, input_dir, output_dir)
+      process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir)
 
 
-def convert_datasets_experimental():
+def convert_datasets_experimental(updated_at):
   for ref_fasta_path in find_files("reference.fasta", DATA_V2_EXPERIMENTAL_INPUT_DIR):
     input_dir = f"{dirname(ref_fasta_path)}/"
     path = removesuffix(relpath(input_dir, DATA_V2_EXPERIMENTAL_INPUT_DIR), "/files")
@@ -195,9 +200,11 @@ def convert_datasets_experimental():
       "experimental": True,
     }
 
-    process_pathogen_json(tag_json, path, input_dir, output_dir)
+    process_pathogen_json(tag_json, updated_at, path, input_dir, output_dir)
 
 
 if __name__ == '__main__':
-  convert_datasets_mature()
-  convert_datasets_experimental()
+  updated_at = now_iso()
+
+  convert_datasets_mature(updated_at)
+  convert_datasets_experimental(updated_at)
