@@ -241,23 +241,25 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
 
     dataset = datasets[i_dataset]
 
-    if args.release:
-      versions = dict_get(dataset, ["versions"]) or []
-      last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
+    versions = dict_get(dataset, ["versions"]) or []
+    versions = list(filter(lambda version: version["tag" == "unreleased"], versions))
 
+    if args.release:
+      last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
       release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
       if release_info is None:
         continue
 
       release_infos.append(release_info)
 
-      version = {"updatedAt": updated_at, "tag": tag}
-      versions.insert(0, version)
-      dict_set(dataset, ["versions"], versions)
-      dict_set(dataset, ["version"], version)
+    version = {"updatedAt": updated_at, "tag": tag}
+    versions.insert(0, version)
+    dict_set(dataset, ["versions"], versions)
+    dict_set(dataset, ["version"], version)
 
-      dict_set(pathogen_json, ["version"], version)
-      json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
+    version = dict_cleanup({"updatedAt": None if tag == "unreleased" else updated_at, "tag": tag})
+    dict_set(pathogen_json, ["version"], version)
+    json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
     create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir)
 

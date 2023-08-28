@@ -129,6 +129,7 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
     "official": tag_json.get("official") or False,
     "experimental": tag_json.get("experimental") or False,
     "deprecated": tag_json.get("deprecated") or False,
+    "version": {"tag": "unreleased"},
     **params,
     **(dict_get(params_individual, [path]) or {}),
   }
