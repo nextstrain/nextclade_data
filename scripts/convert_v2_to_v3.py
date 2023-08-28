@@ -240,7 +240,7 @@ if __name__ == '__main__':
     input_dir=join(args.input_dir, "datasets"),
     output_dir=join(args.output_dir, "nextstrain"),
     params={"official": True},
-    params_individual={"sars-cov-2-21L/BA.2": {"deprecated": True}},
+    params_individual={"sars-cov-2-no-recomb/MN908947": {"deprecated": True}},
   )
 
   convert_datasets_experimental(

@@ -10,7 +10,7 @@
     }
   },
   "defaultGene": "S",
-  "deprecated": true,
+  "deprecated": false,
   "enabled": true,
   "experimental": false,
   "files": {
