@@ -68,7 +68,6 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
 
   return dict_cleanup({
     "path": path,
-    "url": quote(path),
     "official": True if dict_get(pathogen_json, ["official"]) == True else False,
     "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else False,
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
@@ -76,7 +75,6 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
-    # "schemaVersion": dict_get(pathogen_json, ["schemaVersion"]),
   })
 
 

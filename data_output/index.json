@@ -1,6 +1,6 @@
 {
   "schemaVersion": "3.0.0",
-  "updatedAt": "2023-08-28T18:12:58Z",
+  "updatedAt": "2023-08-30T11:56:26Z",
   "collections": [
     {
       "meta": {
@@ -21,7 +21,6 @@
       "datasets": [
         {
           "path": "community/adenovirus/hadv-a",
-          "url": "community/adenovirus/hadv-a",
           "official": false,
           "deprecated": false,
           "enabled": true,
@@ -80,7 +79,6 @@
       "datasets": [
         {
           "path": "nextstrain/sars-cov-2/MN908947",
-          "url": "nextstrain/sars-cov-2/MN908947",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -128,7 +126,6 @@
         },
         {
           "path": "nextstrain/sars-cov-2-21L/BA.2",
-          "url": "nextstrain/sars-cov-2-21L/BA.2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -177,7 +174,6 @@
         },
         {
           "path": "nextstrain/MPXV/ancestral",
-          "url": "nextstrain/MPXV/ancestral",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -221,7 +217,6 @@
         },
         {
           "path": "nextstrain/hMPXV/NC_063383.1",
-          "url": "nextstrain/hMPXV/NC_063383.1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -266,7 +261,6 @@
         },
         {
           "path": "nextstrain/hMPXV_B1/pseudo_ON563414",
-          "url": "nextstrain/hMPXV_B1/pseudo_ON563414",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -314,7 +308,6 @@
         },
         {
           "path": "nextstrain/rsv_a/EPI_ISL_412866",
-          "url": "nextstrain/rsv_a/EPI_ISL_412866",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -357,7 +350,6 @@
         },
         {
           "path": "nextstrain/rsv_b/EPI_ISL_1653999",
-          "url": "nextstrain/rsv_b/EPI_ISL_1653999",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -400,7 +392,6 @@
         },
         {
           "path": "nextstrain/flu_h1n1pdm_ha/CY121680",
-          "url": "nextstrain/flu_h1n1pdm_ha/CY121680",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -446,7 +437,6 @@
         },
         {
           "path": "nextstrain/flu_h1n1pdm_ha/MW626062",
-          "url": "nextstrain/flu_h1n1pdm_ha/MW626062",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -492,7 +482,6 @@
         },
         {
           "path": "nextstrain/flu_h1n1pdm_na/MW626056",
-          "url": "nextstrain/flu_h1n1pdm_na/MW626056",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -538,7 +527,6 @@
         },
         {
           "path": "nextstrain/flu_h3n2_ha/CY163680",
-          "url": "nextstrain/flu_h3n2_ha/CY163680",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -584,7 +572,6 @@
         },
         {
           "path": "nextstrain/flu_h3n2_ha/EPI1857216",
-          "url": "nextstrain/flu_h3n2_ha/EPI1857216",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -631,7 +618,6 @@
         },
         {
           "path": "nextstrain/flu_h3n2_na/EPI1857215",
-          "url": "nextstrain/flu_h3n2_na/EPI1857215",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -677,7 +663,6 @@
         },
         {
           "path": "nextstrain/flu_vic_ha/KX058884",
-          "url": "nextstrain/flu_vic_ha/KX058884",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -723,7 +708,6 @@
         },
         {
           "path": "nextstrain/flu_vic_na/CY073894",
-          "url": "nextstrain/flu_vic_na/CY073894",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -769,7 +753,6 @@
         },
         {
           "path": "nextstrain/flu_yam_ha/JN993010",
-          "url": "nextstrain/flu_yam_ha/JN993010",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -812,7 +795,6 @@
         },
         {
           "path": "nextstrain/sars-cov-2-no-recomb/MN908947",
-          "url": "nextstrain/sars-cov-2-no-recomb/MN908947",
           "official": true,
           "deprecated": true,
           "enabled": true,
@@ -860,7 +842,6 @@
         },
         {
           "path": "nextstrain/dummy1",
-          "url": "nextstrain/dummy1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -895,7 +876,6 @@
         },
         {
           "path": "nextstrain/h1_na",
-          "url": "nextstrain/h1_na",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -937,7 +917,6 @@
         },
         {
           "path": "nextstrain/hbv",
-          "url": "nextstrain/hbv",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -980,7 +959,6 @@
         },
         {
           "path": "nextstrain/hiv",
-          "url": "nextstrain/hiv",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1023,7 +1001,6 @@
         },
         {
           "path": "nextstrain/hiv_mat",
-          "url": "nextstrain/hiv_mat",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1066,7 +1043,6 @@
         },
         {
           "path": "nextstrain/rsv-a",
-          "url": "nextstrain/rsv-a",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1108,7 +1084,6 @@
         },
         {
           "path": "nextstrain/sc2",
-          "url": "nextstrain/sc2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1150,7 +1125,6 @@
         },
         {
           "path": "nextstrain/sc2-big",
-          "url": "nextstrain/sc2-big",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1198,7 +1172,6 @@
         },
         {
           "path": "nextstrain/sc2_mat",
-          "url": "nextstrain/sc2_mat",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1240,7 +1213,6 @@
         },
         {
           "path": "nextstrain/vic_na",
-          "url": "nextstrain/vic_na",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1282,7 +1254,6 @@
         },
         {
           "path": "nextstrain/ebola",
-          "url": "nextstrain/ebola",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1316,7 +1287,6 @@
         },
         {
           "path": "nextstrain/enterovirus/d68",
-          "url": "nextstrain/enterovirus/d68",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1350,7 +1320,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/ha",
-          "url": "nextstrain/flu/h1n1pdm/ha",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1384,7 +1353,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/na",
-          "url": "nextstrain/flu/h1n1pdm/na",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1418,7 +1386,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/np",
-          "url": "nextstrain/flu/h1n1pdm/np",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1452,7 +1419,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/ns",
-          "url": "nextstrain/flu/h1n1pdm/ns",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1486,7 +1452,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/pa",
-          "url": "nextstrain/flu/h1n1pdm/pa",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1520,7 +1485,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/pb1",
-          "url": "nextstrain/flu/h1n1pdm/pb1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1554,7 +1518,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/pb2",
-          "url": "nextstrain/flu/h1n1pdm/pb2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1588,7 +1551,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/ha",
-          "url": "nextstrain/flu/h3n2/ha",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1622,7 +1584,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/ma",
-          "url": "nextstrain/flu/h3n2/ma",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1656,7 +1617,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/na",
-          "url": "nextstrain/flu/h3n2/na",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1690,7 +1650,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/np",
-          "url": "nextstrain/flu/h3n2/np",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1724,7 +1683,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/ns",
-          "url": "nextstrain/flu/h3n2/ns",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1758,7 +1716,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/pa",
-          "url": "nextstrain/flu/h3n2/pa",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1792,7 +1749,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/pb1",
-          "url": "nextstrain/flu/h3n2/pb1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1826,7 +1782,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/pb2",
-          "url": "nextstrain/flu/h3n2/pb2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1860,7 +1815,6 @@
         },
         {
           "path": "nextstrain/flu/vic/ha",
-          "url": "nextstrain/flu/vic/ha",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1894,7 +1848,6 @@
         },
         {
           "path": "nextstrain/flu/vic/na",
-          "url": "nextstrain/flu/vic/na",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1928,7 +1881,6 @@
         },
         {
           "path": "nextstrain/flu/vic/np",
-          "url": "nextstrain/flu/vic/np",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1962,7 +1914,6 @@
         },
         {
           "path": "nextstrain/flu/vic/ns",
-          "url": "nextstrain/flu/vic/ns",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1996,7 +1947,6 @@
         },
         {
           "path": "nextstrain/flu/vic/pa",
-          "url": "nextstrain/flu/vic/pa",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2030,7 +1980,6 @@
         },
         {
           "path": "nextstrain/flu/vic/pb1",
-          "url": "nextstrain/flu/vic/pb1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2064,7 +2013,6 @@
         },
         {
           "path": "nextstrain/flu/vic/pb2",
-          "url": "nextstrain/flu/vic/pb2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2098,7 +2046,6 @@
         },
         {
           "path": "nextstrain/flu/yam/ha",
-          "url": "nextstrain/flu/yam/ha",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2131,7 +2078,6 @@
         },
         {
           "path": "nextstrain/flu/yam/na",
-          "url": "nextstrain/flu/yam/na",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2164,7 +2110,6 @@
         },
         {
           "path": "nextstrain/flu/yam/np",
-          "url": "nextstrain/flu/yam/np",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2197,7 +2142,6 @@
         },
         {
           "path": "nextstrain/flu/yam/ns",
-          "url": "nextstrain/flu/yam/ns",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2230,7 +2174,6 @@
         },
         {
           "path": "nextstrain/flu/yam/pa",
-          "url": "nextstrain/flu/yam/pa",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2263,7 +2206,6 @@
         },
         {
           "path": "nextstrain/flu/yam/pb1",
-          "url": "nextstrain/flu/yam/pb1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2296,7 +2238,6 @@
         },
         {
           "path": "nextstrain/flu/yam/pb2",
-          "url": "nextstrain/flu/yam/pb2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2329,7 +2270,6 @@
         },
         {
           "path": "nextstrain/zika",
-          "url": "nextstrain/zika",
           "official": true,
           "deprecated": false,
           "enabled": true,
