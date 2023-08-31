@@ -38,7 +38,7 @@ def get_hash(kmer):
   return invertible_hash(x)
 
 
-def get_minimizers(seq, k=17):
+def get_minimizers(seq: str, k=17):
   minimizers = []
   # we know the rough number of minimizers, so we can pre-allocate the array if needed
   for i in range(len(seq) - k):
@@ -53,7 +53,7 @@ def make_index(fname):
   # collect minimizers for each reference sequence first
   minimizers_by_reference = list()
   for seq in SeqIO.parse(fname, 'fasta'):
-    seq_str = str(seq.seq).upper().replace('-', '')
+    seq_str = preprocess_seq(seq)
     minimizers = get_minimizers(seq_str)
     minimizers_by_reference.append({
       "minimizers": minimizers,
@@ -78,15 +78,17 @@ def make_index(fname):
 
   return index
 
+def preprocess_seq(seq: SeqIO.SeqRecord) -> str:
+  return str(seq.seq).upper().replace('-', '')
+
 
 if __name__ == '__main__':
-  index = make_index('data/references.fasta')
+  index = make_index('tests/minimizers/data/references.fasta')
   normalization = np.array([x['length'] / x['n_minimizers'] for x in index["references"]])
 
   overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
-  for seq in SeqIO.parse('data/queries.fasta', 'fasta'):
-    seq_str = str(seq.seq).upper().replace('-', '')
-
+  for seq in SeqIO.parse('tests/minimizers/data/queries.fasta', 'fasta'):
+    seq_str = preprocess_seq(seq)
     minimizers = get_minimizers(seq_str)
     hit_count = np.zeros(len(index["references"]), dtype=np.int32)
     for m in minimizers:
