@@ -32,8 +32,8 @@
     }
   },
   "compatibility": {
-    "cli": "3.0.0",
-    "web": "3.0.0"
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
   },
   "defaultGene": "NA",
   "deprecated": false,
