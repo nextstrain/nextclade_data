@@ -54,14 +54,14 @@ def get_minimizers(seq: str, k=17):
 def make_index(refs):
   # collect minimizers for each reference sequence first
   minimizers_by_reference = list()
-  for ref in refs:
+  for name, ref in refs.items():
     seq_str = preprocess_seq(ref)
     minimizers = get_minimizers(seq_str)
     minimizers_by_reference.append({
       "minimizers": minimizers,
       "meta": {
         "length": len(ref.seq),
-        "description": ref.name,
+        "name": name,
         "n_minimizers": len(minimizers)
       }
     })
@@ -87,6 +87,8 @@ def preprocess_seq(seq: SeqRecord) -> str:
 
 if __name__ == '__main__':
   refs = fasta_read('tests/minimizers/data/references.fasta')
+  refs = {ref.name: ref for ref in refs}
+
   index = make_index(refs)
   normalization = np.array([x['length'] / x['n_minimizers'] for x in index["references"]])
 
@@ -110,11 +112,11 @@ if __name__ == '__main__':
       ri = np.argmax(normalized_hits)
       print(
         f"{qry.name}\t best hit={normalized_hits[ri]:1.2f} to reference "
-        f"{index['references'][ri]['description']}")
+        f"{index['references'][ri]['name']}")
 
   print("\nHits statistics:")
   for i, ref in enumerate(index["references"]):
-    print(f"\t{ref['description']}\t{overall_hits[i]}")
+    print(f"\t{ref['name']}\t{overall_hits[i]}")
   ## we could offer the user to run the analysis on these datasets in reverse order of the number of hits
 
   print(f"\nIndex statistics:")
@@ -124,7 +126,7 @@ if __name__ == '__main__':
     f"\tNumber of minimizers per kb: "
     f"{1000 * np.sum([x['n_minimizers'] for x in index['references']]) / np.sum([x['length'] for x in index['references']]):1.2f}")
   for ref in index["references"]:
-    print(f"\t\t{ref['description']}\t{ref['n_minimizers']}")
+    print(f"\t\t{ref['name']}\t{ref['n_minimizers']}")
 
   # check uniformity of hash function
   import matplotlib.pyplot as plt
