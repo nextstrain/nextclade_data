@@ -40,7 +40,7 @@ def get_hash(kmer):
   return invertible_hash(x)
 
 
-def get_minimizers(seq: str, k=17):
+def get_ref_search_minimizers(seq: str, k=17):
   minimizers = []
   # we know the rough number of minimizers, so we can pre-allocate the array if needed
   for i in range(len(seq) - k):
@@ -51,12 +51,12 @@ def get_minimizers(seq: str, k=17):
   return np.unique(minimizers)
 
 
-def make_index(refs):
+def make_ref_search_index(refs):
   # collect minimizers for each reference sequence first
   minimizers_by_reference = list()
   for name, ref in refs.items():
     seq_str = preprocess_seq(ref)
-    minimizers = get_minimizers(seq_str)
+    minimizers = get_ref_search_minimizers(seq_str)
     minimizers_by_reference.append({
       "minimizers": minimizers,
       "meta": {
@@ -89,14 +89,14 @@ if __name__ == '__main__':
   refs = fasta_read('tests/minimizers/data/references.fasta')
   refs = {ref.name: ref for ref in refs}
 
-  index = make_index(refs)
+  index = make_ref_search_index(refs)
   normalization = np.array([x['length'] / x['n_minimizers'] for x in index["references"]])
 
   overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
   qrys = fasta_read('tests/minimizers/data/queries.fasta')
   for qry in qrys:
     seq_str = preprocess_seq(qry)
-    minimizers = get_minimizers(seq_str)
+    minimizers = get_ref_search_minimizers(seq_str)
     hit_count = np.zeros(len(index["references"]), dtype=np.int32)
     for m in minimizers:
       if m in index["minimizers"]:
