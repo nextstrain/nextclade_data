@@ -9,6 +9,10 @@
       "valueFriendly": "DU1MMY"
     }
   },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
   "defaultGene": "HA1",
   "deprecated": false,
   "enabled": true,

@@ -8,7 +8,6 @@ import logging
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
-from urllib.parse import quote
 
 from lib.changelog import changelog_prepare
 from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
@@ -259,9 +258,10 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
       release_infos.append(release_info)
 
     version = dict_cleanup({"updatedAt": None if tag == "unreleased" else updated_at, "tag": tag})
-    versions.insert(0, version)
+    version_with_compat = dict_cleanup({**version, "compatibility": dict_get(pathogen_json, ["compatibility"])})
+    versions.insert(0, version_with_compat)
     dict_set(dataset, ["versions"], versions)
-    dict_set(dataset, ["version"], version)
+    dict_set(dataset, ["version"], version_with_compat)
 
     dict_set(pathogen_json, ["version"], version)
     json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)

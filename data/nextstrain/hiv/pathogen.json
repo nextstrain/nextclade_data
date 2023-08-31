@@ -18,6 +18,10 @@
       "valueFriendly": "UNKNOWN"
     }
   },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
   "deprecated": false,
   "enabled": true,
   "experimental": true,

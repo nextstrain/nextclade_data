@@ -9,6 +9,10 @@
       "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
     }
   },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
   "defaultGene": "F",
   "deprecated": false,
   "enabled": true,

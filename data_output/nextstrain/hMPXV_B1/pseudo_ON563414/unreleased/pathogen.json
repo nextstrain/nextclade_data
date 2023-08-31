@@ -16,6 +16,10 @@
       "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
     }
   },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
   "deprecated": false,
   "enabled": true,
   "experimental": false,

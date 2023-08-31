@@ -31,6 +31,10 @@
       "valueFriendly": "B/Brisbane/60/2008"
     }
   },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
   "defaultGene": "NA",
   "deprecated": false,
   "enabled": true,

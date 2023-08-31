@@ -34,6 +34,10 @@
       "valueFriendly": "A/California/07/2009"
     }
   },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
   "defaultGene": "HA1",
   "deprecated": false,
   "enabled": true,

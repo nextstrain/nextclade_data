@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+from lib.fs import json_write, find_files, json_read
+
+if __name__ == '__main__':
+  for f in find_files(here="data/", pattern="pathogen.json"):
+    pathogen_json = json_read(f)
+    compat = {"compatibility": {"cli": "3.0.0", "web": "3.0.0"}}
+    json_write({**pathogen_json, **compat}, f, no_sort_keys=False)
