@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-from Bio import SeqIO
 import numpy as np
+from Bio.SeqRecord import SeqRecord
+
+from lib.fasta import fasta_read
 
 # minimizer cutoff. The max is 1<<32 - 1, so with 28 uses roughly 1/16 of all kmers
 cutoff = 1 << 28
@@ -49,17 +51,17 @@ def get_minimizers(seq: str, k=17):
   return np.unique(minimizers)
 
 
-def make_index(fname):
+def make_index(refs):
   # collect minimizers for each reference sequence first
   minimizers_by_reference = list()
-  for seq in SeqIO.parse(fname, 'fasta'):
+  for seq in refs:
     seq_str = preprocess_seq(seq)
     minimizers = get_minimizers(seq_str)
     minimizers_by_reference.append({
       "minimizers": minimizers,
       "meta": {
         "length": len(seq.seq),
-        "description": seq.description,
+        "description": seq.name,
         "n_minimizers": len(minimizers)
       }
     })
@@ -78,16 +80,19 @@ def make_index(fname):
 
   return index
 
-def preprocess_seq(seq: SeqIO.SeqRecord) -> str:
+
+def preprocess_seq(seq: SeqRecord) -> str:
   return str(seq.seq).upper().replace('-', '')
 
 
 if __name__ == '__main__':
-  index = make_index('tests/minimizers/data/references.fasta')
+  refs = fasta_read('tests/minimizers/data/references.fasta')
+  index = make_index(refs)
   normalization = np.array([x['length'] / x['n_minimizers'] for x in index["references"]])
 
   overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
-  for seq in SeqIO.parse('tests/minimizers/data/queries.fasta', 'fasta'):
+  qrys = fasta_read('tests/minimizers/data/queries.fasta')
+  for seq in qrys:
     seq_str = preprocess_seq(seq)
     minimizers = get_minimizers(seq_str)
     hit_count = np.zeros(len(index["references"]), dtype=np.int32)
@@ -99,12 +104,12 @@ if __name__ == '__main__':
     normalized_hits = normalization * hit_count / len(seq.seq)
     # require at least 30% of the maximal hits and at least 10 hits
     if np.max(normalized_hits) < 0.3 or np.sum(hit_count) < 10:
-      print(seq.description, "no hit")
+      print(seq.name, "no hit")
     else:
       overall_hits += normalized_hits > 0.3
       ri = np.argmax(normalized_hits)
       print(
-        f"{seq.description}\t best hit={normalized_hits[ri]:1.2f} to reference "
+        f"{seq.name}\t best hit={normalized_hits[ri]:1.2f} to reference "
         f"{index['references'][ri]['description']}")
 
   print("\nHits statistics:")
