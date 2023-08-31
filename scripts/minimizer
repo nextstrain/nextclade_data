@@ -3,7 +3,7 @@
 import numpy as np
 
 from lib.fasta import fasta_read
-from lib.minimizer import make_ref_search_index, preprocess_seq, get_ref_search_minimizers, invertible_hash
+from lib.minimizer import make_ref_search_index, get_ref_search_minimizers, invertible_hash
 
 if __name__ == '__main__':
   refs = fasta_read('tests/minimizers/data/references.fasta')
@@ -15,8 +15,7 @@ if __name__ == '__main__':
   overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
   qrys = fasta_read('tests/minimizers/data/queries.fasta')
   for qry in qrys:
-    seq_str = preprocess_seq(qry)
-    minimizers = get_ref_search_minimizers(seq_str)
+    minimizers = get_ref_search_minimizers(qry)
     hit_count = np.zeros(len(index["references"]), dtype=np.int32)
     for m in minimizers:
       if m in index["minimizers"]:

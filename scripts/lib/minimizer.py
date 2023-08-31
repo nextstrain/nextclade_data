@@ -36,11 +36,12 @@ def get_hash(kmer):
   return invertible_hash(x)
 
 
-def get_ref_search_minimizers(seq: str, k=17):
+def get_ref_search_minimizers(seq: SeqRecord, k=17):
+  seq_str = preprocess_seq(seq)
   minimizers = []
   # we know the rough number of minimizers, so we can pre-allocate the array if needed
-  for i in range(len(seq) - k):
-    kmer = seq[i:i + k]
+  for i in range(len(seq_str) - k):
+    kmer = seq_str[i:i + k]
     mhash = get_hash(kmer)
     if mhash < cutoff:  # accept only hashes below cutoff --> reduces the size of the index and the number of look-ups
       minimizers.append(mhash)
@@ -51,8 +52,7 @@ def make_ref_search_index(refs):
   # collect minimizers for each reference sequence first
   minimizers_by_reference = list()
   for name, ref in refs.items():
-    seq_str = preprocess_seq(ref)
-    minimizers = get_ref_search_minimizers(seq_str)
+    minimizers = get_ref_search_minimizers(ref)
     minimizers_by_reference.append({
       "minimizers": minimizers,
       "meta": {
