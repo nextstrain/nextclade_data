@@ -1,5 +1,9 @@
 on:
   push:
+    branches:
+      - master
+      - staging
+      - release
   pull_request:
   repository_dispatch:
     types: build-and-deploy
