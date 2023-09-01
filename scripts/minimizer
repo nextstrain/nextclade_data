@@ -3,14 +3,21 @@
 import numpy as np
 
 from lib.fasta import fasta_read
-from lib.minimizer import make_ref_search_index, get_ref_search_minimizers, invertible_hash
+from lib.minimizer import make_ref_search_index, get_ref_search_minimizers, invertible_hash, serialize_ref_search_index
+from lib.fs import json_write
 
 if __name__ == '__main__':
   refs = fasta_read('tests/minimizers/data/references.fasta')
   refs = {ref.name: ref for ref in refs}
 
   index = make_ref_search_index(refs)
-  normalization = np.array([x['length'] / x['n_minimizers'] for x in index["references"]])
+  json_write(
+    serialize_ref_search_index(index),
+    "tests/minimizers/output/minimizer_index.json",
+    no_sort_keys=True
+  )
+
+  normalization = index['normalization']
 
   overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
   qrys = fasta_read('tests/minimizers/data/queries.fasta')
