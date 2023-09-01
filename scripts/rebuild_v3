@@ -285,7 +285,7 @@ def aggregate_release_notes(release_infos):
 def commit_changes(args, tag, release_infos):
   l.info(f"Commiting changes for '{tag}'")
 
-  commit_message = "chore: rebuild"
+  commit_message = "chore: rebuild [skip ci]"
   if args.release:
     dataset_names = format_list(
       unique([get_dataset_name(release_info["dataset"]) for release_info in release_infos]),
