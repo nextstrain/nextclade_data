@@ -95,9 +95,9 @@ def run_search(index, qrys):
   print(f"\tNumber of minimizers: {len(index['minimizers'])}")
   print(
     f"\tNumber of minimizers per kb: "
-    f"{1000 * np.sum([x['n_minimizers'] for x in index['references']]) / np.sum([x['length'] for x in index['references']]):1.2f}")
+    f"{1000 * np.sum([x['nMinimizers'] for x in index['references']]) / np.sum([x['length'] for x in index['references']]):1.2f}")
   for ref in index["references"]:
-    print(f"\t\t{ref['name']}\t{ref['n_minimizers']}")
+    print(f"\t\t{ref['name']}\t{ref['nMinimizers']}")
 
   # check uniformity of hash function
   import matplotlib.pyplot as plt

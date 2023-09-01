@@ -209,7 +209,7 @@ def main():
     "schemaVersion": "3.0.0",
     "updatedAt": updated_at,
     "collections": collections,
-    "minimizer_index": [
+    "minimizerIndex": [
       {
         "version": minimizer_index["version"],
         "path": minimizer_index_json_path,

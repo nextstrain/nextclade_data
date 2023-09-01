@@ -69,9 +69,9 @@ def make_ref_search_index(refs):
     minimizers_by_reference.append({
       "minimizers": minimizers,
       "meta": {
-        "length": len(ref.seq),
         "name": name,
-        "n_minimizers": len(minimizers)
+        "length": len(ref.seq),
+        "nMinimizers": len(minimizers)
       }
     })
 
@@ -81,13 +81,13 @@ def make_ref_search_index(refs):
   for ri, minimizer_set in enumerate(minimizers_by_reference):
     for m in minimizer_set["minimizers"]:
       if m not in index["minimizers"]:
-        index["minimizers"][m] = np.zeros(n_refs, dtype=bool)
-      index["minimizers"][m][ri] = True  # same as += 1<<ri
+        index["minimizers"][m] = np.zeros(n_refs, dtype=np.int8)
+      index["minimizers"][m][ri] = 1  # same as += 1<<ri
 
     # reference will be a list in same order as the bit set
     index["references"].append(minimizer_set['meta'])
 
-  normalization = np.array([x['length'] / x['n_minimizers'] for x in index["references"]])
+  normalization = np.array([x['length'] / x['nMinimizers'] for x in index["references"]])
 
   return {
     "schemaVersion": MINIMIZER_JSON_SCHEMA_VERSION,
@@ -107,6 +107,11 @@ def preprocess_seq(seq: SeqRecord) -> str:
 
 def serialize_ref_search_index(index):
   index = copy.deepcopy(index)
-  index["minimizers"] = {int(k): v.tolist() for k, v in index["minimizers"].items()}
+  index["minimizers"] = {int(k): to_bitstring(v) for k, v in index[
+    "minimizers"].items()}
   index["normalization"] = index["normalization"].tolist()
   return index
+
+
+def to_bitstring(arr) -> str:
+  return "".join([str(x) for x in arr])
