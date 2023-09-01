@@ -43,7 +43,11 @@ jobs:
 
       - name: "Install system dependencies"
         run: |
-          sudo apt-get install brotli pigz parallel rename --yes -qq >/dev/null
+          sudo apt-get install brotli pigz parallel python3 rename --yes -qq >/dev/null
+
+      - name: "Install Python dependencies"
+        run: |
+          pip3 install -r requirements.txt
 
       - name: "Install awscli"
         run: |
