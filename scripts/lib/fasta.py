@@ -3,12 +3,14 @@ from typing import List, Union
 
 from Bio import SeqIO
 
+from .container import is_iterable
+
 
 def fasta_read(filepaths: Union[str, List[str]]):
   """
   Read one or more FASTA files
   """
-  if not type(filepaths) == "list":
+  if isinstance(filepaths, str) or (not is_iterable(filepaths)):
     filepaths = [filepaths]
   return chain(*[SeqIO.parse(filepath, 'fasta') for filepath in filepaths])
 

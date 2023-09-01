@@ -5,6 +5,10 @@ from typing import List, Iterable, TypeVar, Callable, Union
 T = TypeVar('T')
 
 
+def is_iterable(obj):
+  return issubclass(type(obj), Iterable)
+
+
 def dict_to_namedtuple(name: str, dic: dict):
   return namedtuple(name, dic.keys())(*dic.values())
 
