@@ -1,6 +1,6 @@
 {
   "schemaVersion": "3.0.0",
-  "updatedAt": "2023-09-01T20:39:16Z",
+  "updatedAt": "2023-09-04T13:40:29Z",
   "collections": [
     {
       "meta": {
@@ -2782,6 +2782,12 @@
           }
         }
       ]
+    }
+  ],
+  "minimizerIndex": [
+    {
+      "version": "1",
+      "path": "minimizer_index.json"
     }
   ]
 }
