@@ -42,21 +42,8 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v3
         with:
-          fetch-depth: 50
+          fetch-depth: 0
           submodules: true
-
-      - name: "Install system dependencies"
-        run: |
-          sudo apt-get install brotli pigz parallel rename --yes -qq >/dev/null
-
-      - name: "Install awscli"
-        run: |
-          pushd /tmp >/dev/null
-            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-            unzip -oqq awscliv2.zip
-            sudo ./aws/install --update
-          popd >/dev/null
-          aws --version
 
       - name: "Authenticate git"
         run: |
@@ -72,6 +59,29 @@ jobs:
           git config --global user.name "${BOT_GIT_USER_NAME}"
 
           gh auth setup-git >/dev/null
+
+      - name: "Extract branch name"
+        run: |
+          echo "current_branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: branch-name
+
+      - name: "Checkout branch"
+        run: |
+          git fetch --all
+          git switch ${{ steps.branch-name.outputs.current_branch }}
+
+      - name: "Install system dependencies"
+        run: |
+          sudo apt-get install brotli pigz parallel rename --yes -qq >/dev/null
+
+      - name: "Install awscli"
+        run: |
+          pushd /tmp >/dev/null
+            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip -oqq awscliv2.zip
+            sudo ./aws/install --update
+          popd >/dev/null
+          aws --version
 
       - name: "Rebuild, commit and push datasets"
         if: github.ref != 'refs/heads/release'
