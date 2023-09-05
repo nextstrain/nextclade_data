@@ -122,7 +122,7 @@ def parse_args():
 
   parser.add_argument('--no-pull', action='store_false',
                       help="Skip pulling latest changes from remote. Note that if "
-                           "there are incomatible chanhes this can create hard to resolve merge conflicts.")
+                           "there are incomatible changes this can create hard to resolve merge conflicts.")
   parser.add_argument('--allow-dirty', action='store_true',
                       help="Allow working directory to contain uncommited files. Note that these files will also be "
                            "commited and can potentially be released along with the datasets",

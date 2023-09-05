@@ -1,3 +1,11 @@
+# Nextclade datasets for v3 of Nextclade
+
+
+
+# Nextclade datasets for v2 of Nextclade
+
+⚠️ The README below was written for v2 of Nextclade, it may not apply to v3 ⚠️
+
 <h1 id="nextclade-datasets" align="center">
 💾 Nextclade Datasets
 </h1>

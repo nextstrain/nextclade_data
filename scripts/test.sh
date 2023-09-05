@@ -4,4 +4,4 @@ echo "Building dataset"
 echo "Starting dataset server"
 npx serve@latest --cors --listen=tcp://0.0.0.0:27722 data_output/ &
 echo "Opening Nextclade"
-open -a "Brave Browser.app" -n --args  " https://clades.nextstrain.org?dataset-server=http://localhost:27722"
+open -a "Brave Browser.app" -n --args  " https://master.clades.nextstrain.org?dataset-server=http://localhost:27722"
