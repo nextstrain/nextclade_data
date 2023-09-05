@@ -1,11 +1,11 @@
 {
   "alignmentParams": {
-    "allowedMismatches": 5,
-    "excessBandwidth": 40,
-    "gapAlignmentSide": "left",
-    "minSeedCover": 0.1,
-    "terminalBandwidth": 200,
-    "windowSize": 30
+    "allowed_mismatches": 5,
+    "excess_bandwidth": 40,
+    "gap_alignment_side": "left",
+    "min_seed_cover": 0.1,
+    "terminal_bandwidth": 200,
+    "window_size": 30
   },
   "attributes": {
     "name": {
