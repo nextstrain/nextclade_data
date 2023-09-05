@@ -1,4 +1,14 @@
 {
+  "alignmentParams": {
+    "excess_bandwidth": 30,
+    "terminal_bandwidth": 100,
+    "allowed_mismatches": 4,
+    "window_size": 15,
+    "min_match_length": 30,
+    "min_seed_cover": 0.05,
+    "gap_alignment_side": "left",
+    "kmer_distance": 10
+  },
   "attributes": {
     "name": {
       "value": "rsv_a",
