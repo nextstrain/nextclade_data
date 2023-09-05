@@ -1,4 +1,10 @@
 {
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "minSeedCover": 0.1
+  },
   "attributes": {
     "name": {
       "value": "sars-cov-2-21L",
@@ -28,6 +34,9 @@
   },
   "geneOrderPreference": [
     "S",
+    "E",
+    "M",
+    "N",
     "ORF1a",
     "ORF1b",
     "ORF3a",
@@ -35,10 +44,7 @@
     "ORF7a",
     "ORF7b",
     "ORF8",
-    "ORF9b",
-    "E",
-    "M",
-    "N"
+    "ORF9b"
   ],
   "mutLabels": {
     "nucMutLabelMap": {
