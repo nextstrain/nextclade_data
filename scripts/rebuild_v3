@@ -185,7 +185,7 @@ def main():
   }
 
   index_json_path = join(args.output_dir, "index.json")
-  json_write({**index_json, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
+  json_write(index_json, index_json_path, no_sort_keys=True)
 
   if args.commit:
     commit_hash = commit_changes(args, tag, release_infos)
