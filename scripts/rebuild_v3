@@ -181,7 +181,6 @@ def main():
 
   index_json = {
     "schemaVersion": "3.0.0",
-    "updatedAt": updated_at,
     "collections": collections,
   }
 
