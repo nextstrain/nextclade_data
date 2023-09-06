@@ -5,7 +5,6 @@ Builds a fresh data repo from source data
 """
 import argparse
 import json
-import logging
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
@@ -17,9 +16,7 @@ from lib.date import now_iso, iso_to_iso_safe
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
-
-logging.basicConfig(level=logging.INFO)
-l = logging.getLogger(__file__)
+from lib.logger import l
 
 
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):

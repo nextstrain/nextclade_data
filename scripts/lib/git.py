@@ -1,6 +1,7 @@
 from os import getcwd
 from typing import List, Union
 
+from .logger import l
 from .process import run
 from .string import quote
 
@@ -59,7 +60,9 @@ def git_commit(commit_message: str):
   try:
     run(f"git commit -q -m '{commit_message}'")
   except ValueError as e:
-    if not "nothing to commit, working tree clean" in str(e):
+    if "nothing to commit, working tree clean" in str(e):
+      l.info("nothing to commit, working tree clean")
+    else:
       raise e
 
 
