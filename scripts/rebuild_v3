@@ -4,6 +4,7 @@
 Builds a fresh data repo from source data
 """
 import argparse
+import json
 import logging
 from copy import deepcopy
 from os import getcwd
@@ -340,8 +341,13 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
 
   out_dir = join(args.output_dir, path, tag)
   for _, file in files.items():
-    file = join(dataset_dir, file)
-    copy(file, f"{out_dir}/")  # trailing slash is required if destination is a directory
+    inpath = join(dataset_dir, file)
+    outpath = join(out_dir, file)
+    if file == "tree.json":
+      # Minify tree.json
+      json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
+    else:
+      copy(inpath, outpath)
 
   zip_basename = join(out_dir, "dataset")
   make_zip(dataset_dir, zip_basename)
