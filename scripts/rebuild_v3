@@ -4,7 +4,7 @@
 Builds a fresh data repo from source data
 """
 import argparse
-import logging
+import json
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
@@ -18,10 +18,7 @@ from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_file
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.minimizer import make_ref_search_index, serialize_ref_search_index
-
-logging.basicConfig(level=logging.INFO)
-l = logging.getLogger(__file__)
-
+from lib.logger import l
 
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   reference_fasta_path = join(dataset_dir, "reference.fasta")
@@ -207,7 +204,6 @@ def main():
 
   index_json = {
     "schemaVersion": "3.0.0",
-    "updatedAt": updated_at,
     "collections": collections,
     "minimizerIndex": [
       {
@@ -218,7 +214,7 @@ def main():
   }
 
   index_json_path = join(args.output_dir, "index.json")
-  json_write({**index_json, "updatedAt": updated_at}, index_json_path, no_sort_keys=True)
+  json_write(index_json, index_json_path, no_sort_keys=True)
 
   if args.commit:
     commit_hash = commit_changes(args, tag, release_infos)
@@ -376,8 +372,13 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
 
   out_dir = join(args.output_dir, path, tag)
   for _, file in files.items():
-    file = join(dataset_dir, file)
-    copy(file, f"{out_dir}/")  # trailing slash is required if destination is a directory
+    inpath = join(dataset_dir, file)
+    outpath = join(out_dir, file)
+    if file == "tree.json":
+      # Minify tree.json
+      json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
+    else:
+      copy(inpath, outpath)
 
   zip_basename = join(out_dir, "dataset")
   make_zip(dataset_dir, zip_basename)

@@ -1,12 +1,12 @@
 {
   "alignmentParams": {
-    "allowed_mismatches": 2,
-    "excess_bandwidth": 20,
-    "kmer_distance": 50,
-    "kmer_length": 10,
-    "min_match_length": 40,
-    "terminal_bandwidth": 50,
-    "window_size": 30
+    "allowedMismatches": 2,
+    "excessBandwidth": 20,
+    "kmerDistance": 50,
+    "kmerLength": 10,
+    "minMatchLength": 40,
+    "terminalBandwidth": 50,
+    "windowSize": 30
   },
   "attributes": {
     "name": {

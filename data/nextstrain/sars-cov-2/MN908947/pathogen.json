@@ -1,4 +1,11 @@
 {
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "right",
+    "minSeedCover": 0.1
+  },
   "attributes": {
     "name": {
       "value": "sars-cov-2",
