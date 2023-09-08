@@ -64,7 +64,7 @@ def get_ref_search_minimizers(seq: SeqRecord, k=MAGIC_NUMBER_K):
 def make_ref_search_index(refs):
   # collect minimizers for each reference sequence first
   minimizers_by_reference = list()
-  for name, ref in refs.items():
+  for name, ref in sorted(refs.items()):
     minimizers = get_ref_search_minimizers(ref)
     minimizers_by_reference.append({
       "minimizers": minimizers,
