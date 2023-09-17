@@ -1,0 +1,13 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_002728.1 1 18246
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3052225
+NC_002728.1	RefSeq	region	1	18246	.	+	.	ID=NC_002728.1:1..18246;Dbxref=taxon:3052225;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Nipah virus
+NC_002728.1	RefSeq	gene	113	1711	.	+	0	ID=cds-NP_112021.1;Parent=gene-Nvgp1;Dbxref=GenBank:NP_112021.1,GeneID:920951;Name=NP_112021.1;gbkey=CDS;gene=N;locus_tag=Nvgp1;product=nucleocapsid protein;protein_id=NP_112021.1
+NC_002728.1	RefSeq	gene	2406	4535	.	+	0	ID=cds-NP_112022.1;Parent=gene-Nvgp2;Dbxref=GenBank:NP_112022.1,GeneID:920952;Name=NP_112022.1;gbkey=CDS;gene=P;product=P phosphoprotein;protein_id=NP_112022.1
+NC_002728.1	RefSeq	gene	5108	6166	.	+	0	ID=cds-NP_112025.1;Parent=gene-Nvgp3;Dbxref=GenBank:NP_112025.1,GeneID:920953;Name=NP_112025.1;gbkey=CDS;gene=M;locus_tag=Nvgp3;product=matrix protein;protein_id=NP_112025.1
+NC_002728.1	RefSeq	gene	6654	8294	.	+	0	ID=cds-NP_112026.1;Parent=gene-Nvgp4;Dbxref=GenBank:NP_112026.1,GeneID:920954;Name=NP_112026.1;gbkey=CDS;gene=F;locus_tag=Nvgp4;product=fusion protein;protein_id=NP_112026.1
+NC_002728.1	RefSeq	gene	8943	10751	.	+	0	ID=cds-NP_112027.1;Parent=gene-Nvgp5;Dbxref=GenBank:NP_112027.1,GeneID:920955;Name=NP_112027.1;gbkey=CDS;gene=G;locus_tag=Nvgp5;product=attachment glycoprotein;protein_id=NP_112027.1
+NC_002728.1	RefSeq	gene	11412	18146	.	+	0	ID=cds-NP_112028.1;Parent=gene-Nvgp6;Dbxref=GenBank:NP_112028.1,GeneID:920950;Name=NP_112028.1;gbkey=CDS;gene=L;locus_tag=Nvgp6;product=polymerase;protein_id=NP_112028.1
+

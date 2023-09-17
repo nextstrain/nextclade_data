@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "metadata": {},
+  "reference": {
+    "source": "genbank",
+    "accession": "NC_002728",
+    "strainName": "NC_002728"
+  }
+}
