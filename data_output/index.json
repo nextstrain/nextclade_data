@@ -2782,5 +2782,11 @@
         }
       ]
     }
+  ],
+  "minimizerIndex": [
+    {
+      "version": "1",
+      "path": "minimizer_index.json"
+    }
   ]
 }

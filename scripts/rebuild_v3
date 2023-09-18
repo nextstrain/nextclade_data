@@ -16,8 +16,9 @@ from lib.date import now_iso, iso_to_iso_safe
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
+from lib.fasta import fasta_read_exactly_one_seq
+from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 from lib.logger import l
-
 
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   reference_fasta_path = join(dataset_dir, "reference.fasta")
@@ -63,7 +64,9 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
   dict_get_required(pathogen_json, ["attributes", "reference", "value"])
   dict_get_required(pathogen_json, ["attributes", "reference", "valueFriendly"])
 
-  return dict_cleanup({
+  ref = get_ref_seq(pathogen_json, dataset_dir)
+
+  dataset = dict_cleanup({
     "path": path,
     "official": True if dict_get(pathogen_json, ["official"]) == True else False,
     "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else False,
@@ -73,6 +76,18 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
   })
+
+  return dataset, ref
+
+
+def get_ref_seq(pathogen_json, dataset_dir):
+  files = dict_get_required(pathogen_json, ["files"])
+  ref_filename = dict_get_required(files, ["reference"])
+  ref_filepath = join(dataset_dir, ref_filename)
+  try:
+    return fasta_read_exactly_one_seq(ref_filepath)
+  except Exception as e:
+    raise ValueError(f"When reading reference sequence") from e
 
 
 def get_new_dataset_order(datasets, dataset_order):
@@ -167,10 +182,21 @@ def main():
 
   collections = []
   release_infos = []
+  all_refs = {}
   for collection_json_path in find_files("collection.json", args.input_dir):
-    collection, release_infos = process_one_collection(collection_json_path, args, tag, updated_at)
+    collection, release_infos, refs = process_one_collection(collection_json_path, args, tag, updated_at)
     collections.append(collection)
     release_infos.extend(release_infos)
+    all_refs.update(refs)
+
+  minimizer_index = make_ref_search_index(all_refs)
+
+  minimizer_index_json_path = "minimizer_index.json"
+  json_write(
+    serialize_ref_search_index(minimizer_index),
+    join(args.output_dir, minimizer_index_json_path),
+    no_sort_keys=True
+  )
 
   # if len(release_infos) == 0:
   #   l.info("No dataset modifications detected. Will not release anything.")
@@ -179,6 +205,12 @@ def main():
   index_json = {
     "schemaVersion": "3.0.0",
     "collections": collections,
+    "minimizerIndex": [
+      {
+        "version": minimizer_index["version"],
+        "path": minimizer_index_json_path,
+      }
+    ]
   }
 
   index_json_path = join(args.output_dir, "index.json")
@@ -200,9 +232,12 @@ def process_one_collection(collection_json_path, args, tag, updated_at):
   collection_dir = dirname(collection_json_path)
 
   datasets = []
+  refs = {}
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     try:
-      datasets.append(index_one_dataset(args, pathogen_json_path, updated_at))
+      dataset, ref = index_one_dataset(args, pathogen_json_path, updated_at)
+      datasets.append(dataset)
+      refs.update({dataset["path"]: ref})
     except Exception as e:
       raise ValueError(f"When processing '{pathogen_json_path}'") from e
 
@@ -227,7 +262,7 @@ def process_one_collection(collection_json_path, args, tag, updated_at):
     "datasets": datasets,
   }
 
-  return collection_info, release_infos
+  return collection_info, release_infos, refs
 
 
 def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at):

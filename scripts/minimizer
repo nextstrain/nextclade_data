@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+
+"""
+Runs minimizers test: creates an index of refs and performs search on query sequences.
+
+Example:
+
+  ./scripts/minimizer \
+    --input-refs tests/minimizers/data/references.fasta \
+    --input-qrys tests/minimizers/data/queries.fasta \
+    --output-json tests/minimizers/output/minimizer_index.json
+
+"""
+
+import argparse
+
+import numpy as np
+
+from lib.fasta import fasta_read
+from lib.fs import json_write
+from lib.minimizer import make_ref_search_index, get_ref_search_minimizers, invertible_hash, serialize_ref_search_index
+
+
+def parse_args():
+  parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+  parser.add_argument(
+    '--input-refs', required=True, nargs='+',
+    help='One or more fasta files with reference sequences',
+  )
+  parser.add_argument(
+    '--input-qrys', required=False, nargs='+',
+    help='One or more fasta files with query sequences. If omitted, only minimizer index will be '
+         'calculated, the search in query sequences will not be performed',
+  )
+  parser.add_argument(
+    '--output-json', required=False,
+    help='Where to output minimizer index file'
+  )
+
+  args = parser.parse_args()
+
+  return args
+
+
+def main():
+  args = parse_args()
+
+  refs = fasta_read(args.input_refs)
+  refs = {ref.name: ref for ref in refs}
+
+  index = make_ref_search_index(refs)
+
+  if args.output_json:
+    json_write(
+      serialize_ref_search_index(index),
+      args.output_json,
+      no_sort_keys=True
+    )
+
+  if args.input_qrys:
+    qrys = fasta_read(args.input_qrys)
+    run_search(index, qrys)
+
+
+def run_search(index, qrys):
+  normalization = index['normalization']
+  overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
+  for qry in qrys:
+    minimizers = get_ref_search_minimizers(qry)
+    hit_count = np.zeros(len(index["references"]), dtype=np.int32)
+    for m in minimizers:
+      if m in index["minimizers"]:
+        hit_count += index["minimizers"][m]
+
+    # we expect hits to be proportional to the length of the sequence and the number of minimizers per reference
+    normalized_hits = normalization * hit_count / len(qry.seq)
+    # require at least 30% of the maximal hits and at least 10 hits
+    if np.max(normalized_hits) < 0.3 or np.sum(hit_count) < 10:
+      print(qry.name, "no hit")
+    else:
+      overall_hits += normalized_hits > 0.3
+      ri = np.argmax(normalized_hits)
+      print(
+        f"{qry.name}\t best hit={normalized_hits[ri]:1.2f} to reference "
+        f"{index['references'][ri]['name']}")
+
+  print("\nHits statistics:")
+  for i, ref in enumerate(index["references"]):
+    print(f"\t{ref['name']}\t{overall_hits[i]}")
+  ## we could offer the user to run the analysis on these datasets in reverse order of the number of hits
+
+  print(f"\nIndex statistics:")
+  print(f"\tNumber of references: {len(index['references'])}")
+  print(f"\tNumber of minimizers: {len(index['minimizers'])}")
+  print(
+    f"\tNumber of minimizers per kb: "
+    f"{1000 * np.sum([x['nMinimizers'] for x in index['references']]) / np.sum([x['length'] for x in index['references']]):1.2f}")
+  for ref in index["references"]:
+    print(f"\t\t{ref['name']}\t{ref['nMinimizers']}")
+
+  # check uniformity of hash function
+  import matplotlib.pyplot as plt
+
+  plt.figure()
+  for start in range(0, 1 << 29, 1 << 22):
+    # compute hashes for 2^12 integers starting at start
+    hashes = [invertible_hash(x) for x in range(start, start + (1 << 12))]
+    # sort and plot --> should be a straight line from 0 to 2^32-1
+    plt.plot(sorted(hashes))
+
+
+if __name__ == '__main__':
+  main()
