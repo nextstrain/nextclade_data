@@ -122,6 +122,10 @@ def get_new_dataset_order(datasets, dataset_order):
   return dataset_order
 
 
+def sort_collections(collections, dataset_order):
+  return [collection for x in dataset_order for collection in collections if collection["meta"]["id"] == x]
+
+
 def sort_datasets(datasets, dataset_order):
   return [dataset for x in dataset_order for dataset in datasets if dataset["path"] == x]
 
@@ -181,14 +185,20 @@ def main():
   tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
   git_check_tag(tag)
 
+  collection_json_paths = find_files("collection.json", args.input_dir)
+
   collections = []
   release_infos = []
   all_refs = {}
-  for collection_json_path in find_files("collection.json", args.input_dir):
+  for collection_json_path in collection_json_paths:
     collection, release_infos, refs = process_one_collection(collection_json_path, args, tag, updated_at)
     collections.append(collection)
     release_infos.extend(release_infos)
     all_refs.update(refs)
+
+  from pprint import pprint
+  pprint(collections)
+  collections = sort_collections(collections, ["nextstrain", "community"])
 
   minimizer_index = make_ref_search_index(all_refs)
 
