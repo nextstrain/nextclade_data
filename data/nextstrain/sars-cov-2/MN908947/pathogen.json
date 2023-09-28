@@ -3417,6 +3417,13 @@
         },
         {
           "codonRange": {
+            "begin": 29,
+            "end": 43
+          },
+          "geneName": "ORF3a"
+        },
+        {
+          "codonRange": {
             "begin": 47,
             "end": 276
           },
@@ -3718,6 +3725,13 @@
         },
         {
           "codonRange": {
+            "begin": 31,
+            "end": 122
+          },
+          "geneName": "ORF7a"
+        },
+        {
+          "codonRange": {
             "begin": 39,
             "end": 122
           },
@@ -3726,6 +3740,13 @@
         {
           "codonRange": {
             "begin": 40,
+            "end": 122
+          },
+          "geneName": "ORF7a"
+        },
+        {
+          "codonRange": {
+            "begin": 44,
             "end": 122
           },
           "geneName": "ORF7a"
@@ -3762,6 +3783,13 @@
           "codonRange": {
             "begin": 54,
             "end": 65
+          },
+          "geneName": "ORF7a"
+        },
+        {
+          "codonRange": {
+            "begin": 55,
+            "end": 122
           },
           "geneName": "ORF7a"
         },
@@ -4229,6 +4257,27 @@
         },
         {
           "codonRange": {
+            "begin": 6,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
+            "begin": 10,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
+            "begin": 11,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
             "begin": 12,
             "end": 44
           },
@@ -4257,7 +4306,35 @@
         },
         {
           "codonRange": {
+            "begin": 17,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
+            "begin": 18,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
             "begin": 22,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
+            "begin": 32,
+            "end": 44
+          },
+          "geneName": "ORF7b"
+        },
+        {
+          "codonRange": {
+            "begin": 39,
             "end": 44
           },
           "geneName": "ORF7b"
@@ -4306,7 +4383,28 @@
         },
         {
           "codonRange": {
+            "begin": 7,
+            "end": 122
+          },
+          "geneName": "ORF8"
+        },
+        {
+          "codonRange": {
+            "begin": 8,
+            "end": 122
+          },
+          "geneName": "ORF8"
+        },
+        {
+          "codonRange": {
             "begin": 21,
+            "end": 122
+          },
+          "geneName": "ORF8"
+        },
+        {
+          "codonRange": {
+            "begin": 26,
             "end": 122
           },
           "geneName": "ORF8"
@@ -5613,6 +5711,10 @@
         {
           "codon": 58,
           "geneName": "ORF6"
+        },
+        {
+          "codon": 20,
+          "geneName": "ORF7a"
         },
         {
           "codon": 34,
