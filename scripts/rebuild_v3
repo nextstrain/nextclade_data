@@ -196,8 +196,6 @@ def main():
     release_infos.extend(release_infos)
     all_refs.update(refs)
 
-  from pprint import pprint
-  pprint(collections)
   collections = sort_collections(collections, ["nextstrain", "community"])
 
   minimizer_index = make_ref_search_index(all_refs)
