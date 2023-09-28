@@ -17,6 +17,10 @@
       "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
     }
   },
+  "image": {
+    "path": "image.png",
+    "source": "nextstrain.org"
+  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"

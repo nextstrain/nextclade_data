@@ -20,6 +20,10 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
+  "image": {
+    "path": "image.png",
+    "source": "nextstrain.org"
+  },
   "defaultGene": "S",
   "deprecated": false,
   "enabled": true,

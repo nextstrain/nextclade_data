@@ -7,7 +7,7 @@ import argparse
 import json
 from copy import deepcopy
 from os import getcwd
-from os.path import dirname, realpath, join, relpath, isfile
+from os.path import dirname, realpath, join, relpath, isfile, exists
 
 from lib.changelog import changelog_prepare
 from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
@@ -74,6 +74,7 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
     "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else False,
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
+    "image": dict_get(pathogen_json, ["image"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
   })
@@ -388,6 +389,12 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
       json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
     else:
       copy(inpath, outpath)
+
+  image_path = dict_get(pathogen_json, ["image", "path"])
+  if image_path:
+    copy(join(dataset_dir, image_path), join(out_dir, image_path))
+  elif any([exists(join(dataset_dir, f"image.{ext}")) for ext in ["png", "jpg", "gif", "svg"]]):
+    l.warning(f"In dataset {path}: Image file found, but pathogen.json does not have a correponding entry")
 
   zip_basename = join(out_dir, "dataset")
   make_zip(dataset_dir, zip_basename)
