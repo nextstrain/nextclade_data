@@ -31,6 +31,10 @@
       "valueFriendly": "A/Darwin/6/2021"
     }
   },
+  "image": {
+    "path": "image.png",
+    "source": "nextstrain.org"
+  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
