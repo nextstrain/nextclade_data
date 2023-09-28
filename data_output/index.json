@@ -40,6 +40,10 @@
               "valueFriendly": "Wuhan-Hu-1/2019"
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -94,6 +98,10 @@
               "value": "BA.2",
               "valueFriendly": "BA.2"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -151,6 +159,10 @@
               "valueFriendly": "Reconstructed ancestral MPXV"
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -201,6 +213,10 @@
               "value": "NC_063383.1",
               "valueFriendly": "MPXV-M5312_HM12_Rivers"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -253,6 +269,10 @@
               "value": "pseudo_ON563414",
               "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -309,6 +329,10 @@
               "valueFriendly": "hRSV/A/England/397/2017"
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -359,6 +383,10 @@
               "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -408,6 +436,10 @@
               "value": "CY121680",
               "valueFriendly": "A/California/07/2009"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -462,6 +494,10 @@
               "valueFriendly": "A/Wisconsin/588/2019"
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -514,6 +550,10 @@
               "value": "MW626056",
               "valueFriendly": "A/Wisconsin/588/2019"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -568,6 +608,10 @@
               "valueFriendly": "A/Wisconsin/67/2005"
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -620,6 +664,10 @@
               "value": "EPI1857216",
               "valueFriendly": "A/Darwin/6/2021"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -674,6 +722,10 @@
               "value": "EPI1857215",
               "valueFriendly": "A/Darwin/6/2021"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -1431,6 +1483,10 @@
               "valueFriendly": "UNKNOWN"
             }
           },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -1471,6 +1527,10 @@
               "value": "UNKNOWN",
               "valueFriendly": "UNKNOWN"
             }
+          },
+          "image": {
+            "path": "image.jpg",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -2694,6 +2754,10 @@
               "value": "UNKNOWN",
               "valueFriendly": "UNKNOWN"
             }
+          },
+          "image": {
+            "path": "image.png",
+            "source": "nextstrain.org"
           },
           "files": {
             "changelog": "CHANGELOG.md",
