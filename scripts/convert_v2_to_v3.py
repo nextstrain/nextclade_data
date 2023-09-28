@@ -120,6 +120,10 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
       "changelog": check_file(output_dir, "CHANGELOG.md"),
     },
     "attributes": attributes,
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0",
+    },
     "primers": primers,
     "qc": qc,
     "mutLabels": {
@@ -136,7 +140,6 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
 
   dict_remove_many(pathogen_json, [
     "comment",
-    "compatibility",
     "defaultRef",
     "metadata",
     "name",
