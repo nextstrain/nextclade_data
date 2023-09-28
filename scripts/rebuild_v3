@@ -7,7 +7,7 @@ import argparse
 import json
 from copy import deepcopy
 from os import getcwd
-from os.path import dirname, realpath, join, relpath, isfile
+from os.path import dirname, realpath, join, relpath, isfile, exists
 
 from lib.changelog import changelog_prepare
 from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
@@ -19,6 +19,7 @@ from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_file
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 from lib.logger import l
+
 
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   reference_fasta_path = join(dataset_dir, "reference.fasta")
@@ -379,6 +380,12 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
       json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
     else:
       copy(inpath, outpath)
+
+  image_path = dict_get(pathogen_json, ["image", "path"])
+  if image_path:
+    copy(join(dataset_dir, image_path), join(out_dir, image_path))
+  elif any([exists(join(dataset_dir, f"image.{ext}")) for ext in ["png", "jpg", "gif", "svg"]]):
+    l.warning(f"In dataset {path}: Image file found, but pathogen.json does not have a correponding entry")
 
   zip_basename = join(out_dir, "dataset")
   make_zip(dataset_dir, zip_basename)
