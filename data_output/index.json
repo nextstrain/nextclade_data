@@ -3,66 +3,6 @@
   "collections": [
     {
       "meta": {
-        "id": "community",
-        "title": "Community",
-        "description": "Set of datasets provided by community members",
-        "urls": [
-          {
-            "name": "source",
-            "url": "https://github.com/nextstrain/nextclade_data"
-          },
-          {
-            "name": "contact",
-            "url": "https://github.com/nextstrain/nextclade_data/issues"
-          }
-        ]
-      },
-      "datasets": [
-        {
-          "path": "community/adenovirus/hadv-a",
-          "official": false,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "adenovirus/hadv-a",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "meta": {
         "id": "nextstrain",
         "title": "Nextstrain",
         "description": "Set of official Nextclade datasets maintained by Nextstrain team",
@@ -2748,6 +2688,66 @@
           "attributes": {
             "name": {
               "value": "zika",
+              "valueFriendly": "UNKNOWN"
+            },
+            "reference": {
+              "value": "UNKNOWN",
+              "valueFriendly": "UNKNOWN"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "meta": {
+        "id": "community",
+        "title": "Community",
+        "description": "Set of datasets provided by community members",
+        "urls": [
+          {
+            "name": "source",
+            "url": "https://github.com/nextstrain/nextclade_data"
+          },
+          {
+            "name": "contact",
+            "url": "https://github.com/nextstrain/nextclade_data/issues"
+          }
+        ]
+      },
+      "datasets": [
+        {
+          "path": "community/adenovirus/hadv-a",
+          "official": false,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": true,
+          "attributes": {
+            "name": {
+              "value": "adenovirus/hadv-a",
               "valueFriendly": "UNKNOWN"
             },
             "reference": {
