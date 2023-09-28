@@ -74,6 +74,7 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
     "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else False,
     "attributes": dict_get_required(pathogen_json, ["attributes"]),
+    "image": dict_get(pathogen_json, ["image"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
   })
