@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "name": {
+      "value": "hadv-a-12",
+      "valueFriendly": "Human mastadenovirus A (serotype 12)"
+    },
+    "reference": {
+      "value": "NC_001460.1",
+      "valueFriendly": "HAdV-A serotype 12"
+    }
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta"
+  },
+  "official": false,
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}

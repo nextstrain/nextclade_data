@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "name": {
+      "value": "ev-d68-fermon",
+      "valueFriendly": "Human enterovirus D68"
+    },
+    "reference": {
+      "value": "AY426531.1",
+      "valueFriendly": "EV-D68 strain Fermon"
+    }
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta"
+  },
+  "official": true,
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}

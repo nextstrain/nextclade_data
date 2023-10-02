@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "name": {
+      "value": "ebola",
+      "valueFriendly": "Zaire ebolavirus"
+    },
+    "reference": {
+      "value": "KR075003.1",
+      "valueFriendly": "LBR/2014/Makona-Liberia-DQE14"
+    }
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta"
+  },
+  "official": true,
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}
