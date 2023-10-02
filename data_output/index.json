@@ -80,7 +80,7 @@
           }
         },
         {
-          "path": "nextstrain/sars-cov-2-21L/BA.2",
+          "path": "nextstrain/sars-cov-2/BA.2",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -136,19 +136,19 @@
           }
         },
         {
-          "path": "nextstrain/MPXV/ancestral",
+          "path": "nextstrain/flu/h1n1pdm/ha/CY121680",
           "official": true,
           "deprecated": false,
           "enabled": true,
           "experimental": false,
           "attributes": {
             "name": {
-              "value": "MPXV",
-              "valueFriendly": "Monkeypox (All Clades)"
+              "value": "flu_h1n1pdm_ha",
+              "valueFriendly": "Influenza A H1N1pdm HA"
             },
             "reference": {
-              "value": "ancestral",
-              "valueFriendly": "Reconstructed ancestral MPXV"
+              "value": "CY121680",
+              "valueFriendly": "A/California/07/2009"
             }
           },
           "files": {
@@ -163,7 +163,431 @@
           "capabilities": {
             "qc": [
               "frameShifts",
-              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/ha/MW626062",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_h1n1pdm_ha",
+              "valueFriendly": "Influenza A H1N1pdm HA"
+            },
+            "reference": {
+              "value": "MW626062",
+              "valueFriendly": "A/Wisconsin/588/2019"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/na/MW626056",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_h1n1pdm_na",
+              "valueFriendly": "Influenza A H1N1pdm NA (Neuraminidase)"
+            },
+            "reference": {
+              "value": "MW626056",
+              "valueFriendly": "A/Wisconsin/588/2019"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/ha/CY163680",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_h3n2_ha",
+              "valueFriendly": "Influenza A H3N2 HA"
+            },
+            "reference": {
+              "value": "CY163680",
+              "valueFriendly": "A/Wisconsin/67/2005"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/ha/EPI1857216",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_h3n2_ha",
+              "valueFriendly": "Influenza A H3N2 HA"
+            },
+            "reference": {
+              "value": "EPI1857216",
+              "valueFriendly": "A/Darwin/6/2021"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "phenotypeData",
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/na/EPI1857215",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_h3n2_na",
+              "valueFriendly": "Influenza A H3N2 NA (Neuraminidase)"
+            },
+            "reference": {
+              "value": "EPI1857215",
+              "valueFriendly": "A/Darwin/6/2021"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/ha/KX058884",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_vic_ha",
+              "valueFriendly": "Influenza B Victoria HA"
+            },
+            "reference": {
+              "value": "KX058884",
+              "valueFriendly": "B/Brisbane/60/2008"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/na/CY073894",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_vic_na",
+              "valueFriendly": "Influenza B/Vic NA (Neuraminidase)"
+            },
+            "reference": {
+              "value": "CY073894",
+              "valueFriendly": "B/Brisbane/60/2008"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/yam/ha/JN993010",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "flu_yam_ha",
+              "valueFriendly": "Influenza B Yamagata HA"
+            },
+            "reference": {
+              "value": "JN993010",
+              "valueFriendly": "B/Wisconsin/01/2010"
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
               "mixedSites",
               "privateMutations",
               "stopCodons"
@@ -187,19 +611,19 @@
           }
         },
         {
-          "path": "nextstrain/hMPXV/NC_063383.1",
+          "path": "nextstrain/rsv/a/EPI_ISL_412866",
           "official": true,
           "deprecated": false,
           "enabled": true,
           "experimental": false,
           "attributes": {
             "name": {
-              "value": "hMPXV",
-              "valueFriendly": "Human Monkeypox (hMPXV)"
+              "value": "rsv_a",
+              "valueFriendly": "Respiratory Syncytial Virus A"
             },
             "reference": {
-              "value": "NC_063383.1",
-              "valueFriendly": "MPXV-M5312_HM12_Rivers"
+              "value": "EPI_ISL_412866",
+              "valueFriendly": "hRSV/A/England/397/2017"
             }
           },
           "files": {
@@ -214,10 +638,8 @@
           "capabilities": {
             "qc": [
               "frameShifts",
-              "missingData",
               "mixedSites",
               "privateMutations",
-              "snpClusters",
               "stopCodons"
             ]
           },
@@ -239,7 +661,57 @@
           }
         },
         {
-          "path": "nextstrain/hMPXV_B1/pseudo_ON563414",
+          "path": "nextstrain/rsv/b/EPI_ISL_1653999",
+          "official": true,
+          "deprecated": false,
+          "enabled": true,
+          "experimental": false,
+          "attributes": {
+            "name": {
+              "value": "rsv_b",
+              "valueFriendly": "Respiratory Syncytial Virus B"
+            },
+            "reference": {
+              "value": "EPI_ISL_1653999",
+              "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
+            }
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/mpx/hmpxv-b1/pseudo_ON563414",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -294,594 +766,19 @@
           }
         },
         {
-          "path": "nextstrain/rsv_a/EPI_ISL_412866",
+          "path": "nextstrain/mpx/hmpxv/NC_063383.1",
           "official": true,
           "deprecated": false,
           "enabled": true,
           "experimental": false,
           "attributes": {
             "name": {
-              "value": "rsv_a",
-              "valueFriendly": "RSV-A"
+              "value": "hMPXV",
+              "valueFriendly": "Human Monkeypox (hMPXV)"
             },
             "reference": {
-              "value": "EPI_ISL_412866",
-              "valueFriendly": "hRSV/A/England/397/2017"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/rsv_b/EPI_ISL_1653999",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "rsv_b",
-              "valueFriendly": "RSV-B"
-            },
-            "reference": {
-              "value": "EPI_ISL_1653999",
-              "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_h1n1pdm_ha/CY121680",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_h1n1pdm_ha",
-              "valueFriendly": "Influenza A H1N1pdm HA"
-            },
-            "reference": {
-              "value": "CY121680",
-              "valueFriendly": "A/California/07/2009"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_h1n1pdm_ha/MW626062",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_h1n1pdm_ha",
-              "valueFriendly": "Influenza A H1N1pdm HA"
-            },
-            "reference": {
-              "value": "MW626062",
-              "valueFriendly": "A/Wisconsin/588/2019"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_h1n1pdm_na/MW626056",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_h1n1pdm_na",
-              "valueFriendly": "Influenza A H1N1pdm NA (Neuraminidase)"
-            },
-            "reference": {
-              "value": "MW626056",
-              "valueFriendly": "A/Wisconsin/588/2019"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_h3n2_ha/CY163680",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_h3n2_ha",
-              "valueFriendly": "Influenza A H3N2 HA"
-            },
-            "reference": {
-              "value": "CY163680",
-              "valueFriendly": "A/Wisconsin/67/2005"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_h3n2_ha/EPI1857216",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_h3n2_ha",
-              "valueFriendly": "Influenza A H3N2 HA"
-            },
-            "reference": {
-              "value": "EPI1857216",
-              "valueFriendly": "A/Darwin/6/2021"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "phenotypeData",
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_h3n2_na/EPI1857215",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_h3n2_na",
-              "valueFriendly": "Influenza A H3N2 NA (Neuraminidase)"
-            },
-            "reference": {
-              "value": "EPI1857215",
-              "valueFriendly": "A/Darwin/6/2021"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_vic_ha/KX058884",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_vic_ha",
-              "valueFriendly": "Influenza B Victoria HA"
-            },
-            "reference": {
-              "value": "KX058884",
-              "valueFriendly": "B/Brisbane/60/2008"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_vic_na/CY073894",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_vic_na",
-              "valueFriendly": "Influenza B/Vic NA (Neuraminidase)"
-            },
-            "reference": {
-              "value": "CY073894",
-              "valueFriendly": "B/Brisbane/60/2008"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu_yam_ha/JN993010",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "flu_yam_ha",
-              "valueFriendly": "Influenza B Yamagata HA"
-            },
-            "reference": {
-              "value": "JN993010",
-              "valueFriendly": "B/Wisconsin/01/2010"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sars-cov-2-no-recomb/MN908947",
-          "official": true,
-          "deprecated": true,
-          "enabled": true,
-          "experimental": false,
-          "attributes": {
-            "name": {
-              "value": "sars-cov-2-no-recomb",
-              "valueFriendly": "(Deprecated) SARS-CoV-2 without recombinants"
-            },
-            "reference": {
-              "value": "MN908947",
-              "valueFriendly": "Wuhan-Hu-1/2019"
+              "value": "NC_063383.1",
+              "valueFriendly": "MPXV-M5312_HM12_Rivers"
             }
           },
           "files": {
@@ -901,9 +798,6 @@
               "privateMutations",
               "snpClusters",
               "stopCodons"
-            ],
-            "other": [
-              "mutLabels"
             ]
           },
           "versions": [
@@ -924,358 +818,19 @@
           }
         },
         {
-          "path": "nextstrain/dummy1",
+          "path": "nextstrain/mpx/mpxv/ancestral",
           "official": true,
           "deprecated": false,
           "enabled": true,
-          "experimental": true,
+          "experimental": false,
           "attributes": {
             "name": {
-              "value": "dummy1",
-              "valueFriendly": "dummy1"
+              "value": "MPXV",
+              "valueFriendly": "Monkeypox (All Clades)"
             },
             "reference": {
-              "value": "DU1MMY",
-              "valueFriendly": "DU1MMY"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/h1_na",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "h1_na",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/hbv",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "hbv",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/hiv",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "hiv",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/hiv_mat",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "hiv_mat",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/rsv-a",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "rsv-a",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sc2",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "sc2",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sc2-big",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "sars-cov-2",
-              "valueFriendly": "sars-cov-2"
-            },
-            "reference": {
-              "value": "MN908947",
-              "valueFriendly": "MN908947"
+              "value": "ancestral",
+              "valueFriendly": "Reconstructed ancestral MPXV"
             }
           },
           "files": {
@@ -1293,59 +848,6 @@
               "missingData",
               "mixedSites",
               "privateMutations",
-              "snpClusters",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sc2_mat",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "sc2_mat",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
               "stopCodons"
             ]
           },
@@ -1367,56 +869,7 @@
           }
         },
         {
-          "path": "nextstrain/vic_na",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "vic_na",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/ebola",
+          "path": "nextstrain/ebola/zaire",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -1424,11 +877,11 @@
           "attributes": {
             "name": {
               "value": "ebola",
-              "valueFriendly": "UNKNOWN"
+              "valueFriendly": "Zaire ebolavirus"
             },
             "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
+              "value": "KR075003.1",
+              "valueFriendly": "LBR/2014/Makona-Liberia-DQE14"
             }
           },
           "files": {
@@ -1457,19 +910,19 @@
           }
         },
         {
-          "path": "nextstrain/enterovirus/d68",
+          "path": "nextstrain/enterovirus/d68/fermon",
           "official": true,
           "deprecated": false,
           "enabled": true,
           "experimental": true,
           "attributes": {
             "name": {
-              "value": "enterovirus/d68",
-              "valueFriendly": "UNKNOWN"
+              "value": "ev-d68-fermon",
+              "valueFriendly": "Human enterovirus D68"
             },
             "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
+              "value": "AY426531.1",
+              "valueFriendly": "EV-D68 strain Fermon"
             }
           },
           "files": {
@@ -1498,19 +951,19 @@
           }
         },
         {
-          "path": "nextstrain/flu/h1n1pdm/ha",
+          "path": "nextstrain/hiv/1",
           "official": true,
           "deprecated": false,
           "enabled": true,
           "experimental": true,
           "attributes": {
             "name": {
-              "value": "flu/h1n1pdm/ha",
-              "valueFriendly": "UNKNOWN"
+              "value": "hiv",
+              "valueFriendly": "Human immunodeficiency virus 1"
             },
             "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
+              "value": "NC_001802.1",
+              "valueFriendly": "HIV-1"
             }
           },
           "files": {
@@ -1519,7 +972,16 @@
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
           },
           "versions": [
             {
@@ -1539,1148 +1001,7 @@
           }
         },
         {
-          "path": "nextstrain/flu/h1n1pdm/na",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h1n1pdm/na",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/np",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h1n1pdm/np",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/ns",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h1n1pdm/ns",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/pa",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h1n1pdm/pa",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/pb1",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h1n1pdm/pb1",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/pb2",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h1n1pdm/pb2",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/ha",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/ha",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/ma",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/ma",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/na",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/na",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/np",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/np",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/ns",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/ns",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/pa",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/pa",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/pb1",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/pb1",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/pb2",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/h3n2/pb2",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/ha",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/ha",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/na",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/na",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/np",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/np",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/ns",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/ns",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/pa",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/pa",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/pb1",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/pb1",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/pb2",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/vic/pb2",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/ha",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/ha",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/na",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/na",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/np",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/np",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/ns",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/ns",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/pa",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/pa",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/pb1",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/pb1",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/yam/pb2",
-          "official": true,
-          "deprecated": false,
-          "enabled": true,
-          "experimental": true,
-          "attributes": {
-            "name": {
-              "value": "flu/yam/pb2",
-              "valueFriendly": "UNKNOWN"
-            },
-            "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
-            }
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/zika",
+          "path": "nextstrain/zika/KX369547.1",
           "official": true,
           "deprecated": false,
           "enabled": true,
@@ -2688,11 +1009,11 @@
           "attributes": {
             "name": {
               "value": "zika",
-              "valueFriendly": "UNKNOWN"
+              "valueFriendly": "Zika virus"
             },
             "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
+              "value": "KX369547.1",
+              "valueFriendly": "PF13/251013-18"
             }
           },
           "files": {
@@ -2740,19 +1061,19 @@
       },
       "datasets": [
         {
-          "path": "community/adenovirus/hadv-a",
+          "path": "community/adenovirus/hadv-a/12",
           "official": false,
           "deprecated": false,
           "enabled": true,
           "experimental": true,
           "attributes": {
             "name": {
-              "value": "adenovirus/hadv-a",
-              "valueFriendly": "UNKNOWN"
+              "value": "hadv-a-12",
+              "valueFriendly": "Human mastadenovirus A (serotype 12)"
             },
             "reference": {
-              "value": "UNKNOWN",
-              "valueFriendly": "UNKNOWN"
+              "value": "NC_001460.1",
+              "valueFriendly": "HAdV-A serotype 12"
             }
           },
           "files": {

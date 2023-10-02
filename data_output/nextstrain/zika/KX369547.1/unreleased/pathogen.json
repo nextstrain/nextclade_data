@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "name": {
+      "value": "zika",
+      "valueFriendly": "Zika virus"
+    },
+    "reference": {
+      "value": "KX369547.1",
+      "valueFriendly": "PF13/251013-18"
+    }
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta"
+  },
+  "official": true,
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}
