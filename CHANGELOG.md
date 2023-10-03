@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2023-10-03
+
+### New RSV datasets with consortium nomenclature (tag `2023-10-02T12:00:00Z`)
+
+ - this adds a new developed nomenclature for RSV-A and RSV-B by the international RSV nomenclature consortium
+ - the old `G_clade` nomenclature is kept for backwards compatibility
+
+
 ## 2023-09-21
 
 ### New SARS-CoV-2 dataset version (tag `2023-09-21T12:00:00Z`)
