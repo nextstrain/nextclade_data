@@ -90,12 +90,12 @@ jobs:
       - name: "Rebuild, commit and push datasets"
         if: github.ref != 'refs/heads/release'
         run: |
-          ./scripts/rebuild_v3 --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
+          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
 
       - name: "Rebuild, commit, push and make a release"
         if: github.ref == 'refs/heads/release'
         run: |
-          ./scripts/rebuild_v3 --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
+          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
 
       - name: "Deploy dataset server"
         if: ${{ endsWith(github.ref, '/master') || endsWith(github.ref, '/staging') || endsWith(github.ref, '/release') }}

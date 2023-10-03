@@ -4,14 +4,12 @@
 Converts datasets from v2 to v3 format
 """
 import argparse
-import json
-from os.path import join, dirname, isfile, relpath
-from typing import List
+from os.path import join, isfile
+
 from lib.changelog import format_dataset_attributes_md_table
 from lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
 from lib.date import now_iso
-from lib.fs import json_write, find_files, copy, json_read, file_write
-from lib.string import removesuffix
+from lib.fs import json_write, copy, json_read, file_write
 
 
 def check_file(dataset_dir, filename):
@@ -29,20 +27,14 @@ def process_tree_json(tree: dict, virus_properties: dict, output_tree_json_path:
   json_write(tree, output_tree_json_path, no_sort_keys=True)
 
 
-def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, params_individual=None):
-  if params is None:
-    params = {}
-
-  if params_individual is None:
-    params_individual = {}
-
-  copy(join(input_dir, 'reference.fasta'), output_dir)
+def process_pathogen_json(tag_json, input_dir, output_dir):
+  copy(join(input_dir, 'reference.fasta'), join(output_dir, 'reference.fasta'))
 
   if isfile(join(input_dir, 'genemap.gff')):
     copy(join(input_dir, 'genemap.gff'), join(output_dir, "genome_annotation.gff3"))
 
   if isfile(join(input_dir, 'sequences.fasta')):
-    copy(join(input_dir, 'sequences.fasta'), output_dir)
+    copy(join(input_dir, 'sequences.fasta'), join(output_dir, 'sequences.fasta'))
 
   qc = {}
   if isfile(join(input_dir, 'qc.json')):
@@ -87,7 +79,8 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
       ref = f" based on reference \"{ref}\""
 
     file_write(
-      f"# Nextclade dataset for \"{name}\"{ref} ({path})\n\n\n## Dataset attributes\n\n{attr_table}\n\n## What is "
+      f"# Nextclade dataset for \"{name}\"{ref} ({input_dir})\n\n\n## Dataset attributes\n\n"
+      f"{attr_table}\n\n## Authors and contacts\n\nSource code: \n\nAuthor1: \n\nAuthor2: \n\n## What is "
       f"Nextclade dataset\n\nRead more about Nextclade datasets in Nextclade documentation: "
       f"https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
       readme_path
@@ -96,9 +89,7 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
   changelog_path = join(output_dir, "CHANGELOG.md")
   if not isfile(changelog_path):
     file_write(
-      "## Unreleased\n\nInitial release for Nextclade v3!\n\nThis dataset is converted from the corresponding older "
-      "dataset for Nextclade v2. You can find old versions of datasets here: "
-      "https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets\n\nRead more about "
+      "## Unreleased\n\nInitial release for Nextclade v3!\n\nRead more about "
       "Nextclade datasets in the documentation: "
       "https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html",
       changelog_path
@@ -134,8 +125,6 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
     "experimental": tag_json.get("experimental") or False,
     "deprecated": tag_json.get("deprecated") or False,
     "version": {"tag": "unreleased"},
-    **params,
-    **(dict_get(params_individual, [path]) or {}),
   }
 
   dict_remove_many(pathogen_json, [
@@ -156,81 +145,36 @@ def process_pathogen_json(tag_json, path, input_dir, output_dir, params=None, pa
   json_write(pathogen_json, join(output_dir, "pathogen.json"))
 
 
-def convert_datasets_mature(input_dir, output_dir, params=None, params_individual=None):
-  if params is None:
-    params = {}
+def convert_dataset_v2_to_v3(input_dir, output_dir):
+  tag_json_path = join(input_dir, "tag.json")
+  tag_json = {}
+  if isfile(tag_json_path):
+    tag_json = json_read(tag_json_path)
 
-  if params_individual is None:
-    params_individual = {}
+  name = dict_get(tag_json, ["name"]) or "UNKNOWN"
+  name_friendly = dict_get(tag_json, ["name"]) or "UNKNOWN"
+  ref_accession = dict_get(tag_json, ["reference", "accession"]) or "UNKNOWN"
+  strain_name = dict_get(tag_json, ["reference", "accession"]) or "UNKNOWN"
 
-  for dataset_json_path in find_files("dataset.json", input_dir):
-    dataset_json = json_read(dataset_json_path)
-    dataset_dir = dirname(dataset_json_path)
-    for dataset_ref_json_path in find_files("datasetRef.json", dataset_dir):
-      dataset_ref_json = json_read(dataset_ref_json_path)
-      dataset_ref_dir = dirname(dataset_ref_json_path)
+  tag_json = {
+    **tag_json,
+    "name": name,
+    "nameFriendly": name_friendly,
+    "reference": {
+      "accession": ref_accession,
+      "strainName": strain_name,
+    },
+    "experimental": True,
+  }
 
-      version_jsons: List[dict] = []
-      for tag_path in find_files("tag.json", dataset_ref_dir):
-        with open(tag_path, 'r') as f:
-          version_json: dict = json.load(f)
-        version_jsons.append(version_json)
-
-      version_jsons.sort(key=lambda x: x["tag"], reverse=True)
-      last_version_json = version_jsons[0]
-
-      tag_json = {
-        **last_version_json,
-        **dataset_json,
-        **dataset_ref_json,
-      }
-
-      name = tag_json["name"]
-      ref_accession = tag_json["reference"]["accession"]
-      tag = tag_json["tag"]
-      path = f"{name}/{ref_accession}"
-
-      full_input_dir = f'{join(input_dir, name, "references", ref_accession, "versions", tag, "files")}/'
-      full_output_dir = f'{join(output_dir, path)}/'
-
-      process_pathogen_json(tag_json, path, full_input_dir, full_output_dir, params, params_individual)
-
-
-def convert_datasets_experimental(input_dir, output_dir, params):
-  for ref_fasta_path in find_files("reference.fasta", input_dir):
-    full_input_dir = f"{dirname(ref_fasta_path)}/"
-    path = removesuffix(relpath(full_input_dir, input_dir), "/files")
-    full_output_dir = f"{join(output_dir, path)}/"
-
-    tag_json_path = join(full_input_dir, "tag.json")
-    tag_json = {}
-    if isfile(tag_json_path):
-      tag_json = json_read(tag_json_path)
-
-    name = dict_get(tag_json, ["name"]) or path
-    name_friendly = dict_get(tag_json, ["name"]) or "UNKNOWN"
-    ref_accession = dict_get(tag_json, ["reference", "accession"]) or "UNKNOWN"
-    strain_name = dict_get(tag_json, ["reference", "accession"]) or "UNKNOWN"
-
-    tag_json = {
-      **tag_json,
-      "name": name,
-      "nameFriendly": name_friendly,
-      "reference": {
-        "accession": ref_accession,
-        "strainName": strain_name,
-      },
-      "experimental": True,
-      **params,
-    }
-
-    process_pathogen_json(tag_json, path, full_input_dir, full_output_dir)
+  process_pathogen_json(tag_json, input_dir, output_dir)
 
 
 def parse_args():
   parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-  parser.add_argument('--input-dir', required=True, help='Directory with datasets in the old format')
-  parser.add_argument('--output-dir', required=True, help='Where to output datasets in the new format')
+  parser.add_argument('--input-dir', required=True, help='Directory a datasets in Nextclade v2 format')
+  parser.add_argument('--output-dir', required=True,
+                      help='Directory to output the converted dataset in the Nextclade v3 format')
   return parser.parse_args()
 
 
@@ -239,21 +183,7 @@ if __name__ == '__main__':
 
   updated_at = now_iso()
 
-  convert_datasets_mature(
-    input_dir=join(args.input_dir, "datasets"),
-    output_dir=join(args.output_dir, "nextstrain"),
-    params={"official": True},
-    params_individual={"sars-cov-2-no-recomb/MN908947": {"deprecated": True}},
-  )
-
-  convert_datasets_experimental(
-    input_dir=join(args.input_dir, "datasets_experimental"),
-    output_dir=join(args.output_dir, "nextstrain"),
-    params={"official": True, "experimental": True},
-  )
-
-  convert_datasets_experimental(
-    input_dir=join(args.input_dir, "datasets_community"),
-    output_dir=join(args.output_dir, "community"),
-    params={"experimental": True},
+  convert_dataset_v2_to_v3(
+    input_dir=args.input_dir,
+    output_dir=args.output_dir,
   )
