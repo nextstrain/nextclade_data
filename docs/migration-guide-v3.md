@@ -18,7 +18,7 @@ Nextclade v3 uses new dataset format. This guide will introduce you into the cha
 
 - Dataset repository now groups datasets into "dataset collections". We added a collection called "community". Please submit pull requests containing your datasets (and their followup updates) into directory `data/community`. After a review, if accepted, your datasets will be distributed along with the official datasets from Nextstrain team and will be marked as "community" datasets.
 
-## Conversion from v2 to v3: migration steps
+## Migration steps
 
 Requirements: git, python 3.
 
@@ -37,29 +37,47 @@ Requirements: git, python 3.
       --output-dir='data/community/your-lab/your-name/pathogen-name/strain-name/other/features'
     ```
 
-    In this example, we take your Nextclade v2 dataset located at `path/to/dataset/v2/files` and output a new dataset in Nextclade v3 format into `data/community/your-lab/your-name/pathogen-name/strain-name/other/features`.
-  
-    The output path can be anything and the dataset directory is relocatable, so you can move it around later. However, if you want to submit your dataset to the Nextclade community dataset collection, please follow the rules described in the [dataset curation guide](dataset-curation-guide.md).
+   In this example, we take your Nextclade v2 dataset located at `path/to/dataset/v2/files` and output a new dataset in Nextclade v3 format into `data/community/your-lab/your-name/pathogen-name/strain-name/other/features`.
+
+   The output path can be anything and the dataset directory is relocatable, so you can move it around later. However, if you want to submit your dataset to the Nextclade community dataset collection, please follow the rules described in the [dataset curation guide](dataset-curation-guide.md).
 
 3. Navigate to the generated output directory and open the `pathogen.json`. You will find the `attributes` fields containing string values `UNKNOWN`:
 
-    ```
-    "attributes": {
-      "name": {
-        "value": "UNKNOWN",
-        "valueFriendly": "UNKNOWN"
-      },
-      "reference": {
-        "value": "UNKNOWN",
-        "valueFriendly": "UNKNOWN"
+    ```json
+    {
+      "attributes": {
+        "name": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        },
+        "reference": {
+          "value": "UNKNOWN",
+          "valueFriendly": "UNKNOWN"
+        }
       }
     }
     ```
-    
-    Fill these values with meaningful name and reference. For example, you can use short pathogen name in `"value"` and full name of the pathogen in `"valueFriendly"`. Similarly, you could use accession of the reference sequence in `"value"` and full name of the reference sequence in `"valueFriendly"`. The `"valueFriendly"` fields will be displayed in Nextclade Web and Nextclade CLI.
 
-4. Fill in `README.md` with information about pathogen and the authors of the dataset. Alternatively, you can delete it. This is an optional file.
+   Fill these values with meaningful name and reference. For example, you can use short pathogen name in `"value"` and full name of the pathogen in `"valueFriendly"`. Similarly, you could use accession of the reference sequence in `"value"` and full name of the reference sequence in `"valueFriendly"`. The `"valueFriendly"` fields will be displayed in Nextclade Web and Nextclade CLI.
 
-5. Fill in `CHANGELOG.md` file as you see fit. The `CHANGELOG.md` must contain a second-level heading spelled exactly `## Unreleased` with release notes under it. This is used for automated processing during new releases.
+4. Change `enabled` and `experimental` flags.
 
-6. Follow the [dataset curation guide](dataset-curation-guide.md) on how to test your dataset in Nextclade CLI and Nextclade Web.
+   In the generated `pathogen.json` file you will also find the boolean flag `experimental`:
+
+    ```json
+    {
+      "experimental": true
+    }
+    ```
+
+   While the dataset is in development or if it has known defects, we recommend to keep the flag `"experimental": true`, to signal potential problems to the users. Feel free to explain these particularities in more details for the current version of the dataset in the `README.md` as well as for each version in `CHANGELOG.md`.
+
+5. Fill `README.md` file with some information about the pathogen and the authors of the dataset. Provide some details about the purpose and potential limitations of the dataset. It's a freeform document. You can use Markdown syntax as well as some limited subset of HTML there.
+
+   This is an optional file, so you can also delete it, but we encourage you to describe your work to your potential users, so they could understand it better.
+
+6. Fill `CHANGELOG.md` file. You can use Markdown syntax as well as some limited subset of HTML there.
+
+   The file must contain a second-level heading spelled exactly `## Unreleased` with release notes under it. This heading is used for automated processing - the contents will be published as GitHub release notes during the next release.
+
+7. Follow the [dataset curation guide](dataset-curation-guide.md) on how to test your dataset in Nextclade CLI and Nextclade Web.

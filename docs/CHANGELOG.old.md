@@ -1,14 +1,18 @@
-# CHANGELOG
+# DEPRECATED! DO NOT EDIT!
+
+This file contains a summary of changes for Nextclade v2 datasets. This is deprecated after Nextclade v3 is released.
 
 ## 2023-08-22
 
 ### New influenza dataset version (tag `2023-08-10T12:00:00Z`)
+
 All seasonal influenza datasets were updated to include an additional subclade designation the provides a more fine-grained breakdown of the currently circulating diversity.
 These subclades are suggested using a [computational pipeline](https://github.com/neherlab/flu_clades) and follow a Pango-style nomenclature, albeit without hard automatic aliasing.
 
 ## 2023-08-17
 
 ### New SARS-CoV-2 dataset version (tag `2023-08-17T12:00:00Z`)
+
 Ad-hoc update to include the [saltation variant BA.2.86](https://github.com/cov-lineages/pango-designation/issues/2183).
 Note that this is not a regular data set update, but an update outside of the usual cycle specifically to enable detection of the BA.2.86.
 
@@ -258,7 +262,7 @@ Note that this is not a regular data set update, but an update outside of the us
   - B.1.18
   - B.1.19
   - B.1.20
-  See <https://github.com/mpxv-lineages/lineage-designation/pull/33> for details
+    See <https://github.com/mpxv-lineages/lineage-designation/pull/33> for details
 - Datasets have been updated to include sequences uploaded since the last release in January 2023
 
 ## 2023-06-16
@@ -739,7 +743,6 @@ Starting with this update, the `SARS-CoV-2-no-recomb` dataset - an auxiliary dat
 All Influenza virus datasets were updated with more recent sequences. The trees now include more older reference viruses for more robust designation of older clades.
 The B/Vic annotation of the HA segment was fixed -- it was previously off by 3 nucleotides resulting in amino acid numbering being off by one.
 
-
 ## 2023-03-28
 
 ### Internal
@@ -988,8 +991,8 @@ Add robots.txt to prevent data endpoints from indexing by search engines.
 
 #### RSV A and B data sets
 
- - fix definition of some older clades
- - include older sequences to make sure older clades are included.
+- fix definition of some older clades
+- include older sequences to make sure older clades are included.
 
 ## 2023-02-01
 
@@ -1187,7 +1190,6 @@ First release of RSV A and RSV A datasets by Laura Urbanska.
 With permission of the authors, these datasets use the reference sequences hRSV/A/England/397/2017 for RSV-A and hRSV/B/Australia/VIC-RCH056/2019 for RSV-B.
 The datasets implement two clade designation each.
 One is primarily based on the G gene and was proposed by [Goya et al](https://onlinelibrary.wiley.com/doi/abs/10.1111/irv.12715), the other is based on the entire genome and was proposed by [Ramaekers et al](https://doi.org/10.1093/ve/veaa052).
-
 
 ## 2022-12-14
 
@@ -1688,7 +1690,7 @@ The reference.fasta ID has been renamed to `MPXV_USA_2022_MA001_in_NC_063383_coo
 
 #### All Monkeypox datasets
 
-The datasets now include  hMPXV-1 lineages B.1.1 to B.1.5. See details in <https://github.com/nextstrain/monkeypox/pull/95>
+The datasets now include hMPXV-1 lineages B.1.1 to B.1.5. See details in <https://github.com/nextstrain/monkeypox/pull/95>
 
 Sequences released to Genbank up to 2022-08-08 have been included in the new trees.
 
@@ -2003,10 +2005,10 @@ Quality control parameters are subject to change, especially since "known" frame
 #### New dataset version (tag `2021-10-11T19:00:32Z`)
 
 - Clades: Two Delta subclades have been designated by Nextstrain and are now included in Nextclade, see [Twitter announcement](https://twitter.com/nextstrain/status/1446903892864737280):
-   > We've just updated Nextstrain clade designations to partition clade 21A (corresponding to the Delta WHO variant) into subclades 21I and 21J following our previously defined rules for defining clades when mutational and frequency thresholds are met.
-   > Clade 21I is still a Delta variant virus, but possesses additional spike mutation A222V and ORF1a mutations P1640L, A3209V, V3718A and T3750I.
-   > Clade 21J is still a Delta variant virus, but possesses additional ORF1a mutations A1306S, P2046L, P2287S, V2930L, T3255I and T3646A, ORF7b mutation T40I, as well as N mutation G215C. Clade 21J is now the predominate form of Delta with an estimated ~79% global frequency.
-   > Clade defining mutations for clades 21I and 21J can be found in our public GitHub repo at: <https://github.com/nextstrain/ncov/blob/master/defaults/clades.tsv#L102>.
+  > We've just updated Nextstrain clade designations to partition clade 21A (corresponding to the Delta WHO variant) into subclades 21I and 21J following our previously defined rules for defining clades when mutational and frequency thresholds are met.
+  > Clade 21I is still a Delta variant virus, but possesses additional spike mutation A222V and ORF1a mutations P1640L, A3209V, V3718A and T3750I.
+  > Clade 21J is still a Delta variant virus, but possesses additional ORF1a mutations A1306S, P2046L, P2287S, V2930L, T3255I and T3646A, ORF7b mutation T40I, as well as N mutation G215C. Clade 21J is now the predominate form of Delta with an estimated ~79% global frequency.
+  > Clade defining mutations for clades 21I and 21J can be found in our public GitHub repo at: <https://github.com/nextstrain/ncov/blob/master/defaults/clades.tsv#L102>.
 - Reference tree: Data has been updated to sequences submitted to Genbank by the first week of October.
 - Reference tree: Pango lineages designated until 2021-10-10 have been sampled into the tree, including among others: AY.4.1-3, AY.34-39 [see pango release changes](https://github.com/cov-lineages/pango-designation/compare/v1.2.77...v1.2.84)
 
