@@ -54,14 +54,9 @@ def process_pathogen_json(tag_json, input_dir, output_dir):
     process_tree_json(tree, virus_properties, join(output_dir, 'tree.json'))
 
   attributes = {
-    "name": {
-      "value": tag_json["name"],
-      "valueFriendly": tag_json["nameFriendly"],
-    },
-    "reference": {
-      "value": tag_json["reference"]["accession"],
-      "valueFriendly": tag_json["reference"]["strainName"],
-    }
+    "name": tag_json["nameFriendly"],
+    "refName": tag_json["reference"]["strainName"],
+    "refAccession": tag_json["reference"]["accession"],
   }
 
   dict_remove_many(qc, ["schemaVersion"])
@@ -111,6 +106,12 @@ def process_pathogen_json(tag_json, input_dir, output_dir):
       "changelog": check_file(output_dir, "CHANGELOG.md"),
     },
     "attributes": attributes,
+    "meta": {
+      "source code": "https://github.com/nextstrain/nextclade_data",
+      "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+      "authors": [
+      ],
+    },
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0",
@@ -121,7 +122,6 @@ def process_pathogen_json(tag_json, input_dir, output_dir):
       "nucMutLabelMap": virus_properties.get("nucMutLabelMap"),
     },
     **virus_properties,
-    "official": tag_json.get("official") or False,
     "experimental": tag_json.get("experimental") or False,
     "deprecated": tag_json.get("deprecated") or False,
     "version": {"tag": "unreleased"},
