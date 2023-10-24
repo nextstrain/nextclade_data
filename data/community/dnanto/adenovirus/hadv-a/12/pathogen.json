@@ -1,20 +1,8 @@
 {
-  "attributes": {
-    "name": {
-      "value": "hadv-a-12",
-      "valueFriendly": "Human mastadenovirus A (serotype 12)"
-    },
-    "reference": {
-      "value": "NC_001460.1",
-      "valueFriendly": "HAdV-A serotype 12"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -23,9 +11,21 @@
     "readme": "README.md",
     "reference": "reference.fasta"
   },
-  "official": false,
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Human mastadenovirus A (serotype 12)",
+    "reference name": "HAdV-A serotype 12",
+    "reference accession": "NC_001460.1",
+    "experimental": true
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

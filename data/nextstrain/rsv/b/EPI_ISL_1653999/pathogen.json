@@ -9,24 +9,11 @@
     "gapAlignmentSide": "left",
     "kmerDistance": 10
   },
-  "attributes": {
-    "name": {
-      "value": "rsv_b",
-      "valueFriendly": "Respiratory Syncytial Virus B"
-    },
-    "reference": {
-      "value": "EPI_ISL_1653999",
-      "valueFriendly": "hRSV/B/Australia/VIC-RCH056/2019 "
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "F",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -41,7 +28,6 @@
     "G",
     "L"
   ],
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true
@@ -76,5 +62,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Respiratory Syncytial Virus B",
+    "reference name": "hRSV/B/Australia/VIC-RCH056/2019 ",
+    "reference accession": "EPI_ISL_1653999"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

@@ -7,23 +7,10 @@
     "minSeedCover": 0.1,
     "gapAlignmentSide": "left"
   },
-  "attributes": {
-    "name": {
-      "value": "hMPXV_B1",
-      "valueFriendly": "Human Monkeypox Lineage B.1*"
-    },
-    "reference": {
-      "value": "pseudo_ON563414",
-      "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -238,7 +225,6 @@
       ]
     }
   },
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true,
@@ -285,5 +271,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Human Monkeypox Lineage B.1*",
+    "reference name": "MPXV_USA_2022_MA001 in NC_063383 coordinates",
+    "reference accession": "pseudo_ON563414"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

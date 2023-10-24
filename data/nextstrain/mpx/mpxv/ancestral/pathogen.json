@@ -7,23 +7,10 @@
     "minSeedCover": 0.1,
     "gapAlignmentSide": "left"
   },
-  "attributes": {
-    "name": {
-      "value": "MPXV",
-      "valueFriendly": "Monkeypox (All Clades)"
-    },
-    "reference": {
-      "value": "ancestral",
-      "valueFriendly": "Reconstructed ancestral MPXV"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -33,7 +20,6 @@
     "reference": "reference.fasta",
     "treeJson": "tree.json"
   },
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true,
@@ -206,5 +192,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Monkeypox (All Clades)",
+    "reference name": "Reconstructed ancestral MPXV",
+    "reference accession": "ancestral"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

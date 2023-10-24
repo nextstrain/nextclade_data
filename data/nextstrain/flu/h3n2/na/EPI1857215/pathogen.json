@@ -21,24 +21,11 @@
       "nameShort": "Glyc."
     }
   ],
-  "attributes": {
-    "name": {
-      "value": "flu_h3n2_na",
-      "valueFriendly": "Influenza A H3N2 NA (Neuraminidase)"
-    },
-    "reference": {
-      "value": "EPI1857215",
-      "valueFriendly": "A/Darwin/6/2021"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "NA",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -51,7 +38,6 @@
   "geneOrderPreference": [
     "NA"
   ],
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true
@@ -86,5 +72,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Influenza A H3N2 NA (Neuraminidase)",
+    "reference name": "A/Darwin/6/2021",
+    "reference accession": "EPI1857215"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

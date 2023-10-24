@@ -24,24 +24,11 @@
       "nameShort": "Glyc."
     }
   ],
-  "attributes": {
-    "name": {
-      "value": "flu_h1n1pdm_ha",
-      "valueFriendly": "Influenza A H1N1pdm HA"
-    },
-    "reference": {
-      "value": "CY121680",
-      "valueFriendly": "A/California/07/2009"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "HA1",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -55,7 +42,6 @@
     "HA1",
     "HA2"
   ],
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true
@@ -90,5 +76,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Influenza A H1N1pdm HA",
+    "reference name": "A/California/07/2009",
+    "reference accession": "CY121680"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

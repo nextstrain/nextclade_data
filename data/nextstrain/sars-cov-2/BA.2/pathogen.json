@@ -6,24 +6,11 @@
     "gapAlignmentSide": "right",
     "minSeedCover": 0.1
   },
-  "attributes": {
-    "name": {
-      "value": "sars-cov-2-21L",
-      "valueFriendly": "SARS-CoV-2 relative to BA.2"
-    },
-    "reference": {
-      "value": "BA.2",
-      "valueFriendly": "BA.2"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "S",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -3538,7 +3525,6 @@
       ]
     }
   },
-  "official": true,
   "phenotypeData": [
     {
       "aaRange": {
@@ -131207,5 +131193,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "SARS-CoV-2 relative to BA.2",
+    "reference name": "BA.2",
+    "reference accession": "BA.2"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

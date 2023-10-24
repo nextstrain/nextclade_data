@@ -24,24 +24,11 @@
       "nameShort": "Glyc."
     }
   ],
-  "attributes": {
-    "name": {
-      "value": "flu_h3n2_ha",
-      "valueFriendly": "Influenza A H3N2 HA"
-    },
-    "reference": {
-      "value": "EPI1857216",
-      "valueFriendly": "A/Darwin/6/2021"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "HA1",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -55,7 +42,6 @@
     "HA1",
     "HA2"
   ],
-  "official": true,
   "phenotypeData": [
     {
       "aaRange": {
@@ -136,5 +122,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Influenza A H3N2 HA",
+    "reference name": "A/Darwin/6/2021",
+    "reference accession": "EPI1857216"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }
