@@ -16,9 +16,9 @@
     "tag": "unreleased"
   },
   "attributes": {
-    "name": "Human enterovirus D68",
-    "reference name": "EV-D68 strain Fermon",
-    "reference accession": "AY426531.1",
+    "name": "Human mastadenovirus A (serotype 12)",
+    "reference name": "HAdV-A serotype 12",
+    "reference accession": "NC_001460.1",
     "experimental": true
   },
   "meta": {

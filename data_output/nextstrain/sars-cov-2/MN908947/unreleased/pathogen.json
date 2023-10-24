@@ -6,24 +6,11 @@
     "gapAlignmentSide": "right",
     "minSeedCover": 0.1
   },
-  "attributes": {
-    "name": {
-      "value": "sars-cov-2",
-      "valueFriendly": "SARS-CoV-2"
-    },
-    "reference": {
-      "value": "MN908947",
-      "valueFriendly": "Wuhan-Hu-1/2019"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "S",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -3340,7 +3327,6 @@
       ]
     }
   },
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true,
@@ -5982,5 +5968,17 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "SARS-CoV-2",
+    "reference name": "Wuhan-Hu-1/2019",
+    "reference accession": "MN908947"
+  },
+  "meta": {
+    "source code": "https://github.com/nextstrain/nextclade_data",
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }
