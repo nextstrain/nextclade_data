@@ -1,12 +1,235 @@
 # CHANGELOG
 
+## 2023-10-26
+
+### New SARS-CoV-2 dataset version (tag `2023-10-26T12:00:00Z`)
+
+- Fixed a bug in consensus sequence algorithm that treated ambiguous nucleotides as reference as opposed to unknowns. This only affected a few lineages with few designated sequences where the consensus was wrongly reference when it should have been mutated.
+- Pango lineages designated between 2023-09-20 and 2023-10-25 are now included, unfold below to see a list with designation dates:
+
+<details>
+  <summary> Newly included lineages, with designation date in parentheses</summary>
+
+- XCN (2023-09-21)
+- FL.31 (2023-09-21)
+- FL.31.1 (2023-09-21)
+- FL.20.2 (2023-09-21)
+- FL.32 (2023-09-21)
+- FL.32.1 (2023-09-21)
+- FL.10.3 (2023-09-21)
+- FL.33 (2023-09-21)
+- FL.33.1 (2023-09-21)
+- FL.34 (2023-09-21)
+- FL.35 (2023-09-21)
+- JM.1 (2023-09-22)
+- JM.2 (2023-09-22)
+- GS.5 (2023-09-22)
+- GK.2.1.1 (2023-09-24)
+- EG.4.5 (2023-09-24)
+- CH.1.1.31 (2023-09-24)
+- JP.1 (2023-09-24)
+- CH.1.1.32 (2023-09-24)
+- JD.1.1.1 (2023-09-26)
+- JD.1.1.2 (2023-09-26)
+- XCP (2023-09-26)
+- EG.5.1.10 (2023-09-26)
+- GA.4.1.1 (2023-09-26)
+- FR.1.5 (2023-09-26)
+- EP.1.1 (2023-09-26)
+- EP.1.1.1 (2023-09-26)
+- HC.3 (2023-09-26)
+- FL.36 (2023-09-26)
+- HC.4 (2023-09-26)
+- FL.15.1 (2023-09-27)
+- FL.15.1.1 (2023-09-27)
+- FL.15.2 (2023-09-27)
+- FL.15.3 (2023-09-27)
+- JN.1 (2023-09-29)
+- JD.1.1.3 (2023-10-04)
+- JD.2 (2023-10-04)
+- GJ.1.2.6 (2023-10-04)
+- GJ.1.2.7 (2023-10-04)
+- JE.1.1 (2023-10-04)
+- GJ.1.2.8 (2023-10-04)
+- GJ.5 (2023-10-04)
+- GJ.5.1 (2023-10-04)
+- BA.2.86.2 (2023-10-12)
+- BA.2.86.3 (2023-10-12)
+- JQ.1 (2023-10-12)
+- JN.2 (2023-10-12)
+- JN.3 (2023-10-12)
+- GK.2.4 (2023-10-12)
+- HK.12 (2023-10-12)
+- EG.6.1.2 (2023-10-12)
+- HV.1.1 (2023-10-13)
+- HV.1.2 (2023-10-13)
+- HV.1.3 (2023-10-13)
+- HV.1.4 (2023-10-13)
+- HK.13 (2023-10-13)
+- HK.13.1 (2023-10-13)
+- HK.13.2 (2023-10-13)
+- HK.1.1 (2023-10-13)
+- HK.1.2 (2023-10-13)
+- HK.14 (2023-10-13)
+- HK.15 (2023-10-13)
+- EG.5.1.11 (2023-10-13)
+- JR.1 (2023-10-13)
+- JR.1.1 (2023-10-13)
+- GA.2.1 (2023-10-13)
+- GA.2.1.1 (2023-10-13)
+- GA.4.2 (2023-10-13)
+- GA.4.3 (2023-10-13)
+- GA.4.1.2 (2023-10-13)
+- HK.16 (2023-10-13)
+- HK.17 (2023-10-13)
+- HK.18 (2023-10-13)
+- HK.19 (2023-10-13)
+- XBB.2.3.15 (2023-10-13)
+- JS.1 (2023-10-13)
+- JS.2 (2023-10-13)
+- XCQ (2023-10-13)
+- XBB.2.3.16 (2023-10-13)
+- XBB.2.3.17 (2023-10-13)
+- JD.2.1 (2023-10-13)
+- GW.5.2 (2023-10-13)
+- GW.5.3 (2023-10-13)
+- GW.5.3.1 (2023-10-13)
+- HW.1.2 (2023-10-13)
+- HW.1.3 (2023-10-13)
+- XBC.1.6.5 (2023-10-13)
+- JT.1 (2023-10-13)
+- XBC.1.6.6 (2023-10-13)
+- GL.2 (2023-10-13)
+- GL.3 (2023-10-13)
+- XCR (2023-10-13)
+- GK.5 (2023-10-15)
+- GK.5.1 (2023-10-15)
+- GK.6 (2023-10-15)
+- GK.7 (2023-10-15)
+- GK.8 (2023-10-15)
+- GK.8.1 (2023-10-15)
+- GK.9 (2023-10-15)
+- GK.10 (2023-10-15)
+- GK.11 (2023-10-15)
+- GK.1.5 (2023-10-15)
+- GK.1.6 (2023-10-15)
+- GK.1.6.1 (2023-10-15)
+- GK.1.2.1 (2023-10-15)
+- GK.1.7 (2023-10-15)
+- GK.1.8 (2023-10-15)
+- GK.12 (2023-10-15)
+- GK.1.9 (2023-10-15)
+- XBB.1.16.25 (2023-10-15)
+- XCS (2023-10-15)
+- GK.1.1.1 (2023-10-15)
+- FU.1.1 (2023-10-15)
+- FU.1.1.1 (2023-10-15)
+- HG.3 (2023-10-15)
+- HG.1.1 (2023-10-15)
+- XBB.2.3.18 (2023-10-15)
+- GS.6 (2023-10-15)
+- GS.4.1.1 (2023-10-15)
+- GS.7 (2023-10-15)
+- GS.7.1 (2023-10-15)
+- GS.8 (2023-10-15)
+- GJ.6 (2023-10-15)
+- GJ.7 (2023-10-15)
+- JU.1 (2023-10-15)
+- JV.1 (2023-10-15)
+- JV.2 (2023-10-15)
+- JC.2 (2023-10-15)
+- JC.3 (2023-10-15)
+- JC.4 (2023-10-15)
+- JC.5 (2023-10-15)
+- JC.6 (2023-10-15)
+- XBB.1.41.3 (2023-10-15)
+- JW.1 (2023-10-15)
+- FL.30.1 (2023-10-15)
+- FL.13.2.1 (2023-10-15)
+- FL.13.4 (2023-10-15)
+- FL.13.4.1 (2023-10-15)
+- FL.13.5 (2023-10-15)
+- JG.4 (2023-10-15)
+- DV.7.1.3 (2023-10-15)
+- DV.7.1.4 (2023-10-15)
+- DV.7.1.5 (2023-10-15)
+- XCT (2023-10-15)
+- XBC.1.7.2 (2023-10-15)
+- XBC.1.7.1 (2023-10-15)
+- FL.23.2.1 (2023-10-15)
+- FL.23.2 (2023-10-15)
+- XCU (2023-10-15)
+- HH.2.1 (2023-10-15)
+- HH.3 (2023-10-15)
+- HH.4 (2023-10-15)
+- HH.5 (2023-10-15)
+- HH.6 (2023-10-15)
+- HH.7 (2023-10-15)
+- HH.8 (2023-10-15)
+- HH.8.1 (2023-10-15)
+- GE.1.4 (2023-10-15)
+- GE.1.5 (2023-10-15)
+- GE.1.6 (2023-10-15)
+- XBB.2.3.19 (2023-10-15)
+- JY.1 (2023-10-15)
+- JY.1.1 (2023-10-15)
+- JG.3.1 (2023-10-15)
+- HK.2.1 (2023-10-15)
+- HK.3.4 (2023-10-15)
+- HK.3.5 (2023-10-15)
+- HK.3.6 (2023-10-15)
+- HK.3.7 (2023-10-15)
+- HK.11.1 (2023-10-15)
+- FL.35.1 (2023-10-15)
+- GA.7 (2023-10-15)
+- GA.7.1 (2023-10-15)
+- GA.7.2 (2023-10-15)
+- GA.8 (2023-10-15)
+- GA.8.1 (2023-10-15)
+- GA.9 (2023-10-15)
+- GA.10 (2023-10-15)
+- XCV (2023-10-15)
+- XBB.2.3.20 (2023-10-15)
+- XCW (2023-10-15)
+- XBB.1.5.107 (2023-10-16)
+- JZ.1 (2023-10-16)
+- FD.5 (2023-10-16)
+- FD.5.1 (2023-10-16)
+- HE.2 (2023-10-16)
+- FE.1.1.5 (2023-10-16)
+- KA.1 (2023-10-16)
+- GN.1.2 (2023-10-16)
+- GN.1.3 (2023-10-16)
+- XCY (2023-10-16)
+- XCZ (2023-10-16)
+- FY.8 (2023-10-16)
+- FY.6.2 (2023-10-16)
+- FY.6.1 (2023-10-16)
+- FY.9 (2023-10-16)
+- FY.1.4 (2023-10-16)
+- FY.1.4.1 (2023-10-16)
+- FY.5.1 (2023-10-16)
+- FY.5.1.1 (2023-10-16)
+- HN.2 (2023-10-17)
+- HN.2.1 (2023-10-17)
+- HN.3 (2023-10-17)
+- HN.3.1 (2023-10-17)
+- HN.4 (2023-10-17)
+- HN.5 (2023-10-17)
+- HN.6 (2023-10-17)
+- GA.4.1.3 (2023-10-17)
+- XDA (2023-10-18)
+- XDB (2023-10-18)
+- XDC (2023-10-18)
+
+</details>
+
 ## 2023-10-03
 
 ### New RSV datasets with consortium nomenclature (tag `2023-10-02T12:00:00Z`)
 
- - this adds a new developed nomenclature for RSV-A and RSV-B by the international RSV nomenclature consortium
- - the old `G_clade` nomenclature is kept for backwards compatibility
-
+- this adds a new developed nomenclature for RSV-A and RSV-B by the international RSV nomenclature consortium
+- the old `G_clade` nomenclature is kept for backwards compatibility
 
 ## 2023-09-21
 
@@ -122,12 +345,14 @@
 ## 2023-08-22
 
 ### New influenza dataset version (tag `2023-08-10T12:00:00Z`)
+
 All seasonal influenza datasets were updated to include an additional subclade designation the provides a more fine-grained breakdown of the currently circulating diversity.
 These subclades are suggested using a [computational pipeline](https://github.com/neherlab/flu_clades) and follow a Pango-style nomenclature, albeit without hard automatic aliasing.
 
 ## 2023-08-17
 
 ### New SARS-CoV-2 dataset version (tag `2023-08-17T12:00:00Z`)
+
 Ad-hoc update to include the [saltation variant BA.2.86](https://github.com/cov-lineages/pango-designation/issues/2183).
 Note that this is not a regular data set update, but an update outside of the usual cycle specifically to enable detection of the BA.2.86.
 
@@ -377,7 +602,7 @@ Note that this is not a regular data set update, but an update outside of the us
   - B.1.18
   - B.1.19
   - B.1.20
-  See <https://github.com/mpxv-lineages/lineage-designation/pull/33> for details
+    See <https://github.com/mpxv-lineages/lineage-designation/pull/33> for details
 - Datasets have been updated to include sequences uploaded since the last release in January 2023
 
 ## 2023-06-16
@@ -858,7 +1083,6 @@ Starting with this update, the `SARS-CoV-2-no-recomb` dataset - an auxiliary dat
 All Influenza virus datasets were updated with more recent sequences. The trees now include more older reference viruses for more robust designation of older clades.
 The B/Vic annotation of the HA segment was fixed -- it was previously off by 3 nucleotides resulting in amino acid numbering being off by one.
 
-
 ## 2023-03-28
 
 ### Internal
@@ -1107,8 +1331,8 @@ Add robots.txt to prevent data endpoints from indexing by search engines.
 
 #### RSV A and B data sets
 
- - fix definition of some older clades
- - include older sequences to make sure older clades are included.
+- fix definition of some older clades
+- include older sequences to make sure older clades are included.
 
 ## 2023-02-01
 
@@ -1209,7 +1433,7 @@ Add robots.txt to prevent data endpoints from indexing by search engines.
 #### New clade definitions for default influenza datasets (tag `2023-01-19T12:00:00Z`)
 
 The default influenza datasets were updated to include recent consensus on clade definitions and more recent sequences in their reference tree to better reflect current circulation.
-In addition, these data sets contain a `short_clade`  column which omits the long prefix and definition of glycosylation motifs for a future software release.
+In addition, these data sets contain a `short_clade` column which omits the long prefix and definition of glycosylation motifs for a future software release.
 
 ## 2023-01-09
 
@@ -1306,7 +1530,6 @@ First release of RSV A and RSV A datasets by Laura Urbanska.
 With permission of the authors, these datasets use the reference sequences hRSV/A/England/397/2017 for RSV-A and hRSV/B/Australia/VIC-RCH056/2019 for RSV-B.
 The datasets implement two clade designation each.
 One is primarily based on the G gene and was proposed by [Goya et al](https://onlinelibrary.wiley.com/doi/abs/10.1111/irv.12715), the other is based on the entire genome and was proposed by [Ramaekers et al](https://doi.org/10.1093/ve/veaa052).
-
 
 ## 2022-12-14
 
@@ -1542,7 +1765,7 @@ The existing dataset with reference sequence B/Brisbane/60/2008 (KX058884) was u
 
 #### New dataset version (tag `2022-10-19T12:00:00Z`)
 
-- New clade `22E (Omicron)` (BQ.1*) added, see <https://github.com/nextstrain/ncov/pull/1012> for details
+- New clade `22E (Omicron)` (BQ.1\*) added, see <https://github.com/nextstrain/ncov/pull/1012> for details
 - The SARS-CoV-2 trees are now purely based on Pango consensus sequences, and no longer contain any actual sequences. This makes builds more stable and helps mitigate issues with sequence artefacts. For the Omicron part of the tree, no actual sequences were ever included, so this change only affects the pre-Omicron part of the reference tree.
 - This release contains the first recombinant sublineages. These work in the same way as the other sublineages.
 - Data update: New Pango lineages, with designation date between 2022-09-25 and 2022-10-19 are now included, unfold below to see all the lineages:
@@ -1711,7 +1934,7 @@ The existing dataset with reference sequence B/Brisbane/60/2008 (KX058884) was u
 #### All SARS-CoV-2 datasets
 
 - Data update: New Pango lineages are included, see <https://github.com/cov-lineages/pango-designation/compare/efabcb6...cfe736> for new designations that are included
-- Identical sequences have been removed from B.1* lineages to reduce size of that part of the tree from ~1.6k to ~800.
+- Identical sequences have been removed from B.1\* lineages to reduce size of that part of the tree from ~1.6k to ~800.
 
 ##### BA.2 dataset (experimental)
 
@@ -1807,7 +2030,7 @@ The reference.fasta ID has been renamed to `MPXV_USA_2022_MA001_in_NC_063383_coo
 
 #### All Monkeypox datasets
 
-The datasets now include  hMPXV-1 lineages B.1.1 to B.1.5. See details in <https://github.com/nextstrain/monkeypox/pull/95>
+The datasets now include hMPXV-1 lineages B.1.1 to B.1.5. See details in <https://github.com/nextstrain/monkeypox/pull/95>
 
 Sequences released to Genbank up to 2022-08-08 have been included in the new trees.
 
@@ -2122,10 +2345,10 @@ Quality control parameters are subject to change, especially since "known" frame
 #### New dataset version (tag `2021-10-11T19:00:32Z`)
 
 - Clades: Two Delta subclades have been designated by Nextstrain and are now included in Nextclade, see [Twitter announcement](https://twitter.com/nextstrain/status/1446903892864737280):
-   > We've just updated Nextstrain clade designations to partition clade 21A (corresponding to the Delta WHO variant) into subclades 21I and 21J following our previously defined rules for defining clades when mutational and frequency thresholds are met.
-   > Clade 21I is still a Delta variant virus, but possesses additional spike mutation A222V and ORF1a mutations P1640L, A3209V, V3718A and T3750I.
-   > Clade 21J is still a Delta variant virus, but possesses additional ORF1a mutations A1306S, P2046L, P2287S, V2930L, T3255I and T3646A, ORF7b mutation T40I, as well as N mutation G215C. Clade 21J is now the predominate form of Delta with an estimated ~79% global frequency.
-   > Clade defining mutations for clades 21I and 21J can be found in our public GitHub repo at: <https://github.com/nextstrain/ncov/blob/master/defaults/clades.tsv#L102>.
+  > We've just updated Nextstrain clade designations to partition clade 21A (corresponding to the Delta WHO variant) into subclades 21I and 21J following our previously defined rules for defining clades when mutational and frequency thresholds are met.
+  > Clade 21I is still a Delta variant virus, but possesses additional spike mutation A222V and ORF1a mutations P1640L, A3209V, V3718A and T3750I.
+  > Clade 21J is still a Delta variant virus, but possesses additional ORF1a mutations A1306S, P2046L, P2287S, V2930L, T3255I and T3646A, ORF7b mutation T40I, as well as N mutation G215C. Clade 21J is now the predominate form of Delta with an estimated ~79% global frequency.
+  > Clade defining mutations for clades 21I and 21J can be found in our public GitHub repo at: <https://github.com/nextstrain/ncov/blob/master/defaults/clades.tsv#L102>.
 - Reference tree: Data has been updated to sequences submitted to Genbank by the first week of October.
 - Reference tree: Pango lineages designated until 2021-10-10 have been sampled into the tree, including among others: AY.4.1-3, AY.34-39 [see pango release changes](https://github.com/cov-lineages/pango-designation/compare/v1.2.77...v1.2.84)
 
