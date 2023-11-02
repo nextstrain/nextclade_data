@@ -32,13 +32,6 @@
             "reference name": "Wuhan-Hu-1/2019",
             "reference accession": "MN908947"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -85,13 +78,6 @@
             "name": "SARS-CoV-2 relative to BA.2",
             "reference name": "BA.2",
             "reference accession": "BA.2"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -141,13 +127,6 @@
             "reference name": "A/California/07/2009",
             "reference accession": "CY121680"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -192,13 +171,6 @@
             "name": "Influenza A H1N1pdm HA",
             "reference name": "A/Wisconsin/588/2019",
             "reference accession": "MW626062"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -245,13 +217,6 @@
             "reference name": "A/Wisconsin/588/2019",
             "reference accession": "MW626056"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -297,13 +262,6 @@
             "reference name": "A/Wisconsin/67/2005",
             "reference accession": "CY163680"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -348,13 +306,6 @@
             "name": "Influenza A H3N2 HA",
             "reference name": "A/Darwin/6/2021",
             "reference accession": "EPI1857216"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -402,13 +353,6 @@
             "reference name": "A/Darwin/6/2021",
             "reference accession": "EPI1857215"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -453,13 +397,6 @@
             "name": "Influenza B Victoria HA",
             "reference name": "B/Brisbane/60/2008",
             "reference accession": "KX058884"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -506,13 +443,6 @@
             "reference name": "B/Brisbane/60/2008",
             "reference accession": "CY073894"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -558,13 +488,6 @@
             "reference name": "B/Wisconsin/01/2010",
             "reference accession": "JN993010"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -606,13 +529,6 @@
             "name": "Respiratory Syncytial Virus A",
             "reference name": "hRSV/A/England/397/2017",
             "reference accession": "EPI_ISL_412866"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -656,13 +572,6 @@
             "reference name": "hRSV/B/Australia/VIC-RCH056/2019 ",
             "reference accession": "EPI_ISL_1653999"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -704,13 +613,6 @@
             "name": "Human Monkeypox Lineage B.1*",
             "reference name": "MPXV_USA_2022_MA001 in NC_063383 coordinates",
             "reference accession": "pseudo_ON563414"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -759,13 +661,6 @@
             "reference name": "MPXV-M5312_HM12_Rivers",
             "reference accession": "NC_063383.1"
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -809,13 +704,6 @@
             "name": "Monkeypox (All Clades)",
             "reference name": "Reconstructed ancestral MPXV",
             "reference accession": "ancestral"
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -861,13 +749,6 @@
             "reference accession": "KR075003.1",
             "experimental": true
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -902,13 +783,6 @@
             "reference accession": "AY426531.1",
             "experimental": true
           },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -942,13 +816,6 @@
             "reference name": "HIV-1",
             "reference accession": "NC_001802.1",
             "experimental": true
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -992,13 +859,6 @@
             "reference name": "PF13/251013-18",
             "reference accession": "KX369547.1",
             "experimental": true
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -1052,13 +912,6 @@
             "reference name": "HAdV-A serotype 12",
             "reference accession": "NC_001460.1",
             "experimental": true
-          },
-          "meta": {
-            "source code": "https://github.com/nextstrain/nextclade_data",
-            "bugs": "https://github.com/nextstrain/nextclade_data/issues",
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
           },
           "files": {
             "changelog": "CHANGELOG.md",

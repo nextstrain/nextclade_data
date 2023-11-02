@@ -78,9 +78,26 @@
     "reference name": "A/Wisconsin/588/2019",
     "reference accession": "MW626056"
   },
-  "meta": {
-    "source code": "https://github.com/nextstrain/nextclade_data",
-    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+  "maintenance": {
+    "website": [
+      "https://nextstrain.org",
+      "https://clades.nextstrain.org"
+    ],
+    "documentation": [
+      "https://github.com/nextstrain/nextclade_data",
+      "https://docs.nextstrain.org/projects/nextclade"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/nextclade_data",
+      "https://github.com/neherlab/nextclade_data_workflows"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/nextclade_data",
+      "https://github.com/nextstrain/nextclade_data/issues"
+    ],
+    "organizations": [
+      "Nextstrain"
+    ],
     "authors": [
       "Nextstrain team <https://nextstrain.org>"
     ]
