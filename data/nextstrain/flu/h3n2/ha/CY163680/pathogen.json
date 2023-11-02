@@ -24,24 +24,11 @@
       "nameShort": "Glyc."
     }
   ],
-  "attributes": {
-    "name": {
-      "value": "flu_h3n2_ha",
-      "valueFriendly": "Influenza A H3N2 HA"
-    },
-    "reference": {
-      "value": "CY163680",
-      "valueFriendly": "A/Wisconsin/67/2005"
-    }
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "defaultGene": "HA1",
-  "deprecated": false,
-  "enabled": true,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -55,7 +42,6 @@
     "HA1",
     "HA2"
   ],
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true
@@ -90,5 +76,34 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "attributes": {
+    "name": "Influenza A H3N2 HA",
+    "reference name": "A/Wisconsin/67/2005",
+    "reference accession": "CY163680"
+  },
+  "maintenance": {
+    "website": [
+      "https://nextstrain.org",
+      "https://clades.nextstrain.org"
+    ],
+    "documentation": [
+      "https://github.com/nextstrain/nextclade_data",
+      "https://docs.nextstrain.org/projects/nextclade"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/nextclade_data",
+      "https://github.com/neherlab/nextclade_data_workflows"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/nextclade_data",
+      "https://github.com/nextstrain/nextclade_data/issues"
+    ],
+    "organizations": [
+      "Nextstrain"
+    ],
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
   }
 }

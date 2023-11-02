@@ -60,20 +60,13 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
 
-  dict_get_required(pathogen_json, ["attributes", "name", "value"])
-  dict_get_required(pathogen_json, ["attributes", "name", "valueFriendly"])
-  dict_get_required(pathogen_json, ["attributes", "reference", "value"])
-  dict_get_required(pathogen_json, ["attributes", "reference", "valueFriendly"])
-
   ref = get_ref_seq(pathogen_json, dataset_dir)
 
   dataset = dict_cleanup({
     "path": path,
-    "official": True if dict_get(pathogen_json, ["official"]) == True else False,
-    "deprecated": True if dict_get(pathogen_json, ["deprecated"]) == True else False,
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
-    "experimental": True if dict_get(pathogen_json, ["experimental"]) == True else False,
-    "attributes": dict_get_required(pathogen_json, ["attributes"]),
+    "attributes": dict_get(pathogen_json, ["attributes"]),
+    "maintenance": dict_get(pathogen_json, ["maintenance"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
   })

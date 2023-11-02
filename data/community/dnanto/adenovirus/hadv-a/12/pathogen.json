@@ -1,13 +1,4 @@
 {
-  "alignmentParams": {
-    "allowedMismatches": 8,
-    "excessBandwidth": 50,
-    "kmerDistance": 50,
-    "kmerLength": 10,
-    "minMatchLength": 40,
-    "terminalBandwidth": 50,
-    "windowSize": 30
-  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
@@ -18,48 +9,16 @@
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
-    "reference": "reference.fasta",
-    "treeJson": "tree.json"
-  },
-  "qc": {
-    "frameShifts": {
-      "enabled": true
-    },
-    "missingData": {
-      "enabled": false,
-      "missingDataThreshold": 1000,
-      "scoreBias": 100
-    },
-    "mixedSites": {
-      "enabled": true,
-      "mixedSitesThreshold": 8
-    },
-    "privateMutations": {
-      "cutoff": 25,
-      "enabled": true,
-      "typical": 10,
-      "weightLabeledSubstitutions": 2,
-      "weightReversionSubstitutions": 1,
-      "weightUnlabeledSubstitutions": 1
-    },
-    "snpClusters": {
-      "clusterCutOff": 5,
-      "enabled": false,
-      "scoreWeight": 50,
-      "windowSize": 100
-    },
-    "stopCodons": {
-      "enabled": true
-    }
+    "reference": "reference.fasta"
   },
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
   },
   "attributes": {
-    "name": "Human immunodeficiency virus 1",
-    "reference name": "HIV-1",
-    "reference accession": "NC_001802.1",
+    "name": "Human mastadenovirus A (serotype 12)",
+    "reference name": "HAdV-A serotype 12",
+    "reference accession": "NC_001460.1",
     "experimental": true
   },
   "maintenance": {
