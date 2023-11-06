@@ -767,6 +767,9 @@
               "mixedSites",
               "privateMutations",
               "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
             ]
           },
           "versions": [
