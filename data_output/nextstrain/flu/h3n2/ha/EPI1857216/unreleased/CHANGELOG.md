@@ -1,7 +1,5 @@
-## Unreleased
+# 2023-11-09
 
-Initial release for Nextclade v3!
+ - Aliasing of G.1.3.1.1 as subclade H
 
-This dataset is converted from the corresponding older dataset for Nextclade v2. You can find old versions of datasets here: https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets
-
-Read more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
+# 2023-08-28: Initial definition of subclades
