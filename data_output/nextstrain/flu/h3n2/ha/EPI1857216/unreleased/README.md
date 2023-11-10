@@ -9,6 +9,15 @@
 | reference            | EPI1857216           | A/Darwin/6/2021                          |
 
 
+## Features
+This dataset supports
+
+ * Assignment to clades and subclades based on the nomenclature defined in [github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/)
+ * Identification of glycosilation motifs
+ * Counting of mutations in the RBD
+ * Sequence QC
+ * Phylogenetic placement
+
 ## What is Nextclade dataset
 
 Read more about Nextclade datasets in Nextclade documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html

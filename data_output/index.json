@@ -447,9 +447,15 @@
           "path": "nextstrain/flu/h3n2/ha/EPI1857216",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 HA",
-            "reference name": "A/Darwin/6/2021",
-            "reference accession": "EPI1857216"
+            "name": {
+              "value": "h3n2"
+            },
+            "segment": {
+              "value": "ha"
+            },
+            "reference": {
+              "value": "EPI1857216"
+            }
           },
           "maintenance": {
             "website": [
@@ -457,16 +463,13 @@
               "https://clades.nextstrain.org"
             ],
             "documentation": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://docs.nextstrain.org/projects/nextclade"
+              "https://github.com/nextstrain/seasonal-flu"
             ],
             "source code": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/neherlab/nextclade_data_workflows"
+              "https://github.com/nextstrain/seasonal_flu"
             ],
             "issues": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/nextstrain/nextclade_data/issues"
+              "https://github.com/nextstrain/seasonal_flu/issues"
             ],
             "organizations": [
               "Nextstrain"
@@ -486,9 +489,9 @@
           },
           "capabilities": {
             "qc": [
-              "frameShifts",
-              "mixedSites",
               "privateMutations",
+              "mixedSites",
+              "frameShifts",
               "stopCodons"
             ],
             "other": [
