@@ -1,9 +1,14 @@
 ##gff-version 3
-##sequence-region KR075003.1 1 18958
-KR075003.1	feature	gene	470	2689	.	+	0	gene_name "NP"
-KR075003.1	feature	gene	3129	4151	.	+	0	gene_name "VP35"
-KR075003.1	feature	gene	4479	5459	.	+	0	gene_name "VP40"
-KR075003.1	feature	gene	6039	8069	.	+	0	gene_name "GP"
-KR075003.1	feature	gene	8509	9375	.	+	0	gene_name "VP30"
-KR075003.1	feature	gene	10345	11100	.	+	0	gene_name "VP24"
-KR075003.1	feature	gene	11581	18219	.	+	0	gene_name "L"
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_002549.1 1 18959
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=186538
+NC_002549.1	RefSeq	region	1	18959	.	+	.	ID=NC_002549.1:1..18959;Dbxref=taxon:186538;gbkey=Src;genome=genomic;isolate=Ebola virus/H.sapiens-tc/COD/1976/Yambuku-Mayinga;mol_type=viral cRNA
+NC_002549.1	RefSeq	CDS	470	2689	.	+	0	ID=cds-NP_066243.1;Dbxref=GenBank:NP_066243.1,GeneID:911830;Name=NP;gbkey=CDS;gene=NP;locus_tag=ZEBOVgp1;product=nucleoprotein;protein_id=NP_066243.1
+NC_002549.1	RefSeq	CDS	3129	4151	.	+	0	ID=cds-NP_066244.1;Dbxref=GenBank:NP_066244.1,GeneID:911827;Name=VP35;gbkey=CDS;gene=VP35;locus_tag=ZEBOVgp2;product=polymerase complex protein;protein_id=NP_066244.1
+NC_002549.1	RefSeq	CDS	4479	5459	.	+	0	ID=cds-NP_066245.1;Dbxref=GenBank:NP_066245.1,GeneID:911825;Name=VP40;gbkey=CDS;gene=VP40;locus_tag=ZEBOVgp3;product=matrix protein;protein_id=NP_066245.1
+NC_002549.1	RefSeq	CDS	6039	7133	.	+	0	ID=cds-NP_066247.1;Dbxref=GenBank:NP_066247.1,GeneID:911829;Name=GP;Note=sGP%2C small non-structural%2C secreted glycoprotein%3B sGP secreted as an anti-parallel oriented homodimer;gbkey=CDS;gene=GP;locus_tag=ZEBOVgp4;product=small secreted glycoprotein;protein_id=NP_066247.1
+NC_002549.1	RefSeq	CDS	8509	9375	.	+	0	ID=cds-NP_066249.1;Dbxref=GenBank:NP_066249.1,GeneID:911826;Name=VP30;Note=polymerase complex protein;gbkey=CDS;gene=VP30;locus_tag=ZEBOVgp5;product=minor nucleoprotein;protein_id=NP_066249.1
+NC_002549.1	RefSeq	CDS	10345	11100	.	+	0	ID=cds-NP_066250.1;Dbxref=GenBank:NP_066250.1,GeneID:911828;Name=VP24;gbkey=CDS;gene=VP24;locus_tag=ZEBOVgp6;product=membrane-associated protein;protein_id=NP_066250.1
+NC_002549.1	RefSeq	CDS	11581	18219	.	+	0	ID=cds-NP_066251.1;Dbxref=GenBank:NP_066251.1,GeneID:911824;Name=L;gbkey=CDS;gene=L;locus_tag=ZEBOVgp7;product=RNA-dependent RNA polymerase;protein_id=NP_066251.1
+
