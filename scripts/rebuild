@@ -9,7 +9,7 @@ from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
 
-from lib.changelog import changelog_prepare
+from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup
 from lib.date import now_iso, iso_to_iso_safe
@@ -279,9 +279,22 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
       raise ValueError(f"Dataset at '{dataset_dir_rel}' not found in the dataset index. Try to reindex datasets first.")
 
     dataset = datasets[i_dataset]
+    path = dataset['path']
 
     versions = dict_get(dataset, ["versions"]) or []
     versions = list(filter(lambda version: version["tag" == "unreleased"], versions))
+
+    if not git_dir_is_clean(dataset_dir):
+      changelog_path = join(dataset_dir, "CHANGELOG.md")
+      release_notes = changelog_get_unreleased_section(changelog_path)
+      if len(release_notes) == 0:
+        raise ValueError(
+          f"Changelog not found: dataset '{path}' has changes, but no valid changelog entry is found. Automated "
+          f"releases will fail.\n\nTo fix this, please modify the file '{changelog_path}': add '## Unreleased' second "
+          f"level heading (spelled exactly like this, without quotes) on the very top of the file and briefly "
+          f"summarize the changes you've added. If the heading already exists, append your changes to the existing "
+          f"changes.\n\nRefer to documentation for the instructions on how to prepare a dataset correctly."
+        )
 
     if args.release:
       last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
