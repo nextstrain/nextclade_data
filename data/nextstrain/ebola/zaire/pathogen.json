@@ -8,8 +8,17 @@
     "examples": "sequences.fasta"
   },
   "attributes": {
-    "name": { "value": "Zika tutorial dataset" },
-    "reference name": { "value": "NC_035889.1" },
-    "reference": { "value": "NC_035889.1" }
+    "name": {
+      "value": "Zika tutorial dataset"
+    },
+    "reference name": {
+      "value": "NC_035889.1"
+    },
+    "reference": {
+      "value": "NC_035889.1"
+    }
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }
