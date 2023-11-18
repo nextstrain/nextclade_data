@@ -1,29 +1,12 @@
 {
-  "aaMotifs": [
-    {
-      "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
-      "includeGenes": [
-        {
-          "gene": "HA1"
-        },
-        {
-          "gene": "HA2",
-          "ranges": [
-            {
-              "begin": 0,
-              "end": 186
-            }
-          ]
-        }
-      ],
-      "motifs": [
-        "N[^P][ST]"
-      ],
-      "name": "glycosylation",
-      "nameFriendly": "Glycosylation",
-      "nameShort": "Glyc."
-    }
-  ],
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "right",
+    "minSeedCover": 0.1
+  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
@@ -38,66 +21,55 @@
     "reference": "reference.fasta",
     "treeJson": "tree.json"
   },
-  "geneOrderPreference": [
-    "HA1",
-    "HA2"
-  ],
   "qc": {
-    "frameShifts": {
-      "enabled": true
+    "privateMutations": {
+      "enabled": true,
+      "typical": 5,
+      "cutoff": 15,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
     },
     "missingData": {
       "enabled": false,
       "missingDataThreshold": 100,
       "scoreBias": 10
     },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 5,
+      "scoreWeight": 50
+    },
     "mixedSites": {
       "enabled": true,
       "mixedSitesThreshold": 4
     },
-    "privateMutations": {
-      "cutoff": 15,
-      "enabled": true,
-      "typical": 5,
-      "weightLabeledSubstitutions": 2,
-      "weightReversionSubstitutions": 1,
-      "weightUnlabeledSubstitutions": 1
-    },
-    "snpClusters": {
-      "clusterCutOff": 5,
-      "enabled": false,
-      "scoreWeight": 50,
-      "windowSize": 100
+    "frameShifts": {
+      "enabled": true
     },
     "stopCodons": {
-      "enabled": true
+      "enabled": true,
+      "ignoredStopCodons": []
     }
   },
-  "schemaVersion": "3.0.0",
-  "version": {
-    "tag": "unreleased"
-  },
-  "attributes": {
-    "name": "Influenza A H1N1pdm HA",
-    "reference name": "A/Wisconsin/588/2019",
-    "reference accession": "MW626062"
-  },
+  "geneOrderPreference": [
+    "HA1",
+    "HA2"
+  ],
   "maintenance": {
     "website": [
       "https://nextstrain.org",
       "https://clades.nextstrain.org"
     ],
     "documentation": [
-      "https://github.com/nextstrain/nextclade_data",
-      "https://docs.nextstrain.org/projects/nextclade"
+      "https://github.com/nextstrain/seasonal-flu"
     ],
     "source code": [
-      "https://github.com/nextstrain/nextclade_data",
-      "https://github.com/neherlab/nextclade_data_workflows"
+      "https://github.com/nextstrain/seasonal_flu"
     ],
     "issues": [
-      "https://github.com/nextstrain/nextclade_data",
-      "https://github.com/nextstrain/nextclade_data/issues"
+      "https://github.com/nextstrain/seasonal_flu/issues"
     ],
     "organizations": [
       "Nextstrain"
@@ -105,5 +77,42 @@
     "authors": [
       "Nextstrain team <https://nextstrain.org>"
     ]
+  },
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
+      "includeGenes": [
+        {
+          "gene": "HA1",
+          "ranges": []
+        },
+        {
+          "gene": "HA2",
+          "ranges": [
+            {
+              "begin": 0,
+              "end": 186
+            }
+          ]
+        }
+      ],
+      "motifs": [
+        "N[^P][ST]"
+      ]
+    }
+  ],
+  "attributes": {
+    "name": "Influenza A H1N1pdm HA",
+    "segment": "ha",
+    "reference accession": "MW626062",
+    "reference name": "A/Wisconsin/588/2019"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }
