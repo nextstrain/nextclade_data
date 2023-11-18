@@ -111,5 +111,8 @@
     "segment": "ha",
     "reference accession": "MW626062",
     "reference name": "A/Wisconsin/588/2019"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }

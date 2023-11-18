@@ -111,5 +111,8 @@
     "segment": "ha",
     "reference accession": "JN993010",
     "reference name": "B/Wisconsin/01/2010"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }
