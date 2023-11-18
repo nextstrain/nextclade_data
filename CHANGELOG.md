@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2023-11-18
+
+### New Influenza datasets version (tag `2023-11-18T12:00:00Z`)
+
+ - new subclades for several lineages
+ - new alias for A/H3N2 HA
+
 ## 2023-10-26
 
 ### New SARS-CoV-2 dataset version (tag `2023-10-26T12:00:00Z`)
