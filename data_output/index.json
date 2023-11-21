@@ -917,17 +917,12 @@
           }
         },
         {
-          "path": "nextstrain/mpox/all-clades/rivers-with-ancestral-snps",
+          "path": "nextstrain/mpox/all-clades",
           "enabled": true,
           "attributes": {
-            "name": {
-              "value": "MPXV",
-              "valueFriendly": "Monkeypox (All Clades)"
-            },
-            "reference": {
-              "value": "ancestral",
-              "valueFriendly": "Reconstructed ancestral MPXV"
-            }
+            "name": "Mpox virus (All clades)",
+            "reference accession": "NC_063383.1",
+            "reference name": "MPXV-M5312_HM12_Rivers"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -965,17 +960,12 @@
           }
         },
         {
-          "path": "nextstrain/mpox/clade-iib/rivers",
+          "path": "nextstrain/mpox/clade-iib",
           "enabled": true,
           "attributes": {
-            "name": {
-              "value": "hMPXV",
-              "valueFriendly": "Human Monkeypox (hMPXV)"
-            },
-            "reference": {
-              "value": "NC_063383.1",
-              "valueFriendly": "MPXV-M5312_HM12_Rivers"
-            }
+            "name": "Mpox virus (Clade IIb)",
+            "reference accession": "NC_063383.1",
+            "reference name": "MPXV-M5312_HM12_Rivers"
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -1014,17 +1004,12 @@
           }
         },
         {
-          "path": "nextstrain/mpox/lineage-b.1/rivers-with-usa-2022-ma001-snps",
+          "path": "nextstrain/mpox/lineage-b.1",
           "enabled": true,
           "attributes": {
-            "name": {
-              "value": "hMPXV_B1",
-              "valueFriendly": "Human Monkeypox Lineage B.1*"
-            },
-            "reference": {
-              "value": "pseudo_ON563414",
-              "valueFriendly": "MPXV_USA_2022_MA001 in NC_063383 coordinates"
-            }
+            "name": "Mpox virus (Lineage B.1)",
+            "reference accession": "NC_063383.1 (with B.1 SNPs)",
+            "reference name": "MPXV-M5312_HM12_Rivers with B.1 SNPs"
           },
           "files": {
             "changelog": "CHANGELOG.md",
