@@ -85,8 +85,5 @@
       "scoreWeight": 40
     }
   },
-  "schemaVersion": "3.0.0",
-  "version": {
-    "tag": "unreleased"
-  }
+  "schemaVersion": "3.0.0"
 }
