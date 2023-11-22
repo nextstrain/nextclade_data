@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2023-11-22
+
+### Fix for influenza B/Vic dataset version (tag `2023-11-22T12:00:00Z`)
+
+ - the previous dataset was missing two subclades C.2 and C.4.
+
 ## 2023-11-18
 
 ### New Influenza datasets version (tag `2023-11-18T12:00:00Z`)
