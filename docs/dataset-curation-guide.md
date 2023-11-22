@@ -86,6 +86,8 @@ If you want to signal users that a dataset is no longer maintained, is inaccurat
 
 If your pull request is accepted and merged, your data enters `master` branch and is automatically deployed to the `master` environment. In a few minutes after merge it should be visible at https://master.clades.nextstrain.org
 
+Note for maintainers: Do not "squash merge" pull requests as only a normal merge triggers the Github action to update the index.
+
 Nextclade server maintainers, after ensuring that there is no obvious bugs or crashes, periodically trigger deployment of the changes accumulated on `master` to the `release` environment, and then it becomes visible at the main site at https://clades.nextstrain.org.
 
 There is no set schedule for releases, so let us know in the pull request if you have any particular preference.
