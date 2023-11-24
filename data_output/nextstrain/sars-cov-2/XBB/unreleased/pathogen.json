@@ -131195,9 +131195,9 @@
     "tag": "unreleased"
   },
   "attributes": {
-    "name": "SARS-CoV-2 relative to BA.2",
-    "reference name": "BA.2",
-    "reference accession": "BA.2"
+    "name": "SARS-CoV-2 relative to XBB",
+    "reference name": "XBB",
+    "reference accession": "XBB"
   },
   "maintenance": {
     "website": [
