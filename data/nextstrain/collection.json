@@ -22,6 +22,7 @@
   },
   "dataset_order": [
     "nextstrain/sars-cov-2/MN908947",
+    "nextstrain/sars-cov-2/MN908947/mature",
     "nextstrain/sars-cov-2/BA.2",
     "nextstrain/flu/h1n1pdm/ha/CY121680",
     "nextstrain/flu/h1n1pdm/ha/MW626062",
