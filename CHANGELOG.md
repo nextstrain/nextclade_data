@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2023-11-25
+
+### RSV-A and RSV-B nomenclature revision (tag `2023-11-25T12:00:00Z`)
+Update RSV-A and RSV-B datasets with the revised consortium nomenclature. This update slightly reduces the number of lineages and renames some lineages. The lineage definitions are now available on https://github.com/rsv-lineages.
+
 ## 2023-11-22
 
 ### Fix for influenza B/Vic dataset version (tag `2023-11-22T12:00:00Z`)
