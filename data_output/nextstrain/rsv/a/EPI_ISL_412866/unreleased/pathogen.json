@@ -4,14 +4,14 @@
     "excessBandwidth": 9,
     "terminalBandwidth": 100,
     "allowedMismatches": 4,
-    "gapAlignmentSide": "right",
+    "gapAlignmentSide": "left",
     "minSeedCover": 0.1
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultGene": "HA1",
+  "defaultGene": "F",
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",

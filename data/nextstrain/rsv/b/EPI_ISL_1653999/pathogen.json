@@ -83,5 +83,8 @@
     "name": "RSV-B",
     "reference accession": "EPI_ISL_1653999",
     "reference name": "hRSV/B/Australia/VIC-RCH056/2019"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }
