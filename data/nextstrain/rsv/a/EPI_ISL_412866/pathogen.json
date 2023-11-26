@@ -83,5 +83,8 @@
     "name": "RSV-A",
     "reference accession": "EPI_ISL_412866",
     "reference name": "hRSV/A/England/397/2017"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }
