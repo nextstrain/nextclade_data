@@ -290,7 +290,8 @@
               "stopCodons"
             ],
             "other": [
-              "mutLabels"
+              "mutLabels",
+              "phenotypeData"
             ]
           },
           "versions": [
