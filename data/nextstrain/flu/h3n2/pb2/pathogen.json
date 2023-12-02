@@ -70,5 +70,8 @@
     "reference accession": "NC_007373",
     "reference name": "A/NewYork/392/2004"
   },
-  "defaultGene": "PB2"
+  "defaultGene": "PB2",
+  "version": {
+    "tag": "unreleased"
+  }
 }

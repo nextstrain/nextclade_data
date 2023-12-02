@@ -70,5 +70,8 @@
     "reference accession": "NC_026437",
     "reference name": "A/California/07/2009"
   },
-  "defaultGene": "PA"
+  "defaultGene": "PA",
+  "version": {
+    "tag": "unreleased"
+  }
 }

@@ -1,12 +1,12 @@
-# Influenza A(H3N2) NS (segment 8) based on reference "A/New York/392/2004"
+# Influenza A(H1N1pdm) MP based on reference "A/California/07/2009"
 
 | Key                  | Value                |
 | -------------------- | -------------------- |
 | authors                | [Richard Neher](https://neherlab.org), [Nextstrain](https://nextstrain.org)                         |
-| name                 | Influenza A(H3N2) NS (segment 8)                    |
-| reference            | A/New York/392/2004                    |
-| dataset path         | flu/h3n2/ns                     |
-| reference accession  | NC_007370   |
+| name                 | Influenza A(H1N1pdm) MA                      |
+| reference            | A/California/07/2009                    |
+| dataset path         | flu/h1n1pdm/mp                     |
+| reference accession  | NC_026431   |
 
 ## Features
 This dataset only provides a reference for alignment and an annotation for translation.

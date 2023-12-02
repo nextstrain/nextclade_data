@@ -1,13 +1,15 @@
-# Nextclade dataset for "flu/h3n2/pb2" (flu/h3n2/pb2)
+# Influenza A(H3N2) PB2 (segment 1) based on reference "A/New York/392/2004"
 
+| Key                  | Value                |
+| -------------------- | -------------------- |
+| authors                | [Richard Neher](https://neherlab.org), [Nextstrain](https://nextstrain.org)                         |
+| name                 | Influenza A(H3N2) PB2 (segment 1)                    |
+| reference            | A/New York/392/2004                    |
+| dataset path         | flu/h3n2/mp                     |
+| reference accession  | NC_007373   |
 
-## Dataset attributes
-
-| attribute            | value                | value friendly                           |
-| -------------------- | -------------------- | ---------------------------------------- |
-| name                 | flu/h3n2/pb2         | UNKNOWN                                  |
-| reference            | UNKNOWN              | UNKNOWN                                  |
-
+## Features
+This dataset only provides a reference for alignment and an annotation for translation.
 
 ## What is Nextclade dataset
 

@@ -1,13 +1,15 @@
-# Nextclade dataset for "flu/h1n1pdm/pb2" (flu/h1n1pdm/pb2)
+# Influenza A(H1N1pdm) PB2 based on reference "A/California/07/2009"
 
+| Key                  | Value                |
+| -------------------- | -------------------- |
+| authors                | [Richard Neher](https://neherlab.org), [Nextstrain](https://nextstrain.org)                         |
+| name                 | Influenza A(H1N1pdm) PB2                      |
+| reference            | A/California/07/2009                    |
+| dataset path         | flu/h1n1pdm/pb2                     |
+| reference accession  | NC_026438   |
 
-## Dataset attributes
-
-| attribute            | value                | value friendly                           |
-| -------------------- | -------------------- | ---------------------------------------- |
-| name                 | flu/h1n1pdm/pb2      | UNKNOWN                                  |
-| reference            | UNKNOWN              | UNKNOWN                                  |
-
+## Features
+This dataset only provides a reference for alignment and an annotation for translation.
 
 ## What is Nextclade dataset
 

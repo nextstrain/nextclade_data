@@ -70,5 +70,8 @@
     "reference accession": "NC_007369",
     "reference name": "A/NewYork/392/2004"
   },
-  "defaultGene": "NP"
+  "defaultGene": "NP",
+  "version": {
+    "tag": "unreleased"
+  }
 }
