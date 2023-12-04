@@ -4,3 +4,7 @@
 \.env
 .DS_Store
 .vscode
+__pycache__/
+/scripts/lib
+/data/nextstrain
+/data/community
