@@ -1,22 +1,150 @@
 # CHANGELOG
 
+## 2023-12-03
+
+### New SARS-CoV-2 dataset version (tag `2023-12-03T12:00:00Z`)
+
+- New Nextstrain clades 23G (XBB.1.5.70), 23H (HK.3=EG.5.1.1.3), 23I (BA.2.86) are added. See [ncov PR](https://github.com/nextstrain/ncov/pull/1087) for a detailed discussion of the clades.
+- Pango lineages designated between 2023-10-25 and 2023-12-03 are now included, unfold below to see a list with designation dates:
+
+<details>
+  <summary> Newly included lineages, with designation date in parentheses</summary>
+
+- HK.20 (2023-11-02)
+- HK.20.1 (2023-11-02)
+- JN.4 (2023-11-12)
+- JD.1.2.1 (2023-11-12)
+- HK.21 (2023-11-12)
+- XCT.1 (2023-11-12)
+- HK.22 (2023-11-12)
+- XBB.1.16.26 (2023-11-12)
+- JN.5 (2023-11-14)
+- JN.6 (2023-11-14)
+- JG.3.2 (2023-11-17)
+- JG.3.3 (2023-11-17)
+- GK.1.10 (2023-11-17)
+- JN.7 (2023-11-17)
+- JN.8 (2023-11-17)
+- JN.9 (2023-11-17)
+- JN.3.1 (2023-11-17)
+- HR.1.1 (2023-11-17)
+- XDD (2023-11-17)
+- JN.2.1 (2023-11-21)
+- JN.10 (2023-11-21)
+- BA.2.86.4 (2023-11-21)
+- JN.5.1 (2023-11-21)
+- JD.1.1.4 (2023-11-21)
+- HK.3.8 (2023-11-21)
+- HK.3.2.1 (2023-11-21)
+- FL.15.4 (2023-11-21)
+- HK.8.1 (2023-11-21)
+- XDE (2023-11-21)
+- KB.1 (2023-11-21)
+- XBB.1.16.27 (2023-11-21)
+- XDF (2023-11-24)
+- EG.5.2.4 (2023-11-24)
+- FL.37 (2023-11-24)
+- XDG (2023-11-24)
+- HK.3.2.2 (2023-11-24)
+- HK.3.9 (2023-11-24)
+- HK.23 (2023-11-24)
+- HK.23.1 (2023-11-24)
+- HK.23.1.1 (2023-11-24)
+- HK.24 (2023-11-24)
+- HK.24.1 (2023-11-24)
+- HK.3.10 (2023-11-24)
+- HK.3.11 (2023-11-24)
+- HK.25 (2023-11-27)
+- KC.1 (2023-11-28)
+- KC.1.1 (2023-11-28)
+- HK.26 (2023-11-28)
+- HK.26.1 (2023-11-28)
+- HK.27 (2023-11-28)
+- HK.27.1 (2023-11-28)
+- HK.27.1.1 (2023-11-28)
+- HK.28 (2023-11-28)
+- HK.29 (2023-11-28)
+- HK.30 (2023-11-28)
+- HK.31 (2023-11-28)
+- HK.32 (2023-11-28)
+- HK.32.1 (2023-11-28)
+- EG.5.1.12 (2023-11-28)
+- EG.5.1.13 (2023-11-28)
+- EG.5.1.14 (2023-11-28)
+- EG.5.1.15 (2023-11-28)
+- EG.5.1.16 (2023-11-28)
+- EG.5.1.17 (2023-11-28)
+- EG.5.1.18 (2023-11-28)
+- EG.5.1.19 (2023-11-28)
+- KB.2 (2023-11-28)
+- KB.3 (2023-11-28)
+- KB.4 (2023-11-28)
+- BA.2.86.5 (2023-11-28)
+- JN.1.1 (2023-11-28)
+- DV.7.1.6 (2023-11-28)
+- DV.7.1.7 (2023-11-28)
+- JB.1.1 (2023-11-28)
+- JR.1.1.1 (2023-11-29)
+- GY.1.1 (2023-11-30)
+- GY.1.1.1 (2023-11-30)
+- FY.8.1 (2023-11-30)
+- EG.10.1.1 (2023-11-30)
+- BN.1.2.8 (2023-12-01)
+- XDH (2023-12-01)
+- XBC.1.3.1 (2023-12-01)
+- KD.1 (2023-12-01)
+- KD.2 (2023-12-01)
+- KD.3 (2023-12-01)
+- KD.4 (2023-12-01)
+- KD.5 (2023-12-01)
+- JP.1.1 (2023-12-01)
+- JN.1.1.1 (2023-12-02)
+- JN.1.2 (2023-12-02)
+- HV.1.5 (2023-12-02)
+- HV.1.6 (2023-12-02)
+- HV.1.6.1 (2023-12-02)
+- HV.1.7 (2023-12-02)
+- JD.1.1.5 (2023-12-02)
+- JD.1.1.6 (2023-12-02)
+- FY.5.2 (2023-12-02)
+- FY.5.3 (2023-12-02)
+- KE.1 (2023-12-02)
+- KE.2 (2023-12-02)
+- KE.3 (2023-12-02)
+- GY.9 (2023-12-02)
+- HK.3.12 (2023-12-02)
+- HK.3.13 (2023-12-02)
+- HK.34 (2023-12-02)
+- HK.33 (2023-12-02)
+- FY.5.4 (2023-12-02)
+- FY.5.5 (2023-12-02)
+- FY.5.5.1 (2023-12-02)
+- FY.8.1.1 (2023-12-02)
+- HK.34.1 (2023-12-02)
+- KF.1 (2023-12-02)
+- KF.2 (2023-12-02)
+- GA.10.1 (2023-12-03)
+
+</details>
+
 ## 2023-11-25
 
 ### RSV-A and RSV-B nomenclature revision (tag `2023-11-25T12:00:00Z`)
+
 Update RSV-A and RSV-B datasets with the revised consortium nomenclature. This update slightly reduces the number of lineages and renames some lineages. The lineage definitions are now available on https://github.com/rsv-lineages.
 
 ## 2023-11-22
 
 ### Fix for influenza B/Vic dataset version (tag `2023-11-22T12:00:00Z`)
 
- - the previous dataset was missing two subclades C.2 and C.4.
+- the previous dataset was missing two subclades C.2 and C.4.
 
 ## 2023-11-18
 
 ### New Influenza datasets version (tag `2023-11-18T12:00:00Z`)
 
- - new subclades for several lineages
- - new alias for A/H3N2 HA
+- new subclades for several lineages
+- new alias for A/H3N2 HA
 
 ## 2023-10-26
 
