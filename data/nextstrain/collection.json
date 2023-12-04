@@ -40,6 +40,18 @@
     "nextstrain/ebola/zaire",
     "nextstrain/enterovirus/d68/fermon",
     "nextstrain/hiv/1",
-    "nextstrain/zika/KX369547.1"
+    "nextstrain/zika/KX369547.1",
+    "nextstrain/flu/h3n2/pb1",
+    "nextstrain/flu/h3n2/np",
+    "nextstrain/flu/h1n1pdm/pa",
+    "nextstrain/flu/h3n2/ns",
+    "nextstrain/flu/h1n1pdm/mp",
+    "nextstrain/flu/h1n1pdm/np",
+    "nextstrain/flu/h1n1pdm/ns",
+    "nextstrain/flu/h3n2/mp",
+    "nextstrain/flu/h3n2/pa",
+    "nextstrain/flu/h1n1pdm/pb2",
+    "nextstrain/flu/h1n1pdm/pb1",
+    "nextstrain/flu/h3n2/pb2"
   ]
 }

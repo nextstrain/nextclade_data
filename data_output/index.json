@@ -1271,6 +1271,738 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/pb1",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 PB1 (segment 2)",
+            "segment": "pb1",
+            "reference accession": "NC_007372",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/np",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 NP (segment 5)",
+            "segment": "np",
+            "reference accession": "NC_007369",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/pa",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm PA (segment 3)",
+            "segment": "pa",
+            "reference accession": "NC_026437",
+            "reference name": "A/California/07/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/ns",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 NS (segment 8)",
+            "segment": "ns",
+            "reference accession": "NC_007370",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/mp",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm MP (segment 7)",
+            "segment": "mp",
+            "reference accession": "NC_026431",
+            "reference name": "A/California/07/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/np",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm NP (segment 5)",
+            "segment": "np",
+            "reference accession": "NC_026436",
+            "reference name": "A/California/07/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/ns",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm NS (segment 8)",
+            "segment": "ns",
+            "reference accession": "NC_026432",
+            "reference name": "A/California/07/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/mp",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 MP (segment 7)",
+            "segment": "mp",
+            "reference accession": "NC_007367",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/pa",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 PA (segment 3)",
+            "segment": "pa",
+            "reference accession": "NC_007371",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/pb2",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm PB2 (segment 1)",
+            "segment": "pb2",
+            "reference accession": "NC_026438",
+            "reference name": "A/California/07/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/pb1",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm PB1 (segment 2)",
+            "segment": "pb1",
+            "reference accession": "NC_026435",
+            "reference name": "A/California/07/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/pb2",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 PB2 (segment 1)",
+            "segment": "pb2",
+            "reference accession": "NC_007373",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },
