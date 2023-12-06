@@ -2676,11 +2676,6 @@
   "version": {
     "tag": "unreleased"
   },
-  "attributes": {
-    "name": "SARS-CoV-2",
-    "reference name": "Wuhan-Hu-1/2019",
-    "reference accession": "MN908947"
-  },
   "maintenance": {
     "website": [
       "https://nextstrain.org",
@@ -47601,5 +47596,9 @@
         }
       ]
     }
-  ]
+  ],
+  "attributes": {
+    "name": "SARS-CoV-2 (XBB)",
+    "reference name": "Wuhan-Hu-1 with XBB SNPs"
+  }
 }

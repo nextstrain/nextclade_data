@@ -25,7 +25,7 @@
       },
       "datasets": [
         {
-          "path": "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
+          "path": "nextstrain/sars-cov-2/wuhan/orfs",
           "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2",
@@ -96,10 +96,10 @@
           }
         },
         {
-          "path": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
+          "path": "nextstrain/sars-cov-2/wuhan/proteins",
           "enabled": true,
           "attributes": {
-            "name": "SARS-CoV-2",
+            "name": "SARS-CoV-2 (Mature proteins)",
             "reference name": "Wuhan-Hu-1/2019",
             "reference accession": "MN908947"
           },
@@ -170,9 +170,8 @@
           "path": "nextstrain/sars-cov-2/BA.2",
           "enabled": true,
           "attributes": {
-            "name": "SARS-CoV-2",
-            "reference name": "Wuhan-Hu-1/2019",
-            "reference accession": "MN908947"
+            "name": "SARS-CoV-2 (BA.2)",
+            "reference name": "Wuhan-Hu-1 with BA.2 SNPs"
           },
           "maintenance": {
             "website": [
@@ -242,9 +241,8 @@
           "path": "nextstrain/sars-cov-2/XBB",
           "enabled": true,
           "attributes": {
-            "name": "SARS-CoV-2",
-            "reference name": "Wuhan-Hu-1/2019",
-            "reference accession": "MN908947"
+            "name": "SARS-CoV-2 (XBB)",
+            "reference name": "Wuhan-Hu-1 with XBB SNPs"
           },
           "maintenance": {
             "website": [
@@ -314,9 +312,8 @@
           "path": "nextstrain/sars-cov-2/BA.2.86",
           "enabled": true,
           "attributes": {
-            "name": "SARS-CoV-2",
-            "reference name": "Wuhan-Hu-1/2019",
-            "reference accession": "MN908947"
+            "name": "SARS-CoV-2 (BA.2.86)",
+            "reference name": "Wuhan-Hu-1 with BA.2.86 SNPs"
           },
           "maintenance": {
             "website": [

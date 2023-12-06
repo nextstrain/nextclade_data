@@ -21165,12 +21165,12 @@
       "nMinimizers": 1835
     },
     {
-      "name": "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
+      "name": "nextstrain/sars-cov-2/wuhan/orfs",
       "length": 29903,
       "nMinimizers": 1853
     },
     {
-      "name": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
+      "name": "nextstrain/sars-cov-2/wuhan/proteins",
       "length": 29903,
       "nMinimizers": 1853
     },
