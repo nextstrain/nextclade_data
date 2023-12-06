@@ -21,8 +21,8 @@
     ]
   },
   "dataset_order": [
-    "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
-    "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
+    "nextstrain/sars-cov-2/wuhan/orfs",
+    "nextstrain/sars-cov-2/wuhan/proteins",
     "nextstrain/sars-cov-2/BA.2",
     "nextstrain/sars-cov-2/XBB",
     "nextstrain/sars-cov-2/BA.2.86",
