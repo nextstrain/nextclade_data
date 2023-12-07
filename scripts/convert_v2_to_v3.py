@@ -10,6 +10,7 @@ from lib.changelog import format_dataset_attributes_md_table
 from lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
 from lib.date import now_iso
 from lib.fs import json_write, copy, json_read, file_write
+from migrate_002_default_gene import rename_default_gene
 
 
 def check_file(dataset_dir, filename):
@@ -139,6 +140,8 @@ def process_pathogen_json(tag_json, input_dir, output_dir):
     "reference",
     "tag",
   ])
+
+  pathogen_json = rename_default_gene(pathogen_json)
 
   pathogen_json = dict_cleanup(pathogen_json)
 
