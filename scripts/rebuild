@@ -5,6 +5,7 @@ Builds a fresh data repo from source data
 """
 import argparse
 import json
+from collections import defaultdict
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
@@ -13,12 +14,12 @@ from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup
 from lib.date import now_iso, iso_to_iso_safe
+from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
-from lib.fasta import fasta_read_exactly_one_seq
-from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 from lib.logger import l
+from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 
 
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
@@ -64,6 +65,7 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
 
   dataset = dict_cleanup({
     "path": path,
+    "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
     "attributes": dict_get(pathogen_json, ["attributes"]),
     "maintenance": dict_get(pathogen_json, ["maintenance"]),
@@ -161,13 +163,42 @@ def parse_args():
   return args
 
 
+def validate_shortcuts(collections):
+  all_shortcuts = []
+  for collection in collections:
+    for dataset in collection['datasets']:
+      shortcuts = dict_get(dataset, ['shortcuts'])
+      if shortcuts:
+        all_shortcuts.extend(shortcuts)
+  duplicated_shortcuts = find_duplicates(all_shortcuts)
+
+  duplicated_shortcuts_map = defaultdict(list)
+  for collection in collections:
+    for dataset in collection['datasets']:
+      shortcuts = dict_get(dataset, ['shortcuts'])
+      if shortcuts:
+        for shortcut in shortcuts:
+          if shortcut in duplicated_shortcuts:
+            duplicated_shortcuts_map[shortcut].append(dataset["path"])
+
+  if len(duplicated_shortcuts_map) > 0:
+    dupes = [""]
+    for shortcut, datasets in duplicated_shortcuts_map.items():
+      datasets = ", ".join(datasets)
+      dupes.append(f"{shortcut}: {datasets}")
+    dupes = "\n - ".join(dupes)
+    raise ValueError(
+      f"Dataset name shortcuts must be unique, but found duplicates:\n{dupes}\n\nPlease ensure shortcuts are "
+      f"unique by modifying or removing 'shortcuts' array from 'pathogen.json' files of these datasets.")
+
+
 def main():
   args = parse_args()
 
   if not args.allow_dirty and not git_dir_is_clean():
     dirty_files = "\n  ".join(git_get_dirty_files())
     raise ValueError(
-      f"Uncommited changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
+      f"Uncommitted changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
       f"override (not recommended):\n  {dirty_files}"
     )
 
@@ -190,6 +221,7 @@ def main():
     all_refs.update(refs)
 
   collections = sort_collections(collections, ["nextstrain", "community"])
+  validate_shortcuts(collections)
 
   minimizer_index = make_ref_search_index(all_refs)
 

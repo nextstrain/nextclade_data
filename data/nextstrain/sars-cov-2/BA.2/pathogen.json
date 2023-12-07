@@ -1,4 +1,8 @@
 {
+  "shortcuts": [
+    "sars-cov-2/ba.2",
+    "sc2/ba2"
+  ],
   "alignmentParams": {
     "excessBandwidth": 9,
     "terminalBandwidth": 100,
