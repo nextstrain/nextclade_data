@@ -1,6 +1,6 @@
 from collections import namedtuple, Counter
 from functools import reduce
-from typing import List, Iterable, TypeVar, Callable, Union
+from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any
 
 T = TypeVar('T')
 
@@ -38,6 +38,26 @@ def dict_remove(obj: dict, key: str):
 def dict_remove_many(obj: dict, keys: List[str]):
   for key in keys:
     dict_remove(obj, key)
+
+
+def dict_rename_one_unordered_inplace(d: Dict[str, Any], old_key: str, new_key: str):
+  """
+  Rename one key. Do not preserve key order.
+  """
+  if old_key == new_key:
+    return
+
+  if old_key in d:
+    value = d.pop(old_key)
+    if value is not None:
+      d[new_key] = value
+
+
+def dict_rename_many(d: Dict[str, Any], replacements: Dict[str, str]):
+  """
+  Rename keys given a mapping dict. Slow for large dicts.
+  """
+  return {replacements.get(k, k): v for k, v in d.items()}
 
 
 def list_cleanup(data: List) -> List:
