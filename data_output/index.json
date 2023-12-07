@@ -26,6 +26,10 @@
       "datasets": [
         {
           "path": "nextstrain/sars-cov-2/MN908947",
+          "shortcuts": [
+            "sars-cov-2",
+            "sc2"
+          ],
           "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2",
@@ -97,6 +101,10 @@
         },
         {
           "path": "nextstrain/sars-cov-2/BA.2",
+          "shortcuts": [
+            "sars-cov-2/ba.2",
+            "sc2/ba2"
+          ],
           "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2 relative to BA.2",
