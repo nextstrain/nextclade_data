@@ -77,12 +77,11 @@ def make_ref_search_index(refs):
 
   # construct an index where each minimizer maps to the references it contains via a bit set (here boolean np array)
   index = {"minimizers": {}, "references": []}
-  n_refs = len(minimizers_by_reference)
   for ri, minimizer_set in enumerate(minimizers_by_reference):
     for m in minimizer_set["minimizers"]:
       if m not in index["minimizers"]:
-        index["minimizers"][m] = np.zeros(n_refs, dtype=np.int8)
-      index["minimizers"][m][ri] = 1  # same as += 1<<ri
+        index["minimizers"][m] = []
+      index["minimizers"][m].append(ri)
 
     # reference will be a list in same order as the bit set
     index["references"].append(minimizer_set['meta'])
@@ -107,8 +106,7 @@ def preprocess_seq(seq: SeqRecord) -> str:
 
 def serialize_ref_search_index(index):
   index = copy.deepcopy(index)
-  index["minimizers"] = {int(k): to_bitstring(v) for k, v in index[
-    "minimizers"].items()}
+  index["minimizers"] = {str(k): v for k, v in index["minimizers"].items()}
   index["normalization"] = index["normalization"].tolist()
   return index
 
