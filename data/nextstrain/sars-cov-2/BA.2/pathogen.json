@@ -14,7 +14,7 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultGene": "S",
+  "defaultCds": "S",
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -24,7 +24,7 @@
     "reference": "reference.fasta",
     "treeJson": "tree.json"
   },
-  "geneOrderPreference": [
+  "cdsOrderPreference": [
     "S",
     "E",
     "M",
