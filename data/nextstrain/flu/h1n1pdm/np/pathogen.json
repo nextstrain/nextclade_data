@@ -42,7 +42,7 @@
       "ignoredStopCodons": []
     }
   },
-  "geneOrderPreference": [],
+  "cdsOrderPreference": [],
   "maintenance": {
     "website": [
       "https://nextstrain.org",
@@ -70,7 +70,7 @@
     "reference accession": "NC_026436",
     "reference name": "A/California/07/2009"
   },
-  "defaultGene": "NP",
+  "defaultCds": "NP",
   "version": {
     "tag": "unreleased"
   }
