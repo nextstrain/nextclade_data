@@ -1,16 +1,24 @@
-# SARS-CoV-2 dataset with BA.2.86-like reference (except for indels)
+# SARS-CoV-2 dataset with mutations relative to BA.2.86
 
-| Key     | Value                                                                          |
-| ------- | ------------------------------------------------------------------------------ |
-| authors | [Cornelius Roemer](https://neherlab.org), [Nextstrain](https://nextstrain.org) |
+| Key               | Value                                                                                                                                                            |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| authors           | [Cornelius Roemer](https://neherlab.org), [Richard Neher](https://neherlab.org), [Nextstrain](https://nextstrain.org)                                            |
+| reference         | `Wuhan-Hu-1/2019` with BA.2.86 SNPs added                                                                                                                        |
+| workflow          | https://github.com/neherlab/nextclade_data_workflows/tree/v3-sc2/sars-cov-2                                                                                      |
+| path              | `nextstrain/sars-cov-2/BA.2.86`                                                                                                                                  |
+| clade definitions | [Nextstrain clades](https://nextstrain.org/blog/2022-04-29-SARS-CoV-2-clade-naming-2022) and [Pango lineages](https://www.nature.com/articles/s41564-020-0770-5) |
 
 ## Scope of this dataset
 
-This dataset is useful for the analysis of SARS-CoV-2 sequences that are descended from the BA.2.86 lineage, which emerged in mid-2023.
+This dataset shows mutations relative to the prototypical BA.2.86 sequence and is particularly useful for the analysis of SARS-CoV-2 sequences that are descended from BA.2.86.
 
-The reference used is Wuhan-Hu-1 but with BA.2.86 SNPs added to make it easier to interpret the results.
+For the analysis of non-BA.2.86 sequences, other Nextclade datasets for SARS-CoV-2 may be more appropriate. In addition, the `wuhan-hu-1/proteins` dataset shows amino acid mutations in coordinates of mature proteins (nsp1-16) instead of ORF1a and ORF1b coordinates.
 
-For the analysis of non-BA.2.86 sequences, other datasets, e.g. XBB, BA.2 or using the original Wuhan-Hu-1 reference might be more appropriate.
+## Reference sequence and reference tree
+
+The reference sequence in this dataset is `Wuhan-Hu-1/2019` but with BA.2.86 SNPs added. SNPs (but not indels) are thus shown with respect to BA.2.86 while the mutation positions remain within the familiar `Wuhan-Hu-1` coordinate system.
+
+The reference tree contains one sequence for each Pango lineage descended from BA.2 (including recombinants such as XBB) and is rooted on BA.2.
 
 ## Features
 
