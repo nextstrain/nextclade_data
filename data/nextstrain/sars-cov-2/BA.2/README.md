@@ -1,18 +1,24 @@
-# SARS-CoV-2 dataset BA.2-like reference (except for indels)
+# SARS-CoV-2 dataset with mutations relative to BA.2
 
-| Key     | Value                                                                          |
-| ------- | ------------------------------------------------------------------------------ |
-| authors | [Cornelius Roemer](https://neherlab.org), [Nextstrain](https://nextstrain.org) |
+| Key               | Value                                                                                                                                                            |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| authors           | [Cornelius Roemer](https://neherlab.org), [Richard Neher](https://neherlab.org), [Nextstrain](https://nextstrain.org)                                            |
+| reference         | `Wuhan-Hu-1/2019` with BA.2 SNPs added                                                                                                                           |
+| workflow          | https://github.com/neherlab/nextclade_data_workflows/tree/v3-sc2/sars-cov-2                                                                                      |
+| path              | `nextstrain/sars-cov-2/BA.2`                                                                                                                                     |
+| clade definitions | [Nextstrain clades](https://nextstrain.org/blog/2022-04-29-SARS-CoV-2-clade-naming-2022) and [Pango lineages](https://www.nature.com/articles/s41564-020-0770-5) |
 
 ## Scope of this dataset
 
-This dataset is useful for the analysis of SARS-CoV-2 sequences that are descended from the BA.2 lineage, which is most of the circulation since mid-2022, including BA.4/5, XBB, BA.2.86.
+This dataset shows mutations relative to the prototypical BA.2 sequence and is particularly useful for the analysis of SARS-CoV-2 sequences that are descended from the BA.2 lineage.
 
-The reference used is Wuhan-Hu-1 but with BA.2 SNPs added to make it easier to interpret the results.
+For the analysis of sequences not descended from BA.2, the `wuhan-hu-1/orfs` is more appropriate as it includes lineages from the start of the pandemic. The `wuhan-hu-1/proteins` dataset shows amino acid mutations in coordinates of mature proteins (nsp1-16) instead of ORF1a/b polyproteins.
 
-For the analysis of pre-BA.2 sequences, the dataset using the original Wuhan-Hu-1 reference might be more appropriate.
+## Reference sequence and reference tree
 
-For the analysis of sequences descended from XBB and BA.2.86, there are more specific datasets available.
+The reference sequence in this dataset is `Wuhan-Hu-1/2019` but with BA.2 SNPs added. SNPs (but not indels) are thus shown with respect to BA.2 while the mutation positions remain within the familiar `Wuhan-Hu-1` coordinate system.
+
+The reference tree contains one sequence for each Pango lineage descended from BA.2 (including recombinants such as XBB) and is rooted on BA.2.
 
 ## Features
 
