@@ -84110,190 +84110,196 @@
     {
       "name": "nextstrain/flu/h1n1pdm/ha/CY121680",
       "length": 1752,
-      "nMinimizers": 113
+      "nMinimizers": 114
     },
     {
       "name": "nextstrain/flu/h1n1pdm/ha/MW626062",
       "length": 1752,
-      "nMinimizers": 116
+      "nMinimizers": 117
     },
     {
       "name": "nextstrain/flu/h1n1pdm/mp",
       "length": 982,
-      "nMinimizers": 63
+      "nMinimizers": 64
     },
     {
       "name": "nextstrain/flu/h1n1pdm/na/MW626056",
       "length": 1433,
-      "nMinimizers": 71
+      "nMinimizers": 72
     },
     {
       "name": "nextstrain/flu/h1n1pdm/np",
       "length": 1497,
-      "nMinimizers": 100
+      "nMinimizers": 101
     },
     {
       "name": "nextstrain/flu/h1n1pdm/ns",
       "length": 863,
-      "nMinimizers": 73
+      "nMinimizers": 74
     },
     {
       "name": "nextstrain/flu/h1n1pdm/pa",
       "length": 2151,
-      "nMinimizers": 137
+      "nMinimizers": 138
     },
     {
       "name": "nextstrain/flu/h1n1pdm/pb1",
       "length": 2274,
-      "nMinimizers": 142
+      "nMinimizers": 143
     },
     {
       "name": "nextstrain/flu/h1n1pdm/pb2",
       "length": 2280,
-      "nMinimizers": 132
+      "nMinimizers": 133
     },
     {
       "name": "nextstrain/flu/h3n2/ha/CY163680",
       "length": 1737,
-      "nMinimizers": 105
+      "nMinimizers": 106
     },
     {
       "name": "nextstrain/flu/h3n2/ha/EPI1857216",
       "length": 1718,
-      "nMinimizers": 100
+      "nMinimizers": 101
     },
     {
       "name": "nextstrain/flu/h3n2/mp",
       "length": 1027,
-      "nMinimizers": 71
+      "nMinimizers": 72
     },
     {
       "name": "nextstrain/flu/h3n2/na/EPI1857215",
       "length": 1439,
-      "nMinimizers": 95
+      "nMinimizers": 96
     },
     {
       "name": "nextstrain/flu/h3n2/np",
       "length": 1566,
-      "nMinimizers": 94
+      "nMinimizers": 95
     },
     {
       "name": "nextstrain/flu/h3n2/ns",
       "length": 890,
-      "nMinimizers": 50
+      "nMinimizers": 51
     },
     {
       "name": "nextstrain/flu/h3n2/pa",
       "length": 2233,
-      "nMinimizers": 148
+      "nMinimizers": 149
     },
     {
       "name": "nextstrain/flu/h3n2/pb1",
       "length": 2341,
-      "nMinimizers": 140
+      "nMinimizers": 141
     },
     {
       "name": "nextstrain/flu/h3n2/pb2",
       "length": 2341,
-      "nMinimizers": 121
+      "nMinimizers": 122
     },
     {
       "name": "nextstrain/flu/vic/ha/KX058884",
       "length": 1885,
-      "nMinimizers": 117
+      "nMinimizers": 118
     },
     {
       "name": "nextstrain/flu/vic/na/CY073894",
       "length": 1401,
-      "nMinimizers": 90
+      "nMinimizers": 91
     },
     {
       "name": "nextstrain/flu/yam/ha/JN993010",
       "length": 1755,
-      "nMinimizers": 111
+      "nMinimizers": 112
     },
     {
       "name": "nextstrain/mpox/all-clades",
       "length": 197209,
-      "nMinimizers": 12012
+      "nMinimizers": 12013
     },
     {
       "name": "nextstrain/mpox/clade-iib",
       "length": 197209,
-      "nMinimizers": 12012
+      "nMinimizers": 12013
     },
     {
       "name": "nextstrain/mpox/lineage-b.1",
       "length": 197209,
-      "nMinimizers": 12020
+      "nMinimizers": 12021
     },
     {
       "name": "nextstrain/rsv/a/EPI_ISL_412866",
       "length": 15225,
-      "nMinimizers": 976
+      "nMinimizers": 977
     },
     {
       "name": "nextstrain/rsv/b/EPI_ISL_1653999",
       "length": 15222,
-      "nMinimizers": 935
+      "nMinimizers": 936
     },
     {
       "name": "nextstrain/sars-cov-2/BA.2",
       "length": 29903,
-      "nMinimizers": 1849
+      "nMinimizers": 1850
     },
     {
       "name": "nextstrain/sars-cov-2/BA.2.86",
       "length": 29903,
-      "nMinimizers": 1839
+      "nMinimizers": 1840
     },
     {
       "name": "nextstrain/sars-cov-2/XBB",
       "length": 29903,
-      "nMinimizers": 1835
+      "nMinimizers": 1836
     },
     {
       "name": "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
       "length": 29903,
-      "nMinimizers": 1853
+      "nMinimizers": 1854
     },
     {
       "name": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
       "length": 29903,
-      "nMinimizers": 1853
+      "nMinimizers": 1854
+    },
+    {
+      "name": "nextstrain/scratch/reference-only",
+      "length": 1728,
+      "nMinimizers": 1
     }
   ],
   "normalization": [
-    15.504424778761061,
-    15.10344827586207,
-    15.587301587301587,
-    20.183098591549296,
-    14.97,
-    11.821917808219178,
-    15.700729927007298,
-    16.014084507042252,
-    17.272727272727273,
-    16.542857142857144,
-    17.18,
-    14.464788732394366,
-    15.147368421052631,
-    16.659574468085108,
-    17.8,
-    15.087837837837839,
-    16.72142857142857,
-    19.34710743801653,
-    16.11111111111111,
-    15.566666666666666,
-    15.81081081081081,
-    16.417665667665666,
-    16.417665667665666,
-    16.406738768718803,
-    15.59938524590164,
-    16.280213903743316,
-    16.172525689561926,
-    16.26046764545949,
-    16.29591280653951,
-    16.137614678899084,
-    16.137614678899084
+    15.368421052631579,
+    14.974358974358974,
+    15.34375,
+    19.90277777777778,
+    14.821782178217822,
+    11.662162162162161,
+    15.58695652173913,
+    15.902097902097902,
+    17.142857142857142,
+    16.38679245283019,
+    17.00990099009901,
+    14.26388888888889,
+    14.989583333333334,
+    16.48421052631579,
+    17.45098039215686,
+    14.986577181208053,
+    16.602836879432623,
+    19.188524590163933,
+    15.974576271186441,
+    15.395604395604396,
+    15.669642857142858,
+    16.416299009406476,
+    16.416299009406476,
+    16.40537392895766,
+    15.583418628454453,
+    16.262820512820515,
+    16.163783783783785,
+    16.25163043478261,
+    16.287037037037038,
+    16.12891046386192,
+    16.12891046386192,
+    1728.0
   ]
 }
