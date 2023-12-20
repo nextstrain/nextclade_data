@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2023-12-20
+
+### New Influenza virus A/H3N2 HA dataset version (tag `2023-12-20T12:00:00Z`)
+
+ - New A/H3N2 HA subclades H.1 - H.4
+
 ## 2023-12-03
 
 ### New SARS-CoV-2 dataset version (tag `2023-12-03T12:00:00Z`)
