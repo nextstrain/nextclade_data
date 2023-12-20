@@ -115,5 +115,8 @@
     "segment": "ha",
     "reference accession": "CY121680",
     "reference name": "A/California/7/2009-egg"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }

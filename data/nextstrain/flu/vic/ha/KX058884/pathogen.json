@@ -117,5 +117,8 @@
     "segment": "ha",
     "reference accession": "KX058884",
     "reference name": "B/Brisbane/60/2008-egg"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }

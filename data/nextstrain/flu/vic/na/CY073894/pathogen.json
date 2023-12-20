@@ -111,5 +111,8 @@
     "segment": "na",
     "reference accession": "CY073894",
     "reference name": "B/Brisbane/60/2008"
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }

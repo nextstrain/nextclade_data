@@ -381,6 +381,10 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/ha/CY121680",
+          "shortcuts": [
+            "flu-h1n1pdm-ha-broad",
+            "nextstrain/flu/h1n1pdm/ha/california-7-2009"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm HA",
@@ -448,6 +452,12 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/ha/MW626062",
+          "shortcuts": [
+            "flu-h1n1pdm-ha",
+            "nextstrain/flu/h1n1pdm",
+            "nextstrain/flu/h1n1pdm/ha",
+            "nextstrain/flu/h1n1pdm/ha/wisconsin-588-2019"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm HA",
@@ -515,6 +525,11 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/na/MW626056",
+          "shortcuts": [
+            "flu-h1n1pdm-na",
+            "nextstrain/flu/h1n1pdm/na",
+            "nextstrain/flu/h1n1pdm/na/wisconsin-588-2019"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm NA",
@@ -582,6 +597,10 @@
         },
         {
           "path": "nextstrain/flu/h3n2/ha/CY163680",
+          "shortcuts": [
+            "flu-h3n2-ha-broad",
+            "nextstrain/flu/h3n2/ha/wisconsin-67-2005"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 HA",
@@ -649,6 +668,12 @@
         },
         {
           "path": "nextstrain/flu/h3n2/ha/EPI1857216",
+          "shortcuts": [
+            "flu-h3n2-ha",
+            "nextstrain/flu/h3n2",
+            "nextstrain/flu/h3n2/ha",
+            "nextstrain/flu/h3n2/ha/darwin-6-2021"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 HA",
@@ -717,6 +742,11 @@
         },
         {
           "path": "nextstrain/flu/h3n2/na/EPI1857215",
+          "shortcuts": [
+            "flu-h3n2-na",
+            "nextstrain/flu/h3n2/na",
+            "nextstrain/flu/h3n2/na/darwin-6-2021"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 NA",
@@ -784,6 +814,12 @@
         },
         {
           "path": "nextstrain/flu/vic/ha/KX058884",
+          "shortcuts": [
+            "flu-vic-ha",
+            "nextstrain/flu/vic",
+            "nextstrain/flu/vic/ha",
+            "nextstrain/flu/vic/ha/brisbane-60-2008"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza B Victoria HA",
@@ -851,6 +887,11 @@
         },
         {
           "path": "nextstrain/flu/vic/na/CY073894",
+          "shortcuts": [
+            "flu-vic-na",
+            "nextstrain/flu/vic/na",
+            "nextstrain/flu/vic/na/brisbane-60-2008"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza B Victoria NA",
