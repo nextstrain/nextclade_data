@@ -80,6 +80,12 @@
   },
   "nucMutLabelMap": {},
   "nucMutLabelMapReverse": {},
+  "shortcuts": [
+    "flu-h1n1pdm-ha",
+    "nextstrain/flu/h1n1pdm",
+    "nextstrain/flu/h1n1pdm/ha",
+    "nextstrain/flu/h1n1pdm/ha/wisconsin-588-2019"
+  ],
   "aaMotifs": [
     {
       "name": "glycosylation",
