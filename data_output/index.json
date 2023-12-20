@@ -2051,7 +2051,8 @@
             "changelog": "CHANGELOG.md",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "examples": "examples.fasta"
           },
           "versions": [
             {
