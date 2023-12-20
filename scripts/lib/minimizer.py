@@ -71,7 +71,7 @@ def make_ref_search_index(refs):
       "meta": {
         "name": name,
         "length": len(ref.seq),
-        "nMinimizers": len(minimizers)
+        "nMinimizers": len(minimizers) + 1  # +1 to not divide by zero
       }
     })
 
