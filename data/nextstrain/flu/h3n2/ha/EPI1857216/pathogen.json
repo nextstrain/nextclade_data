@@ -80,6 +80,12 @@
   },
   "nucMutLabelMap": {},
   "nucMutLabelMapReverse": {},
+  "shortcuts": [
+    "flu-h3n2-ha",
+    "nextstrain/flu/h3n2",
+    "nextstrain/flu/h3n2/ha",
+    "nextstrain/flu/h3n2/ha/darwin-6-2021"
+  ],
   "phenotypeData": [
     {
       "name": "RBD",
@@ -157,8 +163,5 @@
     "segment": "ha",
     "reference accession": "EPI1857216",
     "reference name": "A/Darwin/6/2021"
-  },
-  "version": {
-    "tag": "unreleased"
   }
 }

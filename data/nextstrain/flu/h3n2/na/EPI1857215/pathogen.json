@@ -79,6 +79,11 @@
   },
   "nucMutLabelMap": {},
   "nucMutLabelMapReverse": {},
+  "shortcuts": [
+    "flu-h3n2-na",
+    "nextstrain/flu/h3n2/na",
+    "nextstrain/flu/h3n2/na/darwin-6-2021"
+  ],
   "aaMotifs": [
     {
       "name": "glycosylation",
@@ -106,8 +111,5 @@
     "segment": "na",
     "reference accession": "EPI1857215",
     "reference name": "A/Darwin/6/2021"
-  },
-  "version": {
-    "tag": "unreleased"
   }
 }
