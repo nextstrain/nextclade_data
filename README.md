@@ -1,12 +1,12 @@
 # Nextclade datasets
 
-This repository contains data and tools to maintain Nextclade datasets.
+This repository contains Nextclade datasets and tools to maintain them.
 
 Documentation:
 
-- [Nextclade dataset curation documentation](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-curation-guide.md) - if you have a custom Nextclade dataset or want to create one
+- [Nextclade dataset curation guide](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-curation-guide.md) - if you have a custom Nextclade dataset, or want to create one, or to contribute it to the Nextclade dataset collection.
 
-- [Nextclade dataset server maintenance documentation](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-server-maintenance.md) - if you are maintainer of this repository or want to deploy your own dataset sever
+- [Nextclade dataset server maintenance guide](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-server-maintenance.md) - if you are maintainer of the official Nextclade dataset server or want to deploy your own dataset sever.
 
 Additional links:
 
