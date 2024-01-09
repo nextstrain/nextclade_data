@@ -35,27 +35,6 @@ def rename_gene_to_cds(pathogen):
         for i, ignored in enumerate(ignoreds):
           ignoreds[i] = dict_rename_many(ignoreds[i], {"geneName": "cdsName"})
 
-  #   "qc": {
-  #     "frameShifts": {
-  #       "enabled": true,
-  #       "ignoredFrameShifts": [
-  #         {
-  #           "codonRange": {
-  #             "begin": 141,
-  #             "end": 143
-  #           },
-  #           "geneName": "S"
-  #         },
-
-  #     "stopCodons": {
-  #       "enabled": true,
-  #       "ignoredStopCodons": [
-  #         {
-  #           "codon": 417,
-  #           "geneName": "N"
-  #         },
-  #         {
-
   return pathogen
 
 
