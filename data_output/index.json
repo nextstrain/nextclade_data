@@ -1152,6 +1152,10 @@
         },
         {
           "path": "nextstrain/mpox/all-clades",
+          "shortcuts": [
+            "MPXV",
+            "nextstrain/mpox"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Mpox virus (All clades)",
@@ -1195,6 +1199,9 @@
         },
         {
           "path": "nextstrain/mpox/clade-iib",
+          "shortcuts": [
+            "hMPXV"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Mpox virus (Clade IIb)",
@@ -1239,6 +1246,9 @@
         },
         {
           "path": "nextstrain/mpox/lineage-b.1",
+          "shortcuts": [
+            "hMPXV_B1"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Mpox virus (Lineage B.1)",
