@@ -382,7 +382,7 @@
         {
           "path": "nextstrain/flu/h1n1pdm/ha/CY121680",
           "shortcuts": [
-            "flu-h1n1pdm-ha-broad",
+            "flu_h1n1pdm_ha_broad",
             "nextstrain/flu/h1n1pdm/ha/california-7-2009"
           ],
           "enabled": true,
@@ -453,7 +453,7 @@
         {
           "path": "nextstrain/flu/h1n1pdm/ha/MW626062",
           "shortcuts": [
-            "flu-h1n1pdm-ha",
+            "flu_h1n1pdm_ha",
             "nextstrain/flu/h1n1pdm",
             "nextstrain/flu/h1n1pdm/ha",
             "nextstrain/flu/h1n1pdm/ha/wisconsin-588-2019"
@@ -526,7 +526,7 @@
         {
           "path": "nextstrain/flu/h1n1pdm/na/MW626056",
           "shortcuts": [
-            "flu-h1n1pdm-na",
+            "flu_h1n1pdm_na",
             "nextstrain/flu/h1n1pdm/na",
             "nextstrain/flu/h1n1pdm/na/wisconsin-588-2019"
           ],
@@ -598,7 +598,7 @@
         {
           "path": "nextstrain/flu/h3n2/ha/CY163680",
           "shortcuts": [
-            "flu-h3n2-ha-broad",
+            "flu_h3n2_ha_broad",
             "nextstrain/flu/h3n2/ha/wisconsin-67-2005"
           ],
           "enabled": true,
@@ -669,7 +669,7 @@
         {
           "path": "nextstrain/flu/h3n2/ha/EPI1857216",
           "shortcuts": [
-            "flu-h3n2-ha",
+            "flu_h3n2_ha",
             "nextstrain/flu/h3n2",
             "nextstrain/flu/h3n2/ha",
             "nextstrain/flu/h3n2/ha/darwin-6-2021"
@@ -743,7 +743,7 @@
         {
           "path": "nextstrain/flu/h3n2/na/EPI1857215",
           "shortcuts": [
-            "flu-h3n2-na",
+            "flu_h3n2_na",
             "nextstrain/flu/h3n2/na",
             "nextstrain/flu/h3n2/na/darwin-6-2021"
           ],
@@ -815,7 +815,7 @@
         {
           "path": "nextstrain/flu/vic/ha/KX058884",
           "shortcuts": [
-            "flu-vic-ha",
+            "flu_vic_ha",
             "nextstrain/flu/vic",
             "nextstrain/flu/vic/ha",
             "nextstrain/flu/vic/ha/brisbane-60-2008"
@@ -888,7 +888,7 @@
         {
           "path": "nextstrain/flu/vic/na/CY073894",
           "shortcuts": [
-            "flu-vic-na",
+            "flu_vic_na",
             "nextstrain/flu/vic/na",
             "nextstrain/flu/vic/na/brisbane-60-2008"
           ],
@@ -1026,6 +1026,11 @@
         },
         {
           "path": "nextstrain/rsv/a/EPI_ISL_412866",
+          "shortcuts": [
+            "rsv_a",
+            "nextstrain/rsv/a",
+            "nextstrain/rsv/a/hRSV-A-England-397-2017"
+          ],
           "enabled": true,
           "attributes": {
             "name": "RSV-A",
@@ -1089,6 +1094,11 @@
         },
         {
           "path": "nextstrain/rsv/b/EPI_ISL_1653999",
+          "shortcuts": [
+            "rsv_b",
+            "nextstrain/rsv/b",
+            "nextstrain/rsv/b/hRSV-B-Australia-VIC-RCH056-2019"
+          ],
           "enabled": true,
           "attributes": {
             "name": "RSV-B",
