@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Zika virus",
+    "reference name": "Zika virus strain MR 766",
+    "reference accession": "NC_012532.1"
+  }
+}

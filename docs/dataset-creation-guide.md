@@ -40,7 +40,7 @@ Nextclade uses the genome annotation to determine how to extract amino acid sequ
 
 While Genbank provides annotations in GFF3 format, there is often a discrepancy between what the dataset creator wants to be translated and what is annotated as a CDS in the Genbank provided GFF3 file. In addition, users may want to change names of CDS features to make them more readable in Nextclade output.
 
-For example, the Genbank GFF3 file for the Zika refseq has a single CDS feature for the entire polyprotein with a cryptic `Name` "YP_002790881.1". Instead, one may want to translate each mature protein separately and give them more readable names. This can be done by editing the GFF3 file by hand, or by using a custom script. By hand, we can remove the existing CDS feature and renaming all `mature_protein_region_of_CDS` feature types to `CDS`. Overlapping precursors can be removed as well, as appropriate. In addition, a `gene` attribute can be added with the name one wants to see in Nextclade. Unfold the section below to see both the original and the modified GFF3 files:
+For example, the Genbank GFF3 file for the Zika refseq has a single CDS feature for the entire polyprotein with a cryptic `Name` "YP_002790881.1". Instead, one may want to translate each mature protein separately and give them more readable names. This can be done by editing the GFF3 file by hand, or by using a custom script. By hand, we can remove the existing CDS feature and renaming all `mature_protein_region_of_CDS` feature types to `CDS`. Overlapping precursors can be removed as well, as appropriate. In addition, a `gene` attribute can be added with the name one wants to see in Nextclade. It's important that the `ID` attribute of each `CDS` is different so we remove the attribute. Unfold the section below to see both the original and the modified GFF3 files:
 
 <details>
 <summary> Genbank provided GFF3 file for the Zika refseq `NC_012532.1` </summary>
@@ -82,26 +82,25 @@ NC_012532.1	RefSeq	three_prime_UTR	10367	10794	.	+	.	ID=id-NC_012532.1:10367..10
 ##sequence-region NC_012532.1 1 10794
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=64320
 NC_012532.1	RefSeq	region	1	10794	.	+	.	ID=NC_012532.1:1..10794;Dbxref=taxon:64320;country=Uganda;gbkey=Src;genome=genomic;mol_type=genomic RNA;nat-host=sentinel monkey;note=mosquito-borne flavivirus;strain=MR 766
-NC_012532.1	RefSeq	gene	107	10366	.	+	.	ID=gene-ZIKV_gp1;Dbxref=GeneID:7751225;Name=POLY;gbkey=Gene;gene=POLY;gene_biotype=protein_coding;locus_tag=ZIKV_gp1
-NC_012532.1	RefSeq	CDS	107	472	.	+	.	ID=id-YP_002790881.1:1..122;gene-ZIKV_gp1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=YP_009227206.1;gene=CA
-NC_012532.1	RefSeq	CDS	473	751	.	+	.	ID=id-YP_002790881.1:123..215;gene-ZIKV_gp1;gbkey=Prot;product=protein pr;protein_id=YP_009227207.1;gene=PRO
-NC_012532.1	RefSeq	CDS	752	976	.	+	.	ID=id-YP_002790881.1:216..290;gene-ZIKV_gp1;gbkey=Prot;product=membrane glycoprotein M;protein_id=YP_009227208.1;gene=MP
-NC_012532.1	RefSeq	CDS	977	2476	.	+	.	ID=id-YP_002790881.1:291..790;gene-ZIKV_gp1;gbkey=Prot;product=envelope protein E;protein_id=YP_009227198.1;gene=ENV
-NC_012532.1	RefSeq	CDS	2477	3532	.	+	.	ID=id-YP_002790881.1:791..1142;gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS1;protein_id=YP_009227199.1;gene=NS1
-NC_012532.1	RefSeq	CDS	3533	4210	.	+	.	ID=id-YP_002790881.1:1143..1368;gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS2A;protein_id=YP_009227200.1;gene=NS2A
-NC_012532.1	RefSeq	CDS	4211	4600	.	+	.	ID=id-YP_002790881.1:1369..1498;gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS2B;protein_id=YP_009227201.1;gene=NS2B
-NC_012532.1	RefSeq	CDS	4601	6451	.	+	.	ID=id-YP_002790881.1:1499..2115;gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS3;protein_id=YP_009227202.1;gene=NS3
-NC_012532.1	RefSeq	CDS	6452	6832	.	+	.	ID=id-YP_002790881.1:2116..2242;gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS4A;protein_id=YP_009227203.1;gene=NS4A
-NC_012532.1	RefSeq	CDS	6833	6901	.	+	.	ID=id-YP_002790881.1:2243..2265;gene-ZIKV_gp1;gbkey=Prot;product=protein 2K;protein_id=YP_009227209.1;gene=2K
-NC_012532.1	RefSeq	CDS	6902	7654	.	+	.	ID=id-YP_002790881.1:2266..2516;gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS4B;protein_id=YP_009227204.1;gene=NS4B
-NC_012532.1	RefSeq	CDS	7655	10363	.	+	.	ID=id-YP_002790881.1:2517..3419;gene-ZIKV_gp1;gbkey=Prot;product=RNA-dependent RNA polymerase NS5;protein_id=YP_009227205.1;gene=NS5
+NC_012532.1	RefSeq	CDS	107	472	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=YP_009227206.1;gene=CA
+NC_012532.1	RefSeq	CDS	473	751	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=protein pr;protein_id=YP_009227207.1;gene=PRO
+NC_012532.1	RefSeq	CDS	752	976	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=membrane glycoprotein M;protein_id=YP_009227208.1;gene=MP
+NC_012532.1	RefSeq	CDS	977	2476	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=envelope protein E;protein_id=YP_009227198.1;gene=ENV
+NC_012532.1	RefSeq	CDS	2477	3532	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS1;protein_id=YP_009227199.1;gene=NS1
+NC_012532.1	RefSeq	CDS	3533	4210	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS2A;protein_id=YP_009227200.1;gene=NS2A
+NC_012532.1	RefSeq	CDS	4211	4600	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS2B;protein_id=YP_009227201.1;gene=NS2B
+NC_012532.1	RefSeq	CDS	4601	6451	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS3;protein_id=YP_009227202.1;gene=NS3
+NC_012532.1	RefSeq	CDS	6452	6832	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS4A;protein_id=YP_009227203.1;gene=NS4A
+NC_012532.1	RefSeq	CDS	6833	6901	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=protein 2K;protein_id=YP_009227209.1;gene=2K
+NC_012532.1	RefSeq	CDS	6902	7654	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=nonstructural protein NS4B;protein_id=YP_009227204.1;gene=NS4B
+NC_012532.1	RefSeq	CDS	7655	10363	.	+	.	gene-ZIKV_gp1;gbkey=Prot;product=RNA-dependent RNA polymerase NS5;protein_id=YP_009227205.1;gene=NS5
 ```
 
 </details>
 
 Alternatively, one can use a custom script to perform these tasks. We provide an interactive script in [`example-workflow/scripts/generate_from_genbank.py`](./example-workflow/scripts/generate_from_genbank.py) that requires an NCBI accession as input and walks the user through the process of picking the CDS features and naming them.
 
-## Preparing a minimal `pathogen.json` configuration file
+## Preparing a minimal `pathogen.json` config file and accompanying files
 
 A `pathogen.json` config file is required to use a dataset with Nextclade web. Luckily, it is very simple to create by hand. All that is required is the schema version, a manifest of files and their paths. In addition, it is recommended to include basic attributes for display in the UI, such as name of the virus and the reference sequence.
 
@@ -144,6 +143,51 @@ Initial release.
 
 (The heading `## Unreleased` is required for the CHANGELOG to be accepted by the Nextclade data repo).
 
+## Testing the minimal dataset
+
+All the files described above are contained in the [`minimal-dataset`](./minimal-dataset) directory with a flat structure:
+
+```txt
+minimal-dataset
+├── CHANGELOG.md
+├── README.md
+├── sequences.fasta
+├── genome_annotation.gff3
+├── pathogen.json
+└── reference.fasta
+```
+
+The easiest way to test the dataset is via the Nextclade CLI:
+
+```sh
+nextclade run \
+  minimal-dataset/sequences.fasta \
+  --input-dataset minimal-dataset \
+  --output-all tmp
+```
+
+This runs Nextclade on the example sequences in `minimal-dataset/sequences.fasta` using the dataset in `minimal-dataset`. The results are saved to the `tmp` directory and contain alignment, aligned translations and a summary TSV file.
+
+One can also use the dataset in Nextclade Web by hosting the dataset through a local web server. For example, after having installed `node` and run `npm -g serve`, one can host the dataset via:
+
+```sh
+serve --cors minimal-dataset -l 3000
+```
+
+And open Nextclade Web with a URL parameter `dataset-url` pointing to the local web server:
+
+```url
+https://master.clades.nextstrain.org/?dataset-url=http://localhost:3000
+```
+
+Once the web page loads, you can click "Load example" and click run to test. You may want to reduce the maximum number of nucleotide markers to 500 to prevent Nextclade from freezing (click "Settings" at the top right, then select the "Sequence view" tab and reduce "Max. nucleotide markers to 500).
+
+If the dataset is committed in a Github repository, one can bypass the local web server step and use a Github URL directly:
+
+```url
+https://master.clades.nextstrain.org/?dataset-url=gh:nextstrain/nextclade_data@docs-v3@/docs/minimal-dataset
+```
+
 ## FAQs
 
 ### What to do with segmented viruses?
@@ -165,10 +209,6 @@ Yes, Nextclade supports genes with programmed ribosomal frameshifting as long as
 ### Must the reference sequence be at the root of the reference tree?
 
 No, generally this is not required, however, the mutations from the reference sequence to the root of the tree must be added to the root branch of the tree. This can be achieved automatically by passing the reference sequence to the `--root-sequence` argument of [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html).
-
-```
-
-```
 
 ```
 
