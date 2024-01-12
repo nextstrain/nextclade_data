@@ -4,9 +4,8 @@
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
     "genomeAnnotation": "genome_annotation.gff3",
-    "examples": "sequences.fasta",
-    "readme": "README.md",
-    "changelog": "CHANGELOG.md"
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta"
   },
   "attributes": {
     "name": "Zika virus",
@@ -39,6 +38,14 @@
     "stopCodons": {
       "enabled": true,
       "scoreWeight": 50
+    },
+    "privateMutations": {
+        "enabled": true,
+        "typical": 8,
+        "cutoff": 100,
+        "weightLabeledSubstitutions": 4,
+        "weightReversionSubstitutions": 6,
+        "weightUnlabeledSubstitutions": 1
     }
   }
 }

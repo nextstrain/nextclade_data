@@ -186,6 +186,7 @@ if __name__=="__main__":
 
         # write the CDS lines
         for cds in streamlined_cds:
+            if len(streamlined_cds[cds])==0: continue
             print(f"Exporting CDS '{names_by_id[cds]}' with {len(streamlined_cds[cds])} segments.")
             for segment in streamlined_cds[cds]:
                 attributes = ';'.join([f"{k}={v}" for k,v in sorted(segment[1].items(), key=lambda x:(x[0]!='Name', len(x[1])))])

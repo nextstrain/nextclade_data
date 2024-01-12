@@ -1,0 +1,7 @@
+.snakemake/
+data/
+results/
+bin/
+test_out/
+dataset.zip
+tmp/
