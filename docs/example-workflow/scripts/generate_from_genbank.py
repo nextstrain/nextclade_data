@@ -1,5 +1,5 @@
 #!/bin/env python3
-import shutil
+import os
 from Bio import SeqIO
 from collections import defaultdict
 
@@ -63,6 +63,8 @@ if __name__=="__main__":
     args = parse_args()
     reference = get_reference_sequence(args.reference)
     gff = get_gff(args.reference)
+    if not os.path.isdir(args.output_dir):
+        os.makedirs(args.output_dir)
 
     # write the reference sequence to the output directory
     SeqIO.write(reference, f"{args.output_dir}/reference.fasta", "fasta")
@@ -102,15 +104,16 @@ if __name__=="__main__":
     available_attributes_by_type = {'CDS':set(), 'mature_protein': set()}
     for annot, annot_set in available_attributes_by_type.items():
         for feat in all_cds.values():
-            for seg in feat[annot]:
-                if len(annot_set):
-                    annot_set = annot_set.intersection(list(seg[1].keys()))
-                else:
-                    annot_set = annot_set.union(list(seg[1].keys()))
+            if annot in feat:
+                for seg in feat[annot]:
+                    if len(annot_set):
+                        annot_set = annot_set.intersection(list(seg[1].keys()))
+                    else:
+                        annot_set = annot_set.union(list(seg[1].keys()))
         available_attributes_by_type[annot] = annot_set
         print(f"\nCommon attributes of all available {annot} annotations are:\n", annot_set, '\n')
 
-    available_attributes = available_attributes_by_type['CDS'] if annot_set==1 else \
+    available_attributes = available_attributes_by_type['CDS'] if annotation_choice==1 else \
                            available_attributes_by_type['CDS'].intersection(available_attributes_by_type['mature_protein'])
 
     print("Note that CDS names should be short, unique, and recognizable as they are used to label amino acid mutations. Space, commas, colons, etc are not allowed.\n")
@@ -120,6 +123,7 @@ if __name__=="__main__":
             break
         else:
             print("invalid choice: ", name_choice)
+            print("pick one of", available_attributes)
 
     streamlined_cds = {}
     names_by_id = {}
@@ -127,6 +131,7 @@ if __name__=="__main__":
     # loop through all CDS and ask the user to pick one of the annotations
     # allow renaming of the CDS to user friendly names
     for cds_id, cds_sets in all_cds.items():
+        cds_set = list(cds_sets.keys())[0]
         if annotation_choice==0:
             if len(cds_sets)>1:
                 print(f"\nCDS {cds_id} is annotated in multiple ways:")
@@ -147,8 +152,6 @@ if __name__=="__main__":
             segment_id = segment[1]["ID"]
             # only needed for one segment per CDS, skip if already in streamlined_cds
             if segment_id not in streamlined_cds:
-                streamlined_cds[segment_id] = []
-
                 if name_choice:
                     new_name = segment[1][name_choice]
                 else:
@@ -158,10 +161,11 @@ if __name__=="__main__":
                     new_name = input("Enter desired name (leave empty to drop): ")
                     if new_name=='': continue
 
+                streamlined_cds[segment_id] = []
                 new_name = check_name(new_name)
                 name_count[new_name] += 1
                 if name_count[new_name]>1:
-                    print(f"CDS name {new_name} is not unique, attaching index to make unique.")
+                    print(f"\nWARNING: CDS name {new_name} is not unique, attaching index to make unique.\n")
                     new_name = f"{new_name}_{name_count[new_name]:03d}"
 
                 names_by_id[segment_id] = new_name
