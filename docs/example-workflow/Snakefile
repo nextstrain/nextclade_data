@@ -10,6 +10,7 @@ GENBANK_PATH = "resources/reference.gb"
 REFERENCE_PATH = "../minimal-dataset/reference.fasta"
 README_PATH = "../minimal-dataset/README.md"
 CHANGELOG_PATH = "../minimal-dataset/CHANGELOG.md"
+ROOTING = "mid_point"  # alternative root using outgroup, e.g. the reference "NC_035889.1"
 
 FETCH_SEQUENCES = True
 
@@ -34,7 +35,8 @@ rule add_reference_to_include:
 
 rule filter:
     """
-    Exclude sequences from before 2015 and subsample to 100 sequences
+    Exclude sequences from before {MIN_DATE} and subsample to {MAX_SEQS} sequences.
+    Only take sequences longer than {MIN_LENGTH}
     """
     input:
         sequences="data/sequences.fasta",
@@ -85,8 +87,8 @@ rule align:
 
 rule get_outliers:
     """
-    Automatically identify sequences with >150 substitutions
-    (likely to be sequencing errors) and put them in outliers.txt
+    Automatically identify sequences with >{ALLOWED_DIVERGENCE} substitutions
+    (likely to be sequencing errors or low quality/misannotated sequences) and put them in outliers.txt
     """
     input:
         nextclade="results/nextclade.tsv",
@@ -162,7 +164,7 @@ rule refine:
         augur refine \
             --tree {input.tree} \
             --alignment {input.alignment} \
-            --root {REFERENCE_ACCESSION} \
+            --root {ROOTING} \
             --keep-polytomies \
             --divergence-units mutations \
             --output-node-data {output.node_data} \
@@ -187,6 +189,7 @@ rule ancestral:
             --tree {input.tree} \
             --alignment {input.alignment} \
             --annotation {input.annotation} \
+            --root-sequence {input.annotation} \
             --genes {params.genes} \
             --translations {params.translation_template} \
             --output-node-data {output.node_data} \
