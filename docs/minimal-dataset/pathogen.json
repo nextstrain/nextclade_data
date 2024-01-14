@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Zika virus",
+    "reference name": "Brazil/Natal/2015",
+    "reference accession": "NC_035889.1"
+  },
+  "qc": {
+    "schemaVersion": "1.2.0",
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500,
+      "scoreWeight": 50
+    },
+    "snpClusters": {
+      "enabled": true,
+      "windowSize": 100,
+      "clusterCutOff": 6,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15,
+      "scoreWeight": 50
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 50
+    }
+  }
+}
