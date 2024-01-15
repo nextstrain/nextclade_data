@@ -26,6 +26,9 @@
       "datasets": [
         {
           "path": "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
+          "shortcuts": [
+            "sars-cov-2"
+          ],
           "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2",
@@ -168,6 +171,9 @@
         },
         {
           "path": "nextstrain/sars-cov-2/BA.2",
+          "shortcuts": [
+            "sars-cov-2-21L"
+          ],
           "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2 (BA.2)",

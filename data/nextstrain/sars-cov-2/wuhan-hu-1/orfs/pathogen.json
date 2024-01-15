@@ -6436,5 +6436,7 @@
     "reference name": "Wuhan-Hu-1/2019",
     "reference accession": "MN908947"
   },
-  "shortcuts": ["sars-cov-2"]
+  "shortcuts": [
+    "sars-cov-2"
+  ]
 }
