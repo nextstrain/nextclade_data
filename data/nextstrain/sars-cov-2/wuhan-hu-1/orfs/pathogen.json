@@ -6437,6 +6437,8 @@
     "reference accession": "MN908947"
   },
   "shortcuts": [
-    "sars-cov-2"
+    "sars-cov-2",
+    "nextstrain/sars-cov-2",
+    "nextstrain/sars-cov-2/wuhan-hu-1"
   ]
 }
