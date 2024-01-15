@@ -1,10 +1,110 @@
 # CHANGELOG
 
+## 2024-01-15
+
+### New SARS-CoV-2 dataset version (tag `2024-01-15T12:00:00Z`)
+
+- Important: This is the last release of SARS-CoV-2 datasets for nextclade v2. All v2 datasets will remain usable with nextclade v2. However, there will be no more dataset updates as future dataset releases will be for nextclade v3 only. Nextclade v3 has corresponding versions for each current v2 dataset. Read more about migrating from v2 to v3 in the [v3 migration guide](https://docs.nextstrain.org/projects/nextclade/en/latest/user/migration-v3.html), specifically, CLI dataset paths may need to be updated, see [Dataset path changes](https://docs.nextstrain.org/projects/nextclade/en/latest/user/migration-v3.html#migration-paths-for-nextclade-cli). As the first v3-only dataset is expected to be released mid February 2024, you have a month to migrate to v3 without any interruption in dataset updates.
+- Pango lineages designated between 2023-12-03 and 2024-01-14 are now included, unfold below to see a list with designation dates:
+
+<details>
+  <summary> Newly included lineages, with designation date in parentheses</summary>
+
+- HV.2 (2023-12-17)
+- JD.1.1.7 (2023-12-17)
+- JD.1.1.8 (2023-12-17)
+- JD.2.2 (2023-12-17)
+- FY.1.2.1 (2023-12-17)
+- FY.1.2.2 (2023-12-17)
+- FY.1.2.3 (2023-12-17)
+- XBB.1.16.28 (2023-12-17)
+- JF.3 (2023-12-17)
+- XBB.1.16.29 (2023-12-17)
+- XBB.1.16.30 (2023-12-17)
+- XBB.1.16.31 (2023-12-17)
+- XDJ (2023-12-17)
+- XBB.1.5.108 (2023-12-17)
+- XCF.3 (2023-12-17)
+- XBB.1.5.109 (2023-12-17)
+- XBB.1.5.110 (2023-12-17)
+- XDA.1 (2023-12-17)
+- XBB.2.3.21 (2023-12-17)
+- XBB.2.3.22 (2023-12-17)
+- JD.1.2.2 (2023-12-17)
+- HN.7 (2023-12-17)
+- XDK (2023-12-17)
+- DV.7.1.8 (2023-12-17)
+- KG.1 (2023-12-17)
+- KG.2 (2023-12-17)
+- DV.7.1.9 (2023-12-17)
+- GE.1.2.1 (2023-12-17)
+- JG.3.4 (2023-12-17)
+- FL.38 (2023-12-17)
+- HN.4.1 (2023-12-17)
+- HN.4.1.1 (2023-12-17)
+- HN.4.2 (2023-12-17)
+- FL.39 (2023-12-17)
+- FL.39.1 (2023-12-17)
+- FL.40 (2023-12-17)
+- FL.24.1 (2023-12-17)
+- FL.1.8 (2023-12-17)
+- JE.1.1.1 (2023-12-20)
+- KH.1 (2023-12-20)
+- JF.1.1 (2023-12-20)
+- JF.1.1.1 (2023-12-20)
+- JF.1.1.2 (2023-12-20)
+- JF.4 (2023-12-20)
+- JN.1.3 (2023-12-20)
+- GK.1.8.1 (2023-12-21)
+- GK.1.11 (2023-12-21)
+- GK.1.11.1 (2023-12-21)
+- JW.1.1 (2023-12-21)
+- JC.5.1 (2023-12-21)
+- GN.1.4 (2023-12-21)
+- XBB.1.16.32 (2023-12-21)
+- KJ.1 (2023-12-21)
+- FL.2.7 (2023-12-21)
+- FL.2.7.1 (2023-12-21)
+- JN.1.4 (2024-01-08)
+- XDL (2024-01-08)
+- HV.1.8 (2024-01-09)
+- HV.1.9 (2024-01-09)
+- HV.1.10 (2024-01-09)
+- JN.1.5 (2024-01-09)
+- XDD.1 (2024-01-09)
+- XDD.1.1 (2024-01-09)
+- XDD.2 (2024-01-09)
+- JN.2.2 (2024-01-09)
+- JN.2.3 (2024-01-09)
+- JN.2.4 (2024-01-09)
+- JN.2.5 (2024-01-09)
+- JN.1.1.2 (2024-01-09)
+- HN.8 (2024-01-09)
+- JN.1.1.3 (2024-01-09)
+- JN.1.6 (2024-01-09)
+- JN.1.6.1 (2024-01-09)
+- JN.1.7 (2024-01-09)
+- JN.1.8 (2024-01-09)
+- JN.1.8.1 (2024-01-09)
+- JN.1.9 (2024-01-09)
+- FW.1.1.1 (2024-01-10)
+- HK.3.14 (2024-01-10)
+- XDM (2024-01-10)
+- KK.1 (2024-01-10)
+- KK.2 (2024-01-10)
+- KL.1 (2024-01-10)
+- KL.1.1 (2024-01-10)
+- HV.1.11 (2024-01-10)
+- JN.1.10 (2024-01-11)
+- JN.1.11 (2024-01-11)
+
+</details>
+
 ## 2023-12-20
 
 ### New Influenza virus A/H3N2 HA dataset version (tag `2023-12-20T12:00:00Z`)
 
- - New A/H3N2 HA subclades H.1 - H.4
+- New A/H3N2 HA subclades H.1 - H.4
 
 ## 2023-12-03
 
