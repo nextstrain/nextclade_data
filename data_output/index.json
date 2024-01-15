@@ -27,7 +27,9 @@
         {
           "path": "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
           "shortcuts": [
-            "sars-cov-2"
+            "sars-cov-2",
+            "nextstrain/sars-cov-2",
+            "nextstrain/sars-cov-2/wuhan-hu-1"
           ],
           "enabled": true,
           "attributes": {
