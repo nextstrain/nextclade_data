@@ -5,13 +5,14 @@ Builds a fresh data repo from source data
 """
 import argparse
 import json
+import time
 from collections import defaultdict
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
-from lib.container import dict_get, dict_get_required, dict_set, unique, find_index_by, first, format_list, \
+from lib.container import dict_get, dict_get_required, dict_set, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
@@ -117,12 +118,16 @@ def get_new_dataset_order(datasets, dataset_order):
   return dataset_order
 
 
-def sort_collections(collections, dataset_order):
-  return [collection for x in dataset_order for collection in collections if collection["meta"]["id"] == x]
+def sort_collections(collections, collections_order):
+  return [collection for x in collections_order for collection in collections if collection["meta"]["id"] == x]
 
 
 def sort_datasets(datasets, dataset_order):
   return [dataset for x in dataset_order for dataset in datasets if dataset["path"] == x]
+
+
+def sort_release_infos(release_infos, dataset_order):
+  return [release_info for x in dataset_order for release_info in release_infos if release_info["dataset"]["path"] == x]
 
 
 def parse_args():
@@ -209,15 +214,15 @@ def main():
   tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
   git_check_tag(tag)
 
-  collection_json_paths = find_files("collection.json", args.input_dir)
+  collection_json_paths = list(find_files("collection.json", args.input_dir))
 
   collections = []
   release_infos = []
   all_refs = {}
   for collection_json_path in collection_json_paths:
-    collection, release_infos, refs = process_one_collection(collection_json_path, args, tag, updated_at)
+    collection, release_infos_for_dataset, refs = process_one_collection(collection_json_path, args, tag, updated_at)
     collections.append(collection)
-    release_infos.extend(release_infos)
+    release_infos.extend(release_infos_for_dataset)
     all_refs.update(refs)
 
   collections = sort_collections(collections, ["nextstrain", "community"])
@@ -254,10 +259,14 @@ def main():
     commit_hash = commit_changes(args, tag, release_infos)
 
     if args.push:
+      l.info("Pushing commited changes to GitHub")
       git_push()
 
       if args.release:
+        l.info("Releasing to GitHub")
         release_notes = aggregate_release_notes(release_infos)
+        l.info(f"Release notes:\n-------\n{release_notes}\n-------\nEnd of release notes\n")
+        time.sleep(5)
         publish_to_github_releases(args, tag, commit_hash, release_notes)
 
 
@@ -285,6 +294,7 @@ def process_one_collection(collection_json_path, args, tag, updated_at):
   json_write(collection_json, collection_json_path, no_sort_keys=True)
 
   release_infos = prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at)
+  release_infos = sort_release_infos(release_infos, dataset_order)
 
   collection_info = deepcopy(collection_json)
 
@@ -351,26 +361,33 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
 
 
 def aggregate_release_notes(release_infos):
-  dataset_names_friendly = format_list(
-    unique([get_dataset_name_friendly(release_info["dataset"]) for release_info in release_infos]),
-    sep="\n", marker="- ", quote=False
-  )
-  release_notes = f"This release contains changes for datasets:\n\n{dataset_names_friendly}\n\n\n"
+  dataset_list = format_dataset_list(release_infos)
+  release_notes = f"This release contains changes for datasets:\n\n{dataset_list}\n\n\n"
   for release_info in release_infos:
     release_notes += f'\n{release_info["release_notes"]}\n\n'
   return release_notes
 
 
+def format_dataset_list(release_infos):
+  entries = [format_dataset_list_entry(release_info) for release_info in release_infos]
+  return format_list(entries, sep="\n", marker="- ", quote=False)
+
+
+def format_dataset_list_entry(release_info):
+  path = dict_get_required(release_info, ['dataset', 'path'])
+  name = get_dataset_name_friendly(release_info['dataset'])
+  return f"{path} ({name})"
+
+
 def commit_changes(args, tag, release_infos):
-  l.info(f"Commiting changes for '{tag}'")
+  l.info(f"Committing changes for '{tag}'")
 
   commit_message = "chore: rebuild [skip ci]"
   if args.release:
-    dataset_names = format_list(
-      unique([get_dataset_name(release_info["dataset"]) for release_info in release_infos]),
-      sep="\n", marker="- ", quote=False
-    )
-    commit_message = f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_names}"
+    dataset_list = format_dataset_list(release_infos)
+    commit_message = f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_list}"
+
+  l.info(f"Commit message:\n--------\n{commit_message}\n--------\nEnd of commit message\n\n")
 
   return git_commit_all(commit_message)
 
@@ -438,12 +455,8 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   file_write("User-agent: *\nDisallow: /\n", join(args.output_dir, "robots.txt"))
 
 
-def get_dataset_name(dataset):
-  return dict_get_required(dataset, ["attributes", "name", "value"])
-
-
 def get_dataset_name_friendly(dataset):
-  return dict_get(dataset, ["attributes", "name", "valueFriendly"]) or get_dataset_name(dataset)
+  return dict_get_required(dataset, ["attributes", "name"])
 
 
 if __name__ == '__main__':

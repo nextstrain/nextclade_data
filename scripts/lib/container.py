@@ -1,6 +1,6 @@
 from collections import namedtuple, Counter
 from functools import reduce
-from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any
+from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any, Hashable, Optional, Sequence
 
 T = TypeVar('T')
 
@@ -98,6 +98,15 @@ def first(it: Iterable[Union[T, None]]) -> Union[T, None]:
 
 def unique(it: Iterable[T]):
   return iter(set(it))
+
+
+# https://stackoverflow.com/a/49168973
+def unique_by(values: Sequence[T], key: Optional[Callable[[T], Hashable]] = None) -> List[T]:
+  return list(
+    dict.fromkeys(values)
+    if key is None
+    else dict((key(value), value) for value in reversed(values)).values()
+  )
 
 
 def find_duplicates(it: Iterable[T]) -> List[T]:

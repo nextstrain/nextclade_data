@@ -19,12 +19,11 @@ defaults:
     shell: bash -euxo pipefail {0}
 
 env:
-  GITHUB_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
   VERBOSE: 1
 
 jobs:
   build-and-deploy-datasets:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
 
     environment:
       name: ${{ github.ref }}
@@ -37,6 +36,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: us-east-2
+      GH_TOKEN: ${{ github.token }}
 
     steps:
       - name: "Checkout code"
@@ -44,31 +44,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-
-      - name: "Authenticate git"
-        run: |
-          export GITHUB_TOKEN="${{ secrets.GH_TOKEN_NEXTSTRAIN_BOT_REPO }}"
-          export BOT_GIT_USER_EMAIL="${{ secrets.BOT_GIT_USER_EMAIL }}"
-          export BOT_GIT_USER_NAME="${{ secrets.BOT_GIT_USER_NAME }}"
-
-          : ${GITHUB_TOKEN?"The env var GITHUB_TOKEN is required"}
-          : ${BOT_GIT_USER_EMAIL?"The env var BOT_GIT_USER_EMAIL is required"}
-          : ${BOT_GIT_USER_NAME?"The env var BOT_GIT_USER_NAME is required"}
-
-          git config --global user.email "${BOT_GIT_USER_EMAIL}"
-          git config --global user.name "${BOT_GIT_USER_NAME}"
-
-          gh auth setup-git >/dev/null
-
-      - name: "Extract branch name"
-        run: |
-          echo "current_branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
-        id: branch-name
-
-      - name: "Checkout branch"
-        run: |
-          git fetch --all
-          git switch ${{ steps.branch-name.outputs.current_branch }}
 
       - name: "Install system dependencies"
         run: |
@@ -90,11 +65,17 @@ jobs:
       - name: "Rebuild, commit and push datasets"
         if: github.ref != 'refs/heads/release'
         run: |
+          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
+
           ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
 
       - name: "Rebuild, commit, push and make a release"
         if: github.ref == 'refs/heads/release'
         run: |
+          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
+
           ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
 
       - name: "Deploy dataset server"
