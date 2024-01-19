@@ -34,15 +34,17 @@ If you already have a dataset for Nextclade v2 and want to upgrade it to Nextcla
 
 We use GitHug pull requests to manage contributions to Nextclade datasets.
 
-In order to add or modify datasets you will need to have a local copy of nextstrain/nextclade_data GitHub repository on your computer, make the desired changes, commit & push the changes to a new git branch, and submit a pull request. The pull request will be reviewed by Nextclade maintainers and considered for inclusion to the Nextclade dataset collection.
+In order to add or modify datasets you will need to have a local copy of the GitHub repository [`nextstrain/nextclade_data`](https://github.com/nextstrain/nextclade_data) on your computer, make the desired changes, commit & push the changes to a new git branch, and submit a pull request to [`nextstrain/nextclade_data`](https://github.com/nextstrain/nextclade_data). The pull request will be reviewed by Nextclade maintainers and considered for inclusion to the Nextclade dataset collection.
 
-Make sure you have [git](https://git-scm.com/) installed, have an account on [GitHub](https://github.com) and can pull and push code from GitHub repositories.
+Make sure you have [git](https://git-scm.com/) installed, have an account on [GitHub](https://github.com) and can pull and push code from and to GitHub repositories.
 
-[Make a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the [nextstrain/nextclade_data origin repository](https://github.com/nextstrain/nextclade_data) and clone your forked repository:
+[Make a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the [nextstrain/nextclade_data upstream repository](https://github.com/nextstrain/nextclade_data) and clone your forked repository:
 
 ```bash
-git clone git@github.com:<your_github_username>/nextclade
+git clone git@github.com:<your_github_username>/nextclade_data
 ```
+
+Add changes to your forked repository, commit and submit a pull request to the upstream repository `nextstrain/nextclade_data`. When submitting, tick the checkbox ["Allow edits from maintainers"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork), so that `nextstrain-bot` and project maintainers can contribute back to your pull request branch.
 
 Refer to [GitHub documentation "Contributing to projects"](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) for more details.
 
