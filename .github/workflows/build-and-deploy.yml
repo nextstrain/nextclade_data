@@ -31,12 +31,6 @@ jobs:
     env:
       VERBOSE: 0
       PYTHONUNBUFFERED: 1
-      DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
-      DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: us-east-2
-      GH_TOKEN: ${{ github.token }}
 
     steps:
       - name: "Checkout code"
@@ -53,16 +47,15 @@ jobs:
         run: |
           pip3 install -r requirements.txt
 
-      - name: "Install awscli"
+      - name: "Rebuild, commit and push datasets (from a fork)"
+        if: github.event.pull_request.head.repo.full_name != github.repository
         run: |
-          pushd /tmp >/dev/null
-            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-            unzip -oqq awscliv2.zip
-            sudo ./aws/install --update
-          popd >/dev/null
-          aws --version
+          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
 
-      - name: "Rebuild, commit and push datasets"
+          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --no-pull --push --repo="${GITHUB_REPOSITORY}"
+
+      - name: "Rebuild, commit and push (non-release branch)"
         if: github.ref != 'refs/heads/release'
         run: |
           git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
@@ -70,8 +63,10 @@ jobs:
 
           ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
 
-      - name: "Rebuild, commit, push and make a release"
+      - name: "Rebuild, commit, push and make a release (release branch)"
         if: github.ref == 'refs/heads/release'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
           git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
@@ -80,17 +75,18 @@ jobs:
 
       - name: "Deploy dataset server"
         if: ${{ endsWith(github.ref, '/master') || endsWith(github.ref, '/staging') || endsWith(github.ref, '/release') }}
+        env:
+          DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
+          DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-2
         run: |
+          pushd /tmp >/dev/null
+            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip -oqq awscliv2.zip
+            sudo ./aws/install --update
+          popd >/dev/null
+          aws --version
+
           ./scripts/upload 'data_output/'
-
-      - name: "Upload build artifacts: dataset server"
-        uses: actions/upload-artifact@v3
-        with:
-          name: server
-          path: ./data_output/*
-
-      - name: "Upload build artifacts: zip archives"
-        uses: actions/upload-artifact@v3
-        with:
-          name: zips
-          path: ./data_temp/*
