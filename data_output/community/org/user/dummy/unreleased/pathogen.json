@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "name": "dummy1",
+    "refAccession": "DU1MMY",
+    "refName": "DU1MMY"
+  },
+  "cdsOrderPreference": [
+    "HA1"
+  ],
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "HA1",
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}
