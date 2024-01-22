@@ -11,7 +11,7 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultCds": "F",
+  "defaultGene": "F",
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -21,11 +21,6 @@
     "reference": "reference.fasta",
     "treeJson": "tree.json"
   },
-  "shortcuts": [
-    "rsv_a",
-    "nextstrain/rsv/a",
-    "nextstrain/rsv/a/hRSV-A-England-397-2017"
-  ],
   "qc": {
     "privateMutations": {
       "enabled": true,
@@ -58,7 +53,7 @@
       "ignoredStopCodons": []
     }
   },
-  "cdsOrderPreference": [
+  "geneOrderPreference": [
     "F",
     "G",
     "L"
@@ -84,12 +79,14 @@
       "Nextstrain team <https://nextstrain.org>"
     ]
   },
+  "shortcuts": [
+    "rsv_a",
+    "nextstrain/rsv/a",
+    "nextstrain/rsv/a/hRSV-A-England-397-2017"
+  ],
   "attributes": {
     "name": "RSV-A",
     "reference accession": "EPI_ISL_412866",
     "reference name": "hRSV/A/England/397/2017"
-  },
-  "version": {
-    "tag": "unreleased"
   }
 }

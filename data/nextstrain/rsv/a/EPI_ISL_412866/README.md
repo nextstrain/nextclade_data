@@ -18,3 +18,4 @@ The reference tree covers the diversity of RSV-A since the first sequenced sampl
 ## Nomenclature
 The dataset follows the consortium nomenclature established in 2023 that uses a combination of letters and numbers to designate lineages in a hierarchical fashion.
 Definitions of individuals lineages are available on github in the repository [rsv-lineages/lineage-designation-A](https://github.com/rsv-lineages/lineage-designation-A).
+Legacy clade definitions for the nomenclature defined by Goya et al (`G_clade`) are included for orientation. These clade definitions will not be updated and are incomplete. We encourage users to use the new consortium nomenclature.
