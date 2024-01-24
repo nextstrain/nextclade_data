@@ -13,7 +13,6 @@
   "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
-    "examples": "examples.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
