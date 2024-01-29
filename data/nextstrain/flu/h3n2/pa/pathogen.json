@@ -70,8 +70,5 @@
     "reference accession": "NC_007371",
     "reference name": "A/NewYork/392/2004"
   },
-  "defaultCds": "PA",
-  "version": {
-    "tag": "unreleased"
-  }
+  "defaultCds": "PA"
 }

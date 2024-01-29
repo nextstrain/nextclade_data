@@ -209,8 +209,5 @@
   "shortcuts": [
     "MPXV",
     "nextstrain/mpox"
-  ],
-  "version": {
-    "tag": "unreleased"
-  }
+  ]
 }

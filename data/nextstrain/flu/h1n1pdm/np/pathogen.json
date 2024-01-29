@@ -70,8 +70,5 @@
     "reference accession": "NC_026436",
     "reference name": "A/California/07/2009"
   },
-  "defaultCds": "NP",
-  "version": {
-    "tag": "unreleased"
-  }
+  "defaultCds": "NP"
 }

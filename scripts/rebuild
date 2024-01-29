@@ -12,11 +12,11 @@ from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
-from lib.container import dict_get, dict_get_required, dict_set, find_index_by, first, format_list, \
-  dict_remove_many, find_duplicates, dict_cleanup
+from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
+  dict_remove_many, find_duplicates, dict_cleanup, find
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
-from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write
+from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
 from lib.logger import l
@@ -57,14 +57,32 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   })
 
 
-def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
+def dataset_get_versions(dataset):
+  versions = dict_get(dataset, ["versions"]) or []
+  versions = list(filter(lambda version: version["tag"] != "unreleased", versions))
+  last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
+  return versions, last_version
+
+
+def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str):
   pathogen_json = json_read(pathogen_json_path)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
 
   ref = get_ref_seq(pathogen_json, dataset_dir)
 
-  dataset = dict_cleanup({
+  versions, last_version = dataset_get_versions(dataset)
+
+  if dataset_has_changes(dataset, dataset_dir):
+    new_version = dict_cleanup({
+      "updatedAt": None if tag == "unreleased" else updated_at,
+      "tag": tag,
+      "compatibility": dict_get(pathogen_json, ["compatibility"]),
+    })
+    versions.insert(0, new_version)
+    last_version = new_version
+
+  dataset_out = dict_cleanup({
     "path": path,
     "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
     "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
@@ -72,9 +90,11 @@ def index_one_dataset(args, pathogen_json_path: str, updated_at: str):
     "maintenance": dict_get(pathogen_json, ["maintenance"]),
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
+    "versions": versions,
+    "version": last_version,
   })
 
-  return dataset, ref
+  return dataset_out, ref
 
 
 def get_ref_seq(pathogen_json, dataset_dir):
@@ -97,15 +117,14 @@ def get_new_dataset_order(datasets, dataset_order):
       f"Please make sure the entries are unique, to avoid ambiguity."
     )
 
-  extra = set(dataset_order).difference(set(paths))
-
-  if len(extra) > 0:
-    raise ValueError(
-      f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
-      f"{format_list(extra)}. "
-      f"Please double check the existence of datasets and the spelling of their paths in the '.dataset_order' list. "
-      f"The full list of datasets that are found:\n  {format_list(paths)}."
-    )
+  # extra = set(dataset_order).difference(set(paths))
+  # if len(extra) > 0:
+  #   raise ValueError(
+  #     f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
+  #     f"{format_list(extra)}. "
+  #     f"Please double check the existence of datasets and the spelling of their paths in the '.dataset_order' list. "
+  #     f"The full list of datasets that are found:\n  {format_list(paths)}."
+  #   )
 
   missing = set(paths).difference(set(dataset_order))
   if len(missing):
@@ -207,7 +226,7 @@ def main():
       f"override (not recommended):\n  {dirty_files}"
     )
 
-  if args.no_pull:
+  if not args.no_pull:
     git_pull()
 
   updated_at = now_iso()
@@ -216,11 +235,19 @@ def main():
 
   collection_json_paths = list(find_files("collection.json", args.input_dir))
 
+  index_json_path = join(args.output_dir, "index.json")
+  try:
+    index_json = json_read(index_json_path)
+  except FileNotFoundError as _:
+    index_json = {}
+
   collections = []
   release_infos = []
   all_refs = {}
   for collection_json_path in collection_json_paths:
-    collection, release_infos_for_dataset, refs = process_one_collection(collection_json_path, args, tag, updated_at)
+    collection, release_infos_for_dataset, refs = process_one_collection(
+      collection_json_path, index_json, args, tag, updated_at
+    )
     collections.append(collection)
     release_infos.extend(release_infos_for_dataset)
     all_refs.update(refs)
@@ -252,7 +279,6 @@ def main():
     ]
   }
 
-  index_json_path = join(args.output_dir, "index.json")
   json_write(index_json, index_json_path, no_sort_keys=True)
 
   if args.commit:
@@ -270,15 +296,32 @@ def main():
         publish_to_github_releases(args, tag, commit_hash, release_notes)
 
 
-def process_one_collection(collection_json_path, args, tag, updated_at):
+def dataset_has_changes(dataset_from_index, dataset_dir):
+  _, last_version = dataset_get_versions(dataset_from_index)
+  modified_files = list(git_get_modified_files(from_revision=last_version["tag"], dirs=dataset_dir))
+
+  # HACK: this is temporary hack to ignore version removal from pathogen.json. Remove this after a release!
+  modified_files = filter(lambda f: not f.endswith("/pathogen.json"), modified_files)
+
+  modified_files = list(map(lambda f: realpath(f), modified_files))
+  return len(modified_files) > 0
+
+
+def process_one_collection(collection_json_path, index_json, args, tag, updated_at):
   collection_json = json_read(collection_json_path)
   collection_dir = dirname(collection_json_path)
+  collection_id = dict_get_required(collection_json, ["meta", "id"])
+  datasets_from_index_json = get_datasets_from_index_json(index_json, collection_id)
 
   datasets = []
   refs = {}
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
+    dataset_dir = dirname(pathogen_json_path)
+    path = relpath(dataset_dir, args.input_dir)
+    dataset_from_index = find(lambda dataset: dataset["path"] == path, datasets_from_index_json) or {}
+
     try:
-      dataset, ref = index_one_dataset(args, pathogen_json_path, updated_at)
+      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at)
       datasets.append(dataset)
       refs.update({dataset["path"]: ref})
     except Exception as e:
@@ -293,11 +336,10 @@ def process_one_collection(collection_json_path, args, tag, updated_at):
   }
   json_write(collection_json, collection_json_path, no_sort_keys=True)
 
-  release_infos = prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at)
+  release_infos = prepare_dataset_release_infos(args, datasets_from_index_json, collection_dir, tag, updated_at)
   release_infos = sort_release_infos(release_infos, dataset_order)
 
   collection_info = deepcopy(collection_json)
-
   dict_remove_many(collection_info, ["dataset_order"])
   dict_remove_many(collection_info, ["schemaVersion"])
 
@@ -307,6 +349,12 @@ def process_one_collection(collection_json_path, args, tag, updated_at):
   }
 
   return collection_info, release_infos, refs
+
+
+def get_datasets_from_index_json(index_json, collection_id):
+  collections = dict_get(index_json, ["collections"])
+  collection = find(lambda c: dict_get_required(c, ["meta", "id"]) == collection_id, collections)
+  return dict_get(collection, ["datasets"]) or []
 
 
 def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at):
@@ -323,37 +371,27 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
     dataset = datasets[i_dataset]
     path = dataset['path']
 
-    versions = dict_get(dataset, ["versions"]) or []
-    versions = list(filter(lambda version: version["tag" == "unreleased"], versions))
+    if not dataset_has_changes(dataset, dataset_dir):
+      continue
 
-    if not git_dir_is_clean(dataset_dir):
-      changelog_path = join(dataset_dir, "CHANGELOG.md")
-      release_notes = changelog_get_unreleased_section(changelog_path)
-      if len(release_notes) == 0:
-        raise ValueError(
-          f"Changelog not found: dataset '{path}' has changes, but no valid changelog entry is found. Automated "
-          f"releases will fail.\n\nTo fix this, please modify the file '{changelog_path}': add '## Unreleased' second "
-          f"level heading (spelled exactly like this, without quotes) on the very top of the file and briefly "
-          f"summarize the changes you've added. If the heading already exists, append your changes to the existing "
-          f"changes.\n\nRefer to documentation for the instructions on how to prepare a dataset correctly."
-        )
+    changelog_path = join(dataset_dir, "CHANGELOG.md")
+    release_notes = changelog_get_unreleased_section(changelog_path)
+    if len(release_notes) == 0:
+      raise ValueError(
+        f"Changelog not found: dataset '{path}' has changes, but no valid changelog entry is found. Automated "
+        f"releases will fail.\n\nTo fix this, please modify the file '{changelog_path}': add '## Unreleased' second "
+        f"level heading (spelled exactly like this, without quotes) on the very top of the file and briefly "
+        f"summarize the changes you've added. If the heading already exists, append your changes to the existing "
+        f"changes.\n\nRefer to documentation for the instructions on how to prepare a dataset correctly."
+      )
 
     if args.release:
-      last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
-      release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
+      _, last_version = dataset_get_versions(dataset)
+      release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version["tag"], updated_at)
       if release_info is None:
         continue
 
       release_infos.append(release_info)
-
-    version = dict_cleanup({"updatedAt": None if tag == "unreleased" else updated_at, "tag": tag})
-    version_with_compat = dict_cleanup({**version, "compatibility": dict_get(pathogen_json, ["compatibility"])})
-    versions.insert(0, version_with_compat)
-    dict_set(dataset, ["versions"], versions)
-    dict_set(dataset, ["version"], version_with_compat)
-
-    dict_set(pathogen_json, ["version"], version)
-    json_write(pathogen_json, pathogen_json_path, no_sort_keys=True)
 
     create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir)
 
@@ -448,6 +486,7 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   make_zip(dataset_dir, zip_basename)
 
   path_safe = path.replace("/", "__")
+  rmrf(args.temp_dir)
   copy(f"{zip_basename}.zip", join(args.temp_dir, f"{path_safe}__{tag}.zip"))
 
   not_found_json = {"status": 404, "message": "Not found"}
