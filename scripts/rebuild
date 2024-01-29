@@ -157,7 +157,7 @@ def parse_args():
   parser.add_argument('--temp-dir', default=join(getcwd(), "data_temp"),
                       help='Where to temporarily store release files')
 
-  parser.add_argument('--no-pull', action='store_false',
+  parser.add_argument('--no-pull', action='store_true',
                       help="Skip pulling latest changes from remote. Note that if "
                            "there are incomatible chanhes this can create hard to resolve merge conflicts.")
   parser.add_argument('--allow-dirty', action='store_true',
