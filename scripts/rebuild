@@ -486,7 +486,6 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   make_zip(dataset_dir, zip_basename)
 
   path_safe = path.replace("/", "__")
-  rmrf(args.temp_dir)
   copy(f"{zip_basename}.zip", join(args.temp_dir, f"{path_safe}__{tag}.zip"))
 
   not_found_json = {"status": 404, "message": "Not found"}
