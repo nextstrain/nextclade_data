@@ -492,6 +492,9 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   json_write(not_found_json, join(args.output_dir, "404.json"))
   file_write("User-agent: *\nDisallow: /\n", join(args.output_dir, "robots.txt"))
 
+  if tag != "unreleased":
+    rmrf(join(args.output_dir, path, "unreleased"))
+
 
 def get_dataset_name_friendly(dataset):
   return dict_get_required(dataset, ["attributes", "name"])
