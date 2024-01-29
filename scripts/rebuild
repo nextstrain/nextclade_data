@@ -159,10 +159,10 @@ def parse_args():
 
   parser.add_argument('--no-pull', action='store_true',
                       help="Skip pulling latest changes from remote. Note that if "
-                           "there are incomatible chanhes this can create hard to resolve merge conflicts.")
+                           "there are incompatible changes this can create hard to resolve merge conflicts.")
   parser.add_argument('--allow-dirty', action='store_true',
-                      help="Allow working directory to contain uncommited files. Note that these files will also be "
-                           "commited and can potentially be released along with the datasets",
+                      help="Allow working directory to contain uncommitted files. Note that these files will also be "
+                           "committed and can potentially be released along with the datasets",
                       )
   parser.add_argument('--commit', action='store_true', help="Commit updates into the repository")
   parser.add_argument('--push', action='store_true', help="Push updates into the remote repository. Implies --commit")
@@ -285,7 +285,7 @@ def main():
     commit_hash = commit_changes(args, tag, release_infos)
 
     if args.push:
-      l.info("Pushing commited changes to GitHub")
+      l.info("Pushing committed changes to GitHub")
       git_push()
 
       if args.release:
