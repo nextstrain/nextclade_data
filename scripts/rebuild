@@ -16,7 +16,7 @@ from lib.container import dict_get, dict_get_required, find_index_by, first, for
   dict_remove_many, find_duplicates, dict_cleanup, find
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
-from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write
+from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
 from lib.logger import l
@@ -486,6 +486,7 @@ def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
   make_zip(dataset_dir, zip_basename)
 
   path_safe = path.replace("/", "__")
+  rmrf(args.temp_dir)
   copy(f"{zip_basename}.zip", join(args.temp_dir, f"{path_safe}__{tag}.zip"))
 
   not_found_json = {"status": 404, "message": "Not found"}
