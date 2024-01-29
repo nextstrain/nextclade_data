@@ -40,7 +40,10 @@ jobs:
 
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
+          fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
 
       - name: "Install system dependencies"
         run: |
