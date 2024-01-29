@@ -57,21 +57,30 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   })
 
 
-def index_one_dataset(args, pathogen_json_path: str, datasets_from_index_json: list, tag: str, updated_at: str):
+def dataset_get_versions(dataset):
+  versions = dict_get(dataset, ["versions"]) or []
+  versions = list(filter(lambda version: version["tag"] != "unreleased", versions))
+  last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
+  return versions, last_version
+
+
+def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str):
   pathogen_json = json_read(pathogen_json_path)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
 
   ref = get_ref_seq(pathogen_json, dataset_dir)
 
-  dataset = find(lambda dataset: dataset["path"] == path, datasets_from_index_json) or {}
+  versions, last_version = dataset_get_versions(dataset)
 
-  versions = dict_get(dataset, ["versions"]) or []
-  versions = list(filter(lambda version: version["tag"] != "unreleased", versions))
-
-  version = dict_cleanup({"updatedAt": None if tag == "unreleased" else updated_at, "tag": tag})
-  version_with_compat = dict_cleanup({**version, "compatibility": dict_get(pathogen_json, ["compatibility"])})
-  versions.insert(0, version_with_compat)
+  if dataset_has_changes(dataset, dataset_dir):
+    new_version = dict_cleanup({
+      "updatedAt": None if tag == "unreleased" else updated_at,
+      "tag": tag,
+      "compatibility": dict_get(pathogen_json, ["compatibility"]),
+    })
+    versions.insert(0, new_version)
+    last_version = new_version
 
   dataset_out = dict_cleanup({
     "path": path,
@@ -82,7 +91,7 @@ def index_one_dataset(args, pathogen_json_path: str, datasets_from_index_json: l
     "files": dict_get_required(pathogen_json, ["files"]),
     "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
     "versions": versions,
-    "version": version_with_compat,
+    "version": last_version,
   })
 
   return dataset_out, ref
@@ -108,15 +117,14 @@ def get_new_dataset_order(datasets, dataset_order):
       f"Please make sure the entries are unique, to avoid ambiguity."
     )
 
-  extra = set(dataset_order).difference(set(paths))
-
-  if len(extra) > 0:
-    raise ValueError(
-      f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
-      f"{format_list(extra)}. "
-      f"Please double check the existence of datasets and the spelling of their paths in the '.dataset_order' list. "
-      f"The full list of datasets that are found:\n  {format_list(paths)}."
-    )
+  # extra = set(dataset_order).difference(set(paths))
+  # if len(extra) > 0:
+  #   raise ValueError(
+  #     f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
+  #     f"{format_list(extra)}. "
+  #     f"Please double check the existence of datasets and the spelling of their paths in the '.dataset_order' list. "
+  #     f"The full list of datasets that are found:\n  {format_list(paths)}."
+  #   )
 
   missing = set(paths).difference(set(dataset_order))
   if len(missing):
@@ -288,6 +296,17 @@ def main():
         publish_to_github_releases(args, tag, commit_hash, release_notes)
 
 
+def dataset_has_changes(dataset_from_index, dataset_dir):
+  _, last_version = dataset_get_versions(dataset_from_index)
+  modified_files = list(git_get_modified_files(from_revision=last_version["tag"], dirs=dataset_dir))
+
+  # HACK: this is temporary hack to ignore version removal from pathogen.json. Remove this after a release!
+  modified_files = filter(lambda f: not f.endswith("/pathogen.json"), modified_files)
+
+  modified_files = list(map(lambda f: realpath(f), modified_files))
+  return len(modified_files) > 0
+
+
 def process_one_collection(collection_json_path, index_json, args, tag, updated_at):
   collection_json = json_read(collection_json_path)
   collection_dir = dirname(collection_json_path)
@@ -297,8 +316,12 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
   datasets = []
   refs = {}
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
+    dataset_dir = dirname(pathogen_json_path)
+    path = relpath(dataset_dir, args.input_dir)
+    dataset_from_index = find(lambda dataset: dataset["path"] == path, datasets_from_index_json) or {}
+
     try:
-      dataset, ref = index_one_dataset(args, pathogen_json_path, datasets_from_index_json, tag, updated_at)
+      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at)
       datasets.append(dataset)
       refs.update({dataset["path"]: ref})
     except Exception as e:
@@ -348,24 +371,23 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
     dataset = datasets[i_dataset]
     path = dataset['path']
 
-    versions = dict_get(dataset, ["versions"]) or []
-    versions = list(filter(lambda version: version["tag"] != "unreleased", versions))
+    if not dataset_has_changes(dataset, dataset_dir):
+      continue
 
-    if not git_dir_is_clean(dataset_dir):
-      changelog_path = join(dataset_dir, "CHANGELOG.md")
-      release_notes = changelog_get_unreleased_section(changelog_path)
-      if len(release_notes) == 0:
-        raise ValueError(
-          f"Changelog not found: dataset '{path}' has changes, but no valid changelog entry is found. Automated "
-          f"releases will fail.\n\nTo fix this, please modify the file '{changelog_path}': add '## Unreleased' second "
-          f"level heading (spelled exactly like this, without quotes) on the very top of the file and briefly "
-          f"summarize the changes you've added. If the heading already exists, append your changes to the existing "
-          f"changes.\n\nRefer to documentation for the instructions on how to prepare a dataset correctly."
-        )
+    changelog_path = join(dataset_dir, "CHANGELOG.md")
+    release_notes = changelog_get_unreleased_section(changelog_path)
+    if len(release_notes) == 0:
+      raise ValueError(
+        f"Changelog not found: dataset '{path}' has changes, but no valid changelog entry is found. Automated "
+        f"releases will fail.\n\nTo fix this, please modify the file '{changelog_path}': add '## Unreleased' second "
+        f"level heading (spelled exactly like this, without quotes) on the very top of the file and briefly "
+        f"summarize the changes you've added. If the heading already exists, append your changes to the existing "
+        f"changes.\n\nRefer to documentation for the instructions on how to prepare a dataset correctly."
+      )
 
     if args.release:
-      last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
-      release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
+      _, last_version = dataset_get_versions(dataset)
+      release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version["tag"], updated_at)
       if release_info is None:
         continue
 
