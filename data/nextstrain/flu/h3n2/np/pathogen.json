@@ -70,9 +70,5 @@
     "reference accession": "NC_007369",
     "reference name": "A/NewYork/392/2004"
   },
-  "defaultCds": "NP",
-  "version": {
-    "updatedAt": "2024-01-16T20:31:02Z",
-    "tag": "2024-01-16--20-31-02Z"
-  }
+  "defaultCds": "NP"
 }

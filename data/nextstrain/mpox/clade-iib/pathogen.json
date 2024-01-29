@@ -88,9 +88,5 @@
   "schemaVersion": "3.0.0",
   "shortcuts": [
     "hMPXV"
-  ],
-  "version": {
-    "updatedAt": "2024-01-16T20:31:02Z",
-    "tag": "2024-01-16--20-31-02Z"
-  }
+  ]
 }

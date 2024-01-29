@@ -70,9 +70,5 @@
     "reference accession": "NC_026436",
     "reference name": "A/California/07/2009"
   },
-  "defaultCds": "NP",
-  "version": {
-    "updatedAt": "2024-01-16T20:31:02Z",
-    "tag": "2024-01-16--20-31-02Z"
-  }
+  "defaultCds": "NP"
 }
