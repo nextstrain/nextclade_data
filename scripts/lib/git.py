@@ -35,7 +35,7 @@ def git_get_current_commit_hash(branch: str = "HEAD", short=False):
 
 
 def git_get_modified_files(
-  from_revision: str,
+  from_revision: str = git_get_initial_commit_hash(),
   to_revision: str = git_get_current_commit_hash(),
   dirs: Union[str, List[str]] = getcwd()
 ):

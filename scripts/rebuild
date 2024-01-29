@@ -18,7 +18,7 @@ from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
-  git_get_initial_commit_hash, github_create_release, git_pull, git_commit_all, git_push
+  github_create_release, git_pull, git_commit_all, git_push
 from lib.logger import l
 from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 
@@ -60,7 +60,7 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
 def dataset_get_versions(dataset):
   versions = dict_get(dataset, ["versions"]) or []
   versions = list(filter(lambda version: version["tag"] != "unreleased", versions))
-  last_version = first(sorted(versions, reverse=True)) or git_get_initial_commit_hash()
+  last_version = first(sorted(versions, reverse=True, key=lambda v: v["tag"]))
   return versions, last_version
 
 
