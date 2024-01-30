@@ -1049,7 +1049,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2024-01-30T16:34:55Z",
+              "tag": "2024-01-30--16-34-55Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -1065,7 +1066,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-01-30T16:34:55Z",
+            "tag": "2024-01-30--16-34-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
