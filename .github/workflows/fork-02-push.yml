@@ -1,0 +1,88 @@
+name: fork-02-push
+
+# /!\ Make sure you don't run any external (unsafe) code in this workflow.
+#
+# This is the seconds (safe) step in 2-step process triggered on pull request.
+# This workflow executes in main repo context and has read-write repo token
+# and access to secrets.
+#
+# It retrieves the artifacts produced by the first (unsafe) step of the process
+# commits and pushes them back into the PR branch.
+#
+# See:
+# - https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
+# - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+on:
+  workflow_run:
+    workflows:
+      - "fork-01-build"
+    types:
+      - "completed"
+
+concurrency:
+  group: fork-02-push-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  push:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-22.04
+    steps:
+      # /!\ This retrieves potentially unsafe code from a forked repository.
+      # It is fine to use data from it, and to treat code as data (e.g.
+      # linting it), but it is **unsafe to execute any of this code**. The code
+      # can potentially steal our credentials.
+      - name: "Checkout unsafe code from PR"
+        uses: actions/checkout@v4
+        with:
+          ref: ${{github.event.pull_request.head.ref}}
+          repository: ${{github.event.pull_request.head.repo.full_name}}
+
+      - name: 'Download artifact'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: context.payload.workflow_run.id,
+            });
+            let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "out"
+            })[0];
+            let download = await github.rest.actions.downloadArtifact({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               artifact_id: matchArtifact.id,
+               archive_format: 'zip',
+            });
+            let fs = require('fs');
+            fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/out.zip`, Buffer.from(download.data));
+
+      - name: "Extract artifact"
+        run: |
+          unzip out.zip
+          rm -rf data/ data_output/
+          tar --use-compress-program=unzstd -xf data.tar.zst
+          tar --use-compress-program=unzstd -xf data_output.tar.zst
+
+      - name: "Prepare artifact"
+        run: |
+          ls -al .
+          ls -al data
+          ls -al data_output
+          git status
+
+      - name: 'Comment on PR'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            let fs = require('fs');
+            let issue_number = Number(fs.readFileSync('out/pr-number.txt'));
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: 'Thank you for the PR!\nNewline\n\nDouble newline\n\nList:\n\n- one\n- two\n- three'
+            });
