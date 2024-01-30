@@ -298,7 +298,7 @@ def main():
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
   _, last_version = dataset_get_versions(dataset_from_index)
-  modified_files = list(git_get_modified_files(from_revision=last_version["tag"], dirs=dataset_dir))
+  modified_files = list(git_get_modified_files(from_revision=dict_get(last_version, ["tag"]), dirs=dataset_dir))
 
   # HACK: this is temporary hack to ignore version removal from pathogen.json. Remove this after a release!
   modified_files = filter(lambda f: not f.endswith("/pathogen.json"), modified_files)
@@ -365,11 +365,11 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 
     i_dataset = find_index_by(lambda dataset: dataset["path"] == dataset_dir_rel, datasets)
-    if i_dataset is None:
-      raise ValueError(f"Dataset at '{dataset_dir_rel}' not found in the dataset index. Try to reindex datasets first.")
+    dataset = pathogen_json
+    if i_dataset is not None:
+      dataset = datasets[i_dataset]
 
-    dataset = datasets[i_dataset]
-    path = dataset['path']
+    path = dict_get(dataset, ['path']) or dataset_dir_rel
 
     if not dataset_has_changes(dataset, dataset_dir):
       continue
@@ -387,13 +387,13 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
 
     if args.release:
       _, last_version = dataset_get_versions(dataset)
-      release_info = prepare_dataset_release_info(dataset_dir, dataset, last_version["tag"], updated_at)
+      release_info = prepare_dataset_release_info(dataset_dir, dataset, dict_get(last_version, ["tag"]), updated_at)
       if release_info is None:
         continue
 
       release_infos.append(release_info)
 
-    create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir)
+    create_dataset_package(args, dataset, path, tag, dataset_dir)
 
   return release_infos
 
@@ -465,10 +465,8 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
   return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
 
 
-def create_dataset_package(args, dataset, pathogen_json, tag, dataset_dir):
-  path = dataset["path"]
-  files = pathogen_json["files"]
-
+def create_dataset_package(args, dataset, path, tag, dataset_dir):
+  files = dict_get_required(dataset, ["files"])
   dict_get_required(files, ["reference"])
   dict_get_required(files, ["pathogenJson"])
 
