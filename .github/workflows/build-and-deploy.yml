@@ -1,12 +1,12 @@
 on:
-  push:
-    branches:
-      - master
-      - staging
-      - release
-  pull_request:
-  repository_dispatch:
-    types: build-and-deploy
+  # push:
+  #   branches:
+  #     - master
+  #     - staging
+  #     - release
+  # pull_request:
+  # repository_dispatch:
+  #   types: build-and-deploy
   workflow_dispatch:
   workflow_call:
 
