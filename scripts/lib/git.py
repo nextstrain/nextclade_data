@@ -39,6 +39,8 @@ def git_get_modified_files(
   to_revision: str = git_get_current_commit_hash(),
   dirs: Union[str, List[str]] = getcwd()
 ):
+  from_revision = from_revision or git_get_initial_commit_hash()
+  to_revision = to_revision or git_get_current_commit_hash()
   return get_lines(
     run(f"git diff --name-only '{from_revision}' '{to_revision}' -- {prepare_paths_args(dirs)}")
   )
