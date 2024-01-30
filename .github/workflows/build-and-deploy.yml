@@ -85,13 +85,13 @@ jobs:
           ./scripts/upload 'data_output/'
 
       - name: "Upload build artifacts: dataset server"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: server
           path: ./data_output/*
 
       - name: "Upload build artifacts: zip archives"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: zips
           path: ./data_temp/*
