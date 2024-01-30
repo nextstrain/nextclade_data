@@ -1,9 +1,10 @@
 import csv
 import fnmatch
 import json
+import os
 import shutil
 from os import walk, listdir, makedirs
-from os.path import dirname, join, abspath, isdir
+from os.path import dirname, join, abspath, isdir, isfile, islink
 from typing import List
 
 
@@ -54,8 +55,13 @@ def copy(input_filepath, output_filepath):
   shutil.copy2(input_filepath, output_filepath)
 
 
-def rmrf(some_path):
-  shutil.rmtree(some_path, ignore_errors=True)
+def rmrf(some_path, ignore_errors=True):
+  if isfile(some_path) or islink(some_path):
+    os.unlink(some_path)
+  elif isdir(some_path):
+    shutil.rmtree(some_path, ignore_errors=ignore_errors)
+  elif not ignore_errors:
+    raise FileNotFoundError(some_path)
 
 
 def mkdir(dir_path):
