@@ -993,6 +993,12 @@
         },
         {
           "path": "nextstrain/flu/yam/ha/JN993010",
+          "shortcuts": [
+            "flu_yam_ha",
+            "nextstrain/flu/yam",
+            "nextstrain/flu/yam/ha",
+            "nextstrain/flu/yam/ha/wisconsin-1-2010"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Influenza B Yamagata HA",
@@ -1043,6 +1049,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1052,8 +1065,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
