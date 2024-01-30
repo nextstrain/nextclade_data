@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "data_provenance": [
+      {
+        "name": "fictional data"
+      }
+    ],
+    "display_defaults": {},
+    "title": "Dummy nextclade reference tree"
+  },
+  "tree": {
+    "branch_attrs": {
+      "mutations": {
+        "nuc": []
+      }
+    },
+    "children": [
+      {
+        "branch_attrs": {
+          "mutations": {
+            "HA1": [
+              "K1G"
+            ],
+            "nuc": [
+              "A1G",
+              "A2G"
+            ]
+          }
+        },
+        "children": [],
+        "name": "A",
+        "node_attrs": {
+          "clade_membership": {
+            "value": "unassigned"
+          },
+          "div": 0.016666666666666666
+        }
+      },
+      {
+        "branch_attrs": {
+          "mutations": {
+            "HA1": [
+              "K1N"
+            ],
+            "nuc": [
+              "A3C"
+            ]
+          }
+        },
+        "children": [
+          {
+            "branch_attrs": {
+              "mutations": {
+                "HA1": [
+                  "K2Q"
+                ],
+                "nuc": [
+                  "A4C"
+                ]
+              }
+            },
+            "children": [],
+            "name": "B",
+            "node_attrs": {
+              "clade_membership": {
+                "value": "unassigned"
+              },
+              "div": 0.016666666666666666
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {
+                "HA1": [
+                  "K2R"
+                ],
+                "nuc": [
+                  "A5G"
+                ]
+              }
+            },
+            "children": [],
+            "name": "C",
+            "node_attrs": {
+              "clade_membership": {
+                "value": "unassigned"
+              },
+              "div": 0.016666666666666666
+            }
+          }
+        ],
+        "name": "NODE_0000001",
+        "node_attrs": {
+          "clade_membership": {
+            "value": "unassigned"
+          },
+          "div": 0.008333333333333333
+        }
+      }
+    ],
+    "name": "NODE_0000000",
+    "node_attrs": {
+      "clade_membership": {
+        "value": "unassigned"
+      },
+      "div": 0
+    }
+  }
+}
