@@ -1,5 +1,4 @@
 *.pyc
-*.zip
 /data_temp
 /upload_temp
 \.DS_Store
