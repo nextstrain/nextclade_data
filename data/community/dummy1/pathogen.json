@@ -1,0 +1,24 @@
+{
+  "attributes": {
+    "name": "DUMMY",
+    "reference accession": "D1",
+    "reference name": "DUMMY/1"
+  },
+  "defaultGene": "D",
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "geneOrderPreference": [
+    "D", "U", "M"
+  ],
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "schemaVersion": "3.0.0"
+}
