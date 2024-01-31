@@ -31,20 +31,54 @@ jobs:
     env:
       VERBOSE: 0
       PYTHONUNBUFFERED: 1
-      DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
-      DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: us-east-2
       GH_TOKEN: ${{ github.token }}
 
     steps:
+      - name: config
+        id: config
+        run: |
+          echo 'is_fork=${{ (github.event_name == 'pull_request') && (github.event.pull_request.head.repo.fork || ((github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) == github.repository)) }}' >> $GITHUB_OUTPUT
+
+          echo 'should_deploy=${{ github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging' || github.ref == 'refs/heads/release' }}' >> $GITHUB_OUTPUT
+
+          echo 'is_release=${{ github.ref == 'refs/heads/release' }}' >> $GITHUB_OUTPUT
+
+      - name: "DEBUG"
+        run: |
+          set +x
+
+          echo is_fork=${{ steps.config.outputs.is_fork }}
+          echo should_deploy=${{ steps.config.outputs.should_deploy }}
+          echo is_release=${{ steps.config.outputs.is_release }}
+
+          echo '\n'
+
+          echo 'github.ref =' ${{ github.ref }}
+          echo 'github.event_name =' ${{ github.event_name }}
+          echo 'github.repository =' ${{ github.repository }}
+
+          echo '\n'
+
+          echo 'github.event.pull_request.head.repo.fork =' ${{ github.event.pull_request.head.repo.fork }}
+          echo 'github.event.pull_request.head.repo.full_name =' ${{ github.event.pull_request.head.repo.full_name }}
+
+          echo '\n'
+
+          echo 'github.event.pull_request.base.repo.fork =' ${{ github.event.pull_request.base.repo.fork }}
+          echo 'github.event.pull_request.base.repo.full_name =' ${{ github.event.pull_request.base.repo.full_name }}
+
+          echo '\n'
+
+          echo 'github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name =' ${{ github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name }}
+          echo '(github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) == github.repository =' ${{ (github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) == github.repository }}
+          echo 'github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || ((github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) == github.repository)) =' ${{ github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || ((github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) == github.repository)) }}
+
       - name: "Checkout code"
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
-          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
 
       - name: "Install system dependencies"
         run: |
@@ -54,7 +88,29 @@ jobs:
         run: |
           pip3 install -r requirements.txt
 
+      - name: "Rebuild datasets (fork)"
+        if: ${{ steps.config.outputs.is_fork == 'true' }}
+        run: |
+          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --no-pull
+
+      - name: "Rebuild, commit and push datasets (non-release branch)"
+        if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.is_release != 'true' }}
+        run: |
+          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
+
+          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
+
+      - name: "Rebuild, commit, push and make a release (release branch)"
+        if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.is_release == 'true' }}
+        run: |
+          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
+
+          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
+
       - name: "Install awscli"
+        if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.should_deploy == 'true' }}
         run: |
           pushd /tmp >/dev/null
             curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -63,24 +119,14 @@ jobs:
           popd >/dev/null
           aws --version
 
-      - name: "Rebuild, commit and push datasets"
-        if: github.ref != 'refs/heads/release'
-        run: |
-          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
-          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
-
-          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
-
-      - name: "Rebuild, commit, push and make a release"
-        if: github.ref == 'refs/heads/release'
-        run: |
-          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
-          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
-
-          ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
-
       - name: "Deploy dataset server"
-        if: ${{ endsWith(github.ref, '/master') || endsWith(github.ref, '/staging') || endsWith(github.ref, '/release') }}
+        if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.should_deploy == 'true' }}
+        env:
+          DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
+          DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-2
         run: |
           ./scripts/upload 'data_output/'
 
