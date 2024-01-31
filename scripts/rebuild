@@ -336,7 +336,8 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
   }
   json_write(collection_json, collection_json_path, no_sort_keys=True)
 
-  release_infos = prepare_dataset_release_infos(args, datasets_from_index_json, collection_dir, tag, updated_at)
+  release_infos = prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag,
+                                                updated_at)
   release_infos = sort_release_infos(release_infos, dataset_order)
 
   collection_info = deepcopy(collection_json)
@@ -357,22 +358,27 @@ def get_datasets_from_index_json(index_json, collection_id):
   return dict_get(collection, ["datasets"]) or []
 
 
-def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_at):
+def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag, updated_at):
   release_infos = []
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     pathogen_json = json_read(pathogen_json_path)
     dataset_dir = dirname(pathogen_json_path)
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 
-    i_dataset = find_index_by(lambda dataset: dataset["path"] == dataset_dir_rel, datasets)
-    dataset = pathogen_json
+    dataset_from_index = pathogen_json
+    i_dataset = find_index_by(lambda dataset: dataset["path"] == dataset_dir_rel, datasets_from_index_json)
     if i_dataset is not None:
-      dataset = datasets[i_dataset]
+      dataset_from_index = datasets_from_index_json[i_dataset]
 
-    path = dict_get(dataset, ['path']) or dataset_dir_rel
-
-    if not dataset_has_changes(dataset, dataset_dir):
+    if not dataset_has_changes(dataset_from_index, dataset_dir):
       continue
+
+    dataset_new = dataset_from_index
+    i_dataset = find_index_by(lambda dataset: dataset["path"] == dataset_dir_rel, datasets)
+    if i_dataset is not None:
+      dataset_new = datasets[i_dataset]
+
+    path = dict_get(dataset_new, ['path']) or dataset_dir_rel
 
     changelog_path = join(dataset_dir, "CHANGELOG.md")
     release_notes = changelog_get_unreleased_section(changelog_path)
@@ -386,14 +392,16 @@ def prepare_dataset_release_infos(args, datasets, collection_dir, tag, updated_a
       )
 
     if args.release:
-      _, last_version = dataset_get_versions(dataset)
-      release_info = prepare_dataset_release_info(dataset_dir, dataset, dict_get(last_version, ["tag"]), updated_at)
+      _, last_version = dataset_get_versions(dataset_from_index)
+      release_info = prepare_dataset_release_info(
+        dataset_dir, dataset_from_index, dict_get(last_version, ["tag"]), updated_at
+      )
       if release_info is None:
         continue
 
       release_infos.append(release_info)
 
-    create_dataset_package(args, dataset, path, tag, dataset_dir)
+    create_dataset_package(args, dataset_new, path, tag, dataset_dir)
 
   return release_infos
 
@@ -443,8 +451,8 @@ def publish_to_github_releases(args, tag, commit_hash, release_notes):
 
 
 def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at):
-  modified_files = list(git_get_modified_files(from_revision=last_version, dirs=dataset_dir))
-  modified_files = list(map(lambda f: realpath(f), modified_files))
+  # modified_files = list(git_get_modified_files(from_revision=last_version, dirs=dataset_dir))
+  # modified_files = list(map(lambda f: realpath(f), modified_files))
 
   # if len(modified_files) == 0:
   #   return None
@@ -468,7 +476,6 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
 def create_dataset_package(args, dataset, path, tag, dataset_dir):
   files = dict_get_required(dataset, ["files"])
   dict_get_required(files, ["reference"])
-  dict_get_required(files, ["pathogenJson"])
 
   out_dir = join(args.output_dir, path, tag)
   for _, file in files.items():
@@ -477,6 +484,10 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
     if file == "tree.json":
       # Minify tree.json
       json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
+    elif file == "pathogen.json":
+      pathogen_json = json_read(inpath)
+      pathogen_json["version"] = dataset["version"]
+      json_write(pathogen_json, outpath, no_sort_keys=True)
     else:
       copy(inpath, outpath)
 
