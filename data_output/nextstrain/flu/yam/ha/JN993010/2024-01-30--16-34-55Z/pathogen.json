@@ -117,5 +117,9 @@
     "nextstrain/flu/yam",
     "nextstrain/flu/yam/ha",
     "nextstrain/flu/yam/ha/wisconsin-1-2010"
-  ]
+  ],
+  "version": {
+    "updatedAt": "2024-01-30T16:34:55Z",
+    "tag": "2024-01-30--16-34-55Z"
+  }
 }
