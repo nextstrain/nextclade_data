@@ -2135,6 +2135,61 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/scratch/reference-only",
+          "enabled": true,
+          "attributes": {
+            "name": "Scratch - Reference only",
+            "reference name": "None - Bring your own"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "examples": "examples.fasta"
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },
