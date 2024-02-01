@@ -2154,7 +2154,50 @@
           }
         ]
       },
-      "datasets": []
+      "datasets": [
+        {
+          "path": "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
+          "enabled": true,
+          "attributes": {
+            "name": "PRRSV-2 ORF5 Lineages, Yim-im & Zhang 2023 Microbiol Spectr",
+            "reference accession": "PRRSV0004437",
+            "reference name": "DQ478308.1"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        }
+      ]
     }
   ],
   "minimizerIndex": [

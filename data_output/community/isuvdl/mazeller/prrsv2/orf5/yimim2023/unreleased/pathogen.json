@@ -1,0 +1,66 @@
+{
+  "attributes": {
+    "name": "PRRSV-2 ORF5 Lineages, Yim-im & Zhang 2023 Microbiol Spectr",
+    "reference accession": "PRRSV0004437",
+    "reference name": "DQ478308.1"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 1000,
+      "scoreBias": 100
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 8
+    },
+    "privateMutations": {
+      "cutoff": 25,
+      "enabled": true,
+      "typical": 10,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}
