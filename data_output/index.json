@@ -2154,7 +2154,34 @@
           }
         ]
       },
-      "datasets": []
+      "datasets": [
+        {
+          "path": "community/dummy1",
+          "enabled": true,
+          "attributes": {
+            "name": "DUMMY",
+            "reference accession": "D1",
+            "reference name": "DUMMY/1"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        }
+      ]
     }
   ],
   "minimizerIndex": [

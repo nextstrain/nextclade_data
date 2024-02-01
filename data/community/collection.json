@@ -14,5 +14,7 @@
       }
     ]
   },
-  "dataset_order": []
+  "dataset_order": [
+    "community/dummy1"
+  ]
 }
