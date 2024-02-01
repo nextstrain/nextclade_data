@@ -1,8 +1,10 @@
+name: fork-forbid-code-changes
+
 on:
   pull_request:
 
 concurrency:
-  group: fork-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
+  group: fork-forbid-code-changes-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
   cancel-in-progress: true
 
 defaults:
@@ -20,7 +22,7 @@ jobs:
       name: ${{ github.ref }}
 
     steps:
-      # This fails if the PR contains changes to executable code
+      # This fails if the PR contains changes to executable code. Changes to data are allowed.
       - name: "Check for code changes"
         run: |
           if ! git --no-pager diff --exit-code --name-only origin/master origin/${GITHUB_HEAD_REF} -- . ':!data' ':!data_output'; then
