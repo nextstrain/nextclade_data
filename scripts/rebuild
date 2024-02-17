@@ -394,7 +394,7 @@ def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, coll
     if args.release:
       _, last_version = dataset_get_versions(dataset_from_index)
       release_info = prepare_dataset_release_info(
-        dataset_dir, dataset_from_index, dict_get(last_version, ["tag"]), updated_at
+        dataset_dir, dataset_from_index, dict_get(last_version, ["tag"]), tag
       )
       if release_info is None:
         continue
@@ -450,7 +450,7 @@ def publish_to_github_releases(args, tag, commit_hash, release_notes):
   )
 
 
-def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at):
+def prepare_dataset_release_info(dataset_dir, dataset, last_version, tag):
   # modified_files = list(git_get_modified_files(from_revision=last_version, dirs=dataset_dir))
   # modified_files = list(map(lambda f: realpath(f), modified_files))
 
@@ -468,7 +468,7 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
   #     f"Unreleased' section and briefly summarize the changes being released"
   #   )
 
-  release_notes = changelog_prepare(dataset, updated_at, changelog_path)
+  release_notes = changelog_prepare(dataset, tag, changelog_path)
 
   return {"dataset": dataset, "release_notes": release_notes, "dataset_dir": dataset_dir}
 

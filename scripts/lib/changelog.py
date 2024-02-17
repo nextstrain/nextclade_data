@@ -2,7 +2,7 @@ from .container import dict_get_required, dict_get
 from .fs import file_read, file_write
 
 
-def changelog_prepare(dataset, updated_at, changelog_path):
+def changelog_prepare(dataset, tag, changelog_path):
   path = dict_get(dataset, ["path"])
   name = dict_get(dataset, ["attributes", "name"])
   release_notes = changelog_get_unreleased_section(changelog_path)
@@ -11,7 +11,7 @@ def changelog_prepare(dataset, updated_at, changelog_path):
       f"Cannot release dataset '{path}' without changelog. Please modify file '{changelog_path}': add '## Unreleased' section and briefly summarize the changes being released"
     )
 
-  full_changelog = file_read(changelog_path).replace(f"## Unreleased", f"## {updated_at}")
+  full_changelog = file_read(changelog_path).replace(f"## Unreleased", f"## {tag}")
   file_write(full_changelog, changelog_path)
 
   # attr_table = format_dataset_attributes_md_table(dict_get_required(dataset, ["attributes"]))
