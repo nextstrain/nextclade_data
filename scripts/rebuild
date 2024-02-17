@@ -491,11 +491,11 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
     else:
       copy(inpath, outpath)
 
-  zip_basename = join(out_dir, "dataset")
-  make_zip(dataset_dir, zip_basename)
-
   path_safe = path.replace("/", "__")
-  copy(f"{zip_basename}.zip", join(args.temp_dir, f"{path_safe}__{tag}.zip"))
+  zip_basename = join(args.temp_dir, f"{path_safe}__{tag}")
+  make_zip(out_dir, zip_basename)
+
+  copy(f"{zip_basename}.zip", join(out_dir, f"dataset.zip"))
 
   not_found_json = {"status": 404, "message": "Not found"}
   json_write(not_found_json, join(args.output_dir, "404.json"))
