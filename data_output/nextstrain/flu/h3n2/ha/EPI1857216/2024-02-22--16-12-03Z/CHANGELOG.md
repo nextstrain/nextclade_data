@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-02-22T16:12:03Z
 
 After discussion with various members of the seasonal influenza virus surveillance community, it was decided that subclade names starting with `H` have the potential to be confused with major influenza hemagglutinin subtypes. These subclades where therefore renamed to start with the alias `J`.
 
