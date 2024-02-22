@@ -2212,8 +2212,8 @@
           "enabled": true,
           "attributes": {
             "name": "PRRSV-2 ORF5 Lineages, Yim-im & Zhang 2023 Microbiol Spectr",
-            "reference accession": "PRRSV0004437",
-            "reference name": "DQ478308.1"
+            "reference accession": "DQ478308.1",
+            "reference name": "PRRSV0004437"
           },
           "files": {
             "changelog": "CHANGELOG.md",
