@@ -4,8 +4,9 @@ import json
 import os
 import shutil
 from os import walk, listdir, makedirs
-from os.path import dirname, join, abspath, isdir, isfile, islink
+from os.path import dirname, join, abspath, isdir, isfile, islink, relpath
 from typing import List
+from repro_zipfile import ReproducibleZipFile
 
 
 def find_files(pattern, here):
@@ -75,9 +76,11 @@ def ensure_dir(file_path):
   mkdir(dir_path)
 
 
-def make_zip(input_dir, out_zip):
-  shutil.make_archive(
-    base_name=out_zip,
-    format='zip',
-    root_dir=input_dir,
-  )
+def make_zip(input_dir: str, output_zip: str):
+  with ReproducibleZipFile(output_zip, "w") as z:
+    for root, dirs, files in os.walk(input_dir):
+      for file in files:
+        if not file.endswith(".zip"):
+          filepath = join(root, file)
+          arcpath = relpath(filepath, input_dir)
+          z.write(filepath, arcpath)
