@@ -2,9 +2,9 @@
   "alignmentParams": {
     "excessBandwidth": 100,
     "terminalBandwidth": 300,
-    "allowedMismatches": 8,
+    "allowedMismatches": 10,
     "windowSize": 40,
-    "minSeedCover": 0.1,
+    "minSeedCover": 0.03,
     "gapAlignmentSide": "left"
   },
   "attributes": {
