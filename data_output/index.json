@@ -2191,6 +2191,48 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/ebola/zaire",
+          "enabled": true,
+          "attributes": {
+            "name": "Ebolavirus Zaire",
+            "reference accession": "NC_002549.1",
+            "reference name": "COD/1976/Yambuku-Mayinga"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },
