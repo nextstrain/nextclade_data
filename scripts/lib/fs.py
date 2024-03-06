@@ -3,9 +3,10 @@ import fnmatch
 import json
 import os
 import shutil
-from os import walk, listdir, makedirs
-from os.path import dirname, join, abspath, isdir, isfile, islink, relpath
+from os import listdir, makedirs, walk
+from os.path import abspath, dirname, isdir, isfile, islink, join, relpath
 from typing import List
+
 from repro_zipfile import ReproducibleZipFile
 
 
@@ -77,6 +78,8 @@ def ensure_dir(file_path):
 
 
 def make_zip(input_dir: str, output_zip: str):
+  os.makedirs(dirname(output_zip), exist_ok=True)
+
   with ReproducibleZipFile(output_zip, "w") as z:
     for root, dirs, files in os.walk(input_dir):
       for file in files:
