@@ -78,11 +78,11 @@ def ensure_dir(file_path):
 
 
 def make_zip(input_dir: str, output_zip: str):
-  os.makedirs(dirname(output_zip), exist_ok=True)
+  ensure_dir(output_zip)
 
   with ReproducibleZipFile(output_zip, "w") as z:
     for root, dirs, files in os.walk(input_dir):
-      for file in files:
+      for file in sorted(files):
         if not file.endswith(".zip"):
           filepath = join(root, file)
           arcpath = relpath(filepath, input_dir)
