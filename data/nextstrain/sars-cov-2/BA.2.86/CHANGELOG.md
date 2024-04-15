@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-04-15T15:08:22Z
 
 - Nextstrain clades 24A (JN.1) and 24B (JN.1.11.1) are now included.
 - All 83 Pango lineages designated between 2024-02-13 and 2024-04-12 are now included, unfold below to see a list of all newly included lineages with their designation dates:
