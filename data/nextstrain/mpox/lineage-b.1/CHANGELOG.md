@@ -1,3 +1,8 @@
+## Unreleased
+
+- New hMPXV-1 lineages B.1.21, B.1.22, and C.1.1 are now included in the dataset. For more information on these lineages, see the [hMPXV-1 lineage definitions PR](https://github.com/mpxv-lineages/lineage-designation/pull/37)
+- The sequences used in the reference trees have been updated to include the latest sequences available in Genbank as of 2024-04-16
+
 ## 2024-01-16T20:31:02Z
 
 Initial release of this dataset. This dataset is similar to the v2 dataset [`hMPXV_B.1/pseudo_ON563414`](https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets/hMPXV_B.1/references/pseudo_ON563414/versions/2023-08-01T12%3A00%3A00Z/files) with some differences.
