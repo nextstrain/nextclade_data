@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-04-19T07:50:39Z
 
  - aliasing of C.1.1.1 as D
  - addition of subclades D.1 - D.4: [D.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.1.yml), [D.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.2.yml), [D.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.3.yml), [D.4](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.4.yml)
