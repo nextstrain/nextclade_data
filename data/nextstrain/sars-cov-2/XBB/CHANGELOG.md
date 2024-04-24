@@ -1,3 +1,7 @@
+## Unreleased
+
+- fix: Increase Nextclade alignment parameter "excessBandwidth" from 9 to 12 to correctly align complex series of indels that has arisen in Spike NTD with the occurrence of S:31- in some JN.1. The bandwidth is chosen to be as small as possible (to ensure fast runtime) but as large as necessary for correct alignment. As a result, occasional adjustments like here are required. Nothing else is changed in this SARS-CoV-2 dataset update.
+
 ## 2024-04-15T15:08:22Z
 
 - Nextstrain clades 24A (JN.1) and 24B (JN.1.11.1) are now included.

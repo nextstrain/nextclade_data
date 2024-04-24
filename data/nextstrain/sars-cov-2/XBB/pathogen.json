@@ -1,6 +1,6 @@
 {
   "alignmentParams": {
-    "excessBandwidth": 9,
+    "excessBandwidth": 12,
     "terminalBandwidth": 100,
     "allowedMismatches": 4,
     "gapAlignmentSide": "right",
