@@ -41,6 +41,7 @@
   "deprecated": false,
   "enabled": true,
   "experimental": true,
+  "defaultCds": "RT-p66",
   "files": {
     "pathogenJson": "pathogen.json",
     "changelog": "CHANGELOG.md",
