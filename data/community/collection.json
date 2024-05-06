@@ -16,6 +16,7 @@
   },
   "dataset_order": [
     "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
-    "community/neherlab/hiv-1"
+    "community/neherlab/hiv-1",
+    "community/neherlab/hiv-1/hxb2"
   ]
 }

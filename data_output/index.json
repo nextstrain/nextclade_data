@@ -2432,7 +2432,7 @@
           }
         },
         {
-          "path": "community/neherlab/hiv-1",
+          "path": "community/neherlab/hiv-1/hxb2",
           "enabled": true,
           "attributes": {
             "name": "HIV-1 (HXB2)",
