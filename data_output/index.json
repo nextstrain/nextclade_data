@@ -2433,6 +2433,10 @@
         },
         {
           "path": "community/neherlab/hiv-1/hxb2",
+          "shortcuts": [
+            "hiv-1",
+            "neherlab/hiv-1"
+          ],
           "enabled": true,
           "attributes": {
             "name": "HIV-1 (HXB2)",
