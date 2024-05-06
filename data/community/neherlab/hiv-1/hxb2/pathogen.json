@@ -70,10 +70,10 @@
     "attributes": {
       "name": "HIV-1 (HXB2)",
       "reference accession": "NC_001802",
-      "reference name": "HIV-1, strain HXB2"
+      "reference name": "HIV-1, strain HXB2",
+      "experimental": true
     },
     "shortcuts": [
-      "hiv-1",
       "neherlab/hiv-1"
     ]
 }
