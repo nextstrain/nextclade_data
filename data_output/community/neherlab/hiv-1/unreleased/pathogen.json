@@ -40,7 +40,7 @@
   ],
   "deprecated": false,
   "enabled": true,
-  "experimental": false,
+  "experimental": true,
   "files": {
     "pathogenJson": "pathogen.json",
     "changelog": "CHANGELOG.md",
@@ -85,6 +85,11 @@
     }
   },
   "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "HIV-1 (HXB2)",
+    "reference accession": "NC_001802",
+    "reference name": "HIV-1, strain HXB2"
+  },
   "version": {
     "tag": "unreleased",
     "compatibility": {
