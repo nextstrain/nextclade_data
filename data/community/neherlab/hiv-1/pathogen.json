@@ -25,7 +25,7 @@
     ],
     "deprecated": false,
     "enabled": true,
-    "experimental": false,
+    "experimental": true,
     "files": {
         "pathogenJson": "pathogen.json",
         "changelog": "CHANGELOG.md",
