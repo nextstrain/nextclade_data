@@ -5,7 +5,7 @@
 | authors                | [Richard Neher (U Basel)](https://neherlab.org), [Thomas Leitner (LANL)](https://public.lanl.gov/tkl/)              |
 | data source            | LANL database and Genbank                                                                                           |
 | workflow               | [github.com/neherlab/HIV-nextclade](https://github.com/neherlab/HIV-nextclade)                                      |
-| nextclade dataset path | neherlab/HIV-1                                                                                                      |
+| nextclade dataset path | neherlab/hiv-1                                                                                                      |
 | reference              | [NC_001802](https://www.ncbi.nlm.nih.gov/nuccore/NC_001802)                                                         |
 
 This Nextclade data set aligns sequences to the HXB2 reference and finds the closest match in a reference tree build from the [2021 Super filtered Alignment](https://www.hiv.lanl.gov/content/sequence/NEWALIGN/help.html#filter) provided by LANL.
