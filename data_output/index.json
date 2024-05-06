@@ -2432,8 +2432,17 @@
           }
         },
         {
-          "path": "community/neherlab/hiv-1",
+          "path": "community/neherlab/hiv-1/hxb2",
+          "shortcuts": [
+            "neherlab/hiv-1"
+          ],
           "enabled": true,
+          "attributes": {
+            "name": "HIV-1 (HXB2)",
+            "reference accession": "NC_001802",
+            "reference name": "HIV-1, strain HXB2",
+            "experimental": true
+          },
           "files": {
             "pathogenJson": "pathogen.json",
             "changelog": "CHANGELOG.md",
