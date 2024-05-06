@@ -71,5 +71,9 @@
       "name": "HIV-1 (HXB2)",
       "reference accession": "NC_001802",
       "reference name": "HIV-1, strain HXB2"
-    }
-  }
+    },
+    "shortcuts": [
+      "hiv-1",
+      "neherlab/hiv-1"
+    ]
+}
