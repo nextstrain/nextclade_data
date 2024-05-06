@@ -66,5 +66,10 @@
         "scoreWeight": 40
       }
     },
-    "schemaVersion": "3.0.0"
+    "schemaVersion": "3.0.0",
+    "attributes": {
+      "name": "HIV-1 (HXB2)",
+      "reference accession": "NC_001802",
+      "reference name": "HIV-1, strain HXB2"
+    }
   }
