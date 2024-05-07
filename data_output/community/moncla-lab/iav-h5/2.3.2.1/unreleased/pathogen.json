@@ -8,8 +8,9 @@
   },
   "attributes": {
     "name": "H5Nx clade 2.3.2.1",
-    "refAccession": "EPI424984",
-    "refName": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
+    "reference accession": "EPI424984",
+    "reference name": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
+    "segment": "ha",
     "experimental": true
   },
   "compatibility": {

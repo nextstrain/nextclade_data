@@ -8,8 +8,9 @@
   },
   "attributes": {
     "name": "H5Nx (all clades)",
-    "refAccession": "AF144305.1",
-    "refName": "A/Goose/Guangdong/1/96(H5N1)",
+    "reference accession": "AF144305.1",
+    "reference name": "A/Goose/Guangdong/1/96(H5N1)",
+    "segment": "ha",
     "experimental": true
   },
   "compatibility": {

@@ -2483,8 +2483,9 @@
           "enabled": true,
           "attributes": {
             "name": "H5Nx (all clades)",
-            "refAccession": "AF144305.1",
-            "refName": "A/Goose/Guangdong/1/96(H5N1)",
+            "reference accession": "AF144305.1",
+            "reference name": "A/Goose/Guangdong/1/96(H5N1)",
+            "segment": "ha",
             "experimental": true
           },
           "files": {
@@ -2529,8 +2530,9 @@
           "enabled": true,
           "attributes": {
             "name": "H5Nx clade 2.3.4.4",
-            "refAccession": "EPI1846961",
-            "refName": "A/Astrakhan/3212/2020(H5N8)",
+            "reference accession": "EPI1846961",
+            "reference name": "A/Astrakhan/3212/2020(H5N8)",
+            "segment": "ha",
             "experimental": true
           },
           "files": {
@@ -2575,8 +2577,9 @@
           "enabled": true,
           "attributes": {
             "name": "H5Nx clade 2.3.2.1",
-            "refAccession": "EPI424984",
-            "refName": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
+            "reference accession": "EPI424984",
+            "reference name": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
+            "segment": "ha",
             "experimental": true
           },
           "files": {
