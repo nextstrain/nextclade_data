@@ -55,6 +55,7 @@
     "nextstrain/ebola/zaire",
     "nextstrain/ebola/sudan",
     "nextstrain/wnv/lineage-2",
-    "nextstrain/wnv/lineage-1"
+    "nextstrain/wnv/lineage-1",
+    "nextstrain/wnv/all-lineages"
   ]
 }
