@@ -51,6 +51,11 @@
     "nextstrain/flu/h3n2/pa",
     "nextstrain/flu/h1n1pdm/pb2",
     "nextstrain/flu/h1n1pdm/pb1",
-    "nextstrain/flu/h3n2/pb2"
+    "nextstrain/flu/h3n2/pb2",
+    "nextstrain/ebola/zaire",
+    "nextstrain/ebola/sudan",
+    "nextstrain/wnv/lineage-2",
+    "nextstrain/wnv/lineage-1",
+    "nextstrain/wnv/all-lineages"
   ]
 }

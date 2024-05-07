@@ -2359,6 +2359,137 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/wnv/lineage-2",
+          "enabled": true,
+          "attributes": {
+            "name": "West Nile Virus Lineage 2",
+            "reference accession": "NC_001563.2"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/wnv/lineage-1",
+          "enabled": true,
+          "attributes": {
+            "name": "West Nile Virus Lineage 1",
+            "reference accession": "NC_009942.1",
+            "reference name": "NY99"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/wnv/all-lineages",
+          "shortcuts": [
+            "wnv",
+            "west-nile",
+            "west-nile-virus"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "West Nile Virus",
+            "reference accession": "NC_009942.1",
+            "reference name": "Strain NY99 (lineage 1A)"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },

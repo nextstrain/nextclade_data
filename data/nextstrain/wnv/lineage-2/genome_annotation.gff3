@@ -1,0 +1,23 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_001563.2 1 10962
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11082
+NC_001563.2	RefSeq	region	1	10962	.	+	.	ID=NC_001563.2:1..10962;Dbxref=taxon:11082;clone=33/G8%3B 34/F6;gb-acronym=WNV;gbkey=Src;genome=genomic;mol_type=genomic RNA;note=lineage 2;strain=956
+NC_001563.2	RefSeq	five_prime_UTR	1	96	.	+	.	ID=id-NC_001563.2:1..96;gbkey=5'UTR
+NC_001563.2	RefSeq	gene	97	10389	.	+	.	ID=gene-WNVgp1;Dbxref=GeneID:912267;Name=POLY;gbkey=Gene;gene=POLY;gene_biotype=protein_coding;locus_tag=WNVgp1
+NC_001563.2	RefSeq	CDS	97	465	.	+	.	gene=ancC;ID=id-NP_041724.2:1..123;Parent=gene-WNVgp1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=NP_776011.1
+NC_001563.2	RefSeq	CDS	466	741	.	+	.	gene=pr;ID=id-NP_041724.2:124..215;Parent=gene-WNVgp1;gbkey=Prot;product=protein pr;protein_id=YP_009164951.1
+NC_001563.2	RefSeq	CDS	742	966	.	+	.	gene=M;ID=id-NP_041724.2:216..290;Note=matrix protein;Parent=gene-WNVgp1;gbkey=Prot;product=membrane glycoprotein M;protein_id=NP_776013.1
+NC_001563.2	RefSeq	CDS	967	2457	.	+	.	gene=E;ID=id-NP_041724.2:291..787;Parent=gene-WNVgp1;gbkey=Prot;product=envelope protein E;protein_id=NP_776014.1
+NC_001563.2	RefSeq	CDS	2458	3513	.	+	.	gene=NS1;ID=id-NP_041724.2:788..1139;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS1;protein_id=NP_776015.1
+NC_001563.2	RefSeq	CDS	2458	3540	.	+	.	gene=NS1prime;ID=id-YP_009164950.1:788..1191;Note=NS1'%3B transframe fusion protein expressed via programmed ribosomal frameshifting%3B when frameshifting occurs%2C cleavage between NS1 and NS2A fails to occur;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS1 prime;protein_id=YP_009164952.1
+NC_001563.2	RefSeq	CDS	3540	3668	.	+	.	gene=NS1prime;ID=id-YP_009164950.1:788..1191;Note=NS1'%3B transframe fusion protein expressed via programmed ribosomal frameshifting%3B when frameshifting occurs%2C cleavage between NS1 and NS2A fails to occur;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS1 prime;protein_id=YP_009164952.1
+NC_001563.2	RefSeq	CDS	3514	4206	.	+	.	gene=NS2A;ID=id-NP_041724.2:1140..1370;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS2A;protein_id=NP_776016.1
+NC_001563.2	RefSeq	CDS	4207	4599	.	+	.	gene=NS2B;ID=id-NP_041724.2:1371..1501;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS2B;protein_id=NP_776017.1
+NC_001563.2	RefSeq	CDS	4600	6456	.	+	.	gene=NS3;ID=id-NP_041724.2:1502..2120;Note=protease%3B nucleotide triphosphatase%3B RNA triphosphatase%3B RNA helicase;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS3;protein_id=NP_776018.1
+NC_001563.2	RefSeq	CDS	6457	6834	.	+	.	gene=NS4A;ID=id-NP_041724.2:2121..2246;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS4A;protein_id=NP_776019.1
+NC_001563.2	RefSeq	CDS	6835	6903	.	+	.	gene=2K;ID=id-NP_041724.2:2247..2269;Parent=gene-WNVgp1;gbkey=Prot;product=protein 2K;protein_id=NP_776020.1
+NC_001563.2	RefSeq	CDS	6904	7671	.	+	.	gene=ID=id-NP_041724.2:2270..2525;Parent=gene-WNVgp1;gbkey=Prot;product=nonstructural protein NS4B;protein_id=NP_776021.1
+NC_001563.2	RefSeq	CDS	7672	10386	.	+	.	gene=NS5;ID=id-NP_041724.2:2526..3430;Note=nonstructural protein NS5%3B RNA-dependent RNA polymerase%3B methyltransferase component of capping enzyme;Parent=gene-WNVgp1;gbkey=Prot;product=RNA-dependent RNA polymerase NS5;protein_id=NP_776022.1
+NC_001563.2	RefSeq	three_prime_UTR	10390	10962	.	+	.	ID=id-NC_001563.2:10390..10962;gbkey=3'UTR
