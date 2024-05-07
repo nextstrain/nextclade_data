@@ -2477,6 +2477,144 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "community/moncla-lab/iav-h5/all-clades",
+          "enabled": true,
+          "attributes": {
+            "name": "H5Nx (all clades)",
+            "refAccession": "AF144305.1",
+            "refName": "A/Goose/Guangdong/1/96(H5N1)",
+            "experimental": true
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/moncla-lab/iav-h5/2.3.4.4",
+          "enabled": true,
+          "attributes": {
+            "name": "H5Nx clade 2.3.4.4",
+            "refAccession": "EPI1846961",
+            "refName": "A/Astrakhan/3212/2020(H5N8)",
+            "experimental": true
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/moncla-lab/iav-h5/2.3.2.1",
+          "enabled": true,
+          "attributes": {
+            "name": "H5Nx clade 2.3.2.1",
+            "refAccession": "EPI424984",
+            "refName": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
+            "experimental": true
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     }

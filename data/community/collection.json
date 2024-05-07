@@ -17,6 +17,9 @@
   "dataset_order": [
     "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
     "community/neherlab/hiv-1",
-    "community/neherlab/hiv-1/hxb2"
+    "community/neherlab/hiv-1/hxb2",
+    "community/moncla-lab/iav-h5/all-clades",
+    "community/moncla-lab/iav-h5/2.3.4.4",
+    "community/moncla-lab/iav-h5/2.3.2.1"
   ]
 }
