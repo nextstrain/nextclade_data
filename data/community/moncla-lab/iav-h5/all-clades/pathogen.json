@@ -1,0 +1,114 @@
+{
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "right",
+    "minSeedCover": 0.05
+  },
+  "attributes": {
+    "name": "H5Nx (all clades)",
+    "refAccession": "AF144305.1",
+    "refName": "A/Goose/Guangdong/1/96(H5N1)",
+    "experimental": true 
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "HA",
+  "deprecated": false,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json",
+    "examples": "example_sequences.fasta"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 100,
+      "scoreBias": 10
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "privateMutations": {
+      "cutoff": 95,
+      "enabled": true,
+      "typical": 19
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
+      "includeCdses": [
+        {
+          "cds":"HA",
+          "ranges":[{"begin":0, "end":533}]
+        }
+      ],
+      "motifs": [
+        "N[^P][ST]"
+      ]
+    },
+    {
+      "name": "cleavage_site",
+      "nameShort": "CS",
+      "nameFriendly": "CleavageSite",
+      "description": "Cleavage site of HA",
+      "includeCdses": [
+        {
+          "cds":"HA",
+          "ranges":[{"begin":340, "end":346}]
+        }
+      ],
+      "motifs": [
+        "[A-Z-]{6}"
+      ]
+    },
+    {
+      "name": "polybasic_cleavage_site",
+      "nameShort": "PBCS",
+      "nameFriendly": "PolybasicCleavageSite",
+      "description": "Polybasic cleavage site of HA",
+      "includeCdses": [
+        {
+          "cds":"HA",
+          "ranges":[{"begin":340, "end":346}]
+        }
+      ],
+      "motifs": [
+        "^([A-Z-]*[RK][A-Z-]*){4}$"
+      ]
+    }
+  ],
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}
