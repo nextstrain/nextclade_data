@@ -86621,17 +86621,17 @@
       "nMinimizers": 44
     },
     {
-      "name": "community/moncla-lab/iav-h5/2.3.2.1",
+      "name": "community/moncla-lab/iav-h5/ha/2.3.2.1",
       "length": 1704,
       "nMinimizers": 94
     },
     {
-      "name": "community/moncla-lab/iav-h5/2.3.4.4",
+      "name": "community/moncla-lab/iav-h5/ha/2.3.4.4",
       "length": 1704,
       "nMinimizers": 118
     },
     {
-      "name": "community/moncla-lab/iav-h5/all-clades",
+      "name": "community/moncla-lab/iav-h5/ha/all-clades",
       "length": 1760,
       "nMinimizers": 116
     },
