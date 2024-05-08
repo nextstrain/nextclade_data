@@ -1,3 +1,0 @@
-##gff-version 3
-##sequence-region EPI424984 1 1704
-EPI424984	feature	gene	1	1704	.	+	.	gene_name="HA"
