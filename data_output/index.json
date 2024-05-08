@@ -2463,7 +2463,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -2471,7 +2472,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-05-08T11:39:52Z",
+            "tag": "2024-05-08--11-39-52Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2510,7 +2512,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -2518,7 +2521,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-05-08T11:39:52Z",
+            "tag": "2024-05-08--11-39-52Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2557,7 +2561,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -2565,7 +2570,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-05-08T11:39:52Z",
+            "tag": "2024-05-08--11-39-52Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2604,7 +2610,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -2612,7 +2619,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-05-08T11:39:52Z",
+            "tag": "2024-05-08--11-39-52Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"

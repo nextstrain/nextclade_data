@@ -1,0 +1,106 @@
+{
+  "alignmentParams": {
+    "penaltyGapOpen": 8,
+    "penaltyGapOpenInFrame": 12,
+    "penaltyGapOpenOutOfFrame": 14,
+    "gapAlignmentSide": "left",
+    "excessBandwidth": 50,
+    "terminalBandwidth": 50,
+    "kmerLength": 10,
+    "kmerDistance": 50,
+    "minMatchLength": 40,
+    "allowedMismatches": 8,
+    "windowSize": 30
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "placementMaskRanges": [
+    {
+      "begin": 0,
+      "end": 336
+    },
+    {
+      "begin": 5780,
+      "end": 5870
+    },
+    {
+      "begin": 6160,
+      "end": 6240
+    },
+    {
+      "begin": 6940,
+      "end": 7020
+    },
+    {
+      "begin": 8963,
+      "end": 9181
+    }
+  ],
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "defaultCds": "RT-p66",
+  "files": {
+    "pathogenJson": "pathogen.json",
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "official": true,
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 40
+    },
+    "privateMutations": {
+      "cutoff": 700,
+      "enabled": true,
+      "typical": 600,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+        {
+          "cdsName": "p6",
+          "codon": 49
+        }
+      ],
+      "scoreWeight": 40
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "HIV-1 (HXB2)",
+    "reference accession": "NC_001802",
+    "reference name": "HIV-1, strain HXB2",
+    "experimental": true
+  },
+  "shortcuts": [
+    "neherlab/hiv-1"
+  ],
+  "version": {
+    "updatedAt": "2024-05-08T11:39:52Z",
+    "tag": "2024-05-08--11-39-52Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}

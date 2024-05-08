@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-05-08T11:39:52Z
 
 Initial release for Nextclade v3!
 
