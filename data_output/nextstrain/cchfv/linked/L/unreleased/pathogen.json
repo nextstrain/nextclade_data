@@ -1,0 +1,15 @@
+{
+  "files": {
+    "reference": "reference_L.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "CCHF_notreeknit_L.json",
+    "examples": "selected_sequences_S.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}

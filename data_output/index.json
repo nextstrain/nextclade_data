@@ -2359,6 +2359,69 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/cchfv/linked/S",
+          "enabled": true,
+          "files": {
+            "reference": "reference_S.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "CCHF_notreeknit_S.json",
+            "examples": "selected_sequences_S.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "nextstrain/cchfv/linked/M",
+          "enabled": true,
+          "files": {
+            "reference": "reference_M.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "CCHF_notreeknit_M.json",
+            "examples": "selected_sequences_M.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "nextstrain/cchfv/linked/L",
+          "enabled": true,
+          "files": {
+            "reference": "reference_L.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "CCHF_notreeknit_L.json",
+            "examples": "selected_sequences_S.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
         }
       ]
     },
