@@ -24,14 +24,22 @@ from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 
 
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
-  reference_fasta_path = join(dataset_dir, "reference.fasta")
-  if not isfile(reference_fasta_path):
-    raise FileNotFoundError(f"Reference sequence must be present, but not found: {reference_fasta_path}")
+  ref_filename = dict_get(pathogen_json, ["files", "reference"])
+  if not ref_filename:
+    raise FileNotFoundError(f"Reference sequence file must be declared `.files.reference` field of pathogen.json")
+
+  files = dict_get_required(pathogen_json, ["files"])
+  for (name, filename) in files.items():
+    filepath = join(dataset_dir, filename)
+    if not isfile(filepath):
+      raise FileNotFoundError(
+        f"'Filename '{filename}' is declared in `.files.{name}` field of pathogen.json, but the actual file is not found: '{filepath}'")
 
   other = []
-  tree_json_path = join(dataset_dir, "tree.json")
-  has_tree_json = isfile(join(dataset_dir, "tree.json"))
-  if has_tree_json:
+
+  tree_filename = dict_get(pathogen_json, ["files", "tree"])
+  tree_json_path = join(dataset_dir, tree_filename) if tree_filename else None
+  if tree_json_path is not None and isfile(tree_json_path):
     tree_json = json_read(tree_json_path)
     if dict_get(tree_json, ["extensions", "nextclade", "clade_node_attrs"]) is not None:
       other.append("customClades")
@@ -481,7 +489,7 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
   for _, file in files.items():
     inpath = join(dataset_dir, file)
     outpath = join(out_dir, file)
-    if file == "tree.json":
+    if file == dict_get(files, ["tree"]):
       # Minify tree.json
       json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
     elif file == "pathogen.json":
