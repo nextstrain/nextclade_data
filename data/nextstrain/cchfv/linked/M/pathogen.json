@@ -4,7 +4,7 @@
         "pathogenJson": "pathogen.json",
         "genomeAnnotation": "genome_annotation.gff3",
         "treeJson": "CCHF_notreeknit_M.json",
-        "examples": "sequences_M.fasta",
+        "examples": "selected_sequences_M.fasta",
         "readme": "README.md",
         "changelog": "CHANGELOG.md"
     },
