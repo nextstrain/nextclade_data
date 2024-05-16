@@ -202,7 +202,7 @@ nextclade run \
 
 This runs Nextclade on the example sequences in `minimal-dataset/sequences.fasta` using the dataset in `minimal-dataset`. The results are saved to the `tmp` directory and contain alignment, aligned translations and a summary TSV file.
 
-One can also use the dataset in Nextclade Web by hosting the dataset through a local web server. For example, after having installed `node` and run `npm -g serve`, one can host the dataset via:
+One can also use the dataset in Nextclade Web by hosting the dataset through a local web server. For example, after having installed `node` and run `npm install -g serve`, one can host the dataset via:
 
 ```sh
 serve --cors minimal-dataset -l 3000
