@@ -1,0 +1,65 @@
+{
+  "alignmentParams": {
+    "minSeedCover": 0.1,
+    "minLength": 1000
+  },
+  "attributes": {
+    "name": "Dengue virus DENV1 dataset",
+    "reference accession": "NC_001477",
+    "reference name": "NC_001477"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": false
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 1000,
+      "scoreBias": 100
+    },
+    "mixedSites": {
+      "enabled": false,
+      "mixedSitesThreshold": 8
+    },
+    "privateMutations": {
+      "cutoff": 25,
+      "enabled": false,
+      "typical": 10,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": false
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  }
+}

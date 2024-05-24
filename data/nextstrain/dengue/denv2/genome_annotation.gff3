@@ -1,0 +1,14 @@
+##gff-version 3
+##sequence-region NC_001474.2 1 10723
+NC_001474.2	feature	gene	97	438	.	+	.	codon_start=1;gene=C;gene_name=C;
+NC_001474.2	feature	gene	439	711	.	+	.	codon_start=1;gene=pr;gene_name=pr;
+NC_001474.2	feature	gene	439	936	.	+	.	codon_start=1;gene=M;gene_name=M;
+NC_001474.2	feature	gene	937	2421	.	+	.	codon_start=1;gene=E;gene_name=E;
+NC_001474.2	feature	gene	2422	3477	.	+	.	codon_start=1;gene=NS1;gene_name=NS1;
+NC_001474.2	feature	gene	3478	4131	.	+	.	codon_start=1;gene=NS2A;gene_name=NS2A;
+NC_001474.2	feature	gene	4132	4521	.	+	.	codon_start=1;gene=NS2B;gene_name=NS2B;
+NC_001474.2	feature	gene	4522	6375	.	+	.	codon_start=1;gene=NS3;gene_name=NS3;
+NC_001474.2	feature	gene	6376	6756	.	+	.	codon_start=1;gene=NS4A;gene_name=NS4A;
+NC_001474.2	feature	gene	6757	6825	.	+	.	codon_start=1;gene=2K;gene_name=2K;
+NC_001474.2	feature	gene	6826	7569	.	+	.	codon_start=1;gene=NS4B;gene_name=NS4B;
+NC_001474.2	feature	gene	7570	10269	.	+	.	codon_start=1;gene=NS5;gene_name=NS5;
