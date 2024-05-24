@@ -2,10 +2,11 @@
 
 | Key               | Value                                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | Measles N450 (WHO-2012)    
 | authors           | [Nextstrain](https://nextstrain.org)                                            |
 | reference         | NC_001498.1                                                                                                                        |
 | workflow          | https://github.com/nextstrain/measles/tree/main/nextclade                                                                                     |
-| path              | `nextstrain/measles`                                                                                                                                  |
+| path              | `nextstrain/measles/N450/WHO-2012`                                                                                                                                  |
 
 
 ## Scope of this dataset
