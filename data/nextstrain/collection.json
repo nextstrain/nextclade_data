@@ -52,8 +52,6 @@
     "nextstrain/flu/h1n1pdm/pb2",
     "nextstrain/flu/h1n1pdm/pb1",
     "nextstrain/flu/h3n2/pb2",
-    "nextstrain/cchfv/linked/S",
-    "nextstrain/cchfv/linked/M",
-    "nextstrain/cchfv/linked/L"
+    "nextstrain/measles"
   ]
 }
