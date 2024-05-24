@@ -2359,6 +2359,42 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/measles",
+          "enabled": true,
+          "attributes": {
+            "name": "Measles (N450)",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498.1"
+          },
+          "files": {
+            "reference": "measles_reference_N450.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "measles_reference_N450.gff3",
+            "treeJson": "measles_nextclade.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
         }
       ]
     },
