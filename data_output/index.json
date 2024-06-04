@@ -2378,6 +2378,7 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
+            "clades": 25,
             "qc": [
               "missingData",
               "mixedSites",
