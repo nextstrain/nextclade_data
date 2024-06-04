@@ -86839,7 +86839,7 @@
       "nMinimizers": 111
     },
     {
-      "name": "nextstrain/measles",
+      "name": "nextstrain/measles/N450/WHO-2012",
       "length": 450,
       "nMinimizers": 31
     },
