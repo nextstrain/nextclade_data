@@ -308,9 +308,6 @@ def dataset_has_changes(dataset_from_index, dataset_dir):
   _, last_version = dataset_get_versions(dataset_from_index)
   modified_files = list(git_get_modified_files(from_revision=dict_get(last_version, ["tag"]), dirs=dataset_dir))
 
-  # HACK: this is temporary hack to ignore version removal from pathogen.json. Remove this after a release!
-  modified_files = filter(lambda f: not f.endswith("/pathogen.json"), modified_files)
-
   modified_files = list(map(lambda f: realpath(f), modified_files))
   return len(modified_files) > 0
 
