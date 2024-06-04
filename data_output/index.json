@@ -71,6 +71,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 43,
+            "customClades": {
+              "Nextclade_pango": 2969,
+              "partiallyAliased": 2969,
+              "clade_nextstrain": 43,
+              "clade_who": 13,
+              "clade_display": 43
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -168,6 +176,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 43,
+            "customClades": {
+              "Nextclade_pango": 2969,
+              "partiallyAliased": 2969,
+              "clade_nextstrain": 43,
+              "clade_who": 13,
+              "clade_display": 43
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -267,6 +283,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 20,
+            "customClades": {
+              "Nextclade_pango": 2232,
+              "partiallyAliased": 2232,
+              "clade_nextstrain": 20,
+              "clade_who": 4,
+              "clade_display": 20
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -364,6 +388,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 20,
+            "customClades": {
+              "Nextclade_pango": 2232,
+              "partiallyAliased": 2232,
+              "clade_nextstrain": 20,
+              "clade_who": 4,
+              "clade_display": 20
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -461,6 +493,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 20,
+            "customClades": {
+              "Nextclade_pango": 2232,
+              "partiallyAliased": 2232,
+              "clade_nextstrain": 20,
+              "clade_who": 4,
+              "clade_display": 20
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -561,6 +601,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 21,
+            "customClades": {
+              "short-clade": 15,
+              "subclade": 21
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -644,6 +689,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 16,
+            "customClades": {
+              "short-clade": 13,
+              "subclade": 21
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -726,6 +776,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 23,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -807,6 +858,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 37,
+            "customClades": {
+              "subclade": 42,
+              "short-clade": 37
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -898,6 +954,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 30,
+            "customClades": {
+              "subclade": 36,
+              "short-clade": 30
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -989,6 +1050,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 17,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1072,6 +1134,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 8,
+            "customClades": {
+              "subclade": 22
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1154,6 +1220,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 19,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1237,6 +1304,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 3,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1318,6 +1386,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 24,
+            "customClades": {
+              "G_clade": 15
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1396,6 +1468,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 17,
+            "customClades": {
+              "G_clade": 9
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1452,6 +1528,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 5,
+            "customClades": {
+              "outbreak": 1,
+              "lineage": 33
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -1508,6 +1589,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 2,
+            "customClades": {
+              "outbreak": 1,
+              "lineage": 33
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -1565,6 +1651,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 2,
+            "customClades": {
+              "outbreak": 1,
+              "lineage": 25
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -2469,6 +2560,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 33,
             "qc": [
               "frameShifts",
               "mixedSites",
@@ -2525,6 +2617,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 100,
             "qc": [
               "frameShifts",
               "missingData",
@@ -2572,6 +2665,7 @@
             "examples": "example_sequences.fasta"
           },
           "capabilities": {
+            "clades": 11,
             "qc": [
               "frameShifts",
               "mixedSites",
@@ -2621,6 +2715,7 @@
             "examples": "example_sequences.fasta"
           },
           "capabilities": {
+            "clades": 57,
             "qc": [
               "frameShifts",
               "mixedSites",
@@ -2670,6 +2765,7 @@
             "examples": "example_sequences.fasta"
           },
           "capabilities": {
+            "clades": 10,
             "qc": [
               "frameShifts",
               "mixedSites",
