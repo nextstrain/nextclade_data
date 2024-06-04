@@ -126,7 +126,7 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
   path = relpath(dataset_dir, args.input_dir)
 
   ref = get_ref_seq(pathogen_json, dataset_dir)
-  check_ref_seq_mismatch(ref, pathogen_json, dataset_dir)
+  check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
 
   versions, last_version = dataset_get_versions(dataset)
 
@@ -164,7 +164,7 @@ def get_ref_seq(pathogen_json, dataset_dir):
     raise ValueError(f"When reading reference sequence") from e
 
 
-def check_ref_seq_mismatch(standalone_ref, pathogen_json, dataset_dir):
+def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir):
   tree_filename = dict_get(pathogen_json, ["files", "treeJson"])
   tree_json_path = join(dataset_dir, tree_filename) if tree_filename else None
   if tree_json_path is not None and isfile(tree_json_path):
@@ -172,9 +172,9 @@ def check_ref_seq_mismatch(standalone_ref, pathogen_json, dataset_dir):
     tree_ref = dict_get(tree_json, ["root_sequence", "nuc"])
     if tree_ref is not None:
       if standalone_ref.seq != tree_ref:
-        l.warn(
-          "Reference sequence provided does not exactly match reference (root) sequence in Auspice JSON. This warning "
-          "signals that there is a potential for failures if the mismatch is not intended."
+        l.warning(
+          f"{path}: Reference sequence provided does not exactly match reference (root) sequence in Auspice JSON. "
+          f"This warning signals that there is a potential for failures if the mismatch is not intended."
         )
 
 
