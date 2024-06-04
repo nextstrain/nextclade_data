@@ -1,5 +1,9 @@
 {
   "alignmentParams": {
+    "penaltyGapOpen": 8,
+    "penaltyGapOpenInFrame": 12,
+    "penaltyGapOpenOutOfFrame": 14,
+    "gapAlignmentSide": "left",
     "minSeedCover": 0.1,
     "minLength": 1000
   },
@@ -17,6 +21,7 @@
   "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
@@ -29,7 +34,7 @@
   },
   "qc": {
     "frameShifts": {
-      "enabled": false
+      "enabled": true
     },
     "missingData": {
       "enabled": false,
@@ -55,7 +60,7 @@
       "windowSize": 100
     },
     "stopCodons": {
-      "enabled": false
+      "enabled": true
     }
   },
   "schemaVersion": "3.0.0",
