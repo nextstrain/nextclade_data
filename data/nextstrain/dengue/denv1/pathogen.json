@@ -8,7 +8,7 @@
     "minLength": 1000
   },
   "attributes": {
-    "name": "Dengue virus DENV1 dataset",
+    "name": "Dengue virus DENV1",
     "reference accession": "NC_001477",
     "reference name": "NC_001477"
   },
