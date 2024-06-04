@@ -13,7 +13,7 @@ from os.path import dirname, realpath, join, relpath, isfile
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
-  dict_remove_many, find_duplicates, dict_cleanup, find
+  dict_remove_many, find_duplicates, dict_cleanup, find, unique
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -33,16 +33,19 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
     filepath = join(dataset_dir, filename)
     if not isfile(filepath):
       raise FileNotFoundError(
-        f"'Filename '{filename}' is declared in `.files.{name}` field of pathogen.json, but the actual file is not found: '{filepath}'")
+        f"'Filename '{filename}' is declared in `.files.{name}` field of pathogen.json, but the actual file is not "
+        f"found: '{filepath}'")
 
   other = []
 
-  tree_filename = dict_get(pathogen_json, ["files", "tree"])
+  tree_filename = dict_get(pathogen_json, ["files", "treeJson"])
   tree_json_path = join(dataset_dir, tree_filename) if tree_filename else None
+  clades = []
+  custom_clades = {}
   if tree_json_path is not None and isfile(tree_json_path):
     tree_json = json_read(tree_json_path)
-    if dict_get(tree_json, ["extensions", "nextclade", "clade_node_attrs"]) is not None:
-      other.append("customClades")
+    clades = tree_find_clades(tree_json)
+    custom_clades = tree_find_clade_like_attrs(tree_json)
 
   if dict_get(pathogen_json, ["mutLabels"]) is not None:
     other.append("mutLabels")
@@ -58,11 +61,56 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
     if dict_get(q, ["enabled"]):
       qc.append(k)
 
+  custom_clades = dict_cleanup({attr: len(values) for attr, values in custom_clades.items() if len(values) > 0})
+
   return dict_cleanup({
+    "clades": len(clades) if len(clades) > 0 else None,
+    "customClades": custom_clades,
     "qc": qc,
     "primers": True if len(dict_get(pathogen_json, ["primers"]) or []) > 0 else None,
     "other": other
   })
+
+
+def tree_find_clades(auspice_json):
+  def tree_find_clades_recursive(node, clades=None):
+    if clades is None:
+      clades = []
+
+    clade_membership = node.get('node_attrs', {}).get('clade_membership', {}).get('value')
+    if clade_membership:
+      clades.append(clade_membership)
+
+    children = node.get('children', [])
+    for child in children:
+      tree_find_clades_recursive(child, clades)
+
+    return clades
+
+  clades = tree_find_clades_recursive(auspice_json["tree"])
+  return list(sorted(unique(clades)))
+
+
+def tree_find_clade_like_attrs(auspice_json):
+  def tree_find_clade_like_attrs_recursive(node, attr_names, attributes=None):
+    if attributes is None:
+      attributes = {attr: [] for attr in attr_names}
+
+    for attr in attr_names:
+      attr_value = node.get('node_attrs', {}).get(attr, {}).get('value')
+      if attr_value is not None:
+        attributes[attr].append(attr_value)
+
+    children = node.get('children', [])
+    for child in children:
+      tree_find_clade_like_attrs_recursive(child, attr_names, attributes)
+
+    return attributes
+
+  clade_node_attrs = dict_get(auspice_json, ["meta", "extensions", "nextclade", "clade_node_attrs"]) or []
+  attr_names = [attr["name"] for attr in clade_node_attrs]
+  attributes = tree_find_clade_like_attrs_recursive(auspice_json["tree"], attr_names)
+  return {attr: list(sorted(unique(values))) for attr, values in attributes.items() if len(values) > 0}
 
 
 def dataset_get_versions(dataset):
