@@ -2585,6 +2585,47 @@
             "updatedAt": "2024-06-07T06:48:19Z",
             "tag": "2024-06-07--06-48-19Z"
           }
+        },
+        {
+          "path": "nextstrain/dengue/all",
+          "enabled": true,
+          "attributes": {
+            "name": "Dengue virus All serotypes",
+            "reference accession": "NC_002640",
+            "reference name": "dengue virus type 4"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 5,
+            "qc": [
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },
