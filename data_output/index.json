@@ -2646,7 +2646,6 @@
           "capabilities": {
             "clades": 5,
             "qc": [
-              "frameShifts",
               "stopCodons"
             ]
           },
