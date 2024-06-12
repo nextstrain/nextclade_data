@@ -34,7 +34,7 @@
   },
   "qc": {
     "frameShifts": {
-      "enabled": true
+      "enabled": false
     },
     "missingData": {
       "enabled": false,
