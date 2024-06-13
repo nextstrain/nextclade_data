@@ -2,6 +2,7 @@
 
 - Labelled mutations added for Nextstrain clades 24A (JN.1) and 24B (JN.1.11.1)
 - All 172 Pango lineages designated between 2024-04-13 and 2024-06-10 are now included, unfold below to see a list of all newly included lineages with their designation dates:
+- Fixed a bug that made amino acid gaps on the reference tree be left-aligned instead of right-aligned. This only affected the display of mutations on branches in tree view. The bug existed since switching the default gap alignment from right to left in nextclade v2.
 
 <details>
   <summary> Newly included lineages, with designation date in parentheses</summary>
