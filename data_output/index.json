@@ -2670,7 +2670,7 @@
           "path": "nextstrain/dengue/denv1",
           "enabled": true,
           "attributes": {
-            "name": "Dengue virus DENV1",
+            "name": "Dengue virus DENV1 genotypes",
             "reference accession": "NC_001477",
             "reference name": "NC_001477"
           },
@@ -2711,7 +2711,7 @@
           "path": "nextstrain/dengue/denv4",
           "enabled": true,
           "attributes": {
-            "name": "Dengue virus DENV4",
+            "name": "Dengue virus DENV4 genotypes",
             "reference accession": "NC_002640",
             "reference name": "NC_002640"
           },
@@ -2752,7 +2752,7 @@
           "path": "nextstrain/dengue/denv2",
           "enabled": true,
           "attributes": {
-            "name": "Dengue virus DENV2",
+            "name": "Dengue virus DENV2 genotypes",
             "reference accession": "NC_001474",
             "reference name": "NC_001474"
           },
@@ -2793,7 +2793,7 @@
           "path": "nextstrain/dengue/denv3",
           "enabled": true,
           "attributes": {
-            "name": "Dengue virus DENV3",
+            "name": "Dengue virus DENV3 genotypes",
             "reference accession": "NC_001475",
             "reference name": "NC_001475"
           },

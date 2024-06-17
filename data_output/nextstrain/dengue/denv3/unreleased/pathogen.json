@@ -8,7 +8,7 @@
     "minLength": 1000
   },
   "attributes": {
-    "name": "Dengue virus DENV3",
+    "name": "Dengue virus DENV3 genotypes",
     "reference accession": "NC_001475",
     "reference name": "NC_001475"
   },
