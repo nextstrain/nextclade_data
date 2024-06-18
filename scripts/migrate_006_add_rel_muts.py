@@ -40,15 +40,15 @@ SUBDIRS = {
         "criteria": [
           {
             "qry": [{"clade": ["20A"]}],
-            "node": [{"name": ["NODE_0000000"], "searchAlgo": "full"}],
+            "node": [{"name": ["NODE_0000000"]}],
           },
           {
             "qry": [{"clade": ["23A"]}],
-            "node": [{"name": ["XBB.1.5"], "searchAlgo": "full"}],
+            "node": [{"name": ["XBB.1.5"]}],
           },
           {
             "qry": [{"clade": ["23B"]}],
-            "node": [{"name": ["NODE_0000862"], "searchAlgo": "full"}],
+            "node": [{"name": ["NODE_0000862"]}],
           },
         ]
       },
@@ -70,7 +70,7 @@ SUBDIRS = {
         "criteria": [
           {
             "qry": [{"clade": ["23I"]}],
-            "node": [{"name": ["NODE_0000659"], "searchAlgo": "full"}],
+            "node": [{"name": ["NODE_0000659"]}],
           }
         ],
       },
@@ -81,7 +81,7 @@ SUBDIRS = {
         "criteria": [
           {
             "qry": [{"clade": ["23A"]}],
-            "node": [{"name": ["XBB.1.5"], "searchAlgo": "full"}],
+            "node": [{"name": ["XBB.1.5"]}],
           }
         ],
       },
@@ -92,7 +92,7 @@ SUBDIRS = {
         "criteria": [
           {
             "qry": [{"clade": ["22B"]}],
-            "node": [{"name": ["NODE_0000862"], "searchAlgo": "full"}],
+            "node": [{"name": ["NODE_0000862"]}],
           }
         ],
       }
@@ -107,7 +107,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for NH season 2023/24",
         "criteria": [
           {
-            "node": [{"name": ["A/Wisconsin/67/2022"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Wisconsin/67/2022"]}],
           }
         ],
       },
@@ -117,7 +117,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2023",
         "criteria": [
           {
-            "node": [{"name": ["A/Sydney/5/2021"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Sydney/5/2021"]}],
           }
         ],
       },
@@ -127,7 +127,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2021",
         "criteria": [
           {
-            "node": [{"name": ["A/Wisconsin/588/2019"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Wisconsin/588/2019"]}],
           }
         ],
       }
@@ -142,7 +142,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for NH season 2023/24",
         "criteria": [
           {
-            "node": [{"name": ["A/Wisconsin/67/2022"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Wisconsin/67/2022"]}],
           }
         ]
       },
@@ -152,7 +152,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2023",
         "criteria": [
           {
-            "node": [{"name": ["A/Sydney/5/2021"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Sydney/5/2021"]}],
           }
         ]
 
@@ -163,7 +163,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2021",
         "criteria": [
           {
-            "node": [{"name": ["A/Wisconsin/588/2019"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Wisconsin/588/2019"]}],
           }
         ]
       }
@@ -178,7 +178,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2024",
         "criteria": [
           {
-            "node": [{"name": ["A/Massachusetts/18/2022"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Massachusetts/18/2022"]}],
           }
         ]
       },
@@ -198,7 +198,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for NH season 2020/2021",
         "criteria": [
           {
-            "node": [{"name": ["A/HongKong/45/2019"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/HongKong/45/2019"]}],
           }
         ]
       }
@@ -213,7 +213,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2022",
         "criteria": [
           {
-            "node": [{"name": ["B/Austria/1359417/2021"], "searchAlgo": "full"}],
+            "node": [{"name": ["B/Austria/1359417/2021"]}],
           }
         ]
       },
@@ -223,7 +223,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2020",
         "criteria": [
           {
-            "node": [{"name": ["B/Washington/2/2019"], "searchAlgo": "full"}],
+            "node": [{"name": ["B/Washington/2/2019"]}],
           }
         ]
       },
@@ -233,7 +233,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for NH season 2018/2019",
         "criteria": [
           {
-            "node": [{"name": ["B/Colorado/6/2017"], "searchAlgo": "full"}],
+            "node": [{"name": ["B/Colorado/6/2017"]}],
           }
         ]
       }
@@ -248,7 +248,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2024",
         "criteria": [
           {
-            "node": [{"name": ["A/Massachusetts/18/2022"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Massachusetts/18/2022"]}],
           }
         ]
       },
@@ -258,7 +258,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for SH season 2022",
         "criteria": [
           {
-            "node": [{"name": ["A/Darwin/6/2021"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/Darwin/6/2021"]}],
           }
         ]
       },
@@ -268,7 +268,7 @@ SUBDIRS = {
         "description": "Isolate first used in vaccine for NH season 2020/2021",
         "criteria": [
           {
-            "node": [{"name": ["A/HongKong/45/2019"], "searchAlgo": "full"}],
+            "node": [{"name": ["A/HongKong/45/2019"]}],
           }
         ]
       }
