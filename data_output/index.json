@@ -673,8 +673,8 @@
           "capabilities": {
             "clades": 21,
             "customClades": {
-              "short-clade": 15,
-              "subclade": 21
+              "subclade": 21,
+              "short-clade": 15
             },
             "qc": [
               "privateMutations",
@@ -767,8 +767,8 @@
           "capabilities": {
             "clades": 16,
             "customClades": {
-              "short-clade": 13,
-              "subclade": 21
+              "subclade": 21,
+              "short-clade": 13
             },
             "qc": [
               "privateMutations",
