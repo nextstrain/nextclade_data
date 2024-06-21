@@ -21,8 +21,8 @@ DATA = {
           "description": "Mutations relative to founder of clade (earliest ancestor by clade)",
           "criteria": [
             {
-              "qry": [{"clade": ["20A"]}],
-              "node": [{"clade": ["20A"], "searchAlgo": "ancestor-earliest"}],
+              "qry": [{"clade": ["20A", "20B", "20C", "20E", "20F", "20G"]}],
+              "node": [{"clade": ["20A", "20B", "20C", "20E", "20F", "20G"], "searchAlgo": "ancestor-earliest"}],
             },
             {
               "qry": [{"clade": ["23A"]}],
@@ -40,8 +40,8 @@ DATA = {
           "description": "Mutations relative to founder of clade (full search by name)",
           "criteria": [
             {
-              "qry": [{"clade": ["20A"]}],
-              "node": [{"name": ["NODE_0000000"]}],
+              "qry": [{"clade": ["20A", "20B", "20C", "20E", "20F", "20G"]}],
+              "node": [{"name": ["B.1"]}],
             },
             {
               "qry": [{"clade": ["23A"]}],
@@ -49,7 +49,7 @@ DATA = {
             },
             {
               "qry": [{"clade": ["23B"]}],
-              "node": [{"name": ["NODE_0000862"]}],
+              "node": [{"name": ["XBB.1.16"]}],
             },
           ]
         },
@@ -65,17 +65,6 @@ DATA = {
           ]
         },
         {
-          "name": "BA.2.86",
-          "displayName": "BA.2.86 (23I)",
-          "description": "Full search by name: NODE_0000659 (only for samples having clade 22I)",
-          "criteria": [
-            {
-              "qry": [{"clade": ["23I"]}],
-              "node": [{"name": ["NODE_0000659"]}],
-            }
-          ],
-        },
-        {
           "name": "XBB.1.5",
           "displayName": "XBB.1.5 (23A)",
           "description": "Full search by name: XBB.1.5 (only for samples having clade 23A)",
@@ -86,17 +75,6 @@ DATA = {
             }
           ],
         },
-        {
-          "name": "BA.5",
-          "displayName": "BA.5 (22B)",
-          "description": "Full search by name: NODE_0000862 (only for samples having clade 22B)",
-          "criteria": [
-            {
-              "qry": [{"clade": ["22B"]}],
-              "node": [{"name": ["NODE_0000862"]}],
-            }
-          ],
-        }
       ]
     },
     "clade_node_attrs": [
@@ -121,14 +99,14 @@ DATA = {
         "displayName": "Nextstrain Clade",
         "description": "Nextstrain Clade",
         "hideInWeb": True,
-        "skipAsReference": True
+        "skipAsReference": False
       },
       {
         "name": "clade_who",
         "displayName": "WHO name",
         "description": "Greek letter WHO name",
         "hideInWeb": True,
-        "skipAsReference": False
+        "skipAsReference": True
       },
       {
         "name": "clade_display",
@@ -174,9 +152,73 @@ DATA = {
           ],
         }
       ]
-    }
+    },
+    "clade_node_attrs": [
+      {
+        "name": "subclade",
+        "displayName": "Subclade",
+        "description": "Experimental fine-grained subclade annotation."
+      },
+      {
+        "name": "short-clade",
+        "displayName": "short-clade",
+        "description": "",
+        "skipAsReference": True
+      }
+    ]
   },
-  ("nextstrain/flu/h1n1pdm/ha/MW626062", "nextstrain/flu/h1n1pdm/na/MW626056"): {
+  ("nextstrain/flu/h1n1pdm/ha/MW626062",): {
+    "ref_nodes": {
+      "default": "__root__",
+      "search": [
+        {
+          "name": "A/Wisconsin/67/2022",
+          "displayName": "A/Wisconsin/67/2022",
+          "description": "Isolate first used in vaccine for NH season 2023/24",
+          "criteria": [
+            {
+              "node": [{"name": ["A/Wisconsin/67/2022"]}],
+            }
+          ]
+        },
+        {
+          "name": "A/Sydney/5/2021",
+          "displayName": "A/Sydney/5/2021",
+          "description": "Isolate first used in vaccine for SH season 2023",
+          "criteria": [
+            {
+              "node": [{"name": ["A/Sydney/5/2021"]}],
+            }
+          ]
+
+        },
+        {
+          "name": "A/Wisconsin/588/2019",
+          "displayName": "A/Wisconsin/588/2019",
+          "description": "Isolate first used in vaccine for SH season 2021",
+          "criteria": [
+            {
+              "node": [{"name": ["A/Wisconsin/588/2019"]}],
+            }
+          ]
+        }
+      ]
+    },
+    "clade_node_attrs": [
+      {
+        "name": "subclade",
+        "displayName": "Subclade",
+        "description": "Experimental fine-grained subclade annotation."
+      },
+      {
+        "name": "short-clade",
+        "displayName": "short-clade",
+        "description": "",
+        "skipAsReference": True
+      }
+    ]
+  },
+  ("nextstrain/flu/h1n1pdm/na/MW626056",): {
     "ref_nodes": {
       "default": "__root__",
       "search": [
@@ -214,7 +256,57 @@ DATA = {
       ]
     }
   },
-  ("nextstrain/flu/h3n2/ha/EPI1857216", "nextstrain/flu/h3n2/na/EPI1857216"): {
+  ("nextstrain/flu/h3n2/ha/EPI1857216",): {
+    "ref_nodes": {
+      "default": "__root__",
+      "search": [
+        {
+          "name": "A/Massachusetts/18/2022",
+          "displayName": "A/Massachusetts/18/2022",
+          "description": "Isolate first used in vaccine for SH season 2024",
+          "criteria": [
+            {
+              "node": [{"name": ["A/Massachusetts/18/2022"]}],
+            }
+          ]
+        },
+        {
+          "name": "A/Darwin/6/2021",
+          "displayName": "A/Darwin/6/2021",
+          "description": "Isolate first used in vaccine for SH season 2022",
+          "criteria": [
+            {
+              "node": [{"name": ["A/Darwin/6/2021"]}],
+            }
+          ]
+        },
+        {
+          "name": "A/HongKong/45/2019",
+          "displayName": "A/HongKong/45/2019",
+          "description": "Isolate first used in vaccine for NH season 2020/2021",
+          "criteria": [
+            {
+              "node": [{"name": ["A/HongKong/45/2019"]}],
+            }
+          ]
+        }
+      ]
+    },
+    "clade_node_attrs": [
+      {
+        "name": "subclade",
+        "displayName": "Subclade",
+        "description": "Experimental fine-grained subclade annotation."
+      },
+      {
+        "name": "short-clade",
+        "displayName": "short-clade",
+        "description": "",
+        "skipAsReference": True
+      }
+    ]
+  },
+  ("nextstrain/flu/h3n2/na/EPI1857216",): {
     "ref_nodes": {
       "default": "__root__",
       "search": [
@@ -324,7 +416,20 @@ DATA = {
         }
       ]
     }
-  }
+  },
+    "clade_node_attrs": [
+      {
+        "name": "subclade",
+        "displayName": "Subclade",
+        "description": "Experimental fine-grained subclade annotation."
+      },
+      {
+        "name": "short-clade",
+        "displayName": "short-clade",
+        "description": "",
+        "skipAsReference": True
+      }
+    ]
 }
 
 
