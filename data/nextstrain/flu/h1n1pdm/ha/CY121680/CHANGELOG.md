@@ -1,3 +1,7 @@
+## Unreleased
+
+ - add representative samples from early pandemic-era clades including 2, 3, 4, 6C, 7, and 8 to improve clade label annotations for older sequences
+
 ## 2024-04-19T07:50:39Z
 
  - aliasing of C.1.1.1 as D
