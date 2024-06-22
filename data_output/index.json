@@ -641,10 +641,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 21,
+            "clades": 24,
             "customClades": {
-              "short-clade": 15,
-              "subclade": 21
+              "short-clade": 16,
+              "subclade": 20
             },
             "qc": [
               "privateMutations",
@@ -657,6 +657,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -675,8 +682,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-04-19T07:50:39Z",
-            "tag": "2024-04-19--07-50-39Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
