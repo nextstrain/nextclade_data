@@ -641,7 +641,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 24,
+            "clades": 25,
             "customClades": {
               "short-clade": 16,
               "subclade": 20
