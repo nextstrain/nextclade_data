@@ -18,7 +18,7 @@ DATA = {
         {
           "name": "JN.1",
           "displayName": "JN.1 (24A)",
-          "description": "Strain recommended for the 2024/2025 COVID-19 vaccine",
+          "description": "Variant recommended for the 2024/2025 COVID-19 vaccine",
           "criteria": [
             {
               "qry": [{"clade": ["23I","24A", "24B", "24C", "recombinant"]}],
@@ -29,7 +29,7 @@ DATA = {
         {
           "name": "XBB.1.5",
           "displayName": "XBB.1.5 (23A)",
-          "description": "Strain recommended for the 2023/2024 COVID-19 vaccine",
+          "description": "Variant recommended for the 2023/2024 COVID-19 vaccine",
           "criteria": [
             {
               "qry": [{"clade": ["22F", "23A","23B", "23C", "23D", "23E", "23F", "23G", "recombinant"]}],
@@ -61,7 +61,7 @@ DATA = {
         "displayName": "Nextstrain Clade",
         "description": "Nextstrain Clade",
         "hideInWeb": True,
-        "skipAsReference": False
+        "skipAsReference": True
       },
       {
         "name": "clade_who",
@@ -409,7 +409,8 @@ def main():
         changelog_path = join(dirname(file), "CHANGELOG.md")
         if len(changelog_get_unreleased_section(changelog_path)) == 0:
           changelog = file_read(changelog_path)
-          file_write(f"## Unreleased\n\nTest\n\n{changelog}", changelog_path)
+          msg="Added current and recent vaccine strains for seasonal influenza and COVID-19 as `reference nodes` against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage. The datasets themselves remain unchanged."
+          file_write(f"## Unreleased\n\n{msg}\n\n{changelog}", changelog_path)
 
 
 def apply(tree, data):
