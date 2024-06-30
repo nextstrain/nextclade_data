@@ -409,7 +409,7 @@ def main():
         changelog_path = join(dirname(file), "CHANGELOG.md")
         if len(changelog_get_unreleased_section(changelog_path)) == 0:
           changelog = file_read(changelog_path)
-          msg="Added current and recent vaccine strains for seasonal influenza and COVID-19 as `reference nodes` against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage. The datasets themselves remain unchanged."
+          msg="Added configuration of current and recent vaccine strains as 'reference nodes' on the reference tree, against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage.\n\nThe datasets themselves remain unchanged.\n\nSee Nextclade documentation for more details about 'relative mutations' functionality."
           file_write(f"## Unreleased\n\n{msg}\n\n{changelog}", changelog_path)
 
 
