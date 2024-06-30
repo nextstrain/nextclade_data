@@ -1,3 +1,11 @@
+## Unreleased
+
+Added configuration of current and recent vaccine strains as 'reference nodes' on the reference tree, against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage.
+
+The datasets themselves remain unchanged.
+
+See Nextclade documentation for more details about 'relative mutations' functionality.
+
 ## 2024-06-13T23:42:47Z
 
 - Labelled mutations added for Nextstrain clades 24A (JN.1) and 24B (JN.1.11.1)
