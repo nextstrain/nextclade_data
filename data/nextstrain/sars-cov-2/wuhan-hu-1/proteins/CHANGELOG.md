@@ -1,7 +1,3 @@
-## Unreleased
-
-Test
-
 ## 2024-06-13T23:42:47Z
 
 - Labelled mutations added for Nextstrain clades 24A (JN.1) and 24B (JN.1.11.1)
