@@ -1,0 +1,4 @@
+.	.	CDS	26	784	.	+	.	gene="M1"
+.	.	gene	26	1007	.	+	.	gene=M2;ID=gene-M2
+.	.	CDS	26	51	.	+	.	gene=M2;ID=cds-M2;Parent=gene-M2
+.	.	CDS	740	1007	.	+	.	gene=M2;ID=cds-M2;Parent=gene-M2
