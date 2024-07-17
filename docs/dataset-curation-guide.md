@@ -70,7 +70,7 @@ This section describes a sequence of steps to add a new Nextclade dataset for a 
 
   > ⚠️ It is important to name the section exactly: two hashes, space and the word "Unreleased", starting with the capital letter "U". This text will be used to automatically find and extract release notes, which are then published along with the next dataset release.
 
-- Add remaining dataset files. At a very minimum, you should have required files: `reference.fasta`, `pathogen.json` and `CHANGELOG.md`.
+- Add remaining dataset files. At a very minimum, you should have required files: `reference.fasta`, `pathogen.json` and `CHANGELOG.md`. See [dataset creation guide](dataset-creation-guide.md) for a detailed walkthrough.
 
 - Optionally, [test your dataset locally](#testing-datasets-locally)
 
