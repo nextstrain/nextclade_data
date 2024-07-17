@@ -5,4 +5,4 @@
 \.env
 \.vscode
 /docs/tmp/
-.venv
+\.venv
