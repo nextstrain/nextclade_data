@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-07-17T12:57:03Z
 
 - Include newly designated Nextstrain clade 24C (KP.3)
 - All 84 Pango lineages designated between 2024-06-11 and 2024-07-14 are now included, unfold below to see a list of all newly included lineages with their designation dates
