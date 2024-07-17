@@ -219,7 +219,7 @@ Once the web page loads, you can click "Load example" and click run to test. You
 If the dataset is committed in a Github repository, one can bypass the local web server step and use a Github URL directly:
 
 ```url
-https://master.clades.nextstrain.org/?dataset-url=gh:nextstrain/nextclade_data@docs-v3@/docs/minimal-dataset
+https://master.clades.nextstrain.org/?dataset-url=gh:nextstrain/nextclade_data@master@/docs/minimal-dataset
 ```
 
 Due to the lack of reference tree and QC configuration, there will neither be any QC information nor tree view. This will be tackled in the next section.
