@@ -71,13 +71,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 48,
+            "clades": 44,
             "customClades": {
-              "Nextclade_pango": 3335,
-              "partiallyAliased": 3335,
-              "clade_nextstrain": 48,
+              "Nextclade_pango": 3223,
+              "partiallyAliased": 3223,
+              "clade_nextstrain": 44,
               "clade_who": 13,
-              "clade_display": 48
+              "clade_display": 44
             },
             "qc": [
               "frameShifts",
@@ -93,24 +93,7 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -166,8 +149,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -216,13 +198,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 48,
+            "clades": 44,
             "customClades": {
-              "Nextclade_pango": 3335,
-              "partiallyAliased": 3335,
-              "clade_nextstrain": 48,
+              "Nextclade_pango": 3223,
+              "partiallyAliased": 3223,
+              "clade_nextstrain": 44,
               "clade_who": 13,
-              "clade_display": 48
+              "clade_display": 44
             },
             "qc": [
               "frameShifts",
@@ -238,24 +220,7 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -311,8 +276,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -363,13 +327,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 25,
+            "clades": 21,
             "customClades": {
-              "Nextclade_pango": 2598,
-              "partiallyAliased": 2598,
-              "clade_nextstrain": 25,
+              "Nextclade_pango": 2486,
+              "partiallyAliased": 2486,
+              "clade_nextstrain": 21,
               "clade_who": 3,
-              "clade_display": 25
+              "clade_display": 21
             },
             "qc": [
               "frameShifts",
@@ -386,24 +350,7 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -459,8 +406,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -508,13 +454,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 25,
+            "clades": 21,
             "customClades": {
-              "Nextclade_pango": 2598,
-              "partiallyAliased": 2598,
-              "clade_nextstrain": 25,
+              "Nextclade_pango": 2486,
+              "partiallyAliased": 2486,
+              "clade_nextstrain": 21,
               "clade_who": 3,
-              "clade_display": 25
+              "clade_display": 21
             },
             "qc": [
               "frameShifts",
@@ -531,24 +477,7 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -604,8 +533,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -653,13 +581,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 25,
+            "clades": 21,
             "customClades": {
-              "Nextclade_pango": 2598,
-              "partiallyAliased": 2598,
-              "clade_nextstrain": 25,
+              "Nextclade_pango": 2486,
+              "partiallyAliased": 2486,
+              "clade_nextstrain": 21,
               "clade_who": 3,
-              "clade_display": 25
+              "clade_display": 21
             },
             "qc": [
               "frameShifts",
@@ -676,24 +604,7 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -749,8 +660,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -803,9 +713,8 @@
           "capabilities": {
             "clades": 25,
             "customClades": {
-              "short-clade": 16,
-              "subclade": 21,
-              "proposedSubclade": 22
+              "subclade": 20,
+              "short-clade": 16
             },
             "qc": [
               "privateMutations",
@@ -818,13 +727,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -851,7 +753,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-07-03T08:29:55Z",
+            "tag": "2024-07-03--08-29-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -904,11 +807,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 25,
+            "clades": 16,
             "customClades": {
-              "short-clade": 16,
               "subclade": 21,
-              "proposedSubclade": 22
+              "short-clade": 13
             },
             "qc": [
               "privateMutations",
@@ -921,13 +823,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -954,7 +849,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-07-03T08:29:55Z",
+            "tag": "2024-07-03--08-29-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1006,10 +902,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 24,
-            "customClades": {
-              "proposedSubclade": 24
-            },
+            "clades": 23,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1021,13 +914,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1054,7 +940,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-07-03T08:29:55Z",
+            "tag": "2024-07-03--08-29-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1108,8 +995,7 @@
             "clades": 37,
             "customClades": {
               "subclade": 42,
-              "short-clade": 37,
-              "proposedSubclade": 45
+              "short-clade": 37
             },
             "qc": [
               "privateMutations",
@@ -1122,13 +1008,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1163,7 +1042,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-07-03T08:29:55Z",
+            "tag": "2024-07-03--08-29-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1216,11 +1096,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 34,
+            "clades": 30,
             "customClades": {
-              "subclade": 39,
-              "short-clade": 34,
-              "proposedSubclade": 42
+              "subclade": 36,
+              "short-clade": 30
             },
             "qc": [
               "privateMutations",
@@ -1234,21 +1113,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-08-08T05:08:21Z",
-              "tag": "2024-08-08--05-08-21Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1283,7 +1147,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-07-03T08:29:55Z",
+            "tag": "2024-07-03--08-29-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1336,9 +1201,6 @@
           },
           "capabilities": {
             "clades": 17,
-            "customClades": {
-              "proposedSubclade": 17
-            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1350,13 +1212,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -1375,7 +1230,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-04-19T07:50:39Z",
+            "tag": "2024-04-19--07-50-39Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1430,8 +1286,7 @@
           "capabilities": {
             "clades": 8,
             "customClades": {
-              "subclade": 22,
-              "proposedSubclade": 22
+              "subclade": 22
             },
             "qc": [
               "privateMutations",
@@ -1444,13 +1299,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1477,7 +1325,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-07-03T08:29:55Z",
+            "tag": "2024-07-03--08-29-55Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1530,9 +1379,6 @@
           },
           "capabilities": {
             "clades": 19,
-            "customClades": {
-              "proposedSubclade": 19
-            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1544,13 +1390,6 @@
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -1569,7 +1408,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2024-04-19T07:50:39Z",
+            "tag": "2024-04-19--07-50-39Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1704,7 +1544,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 36,
+            "clades": 24,
             "customClades": {
               "G_clade": 15
             },
@@ -1716,14 +1556,6 @@
             ]
           },
           "versions": [
-            {
-              "updatedAt": "2024-08-01T22:31:31Z",
-              "tag": "2024-08-01--22-31-31Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-01-29T10:29:43Z",
               "tag": "2024-01-29--10-29-43Z",
@@ -1742,8 +1574,8 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-08-01T22:31:31Z",
-            "tag": "2024-08-01--22-31-31Z",
+            "updatedAt": "2024-01-29T10:29:43Z",
+            "tag": "2024-01-29--10-29-43Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1807,14 +1639,6 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-08-01T22:31:31Z",
-              "tag": "2024-08-01--22-31-31Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
               "updatedAt": "2024-01-29T10:29:43Z",
               "tag": "2024-01-29--10-29-43Z",
               "compatibility": {
@@ -1832,8 +1656,8 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-08-01T22:31:31Z",
-            "tag": "2024-08-01--22-31-31Z",
+            "updatedAt": "2024-01-29T10:29:43Z",
+            "tag": "2024-01-29--10-29-43Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1862,7 +1686,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 7,
+            "clades": 5,
             "customClades": {
               "outbreak": 1,
               "lineage": 33
@@ -1872,19 +1696,10 @@
               "missingData",
               "mixedSites",
               "privateMutations",
-              "snpClusters",
               "stopCodons"
             ]
           },
           "versions": [
-            {
-              "updatedAt": "2024-08-27T21:28:04Z",
-              "tag": "2024-08-27--21-28-04Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -1903,55 +1718,8 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-08-27T21:28:04Z",
-            "tag": "2024-08-27--21-28-04Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/mpox/clade-i",
-          "enabled": true,
-          "attributes": {
-            "name": "Mpox virus (Clade I)",
-            "reference accession": "DQ011155.1",
-            "reference name": "Zaire_1979-005"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 4,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "snpClusters",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2024-08-01T22:31:31Z",
-              "tag": "2024-08-01--22-31-31Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2024-08-01T22:31:31Z",
-            "tag": "2024-08-01--22-31-31Z",
+            "updatedAt": "2024-04-19T07:50:39Z",
+            "tag": "2024-04-19--07-50-39Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3017,43 +2785,6 @@
               "web": "3.0.0-alpha.0"
             }
           }
-        },
-        {
-          "path": "nextstrain/yellow-fever/prM-E",
-          "enabled": true,
-          "attributes": {
-            "name": "Yellow fever virus (YFV) prM-E region",
-            "reference name": "Asibi",
-            "reference accession": "AY640589.1"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 8,
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased"
-            }
-          ],
-          "version": {
-            "tag": "unreleased"
-          }
         }
       ]
     },
@@ -3328,215 +3059,187 @@
           }
         },
         {
-          "path": "community/v-gen-lab/dengue/denv1",
+          "path": "community/genspectrum/flu/h5n1/seg2",
           "enabled": true,
           "attributes": {
-            "name": "DENV-1",
-            "reference accession": "NC_001477.1",
-            "reference name": "Nauru/NMRI-45AZ5PDK-0/1974"
+            "name": "Influenza A/H5N1 (segment 2/PB1)",
+            "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) polymerase (PB1) and PB1-F2 protein (PB1-F2) genes, complete cds",
+            "reference accession": "NC_007358.1"
           },
           "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
             "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 66,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "privateMutations",
-              "stopCodons"
-            ]
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-08-31T20:44:06Z",
-              "tag": "2024-08-31--20-44-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
+              "tag": "unreleased"
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
+            "tag": "unreleased"
           }
         },
         {
-          "path": "community/v-gen-lab/dengue/denv2",
+          "path": "community/genspectrum/flu/h5n1/seg7",
           "enabled": true,
           "attributes": {
-            "name": "DENV-2",
-            "reference accession": "NC_001474.2",
-            "reference name": "Thailand/CDC-16681/1964"
+            "name": "Influenza A/H5N1 (segment 7/M)",
+            "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) segment 7, complete sequence",
+            "reference accession": "NC_007363.1"
           },
           "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
             "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 73,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "privateMutations",
-              "stopCodons"
-            ]
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-08-31T20:44:06Z",
-              "tag": "2024-08-31--20-44-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
+              "tag": "unreleased"
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
+            "tag": "unreleased"
           }
         },
         {
-          "path": "community/v-gen-lab/dengue/denv3",
+          "path": "community/genspectrum/flu/h5n1/seg8",
           "enabled": true,
           "attributes": {
-            "name": "DENV-3",
-            "reference accession": "NC_001475.2",
-            "reference name": "D3/H/IMTSSA-SRI/2000"
+            "name": "Influenza A/H5N1 (segment 8/NS)",
+            "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) segment 8, complete sequence",
+            "reference accession": "NC_007364.1"
           },
           "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
             "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 34,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "privateMutations",
-              "stopCodons"
-            ]
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-08-31T20:44:06Z",
-              "tag": "2024-08-31--20-44-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
+              "tag": "unreleased"
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
+            "tag": "unreleased"
           }
         },
         {
-          "path": "community/v-gen-lab/dengue/denv4",
+          "path": "community/genspectrum/flu/h5n1/seg1",
           "enabled": true,
           "attributes": {
-            "name": "DENV-4",
-            "reference accession": "NC_002640.1",
-            "reference name": "rDEN4"
+            "name": "Influenza A/H5N1 (segment 1/PB2)",
+            "reference name": "Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PB2) gene, complete cds",
+            "reference accession": "NC_007357.1"
           },
           "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
             "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 23,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "privateMutations",
-              "stopCodons"
-            ]
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
           },
           "versions": [
             {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-08-31T20:44:06Z",
-              "tag": "2024-08-31--20-44-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
+              "tag": "unreleased"
             }
           ],
           "version": {
-            "updatedAt": "2024-10-17T16:48:48Z",
-            "tag": "2024-10-17--16-48-48Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/genspectrum/flu/h5n1/seg5",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A/H5N1 (segment 5/NP)",
+            "reference name": "Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) nucleocapsid protein (NP) gene, complete cds",
+            "reference accession": "NC_007360.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
             }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/genspectrum/flu/h5n1/seg6",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A/H5N1 (segment 6/NA)",
+            "reference name": "Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) neuraminidase (NA) gene, complete cds",
+            "reference accession": "NC_007361.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/genspectrum/flu/h5n1/seg4",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A/H5N1 (segment 4/HA)",
+            "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) hemagglutinin (HA) gene, complete cds",
+            "reference accession": "NC_007362.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/genspectrum/flu/h5n1/seg3",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A/H5N1 (segment 3/PA)",
+            "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) polymerase (PA) and PA-X protein (PA-X) genes, complete cds",
+            "reference accession": "NC_007359.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md"
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
           }
         }
       ]
