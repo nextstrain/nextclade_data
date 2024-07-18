@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "Influenza A/H5N1 (segment 5/NP)",
+    "reference name": "Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) nucleocapsid protein (NP) gene, complete cds",
+    "reference accession": "NC_007360.1"
+  },
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "readme": "README.md"
+  },
+  "version": {
+    "tag": "unreleased"
+  }
+}
