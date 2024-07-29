@@ -50,7 +50,12 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": []
+      "ignoredStopCodons": [
+        {
+          "codon": 320,
+          "cdsName": "G"
+        }
+      ]
     }
   },
   "cdsOrderPreference": [
@@ -88,5 +93,10 @@
     "name": "RSV-A",
     "reference accession": "EPI_ISL_412866",
     "reference name": "hRSV/A/England/397/2017"
-  }
+  },
+  "geneOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ]
 }

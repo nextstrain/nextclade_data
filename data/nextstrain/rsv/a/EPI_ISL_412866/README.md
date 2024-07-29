@@ -4,7 +4,7 @@
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------|
 | authors                | [Richard Neher](https://neherlab.org), Laura Urbanska, [Nextstrain](https://nextstrain.org)                         |
 | data source            | Genbank + authorized other sequences                                                                                |
-| workflow               | [github.com/nextstrain/rsv/nextclade](https://github.com/nextstrain/rsv/nextclade)                                  |
+| workflow               | [github.com/nextstrain/rsv](https://github.com/nextstrain/rsv)                                                      |
 | nextclade dataset path | nextstrain/rsv/a/EPI_ISL_412866                                                                                     |
 | reference              | EPI_ISL_412866                                                                                                      |
 | clade definitions      | [github.com/rsv-lineages/lineage-designation-A](https://github.com/rsv-lineages/lineage-designation-A)              |
