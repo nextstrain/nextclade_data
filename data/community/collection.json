@@ -23,6 +23,14 @@
     "community/moncla-lab/iav-h5/2.3.2.1",
     "community/moncla-lab/iav-h5/ha/2.3.4.4",
     "community/moncla-lab/iav-h5/ha/all-clades",
-    "community/moncla-lab/iav-h5/ha/2.3.2.1"
+    "community/moncla-lab/iav-h5/ha/2.3.2.1",
+    "community/genspectrum/flu/h5n1/seg2",
+    "community/genspectrum/flu/h5n1/seg7",
+    "community/genspectrum/flu/h5n1/seg8",
+    "community/genspectrum/flu/h5n1/seg1",
+    "community/genspectrum/flu/h5n1/seg5",
+    "community/genspectrum/flu/h5n1/seg6",
+    "community/genspectrum/flu/h5n1/seg4",
+    "community/genspectrum/flu/h5n1/seg3"
   ]
 }
