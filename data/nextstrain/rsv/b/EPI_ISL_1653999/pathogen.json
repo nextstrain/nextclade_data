@@ -50,7 +50,12 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": []
+      "ignoredStopCodons": [
+        {
+          "codon": 320,
+          "cdsName": "G"
+        }
+      ]
     }
   },
   "cdsOrderPreference": [
@@ -88,5 +93,10 @@
     "name": "RSV-B",
     "reference accession": "EPI_ISL_1653999",
     "reference name": "hRSV/B/Australia/VIC-RCH056/2019"
-  }
+  },
+  "geneOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ]
 }

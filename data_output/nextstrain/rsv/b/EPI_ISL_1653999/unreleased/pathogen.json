@@ -85,18 +85,25 @@
     ]
   },
   "shortcuts": [
-    "rsv_a",
-    "nextstrain/rsv/a",
-    "nextstrain/rsv/a/hRSV-A-England-397-2017"
+    "rsv_b",
+    "nextstrain/rsv/b",
+    "nextstrain/rsv/b/hRSV-B-Australia-VIC-RCH056-2019"
   ],
   "attributes": {
-    "name": "RSV-A",
-    "reference accession": "EPI_ISL_412866",
-    "reference name": "hRSV/A/England/397/2017"
+    "name": "RSV-B",
+    "reference accession": "EPI_ISL_1653999",
+    "reference name": "hRSV/B/Australia/VIC-RCH056/2019"
   },
   "geneOrderPreference": [
     "F",
     "G",
     "L"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
 }
