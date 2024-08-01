@@ -54,6 +54,10 @@
     "nextstrain/flu/h3n2/pb2",
     "nextstrain/measles",
     "nextstrain/measles/N450/WHO-2012",
-    "nextstrain/dengue/all"
+    "nextstrain/dengue/all",
+    "nextstrain/dengue/denv1",
+    "nextstrain/dengue/denv4",
+    "nextstrain/dengue/denv2",
+    "nextstrain/dengue/denv3"
   ]
 }
