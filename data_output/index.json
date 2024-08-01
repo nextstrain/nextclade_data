@@ -1749,6 +1749,51 @@
           }
         },
         {
+          "path": "nextstrain/mpox/clade-i",
+          "enabled": true,
+          "attributes": {
+            "name": "Mpox virus (Clade I)",
+            "reference accession": "DQ011155.1",
+            "reference name": "Zaire_1979-005"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 4,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/mpox/clade-iib",
           "shortcuts": [
             "hMPXV"
