@@ -1554,7 +1554,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 24,
+            "clades": 36,
             "customClades": {
               "G_clade": 15
             },
@@ -1566,6 +1566,14 @@
             ]
           },
           "versions": [
+            {
+              "updatedAt": "2024-08-01T22:31:31Z",
+              "tag": "2024-08-01--22-31-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-29T10:29:43Z",
               "tag": "2024-01-29--10-29-43Z",
@@ -1584,8 +1592,8 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-29T10:29:43Z",
-            "tag": "2024-01-29--10-29-43Z",
+            "updatedAt": "2024-08-01T22:31:31Z",
+            "tag": "2024-08-01--22-31-31Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1649,6 +1657,14 @@
           },
           "versions": [
             {
+              "updatedAt": "2024-08-01T22:31:31Z",
+              "tag": "2024-08-01--22-31-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-29T10:29:43Z",
               "tag": "2024-01-29--10-29-43Z",
               "compatibility": {
@@ -1666,8 +1682,8 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-29T10:29:43Z",
-            "tag": "2024-01-29--10-29-43Z",
+            "updatedAt": "2024-08-01T22:31:31Z",
+            "tag": "2024-08-01--22-31-31Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1730,6 +1746,53 @@
           "version": {
             "updatedAt": "2024-04-19T07:50:39Z",
             "tag": "2024-04-19--07-50-39Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/mpox/clade-i",
+          "enabled": true,
+          "attributes": {
+            "name": "Mpox virus (Clade I)",
+            "reference accession": "DQ011155.1",
+            "reference name": "Zaire_1979-005"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 4,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2024-08-01T22:31:31Z",
+              "tag": "2024-08-01--22-31-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2024-08-01T22:31:31Z",
+            "tag": "2024-08-01--22-31-31Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
