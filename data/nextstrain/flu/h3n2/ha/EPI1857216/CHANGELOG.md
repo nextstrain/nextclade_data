@@ -1,3 +1,7 @@
+## Unreleased
+
+Fix numbering of RBD sites it the `pathogen.json`. The relevant positions were indexed 1-based, when they should have been indexed 0-based.
+
 ## 2024-07-03T08:29:55Z
 
 Added configuration of current and recent vaccine strains as 'reference nodes' on the reference tree, against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage.
@@ -20,7 +24,7 @@ After discussion with various members of the seasonal influenza virus surveillan
  - `H.3` --> `J.3`
  - `H.4` --> `J.4`
 
-The subclades `H` and `H.*` were revoked, and a comment was added to explain the reason. No subclade definitions were changed. 
+The subclades `H` and `H.*` were revoked, and a comment was added to explain the reason. No subclade definitions were changed.
 
 
 ## 2024-01-16T20:31:02Z
