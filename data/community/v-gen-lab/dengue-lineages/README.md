@@ -7,6 +7,6 @@ More information about the Dengue Lineages project: [Dengue Lineages website](ht
 The source code is avalible on [V-GEN-Lab/dengue-lineages-nextclade](https://github.com/V-GEN-Lab/dengue-lineages-nextclade)
 For bugs, please open an [Issue](https://github.com/V-GEN-Lab/dengue-lineages-nextclade/issues)
 
-## Authors and contacts
+## Authors and contacts:
 
 Maintainers: [James Siqueira Pereira](https://github.com/jamessiqueirap) and [Alex Ranieri](https://github.com/alex-ranieri).
