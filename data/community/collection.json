@@ -25,8 +25,8 @@
     "community/moncla-lab/iav-h5/ha/all-clades",
     "community/moncla-lab/iav-h5/ha/2.3.2.1",
     "community/v-gen-lab/dengue-lineages/all-serotypes/denv1",
-    "community/v-gen-lab/dengue-lineages/all-serotypes/denv4",
     "community/v-gen-lab/dengue-lineages/all-serotypes/denv2",
-    "community/v-gen-lab/dengue-lineages/all-serotypes/denv3"
+    "community/v-gen-lab/dengue-lineages/all-serotypes/denv3",
+    "community/v-gen-lab/dengue-lineages/all-serotypes/denv4"
   ]
 }
