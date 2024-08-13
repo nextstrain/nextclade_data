@@ -8,23 +8,24 @@
     "minLength": 1000
   },
   "attributes": {
-    "name": "DENV-3 lineages",
-    "reference accession": "NC_001475.2",
-    "reference name": "NC_001475"
+    "name": "DENV-4 lineages",
+    "reference accession": "NC_002640.1",
+    "reference name": "NC_002640"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "placementMaskRanges":[
-    {"begin":0, "end":94},
-    {"begin":10268, "end":10707}
+    {"begin":0, "end":101},
+    {"begin":10266, "end":10649}
   ],
   "deprecated": false,
   "enabled": true,
   "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
@@ -51,7 +52,7 @@
     "privateMutations": {
       "cutoff": 25,
       "enabled": true,
-      "typical": 10,
+      "typical": 15,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
