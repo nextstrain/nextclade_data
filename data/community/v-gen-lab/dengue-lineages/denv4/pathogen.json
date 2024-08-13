@@ -33,8 +33,8 @@
     "treeJson": "tree.json"
   },
   "meta": {
-    "bugs": "https://github.com/DENV-lineages/nextclade_data/issues",
-    "source code": "https://github.com/DENV-lineages/nextclade_data"
+    "bugs": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade/issues",
+    "source code": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade"
   },
   "qc": {
     "frameShifts": {
@@ -50,9 +50,9 @@
       "mixedSitesThreshold": 8
     },
     "privateMutations": {
-      "cutoff": 25,
+      "cutoff": 276,
       "enabled": true,
-      "typical": 15,
+      "typical": 92,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1

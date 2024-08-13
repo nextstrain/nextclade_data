@@ -15,6 +15,8 @@ This dataset is based on the dengue virus lineage system from [Verity et al., 20
 ## Authors and contacts
 
 Maintainers: [James Siqueira Pereira](https://github.com/jamessiqueirap) and [Alex Ranieri](https://github.com/alex-ranieri).
+The source code is avalible on [V-GEN-Lab/dengue-lineages-nextclade](https://github.com/V-GEN-Lab/dengue-lineages-nextclade)
+For bugs, please open an [Issue](https://github.com/V-GEN-Lab/dengue-lineages-nextclade/issues)
 
 ## Dengue Lineages System Project
 
