@@ -3181,49 +3181,6 @@
           }
         },
         {
-          "path": "community/v-gen-lab/dengue-lineages/all-serotypes/denv4",
-          "enabled": true,
-          "attributes": {
-            "name": "DENV-4 lineages",
-            "reference accession": "NC_002640.1",
-            "reference name": "NC_002640"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 23,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
           "path": "community/v-gen-lab/dengue-lineages/all-serotypes/denv2",
           "enabled": true,
           "attributes": {
@@ -3285,6 +3242,49 @@
           },
           "capabilities": {
             "clades": 34,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/v-gen-lab/dengue-lineages/all-serotypes/denv4",
+          "enabled": true,
+          "attributes": {
+            "name": "DENV-4 lineages",
+            "reference accession": "NC_002640.1",
+            "reference name": "NC_002640"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 23,
             "qc": [
               "frameShifts",
               "missingData",
