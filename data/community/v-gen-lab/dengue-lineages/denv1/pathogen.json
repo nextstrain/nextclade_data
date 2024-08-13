@@ -4,7 +4,7 @@
     "penaltyGapOpenInFrame": 12,
     "penaltyGapOpenOutOfFrame": 14,
     "gapAlignmentSide": "left",
-    "minSeedCover": 0.1,
+    "minSeedCover": 0.15,
     "minLength": 1000
   },
   "attributes": {
