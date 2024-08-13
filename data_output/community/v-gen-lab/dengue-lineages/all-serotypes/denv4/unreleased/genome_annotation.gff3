@@ -1,0 +1,15 @@
+##gff-version 3
+##source-version geneious 2022.2.2
+##sequence-region	NC_002640	1	10649
+NC_002640	Geneious	gene	102	440	.	+	.	gene_name=C
+NC_002640	Geneious	gene	441	938	.	+	.	gene_name=M
+NC_002640	Geneious	gene	441	713	.	+	.	gene_name=pr
+NC_002640	Geneious	gene	939	2423	.	+	.	gene_name=E
+NC_002640	Geneious	gene	2424	3479	.	+	.	gene_name=NS1
+NC_002640	Geneious	gene	3480	4133	.	+	.	gene_name=NS2A
+NC_002640	Geneious	gene	4134	4523	.	+	.	gene_name=NS2B
+NC_002640	Geneious	gene	4524	6377	.	+	.	gene_name=NS3
+NC_002640	Geneious	gene	6378	6758	.	+	.	gene_name=NS4A
+NC_002640	Geneious	gene	6759	6827	.	+	.	gene_name=2K
+NC_002640	Geneious	gene	6828	7562	.	+	.	gene_name=NS4B
+NC_002640	Geneious	gene	7563	10262	.	+	.	gene_name=NS5
