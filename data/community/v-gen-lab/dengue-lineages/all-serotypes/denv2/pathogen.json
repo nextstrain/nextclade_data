@@ -25,6 +25,7 @@
   "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
@@ -51,7 +52,7 @@
     "privateMutations": {
       "cutoff": 25,
       "enabled": true,
-      "typical": 10,
+      "typical": 15,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
