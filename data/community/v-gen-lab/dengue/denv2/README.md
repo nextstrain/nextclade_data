@@ -1,18 +1,18 @@
-# Nextclade dataset for "DENV-3 Lineages" based on reference "NC_001475"
+# Nextclade dataset for "denv-2" based on reference "Thailand/CDC-16681/1964"
 
 
 ## Dataset attributes
 
 | attribute            | value                                    |
 | -------------------- | ---------------------------------------- |
-| name                 | DENV-3                                   |
-| refName              | NC_001475                                |
-| refAccession         | NC_001475.2                              |
+| name                 | denv-2                                   |
+| refName              | Thailand/CDC-16681/1964                  |
+| refAccession         | NC_001474.2                              |
 
 ## Scope of this Dataset
-This dataset is based on the dengue virus lineage system from [Verity et al., 2024](https://doi.org/10.1101/2024.05.16.24307504) and is suitable for the analysis of DENV-3 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
+This dataset is based on the dengue virus lineage system from [Hill et al., 2024](https://doi.org/10.1101/2024.05.16.24307504) and is suitable for the analysis of DENV-2 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
 
-## Authors and contacts
+## Authors
 
 Maintainers: [James Siqueira Pereira](https://github.com/jamessiqueirap) and [Alex Ranieri](https://github.com/alex-ranieri).
 

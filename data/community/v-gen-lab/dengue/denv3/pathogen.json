@@ -1,8 +1,8 @@
 {
   "attributes": {
-    "name": "DENV-1 lineages",
-    "reference accession": "NC_001477.1",
-    "reference name": "NC_001477"
+    "name": "DENV-3 lineages",
+    "reference accession": "NC_001475.2",
+    "reference name": "D3/H/IMTSSA-SRI/2000"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -10,7 +10,7 @@
   },
   "placementMaskRanges":[
     {"begin":0, "end":94},
-    {"begin":10271, "end":10735}
+    {"begin":10268, "end":10707}
   ],
   "deprecated": false,
   "enabled": true,
@@ -42,9 +42,9 @@
       "mixedSitesThreshold": 8
     },
     "privateMutations": {
-      "cutoff": 168,
+      "cutoff": 210,
       "enabled": true,
-      "typical": 56,
+      "typical": 70,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1

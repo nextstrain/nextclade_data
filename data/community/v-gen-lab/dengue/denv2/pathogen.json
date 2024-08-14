@@ -1,8 +1,8 @@
 {
   "attributes": {
-    "name": "DENV-3 lineages",
-    "reference accession": "NC_001475.2",
-    "reference name": "NC_001475"
+    "name": "DENV-2 lineages",
+    "reference accession": "NC_001474.2",
+    "reference name": "Thailand/CDC-16681/1964"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -10,7 +10,7 @@
   },
   "placementMaskRanges":[
     {"begin":0, "end":94},
-    {"begin":10268, "end":10707}
+    {"begin":10271, "end":10735}
   ],
   "deprecated": false,
   "enabled": true,
@@ -42,9 +42,9 @@
       "mixedSitesThreshold": 8
     },
     "privateMutations": {
-      "cutoff": 210,
+      "cutoff": 216,
       "enabled": true,
-      "typical": 70,
+      "typical": 72,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
