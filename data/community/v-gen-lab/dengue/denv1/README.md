@@ -1,16 +1,16 @@
-# Nextclade dataset for "denv-2" based on reference "NC_001474"
+# Nextclade dataset for "DENV-1 Lineages" based on reference "Nauru/NMRI-45AZ5PDK-0/1974"
 
 
 ## Dataset attributes
 
 | attribute            | value                                    |
 | -------------------- | ---------------------------------------- |
-| name                 | denv-2                                   |
-| refName              | NC_001474                                |
-| refAccession         | NC_001474.2                              |
+| name                 | DENV-1                                   |
+| refName              | Nauru/NMRI-45AZ5PDK-0/1974               |
+| refAccession         | NC_001477.1                              |
 
 ## Scope of this Dataset
-This dataset is based on the dengue virus lineage system from [Verity et al., 2024](https://doi.org/10.1101/2024.05.16.24307504) and is suitable for the analysis of DENV-2 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
+This dataset is based on the dengue virus lineage system from [Hill et al., 2024](https://doi.org/10.1101/2024.05.16.24307504) and is suitable for the analysis of DENV-1 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
 
 ## Authors
 

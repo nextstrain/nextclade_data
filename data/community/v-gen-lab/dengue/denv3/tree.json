@@ -1,7 +1,28 @@
 {
   "version": "v2",
   "meta": {
-    "updated": "2024-07-25",
+    "title": "Dengue Lineages of DENV-3",
+    "updated": "2024-08-14",
+    "build_url": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade",
+    "data_provenance": [
+      {
+        "name": "NCBI and GISAID"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "James Siqueira",
+        "url": ""
+      },
+      {
+        "name": "Alex Ranieri",
+        "url": ""
+      }
+    ],
+    "display_defaults": {
+      "map_triplicate": true,
+      "color_by": "country"
+    },
     "genome_annotations": {
       "2K": {
         "end": 6820,
@@ -86,34 +107,333 @@
         "start": 1,
         "strand": "+",
         "type": "source"
-      },
-      "pr": {
-        "end": 709,
-        "seqid": "/home/james_pereira/drdengue/pipelinePhyloReconstruction/reference_sequences/reference_dengue_denv3.gb",
-        "start": 437,
-        "strand": "+",
-        "type": "CDS"
       }
     },
     "colorings": [
       {
-        "key": "clade_membership",
-        "title": "Lineage",
+        "key": "gt",
+        "title": "Genotype",
         "type": "categorical"
       },
       {
-        "key": "gt",
-        "title": "Genotype",
+        "key": "clade_membership",
+        "title": "Lineage",
+        "type": "categorical",
+        "scale": [
+          [
+            "3I",
+            "#6EB3E1"
+          ],
+          [
+            "3I_A",
+            "#6EB5E1"
+          ],
+          [
+            "3I_A.1",
+            "#6EA8E1"
+          ],
+          [
+            "3I_A.1.1",
+            "#6EA0E1"
+          ],
+          [
+            "3I_A.1.2",
+            "#6EA1E1"
+          ],
+          [
+            "3I_A.2",
+            "#6EA6E1"
+          ],
+          [
+            "3I_B",
+            "#6E91E1"
+          ],
+          [
+            "3I_C",
+            "#6EA8E1"
+          ],
+          [
+            "3II",
+            "#6EA9E1"
+          ],
+          [
+            "3II_A",
+            "#6EA6E1"
+          ],
+          [
+            "3II_A.1",
+            "#75CBE1"
+          ],
+          [
+            "3II_A.2",
+            "#6E7EE1"
+          ],
+          [
+            "3II_A.3",
+            "#6EBFE1"
+          ],
+          [
+            "3II_A.4",
+            "#6EDFE1"
+          ],
+          [
+            "3II_A.5",
+            "#6EE1C3"
+          ],
+          [
+            "3II_B",
+            "#75E19E"
+          ],
+          [
+            "3III",
+            "#7CE16E"
+          ],
+          [
+            "3III_A",
+            "#91E16E"
+          ],
+          [
+            "3III_A.1",
+            "#9EE16E"
+          ],
+          [
+            "3III_A.2",
+            "#A1E16E"
+          ],
+          [
+            "3III_B",
+            "#A1E16E"
+          ],
+          [
+            "3III_B.1",
+            "#A1E16E"
+          ],
+          [
+            "3III_B.2",
+            "#A1E16E"
+          ],
+          [
+            "3III_B.3",
+            "#A1E16E"
+          ],
+          [
+            "3III_B.3.1",
+            "#A1E16E"
+          ],
+          [
+            "3III_B.3.2",
+            "#B3DC6E"
+          ],
+          [
+            "3III_C",
+            "#B4E16E"
+          ],
+          [
+            "3III_C.1",
+            "#C0E16E"
+          ],
+          [
+            "3III_C.2",
+            "#CBE16E"
+          ],
+          [
+            "3III_C.2.1",
+            "#D9DC6E"
+          ],
+          [
+            "3III_C.2.2",
+            "#E1F36E"
+          ],
+          [
+            "3V",
+            "#E1A46E"
+          ],
+          [
+            "Outgroup",
+            "#E41A1C"
+          ]
+        ]
+      },
+      {
+        "key": "country",
+        "title": "Country",
         "type": "categorical"
       }
     ],
     "filters": [
-      "clade_membership"
+      "clade_membership",
+      "lineage_membership",
+      "country",
+      "division"
+    ],
+    "geo_resolutions": [
+      {
+        "key": "country",
+        "demes": {
+          "Nicaragua": {
+            "latitude": 13.0,
+            "longitude": -85.0
+          },
+          "China": {
+            "latitude": 35.000074,
+            "longitude": 104.999927
+          },
+          "Taiwan": {
+            "latitude": 23.6978,
+            "longitude": 120.9605
+          },
+          "Puerto Rico": {
+            "latitude": 18.2459121,
+            "longitude": -66.4164147
+          },
+          "Venezuela": {
+            "latitude": 8.0,
+            "longitude": -66.0
+          },
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
+          },
+          "French Polynesia": {
+            "latitude": -17.6797,
+            "longitude": -149.4068
+          },
+          "Samoa": {
+            "latitude": -13.598724,
+            "longitude": -172.454467
+          },
+          "Gabon": {
+            "latitude": -0.8999694,
+            "longitude": 11.6899699
+          },
+          "Fiji": {
+            "latitude": -18.1239695,
+            "longitude": 179.0122737
+          },
+          "Bangladesh": {
+            "latitude": 24.4768783,
+            "longitude": 90.2932426
+          },
+          "Malaysia": {
+            "latitude": 2.3923759,
+            "longitude": 112.8471939
+          },
+          "New Caledonia": {
+            "latitude": -20.9043,
+            "longitude": 165.618
+          },
+          "USA": {
+            "latitude": 39.7837304,
+            "longitude": -100.4458824
+          },
+          "Senegal": {
+            "latitude": 14.5,
+            "longitude": -14.25
+          },
+          "Myanmar": {
+            "latitude": 21.0,
+            "longitude": 96.0
+          },
+          "Cambodia": {
+            "latitude": 13.0,
+            "longitude": 105.0
+          },
+          "Vietnam": {
+            "latitude": 16.16667,
+            "longitude": 107.83333
+          },
+          "Thailand": {
+            "latitude": 14.8971921,
+            "longitude": 100.83273
+          },
+          "Burkina Faso": {
+            "latitude": 12.5,
+            "longitude": -1.66667
+          },
+          "Kenya": {
+            "latitude": 1.0,
+            "longitude": 38.0
+          },
+          "Mexico": {
+            "latitude": 19.4325301,
+            "longitude": -99.1332101
+          },
+          "Jamaica": {
+            "latitude": 18.16667,
+            "longitude": -77.25
+          },
+          "India": {
+            "latitude": 22.3511148,
+            "longitude": 78.6677428
+          },
+          "Australia": {
+            "latitude": -24.7761085,
+            "longitude": 134.755
+          },
+          "Colombia": {
+            "latitude": 2.893108,
+            "longitude": -73.7845142
+          },
+          "Saudi Arabia": {
+            "latitude": 25.0,
+            "longitude": 45.0
+          },
+          "Philippines": {
+            "latitude": 12.8797,
+            "longitude": 121.774
+          },
+          "Bolivia": {
+            "latitude": -17.0,
+            "longitude": -65.0
+          },
+          "Saint Lucia": {
+            "latitude": 13.88333,
+            "longitude": -60.96667
+          },
+          "Cuba": {
+            "latitude": 22.0,
+            "longitude": -79.5
+          },
+          "Reunion": {
+            "latitude": -21.1151,
+            "longitude": 55.5364
+          },
+          "Singapore": {
+            "latitude": 1.2904527,
+            "longitude": 103.852038
+          },
+          "Paraguay": {
+            "latitude": -23.33333,
+            "longitude": -58.0
+          },
+          "Sri Lanka": {
+            "latitude": 7.75,
+            "longitude": 80.75
+          },
+          "Indonesia": {
+            "latitude": -5.0,
+            "longitude": 120.0
+          }
+        }
+      }
     ],
     "panels": [
       "tree",
-      "entropy"
-    ]
+      "map",
+      "entropy",
+      "frequencies"
+    ],
+    "extensions": {
+      "nextclade": {
+        "clade_node_attrs": [
+          {
+            "name": "clade_membership",
+            "displayName": "Dengue Lineages (Nextclade)",
+            "description": ""
+          }
+        ]
+      }
+    }
   },
   "tree": {
     "name": "NODE_0000000",
@@ -709,6 +1029,9 @@
         "name": "OM258630.1|1953",
         "node_attrs": {
           "div": 0.0385954,
+          "country": {
+            "value": "Puerto Rico"
+          },
           "clade_membership": {
             "value": "Outgroup"
           }
@@ -1512,16 +1835,11 @@
               "T763A",
               "V836I",
               "R890K"
-            ],
-            "pr": [
-              "G15R",
-              "I31T",
-              "K90R"
             ]
           },
           "labels": {
-            "aa": "2K: I20V, V21I; C: N39D, A63T, K86R, K100R; E: A50V, E62G, G63A, I68T, I81T, Q120H, S124L, V139I, E154K, A171V, I172T, T224A, T226V, T270I, L301S, N302G, I380T, K386R, K391R, L430F, V459I, A479V; M: G15R, I31T, K90R, L128F, I135L, I156T; NS1: S17N, N52S, K69R, V96I, T103I, Y113H, T128I, S145N, V174M, R192K, H256Y; NS2A: L37F, S45L, V72I, I83V, T147A, I171V, I208V, S210N, L215F; NS2B: V59I, N93S, T123A; NS3: K33R, V155I, I283V, I352V, K585R; NS4A: L4F, N23S, A90T; NS4B: T16I, P24S, M87V, T108I, I201M; NS5: K23R, E24D, L27F, I50T, M127T, T155A, T188A, H200Y, R248K, I251M, K281E, I375T, T399I, V402I, M408I, Y482F, Q554R, K650E, K698R, Q705L, T763A, V836I, R890K; pr: G15R, I31T, K90R",
-            "lineages": "Outgroup"
+            "aa": "2K: I20V, V21I; C: N39D, A63T, K86R, K100R; E: A50V, E62G, G63A, I68T, I81T, Q120H, S124L, V139I, E154K, A171V, I172T, T224A, T226V, T270I, L301S, N302G, I380T, K386R, K391R, L430F, V459I, A479V; M: G15R, I31T, K90R, L128F, I135L, I156T; NS1: S17N, N52S, K69R, V96I, T103I, Y113H, T128I, S145N, V174M, R192K, H256Y; NS2A: L37F, S45L, V72I, I83V, T147A, I171V, I208V, S210N, L215F; NS2B: V59I, N93S, T123A; NS3: K33R, V155I, I283V, I352V, K585R; NS4A: L4F, N23S, A90T; NS4B: T16I, P24S, M87V, T108I, I201M; NS5: K23R, E24D, L27F, I50T, M127T, T155A, T188A, H200Y, R248K, I251M, K281E, I375T, T399I, V402I, M408I, Y482F, Q554R, K650E, K698R, Q705L, T763A, V836I, R890K",
+            "lineage": "Outgroup"
           }
         }
       },
@@ -1748,7 +2066,7 @@
               },
               "labels": {
                 "aa": "NS1: N139S, T288S, V350A; NS2A: T112A, Q115R; NS4B: T108A, A193V; NS5: L638P",
-                "lineages": "3V"
+                "lineage": "3V"
               }
             },
             "children": [
@@ -1756,6 +2074,9 @@
                 "name": "KM190937.1|1964",
                 "node_attrs": {
                   "div": 0.05546407,
+                  "country": {
+                    "value": "Philippines"
+                  },
                   "clade_membership": {
                     "value": "3V"
                   }
@@ -1905,6 +2226,9 @@
                     "name": "KU050695.1|1956",
                     "node_attrs": {
                       "div": 0.050000619999999996,
+                      "country": {
+                        "value": "Philippines"
+                      },
                       "clade_membership": {
                         "value": "3V"
                       }
@@ -1928,6 +2252,9 @@
                     "name": "JQ922554.1|1963",
                     "node_attrs": {
                       "div": 0.05563182,
+                      "country": {
+                        "value": "USA"
+                      },
                       "clade_membership": {
                         "value": "3V"
                       }
@@ -2045,13 +2372,10 @@
                           "P558R",
                           "I735L",
                           "R737K"
-                        ],
-                        "pr": [
-                          "V59L"
                         ]
                       },
                       "labels": {
-                        "aa": "E: E225K, S474A, L487V; M: V59L; NS1: K101E; NS2A: G28R; NS3: Q90A, E93G, V95T, P172L, V276G, P277S, R298I, A323V, N330I, A331P, D425Y, P426L, K591N, L592W; NS4A: R20T, T21V; NS4B: T46P, A189P, T195A; NS5: I72F, L172V, T188S, R195N, M203I, G469D, D557A, P558R, I735L, R737K; pr: V59L"
+                        "aa": "E: E225K, S474A, L487V; M: V59L; NS1: K101E; NS2A: G28R; NS3: Q90A, E93G, V95T, P172L, V276G, P277S, R298I, A323V, N330I, A331P, D425Y, P426L, K591N, L592W; NS4A: R20T, T21V; NS4B: T46P, A189P, T195A; NS5: I72F, L172V, T188S, R195N, M203I, G469D, D557A, P558R, I735L, R737K"
                       }
                     }
                   }
@@ -2255,14 +2579,11 @@
                     "NS5": [
                       "K281R",
                       "R749K"
-                    ],
-                    "pr": [
-                      "H55L"
                     ]
                   },
                   "labels": {
-                    "aa": "C: K82R, K97R; E: I68V, A169V, R231K, A479V; M: H55L, L128F; NS1: V174M; NS5: K281R, R749K; pr: H55L",
-                    "lineages": "3I"
+                    "aa": "C: K82R, K97R; E: I68V, A169V, R231K, A479V; M: H55L, L128F; NS1: V174M; NS5: K281R, R749K",
+                    "lineage": "3I"
                   }
                 },
                 "children": [
@@ -2270,6 +2591,9 @@
                     "name": "AY496879.2|1997",
                     "node_attrs": {
                       "div": 0.07252955999999999,
+                      "country": {
+                        "value": "Philippines"
+                      },
                       "clade_membership": {
                         "value": "3I"
                       }
@@ -2814,6 +3138,9 @@
                             "name": "DQ675519.1|1995",
                             "node_attrs": {
                               "div": 0.07645859,
+                              "country": {
+                                "value": "Taiwan"
+                              },
                               "clade_membership": {
                                 "value": "3I"
                               }
@@ -2992,7 +3319,7 @@
                               },
                               "labels": {
                                 "aa": "NS1: I94T; NS2A: I175V; NS5: S128T, K650R",
-                                "lineages": "3I_C"
+                                "lineage": "3I_C"
                               }
                             },
                             "children": [
@@ -3000,6 +3327,9 @@
                                 "name": "KU509279.1|2008",
                                 "node_attrs": {
                                   "div": 0.09180951999999999,
+                                  "country": {
+                                    "value": "Philippines"
+                                  },
                                   "clade_membership": {
                                     "value": "3I_C"
                                   }
@@ -3273,6 +3603,9 @@
                                     "name": "MN018380.1|2015-09-16",
                                     "node_attrs": {
                                       "div": 0.09574689,
+                                      "country": {
+                                        "value": "China"
+                                      },
                                       "clade_membership": {
                                         "value": "3I_C"
                                       }
@@ -3546,6 +3879,9 @@
                                         "name": "MN018379.1|2015-10-03",
                                         "node_attrs": {
                                           "div": 0.09871966,
+                                          "country": {
+                                            "value": "China"
+                                          },
                                           "clade_membership": {
                                             "value": "3I_C"
                                           }
@@ -3713,13 +4049,10 @@
                                               "K585T",
                                               "I619V",
                                               "S629L"
-                                            ],
-                                            "pr": [
-                                              "I31N"
                                             ]
                                           },
                                           "labels": {
-                                            "aa": "C: R35K; E: S124P, N230T, K231R; M: I31N; NS2A: S45Y, G46R, M132D; NS3: N470S; NS4B: L105K, T106P; NS5: S151P, R198K, T250R, I251L, S288T, H547T, E550G, K585T, I619V, S629L; pr: I31N"
+                                            "aa": "C: R35K; E: S124P, N230T, K231R; M: I31N; NS2A: S45Y, G46R, M132D; NS3: N470S; NS4B: L105K, T106P; NS5: S151P, R198K, T250R, I251L, S288T, H547T, E550G, K585T, I619V, S629L"
                                           }
                                         }
                                       },
@@ -3745,6 +4078,9 @@
                                             "name": "MN018389.1|2017-02-15",
                                             "node_attrs": {
                                               "div": 0.09425877,
+                                              "country": {
+                                                "value": "China"
+                                              },
                                               "clade_membership": {
                                                 "value": "3I_C"
                                               }
@@ -3874,6 +4210,9 @@
                                             "name": "MN922037.1|2019-08-02",
                                             "node_attrs": {
                                               "div": 0.09844576000000001,
+                                              "country": {
+                                                "value": "China"
+                                              },
                                               "clade_membership": {
                                                 "value": "3I_C"
                                               }
@@ -4153,7 +4492,7 @@
                               },
                               "labels": {
                                 "aa": "NS3: R84K; NS5: I643V, K749R",
-                                "lineages": "3I_B"
+                                "lineage": "3I_B"
                               }
                             },
                             "children": [
@@ -4161,6 +4500,9 @@
                                 "name": "MW946955.1|1978",
                                 "node_attrs": {
                                   "div": 0.07106006,
+                                  "country": {
+                                    "value": "Indonesia"
+                                  },
                                   "clade_membership": {
                                     "value": "3I_B"
                                   }
@@ -4442,6 +4784,9 @@
                                         "name": "JQ920485.1|1996-10-21",
                                         "node_attrs": {
                                           "div": 0.08538350999999998,
+                                          "country": {
+                                            "value": "New Caledonia"
+                                          },
                                           "clade_membership": {
                                             "value": "3I_B"
                                           }
@@ -4503,6 +4848,9 @@
                                         "name": "JQ920480.1|1996-09-04",
                                         "node_attrs": {
                                           "div": 0.08522813999999998,
+                                          "country": {
+                                            "value": "French Polynesia"
+                                          },
                                           "clade_membership": {
                                             "value": "3I_B"
                                           }
@@ -4619,6 +4967,9 @@
                                         "name": "MW946691.1|1992",
                                         "node_attrs": {
                                           "div": 0.08243671,
+                                          "country": {
+                                            "value": "Fiji"
+                                          },
                                           "clade_membership": {
                                             "value": "3I_B"
                                           }
@@ -4650,6 +5001,9 @@
                                         "name": "FJ898456.1|1995",
                                         "node_attrs": {
                                           "div": 0.08481576,
+                                          "country": {
+                                            "value": "Samoa"
+                                          },
                                           "clade_membership": {
                                             "value": "3I_B"
                                           }
@@ -4821,7 +5175,7 @@
                               },
                               "labels": {
                                 "aa": "C: V65I; E: L301S; NS2A: H55R; NS3: R255K; NS5: M336T, T763A",
-                                "lineages": "3I_A"
+                                "lineage": "3I_A"
                               }
                             },
                             "children": [
@@ -4854,6 +5208,9 @@
                                     "name": "MF004386.1|2012-10-04",
                                     "node_attrs": {
                                       "div": 0.09627431999999998,
+                                      "country": {
+                                        "value": "Malaysia"
+                                      },
                                       "clade_membership": {
                                         "value": "3I_A"
                                       }
@@ -5165,6 +5522,9 @@
                                     "name": "OK605763.1|1985",
                                     "node_attrs": {
                                       "div": 0.07508151999999998,
+                                      "country": {
+                                        "value": "Indonesia"
+                                      },
                                       "clade_membership": {
                                         "value": "3I_A"
                                       }
@@ -5388,6 +5748,9 @@
                                     "name": "MT921575.1|2016",
                                     "node_attrs": {
                                       "div": 0.09873803999999999,
+                                      "country": {
+                                        "value": "Australia"
+                                      },
                                       "clade_membership": {
                                         "value": "3I_A"
                                       }
@@ -5683,14 +6046,10 @@
                                             "NS5": [
                                               "T51P",
                                               "T188A"
-                                            ],
-                                            "pr": [
-                                              "G42R",
-                                              "M44R"
                                             ]
                                           },
                                           "labels": {
-                                            "aa": "M: G42R, M44R; NS1: V96I; NS2A: V180L; NS4A: A68V; NS5: T51P, T188A; pr: G42R, M44R"
+                                            "aa": "M: G42R, M44R; NS1: V96I; NS2A: V180L; NS4A: A68V; NS5: T51P, T188A"
                                           }
                                         },
                                         "children": [
@@ -5698,6 +6057,9 @@
                                             "name": "MN018370.1|2015-07-24",
                                             "node_attrs": {
                                               "div": 0.10082101999999997,
+                                              "country": {
+                                                "value": "China"
+                                              },
                                               "clade_membership": {
                                                 "value": "3I_A"
                                               }
@@ -5933,16 +6295,10 @@
                                                   "I643V",
                                                   "T811I",
                                                   "I867V"
-                                                ],
-                                                "pr": [
-                                                  "R42I",
-                                                  "E43A",
-                                                  "C45R",
-                                                  "V49I"
                                                 ]
                                               },
                                               "labels": {
-                                                "aa": "E: A367T, I483N; M: R42I, E43A, C45R, V49I; NS1: T29M, T176S; NS2A: S2D, T162S, A164T, T169I, V196I; NS2B: L37M, M84I, N93S, Q127R; NS3: I282V, K590E, L592I, R593E, P594T; NS4B: V22A; NS5: T250D, I251V, R422K, L461H, H547Q, I643V, T811I, I867V; pr: R42I, E43A, C45R, V49I"
+                                                "aa": "E: A367T, I483N; M: R42I, E43A, C45R, V49I; NS1: T29M, T176S; NS2A: S2D, T162S, A164T, T169I, V196I; NS2B: L37M, M84I, N93S, Q127R; NS3: I282V, K590E, L592I, R593E, P594T; NS4B: V22A; NS5: T250D, I251V, R422K, L461H, H547Q, I643V, T811I, I867V"
                                               }
                                             }
                                           },
@@ -5950,6 +6306,9 @@
                                             "name": "MN018374.1|2015-09-28",
                                             "node_attrs": {
                                               "div": 0.10114841999999998,
+                                              "country": {
+                                                "value": "China"
+                                              },
                                               "clade_membership": {
                                                 "value": "3I_A"
                                               }
@@ -6181,17 +6540,10 @@
                                                   "D663G",
                                                   "L679F",
                                                   "A898V"
-                                                ],
-                                                "pr": [
-                                                  "M39L",
-                                                  "L41R",
-                                                  "R42K",
-                                                  "R44G",
-                                                  "C45S"
                                                 ]
                                               },
                                               "labels": {
-                                                "aa": "C: K86R; E: I140S, V459A; M: M39L, L41R, R42K, R44G, C45S; NS1: Y256H, K341R; NS2A: V5M, L42H, L43W, L44M, S45Q, L129S, G130P, L131T, M132V, I137V, S185G; NS2B: N93I, L98T; NS3: S86N, Q467R, W596G, L597R; NS4B: V111L; NS5: A406E, R620T, D663G, L679F, A898V; pr: M39L, L41R, R42K, R44G, C45S"
+                                                "aa": "C: K86R; E: I140S, V459A; M: M39L, L41R, R42K, R44G, C45S; NS1: Y256H, K341R; NS2A: V5M, L42H, L43W, L44M, S45Q, L129S, G130P, L131T, M132V, I137V, S185G; NS2B: N93I, L98T; NS3: S86N, Q467R, W596G, L597R; NS4B: V111L; NS5: A406E, R620T, D663G, L679F, A898V"
                                               }
                                             }
                                           }
@@ -6430,7 +6782,7 @@
                                               },
                                               "labels": {
                                                 "aa": "C: K86R; E: T223I; NS1: V188I; NS2A: S184T; NS3: I126V, T476M; NS4A: A68V; NS5: H52R, V114I, K139R, T404A, Y503H, T644I",
-                                                "lineages": "3I_A.2"
+                                                "lineage": "3I_A.2"
                                               }
                                             },
                                             "children": [
@@ -6438,6 +6790,9 @@
                                                 "name": "MN018377.1|2015-12-22",
                                                 "node_attrs": {
                                                   "div": 0.10194582999999997,
+                                                  "country": {
+                                                    "value": "China"
+                                                  },
                                                   "clade_membership": {
                                                     "value": "3I_A.2"
                                                   }
@@ -6560,16 +6915,10 @@
                                                     ],
                                                     "NS5": [
                                                       "M476T"
-                                                    ],
-                                                    "pr": [
-                                                      "M39I",
-                                                      "D40G",
-                                                      "L41S",
-                                                      "E43A"
                                                     ]
                                                   },
                                                   "labels": {
-                                                    "aa": "C: I65V; E: I65N, S184L, P185T, F191S, N192M, E193K, N201K, Y390I, K391D, G393A, S394E, S395P, I478L; M: M39I, D40G, L41S, E43A; NS1: S304P; NS2A: L44R, S45Y, G46R, M110I; NS2B: L74V; NS3: G438V, W596M, D598V, A599P, R600H, T601H; NS4B: W38L; NS5: M476T; pr: M39I, D40G, L41S, E43A"
+                                                    "aa": "C: I65V; E: I65N, S184L, P185T, F191S, N192M, E193K, N201K, Y390I, K391D, G393A, S394E, S395P, I478L; M: M39I, D40G, L41S, E43A; NS1: S304P; NS2A: L44R, S45Y, G46R, M110I; NS2B: L74V; NS3: G438V, W596M, D598V, A599P, R600H, T601H; NS4B: W38L; NS5: M476T"
                                                   }
                                                 }
                                               },
@@ -6608,6 +6957,9 @@
                                                     "name": "MW396463.1|2019-07-02",
                                                     "node_attrs": {
                                                       "div": 0.10045595999999997,
+                                                      "country": {
+                                                        "value": "Bangladesh"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3I_A.2"
                                                       }
@@ -6687,6 +7039,9 @@
                                                         "name": "MN922035.1|2019-06-23",
                                                         "node_attrs": {
                                                           "div": 0.09937057999999997,
+                                                          "country": {
+                                                            "value": "China"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3I_A.2"
                                                           }
@@ -6764,6 +7119,9 @@
                                                             "name": "ON127534.1|2021-08",
                                                             "node_attrs": {
                                                               "div": 0.10198590999999997,
+                                                              "country": {
+                                                                "value": "Bangladesh"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3I_A.2"
                                                               }
@@ -6828,6 +7186,9 @@
                                                             "name": "ON116130.1|2021-08",
                                                             "node_attrs": {
                                                               "div": 0.10014661999999998,
+                                                              "country": {
+                                                                "value": "Bangladesh"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3I_A.2"
                                                               }
@@ -6877,13 +7238,10 @@
                                                                 ],
                                                                 "NS5": [
                                                                   "I691T"
-                                                                ],
-                                                                "pr": [
-                                                                  "S22T"
                                                                 ]
                                                               },
                                                               "labels": {
-                                                                "aa": "E: I223T; M: S22T; NS1: M174T; NS2A: V36A; NS3: T436M; NS5: I691T; pr: S22T"
+                                                                "aa": "E: I223T; M: S22T; NS1: M174T; NS2A: V36A; NS3: T436M; NS5: I691T"
                                                               }
                                                             }
                                                           }
@@ -6948,7 +7306,7 @@
                                               },
                                               "labels": {
                                                 "aa": "E: K386R; NS5: T649N",
-                                                "lineages": "3I_A.1"
+                                                "lineage": "3I_A.1"
                                               }
                                             },
                                             "children": [
@@ -6956,6 +7314,9 @@
                                                 "name": "KY921906.1|2015-06",
                                                 "node_attrs": {
                                                   "div": 0.09496817999999997,
+                                                  "country": {
+                                                    "value": "Singapore"
+                                                  },
                                                   "clade_membership": {
                                                     "value": "3I_A.1"
                                                   }
@@ -7086,6 +7447,9 @@
                                                             "name": "MK894338.1|2018-02-05",
                                                             "node_attrs": {
                                                               "div": 0.09908888999999997,
+                                                              "country": {
+                                                                "value": "China"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3I_A.1"
                                                               }
@@ -7154,13 +7518,10 @@
                                                                 ],
                                                                 "NS5": [
                                                                   "R47K"
-                                                                ],
-                                                                "pr": [
-                                                                  "I31T"
                                                                 ]
                                                               },
                                                               "labels": {
-                                                                "aa": "E: H132Y, A278V, I380S; M: I31T; NS2B: T47A; NS5: R47K; pr: I31T"
+                                                                "aa": "E: H132Y, A278V, I380S; M: I31T; NS2B: T47A; NS5: R47K"
                                                               }
                                                             }
                                                           },
@@ -7168,6 +7529,9 @@
                                                             "name": "OR236121.1|2016-02",
                                                             "node_attrs": {
                                                               "div": 0.09883955999999998,
+                                                              "country": {
+                                                                "value": "Reunion"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3I_A.1"
                                                               }
@@ -7293,7 +7657,7 @@
                                                           },
                                                           "labels": {
                                                             "aa": "NS2B: V59M; NS3: D350N, A356T; NS4A: V110I; NS5: R47K",
-                                                            "lineages": "3I_A.1.2"
+                                                            "lineage": "3I_A.1.2"
                                                           }
                                                         },
                                                         "children": [
@@ -7301,6 +7665,9 @@
                                                             "name": "MW788901.1|2018-08",
                                                             "node_attrs": {
                                                               "div": 0.09955524999999997,
+                                                              "country": {
+                                                                "value": "Myanmar"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3I_A.1.2"
                                                               }
@@ -7353,13 +7720,10 @@
                                                                 ],
                                                                 "NS2A": [
                                                                   "F27L"
-                                                                ],
-                                                                "pr": [
-                                                                  "A28V"
                                                                 ]
                                                               },
                                                               "labels": {
-                                                                "aa": "M: A28V; NS1: E326D; NS2A: F27L; pr: A28V"
+                                                                "aa": "M: A28V; NS1: E326D; NS2A: F27L"
                                                               }
                                                             }
                                                           },
@@ -7389,6 +7753,9 @@
                                                                 "name": "MW295815.1|2020-09-07",
                                                                 "node_attrs": {
                                                                   "div": 0.10081427999999998,
+                                                                  "country": {
+                                                                    "value": "China"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3I_A.1.2"
                                                                   }
@@ -7474,6 +7841,9 @@
                                                                     "name": "MF682970.1|2016-09-15",
                                                                     "node_attrs": {
                                                                       "div": 0.09943963999999997,
+                                                                      "country": {
+                                                                        "value": "China"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3I_A.1.2"
                                                                       }
@@ -7586,6 +7956,9 @@
                                                                         "name": "MF682968.1|2016-09-10",
                                                                         "node_attrs": {
                                                                           "div": 0.10249834999999997,
+                                                                          "country": {
+                                                                            "value": "China"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3I_A.1.2"
                                                                           }
@@ -7663,14 +8036,10 @@
                                                                               "V337I",
                                                                               "P363S",
                                                                               "S410P"
-                                                                            ],
-                                                                            "pr": [
-                                                                              "K26N",
-                                                                              "T50P"
                                                                             ]
                                                                           },
                                                                           "labels": {
-                                                                            "aa": "C: A52P, R82K, A111S; M: K26N, T50P; NS3: E17D, T119P, L128V, F130S, P132L, G133R, T134S, L149V, T168P, Y204S, A207P, L222V; NS5: A312T, K329N, W331C, V337I, P363S, S410P; pr: K26N, T50P"
+                                                                            "aa": "C: A52P, R82K, A111S; M: K26N, T50P; NS3: E17D, T119P, L128V, F130S, P132L, G133R, T134S, L149V, T168P, Y204S, A207P, L222V; NS5: A312T, K329N, W331C, V337I, P363S, S410P"
                                                                           }
                                                                         }
                                                                       },
@@ -7678,6 +8047,9 @@
                                                                         "name": "MF682966.1|2016-09-07",
                                                                         "node_attrs": {
                                                                           "div": 0.10129489999999998,
+                                                                          "country": {
+                                                                            "value": "China"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3I_A.1.2"
                                                                           }
@@ -7737,14 +8109,10 @@
                                                                               "F497L",
                                                                               "R499G",
                                                                               "E500K"
-                                                                            ],
-                                                                            "pr": [
-                                                                              "S29C",
-                                                                              "D65E"
                                                                             ]
                                                                           },
                                                                           "labels": {
-                                                                            "aa": "M: S29C, D65E; NS1: F277S; NS5: M366I, V372I, A377R, T383P, R391S, D419G, A423S, V434F, H441L, F464Y, A467T, M476T, F485L, F497L, R499G, E500K; pr: S29C, D65E"
+                                                                            "aa": "M: S29C, D65E; NS1: F277S; NS5: M366I, V372I, A377R, T383P, R391S, D419G, A423S, V434F, H441L, F464Y, A467T, M476T, F485L, F497L, R499G, E500K"
                                                                           }
                                                                         }
                                                                       }
@@ -7778,6 +8146,9 @@
                                                         "name": "OP410996.1|2019-11",
                                                         "node_attrs": {
                                                           "div": 0.09953269999999997,
+                                                          "country": {
+                                                            "value": "Singapore"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3I_A.1"
                                                           }
@@ -7865,13 +8236,10 @@
                                                             ],
                                                             "NS5": [
                                                               "A528V"
-                                                            ],
-                                                            "pr": [
-                                                              "L55P"
                                                             ]
                                                           },
                                                           "labels": {
-                                                            "aa": "M: L55P; NS2A: F38I, R55H; NS3: K26R; NS4B: T108I; NS5: A528V; pr: L55P"
+                                                            "aa": "M: L55P; NS2A: F38I, R55H; NS3: K26R; NS4B: T108I; NS5: A528V"
                                                           }
                                                         }
                                                       },
@@ -7897,6 +8265,9 @@
                                                             "name": "MH823209.1|2016",
                                                             "node_attrs": {
                                                               "div": 0.09626146999999997,
+                                                              "country": {
+                                                                "value": "Indonesia"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3I_A.1"
                                                               }
@@ -8017,7 +8388,7 @@
                                                               },
                                                               "labels": {
                                                                 "aa": "E: L124S; NS1: I94T; NS3: Y60H, A356T; NS5: T553I, P822S",
-                                                                "lineages": "3I_A.1.1"
+                                                                "lineage": "3I_A.1.1"
                                                               }
                                                             },
                                                             "children": [
@@ -8025,6 +8396,9 @@
                                                                 "name": "MN083246.1|2017-11",
                                                                 "node_attrs": {
                                                                   "div": 0.09853865999999999,
+                                                                  "country": {
+                                                                    "value": "Sri Lanka"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3I_A.1.1"
                                                                   }
@@ -8168,6 +8542,9 @@
                                                                         "name": "OR393976.1|2019-07-22",
                                                                         "node_attrs": {
                                                                           "div": 0.13006614,
+                                                                          "country": {
+                                                                            "value": "Sri Lanka"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3I_A.1.1"
                                                                           }
@@ -8509,6 +8886,9 @@
                                                                         "name": "MT006158.1|2018-06-19",
                                                                         "node_attrs": {
                                                                           "div": 0.11281065999999998,
+                                                                          "country": {
+                                                                            "value": "Sri Lanka"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3I_A.1.1"
                                                                           }
@@ -8669,6 +9049,9 @@
                                                                         "name": "OQ103317.1|2022-05-20",
                                                                         "node_attrs": {
                                                                           "div": 0.10199362999999999,
+                                                                          "country": {
+                                                                            "value": "Sri Lanka"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3I_A.1.1"
                                                                           }
@@ -8759,6 +9142,9 @@
                                                                             "name": "OR394032.1|2019-11-29",
                                                                             "node_attrs": {
                                                                               "div": 0.10626606999999999,
+                                                                              "country": {
+                                                                                "value": "Sri Lanka"
+                                                                              },
                                                                               "clade_membership": {
                                                                                 "value": "3I_A.1.1"
                                                                               }
@@ -8892,6 +9278,9 @@
                                                                                 "name": "OR393978.1|2019-08-05",
                                                                                 "node_attrs": {
                                                                                   "div": 0.10387721999999998,
+                                                                                  "country": {
+                                                                                    "value": "Sri Lanka"
+                                                                                  },
                                                                                   "clade_membership": {
                                                                                     "value": "3I_A.1.1"
                                                                                   }
@@ -8969,6 +9358,9 @@
                                                                                 "name": "OR394026.1|2019-11-22",
                                                                                 "node_attrs": {
                                                                                   "div": 0.12713407999999998,
+                                                                                  "country": {
+                                                                                    "value": "Sri Lanka"
+                                                                                  },
                                                                                   "clade_membership": {
                                                                                     "value": "3I_A.1.1"
                                                                                   }
@@ -9348,19 +9740,10 @@
                                                                                       "L880T",
                                                                                       "A898V",
                                                                                       "I899F"
-                                                                                    ],
-                                                                                    "pr": [
-                                                                                      "I37M",
-                                                                                      "L41F",
-                                                                                      "M44L",
-                                                                                      "D46E",
-                                                                                      "V49I",
-                                                                                      "K52N",
-                                                                                      "R88S"
                                                                                     ]
                                                                                   },
                                                                                   "labels": {
-                                                                                    "aa": "C: T8A, G9R, K10N, P11T, S12P, I13F, V19E; M: I37M, L41F, M44L, D46E, V49I, K52N, R88S, A96V, D104E, Q108E; NS1: V188I, E191N, Q205A, K206L, G208D, S209T, L212I, L217F, T222S, T224H, D240E, S246N, L247F, I251V, K272R, L275M, N278D, Y279F, I287V, N290D, T293N, V303A, H309T, M324R, I338L, N339K, M345L, K347N, S351T; NS2A: S2Y, K4Q, V5I, T9S, M10L, L15M, I17M, F27V, T80A, I83V, Q84R, F91L, E100R, L108F, D119N, A124T, L131M, A133V, L136I, I137V, T138R, F140M, I171N, R187K, L192I, M194L, T195A; NS2B: G7A, V8M, R23K, V26I, A29T; NS5: E252G, Q861K, L864Q, Q868N, F879Y, L880T, A898V, I899F; pr: I37M, L41F, M44L, D46E, V49I, K52N, R88S"
+                                                                                    "aa": "C: T8A, G9R, K10N, P11T, S12P, I13F, V19E; M: I37M, L41F, M44L, D46E, V49I, K52N, R88S, A96V, D104E, Q108E; NS1: V188I, E191N, Q205A, K206L, G208D, S209T, L212I, L217F, T222S, T224H, D240E, S246N, L247F, I251V, K272R, L275M, N278D, Y279F, I287V, N290D, T293N, V303A, H309T, M324R, I338L, N339K, M345L, K347N, S351T; NS2A: S2Y, K4Q, V5I, T9S, M10L, L15M, I17M, F27V, T80A, I83V, Q84R, F91L, E100R, L108F, D119N, A124T, L131M, A133V, L136I, I137V, T138R, F140M, I171N, R187K, L192I, M194L, T195A; NS2B: G7A, V8M, R23K, V26I, A29T; NS5: E252G, Q861K, L864Q, Q868N, F879Y, L880T, A898V, I899F"
                                                                                   }
                                                                                 }
                                                                               }
@@ -9595,14 +9978,11 @@
                         ],
                         "NS5": [
                           "R749K"
-                        ],
-                        "pr": [
-                          "T57A"
                         ]
                       },
                       "labels": {
-                        "aa": "M: T57A, T166A; NS2A: T195A; NS5: R749K; pr: T57A",
-                        "lineages": "3II"
+                        "aa": "M: T57A, T166A; NS2A: T195A; NS5: R749K",
+                        "lineage": "3II"
                       }
                     },
                     "children": [
@@ -9753,6 +10133,9 @@
                             "name": "OK469355.1|1973",
                             "node_attrs": {
                               "div": 0.06592852999999999,
+                              "country": {
+                                "value": "Myanmar"
+                              },
                               "clade_membership": {
                                 "value": "3II"
                               }
@@ -9779,6 +10162,9 @@
                             "name": "OK469356.1|1976",
                             "node_attrs": {
                               "div": 0.06552889999999999,
+                              "country": {
+                                "value": "Myanmar"
+                              },
                               "clade_membership": {
                                 "value": "3II"
                               }
@@ -9866,6 +10252,9 @@
                             "name": "KF955476.1|1983",
                             "node_attrs": {
                               "div": 0.06464159,
+                              "country": {
+                                "value": "Sri Lanka"
+                              },
                               "clade_membership": {
                                 "value": "3II"
                               }
@@ -10052,13 +10441,10 @@
                                   "H200Y",
                                   "N288S",
                                   "N876D"
-                                ],
-                                "pr": [
-                                  "H55L"
                                 ]
                               },
                               "labels": {
-                                "aa": "E: E154D; M: H55L; NS1: L178S, V188I; NS3: D324E, K589R; NS5: I50T, H200Y, N288S, N876D; pr: H55L"
+                                "aa": "E: E154D; M: H55L; NS1: L178S, V188I; NS3: D324E, K589R; NS5: I50T, H200Y, N288S, N876D"
                               }
                             },
                             "children": [
@@ -10066,6 +10452,9 @@
                                 "name": "OK469354.1|1989",
                                 "node_attrs": {
                                   "div": 0.07258408,
+                                  "country": {
+                                    "value": "Thailand"
+                                  },
                                   "clade_membership": {
                                     "value": "3II"
                                   }
@@ -10212,6 +10601,9 @@
                                         "name": "KJ737430.1|1983",
                                         "node_attrs": {
                                           "div": 0.06899516,
+                                          "country": {
+                                            "value": "Thailand"
+                                          },
                                           "clade_membership": {
                                             "value": "3II"
                                           }
@@ -10268,7 +10660,7 @@
                                           },
                                           "labels": {
                                             "aa": "E: A479V",
-                                            "lineages": "3II_B"
+                                            "lineage": "3II_B"
                                           }
                                         },
                                         "children": [
@@ -10276,6 +10668,9 @@
                                             "name": "KY586818.1|2007",
                                             "node_attrs": {
                                               "div": 0.08331846999999999,
+                                              "country": {
+                                                "value": "Thailand"
+                                              },
                                               "clade_membership": {
                                                 "value": "3II_B"
                                               }
@@ -10507,6 +10902,9 @@
                                                 "name": "AY496871.2|2002",
                                                 "node_attrs": {
                                                   "div": 0.08870421,
+                                                  "country": {
+                                                    "value": "Bangladesh"
+                                                  },
                                                   "clade_membership": {
                                                     "value": "3II_B"
                                                   }
@@ -10690,13 +11088,10 @@
                                                       "L679F",
                                                       "V785A",
                                                       "D876N"
-                                                    ],
-                                                    "pr": [
-                                                      "L55F"
                                                     ]
                                                   },
                                                   "labels": {
-                                                    "aa": "C: L103F; E: I81T, S124P, I172V; M: L55F, I156V; NS1: T125I, N290D; NS2A: H55N, L57F, V150I, P203S; NS3: T265P, A310T; NS4A: K76R, T81A; NS5: R248K, E286G, H287V, S289K, A424V, T542Q, L639P, K650E, L679F, V785A, D876N; pr: L55F"
+                                                    "aa": "C: L103F; E: I81T, S124P, I172V; M: L55F, I156V; NS1: T125I, N290D; NS2A: H55N, L57F, V150I, P203S; NS3: T265P, A310T; NS4A: K76R, T81A; NS5: R248K, E286G, H287V, S289K, A424V, T542Q, L639P, K650E, L679F, V785A, D876N"
                                                   }
                                                 }
                                               },
@@ -10776,6 +11171,9 @@
                                                     "name": "MW946664.1|2011",
                                                     "node_attrs": {
                                                       "div": 0.08795171,
+                                                      "country": {
+                                                        "value": "Thailand"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3II_B"
                                                       }
@@ -10947,6 +11345,9 @@
                                                         "name": "MF682971.1|2013-07-22",
                                                         "node_attrs": {
                                                           "div": 0.09277025,
+                                                          "country": {
+                                                            "value": "China"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_B"
                                                           }
@@ -11080,6 +11481,9 @@
                                                         "name": "KT424097.1|2014-08-28",
                                                         "node_attrs": {
                                                           "div": 0.09372133,
+                                                          "country": {
+                                                            "value": "Thailand"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_B"
                                                           }
@@ -11224,13 +11628,10 @@
                                                             ],
                                                             "NS5": [
                                                               "T649A"
-                                                            ],
-                                                            "pr": [
-                                                              "D89N"
                                                             ]
                                                           },
                                                           "labels": {
-                                                            "aa": "E: I81T; M: D89N; NS2A: I60V; NS3: G32W, T34N, Q35P, V36S, V38G, R64S, L65W, S71R, V72T, K74L, D75G, L76P, I77A, Y79W, C564R, K591N; NS4A: S1P; NS4B: V22I, V91L, P92S, L93P, L94V, A95C, G97A, C98S, Y99H, S100D; NS5: T649A; pr: D89N"
+                                                            "aa": "E: I81T; M: D89N; NS2A: I60V; NS3: G32W, T34N, Q35P, V36S, V38G, R64S, L65W, S71R, V72T, K74L, D75G, L76P, I77A, Y79W, C564R, K591N; NS4A: S1P; NS4B: V22I, V91L, P92S, L93P, L94V, A95C, G97A, C98S, Y99H, S100D; NS5: T649A"
                                                           }
                                                         }
                                                       }
@@ -11331,7 +11732,7 @@
                                       },
                                       "labels": {
                                         "aa": "E: S124P, A479V; M: A166T; NS2A: A133T, V180L, A195T, L215P; NS3: K399R",
-                                        "lineages": "3II_A"
+                                        "lineage": "3II_A"
                                       }
                                     },
                                     "children": [
@@ -11360,13 +11761,10 @@
                                             ],
                                             "M": [
                                               "G15A"
-                                            ],
-                                            "pr": [
-                                              "G15A"
                                             ]
                                           },
                                           "labels": {
-                                            "aa": "M: G15A; pr: G15A"
+                                            "aa": "M: G15A"
                                           }
                                         },
                                         "children": [
@@ -11374,6 +11772,9 @@
                                             "name": "MW946876.1|2003",
                                             "node_attrs": {
                                               "div": 0.08547805,
+                                              "country": {
+                                                "value": "Thailand"
+                                              },
                                               "clade_membership": {
                                                 "value": "3II_A"
                                               }
@@ -11526,6 +11927,9 @@
                                             "name": "MZ857226.1|1991-09-17",
                                             "node_attrs": {
                                               "div": 0.07558814999999999,
+                                              "country": {
+                                                "value": "Thailand"
+                                              },
                                               "clade_membership": {
                                                 "value": "3II_A"
                                               }
@@ -11668,6 +12072,9 @@
                                                 "name": "MW946924.1|1997",
                                                 "node_attrs": {
                                                   "div": 0.08062894,
+                                                  "country": {
+                                                    "value": "Thailand"
+                                                  },
                                                   "clade_membership": {
                                                     "value": "3II_A"
                                                   }
@@ -11742,7 +12149,7 @@
                                                   },
                                                   "labels": {
                                                     "aa": "C: F103I; NS2A: A54T",
-                                                    "lineages": "3II_A.5"
+                                                    "lineage": "3II_A.5"
                                                   }
                                                 },
                                                 "children": [
@@ -11750,6 +12157,9 @@
                                                     "name": "KY586777.1|1999",
                                                     "node_attrs": {
                                                       "div": 0.08258491999999999,
+                                                      "country": {
+                                                        "value": "Thailand"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3II_A.5"
                                                       }
@@ -11783,6 +12193,9 @@
                                                         "name": "MW946926.1|1999",
                                                         "node_attrs": {
                                                           "div": 0.08604195999999999,
+                                                          "country": {
+                                                            "value": "Thailand"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_A.5"
                                                           }
@@ -11935,6 +12348,9 @@
                                                             "name": "MN448977.1|2010-05-18",
                                                             "node_attrs": {
                                                               "div": 0.09272364999999999,
+                                                              "country": {
+                                                                "value": "Thailand"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3II_A.5"
                                                               }
@@ -12000,13 +12416,10 @@
                                                                 "NS5": [
                                                                   "Y200H",
                                                                   "D274G"
-                                                                ],
-                                                                "pr": [
-                                                                  "S72A"
                                                                 ]
                                                               },
                                                               "labels": {
-                                                                "aa": "E: I195V; M: S72A; NS3: R338K, D354E; NS5: Y200H, D274G; pr: S72A"
+                                                                "aa": "E: I195V; M: S72A; NS3: R338K, D354E; NS5: Y200H, D274G"
                                                               }
                                                             }
                                                           },
@@ -12035,6 +12448,9 @@
                                                                 "name": "KU509280.1|2011",
                                                                 "node_attrs": {
                                                                   "div": 0.09470730999999998,
+                                                                  "country": {
+                                                                    "value": "Thailand"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.5"
                                                                   }
@@ -12180,6 +12596,9 @@
                                                                     "name": "MW946934.1|2011",
                                                                     "node_attrs": {
                                                                       "div": 0.09552674999999998,
+                                                                      "country": {
+                                                                        "value": "Thailand"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.5"
                                                                       }
@@ -12262,6 +12681,9 @@
                                                                     "name": "MN448990.1|2011-12-27",
                                                                     "node_attrs": {
                                                                       "div": 0.09479490999999998,
+                                                                      "country": {
+                                                                        "value": "Thailand"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.5"
                                                                       }
@@ -12487,7 +12909,7 @@
                                                       },
                                                       "labels": {
                                                         "aa": "E: T81I; NS4A: H19Y",
-                                                        "lineages": "3II_A.1"
+                                                        "lineage": "3II_A.1"
                                                       }
                                                     },
                                                     "children": [
@@ -12495,6 +12917,9 @@
                                                         "name": "EU482456.1|2006",
                                                         "node_attrs": {
                                                           "div": 0.08775677,
+                                                          "country": {
+                                                            "value": "Vietnam"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_A.1"
                                                           }
@@ -12619,6 +13044,9 @@
                                                                 "name": "EU482462.1|2007",
                                                                 "node_attrs": {
                                                                   "div": 0.08809072999999999,
+                                                                  "country": {
+                                                                    "value": "Vietnam"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.1"
                                                                   }
@@ -12682,6 +13110,9 @@
                                                                 "name": "FJ432741.1|2007",
                                                                 "node_attrs": {
                                                                   "div": 0.08822953999999998,
+                                                                  "country": {
+                                                                    "value": "Vietnam"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.1"
                                                                   }
@@ -12764,6 +13195,9 @@
                                                                 "name": "EU660411.1|2006",
                                                                 "node_attrs": {
                                                                   "div": 0.08758545999999999,
+                                                                  "country": {
+                                                                    "value": "Vietnam"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.1"
                                                                   }
@@ -12829,6 +13263,9 @@
                                                                 "name": "EU482452.1|2006",
                                                                 "node_attrs": {
                                                                   "div": 0.08763231999999999,
+                                                                  "country": {
+                                                                    "value": "Vietnam"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.1"
                                                                   }
@@ -12941,6 +13378,9 @@
                                                         "name": "KF955461.1|1999",
                                                         "node_attrs": {
                                                           "div": 0.08151834999999999,
+                                                          "country": {
+                                                            "value": "Cambodia"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_A"
                                                           }
@@ -13018,7 +13458,7 @@
                                                           },
                                                           "labels": {
                                                             "aa": "E: N37S; NS5: K173R",
-                                                            "lineages": "3II_A.2"
+                                                            "lineage": "3II_A.2"
                                                           }
                                                         },
                                                         "children": [
@@ -13026,6 +13466,9 @@
                                                             "name": "FJ639715.1|2008",
                                                             "node_attrs": {
                                                               "div": 0.08831829999999999,
+                                                              "country": {
+                                                                "value": "Cambodia"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3II_A.2"
                                                               }
@@ -13173,6 +13616,9 @@
                                                                     "name": "KF955506.1|2007",
                                                                     "node_attrs": {
                                                                       "div": 0.08786416,
+                                                                      "country": {
+                                                                        "value": "Cambodia"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.2"
                                                                       }
@@ -13253,6 +13699,9 @@
                                                                     "name": "GU131903.1|2008",
                                                                     "node_attrs": {
                                                                       "div": 0.08803117999999999,
+                                                                      "country": {
+                                                                        "value": "Cambodia"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.2"
                                                                       }
@@ -13362,6 +13811,9 @@
                                                                     "name": "JF295012.1|2007",
                                                                     "node_attrs": {
                                                                       "div": 0.08822924999999998,
+                                                                      "country": {
+                                                                        "value": "Cambodia"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.2"
                                                                       }
@@ -13439,6 +13891,9 @@
                                                                     "name": "HM631854.1|2008",
                                                                     "node_attrs": {
                                                                       "div": 0.08922684999999998,
+                                                                      "country": {
+                                                                        "value": "Cambodia"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.2"
                                                                       }
@@ -13621,7 +14076,7 @@
                                                       },
                                                       "labels": {
                                                         "aa": "E: T51S; NS5: H547Y",
-                                                        "lineages": "3II_A.4"
+                                                        "lineage": "3II_A.4"
                                                       }
                                                     },
                                                     "children": [
@@ -13629,6 +14084,9 @@
                                                         "name": "MW946651.1|1997",
                                                         "node_attrs": {
                                                           "div": 0.08104170999999998,
+                                                          "country": {
+                                                            "value": "Thailand"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_A.4"
                                                           }
@@ -13673,6 +14131,9 @@
                                                             "name": "KY586721.1|2000",
                                                             "node_attrs": {
                                                               "div": 0.08370594999999997,
+                                                              "country": {
+                                                                "value": "Thailand"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3II_A.4"
                                                               }
@@ -13761,6 +14222,9 @@
                                                                 "name": "KY586724.1|2000",
                                                                 "node_attrs": {
                                                                   "div": 0.08425371999999998,
+                                                                  "country": {
+                                                                    "value": "Thailand"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.4"
                                                                   }
@@ -13818,6 +14282,9 @@
                                                                     "name": "MW946718.1|2001",
                                                                     "node_attrs": {
                                                                       "div": 0.08425478999999998,
+                                                                      "country": {
+                                                                        "value": "Thailand"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.4"
                                                                       }
@@ -13917,6 +14384,9 @@
                                                                         "name": "MW946819.1|1999",
                                                                         "node_attrs": {
                                                                           "div": 0.08632386999999998,
+                                                                          "country": {
+                                                                            "value": "Thailand"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3II_A.4"
                                                                           }
@@ -13943,6 +14413,9 @@
                                                                         "name": "MW946863.1|2003",
                                                                         "node_attrs": {
                                                                           "div": 0.08602722999999998,
+                                                                          "country": {
+                                                                            "value": "Thailand"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3II_A.4"
                                                                           }
@@ -13990,6 +14463,9 @@
                                                         "name": "MW946753.1|2003",
                                                         "node_attrs": {
                                                           "div": 0.08147857999999998,
+                                                          "country": {
+                                                            "value": "Thailand"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3II_A"
                                                           }
@@ -14120,6 +14596,9 @@
                                                             "name": "MW946629.1|1998",
                                                             "node_attrs": {
                                                               "div": 0.08226362999999999,
+                                                              "country": {
+                                                                "value": "Thailand"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3II_A"
                                                               }
@@ -14185,7 +14664,7 @@
                                                               },
                                                               "labels": {
                                                                 "aa": "E: A50V; NS3: N61H; NS4A: H19Y",
-                                                                "lineages": "3II_A.3"
+                                                                "lineage": "3II_A.3"
                                                               }
                                                             },
                                                             "children": [
@@ -14193,6 +14672,9 @@
                                                                 "name": "MW946820.1|2003",
                                                                 "node_attrs": {
                                                                   "div": 0.08462923999999998,
+                                                                  "country": {
+                                                                    "value": "Thailand"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3II_A.3"
                                                                   }
@@ -14265,6 +14747,9 @@
                                                                     "name": "KY586706.1|2006",
                                                                     "node_attrs": {
                                                                       "div": 0.08768974999999998,
+                                                                      "country": {
+                                                                        "value": "Thailand"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3II_A.3"
                                                                       }
@@ -14300,13 +14785,10 @@
                                                                         "NS3": [
                                                                           "S71N",
                                                                           "A310V"
-                                                                        ],
-                                                                        "pr": [
-                                                                          "L55F"
                                                                         ]
                                                                       },
                                                                       "labels": {
-                                                                        "aa": "M: L55F; NS2A: T138I; NS3: S71N, A310V; pr: L55F"
+                                                                        "aa": "M: L55F; NS2A: T138I; NS3: S71N, A310V"
                                                                       }
                                                                     }
                                                                   },
@@ -14348,6 +14830,9 @@
                                                                         "name": "KY586702.1|2008",
                                                                         "node_attrs": {
                                                                           "div": 0.08946586999999999,
+                                                                          "country": {
+                                                                            "value": "Thailand"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3II_A.3"
                                                                           }
@@ -14403,6 +14888,9 @@
                                                                             "name": "KY586704.1|2008",
                                                                             "node_attrs": {
                                                                               "div": 0.08946446999999999,
+                                                                              "country": {
+                                                                                "value": "Thailand"
+                                                                              },
                                                                               "clade_membership": {
                                                                                 "value": "3II_A.3"
                                                                               }
@@ -14454,6 +14942,9 @@
                                                                             "name": "MW946622.1|2006",
                                                                             "node_attrs": {
                                                                               "div": 0.08877348999999998,
+                                                                              "country": {
+                                                                                "value": "Thailand"
+                                                                              },
                                                                               "clade_membership": {
                                                                                 "value": "3II_A.3"
                                                                               }
@@ -14692,7 +15183,7 @@
                       },
                       "labels": {
                         "aa": "2K: V21I; C: R35K, M108I, T112A; E: I81V, H132Y, L301T, I452V; NS1: I93T, H256Y, N339S; NS3: I115T, V356A, E568Q; NS5: R422K, K585T, D835N, L864P",
-                        "lineages": "3III"
+                        "lineage": "3III"
                       }
                     },
                     "children": [
@@ -14700,6 +15191,9 @@
                         "name": "JQ922555.1|1966",
                         "node_attrs": {
                           "div": 0.07201225,
+                          "country": {
+                            "value": "India"
+                          },
                           "clade_membership": {
                             "value": "3III"
                           }
@@ -15191,7 +15685,7 @@
                               },
                               "labels": {
                                 "aa": "E: T219A; NS5: I72V, T553I, S629T, D820E",
-                                "lineages": "3III_A"
+                                "lineage": "3III_A"
                               }
                             },
                             "children": [
@@ -15199,6 +15693,9 @@
                                 "name": "FJ882573.1|1993",
                                 "node_attrs": {
                                   "div": 0.08348977999999999,
+                                  "country": {
+                                    "value": "Sri Lanka"
+                                  },
                                   "clade_membership": {
                                     "value": "3III_A"
                                   }
@@ -15412,7 +15909,7 @@
                                       },
                                       "labels": {
                                         "aa": "NS2A: F19Y; NS5: K698R",
-                                        "lineages": "3III_A.2"
+                                        "lineage": "3III_A.2"
                                       }
                                     },
                                     "children": [
@@ -15420,6 +15917,9 @@
                                         "name": "OP410993.1|2008-09",
                                         "node_attrs": {
                                           "div": 0.09282217999999999,
+                                          "country": {
+                                            "value": "Singapore"
+                                          },
                                           "clade_membership": {
                                             "value": "3III_A.2"
                                           }
@@ -15560,6 +16060,9 @@
                                             "name": "MG721059.2|2016",
                                             "node_attrs": {
                                               "div": 0.09928142,
+                                              "country": {
+                                                "value": "India"
+                                              },
                                               "clade_membership": {
                                                 "value": "3III_A.2"
                                               }
@@ -15744,6 +16247,9 @@
                                                 "name": "LT996904.1|2007",
                                                 "node_attrs": {
                                                   "div": 0.09476665,
+                                                  "country": {
+                                                    "value": "Malaysia"
+                                                  },
                                                   "clade_membership": {
                                                     "value": "3III_A.2"
                                                   }
@@ -15836,6 +16342,9 @@
                                                     "name": "MH048677.1|2014-12",
                                                     "node_attrs": {
                                                       "div": 0.09688111999999999,
+                                                      "country": {
+                                                        "value": "Malaysia"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_A.2"
                                                       }
@@ -15914,6 +16423,9 @@
                                                     "name": "KJ830751.1|2014-01-26",
                                                     "node_attrs": {
                                                       "div": 0.09702717,
+                                                      "country": {
+                                                        "value": "Saudi Arabia"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_A.2"
                                                       }
@@ -16027,6 +16539,9 @@
                                         "name": "DQ675533.1|1999",
                                         "node_attrs": {
                                           "div": 0.08782409,
+                                          "country": {
+                                            "value": "Taiwan"
+                                          },
                                           "clade_membership": {
                                             "value": "3III_A"
                                           }
@@ -16136,7 +16651,7 @@
                                           },
                                           "labels": {
                                             "aa": "NS5: S895L",
-                                            "lineages": "3III_A.1"
+                                            "lineage": "3III_A.1"
                                           }
                                         },
                                         "children": [
@@ -16144,6 +16659,9 @@
                                             "name": "KU509283.1|2006",
                                             "node_attrs": {
                                               "div": 0.09284721,
+                                              "country": {
+                                                "value": "Sri Lanka"
+                                              },
                                               "clade_membership": {
                                                 "value": "3III_A.1"
                                               }
@@ -16309,6 +16827,9 @@
                                                     "name": "EU081210.1|2005",
                                                     "node_attrs": {
                                                       "div": 0.09070969999999999,
+                                                      "country": {
+                                                        "value": "Singapore"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_A.1"
                                                       }
@@ -16333,13 +16854,10 @@
                                                         ],
                                                         "M": [
                                                           "N17S"
-                                                        ],
-                                                        "pr": [
-                                                          "N17S"
                                                         ]
                                                       },
                                                       "labels": {
-                                                        "aa": "E: P83L, V459A; M: N17S; pr: N17S"
+                                                        "aa": "E: P83L, V459A; M: N17S"
                                                       }
                                                     }
                                                   },
@@ -16347,6 +16865,9 @@
                                                     "name": "EU081217.1|2005",
                                                     "node_attrs": {
                                                       "div": 0.09071252999999999,
+                                                      "country": {
+                                                        "value": "Singapore"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_A.1"
                                                       }
@@ -16395,6 +16916,9 @@
                                                     "name": "EU081225.1|2005",
                                                     "node_attrs": {
                                                       "div": 0.09061254999999999,
+                                                      "country": {
+                                                        "value": "Singapore"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_A.1"
                                                       }
@@ -16430,6 +16954,9 @@
                                                     "name": "EU081214.1|2005",
                                                     "node_attrs": {
                                                       "div": 0.09060925999999998,
+                                                      "country": {
+                                                        "value": "Singapore"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_A.1"
                                                       }
@@ -16635,7 +17162,7 @@
                                   },
                                   "labels": {
                                     "aa": "E: A329V; NS1: T93I; NS3: H60Y; NS5: P365S, K371R, E374G, R389K, E429D, V619I",
-                                    "lineages": "3III_C"
+                                    "lineage": "3III_C"
                                   }
                                 },
                                 "children": [
@@ -16643,6 +17170,9 @@
                                     "name": "FJ882576.1|1994",
                                     "node_attrs": {
                                       "div": 0.0863496,
+                                      "country": {
+                                        "value": "Nicaragua"
+                                      },
                                       "clade_membership": {
                                         "value": "3III_C"
                                       }
@@ -16758,6 +17288,9 @@
                                             "name": "GQ199886.1|1998",
                                             "node_attrs": {
                                               "div": 0.0871567,
+                                              "country": {
+                                                "value": "Nicaragua"
+                                              },
                                               "clade_membership": {
                                                 "value": "3III_C"
                                               }
@@ -16872,7 +17405,7 @@
                                               },
                                               "labels": {
                                                 "aa": "NS4A: R39K",
-                                                "lineages": "3III_C.1"
+                                                "lineage": "3III_C.1"
                                               }
                                             },
                                             "children": [
@@ -16880,6 +17413,9 @@
                                                 "name": "FJ547081.1|2001",
                                                 "node_attrs": {
                                                   "div": 0.08741493,
+                                                  "country": {
+                                                    "value": "USA"
+                                                  },
                                                   "clade_membership": {
                                                     "value": "3III_C.1"
                                                   }
@@ -16955,6 +17491,9 @@
                                                     "name": "EU596494.1|2007",
                                                     "node_attrs": {
                                                       "div": 0.09401776,
+                                                      "country": {
+                                                        "value": "USA"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_C.1"
                                                       }
@@ -17069,13 +17608,10 @@
                                                         "NS5": [
                                                           "S629T",
                                                           "P639S"
-                                                        ],
-                                                        "pr": [
-                                                          "T57A"
                                                         ]
                                                       },
                                                       "labels": {
-                                                        "aa": "E: A265S, V329A; M: T57A, I156V; NS1: M2T, I71V; NS2A: T189S; NS2B: Q129R; NS3: K249R; NS5: S629T, P639S; pr: T57A"
+                                                        "aa": "E: A265S, V329A; M: T57A, I156V; NS1: M2T, I71V; NS2A: T189S; NS2B: Q129R; NS3: K249R; NS5: S629T, P639S"
                                                       }
                                                     }
                                                   },
@@ -17122,6 +17658,9 @@
                                                         "name": "GQ868578.1|2007",
                                                         "node_attrs": {
                                                           "div": 0.09494872,
+                                                          "country": {
+                                                            "value": "Colombia"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3III_C.1"
                                                           }
@@ -17322,6 +17861,9 @@
                                                             "name": "OQ603311.1|2015",
                                                             "node_attrs": {
                                                               "div": 0.10114816,
+                                                              "country": {
+                                                                "value": "Colombia"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3III_C.1"
                                                               }
@@ -17491,6 +18033,9 @@
                                                                 "name": "OQ821502.1|2021-08-12",
                                                                 "node_attrs": {
                                                                   "div": 0.10268058,
+                                                                  "country": {
+                                                                    "value": "Colombia"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_C.1"
                                                                   }
@@ -17593,6 +18138,9 @@
                                                                 "name": "OQ603309.1|2015-09-15",
                                                                 "node_attrs": {
                                                                   "div": 0.10265396,
+                                                                  "country": {
+                                                                    "value": "Colombia"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_C.1"
                                                                   }
@@ -17719,6 +18267,9 @@
                                             "name": "FJ898440.1|2003",
                                             "node_attrs": {
                                               "div": 0.08953438999999999,
+                                              "country": {
+                                                "value": "Mexico"
+                                              },
                                               "clade_membership": {
                                                 "value": "3III_C"
                                               }
@@ -17865,7 +18416,7 @@
                                               },
                                               "labels": {
                                                 "aa": "NS1: Y256H; NS2A: T195A; NS2B: V59I",
-                                                "lineages": "3III_C.2"
+                                                "lineage": "3III_C.2"
                                               }
                                             },
                                             "children": [
@@ -17914,6 +18465,9 @@
                                                     "name": "OK605762.1|2007",
                                                     "node_attrs": {
                                                       "div": 0.09480858,
+                                                      "country": {
+                                                        "value": "Paraguay"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_C.2"
                                                       }
@@ -18078,13 +18632,10 @@
                                                         ],
                                                         "M": [
                                                           "H86R"
-                                                        ],
-                                                        "pr": [
-                                                          "H86R"
                                                         ]
                                                       },
                                                       "labels": {
-                                                        "aa": "E: K325R; M: H86R; pr: H86R"
+                                                        "aa": "E: K325R; M: H86R"
                                                       }
                                                     },
                                                     "children": [
@@ -18092,6 +18643,9 @@
                                                         "name": "JX669491.1|2002",
                                                         "node_attrs": {
                                                           "div": 0.08869782000000001,
+                                                          "country": {
+                                                            "value": "Brazil"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3III_C.2"
                                                           }
@@ -18154,7 +18708,7 @@
                                                           },
                                                           "labels": {
                                                             "aa": "E: V459I; NS2A: A54T; NS3: V209I",
-                                                            "lineages": "3III_C.2.2"
+                                                            "lineage": "3III_C.2.2"
                                                           }
                                                         },
                                                         "children": [
@@ -18162,6 +18716,9 @@
                                                             "name": "GU131870.1|2007",
                                                             "node_attrs": {
                                                               "div": 0.09244983,
+                                                              "country": {
+                                                                "value": "Brazil"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3III_C.2.2"
                                                               }
@@ -18228,6 +18785,9 @@
                                                                 "name": "MH888333.1|2011-01-01",
                                                                 "node_attrs": {
                                                                   "div": 0.09579278,
+                                                                  "country": {
+                                                                    "value": "Bolivia"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_C.2.2"
                                                                   }
@@ -18335,6 +18895,9 @@
                                                                     "name": "GU131861.1|2007",
                                                                     "node_attrs": {
                                                                       "div": 0.09283744,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3III_C.2.2"
                                                                       }
@@ -18418,6 +18981,9 @@
                                                                         "name": "GU131876.1|2007",
                                                                         "node_attrs": {
                                                                           "div": 0.09342784999999999,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_C.2.2"
                                                                           }
@@ -18435,6 +19001,9 @@
                                                                         "name": "GU131872.1|2007",
                                                                         "node_attrs": {
                                                                           "div": 0.09421571,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_C.2.2"
                                                                           }
@@ -18514,6 +19083,9 @@
                                                     "name": "OQ603310.1|2015",
                                                     "node_attrs": {
                                                       "div": 0.09918218000000001,
+                                                      "country": {
+                                                        "value": "Colombia"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_C.2"
                                                       }
@@ -18700,6 +19272,9 @@
                                                         "name": "EU854292.1|2005",
                                                         "node_attrs": {
                                                           "div": 0.09153845000000001,
+                                                          "country": {
+                                                            "value": "Venezuela"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3III_C.2"
                                                           }
@@ -18836,7 +19411,7 @@
                                                           },
                                                           "labels": {
                                                             "aa": "E: A81T; NS1: A146V; NS3: D613E; NS5: E24D",
-                                                            "lineages": "3III_C.2.1"
+                                                            "lineage": "3III_C.2.1"
                                                           }
                                                         },
                                                         "children": [
@@ -18856,6 +19431,9 @@
                                                                 "name": "MZ008474.1|2013",
                                                                 "node_attrs": {
                                                                   "div": 0.09716489,
+                                                                  "country": {
+                                                                    "value": "Nicaragua"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_C.2.1"
                                                                   }
@@ -18946,6 +19524,9 @@
                                                                 "name": "MZ008472.1|2013",
                                                                 "node_attrs": {
                                                                   "div": 0.09682492000000001,
+                                                                  "country": {
+                                                                    "value": "Nicaragua"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_C.2.1"
                                                                   }
@@ -19079,6 +19660,9 @@
                                                                 "name": "MZ008476.1|2014",
                                                                 "node_attrs": {
                                                                   "div": 0.09943026,
+                                                                  "country": {
+                                                                    "value": "Nicaragua"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_C.2.1"
                                                                   }
@@ -19172,16 +19756,10 @@
                                                                     ],
                                                                     "NS5": [
                                                                       "K749R"
-                                                                    ],
-                                                                    "pr": [
-                                                                      "M44P",
-                                                                      "D46H",
-                                                                      "D47H",
-                                                                      "V49F"
                                                                     ]
                                                                   },
                                                                   "labels": {
-                                                                    "aa": "C: N3Y; E: I172T; M: M44P, D46H, D47H, V49F; NS1: I94T, M109I, K120R; NS2A: M110I; NS2B: A65T; NS3: V36I; NS4B: L112P; NS5: K749R; pr: M44P, D46H, D47H, V49F"
+                                                                    "aa": "C: N3Y; E: I172T; M: M44P, D46H, D47H, V49F; NS1: I94T, M109I, K120R; NS2A: M110I; NS2B: A65T; NS3: V36I; NS4B: L112P; NS5: K749R"
                                                                   }
                                                                 }
                                                               },
@@ -19258,6 +19836,9 @@
                                                                     "name": "MW308181.1|2019-08-22",
                                                                     "node_attrs": {
                                                                       "div": 0.10234994,
+                                                                      "country": {
+                                                                        "value": "Mexico"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3III_C.2.1"
                                                                       }
@@ -19395,6 +19976,9 @@
                                                                         "name": "OM417341.1|2021-09-19",
                                                                         "node_attrs": {
                                                                           "div": 0.10411541,
+                                                                          "country": {
+                                                                            "value": "Mexico"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_C.2.1"
                                                                           }
@@ -19437,6 +20021,9 @@
                                                                         "name": "OM417340.1|2021-09-21",
                                                                         "node_attrs": {
                                                                           "div": 0.10466203,
+                                                                          "country": {
+                                                                            "value": "Mexico"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_C.2.1"
                                                                           }
@@ -19669,7 +20256,7 @@
                                   },
                                   "labels": {
                                     "aa": "NS1: L178M; NS3: F31L; NS4B: M151I; NS5: I50T, T188A, Q562L",
-                                    "lineages": "3III_B"
+                                    "lineage": "3III_B"
                                   }
                                 },
                                 "children": [
@@ -19750,6 +20337,9 @@
                                         "name": "GQ466079.1|2008",
                                         "node_attrs": {
                                           "div": 0.09282439999999999,
+                                          "country": {
+                                            "value": "India"
+                                          },
                                           "clade_membership": {
                                             "value": "3III_B"
                                           }
@@ -19790,6 +20380,9 @@
                                         "name": "FJ644564.1|2007",
                                         "node_attrs": {
                                           "div": 0.09114420999999999,
+                                          "country": {
+                                            "value": "India"
+                                          },
                                           "clade_membership": {
                                             "value": "3III_B"
                                           }
@@ -19875,7 +20468,7 @@
                                           },
                                           "labels": {
                                             "aa": "C: K86R; NS3: D392E",
-                                            "lineages": "3III_B.1"
+                                            "lineage": "3III_B.1"
                                           }
                                         },
                                         "children": [
@@ -19883,6 +20476,9 @@
                                             "name": "JQ922556.1|2005",
                                             "node_attrs": {
                                               "div": 0.09446548999999999,
+                                              "country": {
+                                                "value": "India"
+                                              },
                                               "clade_membership": {
                                                 "value": "3III_B.1"
                                               }
@@ -20008,6 +20604,9 @@
                                                     "name": "MG721064.1|2016",
                                                     "node_attrs": {
                                                       "div": 0.09958200999999998,
+                                                      "country": {
+                                                        "value": "India"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_B.1"
                                                       }
@@ -20124,6 +20723,9 @@
                                                     "name": "JQ922557.1|2005",
                                                     "node_attrs": {
                                                       "div": 0.10225098999999999,
+                                                      "country": {
+                                                        "value": "India"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_B.1"
                                                       }
@@ -20392,6 +20994,9 @@
                                                     "name": "MN018378.1|2015-09-30",
                                                     "node_attrs": {
                                                       "div": 0.10508842999999998,
+                                                      "country": {
+                                                        "value": "China"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_B.1"
                                                       }
@@ -20532,14 +21137,10 @@
                                                           "K656R",
                                                           "I670T",
                                                           "I899F"
-                                                        ],
-                                                        "pr": [
-                                                          "H55P",
-                                                          "T57A"
                                                         ]
                                                       },
                                                       "labels": {
-                                                        "aa": "E: V236G, E360L, E361F; M: H55P, T57A; NS1: K9N, G10R, K14L; NS2A: M10I, H31Y, M32R, I33F, M132D; NS3: G238E; NS4A: T54R, I86L; NS4B: I120Y, A129G, T130Q, R131N, M184K; NS5: T155I, I524T, S629L, E653K, R654W, L655N, K656R, I670T, I899F; pr: H55P, T57A"
+                                                        "aa": "E: V236G, E360L, E361F; M: H55P, T57A; NS1: K9N, G10R, K14L; NS2A: M10I, H31Y, M32R, I33F, M132D; NS3: G238E; NS4A: T54R, I86L; NS4B: I120Y, A129G, T130Q, R131N, M184K; NS5: T155I, I524T, S629L, E653K, R654W, L655N, K656R, I670T, I899F"
                                                       }
                                                     }
                                                   },
@@ -20719,6 +21320,9 @@
                                                         "name": "MN018375.1|2015-10-23",
                                                         "node_attrs": {
                                                           "div": 0.10606765999999998,
+                                                          "country": {
+                                                            "value": "China"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3III_B.1"
                                                           }
@@ -20840,16 +21444,10 @@
                                                               "G81R",
                                                               "T587N",
                                                               "D732G"
-                                                            ],
-                                                            "pr": [
-                                                              "M44K",
-                                                              "C45W",
-                                                              "D46Y",
-                                                              "Y51W"
                                                             ]
                                                           },
                                                           "labels": {
-                                                            "aa": "2K: Q6K; E: K391N, G393H, S395T; M: M44K, C45W, D46Y, Y51W, I154V, T162A; NS1: Y323S; NS2A: F40A, L42S, L43D, L44S, M132N; NS2B: V70A, K126R; NS3: P113Q, K358Q; NS4A: G66D; NS4B: A197D, T198S; NS5: D79R, L80P, G81R, T587N, D732G; pr: M44K, C45W, D46Y, Y51W"
+                                                            "aa": "2K: Q6K; E: K391N, G393H, S395T; M: M44K, C45W, D46Y, Y51W, I154V, T162A; NS1: Y323S; NS2A: F40A, L42S, L43D, L44S, M132N; NS2B: V70A, K126R; NS3: P113Q, K358Q; NS4A: G66D; NS4B: A197D, T198S; NS5: D79R, L80P, G81R, T587N, D732G"
                                                           }
                                                         }
                                                       }
@@ -20881,6 +21479,9 @@
                                             "name": "MZ544587.1|2019-03",
                                             "node_attrs": {
                                               "div": 0.10419274999999999,
+                                              "country": {
+                                                "value": "Kenya"
+                                              },
                                               "clade_membership": {
                                                 "value": "3III_B"
                                               }
@@ -21068,14 +21669,10 @@
                                                   "A266V",
                                                   "N288S",
                                                   "S895L"
-                                                ],
-                                                "pr": [
-                                                  "N17K",
-                                                  "I31T"
                                                 ]
                                               },
                                               "labels": {
-                                                "aa": "E: Y132H, G340E, V377I; M: N17K, I31T; NS3: V258I, K590R; NS4A: S15T; NS5: A266V, N288S, S895L; pr: N17K, I31T"
+                                                "aa": "E: Y132H, G340E, V377I; M: N17K, I31T; NS3: V258I, K590R; NS4A: S15T; NS5: A266V, N288S, S895L"
                                               }
                                             }
                                           },
@@ -21138,6 +21735,9 @@
                                                     "name": "KU509286.1|2011",
                                                     "node_attrs": {
                                                       "div": 0.10135362999999997,
+                                                      "country": {
+                                                        "value": "India"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_B"
                                                       }
@@ -21392,7 +21992,7 @@
                                                       },
                                                       "labels": {
                                                         "aa": "NS2A: V41M, L114I; NS3: A452V; NS4B: I115V; NS5: K281R",
-                                                        "lineages": "3III_B.2"
+                                                        "lineage": "3III_B.2"
                                                       }
                                                     },
                                                     "children": [
@@ -21416,6 +22016,9 @@
                                                             "name": "LC379197.1|2017-04-15",
                                                             "node_attrs": {
                                                               "div": 0.09975438999999997,
+                                                              "country": {
+                                                                "value": "Gabon"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3III_B.2"
                                                               }
@@ -21524,6 +22127,9 @@
                                                             "name": "KU509282.1|2009",
                                                             "node_attrs": {
                                                               "div": 0.09729345999999997,
+                                                              "country": {
+                                                                "value": "Senegal"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3III_B.2"
                                                               }
@@ -21693,6 +22299,9 @@
                                                             "name": "MT261977.1|2017-10-12",
                                                             "node_attrs": {
                                                               "div": 0.10397558999999998,
+                                                              "country": {
+                                                                "value": "Burkina Faso"
+                                                              },
                                                               "clade_membership": {
                                                                 "value": "3III_B.2"
                                                               }
@@ -21812,6 +22421,9 @@
                                                                 "name": "MW288031.1|2018-11",
                                                                 "node_attrs": {
                                                                   "div": 0.10320997999999998,
+                                                                  "country": {
+                                                                    "value": "Senegal"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_B.2"
                                                                   }
@@ -21869,13 +22481,10 @@
                                                                     ],
                                                                     "NS5": [
                                                                       "K46R"
-                                                                    ],
-                                                                    "pr": [
-                                                                      "V59A"
                                                                     ]
                                                                   },
                                                                   "labels": {
-                                                                    "aa": "E: T198I; M: V59A; NS1: Y175H; NS2A: F37L, I137T; NS4B: P24Q, V175I, I201M; NS5: K46R; pr: V59A"
+                                                                    "aa": "E: T198I; M: V59A; NS1: Y175H; NS2A: F37L, I137T; NS4B: P24Q, V175I, I201M; NS5: K46R"
                                                                   }
                                                                 }
                                                               },
@@ -21883,6 +22492,9 @@
                                                                 "name": "MN964273.1|2019-11-09",
                                                                 "node_attrs": {
                                                                   "div": 0.10372836999999997,
+                                                                  "country": {
+                                                                    "value": "China"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_B.2"
                                                                   }
@@ -22041,7 +22653,7 @@
                                                   },
                                                   "labels": {
                                                     "aa": "2K: L17M; NS3: E43D; NS4B: I115V; NS5: V830I",
-                                                    "lineages": "3III_B.3"
+                                                    "lineage": "3III_B.3"
                                                   }
                                                 },
                                                 "children": [
@@ -22049,6 +22661,9 @@
                                                     "name": "OQ721955.1|2022",
                                                     "node_attrs": {
                                                       "div": 0.10393035999999999,
+                                                      "country": {
+                                                        "value": "India"
+                                                      },
                                                       "clade_membership": {
                                                         "value": "3III_B.3"
                                                       }
@@ -22198,6 +22813,9 @@
                                                         "name": "KX380841.1|2012",
                                                         "node_attrs": {
                                                           "div": 0.09629957999999998,
+                                                          "country": {
+                                                            "value": "Singapore"
+                                                          },
                                                           "clade_membership": {
                                                             "value": "3III_B.3"
                                                           }
@@ -22308,7 +22926,7 @@
                                                               },
                                                               "labels": {
                                                                 "aa": "NS2A: T142I; NS2B: E64D",
-                                                                "lineages": "3III_B.3.1"
+                                                                "lineage": "3III_B.3.1"
                                                               }
                                                             },
                                                             "children": [
@@ -22316,6 +22934,9 @@
                                                                 "name": "ON123658.1|2019",
                                                                 "node_attrs": {
                                                                   "div": 0.10298358999999999,
+                                                                  "country": {
+                                                                    "value": "India"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_B.3.1"
                                                                   }
@@ -22413,6 +23034,9 @@
                                                                         "name": "OQ821609.1|2019-11-06",
                                                                         "node_attrs": {
                                                                           "div": 0.10389567,
+                                                                          "country": {
+                                                                            "value": "Jamaica"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_B.3.1"
                                                                           }
@@ -22481,6 +23105,9 @@
                                                                         "name": "OQ821611.1|2020-11-07",
                                                                         "node_attrs": {
                                                                           "div": 0.10406897999999999,
+                                                                          "country": {
+                                                                            "value": "Saint Lucia"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_B.3.1"
                                                                           }
@@ -22551,14 +23178,10 @@
                                                                             "NS5": [
                                                                               "A616V",
                                                                               "I717V"
-                                                                            ],
-                                                                            "pr": [
-                                                                              "A28P",
-                                                                              "H86R"
                                                                             ]
                                                                           },
                                                                           "labels": {
-                                                                            "aa": "C: L105F; M: A28P, H86R; NS1: T293A; NS2A: L89M; NS5: A616V, I717V; pr: A28P, H86R"
+                                                                            "aa": "C: L105F; M: A28P, H86R; NS1: T293A; NS2A: L89M; NS5: A616V, I717V"
                                                                           }
                                                                         }
                                                                       }
@@ -22635,6 +23258,9 @@
                                                                         "name": "ON900159.1|2019-06-01",
                                                                         "node_attrs": {
                                                                           "div": 0.1086953,
+                                                                          "country": {
+                                                                            "value": "China"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_B.3.1"
                                                                           }
@@ -22724,6 +23350,9 @@
                                                                         "name": "OQ948474.1|2019-09",
                                                                         "node_attrs": {
                                                                           "div": 0.11314566999999999,
+                                                                          "country": {
+                                                                            "value": "China"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_B.3.1"
                                                                           }
@@ -22834,13 +23463,10 @@
                                                                             ],
                                                                             "NS5": [
                                                                               "I78M"
-                                                                            ],
-                                                                            "pr": [
-                                                                              "H55L"
                                                                             ]
                                                                           },
                                                                           "labels": {
-                                                                            "aa": "E: V81I, I158V, T169V, T301L, N383K, A479V; M: H55L; NS1: T93I; NS5: I78M; pr: H55L"
+                                                                            "aa": "E: V81I, I158V, T169V, T301L, N383K, A479V; M: H55L; NS1: T93I; NS5: I78M"
                                                                           }
                                                                         }
                                                                       }
@@ -22922,6 +23548,9 @@
                                                                 "name": "ON123655.1|2020",
                                                                 "node_attrs": {
                                                                   "div": 0.10605928999999999,
+                                                                  "country": {
+                                                                    "value": "India"
+                                                                  },
                                                                   "clade_membership": {
                                                                     "value": "3III_B.3"
                                                                   }
@@ -23066,6 +23695,9 @@
                                                                     "name": "OP895705.1|2018",
                                                                     "node_attrs": {
                                                                       "div": 0.11268805,
+                                                                      "country": {
+                                                                        "value": "India"
+                                                                      },
                                                                       "clade_membership": {
                                                                         "value": "3III_B.3"
                                                                       }
@@ -23250,6 +23882,9 @@
                                                                         "name": "ON123669.1|2018",
                                                                         "node_attrs": {
                                                                           "div": 0.1028433,
+                                                                          "country": {
+                                                                            "value": "India"
+                                                                          },
                                                                           "clade_membership": {
                                                                             "value": "3III_B.3"
                                                                           }
@@ -23286,13 +23921,10 @@
                                                                             "NS5": [
                                                                               "H547R",
                                                                               "E653D"
-                                                                            ],
-                                                                            "pr": [
-                                                                              "L24F"
                                                                             ]
                                                                           },
                                                                           "labels": {
-                                                                            "aa": "M: L24F; NS2A: I127V; NS3: D43E; NS5: H547R, E653D; pr: L24F"
+                                                                            "aa": "M: L24F; NS2A: I127V; NS3: D43E; NS5: H547R, E653D"
                                                                           }
                                                                         }
                                                                       },
@@ -23338,7 +23970,7 @@
                                                                           },
                                                                           "labels": {
                                                                             "aa": "NS2A: M186L; NS5: P864S",
-                                                                            "lineages": "3III_B.3.2"
+                                                                            "lineage": "3III_B.3.2"
                                                                           }
                                                                         },
                                                                         "children": [
@@ -23346,6 +23978,9 @@
                                                                             "name": "OQ836209.1|2023-01-24",
                                                                             "node_attrs": {
                                                                               "div": 0.10531952,
+                                                                              "country": {
+                                                                                "value": "Puerto Rico"
+                                                                              },
                                                                               "clade_membership": {
                                                                                 "value": "3III_B.3.2"
                                                                               }
@@ -23413,6 +24048,9 @@
                                                                                 "name": "OR150749.1|2023-01-06",
                                                                                 "node_attrs": {
                                                                                   "div": 0.10481905,
+                                                                                  "country": {
+                                                                                    "value": "USA"
+                                                                                  },
                                                                                   "clade_membership": {
                                                                                     "value": "3III_B.3.2"
                                                                                   }
@@ -23471,6 +24109,9 @@
                                                                                     "name": "OQ821520.1|2022-08-18",
                                                                                     "node_attrs": {
                                                                                       "div": 0.10500043,
+                                                                                      "country": {
+                                                                                        "value": "Cuba"
+                                                                                      },
                                                                                       "clade_membership": {
                                                                                         "value": "3III_B.3.2"
                                                                                       }
@@ -23529,6 +24170,9 @@
                                                                                         "name": "OQ857506.1|2022-10-05",
                                                                                         "node_attrs": {
                                                                                           "div": 0.10508479,
+                                                                                          "country": {
+                                                                                            "value": "USA"
+                                                                                          },
                                                                                           "clade_membership": {
                                                                                             "value": "3III_B.3.2"
                                                                                           }
@@ -23566,6 +24210,9 @@
                                                                                         "name": "OR150747.1|2022-12-23",
                                                                                         "node_attrs": {
                                                                                           "div": 0.10501596,
+                                                                                          "country": {
+                                                                                            "value": "USA"
+                                                                                          },
                                                                                           "clade_membership": {
                                                                                             "value": "3III_B.3.2"
                                                                                           }

@@ -1,8 +1,8 @@
 {
   "attributes": {
-    "name": "DENV-2 lineages",
-    "reference accession": "NC_001474.2",
-    "reference name": "NC_001474"
+    "name": "DENV-1 lineages",
+    "reference accession": "NC_001477.1",
+    "reference name": "Nauru/NMRI-45AZ5PDK-0/1974"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -42,9 +42,9 @@
       "mixedSitesThreshold": 8
     },
     "privateMutations": {
-      "cutoff": 216,
+      "cutoff": 168,
       "enabled": true,
-      "typical": 72,
+      "typical": 56,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
