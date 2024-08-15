@@ -109708,22 +109708,22 @@
       "nMinimizers": 544
     },
     {
-      "name": "community/v-gen-lab/dengue-lineages/all-serotypes/denv1",
+      "name": "community/v-gen-lab/dengue/denv1",
       "length": 10735,
       "nMinimizers": 698
     },
     {
-      "name": "community/v-gen-lab/dengue-lineages/all-serotypes/denv2",
+      "name": "community/v-gen-lab/dengue/denv2",
       "length": 10723,
       "nMinimizers": 656
     },
     {
-      "name": "community/v-gen-lab/dengue-lineages/all-serotypes/denv3",
+      "name": "community/v-gen-lab/dengue/denv3",
       "length": 10707,
       "nMinimizers": 709
     },
     {
-      "name": "community/v-gen-lab/dengue-lineages/all-serotypes/denv4",
+      "name": "community/v-gen-lab/dengue/denv4",
       "length": 10649,
       "nMinimizers": 682
     },
