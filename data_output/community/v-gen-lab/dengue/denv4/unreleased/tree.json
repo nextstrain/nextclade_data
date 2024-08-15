@@ -226,77 +226,25 @@
       {
         "key": "country",
         "demes": {
-          "Puerto Rico": {
-            "latitude": 18.2459121,
-            "longitude": -66.4164147
-          },
-          "Taiwan": {
-            "latitude": 23.6978,
-            "longitude": 120.9605
-          },
-          "Senegal": {
-            "latitude": 14.5,
-            "longitude": -14.25
-          },
-          "Sri Lanka": {
-            "latitude": 7.75,
-            "longitude": 80.75
-          },
-          "Vietnam": {
-            "latitude": 16.16667,
-            "longitude": 107.83333
-          },
-          "El Salvador": {
-            "latitude": 13.68935,
-            "longitude": -89.18718
+          "Colombia": {
+            "latitude": 2.893108,
+            "longitude": -73.7845142
           },
           "Cambodia": {
             "latitude": 13.0,
             "longitude": 105.0
           },
-          "Malaysia": {
-            "latitude": 2.3923759,
-            "longitude": 112.8471939
-          },
-          "Ecuador": {
-            "latitude": -1.3397667,
-            "longitude": -79.3666964
-          },
-          "Paraguay": {
-            "latitude": -23.33333,
-            "longitude": -58.0
-          },
-          "Indonesia": {
-            "latitude": -5.0,
-            "longitude": 120.0
-          },
-          "India": {
-            "latitude": 22.3511148,
-            "longitude": 78.6677428
-          },
-          "Jamaica": {
-            "latitude": 18.16667,
-            "longitude": -77.25
-          },
-          "Haiti": {
-            "latitude": 19.1399952,
-            "longitude": -72.3570971
-          },
-          "Colombia": {
-            "latitude": 2.893108,
-            "longitude": -73.7845142
-          },
-          "Thailand": {
-            "latitude": 14.8971921,
-            "longitude": 100.83273
-          },
-          "USA": {
-            "latitude": 39.7837304,
-            "longitude": -100.4458824
+          "Venezuela": {
+            "latitude": 8.0,
+            "longitude": -66.0
           },
           "Myanmar": {
             "latitude": 21.0,
             "longitude": 96.0
+          },
+          "Senegal": {
+            "latitude": 14.5,
+            "longitude": -14.25
           },
           "Singapore": {
             "latitude": 1.2904527,
@@ -306,33 +254,85 @@
             "latitude": 13.0,
             "longitude": -85.0
           },
-          "Venezuela": {
-            "latitude": 8.0,
-            "longitude": -66.0
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
           },
-          "Mexico": {
-            "latitude": 19.4325301,
-            "longitude": -99.1332101
+          "Taiwan": {
+            "latitude": 23.6978,
+            "longitude": 120.9605
           },
-          "Pakistan": {
-            "latitude": 30.0,
-            "longitude": 70.0
+          "Puerto Rico": {
+            "latitude": 18.2459121,
+            "longitude": -66.4164147
+          },
+          "Jamaica": {
+            "latitude": 18.16667,
+            "longitude": -77.25
+          },
+          "El Salvador": {
+            "latitude": 13.68935,
+            "longitude": -89.18718
+          },
+          "India": {
+            "latitude": 22.3511148,
+            "longitude": 78.6677428
+          },
+          "New Caledonia": {
+            "latitude": -20.9043,
+            "longitude": 165.618
+          },
+          "Paraguay": {
+            "latitude": -23.33333,
+            "longitude": -58.0
           },
           "Philippines": {
             "latitude": 12.8797,
             "longitude": 121.774
           },
+          "Vietnam": {
+            "latitude": 16.16667,
+            "longitude": 107.83333
+          },
+          "Ecuador": {
+            "latitude": -1.3397667,
+            "longitude": -79.3666964
+          },
           "China": {
             "latitude": 35.000074,
             "longitude": 104.999927
           },
-          "Brazil": {
-            "latitude": -10.3333332,
-            "longitude": -53.1999999
+          "Indonesia": {
+            "latitude": -5.0,
+            "longitude": 120.0
           },
-          "New Caledonia": {
-            "latitude": -20.9043,
-            "longitude": 165.618
+          "Sri Lanka": {
+            "latitude": 7.75,
+            "longitude": 80.75
+          },
+          "Thailand": {
+            "latitude": 14.8971921,
+            "longitude": 100.83273
+          },
+          "USA": {
+            "latitude": 39.7837304,
+            "longitude": -100.4458824
+          },
+          "Pakistan": {
+            "latitude": 30.0,
+            "longitude": 70.0
+          },
+          "Malaysia": {
+            "latitude": 2.3923759,
+            "longitude": 112.8471939
+          },
+          "Haiti": {
+            "latitude": 19.1399952,
+            "longitude": -72.3570971
+          },
+          "Mexico": {
+            "latitude": 19.4325301,
+            "longitude": -99.1332101
           }
         }
       }
@@ -342,18 +342,7 @@
       "map",
       "entropy",
       "frequencies"
-    ],
-    "extensions": {
-      "nextclade": {
-        "clade_node_attrs": [
-          {
-            "name": "clade_membership",
-            "displayName": "Dengue Lineages (Nextclade)",
-            "description": ""
-          }
-        ]
-      }
-    }
+    ]
   },
   "tree": {
     "name": "NODE_0000000",
