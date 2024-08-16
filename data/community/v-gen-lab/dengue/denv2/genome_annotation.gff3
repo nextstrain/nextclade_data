@@ -2,8 +2,7 @@
 ##source-version geneious 2022.2.2
 ##sequence-region	NC_001474.2	1	10723
 NC_001474.2	Geneious	gene	97	438	.	+	.	gene_name=C
-NC_001474.2	Geneious	gene	439	936	.	+	.	gene_name=M
-NC_001474.2	Geneious	gene	439	711	.	+	.	gene_name=pr
+NC_001474.2	Geneious	gene	439	936	.	+	.	gene_name=prM
 NC_001474.2	Geneious	gene	937	2421	.	+	.	gene_name=E
 NC_001474.2	Geneious	gene	2422	3477	.	+	.	gene_name=NS1
 NC_001474.2	Geneious	gene	3478	4131	.	+	.	gene_name=NS2A
