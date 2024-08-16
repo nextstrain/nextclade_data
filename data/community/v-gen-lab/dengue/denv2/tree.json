@@ -2,7 +2,7 @@
   "version": "v2",
   "meta": {
     "title": "Dengue Lineages of DENV-2",
-    "updated": "2024-08-15",
+    "updated": "2024-08-16",
     "build_url": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade",
     "data_provenance": [
       {
@@ -118,297 +118,7 @@
       {
         "key": "clade_membership",
         "title": "Lineage",
-        "type": "categorical",
-        "scale": [
-          [
-            "2I",
-            "#6EB3E1"
-          ],
-          [
-            "2II",
-            "#6EB5E1"
-          ],
-          [
-            "2II_A",
-            "#6EA8E1"
-          ],
-          [
-            "2II_A.1",
-            "#6EA0E1"
-          ],
-          [
-            "2II_A.1.1",
-            "#6EA1E1"
-          ],
-          [
-            "2II_A.1.1.1",
-            "#6EA6E1"
-          ],
-          [
-            "2II_A.1.1.2",
-            "#6E91E1"
-          ],
-          [
-            "2II_A.1.2",
-            "#6EA8E1"
-          ],
-          [
-            "2II_A.2",
-            "#6EA9E1"
-          ],
-          [
-            "2II_A.2.1",
-            "#6EA6E1"
-          ],
-          [
-            "2II_A.2.2",
-            "#75CBE1"
-          ],
-          [
-            "2II_B",
-            "#6E7EE1"
-          ],
-          [
-            "2II_C",
-            "#6EBFE1"
-          ],
-          [
-            "2II_C.1",
-            "#6EDFE1"
-          ],
-          [
-            "2II_C.2",
-            "#6EE1C3"
-          ],
-          [
-            "2II_D",
-            "#75E19E"
-          ],
-          [
-            "2II_D.1",
-            "#7CE16E"
-          ],
-          [
-            "2II_D.1.1",
-            "#91E16E"
-          ],
-          [
-            "2II_D.1.2",
-            "#9EE16E"
-          ],
-          [
-            "2II_D.2",
-            "#A1E16E"
-          ],
-          [
-            "2II_D.3",
-            "#A1E16E"
-          ],
-          [
-            "2II_E",
-            "#A1E16E"
-          ],
-          [
-            "2II_E.1",
-            "#A1E16E"
-          ],
-          [
-            "2II_E.2",
-            "#A1E16E"
-          ],
-          [
-            "2II_F",
-            "#A1E16E"
-          ],
-          [
-            "2II_F.1",
-            "#B3DC6E"
-          ],
-          [
-            "2II_F.1.1",
-            "#B4E16E"
-          ],
-          [
-            "2II_F.1.1.1",
-            "#C0E16E"
-          ],
-          [
-            "2II_F.1.1.2",
-            "#CBE16E"
-          ],
-          [
-            "2II_F.1.1.3",
-            "#D9DC6E"
-          ],
-          [
-            "2II_F.1.1.4",
-            "#E1F36E"
-          ],
-          [
-            "2II_F.1.1.5",
-            "#E1A46E"
-          ],
-          [
-            "2II_F.1.1.6",
-            "#E1A56E"
-          ],
-          [
-            "2II_F.1.2",
-            "#E1A36E"
-          ],
-          [
-            "2II_F.1.3",
-            "#E1AA6E"
-          ],
-          [
-            "2II_F.2",
-            "#E1D46E"
-          ],
-          [
-            "2II_F.2.1",
-            "#E1F36E"
-          ],
-          [
-            "2II_F.2.2",
-            "#E1A96E"
-          ],
-          [
-            "2III",
-            "#E1A56E"
-          ],
-          [
-            "2III_A",
-            "#E1956E"
-          ],
-          [
-            "2III_A.1",
-            "#E16E6E"
-          ],
-          [
-            "2III_A.2",
-            "#E16E7E"
-          ],
-          [
-            "2III_B",
-            "#E16E8A"
-          ],
-          [
-            "2III_C",
-            "#E16E9C"
-          ],
-          [
-            "2III_C.1",
-            "#E175A9"
-          ],
-          [
-            "2III_C.1.1",
-            "#E17EB4"
-          ],
-          [
-            "2III_C.1.2",
-            "#E186BE"
-          ],
-          [
-            "2III_C.2",
-            "#E18EC8"
-          ],
-          [
-            "2III_D",
-            "#E197D1"
-          ],
-          [
-            "2III_D.1",
-            "#E1A1DA"
-          ],
-          [
-            "2III_D.1.1",
-            "#E1A9E1"
-          ],
-          [
-            "2III_D.1.2",
-            "#DA6EE1"
-          ],
-          [
-            "2III_D.1.3",
-            "#C26EE1"
-          ],
-          [
-            "2III_D.2",
-            "#B16EE1"
-          ],
-          [
-            "2III_D.3",
-            "#A06EE1"
-          ],
-          [
-            "2III_E",
-            "#8A6EE1"
-          ],
-          [
-            "2IV",
-            "#6E91E1"
-          ],
-          [
-            "2V",
-            "#6E6DE1"
-          ],
-          [
-            "2V_A",
-            "#766EE1"
-          ],
-          [
-            "2V_A.1",
-            "#7D6EE1"
-          ],
-          [
-            "2V_A.1.1",
-            "#846EE1"
-          ],
-          [
-            "2V_A.1.2",
-            "#8C6EE1"
-          ],
-          [
-            "2V_A.1.3",
-            "#956EE1"
-          ],
-          [
-            "2V_A.2",
-            "#9D6EE1"
-          ],
-          [
-            "2V_A.3",
-            "#E6A510"
-          ],
-          [
-            "2V_A.4",
-            "#E6A500"
-          ],
-          [
-            "2V_B",
-            "#E6B400"
-          ],
-          [
-            "2V_C",
-            "#E6C000"
-          ],
-          [
-            "2V_D",
-            "#E6D000"
-          ],
-          [
-            "2V_E",
-            "#E6E000"
-          ],
-          [
-            "2VI",
-            "#E6F000"
-          ],
-          [
-            "Outgroup",
-            "#E41A1C"
-          ]
-        ]
+        "type": "categorical"
       },
       {
         "key": "country",
@@ -426,117 +136,97 @@
       {
         "key": "country",
         "demes": {
-          "Spain": {
-            "latitude": 40.0028028,
-            "longitude": -4.0031039
+          "India": {
+            "latitude": 22.3511148,
+            "longitude": 78.6677428
           },
-          "Cameroon": {
-            "latitude": 6.0,
-            "longitude": 12.5
+          "Cuba": {
+            "latitude": 22.0,
+            "longitude": -79.5
           },
-          "Indonesia": {
-            "latitude": -5.0,
-            "longitude": 120.0
+          "Ecuador": {
+            "latitude": -1.3397667,
+            "longitude": -79.3666964
           },
-          "Peru": {
-            "latitude": -10.0,
-            "longitude": -75.25
-          },
-          "Thailand": {
-            "latitude": 14.8971921,
-            "longitude": 100.83273
-          },
-          "Nepal": {
-            "latitude": 28.0,
-            "longitude": 84.0
-          },
-          "USA": {
-            "latitude": 39.7837304,
-            "longitude": -100.4458824
-          },
-          "Switzerland": {
-            "latitude": 47.00016,
-            "longitude": 8.01427
-          },
-          "Saudi Arabia": {
-            "latitude": 25.0,
-            "longitude": 45.0
-          },
-          "Brunei": {
-            "latitude": 4.5,
-            "longitude": 114.66667
-          },
-          "Uganda": {
-            "latitude": 1.5333554,
-            "longitude": 32.2166578
-          },
-          "Venezuela": {
-            "latitude": 8.0,
-            "longitude": -66.0
-          },
-          "Myanmar": {
-            "latitude": 21.0,
-            "longitude": 96.0
-          },
-          "Brazil": {
-            "latitude": -10.3333332,
-            "longitude": -53.1999999
-          },
-          "French Guiana": {
-            "latitude": 4.93333,
-            "longitude": -52.33333
-          },
-          "Vietnam": {
-            "latitude": 16.16667,
-            "longitude": 107.83333
-          },
-          "Pakistan": {
-            "latitude": 30.0,
-            "longitude": 70.0
+          "Australia": {
+            "latitude": -24.7761085,
+            "longitude": 134.755
           },
           "Bangladesh": {
             "latitude": 24.4768783,
             "longitude": 90.2932426
           },
-          "Reunion": {
-            "latitude": -21.1151,
-            "longitude": 55.5364
+          "Singapore": {
+            "latitude": 1.2904527,
+            "longitude": 103.852038
           },
-          "India": {
-            "latitude": 22.3511148,
-            "longitude": 78.6677428
+          "Vietnam": {
+            "latitude": 16.16667,
+            "longitude": 107.83333
           },
-          "Nigeria": {
-            "latitude": 10.0,
-            "longitude": 8.0
+          "Spain": {
+            "latitude": 40.0028028,
+            "longitude": -4.0031039
           },
-          "Mexico": {
-            "latitude": 19.4325301,
-            "longitude": -99.1332101
+          "Senegal": {
+            "latitude": 14.5,
+            "longitude": -14.25
           },
-          "Laos": {
-            "latitude": 20.0171109,
-            "longitude": 103.378253
+          "Burkina Faso": {
+            "latitude": 12.5,
+            "longitude": -1.66667
           },
-          "Jamaica": {
-            "latitude": 18.16667,
-            "longitude": -77.25
+          "French Guiana": {
+            "latitude": 4.93333,
+            "longitude": -52.33333
+          },
+          "Thailand": {
+            "latitude": 14.8971921,
+            "longitude": 100.83273
+          },
+          "Haiti": {
+            "latitude": 19.1399952,
+            "longitude": -72.3570971
+          },
+          "Cameroon": {
+            "latitude": 6.0,
+            "longitude": 12.5
+          },
+          "Venezuela": {
+            "latitude": 8.0,
+            "longitude": -66.0
+          },
+          "Pakistan": {
+            "latitude": 30.0,
+            "longitude": 70.0
           },
           "Tanzania": {
             "latitude": -6.0,
             "longitude": 35.0
           },
+          "Peru": {
+            "latitude": -10.0,
+            "longitude": -75.25
+          },
+          "Uganda": {
+            "latitude": 1.5333554,
+            "longitude": 32.2166578
+          },
+          "Nigeria": {
+            "latitude": 10.0,
+            "longitude": 8.0
+          },
+          "Cambodia": {
+            "latitude": 13.0,
+            "longitude": 105.0
+          },
           "Kenya": {
             "latitude": 1.0,
             "longitude": 38.0
           },
-          "Puerto Rico": {
-            "latitude": 18.2459121,
-            "longitude": -66.4164147
-          },
-          "Malaysia": {
-            "latitude": 2.3923759,
-            "longitude": 112.8471939
+          "Reunion": {
+            "latitude": -21.1151,
+            "longitude": 55.5364
           },
           "Philippines": {
             "latitude": 12.8797,
@@ -546,77 +236,97 @@
             "latitude": 35.000074,
             "longitude": 104.999927
           },
-          "Colombia": {
-            "latitude": 2.893108,
-            "longitude": -73.7845142
-          },
-          "Dominican Republic": {
-            "latitude": 18.50012,
-            "longitude": -69.98857
-          },
-          "Martinique": {
-            "latitude": 14.6415,
-            "longitude": -61.0242
-          },
-          "Singapore": {
-            "latitude": 1.2904527,
-            "longitude": 103.852038
-          },
-          "Cambodia": {
-            "latitude": 13.0,
-            "longitude": 105.0
-          },
-          "Haiti": {
-            "latitude": 19.1399952,
-            "longitude": -72.3570971
-          },
-          "Sri Lanka": {
-            "latitude": 7.75,
-            "longitude": 80.75
-          },
-          "Senegal": {
-            "latitude": 14.5,
-            "longitude": -14.25
-          },
-          "Bhutan": {
-            "latitude": 27.5142,
-            "longitude": 90.4336
-          },
-          "Ecuador": {
-            "latitude": -1.3397667,
-            "longitude": -79.3666964
-          },
-          "Burkina Faso": {
-            "latitude": 12.5,
-            "longitude": -1.66667
-          },
-          "France": {
-            "latitude": 46.603354,
-            "longitude": 1.8883335
-          },
-          "Australia": {
-            "latitude": -24.7761085,
-            "longitude": 134.755
-          },
-          "Palau": {
-            "latitude": 7.33978,
-            "longitude": 134.47326
-          },
-          "Cuba": {
-            "latitude": 22.0,
-            "longitude": -79.5
-          },
-          "Papua New Guinea": {
-            "latitude": -6.0,
-            "longitude": 147.0
+          "Malaysia": {
+            "latitude": 2.3923759,
+            "longitude": 112.8471939
           },
           "Nicaragua": {
             "latitude": 13.0,
             "longitude": -85.0
           },
+          "Myanmar": {
+            "latitude": 21.0,
+            "longitude": 96.0
+          },
+          "Sri Lanka": {
+            "latitude": 7.75,
+            "longitude": 80.75
+          },
+          "Saudi Arabia": {
+            "latitude": 25.0,
+            "longitude": 45.0
+          },
+          "USA": {
+            "latitude": 39.7837304,
+            "longitude": -100.4458824
+          },
+          "Mexico": {
+            "latitude": 19.4325301,
+            "longitude": -99.1332101
+          },
+          "Palau": {
+            "latitude": 7.33978,
+            "longitude": 134.47326
+          },
+          "Indonesia": {
+            "latitude": -5.0,
+            "longitude": 120.0
+          },
+          "Martinique": {
+            "latitude": 14.6415,
+            "longitude": -61.0242
+          },
+          "Papua New Guinea": {
+            "latitude": -6.0,
+            "longitude": 147.0
+          },
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
+          },
+          "Laos": {
+            "latitude": 20.0171109,
+            "longitude": 103.378253
+          },
+          "Dominican Republic": {
+            "latitude": 18.50012,
+            "longitude": -69.98857
+          },
+          "Colombia": {
+            "latitude": 2.893108,
+            "longitude": -73.7845142
+          },
+          "Nepal": {
+            "latitude": 28.0,
+            "longitude": 84.0
+          },
+          "Brunei": {
+            "latitude": 4.5,
+            "longitude": 114.66667
+          },
+          "Bhutan": {
+            "latitude": 27.5142,
+            "longitude": 90.4336
+          },
+          "Switzerland": {
+            "latitude": 47.00016,
+            "longitude": 8.01427
+          },
+          "Puerto Rico": {
+            "latitude": 18.2459121,
+            "longitude": -66.4164147
+          },
+          "France": {
+            "latitude": 46.603354,
+            "longitude": 1.8883335
+          },
           "Taiwan": {
             "latitude": 23.6978,
             "longitude": 120.9605
+          },
+          "Jamaica": {
+            "latitude": 18.16667,
+            "longitude": -77.25
           }
         }
       }
