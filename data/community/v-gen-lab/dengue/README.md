@@ -4,9 +4,9 @@ These datasets are based on the dengue virus lineage systems described by [Hill 
 
 More information about the Dengue Lineages Project can be found on the [Dengue Lineages website](https://dengue-lineages.org/) and the [GitHub Repository](https://github.com/DENV-lineages).
 
-The source code is available at [V-GEN-Lab/dengue-lineages-nextclade](https://github.com/V-GEN-Lab/dengue-lineages-nextclade).
+The source code is available at [V-GEN-Lab/dengue-lineages-workflow](https://github.com/V-GEN-Lab/dengue-lineages-workflow).
 
-For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-nextclade/issues).
+For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-workflow/issues).
 
 ## Maintainers and Contacts:
 
