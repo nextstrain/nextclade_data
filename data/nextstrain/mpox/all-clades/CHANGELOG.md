@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-08-27T21:28:04Z
 
 - Clade Ia and clade Ib are now distinguished
 - Sequences shared via Genbank since 2024 have been added
@@ -21,4 +21,3 @@ Some genes have been renamed and one has been added. The new annotation is based
 - The gene previously named `NBT03_gp174` is now called `OPG016`
 - The gene previously named `NBT03_gp175` is now called `OPG015_dup`
 - Gene `OPG166` has been added
-
