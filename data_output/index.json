@@ -1720,7 +1720,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 5,
+            "clades": 7,
             "customClades": {
               "outbreak": 1,
               "lineage": 33
@@ -1730,10 +1730,18 @@
               "missingData",
               "mixedSites",
               "privateMutations",
+              "snpClusters",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -1752,8 +1760,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-04-19T07:50:39Z",
-            "tag": "2024-04-19--07-50-39Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
