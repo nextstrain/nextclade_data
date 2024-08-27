@@ -1,3 +1,8 @@
+## Unreleased
+
+- Clade Ia and clade Ib are now distinguished
+- Sequences shared via Genbank since 2024 have been added
+
 ## 2024-04-19T07:50:39Z
 
 - New hMPXV-1 lineages B.1.21, B.1.22, and C.1.1 are now included in the dataset. For more information on these lineages, see the [hMPXV-1 lineage definitions PR](https://github.com/mpxv-lineages/lineage-designation/pull/37)
@@ -16,3 +21,4 @@ Some genes have been renamed and one has been added. The new annotation is based
 - The gene previously named `NBT03_gp174` is now called `OPG016`
 - The gene previously named `NBT03_gp175` is now called `OPG015_dup`
 - Gene `OPG166` has been added
+
