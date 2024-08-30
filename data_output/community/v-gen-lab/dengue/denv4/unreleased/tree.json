@@ -2,7 +2,7 @@
   "version": "v2",
   "meta": {
     "title": "Dengue Lineages of DENV-4",
-    "updated": "2024-08-15",
+    "updated": "2024-08-16",
     "build_url": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade",
     "data_provenance": [
       {
@@ -118,97 +118,7 @@
       {
         "key": "clade_membership",
         "title": "Lineage",
-        "type": "categorical",
-        "scale": [
-          [
-            "4I",
-            "#6EB3E1"
-          ],
-          [
-            "4I_A",
-            "#6EB5E1"
-          ],
-          [
-            "4I_A.1",
-            "#6EA8E1"
-          ],
-          [
-            "4I_A.1.1",
-            "#6EA0E1"
-          ],
-          [
-            "4I_A.1.2",
-            "#6EA1E1"
-          ],
-          [
-            "4I_A.2",
-            "#6EA6E1"
-          ],
-          [
-            "4I_A.3",
-            "#6E91E1"
-          ],
-          [
-            "4I_B",
-            "#6EA8E1"
-          ],
-          [
-            "4I_B.1",
-            "#6EA9E1"
-          ],
-          [
-            "4I_B.2",
-            "#6EA6E1"
-          ],
-          [
-            "4II",
-            "#75CBE1"
-          ],
-          [
-            "4II_A",
-            "#6E7EE1"
-          ],
-          [
-            "4II_A.1",
-            "#6EBFE1"
-          ],
-          [
-            "4II_A.2",
-            "#6EDFE1"
-          ],
-          [
-            "4II_B",
-            "#6EE1C3"
-          ],
-          [
-            "4II_B.1",
-            "#75E19E"
-          ],
-          [
-            "4II_B.1.1",
-            "#7CE16E"
-          ],
-          [
-            "4II_B.1.2",
-            "#91E16E"
-          ],
-          [
-            "4II_B.2",
-            "#9EE16E"
-          ],
-          [
-            "4III",
-            "#A1E16E"
-          ],
-          [
-            "4IV",
-            "#A1E16E"
-          ],
-          [
-            "Outgroup",
-            "#E41A1C"
-          ]
-        ]
+        "type": "categorical"
       },
       {
         "key": "country",
@@ -226,49 +136,17 @@
       {
         "key": "country",
         "demes": {
-          "Colombia": {
-            "latitude": 2.893108,
-            "longitude": -73.7845142
+          "Paraguay": {
+            "latitude": -23.33333,
+            "longitude": -58.0
           },
-          "Cambodia": {
-            "latitude": 13.0,
-            "longitude": 105.0
+          "Mexico": {
+            "latitude": 19.4325301,
+            "longitude": -99.1332101
           },
-          "Venezuela": {
-            "latitude": 8.0,
-            "longitude": -66.0
-          },
-          "Myanmar": {
-            "latitude": 21.0,
-            "longitude": 96.0
-          },
-          "Senegal": {
-            "latitude": 14.5,
-            "longitude": -14.25
-          },
-          "Singapore": {
-            "latitude": 1.2904527,
-            "longitude": 103.852038
-          },
-          "Nicaragua": {
-            "latitude": 13.0,
-            "longitude": -85.0
-          },
-          "Brazil": {
-            "latitude": -10.3333332,
-            "longitude": -53.1999999
-          },
-          "Taiwan": {
-            "latitude": 23.6978,
-            "longitude": 120.9605
-          },
-          "Puerto Rico": {
-            "latitude": 18.2459121,
-            "longitude": -66.4164147
-          },
-          "Jamaica": {
-            "latitude": 18.16667,
-            "longitude": -77.25
+          "New Caledonia": {
+            "latitude": -20.9043,
+            "longitude": 165.618
           },
           "El Salvador": {
             "latitude": 13.68935,
@@ -278,13 +156,9 @@
             "latitude": 22.3511148,
             "longitude": 78.6677428
           },
-          "New Caledonia": {
-            "latitude": -20.9043,
-            "longitude": 165.618
-          },
-          "Paraguay": {
-            "latitude": -23.33333,
-            "longitude": -58.0
+          "Haiti": {
+            "latitude": 19.1399952,
+            "longitude": -72.3570971
           },
           "Philippines": {
             "latitude": 12.8797,
@@ -294,45 +168,81 @@
             "latitude": 16.16667,
             "longitude": 107.83333
           },
+          "Colombia": {
+            "latitude": 2.893108,
+            "longitude": -73.7845142
+          },
           "Ecuador": {
             "latitude": -1.3397667,
             "longitude": -79.3666964
           },
-          "China": {
-            "latitude": 35.000074,
-            "longitude": 104.999927
+          "Senegal": {
+            "latitude": 14.5,
+            "longitude": -14.25
+          },
+          "Nicaragua": {
+            "latitude": 13.0,
+            "longitude": -85.0
           },
           "Indonesia": {
             "latitude": -5.0,
             "longitude": 120.0
           },
-          "Sri Lanka": {
-            "latitude": 7.75,
-            "longitude": 80.75
+          "Taiwan": {
+            "latitude": 23.6978,
+            "longitude": 120.9605
           },
           "Thailand": {
             "latitude": 14.8971921,
             "longitude": 100.83273
           },
-          "USA": {
-            "latitude": 39.7837304,
-            "longitude": -100.4458824
+          "Venezuela": {
+            "latitude": 8.0,
+            "longitude": -66.0
+          },
+          "Myanmar": {
+            "latitude": 21.0,
+            "longitude": 96.0
+          },
+          "China": {
+            "latitude": 35.000074,
+            "longitude": 104.999927
+          },
+          "Sri Lanka": {
+            "latitude": 7.75,
+            "longitude": 80.75
+          },
+          "Puerto Rico": {
+            "latitude": 18.2459121,
+            "longitude": -66.4164147
+          },
+          "Cambodia": {
+            "latitude": 13.0,
+            "longitude": 105.0
           },
           "Pakistan": {
             "latitude": 30.0,
             "longitude": 70.0
           },
+          "Singapore": {
+            "latitude": 1.2904527,
+            "longitude": 103.852038
+          },
+          "USA": {
+            "latitude": 39.7837304,
+            "longitude": -100.4458824
+          },
+          "Jamaica": {
+            "latitude": 18.16667,
+            "longitude": -77.25
+          },
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
+          },
           "Malaysia": {
             "latitude": 2.3923759,
             "longitude": 112.8471939
-          },
-          "Haiti": {
-            "latitude": 19.1399952,
-            "longitude": -72.3570971
-          },
-          "Mexico": {
-            "latitude": 19.4325301,
-            "longitude": -99.1332101
           }
         }
       }
@@ -2381,11 +2291,11 @@
         "name": "MZ215848.1|2007-05-21",
         "node_attrs": {
           "div": 0.153118,
-          "clade_membership": {
-            "value": "Outgroup"
-          },
           "country": {
             "value": "Malaysia"
+          },
+          "clade_membership": {
+            "value": "Outgroup"
           }
         },
         "branch_attrs": {
@@ -5883,11 +5793,11 @@
                     "name": "EF457906.1|1975",
                     "node_attrs": {
                       "div": 0.21929308,
-                      "clade_membership": {
-                        "value": "4IV"
-                      },
                       "country": {
                         "value": "Malaysia"
+                      },
+                      "clade_membership": {
+                        "value": "4IV"
                       }
                     },
                     "branch_attrs": {
@@ -5960,11 +5870,11 @@
                         "name": "JF262780.1|1973",
                         "node_attrs": {
                           "div": 0.21947019,
-                          "clade_membership": {
-                            "value": "4IV"
-                          },
                           "country": {
                             "value": "Malaysia"
+                          },
+                          "clade_membership": {
+                            "value": "4IV"
                           }
                         },
                         "branch_attrs": {
@@ -5998,11 +5908,11 @@
                             "name": "JF262779.1|1975",
                             "node_attrs": {
                               "div": 0.21965777,
-                              "clade_membership": {
-                                "value": "4IV"
-                              },
                               "country": {
                                 "value": "Malaysia"
+                              },
+                              "clade_membership": {
+                                "value": "4IV"
                               }
                             },
                             "branch_attrs": {
@@ -7159,11 +7069,11 @@
                         "name": "MW945493.1|1999",
                         "node_attrs": {
                           "div": 0.25193265,
-                          "clade_membership": {
-                            "value": "4III"
-                          },
                           "country": {
                             "value": "Thailand"
+                          },
+                          "clade_membership": {
+                            "value": "4III"
                           }
                         },
                         "branch_attrs": {
@@ -7201,11 +7111,11 @@
                         "name": "KY586945.1|1998",
                         "node_attrs": {
                           "div": 0.25106146,
-                          "clade_membership": {
-                            "value": "4III"
-                          },
                           "country": {
                             "value": "Thailand"
+                          },
+                          "clade_membership": {
+                            "value": "4III"
                           }
                         },
                         "branch_attrs": {
@@ -7258,11 +7168,11 @@
                         "name": "MW945667.1|1997",
                         "node_attrs": {
                           "div": 0.25018337,
-                          "clade_membership": {
-                            "value": "4III"
-                          },
                           "country": {
                             "value": "Thailand"
+                          },
+                          "clade_membership": {
+                            "value": "4III"
                           }
                         },
                         "branch_attrs": {
@@ -7314,11 +7224,11 @@
                             "name": "MW945727.1|2005",
                             "node_attrs": {
                               "div": 0.25154119,
-                              "clade_membership": {
-                                "value": "4III"
-                              },
                               "country": {
                                 "value": "Thailand"
+                              },
+                              "clade_membership": {
+                                "value": "4III"
                               }
                             },
                             "branch_attrs": {
@@ -7379,11 +7289,11 @@
                                 "name": "MW945619.1|1996",
                                 "node_attrs": {
                                   "div": 0.24996376000000003,
-                                  "clade_membership": {
-                                    "value": "4III"
-                                  },
                                   "country": {
                                     "value": "Thailand"
+                                  },
+                                  "clade_membership": {
+                                    "value": "4III"
                                   }
                                 },
                                 "branch_attrs": {
@@ -7461,11 +7371,11 @@
                                     "name": "KY586944.1|2001",
                                     "node_attrs": {
                                       "div": 0.25421433000000004,
-                                      "clade_membership": {
-                                        "value": "4III"
-                                      },
                                       "country": {
                                         "value": "Thailand"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4III"
                                       }
                                     },
                                     "branch_attrs": {
@@ -7504,11 +7414,11 @@
                                     "name": "MW945621.1|2001",
                                     "node_attrs": {
                                       "div": 0.25381666,
-                                      "clade_membership": {
-                                        "value": "4III"
-                                      },
                                       "country": {
                                         "value": "Thailand"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4III"
                                       }
                                     },
                                     "branch_attrs": {
@@ -8005,11 +7915,11 @@
                             "name": "FJ196849.1|1978",
                             "node_attrs": {
                               "div": 0.25909993000000003,
-                              "clade_membership": {
-                                "value": "4II_A"
-                              },
                               "country": {
                                 "value": "China"
+                              },
+                              "clade_membership": {
+                                "value": "4II_A"
                               }
                             },
                             "branch_attrs": {
@@ -8695,11 +8605,11 @@
                                     "name": "MN018396.1|2015-11-12",
                                     "node_attrs": {
                                       "div": 0.30032443000000003,
-                                      "clade_membership": {
-                                        "value": "4II_A"
-                                      },
                                       "country": {
                                         "value": "China"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4II_A"
                                       }
                                     },
                                     "branch_attrs": {
@@ -9044,11 +8954,11 @@
                                     "name": "MN018393.1|2015-07-25",
                                     "node_attrs": {
                                       "div": 0.28753343000000003,
-                                      "clade_membership": {
-                                        "value": "4II_A"
-                                      },
                                       "country": {
                                         "value": "China"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4II_A"
                                       }
                                     },
                                     "branch_attrs": {
@@ -9409,11 +9319,11 @@
                                     "name": "OL314740.1|2019-05-30",
                                     "node_attrs": {
                                       "div": 0.2820317600000001,
-                                      "clade_membership": {
-                                        "value": "4II_A"
-                                      },
                                       "country": {
                                         "value": "Indonesia"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4II_A"
                                       }
                                     },
                                     "branch_attrs": {
@@ -9802,11 +9712,11 @@
                                         "name": "MH888334.1|2013-01-04",
                                         "node_attrs": {
                                           "div": 0.28024996,
-                                          "clade_membership": {
-                                            "value": "4II_A"
-                                          },
                                           "country": {
                                             "value": "Malaysia"
+                                          },
+                                          "clade_membership": {
+                                            "value": "4II_A"
                                           }
                                         },
                                         "branch_attrs": {
@@ -10094,11 +10004,11 @@
                                                 "name": "KC762698.1|2008-04-30",
                                                 "node_attrs": {
                                                   "div": 0.27605557000000003,
-                                                  "clade_membership": {
-                                                    "value": "4II_A.2"
-                                                  },
                                                   "country": {
                                                     "value": "Indonesia"
+                                                  },
+                                                  "clade_membership": {
+                                                    "value": "4II_A.2"
                                                   }
                                                 },
                                                 "branch_attrs": {
@@ -10281,11 +10191,11 @@
                                                         "name": "KP723482.1|2010",
                                                         "node_attrs": {
                                                           "div": 0.27824185000000007,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.2"
-                                                          },
                                                           "country": {
                                                             "value": "China"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.2"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -10308,11 +10218,11 @@
                                                         "name": "JF741967.1|2010-09-26",
                                                         "node_attrs": {
                                                           "div": 0.2785401300000001,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.2"
-                                                          },
                                                           "country": {
                                                             "value": "China"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.2"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -10373,11 +10283,11 @@
                                                         "name": "KC762699.1|2008-03-28",
                                                         "node_attrs": {
                                                           "div": 0.27557787000000006,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.2"
-                                                          },
                                                           "country": {
                                                             "value": "Indonesia"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.2"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -10412,11 +10322,11 @@
                                                         "name": "KC762696.1|2007-08-13",
                                                         "node_attrs": {
                                                           "div": 0.2756797100000001,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.2"
-                                                          },
                                                           "country": {
                                                             "value": "Indonesia"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.2"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -10492,11 +10402,11 @@
                                                 "name": "JQ915085.1|2008-02-20",
                                                 "node_attrs": {
                                                   "div": 0.27505264000000007,
-                                                  "clade_membership": {
-                                                    "value": "4II_A"
-                                                  },
                                                   "country": {
                                                     "value": "New Caledonia"
+                                                  },
+                                                  "clade_membership": {
+                                                    "value": "4II_A"
                                                   }
                                                 },
                                                 "branch_attrs": {
@@ -10687,11 +10597,11 @@
                                                         "name": "OP600512.1|2022-07",
                                                         "node_attrs": {
                                                           "div": 0.28804549,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.1"
-                                                          },
                                                           "country": {
                                                             "value": "Malaysia"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.1"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -10874,11 +10784,11 @@
                                                         "name": "OQ821649.1|2016-03-21",
                                                         "node_attrs": {
                                                           "div": 0.28235482,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.1"
-                                                          },
                                                           "country": {
                                                             "value": "Jamaica"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.1"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -11033,11 +10943,11 @@
                                                         "name": "OP411002.1|2019-07",
                                                         "node_attrs": {
                                                           "div": 0.28410306,
-                                                          "clade_membership": {
-                                                            "value": "4II_A.1"
-                                                          },
                                                           "country": {
                                                             "value": "Singapore"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_A.1"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -11239,11 +11149,11 @@
                                                             "name": "OL314741.1|2019-06-20",
                                                             "node_attrs": {
                                                               "div": 0.28523848000000007,
-                                                              "clade_membership": {
-                                                                "value": "4II_A.1"
-                                                              },
                                                               "country": {
                                                                 "value": "Indonesia"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4II_A.1"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -11366,11 +11276,11 @@
                                                             "name": "OP600478.1|2020-08",
                                                             "node_attrs": {
                                                               "div": 0.28715510000000005,
-                                                              "clade_membership": {
-                                                                "value": "4II_A.1"
-                                                              },
                                                               "country": {
                                                                 "value": "Malaysia"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4II_A.1"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -11646,11 +11556,11 @@
                             "name": "OK469362.1|1995",
                             "node_attrs": {
                               "div": 0.26563111,
-                              "clade_membership": {
-                                "value": "4II_B"
-                              },
                               "country": {
                                 "value": "Singapore"
+                              },
+                              "clade_membership": {
+                                "value": "4II_B"
                               }
                             },
                             "branch_attrs": {
@@ -12057,11 +11967,11 @@
                                 "name": "KX812530.1|1976",
                                 "node_attrs": {
                                   "div": 0.24800589,
-                                  "clade_membership": {
-                                    "value": "4II_B"
-                                  },
                                   "country": {
                                     "value": "Indonesia"
+                                  },
+                                  "clade_membership": {
+                                    "value": "4II_B"
                                   }
                                 },
                                 "branch_attrs": {
@@ -12242,11 +12152,11 @@
                                     "name": "OR389346.1|1987",
                                     "node_attrs": {
                                       "div": 0.25530333,
-                                      "clade_membership": {
-                                        "value": "4II_B"
-                                      },
                                       "country": {
                                         "value": "El Salvador"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4II_B"
                                       }
                                     },
                                     "branch_attrs": {
@@ -12361,11 +12271,11 @@
                                             "name": "KT276273.1|2014-09-08",
                                             "node_attrs": {
                                               "div": 0.28193558,
-                                              "clade_membership": {
-                                                "value": "4II_B"
-                                              },
                                               "country": {
                                                 "value": "Haiti"
+                                              },
+                                              "clade_membership": {
+                                                "value": "4II_B"
                                               }
                                             },
                                             "branch_attrs": {
@@ -12811,11 +12721,11 @@
                                                     "name": "OM417339.1|2011-10-10",
                                                     "node_attrs": {
                                                       "div": 0.27482608000000003,
-                                                      "clade_membership": {
-                                                        "value": "4II_B.2"
-                                                      },
                                                       "country": {
                                                         "value": "Mexico"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4II_B.2"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -12870,11 +12780,11 @@
                                                     "name": "OM417338.1|2010-10-27",
                                                     "node_attrs": {
                                                       "div": 0.27424042000000004,
-                                                      "clade_membership": {
-                                                        "value": "4II_B.2"
-                                                      },
                                                       "country": {
                                                         "value": "Mexico"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4II_B.2"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -13105,11 +13015,11 @@
                                                     "name": "OQ445967.1|2022-11-03",
                                                     "node_attrs": {
                                                       "div": 0.28210406,
-                                                      "clade_membership": {
-                                                        "value": "4II_B.2"
-                                                      },
                                                       "country": {
                                                         "value": "USA"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4II_B.2"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -13249,11 +13159,11 @@
                                                         "name": "PP692469.1|2023-12-23",
                                                         "node_attrs": {
                                                           "div": 0.284599,
-                                                          "clade_membership": {
-                                                            "value": "4II_B.2"
-                                                          },
                                                           "country": {
                                                             "value": "USA"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4II_B.2"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -13365,11 +13275,11 @@
                                                             "name": "OR821957.1|2023-10-12",
                                                             "node_attrs": {
                                                               "div": 0.28358134,
-                                                              "clade_membership": {
-                                                                "value": "4II_B.2"
-                                                              },
                                                               "country": {
                                                                 "value": "USA"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4II_B.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -13405,11 +13315,11 @@
                                                             "name": "OQ821645.1|2022-09-10",
                                                             "node_attrs": {
                                                               "div": 0.2827132,
-                                                              "clade_membership": {
-                                                                "value": "4II_B.2"
-                                                              },
                                                               "country": {
                                                                 "value": "Nicaragua"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4II_B.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -13485,11 +13395,11 @@
                                             "name": "JN819409.1|1998",
                                             "node_attrs": {
                                               "div": 0.2663748,
-                                              "clade_membership": {
-                                                "value": "4II_B"
-                                              },
                                               "country": {
                                                 "value": "Venezuela"
+                                              },
+                                              "clade_membership": {
+                                                "value": "4II_B"
                                               }
                                             },
                                             "branch_attrs": {
@@ -13644,11 +13554,11 @@
                                                 "name": "FJ850095.1|2000",
                                                 "node_attrs": {
                                                   "div": 0.26566526,
-                                                  "clade_membership": {
-                                                    "value": "4II_B.1"
-                                                  },
                                                   "country": {
                                                     "value": "Venezuela"
+                                                  },
+                                                  "clade_membership": {
+                                                    "value": "4II_B.1"
                                                   }
                                                 },
                                                 "branch_attrs": {
@@ -13706,11 +13616,11 @@
                                                     "name": "KY474335.1|2014",
                                                     "node_attrs": {
                                                       "div": 0.27644202,
-                                                      "clade_membership": {
-                                                        "value": "4II_B.1"
-                                                      },
                                                       "country": {
                                                         "value": "Ecuador"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4II_B.1"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -13935,11 +13845,11 @@
                                                             "name": "HQ332174.1|2007",
                                                             "node_attrs": {
                                                               "div": 0.27053066000000003,
-                                                              "clade_membership": {
-                                                                "value": "4II_B.1"
-                                                              },
                                                               "country": {
                                                                 "value": "Venezuela"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4II_B.1"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -14200,11 +14110,11 @@
                                                                 "name": "OR162320.1|2022-11-15",
                                                                 "node_attrs": {
                                                                   "div": 0.2841093,
-                                                                  "clade_membership": {
-                                                                    "value": "4II_B.1.2"
-                                                                  },
                                                                   "country": {
                                                                     "value": "USA"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4II_B.1.2"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -14273,11 +14183,11 @@
                                                                         "name": "OR654276.1|2023-05-31",
                                                                         "node_attrs": {
                                                                           "div": 0.28472482000000005,
-                                                                          "clade_membership": {
-                                                                            "value": "4II_B.1.2"
-                                                                          },
                                                                           "country": {
                                                                             "value": "USA"
+                                                                          },
+                                                                          "clade_membership": {
+                                                                            "value": "4II_B.1.2"
                                                                           }
                                                                         },
                                                                         "branch_attrs": {
@@ -14312,11 +14222,11 @@
                                                                         "name": "OR977094.1|2023-11-10",
                                                                         "node_attrs": {
                                                                           "div": 0.28493519000000006,
-                                                                          "clade_membership": {
-                                                                            "value": "4II_B.1.2"
-                                                                          },
                                                                           "country": {
                                                                             "value": "USA"
+                                                                          },
+                                                                          "clade_membership": {
+                                                                            "value": "4II_B.1.2"
                                                                           }
                                                                         },
                                                                         "branch_attrs": {
@@ -14414,11 +14324,11 @@
                                                                         "name": "OQ445966.1|2022-10-26",
                                                                         "node_attrs": {
                                                                           "div": 0.28742890000000004,
-                                                                          "clade_membership": {
-                                                                            "value": "4II_B.1.2"
-                                                                          },
                                                                           "country": {
                                                                             "value": "USA"
+                                                                          },
+                                                                          "clade_membership": {
+                                                                            "value": "4II_B.1.2"
                                                                           }
                                                                         },
                                                                         "branch_attrs": {
@@ -14469,11 +14379,11 @@
                                                                         "name": "OQ445963.1|2022-08-10",
                                                                         "node_attrs": {
                                                                           "div": 0.28641695000000006,
-                                                                          "clade_membership": {
-                                                                            "value": "4II_B.1.2"
-                                                                          },
                                                                           "country": {
                                                                             "value": "USA"
+                                                                          },
+                                                                          "clade_membership": {
+                                                                            "value": "4II_B.1.2"
                                                                           }
                                                                         },
                                                                         "branch_attrs": {
@@ -14532,11 +14442,11 @@
                                                             "name": "OQ603316.1|2013-09-18",
                                                             "node_attrs": {
                                                               "div": 0.28750578,
-                                                              "clade_membership": {
-                                                                "value": "4II_B.1"
-                                                              },
                                                               "country": {
                                                                 "value": "Colombia"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4II_B.1"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -14815,11 +14725,11 @@
                                                                 "name": "HQ332176.1|2007",
                                                                 "node_attrs": {
                                                                   "div": 0.27084034,
-                                                                  "clade_membership": {
-                                                                    "value": "4II_B.1"
-                                                                  },
                                                                   "country": {
                                                                     "value": "Venezuela"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4II_B.1"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -14926,11 +14836,11 @@
                                                                     "name": "JN559741.2|2010-07-21",
                                                                     "node_attrs": {
                                                                       "div": 0.27419394999999996,
-                                                                      "clade_membership": {
-                                                                        "value": "4II_B.1.1"
-                                                                      },
                                                                       "country": {
                                                                         "value": "Brazil"
+                                                                      },
+                                                                      "clade_membership": {
+                                                                        "value": "4II_B.1.1"
                                                                       }
                                                                     },
                                                                     "branch_attrs": {
@@ -14998,11 +14908,11 @@
                                                                             "name": "OQ567863.1|2020-01-13",
                                                                             "node_attrs": {
                                                                               "div": 0.28373699999999996,
-                                                                              "clade_membership": {
-                                                                                "value": "4II_B.1.1"
-                                                                              },
                                                                               "country": {
                                                                                 "value": "Paraguay"
+                                                                              },
+                                                                              "clade_membership": {
+                                                                                "value": "4II_B.1.1"
                                                                               }
                                                                             },
                                                                             "branch_attrs": {
@@ -15106,11 +15016,11 @@
                                                                             "name": "PP530050.1|2015-11-15",
                                                                             "node_attrs": {
                                                                               "div": 0.28133637,
-                                                                              "clade_membership": {
-                                                                                "value": "4II_B.1.1"
-                                                                              },
                                                                               "country": {
                                                                                 "value": "Brazil"
+                                                                              },
+                                                                              "clade_membership": {
+                                                                                "value": "4II_B.1.1"
                                                                               }
                                                                             },
                                                                             "branch_attrs": {
@@ -15217,11 +15127,11 @@
                                                                             "name": "PP530058.1|2015-05-12",
                                                                             "node_attrs": {
                                                                               "div": 0.28265509,
-                                                                              "clade_membership": {
-                                                                                "value": "4II_B.1.1"
-                                                                              },
                                                                               "country": {
                                                                                 "value": "Brazil"
+                                                                              },
+                                                                              "clade_membership": {
+                                                                                "value": "4II_B.1.1"
                                                                               }
                                                                             },
                                                                             "branch_attrs": {
@@ -15360,11 +15270,11 @@
                                                                                 "name": "OQ567848.1|2016-03-07",
                                                                                 "node_attrs": {
                                                                                   "div": 0.28121171,
-                                                                                  "clade_membership": {
-                                                                                    "value": "4II_B.1.1"
-                                                                                  },
                                                                                   "country": {
                                                                                     "value": "Paraguay"
+                                                                                  },
+                                                                                  "clade_membership": {
+                                                                                    "value": "4II_B.1.1"
                                                                                   }
                                                                                 },
                                                                                 "branch_attrs": {
@@ -15428,11 +15338,11 @@
                                                                                 "name": "PP530047.1|2014-07",
                                                                                 "node_attrs": {
                                                                                   "div": 0.28133405,
-                                                                                  "clade_membership": {
-                                                                                    "value": "4II_B.1.1"
-                                                                                  },
                                                                                   "country": {
                                                                                     "value": "Brazil"
+                                                                                  },
+                                                                                  "clade_membership": {
+                                                                                    "value": "4II_B.1.1"
                                                                                   }
                                                                                 },
                                                                                 "branch_attrs": {
@@ -15906,11 +15816,11 @@
                             "name": "JF262783.1|1961",
                             "node_attrs": {
                               "div": 0.25095615,
-                              "clade_membership": {
-                                "value": "4I"
-                              },
                               "country": {
                                 "value": "India"
+                              },
+                              "clade_membership": {
+                                "value": "4I"
                               }
                             },
                             "branch_attrs": {
@@ -16002,11 +15912,11 @@
                             "name": "JQ922558.1|1962",
                             "node_attrs": {
                               "div": 0.26071596,
-                              "clade_membership": {
-                                "value": "4I"
-                              },
                               "country": {
                                 "value": "India"
+                              },
+                              "clade_membership": {
+                                "value": "4I"
                               }
                             },
                             "branch_attrs": {
@@ -16510,11 +16420,11 @@
                                 "name": "KY670635.1|2003-10",
                                 "node_attrs": {
                                   "div": 0.27648713,
-                                  "clade_membership": {
-                                    "value": "4I"
-                                  },
                                   "country": {
                                     "value": "Taiwan"
+                                  },
+                                  "clade_membership": {
+                                    "value": "4I"
                                   }
                                 },
                                 "branch_attrs": {
@@ -16914,11 +16824,11 @@
                                     "name": "KR011349.2|1956-08-28",
                                     "node_attrs": {
                                       "div": 0.24365093999999998,
-                                      "clade_membership": {
-                                        "value": "4I"
-                                      },
                                       "country": {
                                         "value": "Philippines"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4I"
                                       }
                                     },
                                     "branch_attrs": {
@@ -16956,11 +16866,11 @@
                                     "name": "OK469357.1|1963",
                                     "node_attrs": {
                                       "div": 0.24355663,
-                                      "clade_membership": {
-                                        "value": "4I"
-                                      },
                                       "country": {
                                         "value": "Puerto Rico"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4I"
                                       }
                                     },
                                     "branch_attrs": {
@@ -17352,11 +17262,11 @@
                                         "name": "JQ922559.1|1979",
                                         "node_attrs": {
                                           "div": 0.27278490999999994,
-                                          "clade_membership": {
-                                            "value": "4I_B"
-                                          },
                                           "country": {
                                             "value": "India"
+                                          },
+                                          "clade_membership": {
+                                            "value": "4I_B"
                                           }
                                         },
                                         "branch_attrs": {
@@ -17682,11 +17592,11 @@
                                             "name": "OK605769.1|1983",
                                             "node_attrs": {
                                               "div": 0.26625987999999995,
-                                              "clade_membership": {
-                                                "value": "4I_B"
-                                              },
                                               "country": {
                                                 "value": "Senegal"
+                                              },
+                                              "clade_membership": {
+                                                "value": "4I_B"
                                               }
                                             },
                                             "branch_attrs": {
@@ -18134,11 +18044,11 @@
                                                     "name": "KF041260.1|2009",
                                                     "node_attrs": {
                                                       "div": 0.28146994999999997,
-                                                      "clade_membership": {
-                                                        "value": "4I_B.1"
-                                                      },
                                                       "country": {
                                                         "value": "Pakistan"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4I_B.1"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -18383,11 +18293,11 @@
                                                         "name": "MG272272.1|2016",
                                                         "node_attrs": {
                                                           "div": 0.29623383999999997,
-                                                          "clade_membership": {
-                                                            "value": "4I_B.1"
-                                                          },
                                                           "country": {
                                                             "value": "India"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4I_B.1"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -18637,11 +18547,11 @@
                                                             "name": "MN018398.1|2016-08-16",
                                                             "node_attrs": {
                                                               "div": 0.33457119999999996,
-                                                              "clade_membership": {
-                                                                "value": "4I_B.1"
-                                                              },
                                                               "country": {
                                                                 "value": "China"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_B.1"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -18885,11 +18795,11 @@
                                                                 "name": "OM639995.1|2021-11-16",
                                                                 "node_attrs": {
                                                                   "div": 0.3494051999999999,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_B.1"
-                                                                  },
                                                                   "country": {
                                                                     "value": "India"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_B.1"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -19368,11 +19278,11 @@
                                                                 "name": "OP984198.1|2018",
                                                                 "node_attrs": {
                                                                   "div": 0.3304407999999999,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_B.1"
-                                                                  },
                                                                   "country": {
                                                                     "value": "India"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_B.1"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -19615,11 +19525,11 @@
                                                     "name": "KU509287.1|2009",
                                                     "node_attrs": {
                                                       "div": 0.28526049,
-                                                      "clade_membership": {
-                                                        "value": "4I_B.2"
-                                                      },
                                                       "country": {
                                                         "value": "India"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4I_B.2"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -19854,11 +19764,11 @@
                                                             "name": "KX059029.1|2012-08",
                                                             "node_attrs": {
                                                               "div": 0.2860894299999999,
-                                                              "clade_membership": {
-                                                                "value": "4I_B.2"
-                                                              },
                                                               "country": {
                                                                 "value": "Sri Lanka"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_B.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -19925,11 +19835,11 @@
                                                             "name": "KX059015.1|2012-07",
                                                             "node_attrs": {
                                                               "div": 0.2877917199999999,
-                                                              "clade_membership": {
-                                                                "value": "4I_B.2"
-                                                              },
                                                               "country": {
                                                                 "value": "Sri Lanka"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_B.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -20059,11 +19969,11 @@
                                                             "name": "KX845005.1|2015",
                                                             "node_attrs": {
                                                               "div": 0.28439624999999996,
-                                                              "clade_membership": {
-                                                                "value": "4I_B.2"
-                                                              },
                                                               "country": {
                                                                 "value": "India"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_B.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -20159,11 +20069,11 @@
                                                             "name": "MK858146.2|2016-07-03",
                                                             "node_attrs": {
                                                               "div": 0.28352543999999996,
-                                                              "clade_membership": {
-                                                                "value": "4I_B.2"
-                                                              },
                                                               "country": {
                                                                 "value": "India"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_B.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -20348,11 +20258,11 @@
                                     "name": "OK469358.1|1976",
                                     "node_attrs": {
                                       "div": 0.25799455,
-                                      "clade_membership": {
-                                        "value": "4I_A"
-                                      },
                                       "country": {
                                         "value": "Myanmar"
+                                      },
+                                      "clade_membership": {
+                                        "value": "4I_A"
                                       }
                                     },
                                     "branch_attrs": {
@@ -20666,11 +20576,11 @@
                                                 "name": "KY586938.1|1995",
                                                 "node_attrs": {
                                                   "div": 0.27468963,
-                                                  "clade_membership": {
-                                                    "value": "4I_A"
-                                                  },
                                                   "country": {
                                                     "value": "Thailand"
+                                                  },
+                                                  "clade_membership": {
+                                                    "value": "4I_A"
                                                   }
                                                 },
                                                 "branch_attrs": {
@@ -20775,11 +20685,11 @@
                                                     "name": "MW945553.1|2006",
                                                     "node_attrs": {
                                                       "div": 0.28676102,
-                                                      "clade_membership": {
-                                                        "value": "4I_A.2"
-                                                      },
                                                       "country": {
                                                         "value": "Thailand"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4I_A.2"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -20956,11 +20866,11 @@
                                                         "name": "MW945653.1|2008",
                                                         "node_attrs": {
                                                           "div": 0.28854058000000005,
-                                                          "clade_membership": {
-                                                            "value": "4I_A.2"
-                                                          },
                                                           "country": {
                                                             "value": "Thailand"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4I_A.2"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -21119,11 +21029,11 @@
                                                             "name": "MW945533.1|2013",
                                                             "node_attrs": {
                                                               "div": 0.29148986000000005,
-                                                              "clade_membership": {
-                                                                "value": "4I_A.2"
-                                                              },
                                                               "country": {
                                                                 "value": "Thailand"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_A.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -21345,11 +21255,11 @@
                                                                 "name": "JN638572.1|2008",
                                                                 "node_attrs": {
                                                                   "div": 0.29611723,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_A.2"
-                                                                  },
                                                                   "country": {
                                                                     "value": "Cambodia"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_A.2"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -21504,11 +21414,11 @@
                                                                 "name": "MN018395.1|2015-10-20",
                                                                 "node_attrs": {
                                                                   "div": 0.31661183,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_A.2"
-                                                                  },
                                                                   "country": {
                                                                     "value": "China"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_A.2"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -21961,11 +21871,11 @@
                                                 "name": "MW945761.1|1999",
                                                 "node_attrs": {
                                                   "div": 0.27777858,
-                                                  "clade_membership": {
-                                                    "value": "4I_A"
-                                                  },
                                                   "country": {
                                                     "value": "Thailand"
+                                                  },
+                                                  "clade_membership": {
+                                                    "value": "4I_A"
                                                   }
                                                 },
                                                 "branch_attrs": {
@@ -22106,11 +22016,11 @@
                                                     "name": "MW945648.1|2005",
                                                     "node_attrs": {
                                                       "div": 0.28596742999999997,
-                                                      "clade_membership": {
-                                                        "value": "4I_A.3"
-                                                      },
                                                       "country": {
                                                         "value": "Thailand"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4I_A.3"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -22228,11 +22138,11 @@
                                                         "name": "MN449006.1|2012-07-16",
                                                         "node_attrs": {
                                                           "div": 0.29202738999999994,
-                                                          "clade_membership": {
-                                                            "value": "4I_A.3"
-                                                          },
                                                           "country": {
                                                             "value": "Thailand"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4I_A.3"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -22491,11 +22401,11 @@
                                                             "name": "MW788999.1|2018-05",
                                                             "node_attrs": {
                                                               "div": 0.29639056999999996,
-                                                              "clade_membership": {
-                                                                "value": "4I_A.3"
-                                                              },
                                                               "country": {
                                                                 "value": "Myanmar"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_A.3"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -22639,11 +22549,11 @@
                                                                 "name": "LC410203.1|2017-06",
                                                                 "node_attrs": {
                                                                   "div": 0.29630365,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_A.3"
-                                                                  },
                                                                   "country": {
                                                                     "value": "Thailand"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_A.3"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -22748,11 +22658,11 @@
                                                                 "name": "MN018397.1|2016-02-01",
                                                                 "node_attrs": {
                                                                   "div": 0.29992289999999994,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_A.3"
-                                                                  },
                                                                   "country": {
                                                                     "value": "China"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_A.3"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -22965,11 +22875,11 @@
                                             "name": "MW945663.1|1994",
                                             "node_attrs": {
                                               "div": 0.27470562,
-                                              "clade_membership": {
-                                                "value": "4I_A"
-                                              },
                                               "country": {
                                                 "value": "Thailand"
+                                              },
+                                              "clade_membership": {
+                                                "value": "4I_A"
                                               }
                                             },
                                             "branch_attrs": {
@@ -23167,11 +23077,11 @@
                                                     "name": "MW945498.1|2010",
                                                     "node_attrs": {
                                                       "div": 0.29032568,
-                                                      "clade_membership": {
-                                                        "value": "4I_A.1"
-                                                      },
                                                       "country": {
                                                         "value": "Thailand"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4I_A.1"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -23321,11 +23231,11 @@
                                                     "name": "KY586942.1|2006",
                                                     "node_attrs": {
                                                       "div": 0.28627646999999995,
-                                                      "clade_membership": {
-                                                        "value": "4I_A.1"
-                                                      },
                                                       "country": {
                                                         "value": "Thailand"
+                                                      },
+                                                      "clade_membership": {
+                                                        "value": "4I_A.1"
                                                       }
                                                     },
                                                     "branch_attrs": {
@@ -23639,11 +23549,11 @@
                                                         "name": "OQ426982.1|2018-12-18",
                                                         "node_attrs": {
                                                           "div": 0.2899671199999999,
-                                                          "clade_membership": {
-                                                            "value": "4I_A.1.1"
-                                                          },
                                                           "country": {
                                                             "value": "Vietnam"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4I_A.1.1"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -23744,11 +23654,11 @@
                                                             "name": "OQ427042.1|2019-01-08",
                                                             "node_attrs": {
                                                               "div": 0.2942647899999999,
-                                                              "clade_membership": {
-                                                                "value": "4I_A.1.1"
-                                                              },
                                                               "country": {
                                                                 "value": "Vietnam"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_A.1.1"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -23838,11 +23748,11 @@
                                                                 "name": "OQ427061.1|2018-12-24",
                                                                 "node_attrs": {
                                                                   "div": 0.29533860999999995,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_A.1.1"
-                                                                  },
                                                                   "country": {
                                                                     "value": "Vietnam"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_A.1.1"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -23952,11 +23862,11 @@
                                                                     "name": "OQ427048.1|2019-01-15",
                                                                     "node_attrs": {
                                                                       "div": 0.2970172099999999,
-                                                                      "clade_membership": {
-                                                                        "value": "4I_A.1.1"
-                                                                      },
                                                                       "country": {
                                                                         "value": "Vietnam"
+                                                                      },
+                                                                      "clade_membership": {
+                                                                        "value": "4I_A.1.1"
                                                                       }
                                                                     },
                                                                     "branch_attrs": {
@@ -24048,11 +23958,11 @@
                                                                     "name": "MZ976860.1|2020-08-03",
                                                                     "node_attrs": {
                                                                       "div": 0.2960654999999999,
-                                                                      "clade_membership": {
-                                                                        "value": "4I_A.1.1"
-                                                                      },
                                                                       "country": {
                                                                         "value": "Cambodia"
+                                                                      },
+                                                                      "clade_membership": {
+                                                                        "value": "4I_A.1.1"
                                                                       }
                                                                     },
                                                                     "branch_attrs": {
@@ -24181,11 +24091,11 @@
                                                         "name": "KP792537.2|2011-06",
                                                         "node_attrs": {
                                                           "div": 0.28822260999999993,
-                                                          "clade_membership": {
-                                                            "value": "4I_A.1"
-                                                          },
                                                           "country": {
                                                             "value": "Singapore"
+                                                          },
+                                                          "clade_membership": {
+                                                            "value": "4I_A.1"
                                                           }
                                                         },
                                                         "branch_attrs": {
@@ -24307,11 +24217,11 @@
                                                             "name": "MN018394.1|2015-10-03",
                                                             "node_attrs": {
                                                               "div": 0.3010547599999999,
-                                                              "clade_membership": {
-                                                                "value": "4I_A.1.2"
-                                                              },
                                                               "country": {
                                                                 "value": "China"
+                                                              },
+                                                              "clade_membership": {
+                                                                "value": "4I_A.1.2"
                                                               }
                                                             },
                                                             "branch_attrs": {
@@ -24520,11 +24430,11 @@
                                                                 "name": "OQ427041.1|2019-01-07",
                                                                 "node_attrs": {
                                                                   "div": 0.29395418999999995,
-                                                                  "clade_membership": {
-                                                                    "value": "4I_A.1.2"
-                                                                  },
                                                                   "country": {
                                                                     "value": "Vietnam"
+                                                                  },
+                                                                  "clade_membership": {
+                                                                    "value": "4I_A.1.2"
                                                                   }
                                                                 },
                                                                 "branch_attrs": {
@@ -24618,11 +24528,11 @@
                                                                     "name": "OQ427062.1|2018-12-25",
                                                                     "node_attrs": {
                                                                       "div": 0.29375884999999996,
-                                                                      "clade_membership": {
-                                                                        "value": "4I_A.1.2"
-                                                                      },
                                                                       "country": {
                                                                         "value": "Vietnam"
+                                                                      },
+                                                                      "clade_membership": {
+                                                                        "value": "4I_A.1.2"
                                                                       }
                                                                     },
                                                                     "branch_attrs": {
@@ -24751,11 +24661,11 @@
                                                                         "name": "OQ427047.1|2019-01-15",
                                                                         "node_attrs": {
                                                                           "div": 0.2933574799999999,
-                                                                          "clade_membership": {
-                                                                            "value": "4I_A.1.2"
-                                                                          },
                                                                           "country": {
                                                                             "value": "Vietnam"
+                                                                          },
+                                                                          "clade_membership": {
+                                                                            "value": "4I_A.1.2"
                                                                           }
                                                                         },
                                                                         "branch_attrs": {
@@ -24766,11 +24676,11 @@
                                                                         "name": "OQ427046.1|2019-01-15",
                                                                         "node_attrs": {
                                                                           "div": 0.2933574799999999,
-                                                                          "clade_membership": {
-                                                                            "value": "4I_A.1.2"
-                                                                          },
                                                                           "country": {
                                                                             "value": "Vietnam"
+                                                                          },
+                                                                          "clade_membership": {
+                                                                            "value": "4I_A.1.2"
                                                                           }
                                                                         },
                                                                         "branch_attrs": {

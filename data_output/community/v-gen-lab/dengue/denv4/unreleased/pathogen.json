@@ -1,8 +1,8 @@
 {
   "attributes": {
-    "name": "DENV-4 lineages",
+    "name": "DENV-4",
     "reference accession": "NC_002640.1",
-    "reference name": "NC_002640.1"
+    "reference name": "rDEN4"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
