@@ -3150,7 +3150,7 @@
           "path": "community/v-gen-lab/dengue/denv1",
           "enabled": true,
           "attributes": {
-            "name": "DENV-1 lineages",
+            "name": "DENV-1",
             "reference accession": "NC_001477.1",
             "reference name": "Nauru/NMRI-45AZ5PDK-0/1974"
           },
@@ -3193,7 +3193,7 @@
           "path": "community/v-gen-lab/dengue/denv2",
           "enabled": true,
           "attributes": {
-            "name": "DENV-2 lineages",
+            "name": "DENV-2",
             "reference accession": "NC_001474.2",
             "reference name": "Thailand/CDC-16681/1964"
           },
@@ -3236,7 +3236,7 @@
           "path": "community/v-gen-lab/dengue/denv3",
           "enabled": true,
           "attributes": {
-            "name": "DENV-3 lineages",
+            "name": "DENV-3",
             "reference accession": "NC_001475.2",
             "reference name": "D3/H/IMTSSA-SRI/2000"
           },
@@ -3279,9 +3279,9 @@
           "path": "community/v-gen-lab/dengue/denv4",
           "enabled": true,
           "attributes": {
-            "name": "DENV-4 lineages",
+            "name": "DENV-4",
             "reference accession": "NC_002640.1",
-            "reference name": "NC_002640.1"
+            "reference name": "rDEN4"
           },
           "files": {
             "changelog": "CHANGELOG.md",
