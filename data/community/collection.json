@@ -23,6 +23,10 @@
     "community/moncla-lab/iav-h5/2.3.2.1",
     "community/moncla-lab/iav-h5/ha/2.3.4.4",
     "community/moncla-lab/iav-h5/ha/all-clades",
-    "community/moncla-lab/iav-h5/ha/2.3.2.1"
+    "community/moncla-lab/iav-h5/ha/2.3.2.1",
+    "community/v-gen-lab/dengue/denv1",
+    "community/v-gen-lab/dengue/denv2",
+    "community/v-gen-lab/dengue/denv3",
+    "community/v-gen-lab/dengue/denv4"
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "attributes": {
+    "name": "DENV-3",
+    "reference accession": "NC_001475.2",
+    "reference name": "D3/H/IMTSSA-SRI/2000"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "placementMaskRanges":[
+    {"begin":0, "end":94},
+    {"begin":10268, "end":10707}
+  ],
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade/issues",
+    "source code": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 1000,
+      "scoreBias": 100
+    },
+    "mixedSites": {
+      "enabled": false,
+      "mixedSitesThreshold": 8
+    },
+    "privateMutations": {
+      "cutoff": 210,
+      "enabled": true,
+      "typical": 70,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  },
+  "defaultCds": "E"
+}
