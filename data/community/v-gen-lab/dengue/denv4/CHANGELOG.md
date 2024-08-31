@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-08-31T20:44:06Z
 
 Initial release of a DENV-4 dataset for Lineage classification!
 
