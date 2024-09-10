@@ -58,173 +58,173 @@
       {
         "key": "country",
         "demes": {
-          "Sri Lanka": {
-            "latitude": 7.8731,
-            "longitude": 80.7718
-          },
-          "Papua New Guinea": {
-            "latitude": -5.6816069,
-            "longitude": 144.2489081
-          },
-          "India": {
-            "latitude": 21.077353,
-            "longitude": 78.723951
-          },
-          "Gabon": {
-            "latitude": -0.8999695,
-            "longitude": 11.6899699
-          },
-          "French Polynesia": {
-            "latitude": -16.03442485,
-            "longitude": -146.0490931059517
-          },
-          "Ecuador": {
-            "latitude": -1.0541,
-            "longitude": -78.1489
-          },
-          "Brazil": {
-            "latitude": -10.3333332,
-            "longitude": -53.1999999
-          },
-          "Italy": {
-            "latitude": 43.382775,
-            "longitude": 12.183629
-          },
-          "Cameroon": {
-            "latitude": 4.6125522,
-            "longitude": 13.1535811
-          },
-          "Venezuela": {
-            "latitude": 7.838891,
-            "longitude": -65.916409
-          },
-          "Somalia": {
-            "latitude": 8.3676771,
-            "longitude": 49.083416
-          },
-          "Paraguay": {
-            "latitude": -23.3165935,
-            "longitude": -58.1693445
-          },
-          "Thailand": {
-            "latitude": 14.8971921,
-            "longitude": 100.83273
-          },
-          "Nigeria": {
-            "latitude": 10.0,
-            "longitude": 8.0
-          },
-          "Puerto Rico": {
-            "latitude": 18.2247706,
-            "longitude": -66.4858295
-          },
-          "Australia": {
-            "latitude": -24.7761085,
-            "longitude": 134.755
+          "Pakistan": {
+            "latitude": 30.0,
+            "longitude": 70.0
           },
           "Colombia": {
             "latitude": 2.893108,
             "longitude": -73.7845142
           },
-          "Pakistan": {
-            "latitude": 30.0,
-            "longitude": 70.0
-          },
-          "Philippines": {
-            "latitude": 11.383086,
-            "longitude": 123.521862
-          },
-          "Brunei": {
-            "latitude": 4.5353,
-            "longitude": 114.7277
-          },
-          "Jamaica": {
-            "latitude": 18.1096,
-            "longitude": -77.2975
-          },
-          "Argentina": {
-            "latitude": -37.052315,
-            "longitude": -64.869142
-          },
-          "Democratic Republic of the Congo": {
-            "latitude": -4.0383,
-            "longitude": 21.7587
-          },
-          "Peru": {
-            "latitude": -9.650468,
-            "longitude": -75.328211
-          },
-          "Malaysia": {
-            "latitude": 4.264153,
-            "longitude": 102.222436
-          },
           "Singapore": {
             "latitude": 1.344189,
             "longitude": 103.867546
-          },
-          "Mexico": {
-            "latitude": 19.4325301,
-            "longitude": -99.1332101
-          },
-          "Nicaragua": {
-            "latitude": 12.6090157,
-            "longitude": -85.2936911
-          },
-          "Fiji": {
-            "latitude": -18.1239696,
-            "longitude": 179.0122737
-          },
-          "Saudi Arabia": {
-            "latitude": 25.0,
-            "longitude": 45.0
-          },
-          "South Korea": {
-            "latitude": 36.609249,
-            "longitude": 127.917932
-          },
-          "Cuba": {
-            "latitude": 23.0131338,
-            "longitude": -80.8328748
-          },
-          "Indonesia": {
-            "latitude": -0.897599,
-            "longitude": 114.181602
-          },
-          "Republic of the Congo": {
-            "latitude": -0.516362,
-            "longitude": 15.877811
-          },
-          "Laos": {
-            "latitude": 20.0171109,
-            "longitude": 103.378253
-          },
-          "Myanmar": {
-            "latitude": 20.600856,
-            "longitude": 96.287616
-          },
-          "USA": {
-            "latitude": 38.916963,
-            "longitude": -98.891372
-          },
-          "China": {
-            "latitude": 33.394333,
-            "longitude": 104.689839
-          },
-          "Angola": {
-            "latitude": -11.8775768,
-            "longitude": 17.5691241
-          },
-          "Cambodia": {
-            "latitude": 13.0,
-            "longitude": 105.0
           },
           "Costa Rica": {
             "latitude": 10.0379,
             "longitude": -83.818759
           },
+          "Papua New Guinea": {
+            "latitude": -5.6816069,
+            "longitude": 144.2489081
+          },
+          "Myanmar": {
+            "latitude": 20.600856,
+            "longitude": 96.287616
+          },
           "Bolivia": {
             "latitude": -17.0568696,
             "longitude": -64.9912286
+          },
+          "Venezuela": {
+            "latitude": 7.838891,
+            "longitude": -65.916409
+          },
+          "Cambodia": {
+            "latitude": 13.0,
+            "longitude": 105.0
+          },
+          "Nicaragua": {
+            "latitude": 12.6090157,
+            "longitude": -85.2936911
+          },
+          "China": {
+            "latitude": 33.394333,
+            "longitude": 104.689839
+          },
+          "Sri Lanka": {
+            "latitude": 7.8731,
+            "longitude": 80.7718
+          },
+          "Democratic Republic of the Congo": {
+            "latitude": -4.0383,
+            "longitude": 21.7587
+          },
+          "Indonesia": {
+            "latitude": -0.897599,
+            "longitude": 114.181602
+          },
+          "Brunei": {
+            "latitude": 4.5353,
+            "longitude": 114.7277
+          },
+          "South Korea": {
+            "latitude": 36.609249,
+            "longitude": 127.917932
+          },
+          "Fiji": {
+            "latitude": -18.1239696,
+            "longitude": 179.0122737
+          },
+          "Thailand": {
+            "latitude": 14.8971921,
+            "longitude": 100.83273
+          },
+          "Gabon": {
+            "latitude": -0.8999695,
+            "longitude": 11.6899699
+          },
+          "Cuba": {
+            "latitude": 23.0131338,
+            "longitude": -80.8328748
+          },
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
+          },
+          "Paraguay": {
+            "latitude": -23.3165935,
+            "longitude": -58.1693445
+          },
+          "India": {
+            "latitude": 21.077353,
+            "longitude": 78.723951
+          },
+          "Cameroon": {
+            "latitude": 4.6125522,
+            "longitude": 13.1535811
+          },
+          "Ecuador": {
+            "latitude": -1.0541,
+            "longitude": -78.1489
+          },
+          "Angola": {
+            "latitude": -11.8775768,
+            "longitude": 17.5691241
+          },
+          "Jamaica": {
+            "latitude": 18.1096,
+            "longitude": -77.2975
+          },
+          "Somalia": {
+            "latitude": 8.3676771,
+            "longitude": 49.083416
+          },
+          "Puerto Rico": {
+            "latitude": 18.2247706,
+            "longitude": -66.4858295
+          },
+          "Mexico": {
+            "latitude": 19.4325301,
+            "longitude": -99.1332101
+          },
+          "Argentina": {
+            "latitude": -37.052315,
+            "longitude": -64.869142
+          },
+          "Peru": {
+            "latitude": -9.650468,
+            "longitude": -75.328211
+          },
+          "French Polynesia": {
+            "latitude": -16.03442485,
+            "longitude": -146.0490931059517
+          },
+          "Philippines": {
+            "latitude": 11.383086,
+            "longitude": 123.521862
+          },
+          "Nigeria": {
+            "latitude": 10.0,
+            "longitude": 8.0
+          },
+          "Republic of the Congo": {
+            "latitude": -0.516362,
+            "longitude": 15.877811
+          },
+          "Saudi Arabia": {
+            "latitude": 25.0,
+            "longitude": 45.0
+          },
+          "Australia": {
+            "latitude": -24.7761085,
+            "longitude": 134.755
+          },
+          "Italy": {
+            "latitude": 43.382775,
+            "longitude": 12.183629
+          },
+          "Malaysia": {
+            "latitude": 4.264153,
+            "longitude": 102.222436
+          },
+          "USA": {
+            "latitude": 38.916963,
+            "longitude": -98.891372
+          },
+          "Laos": {
+            "latitude": 20.0171109,
+            "longitude": 103.378253
           }
         }
       }
