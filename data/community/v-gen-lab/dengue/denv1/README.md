@@ -18,9 +18,9 @@ This system is built on experience developing lineage systems for other viruses 
 
 Broadly speaking, we define major and minor lineages within each genotype. These lineages are defined by the same rules but use different nomenclature. In theory, minor lineages should be more useful for country-specific questions, and major lineages for regional questions. Of course, it won't necessarily always work like that—some minor lineages are very widespread, and some major lineages are geographically limited.
 
-The source code is available at [V-GEN-Lab/dengue-lineages-nextclade](https://github.com/V-GEN-Lab/dengue-lineages-nextclade).
+The source code is available at [V-GEN-Lab/dengue-lineages-workflow](https://github.com/V-GEN-Lab/dengue-lineages-workflow).
 
-For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-nextclade/issues).
+For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-workflow/issues)
 
 ## Maintainers and Contacts:
 
