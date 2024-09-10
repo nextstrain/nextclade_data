@@ -58,25 +58,45 @@
       {
         "key": "country",
         "demes": {
-          "Haiti": {
-            "latitude": 19.1399952,
-            "longitude": -72.3570972
-          },
-          "Nicaragua": {
-            "latitude": 12.6090157,
-            "longitude": -85.2936911
-          },
-          "Brazil": {
-            "latitude": -10.3333332,
-            "longitude": -53.1999999
+          "Malaysia": {
+            "latitude": 4.264153,
+            "longitude": 102.222436
           },
           "Pakistan": {
             "latitude": 30.0,
             "longitude": 70.0
           },
+          "Thailand": {
+            "latitude": 14.8971921,
+            "longitude": 100.83273
+          },
+          "China": {
+            "latitude": 33.394333,
+            "longitude": 104.689839
+          },
           "Sri Lanka": {
             "latitude": 7.8731,
             "longitude": 80.7718
+          },
+          "Colombia": {
+            "latitude": 2.893108,
+            "longitude": -73.7845142
+          },
+          "Venezuela": {
+            "latitude": 7.838891,
+            "longitude": -65.916409
+          },
+          "Haiti": {
+            "latitude": 19.1399952,
+            "longitude": -72.3570972
+          },
+          "Paraguay": {
+            "latitude": -23.3165935,
+            "longitude": -58.1693445
+          },
+          "Mexico": {
+            "latitude": 19.4325301,
+            "longitude": -99.1332101
           },
           "USA": {
             "latitude": 38.916963,
@@ -86,45 +106,17 @@
             "latitude": 21.077353,
             "longitude": 78.723951
           },
-          "Paraguay": {
-            "latitude": -23.3165935,
-            "longitude": -58.1693445
-          },
-          "Puerto Rico": {
-            "latitude": 18.2247706,
-            "longitude": -66.4858295
-          },
-          "Thailand": {
-            "latitude": 14.8971921,
-            "longitude": 100.83273
-          },
-          "Colombia": {
-            "latitude": 2.893108,
-            "longitude": -73.7845142
+          "Senegal": {
+            "latitude": 14.5,
+            "longitude": -14.25
           },
           "Ecuador": {
             "latitude": -1.0541,
             "longitude": -78.1489
           },
-          "Mexico": {
-            "latitude": 19.4325301,
-            "longitude": -99.1332101
-          },
-          "Singapore": {
-            "latitude": 1.344189,
-            "longitude": 103.867546
-          },
-          "Senegal": {
-            "latitude": 14.5,
-            "longitude": -14.25
-          },
-          "Venezuela": {
-            "latitude": 7.838891,
-            "longitude": -65.916409
-          },
-          "Jamaica": {
-            "latitude": 18.1096,
-            "longitude": -77.2975
+          "Puerto Rico": {
+            "latitude": 18.2247706,
+            "longitude": -66.4858295
           },
           "Cambodia": {
             "latitude": 13.0,
@@ -134,25 +126,33 @@
             "latitude": -24.7761085,
             "longitude": 134.755
           },
+          "Jamaica": {
+            "latitude": 18.1096,
+            "longitude": -77.2975
+          },
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
+          },
+          "Nicaragua": {
+            "latitude": 12.6090157,
+            "longitude": -85.2936911
+          },
           "Taiwan": {
             "latitude": 23.8169,
             "longitude": 121.031365
           },
-          "China": {
-            "latitude": 33.394333,
-            "longitude": 104.689839
+          "Myanmar": {
+            "latitude": 20.600856,
+            "longitude": 96.287616
           },
-          "Malaysia": {
-            "latitude": 4.264153,
-            "longitude": 102.222436
+          "Singapore": {
+            "latitude": 1.344189,
+            "longitude": 103.867546
           },
           "Indonesia": {
             "latitude": -0.897599,
             "longitude": 114.181602
-          },
-          "Myanmar": {
-            "latitude": 20.600856,
-            "longitude": 96.287616
           }
         }
       }
