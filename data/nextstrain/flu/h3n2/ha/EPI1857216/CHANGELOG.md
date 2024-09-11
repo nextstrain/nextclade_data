@@ -1,3 +1,7 @@
+## Unreleased
+
+Add emerging subclades as an alternate clade annotation to surface J.1.1, J.2.1, and J.2.2.
+
 ## 2024-08-08T05:08:21Z
 
 Fix numbering of RBD sites it the `pathogen.json`. The relevant positions were indexed 1-based, when they should have been indexed 0-based.
