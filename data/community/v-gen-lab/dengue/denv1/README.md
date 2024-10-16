@@ -20,7 +20,7 @@ Broadly speaking, we define major and minor lineages within each genotype. These
 
 The source code is available at [V-GEN-Lab/dengue-lineages-workflow](https://github.com/V-GEN-Lab/dengue-lineages-workflow).
 
-For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-workflow/issues).
+For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-workflow/issues)
 
 ## Maintainers and Contacts:
 
