@@ -71,13 +71,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 46,
+            "clades": 48,
             "customClades": {
-              "Nextclade_pango": 3331,
-              "partiallyAliased": 3331,
-              "clade_nextstrain": 46,
+              "Nextclade_pango": 3335,
+              "partiallyAliased": 3335,
+              "clade_nextstrain": 48,
               "clade_who": 13,
-              "clade_display": 46
+              "clade_display": 48
             },
             "qc": [
               "frameShifts",
@@ -92,6 +92,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-09-25T21:50:30Z",
               "tag": "2024-09-25--21-50-30Z",
@@ -158,8 +165,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-09-25T21:50:30Z",
-            "tag": "2024-09-25--21-50-30Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -208,13 +214,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 46,
+            "clades": 48,
             "customClades": {
-              "Nextclade_pango": 3331,
-              "partiallyAliased": 3331,
-              "clade_nextstrain": 46,
+              "Nextclade_pango": 3335,
+              "partiallyAliased": 3335,
+              "clade_nextstrain": 48,
               "clade_who": 13,
-              "clade_display": 46
+              "clade_display": 48
             },
             "qc": [
               "frameShifts",
@@ -229,6 +235,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-09-25T21:50:30Z",
               "tag": "2024-09-25--21-50-30Z",
@@ -295,8 +308,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-09-25T21:50:30Z",
-            "tag": "2024-09-25--21-50-30Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -347,13 +359,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 23,
+            "clades": 25,
             "customClades": {
-              "Nextclade_pango": 2594,
-              "partiallyAliased": 2594,
-              "clade_nextstrain": 23,
+              "Nextclade_pango": 2598,
+              "partiallyAliased": 2598,
+              "clade_nextstrain": 25,
               "clade_who": 3,
-              "clade_display": 23
+              "clade_display": 25
             },
             "qc": [
               "frameShifts",
@@ -369,6 +381,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-09-25T21:50:30Z",
               "tag": "2024-09-25--21-50-30Z",
@@ -435,8 +454,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-09-25T21:50:30Z",
-            "tag": "2024-09-25--21-50-30Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -484,13 +502,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 23,
+            "clades": 25,
             "customClades": {
-              "Nextclade_pango": 2594,
-              "partiallyAliased": 2594,
-              "clade_nextstrain": 23,
+              "Nextclade_pango": 2598,
+              "partiallyAliased": 2598,
+              "clade_nextstrain": 25,
               "clade_who": 3,
-              "clade_display": 23
+              "clade_display": 25
             },
             "qc": [
               "frameShifts",
@@ -506,6 +524,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-09-25T21:50:30Z",
               "tag": "2024-09-25--21-50-30Z",
@@ -572,8 +597,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-09-25T21:50:30Z",
-            "tag": "2024-09-25--21-50-30Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -621,13 +645,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 23,
+            "clades": 25,
             "customClades": {
-              "Nextclade_pango": 2594,
-              "partiallyAliased": 2594,
-              "clade_nextstrain": 23,
+              "Nextclade_pango": 2598,
+              "partiallyAliased": 2598,
+              "clade_nextstrain": 25,
               "clade_who": 3,
-              "clade_display": 23
+              "clade_display": 25
             },
             "qc": [
               "frameShifts",
@@ -643,6 +667,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-09-25T21:50:30Z",
               "tag": "2024-09-25--21-50-30Z",
@@ -709,8 +740,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-09-25T21:50:30Z",
-            "tag": "2024-09-25--21-50-30Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
