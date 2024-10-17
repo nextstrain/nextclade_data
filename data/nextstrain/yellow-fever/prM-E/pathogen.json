@@ -15,8 +15,7 @@
   },
   "schemaVersion": "3.0.0",
   "alignmentParams": {
-      "minSeedCover": 0.01,
-      "minLength": 500
+      "minSeedCover": 0.01
   },
   "qc": {
     "missingData": {
@@ -36,8 +35,8 @@
     },
     "privateMutations": {
       "enabled": true,
-      "cutoff": 8,
-      "typical": 2,
+      "cutoff": 12,
+      "typical": 4,
       "weightLabeledSubstitutions": 1,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
