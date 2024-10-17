@@ -1,4 +1,4 @@
-# Yellow fever virus dataset
+# Yellow fever virus (prM-E region only) dataset
 
 | Key               | Value                                                            |
 | ----------------- | -----------------------------------------------------------------|
@@ -36,7 +36,7 @@ following genotypes as described in the aforementioned two papers:
 
 (N.b., the reference sequence used in this data set is actually 672nt
 long, from bases 641-1312 of the genome reference. The 2 extra bases
-make the reference an complete open reading frame.)
+make the reference a complete open reading frame.)
 
 This dataset can be used to assign genotypes to any sequence that
 includes at least 500 bp of the prM-E region, including whole genome
