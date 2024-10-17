@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-10-17T16:48:48Z
 
 - Add newly designated Nextstrain clades 24F (XEC) and 24G (KP.2.3)
 - Add all 4 Pango lineages designated between 2024-09-26 and 2024-10-14. Unfold below to see a list of all newly included lineages with their designation dates:
