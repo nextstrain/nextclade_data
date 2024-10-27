@@ -1,3 +1,7 @@
+## Unreleased
+
+ - update reference trees
+
 ## 2024-04-19T07:50:39Z
 
 - addition of subclade [B.4.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/main/subclades/B.4.1.yml)

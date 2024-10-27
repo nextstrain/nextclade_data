@@ -1,3 +1,8 @@
+## Unreleased
+
+ - update reference trees
+ - include subclade proposals
+
 ## 2024-07-03T08:29:55Z
 
  - add representative samples from early pandemic-era clades including 1, 2, 3, 4, 6C, 7, and 8 to improve clade label annotations for older sequences
