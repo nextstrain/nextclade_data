@@ -804,7 +804,8 @@
             "clades": 24,
             "customClades": {
               "short-clade": 16,
-              "subclade": 21
+              "subclade": 21,
+              "proposed_clade": 21
             },
             "qc": [
               "privateMutations",
@@ -906,7 +907,8 @@
             "clades": 24,
             "customClades": {
               "short-clade": 16,
-              "subclade": 21
+              "subclade": 21,
+              "proposed_clade": 21
             },
             "qc": [
               "privateMutations",
@@ -1005,6 +1007,9 @@
           },
           "capabilities": {
             "clades": 24,
+            "customClades": {
+              "proposed_clade": 24
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1103,7 +1108,8 @@
             "clades": 37,
             "customClades": {
               "subclade": 42,
-              "short-clade": 37
+              "short-clade": 37,
+              "proposed_clade": 45
             },
             "qc": [
               "privateMutations",
@@ -1213,7 +1219,8 @@
             "clades": 34,
             "customClades": {
               "subclade": 39,
-              "short-clade": 34
+              "short-clade": 34,
+              "proposed_clade": 42
             },
             "qc": [
               "privateMutations",
@@ -1329,6 +1336,9 @@
           },
           "capabilities": {
             "clades": 17,
+            "customClades": {
+              "proposed_clade": 17
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1420,7 +1430,8 @@
           "capabilities": {
             "clades": 8,
             "customClades": {
-              "subclade": 22
+              "subclade": 22,
+              "proposed_clade": 22
             },
             "qc": [
               "privateMutations",
@@ -1519,6 +1530,9 @@
           },
           "capabilities": {
             "clades": 19,
+            "customClades": {
+              "proposed_clade": 19
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
