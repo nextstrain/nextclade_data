@@ -801,11 +801,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 24,
+            "clades": 25,
             "customClades": {
               "short-clade": 16,
               "subclade": 21,
-              "proposed_clade": 21
+              "proposedSubclade": 22
             },
             "qc": [
               "privateMutations",
@@ -904,11 +904,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 24,
+            "clades": 25,
             "customClades": {
               "short-clade": 16,
               "subclade": 21,
-              "proposed_clade": 21
+              "proposedSubclade": 22
             },
             "qc": [
               "privateMutations",
@@ -1008,7 +1008,7 @@
           "capabilities": {
             "clades": 24,
             "customClades": {
-              "proposed_clade": 24
+              "proposedSubclade": 24
             },
             "qc": [
               "privateMutations",
@@ -1109,7 +1109,7 @@
             "customClades": {
               "subclade": 42,
               "short-clade": 37,
-              "proposed_clade": 45
+              "proposedSubclade": 45
             },
             "qc": [
               "privateMutations",
@@ -1337,7 +1337,7 @@
           "capabilities": {
             "clades": 17,
             "customClades": {
-              "proposed_clade": 17
+              "proposedSubclade": 17
             },
             "qc": [
               "privateMutations",
@@ -1431,7 +1431,7 @@
             "clades": 8,
             "customClades": {
               "subclade": 22,
-              "proposed_clade": 22
+              "proposedSubclade": 22
             },
             "qc": [
               "privateMutations",
@@ -1531,7 +1531,7 @@
           "capabilities": {
             "clades": 19,
             "customClades": {
-              "proposed_clade": 19
+              "proposedSubclade": 19
             },
             "qc": [
               "privateMutations",
