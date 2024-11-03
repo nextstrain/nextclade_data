@@ -1220,7 +1220,7 @@
             "customClades": {
               "subclade": 39,
               "short-clade": 34,
-              "proposed_clade": 42
+              "proposedSubclade": 42
             },
             "qc": [
               "privateMutations",
