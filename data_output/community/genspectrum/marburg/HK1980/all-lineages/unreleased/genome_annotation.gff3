@@ -1,0 +1,37 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_001608.3 1 19111
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3052505
+NC_001608.3	RefSeq	region	1	19111	.	+	.	ID=NC_001608.3:1..19111;Dbxref=taxon:3052505;country=Kenya;gbkey=Src;genome=genomic;isolate=Marburg virus/H.sapiens-tc/KEN/1980/Mt. Elgon-Musoke;mol_type=viral cRNA;old-name=Lake Victoria marburgvirus
+NC_001608.3	RefSeq	sequence_feature	1	48	.	+	.	ID=id-NC_001608.3:1..48;Note=leader region;gbkey=misc_feature
+NC_001608.3	RefSeq	gene	49	2844	.	+	.	ID=gene-MARV_gp1;Dbxref=GeneID:920944;Name=NP;gbkey=Gene;gene=NP;gene_biotype=protein_coding;locus_tag=MARV_gp1
+NC_001608.3	RefSeq	mRNA	49	2844	.	+	.	ID=rna-MARV_gp1;Parent=gene-MARV_gp1;Dbxref=GeneID:920944;gbkey=mRNA;gene=NP;locus_tag=MARV_gp1;product=nucleoprotein
+NC_001608.3	RefSeq	exon	49	2844	.	+	.	ID=exon-MARV_gp1-1;Parent=rna-MARV_gp1;Dbxref=GeneID:920944;gbkey=mRNA;gene=NP;locus_tag=MARV_gp1;product=nucleoprotein
+NC_001608.3	RefSeq	CDS	104	2191	.	+	0	Name=NP;ID=cds-YP_001531153.1;Parent=rna-MARV_gp1;Dbxref=GenBank:YP_001531153.1,GeneID:920944;Name=YP_001531153.1;Note=encapsidates RNA genome;gbkey=CDS;gene=NP;locus_tag=MARV_gp1;product=nucleoprotein;protein_id=YP_001531153.1
+NC_001608.3	RefSeq	gene	2854	4410	.	+	.	ID=gene-MARV_gp2;Dbxref=GeneID:920948;Name=VP35;gbkey=Gene;gene=VP35;gene_biotype=protein_coding;locus_tag=MARV_gp2
+NC_001608.3	RefSeq	mRNA	2854	4410	.	+	.	ID=rna-MARV_gp2;Parent=gene-MARV_gp2;Dbxref=GeneID:920948;gbkey=mRNA;gene=VP35;locus_tag=MARV_gp2;product=VP35
+NC_001608.3	RefSeq	exon	2854	4410	.	+	.	ID=exon-MARV_gp2-1;Parent=rna-MARV_gp2;Dbxref=GeneID:920948;gbkey=mRNA;gene=VP35;locus_tag=MARV_gp2;product=VP35
+NC_001608.3	RefSeq	CDS	2945	3934	.	+	0	Name=VP35;ID=cds-YP_001531154.1;Parent=rna-MARV_gp2;Dbxref=GenBank:YP_001531154.1,GeneID:920948;Name=YP_001531154.1;Note=polymerase cofactor%3B type I interferon antagonist;gbkey=CDS;gene=VP35;locus_tag=MARV_gp2;product=polymerase complex protein;protein_id=YP_001531154.1
+NC_001608.3	RefSeq	gene	4415	5819	.	+	.	ID=gene-MARV_gp3;Dbxref=GeneID:920947;Name=VP40;gbkey=Gene;gene=VP40;gene_biotype=protein_coding;locus_tag=MARV_gp3
+NC_001608.3	RefSeq	mRNA	4415	5819	.	+	.	ID=rna-MARV_gp3;Parent=gene-MARV_gp3;Dbxref=GeneID:920947;gbkey=mRNA;gene=VP40;locus_tag=MARV_gp3;product=VP40
+NC_001608.3	RefSeq	exon	4415	5819	.	+	.	ID=exon-MARV_gp3-1;Parent=rna-MARV_gp3;Dbxref=GeneID:920947;gbkey=mRNA;gene=VP40;locus_tag=MARV_gp3;product=VP40
+NC_001608.3	RefSeq	CDS	4568	5479	.	+	0	Name=VP40;ID=cds-YP_001531155.1;Parent=rna-MARV_gp3;Dbxref=GenBank:YP_001531155.1,GeneID:920947;Name=YP_001531155.1;Note=budding%3B virus particle formation;gbkey=CDS;gene=VP40;locus_tag=MARV_gp3;product=matrix protein;protein_id=YP_001531155.1
+NC_001608.3	RefSeq	gene	5825	8670	.	+	.	ID=gene-MARV_gp4;Dbxref=GeneID:920945;Name=GP;gbkey=Gene;gene=GP;gene_biotype=protein_coding;locus_tag=MARV_gp4
+NC_001608.3	RefSeq	mRNA	5825	8670	.	+	.	ID=rna-MARV_gp4;Parent=gene-MARV_gp4;Dbxref=GeneID:920945;gbkey=mRNA;gene=GP;locus_tag=MARV_gp4;product=glycoprotein
+NC_001608.3	RefSeq	exon	5825	8670	.	+	.	ID=exon-MARV_gp4-1;Parent=rna-MARV_gp4;Dbxref=GeneID:920945;gbkey=mRNA;gene=GP;locus_tag=MARV_gp4;product=glycoprotein
+NC_001608.3	RefSeq	CDS	5941	7986	.	+	0	Name=GP;ID=cds-YP_001531156.1;Parent=rna-MARV_gp4;Dbxref=GenBank:YP_001531156.1,GeneID:920945;Name=YP_001531156.1;Note=fusion%3B receptor binding;gbkey=CDS;gene=GP;locus_tag=MARV_gp4;product=glycoprotein;protein_id=YP_001531156.1
+NC_001608.3	RefSeq	gene	8768	10016	.	+	.	ID=gene-MARV_gp5;Dbxref=GeneID:920942;Name=VP30;gbkey=Gene;gene=VP30;gene_biotype=protein_coding;locus_tag=MARV_gp5
+NC_001608.3	RefSeq	mRNA	8768	10016	.	+	.	ID=rna-MARV_gp5;Parent=gene-MARV_gp5;Dbxref=GeneID:920942;gbkey=mRNA;gene=VP30;locus_tag=MARV_gp5;product=VP30
+NC_001608.3	RefSeq	exon	8768	10016	.	+	.	ID=exon-MARV_gp5-1;Parent=rna-MARV_gp5;Dbxref=GeneID:920942;gbkey=mRNA;gene=VP30;locus_tag=MARV_gp5;product=VP30
+NC_001608.3	RefSeq	CDS	8869	9714	.	+	0	Name=VP30;ID=cds-YP_001531157.1;Parent=rna-MARV_gp5;Dbxref=GenBank:YP_001531157.1,GeneID:920942;Name=YP_001531157.1;Note=binds to NP;gbkey=CDS;gene=VP30;locus_tag=MARV_gp5;product=minor nucleoprotein;protein_id=YP_001531157.1
+NC_001608.3	RefSeq	gene	9999	11285	.	+	.	ID=gene-MARV_gp6;Dbxref=GeneID:920943;Name=VP24;gbkey=Gene;gene=VP24;gene_biotype=protein_coding;locus_tag=MARV_gp6
+NC_001608.3	RefSeq	mRNA	9999	11285	.	+	.	ID=rna-MARV_gp6;Parent=gene-MARV_gp6;Dbxref=GeneID:920943;gbkey=mRNA;gene=VP24;locus_tag=MARV_gp6;product=VP24
+NC_001608.3	RefSeq	exon	9999	11285	.	+	.	ID=exon-MARV_gp6-1;Parent=rna-MARV_gp6;Dbxref=GeneID:920943;gbkey=mRNA;gene=VP24;locus_tag=MARV_gp6;product=VP24
+NC_001608.3	RefSeq	CDS	10207	10968	.	+	0	Name=VP24;ID=cds-YP_001531158.1;Parent=rna-MARV_gp6;Dbxref=GenBank:YP_001531158.1,GeneID:920943;Name=YP_001531158.1;gbkey=CDS;gene=VP24;locus_tag=MARV_gp6;product=matrix protein;protein_id=YP_001531158.1
+NC_001608.3	RefSeq	gene	11291	19035	.	+	.	ID=gene-MARV_gp7;Dbxref=GeneID:920946;Name=L;gbkey=Gene;gene=L;gene_biotype=protein_coding;locus_tag=MARV_gp7
+NC_001608.3	RefSeq	mRNA	11291	19035	.	+	.	ID=rna-MARV_gp7;Parent=gene-MARV_gp7;Dbxref=GeneID:920946;gbkey=mRNA;gene=L;locus_tag=MARV_gp7;product=L protein
+NC_001608.3	RefSeq	exon	11291	19035	.	+	.	ID=exon-MARV_gp7-1;Parent=rna-MARV_gp7;Dbxref=GeneID:920946;gbkey=mRNA;gene=L;locus_tag=MARV_gp7;product=L protein
+NC_001608.3	RefSeq	CDS	11481	18476	.	+	0	Name=L;ID=cds-YP_001531159.1;Parent=rna-MARV_gp7;Dbxref=GenBank:YP_001531159.1,GeneID:920946;Name=YP_001531159.1;gbkey=CDS;gene=L;locus_tag=MARV_gp7;product=RNA-dependent RNA polymerase;protein_id=YP_001531159.1
+NC_001608.3	RefSeq	sequence_feature	19036	19111	.	+	.	ID=id-NC_001608.3:19036..19111;Note=trailer;gbkey=misc_feature
+
