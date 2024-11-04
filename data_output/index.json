@@ -3476,6 +3476,47 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "community/genspectrum/marburg/HK1980/all-lineages",
+          "enabled": true,
+          "attributes": {
+            "name": "Orthomarburgvirus marburgense",
+            "reference name": "Marburg marburgvirus isolate Marburg virus/H.sapiens-tc/KEN/1980/Mt. Elgon-Musoke, complete genome",
+            "reference accession": "NC_001608.3"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "treeJson": "marburg_tree.json",
+            "examples": "examples.fasta"
+          },
+          "capabilities": {
+            "clades": 11,
+            "customClades": {
+              "lineage": 2
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
         }
       ]
     }
