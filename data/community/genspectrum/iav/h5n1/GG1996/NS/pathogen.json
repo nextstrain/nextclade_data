@@ -15,6 +15,7 @@
     "pathogenJson": "pathogen.json",
     "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
-    "readme": "README.md"
+    "readme": "README.md",
+    "examples": "examples.fasta"
   }
 }
