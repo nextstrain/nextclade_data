@@ -22,7 +22,7 @@
     "changelog": "CHANGELOG.md",
     "readme": "README.md",
     "treeJson": "marburg_tree.json",
-    "examples": "sequences.fasta"
+    "examples": "examples.fasta"
   },
   "qc": {
     "privateMutations": {
