@@ -1,11 +1,11 @@
 # H5N1 (segment7/ M) - dataset with A/Goose/Guangdong/1/96 reference
 
-| attribute           | value                        |
-| ------------------- | ---------------------------- |
-| dataset name        | H5N1 all segments            |
-| reference strain    | A/Goose/Guangdong/1/96(H5N1) |
-| reference accession | NC_007363.1                  |
-| assembly accession  | GCF_000864105.1              |
+| attribute           | value                                   |
+| ------------------- | --------------------------------------- |
+| dataset name        | community/genspectrum/iav/h5n1/GG1996/M |
+| reference strain    | A/Goose/Guangdong/1/96(H5N1)            |
+| reference accession | NC_007363.1                             |
+| assembly accession  | GCF_000864105.1                         |
 
 ## Authors and contacts
 
