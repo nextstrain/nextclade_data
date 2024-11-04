@@ -1,5 +1,8 @@
 {
   "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "minSeedCover": 0.01
+  },
   "attributes": {
     "name": "Influenza A/H5N1 (segment 3/PA)",
     "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) polymerase (PA) and PA-X protein (PA-X) genes, complete cds",
@@ -8,6 +11,7 @@
   "files": {
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
+    "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
     "readme": "README.md"
   }

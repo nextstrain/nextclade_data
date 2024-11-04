@@ -1,5 +1,8 @@
 {
   "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "minSeedCover": 0.01
+  },
   "attributes": {
     "name": "Influenza A/H5N1 (segment 1/PB2)",
     "reference name": "Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PB2) gene, complete cds",
@@ -7,6 +10,7 @@
   },
   "files": {
     "reference": "reference.fasta",
+    "changelog": "CHANGELOG.md",
     "pathogenJson": "pathogen.json",
     "genomeAnnotation": "genome_annotation.gff3",
     "readme": "README.md"

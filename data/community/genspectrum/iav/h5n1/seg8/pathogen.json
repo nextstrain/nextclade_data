@@ -1,5 +1,10 @@
 {
   "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "minSeedCover": 0.005,
+    "kmerLength":7,
+    "allowedMismatches": 12
+  },
   "attributes": {
     "name": "Influenza A/H5N1 (segment 8/NS)",
     "reference name": "Influenza A virus (A/goose/Guangdong/1/1996(H5N1)) segment 8, complete sequence",
@@ -8,6 +13,7 @@
   "files": {
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
+    "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
     "readme": "README.md"
   }
