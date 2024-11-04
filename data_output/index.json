@@ -803,8 +803,9 @@
           "capabilities": {
             "clades": 25,
             "customClades": {
-              "subclade": 20,
-              "short-clade": 16
+              "short-clade": 16,
+              "subclade": 21,
+              "proposedSubclade": 22
             },
             "qc": [
               "privateMutations",
@@ -817,6 +818,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -843,8 +851,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-07-03T08:29:55Z",
-            "tag": "2024-07-03--08-29-55Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -897,10 +904,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 16,
+            "clades": 25,
             "customClades": {
+              "short-clade": 16,
               "subclade": 21,
-              "short-clade": 13
+              "proposedSubclade": 22
             },
             "qc": [
               "privateMutations",
@@ -913,6 +921,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -939,8 +954,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-07-03T08:29:55Z",
-            "tag": "2024-07-03--08-29-55Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -992,7 +1006,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 23,
+            "clades": 24,
+            "customClades": {
+              "proposedSubclade": 24
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1004,6 +1021,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1030,8 +1054,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-07-03T08:29:55Z",
-            "tag": "2024-07-03--08-29-55Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1085,7 +1108,8 @@
             "clades": 37,
             "customClades": {
               "subclade": 42,
-              "short-clade": 37
+              "short-clade": 37,
+              "proposedSubclade": 45
             },
             "qc": [
               "privateMutations",
@@ -1098,6 +1122,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1132,8 +1163,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-07-03T08:29:55Z",
-            "tag": "2024-07-03--08-29-55Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1186,10 +1216,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 30,
+            "clades": 34,
             "customClades": {
-              "subclade": 36,
-              "short-clade": 30
+              "subclade": 39,
+              "short-clade": 34,
+              "proposedSubclade": 42
             },
             "qc": [
               "privateMutations",
@@ -1203,6 +1234,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-08-08T05:08:21Z",
               "tag": "2024-08-08--05-08-21Z",
@@ -1245,8 +1283,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-08-08T05:08:21Z",
-            "tag": "2024-08-08--05-08-21Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1299,6 +1336,9 @@
           },
           "capabilities": {
             "clades": 17,
+            "customClades": {
+              "proposedSubclade": 17
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1310,6 +1350,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -1328,8 +1375,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-04-19T07:50:39Z",
-            "tag": "2024-04-19--07-50-39Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1384,7 +1430,8 @@
           "capabilities": {
             "clades": 8,
             "customClades": {
-              "subclade": 22
+              "subclade": 22,
+              "proposedSubclade": 22
             },
             "qc": [
               "privateMutations",
@@ -1397,6 +1444,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-07-03T08:29:55Z",
               "tag": "2024-07-03--08-29-55Z",
@@ -1423,8 +1477,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-07-03T08:29:55Z",
-            "tag": "2024-07-03--08-29-55Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1477,6 +1530,9 @@
           },
           "capabilities": {
             "clades": 19,
+            "customClades": {
+              "proposedSubclade": 19
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1488,6 +1544,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -1506,8 +1569,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-04-19T07:50:39Z",
-            "tag": "2024-04-19--07-50-39Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
