@@ -2,7 +2,7 @@
 
 **Orthomarburgvirus marburgense** species taxon (taxonId: 3052505), members of this species are called marburgviruses. However, the species has two distinct lineages: ravn virus (RAVV) and marburg virus (MARV). Alignments use the official INSDC marburg virus reference sequence [NC_001608.3](https://www.ncbi.nlm.nih.gov/nuccore/NC_001608.3).
 
-The example sequences contain all Orthomarburgvirus marburgense sequences on NCBI downloaded the 3rd of November 2024.
+The example sequences are a subsample of 20 Orthomarburgvirus marburgense sequences with over 10% coverage.
 
 | Key          | Value                                             |
 | ------------ | ------------------------------------------------- |
