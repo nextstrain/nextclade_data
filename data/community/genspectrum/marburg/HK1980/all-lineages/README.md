@@ -4,22 +4,22 @@
 
 The example sequences contain all Orthomarburgvirus marburgense sequences on NCBI downloaded the 3rd of November 2024.
 
-| Key                 | Value         |
-| ------------------- | ------------- |
-| authors             | Anna Parker   |
-| name                | Marburg Virus |
-| reference           | NC_001608.3   |
-| dataset path        | marburg/      |
+| Key          | Value                                             |
+| ------------ | ------------------------------------------------- |
+| authors      | Anna Parker                                       |
+| name         | Marburg Virus                                     |
+| reference    | NC_001608.3                                       |
+| dataset path | community/genspectrum/marburg/HK1980/all-lineages |
 
 ## Scope of this dataset
 
 ## Features
 
-This dataset was created using the pipeline in https://github.com/anna-parker/marburg-virus-tree and NCBI Virus. Lineages and clades are assigned using the paper: 
-__Gianguglielmo Zehender, Chiara Sorrentino, Carla Veo, Lisa Fiaschi, Sonia Gioffrè, Erika Ebranati, Elisabetta Tanzi, Massimo Ciccozzi, Alessia Lai, Massimo Galli,
+This dataset was created using the pipeline in https://github.com/anna-parker/marburg-virus-tree and NCBI Virus. Lineages and clades are assigned using the paper:
+**Gianguglielmo Zehender, Chiara Sorrentino, Carla Veo, Lisa Fiaschi, Sonia Gioffrè, Erika Ebranati, Elisabetta Tanzi, Massimo Ciccozzi, Alessia Lai, Massimo Galli,
 Distribution of Marburg virus in Africa: An evolutionary approach,
-Infection, Genetics and Evolution__
-for clade names; link [here](https://www.sciencedirect.com/science/article/pii/S1567134816302386?via%3Dihub). However, we choose not to show the B.1 clade as with additional samples the grouping is no longer very clear. 
+Infection, Genetics and Evolution**
+for clade names; link [here](https://www.sciencedirect.com/science/article/pii/S1567134816302386?via%3Dihub). However, we choose not to show the B.1 clade as with additional samples the grouping is no longer very clear.
 
 ## What is Nextclade dataset
 
