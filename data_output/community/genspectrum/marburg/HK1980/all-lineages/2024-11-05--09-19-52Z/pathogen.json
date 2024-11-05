@@ -1,0 +1,72 @@
+{
+  "alignmentParams": {
+    "minSeedCover": 0.01,
+    "retryReverseComplement": true,
+    "kmerLength": 7,
+    "penaltyGapOpen": 18,
+    "penaltyGapOpenInFrame": 18,
+    "penaltyGapOpenOutOfFrame": 18,
+    "gapAlignmentSide": "left",
+    "allowedMismatches": 10
+  },
+  "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "Orthomarburgvirus marburgense",
+    "reference name": "Marburg marburgvirus isolate Marburg virus/H.sapiens-tc/KEN/1980/Mt. Elgon-Musoke, complete genome",
+    "reference accession": "NC_001608.3"
+  },
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "changelog": "CHANGELOG.md",
+    "readme": "README.md",
+    "treeJson": "marburg_tree.json",
+    "examples": "examples.fasta"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 50,
+      "cutoff": 200,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 3000,
+      "scoreBias": 500
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 12,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 8
+    },
+    "frameShifts": {
+      "enabled": true,
+      "ignoredFrameShifts": []
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+        {
+          "cdsName": "L",
+          "codon": 2327
+        }
+      ]
+    }
+  },
+  "mutLabels": {
+    "nucMutLabelMap": {}
+  },
+  "version": {
+    "updatedAt": "2024-11-05T09:19:52Z",
+    "tag": "2024-11-05--09-19-52Z"
+  }
+}
