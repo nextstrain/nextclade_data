@@ -11,7 +11,7 @@
 
 ## Scope of this dataset
 
-This dataset assigns serotype (e.g. DENV1-DENV4) to dengue samples based on GISDD criteria WHO](https://idpjournal.biomedcentral.com/articles/10.1186/s40249-022-01024-5) and tree placement nearest references [NC_001477.1 (DENV1)].
+This dataset assigns serotype (e.g. DENV1) to dengue samples based on GISDD criteria WHO](https://idpjournal.biomedcentral.com/articles/10.1186/s40249-022-01024-5) and tree placement nearest references [KM204119 (DENV1)].
 
 ## Features
 
