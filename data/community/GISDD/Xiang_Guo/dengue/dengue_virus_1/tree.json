@@ -1,7 +1,7 @@
 {
-  "version": "v2",
+  "version": "v1",
   "meta": {
-    "title": "GISDD dengue virus 1 simple tree",
+    "title": "GISDD dengue virus 1 core tree",
     "updated": "2024-11-01",
     "build_url": "https://github.com/nextstrain/nextclade_data/tree/docs-v3/docs/example-workflow",
     "maintainers": [
