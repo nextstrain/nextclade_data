@@ -1,9 +1,14 @@
+## Unreleased
+
+This release adds the subclade D.5 as specified in the (influenza-clade-nomenclature repository)[https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/CHANGELOG.md#2024-11-12].
+
 ## 2024-11-05T09:19:52Z
 
  - update reference trees
  - include subclade proposals
 
-## 2024-07-03T08:29:55Z
+
+ ## 2024-07-03T08:29:55Z
 
 Added configuration of current and recent vaccine strains as 'reference nodes' on the reference tree, against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage.
 

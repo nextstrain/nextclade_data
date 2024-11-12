@@ -1,5 +1,7 @@
-## 2024-11-05T09:19:52Z
+## Unreleased
+This release adds the subclades J.1.1, J.2.1, and J.2.2 as specified in the (influenza-clade-nomenclature repository)[https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/CHANGELOG.md#2024-11-12].
 
+## 2024-11-05T09:19:52Z
  - update reference trees
  - include subclade proposals
 
