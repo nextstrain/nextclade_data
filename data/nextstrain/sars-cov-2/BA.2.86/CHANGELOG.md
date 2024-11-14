@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-11-14T17:22:16Z
 
 - Add newly designated Nextstrain clades 24H (LF.7) and 24I (MV.1)
 - Add all 128 Pango lineages newly designated between 2024-10-19 and 2024-11-14. Unfold below to see a list of all newly included lineages with their designation dates:
@@ -137,7 +137,7 @@
 
 </details>
 
-## Unreleased
+## 2024-11-14T17:22:16Z
 
 - Add newly designated Nextstrain clades 24H (LF.7) and 24I (MV.1)
 - Add all 128 Pango lineages newly designated between 2024-10-19 and 2024-11-14. Unfold below to see a list of all newly included lineages with their designation dates:
