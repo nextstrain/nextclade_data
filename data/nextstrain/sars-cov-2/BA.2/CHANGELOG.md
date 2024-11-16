@@ -1,3 +1,7 @@
+## Unreleased
+
+Fix duplicate changelog entry, nothing else changed.
+
 ## 2024-11-14T17:22:16Z
 
 - Add newly designated Nextstrain clades 24H (LF.7) and 24I (MV.1)
