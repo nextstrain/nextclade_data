@@ -1,3 +1,9 @@
+## Unreleased
+
+- 11 newly designated B.1 sublineages are now included. See <https://github.com/mpxv-lineages/lineage-designation/pull/45> for details.
+- Newly shared sequences are now included
+- The cluster QC metric's window size has been broadened to detect clusters that span a region of up to 1000bp (up from 100bp)
+
 ## 2024-04-19T07:50:39Z
 
 - New hMPXV-1 lineages B.1.21, B.1.22, and C.1.1 are now included in the dataset. For more information on these lineages, see the [hMPXV-1 lineage definitions PR](https://github.com/mpxv-lineages/lineage-designation/pull/37)
