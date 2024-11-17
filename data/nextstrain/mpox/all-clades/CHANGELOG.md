@@ -1,3 +1,8 @@
+## Unreleased
+
+- 11 newly designated B.1 sublineages are now included. See <https://github.com/mpxv-lineages/lineage-designation/pull/45> for details.
+- Newly shared sequences are now included
+
 ## 2024-08-27T21:28:04Z
 
 - Clade Ia and clade Ib are now distinguished

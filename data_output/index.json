@@ -93,6 +93,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-11-14T17:22:16Z",
               "tag": "2024-11-14--17-22-16Z",
               "compatibility": {
@@ -174,8 +181,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-11-14T17:22:16Z",
-            "tag": "2024-11-14--17-22-16Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -246,6 +252,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-11-14T17:22:16Z",
               "tag": "2024-11-14--17-22-16Z",
               "compatibility": {
@@ -327,8 +340,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-11-14T17:22:16Z",
-            "tag": "2024-11-14--17-22-16Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -402,6 +414,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-11-14T17:22:16Z",
               "tag": "2024-11-14--17-22-16Z",
               "compatibility": {
@@ -483,8 +502,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-11-14T17:22:16Z",
-            "tag": "2024-11-14--17-22-16Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -555,6 +573,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-11-14T17:22:16Z",
               "tag": "2024-11-14--17-22-16Z",
               "compatibility": {
@@ -636,8 +661,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-11-14T17:22:16Z",
-            "tag": "2024-11-14--17-22-16Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -708,6 +732,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-11-14T17:22:16Z",
               "tag": "2024-11-14--17-22-16Z",
               "compatibility": {
@@ -789,8 +820,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-11-14T17:22:16Z",
-            "tag": "2024-11-14--17-22-16Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1921,7 +1951,7 @@
             "clades": 7,
             "customClades": {
               "outbreak": 1,
-              "lineage": 33
+              "lineage": 44
             },
             "qc": [
               "frameShifts",
@@ -1933,6 +1963,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-08-27T21:28:04Z",
               "tag": "2024-08-27--21-28-04Z",
@@ -1959,8 +1996,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-08-27T21:28:04Z",
-            "tag": "2024-08-27--21-28-04Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1997,6 +2033,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-08-01T22:31:31Z",
               "tag": "2024-08-01--22-31-31Z",
               "compatibility": {
@@ -2006,8 +2049,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-08-01T22:31:31Z",
-            "tag": "2024-08-01--22-31-31Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2038,7 +2080,7 @@
             "clades": 2,
             "customClades": {
               "outbreak": 1,
-              "lineage": 33
+              "lineage": 44
             },
             "qc": [
               "frameShifts",
@@ -2050,6 +2092,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -2068,8 +2117,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-04-19T07:50:39Z",
-            "tag": "2024-04-19--07-50-39Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2100,7 +2148,7 @@
             "clades": 2,
             "customClades": {
               "outbreak": 1,
-              "lineage": 25
+              "lineage": 36
             },
             "qc": [
               "frameShifts",
@@ -2115,6 +2163,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
@@ -2133,8 +2188,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-04-19T07:50:39Z",
-            "tag": "2024-04-19--07-50-39Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
