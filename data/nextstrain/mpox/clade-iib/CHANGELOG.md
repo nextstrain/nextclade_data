@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-11-19T14:18:53Z
 
 - 11 newly designated B.1 sublineages are now included. See <https://github.com/mpxv-lineages/lineage-designation/pull/45> for details.
 - Newly shared sequences are now included
