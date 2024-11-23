@@ -1,3 +1,8 @@
+## Unreleased
+
+ - update reference trees
+ - include subclades J.1.1, J.2.1, J.2.2 (included as proposed clades on 2024-11-05)
+
 ## 2024-11-05T09:19:52Z
 
  - update reference trees

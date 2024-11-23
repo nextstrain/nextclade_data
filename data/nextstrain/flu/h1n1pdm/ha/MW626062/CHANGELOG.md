@@ -1,3 +1,8 @@
+## Unreleased
+
+ - update reference trees
+ - include subclade D.5 (included as proposed clades on 2024-11-05)
+
 ## 2024-11-05T09:19:52Z
 
  - update reference trees
