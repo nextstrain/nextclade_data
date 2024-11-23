@@ -1,3 +1,8 @@
+## Unreleased
+
+ - update reference tree with more recent data.
+ - include designation of B.D.E.1.1
+
 ## 2024-08-01T22:31:31Z
 
  - update of reference tree with additional data. No new clades.

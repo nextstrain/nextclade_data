@@ -10,7 +10,7 @@
 | clade definitions      | [github.com/rsv-lineages/lineage-designation-A](https://github.com/rsv-lineages/lineage-designation-A)              |
 
 ## Scope of this dataset
-This dataset for RSV-B uses reference sequence A/England/397/2017 with is available at under accession number EPI_ISL_412866 in GISAID. An almost identical sequence (slightly longer, 12 mutations, no gaps or indels) is available in NCBI as [LR699737](https://www.ncbi.nlm.nih.gov/nuccore/LR699737).
+This dataset for RSV-A uses reference sequence A/England/397/2017 with is available at under accession number EPI_ISL_412866 in GISAID. An almost identical sequence (slightly longer, 12 mutations, no gaps or indels) is available in NCBI as [LR699737](https://www.ncbi.nlm.nih.gov/nuccore/LR699737).
 This sequence has the duplication in the G-protein shared by all currently circulating variants.
 The reference tree covers the diversity of RSV-A since the first sequenced samples.
 
