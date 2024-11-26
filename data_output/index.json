@@ -3237,7 +3237,9 @@
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "reference": "reference.fasta",
-            "treeJson": "tree.json"
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
           },
           "capabilities": {
             "clades": 11,
