@@ -1,10 +1,13 @@
-# Human Metapneumovirus
+# Human Metapneumovirus - All Clades with Reference Genome NC_039199
 
-This is the [Nextclade](https://clades.nextstrain.org/) build and dataset for human metapneumovirus. 
+| Key                    | Value                                                                                                               |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------|
+| authors                | [Richard Neher](https://neherlab.org), Isabel Joia, [Nextstrain](https://nextstrain.org)                         |
+| data source            | Genbank                                                                                |
+| workflow               | [github.com/nextstrain/human-metapneumovirus](https://github.com/nextstrain/human-metapneumovirus)                                                      |
+| nextclade dataset path | nextstrain/hmpv/all-clades/NC_039199                                                                                     |
+| reference              | NC_039199                                                                                                      |
+| clade definitions      | [github.com/nextstrain/human-metapneumovirus/nextclade/clades.tsv](https://github.com/nextstrain/human-metapneumovirus/blob/main/nextclade/resources/clades.tsv)              |
 
-Metadata and sequences used in this repository are available via <https://www.ncbi.nlm.nih.gov/datasets/taxonomy/162145>.
-
-The building encompasses praparing data for analysis, doing quality control, performing analyses, saving the results in a format suitable for visualization (with[ auspice](https://github.com/nextstrain/auspice)) and creating example sequence data. This involves running components of Nextstrain such as [augur](https://github.com/nextstrain/augur) and [nextclade](https://github.com/nextstrain/nextclade). The Nextclade dataset comprises the Nextclade build, a reference sequence, the dataset configurations, genome annotations as well as example sequence data. 
-
-The Nextclade dataset can be used to identify differences between example sequence data and the reference sequence, assign sequences to clades and report potential sequence quality issues. 
-
+## Scope of this dataset
+This dataset for human metapneumovirus uses reference sequence [NC_039199](https://www.ncbi.nlm.nih.gov/nuccore/NC_039199.1/) which is available at NCBI. NC_039199 belongs to clade A1. The reference tree covers the diversity of human metapneumovirus since the first sequenced samples.
