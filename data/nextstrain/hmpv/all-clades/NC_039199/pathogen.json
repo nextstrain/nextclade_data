@@ -14,12 +14,12 @@
     "minMatchLength": 20,
     "allowedMismatches": 10,
     "windowSize": 30
-},
+  },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultCds": "F",
+  "defaultCds": "G",
   "files": {
     "examples": "sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
@@ -52,16 +52,22 @@
       "mixedSitesThreshold": 10
     },
     "frameShifts": {
-      "enabled": true
-    },
-    "stopCodons": {
-      "enabled": false,
-      "ignoredStopCodons": [
+      "enabled": true,
+      "scoreWeight": 20,
+      "ignoreFrameShifts": [
         {
-          "codon": 320,
+          "codonRange": {
+            "begin": 206,
+            "end": 224
+          },
           "cdsName": "G"
         }
       ]
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [],
+      "scoreWeight": 5
     }
   },
   "shortcuts": [
