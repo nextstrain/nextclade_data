@@ -56,6 +56,7 @@
     "nextstrain/measles",
     "nextstrain/measles/N450/WHO-2012",
     "nextstrain/dengue/all",
-    "nextstrain/yellow-fever/prM-E"
+    "nextstrain/yellow-fever/prM-E",
+    "nextstrain/hmpv/all-clades/NC_039199"
   ]
 }
