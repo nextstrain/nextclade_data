@@ -3232,6 +3232,49 @@
             "updatedAt": "2024-11-05T09:19:52Z",
             "tag": "2024-11-05--09-19-52Z"
           }
+        },
+        {
+          "path": "nextstrain/hmpv/all-clades/NC_039199",
+          "shortcuts": [
+            "hmpv"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Human Metapneumovirus",
+            "reference accession": "NC_039199",
+            "reference name": "hMPV/00-1"
+          },
+          "files": {
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 11,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },
