@@ -3244,7 +3244,8 @@
             "qc": [
               "privateMutations",
               "mixedSites",
-              "frameShifts"
+              "frameShifts",
+              "stopCodons"
             ]
           },
           "versions": [
