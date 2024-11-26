@@ -10,4 +10,4 @@
 | clade definitions      | [github.com/nextstrain/human-metapneumovirus/nextclade/clades.tsv](https://github.com/nextstrain/human-metapneumovirus/blob/main/nextclade/resources/clades.tsv)              |
 
 ## Scope of this dataset
-This dataset for human metapneumovirus uses reference sequence [NC_039199](https://www.ncbi.nlm.nih.gov/nuccore/NC_039199.1/) which is available at NCBI. NC_039199 belongs to clade A1. The reference tree covers the diversity of human metapneumovirus since the first sequenced samples.
+This dataset for human metapneumovirus uses reference sequence [NC_039199](https://www.ncbi.nlm.nih.gov/nuccore/NC_039199.1/) which is available at NCBI. The reference tree covers the diversity of human metapneumovirus since the first sequenced samples. The reference sequence belongs to clade A1 and extensive divergence between clades A and B may render alignment in gene G difficult. 
