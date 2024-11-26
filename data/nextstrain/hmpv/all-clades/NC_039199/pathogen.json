@@ -25,7 +25,9 @@
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "reference": "reference.fasta",
-    "treeJson": "tree.json"
+    "treeJson": "tree.json",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
   },
   "qc": {
     "privateMutations": {
@@ -53,7 +55,7 @@
     },
     "frameShifts": {
       "enabled": true,
-      "scoreWeight": 20,
+      "scoreWeight": 10,
       "ignoreFrameShifts": [
         {
           "codonRange": {
@@ -83,7 +85,8 @@
     "P",
     "M",
     "F",
-    "M2",
+    "M2-1",
+    "M2-2",
     "SH",
     "G",
     "L"
