@@ -1,4 +1,4 @@
-## Unreleased
+## 2024-11-27T02:51:00Z
 
  - update reference trees
  - include subclade D.5 (included as proposed clades on 2024-11-05)
@@ -10,11 +10,9 @@
 
 ## 2024-07-03T08:29:55Z
 
-Added configuration of current and recent vaccine strains as 'reference nodes' on the reference tree, against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage.
+ - add representative samples from early pandemic-era clades including 1, 2, 3, 4, 6C, 7, and 8 to improve clade label annotations for older sequences
 
-The datasets themselves remain unchanged.
-
-See Nextclade documentation for more details about 'relative mutations' functionality.
+ - added configuration of current and recent vaccine strains as 'reference nodes' on the reference tree, against which query sequences can be compared. This feature is in addition to the new 'compare to clade founder' feature, allowing to compare each query sequence to the most ancestral node of a clade or lineage. See Nextclade documentation for more details about 'relative mutations' functionality.
 
 ## 2024-04-19T07:50:39Z
 
