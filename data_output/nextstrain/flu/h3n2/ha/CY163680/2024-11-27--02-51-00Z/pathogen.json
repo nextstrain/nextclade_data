@@ -4,14 +4,14 @@
     "excessBandwidth": 9,
     "terminalBandwidth": 100,
     "allowedMismatches": 4,
-    "gapAlignmentSide": "left",
+    "gapAlignmentSide": "right",
     "minSeedCover": 0.1
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultCds": "F",
+  "defaultCds": "HA1",
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -24,44 +24,38 @@
   "qc": {
     "privateMutations": {
       "enabled": true,
-      "typical": 50,
-      "cutoff": 150,
+      "typical": 5,
+      "cutoff": 15,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
     },
     "missingData": {
       "enabled": false,
-      "missingDataThreshold": 2000,
-      "scoreBias": 500
+      "missingDataThreshold": 100,
+      "scoreBias": 10
     },
     "snpClusters": {
       "enabled": false,
       "windowSize": 100,
-      "clusterCutOff": 10,
+      "clusterCutOff": 5,
       "scoreWeight": 50
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 8
+      "mixedSitesThreshold": 4
     },
     "frameShifts": {
       "enabled": true
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [
-        {
-          "codon": 320,
-          "cdsName": "G"
-        }
-      ]
+      "ignoredStopCodons": []
     }
   },
   "cdsOrderPreference": [
-    "F",
-    "G",
-    "L"
+    "HA1",
+    "HA2"
   ],
   "maintenance": {
     "website": [
@@ -69,13 +63,13 @@
       "https://clades.nextstrain.org"
     ],
     "documentation": [
-      "https://github.com/nextstrain/rsv"
+      "https://github.com/nextstrain/seasonal-flu"
     ],
     "source code": [
-      "https://github.com/nextstrain/rsv"
+      "https://github.com/nextstrain/seasonal_flu"
     ],
     "issues": [
-      "https://github.com/nextstrain/rsv/issues"
+      "https://github.com/nextstrain/seasonal_flu/issues"
     ],
     "organizations": [
       "Nextstrain"
@@ -84,23 +78,47 @@
       "Nextstrain team <https://nextstrain.org>"
     ]
   },
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
   "shortcuts": [
-    "rsv_b",
-    "nextstrain/rsv/b",
-    "nextstrain/rsv/b/hRSV-B-Australia-VIC-RCH056-2019"
+    "flu_h3n2_ha_broad",
+    "nextstrain/flu/h3n2/ha/wisconsin-67-2005"
+  ],
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
+      "includeCdses": [
+        {
+          "cds": "HA1",
+          "ranges": []
+        },
+        {
+          "cds": "HA2",
+          "ranges": [
+            {
+              "begin": 0,
+              "end": 186
+            }
+          ]
+        }
+      ],
+      "motifs": [
+        "N[^P][ST]"
+      ]
+    }
   ],
   "attributes": {
-    "name": "RSV-B",
-    "reference accession": "EPI_ISL_1653999",
-    "reference name": "hRSV/B/Australia/VIC-RCH056/2019"
+    "name": "Influenza A H3N2 HA",
+    "segment": "ha",
+    "reference accession": "CY163680",
+    "reference name": "A/Wisconsin/67/2005-egg"
   },
-  "geneOrderPreference": [
-    "F",
-    "G",
-    "L"
-  ],
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2024-11-27T02:51:00Z",
+    "tag": "2024-11-27--02-51-00Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
