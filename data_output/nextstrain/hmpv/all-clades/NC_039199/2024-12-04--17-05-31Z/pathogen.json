@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "penaltyGapOpen": 12,
+    "penaltyGapOpenInFrame": 16,
+    "penaltyGapOpenOutOfFrame": 18,
+    "penaltyGapExtend": 1,
+    "gapAlignmentSide": "left",
+    "excessBandwidth": 50,
+    "terminalBandwidth": 50,
+    "minSeedCover": 0.1,
+    "kmerLength": 5,
+    "kmerDistance": 7,
+    "minMatchLength": 20,
+    "allowedMismatches": 10,
+    "windowSize": 30
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "experimental": true,
+  "defaultCds": "F",
+  "files": {
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 150,
+      "cutoff": 200,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 3000,
+      "scoreBias": 500
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 10,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 10
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 10,
+      "ignoreFrameShifts": [
+        {
+          "codonRange": {
+            "begin": 206,
+            "end": 224
+          },
+          "cdsName": "G"
+        }
+      ]
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [],
+      "scoreWeight": 5
+    }
+  },
+  "shortcuts": [
+    "hmpv"
+  ],
+  "attributes": {
+    "name": "Human Metapneumovirus",
+    "reference accession": "NC_039199",
+    "reference name": "hMPV/00-1"
+  },
+  "geneOrderPreference": [
+    "N",
+    "P",
+    "M",
+    "F",
+    "M2-1",
+    "M2-2",
+    "SH",
+    "G",
+    "L"
+  ],
+  "version": {
+    "updatedAt": "2024-12-04T17:05:31Z",
+    "tag": "2024-12-04--17-05-31Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}
