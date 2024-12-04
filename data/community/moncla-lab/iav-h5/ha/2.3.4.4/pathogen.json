@@ -47,7 +47,7 @@
       "mixedSitesThreshold": 4
     },
     "privateMutations": {
-      "cutoff": 30,
+      "cutoff": 18,
       "enabled": true,
       "typical": 6
     },
