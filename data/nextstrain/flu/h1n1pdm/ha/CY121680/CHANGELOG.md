@@ -1,5 +1,6 @@
 ## Unreleased
- - include subclade proposals for C.1.9.a/b/c
+
+ - add subclade proposals C.1.9.a/b/c/d
 
 ## 2024-11-27T02:51:00Z
 
