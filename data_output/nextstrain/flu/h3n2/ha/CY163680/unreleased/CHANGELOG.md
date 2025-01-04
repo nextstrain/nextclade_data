@@ -1,5 +1,7 @@
 ## Unreleased
- - include subclade proposals for J.2.a/b/c
+
+ - include subclade proposals for J.2.a/b/c/d/e
+
 
 ## 2024-11-27T02:51:00Z
 
