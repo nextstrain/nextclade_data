@@ -11,7 +11,7 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultCds": "HA1",
+  "defaultCds": "NA",
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -54,8 +54,7 @@
     }
   },
   "cdsOrderPreference": [
-    "HA1",
-    "HA2"
+    "NA"
   ],
   "maintenance": {
     "website": [
@@ -81,10 +80,9 @@
   "nucMutLabelMap": {},
   "nucMutLabelMapReverse": {},
   "shortcuts": [
-    "flu_h1n1pdm_ha",
-    "nextstrain/flu/h1n1pdm",
-    "nextstrain/flu/h1n1pdm/ha",
-    "nextstrain/flu/h1n1pdm/ha/wisconsin-588-2019"
+    "flu_h3n2_na",
+    "nextstrain/flu/h3n2/na",
+    "nextstrain/flu/h3n2/na/darwin-6-2021"
   ],
   "aaMotifs": [
     {
@@ -94,15 +92,11 @@
       "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
       "includeCdses": [
         {
-          "cds": "HA1",
-          "ranges": []
-        },
-        {
-          "cds": "HA2",
+          "cds": "NA",
           "ranges": [
             {
-              "begin": 0,
-              "end": 186
+              "begin": 33,
+              "end": 470
             }
           ]
         }
@@ -113,13 +107,14 @@
     }
   ],
   "attributes": {
-    "name": "Influenza A H1N1pdm HA",
-    "segment": "ha",
-    "reference accession": "MW626062",
-    "reference name": "A/Wisconsin/588/2019"
+    "name": "Influenza A H3N2 NA",
+    "segment": "na",
+    "reference accession": "EPI1857215",
+    "reference name": "A/Darwin/6/2021"
   },
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2025-01-09T08:17:24Z",
+    "tag": "2025-01-09--08-17-24Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"

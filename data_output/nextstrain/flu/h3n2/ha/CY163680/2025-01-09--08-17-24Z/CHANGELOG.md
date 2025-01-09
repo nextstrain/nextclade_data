@@ -1,6 +1,7 @@
-## Unreleased
+## 2025-01-09T08:17:24Z
 
  - include subclade proposals for J.2.a/b/c/d/e
+
 
 ## 2024-11-27T02:51:00Z
 
@@ -11,10 +12,6 @@
 
  - update reference trees
  - include subclade proposals
-
-## 2024-08-08T05:08:21Z
-
-Fix numbering of RBD sites it the `pathogen.json`. The relevant positions were indexed 1-based, when they should have been indexed 0-based.
 
 ## 2024-07-03T08:29:55Z
 
