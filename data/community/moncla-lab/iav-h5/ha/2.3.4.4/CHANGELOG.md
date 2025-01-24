@@ -1,3 +1,7 @@
+## Unreleased
+
+Updates to README, adding reference to the bioRxiv preprint on A(H5) Nextclade datasets (https://doi.org/10.1101/2025.01.07.631789) and changes for consistency with the preprint
+
 ## 2024-12-04T17:05:31Z
 
 Updated private mutation QC metrics such that the typical value is the median value and the cutoff is the 97.5th percentile of private mutation counts assigned to unique GISAID sequences.
