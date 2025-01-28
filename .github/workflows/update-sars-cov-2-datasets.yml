@@ -27,9 +27,6 @@ jobs:
     environment:
       name: ${{ github.ref }}
 
-    env:
-      GH_TOKEN: ${{ github.token }}
-
     steps:
       - name: "Checkout code"
         if: ${{ steps.config.outputs.is_fork != 'true' }}
@@ -54,4 +51,6 @@ jobs:
 
       - name: "Update datasets"
         run: |
+          export GITHUB_TOKEN="${{ secrets.GH_TOKEN_NEXTSTRAIN_BOT_REPO }}"
+
           ./scripts/update_sc2_datasets
