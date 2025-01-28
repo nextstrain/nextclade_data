@@ -6,6 +6,8 @@ on:
     # https://crontab.guru/#15_21_*_*_1
     - cron: '15 21 * * 1'
 
+  workflow_dispatch:
+
   repository_dispatch:
     types: update-sars-cov-2-datasets
 
