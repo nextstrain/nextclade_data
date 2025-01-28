@@ -1,0 +1,140 @@
+#!/usr/bin/env bash
+
+# Submit a PR to update Nextclade tree
+#
+# Dependencies:
+#  mkdir -p "${HOME}/bin"
+#  export PATH="${HOME}/bin:${PATH}"
+#  curl -fsSL "https://github.com/cli/cli/releases/download/v2.42.1/gh_2.42.1_linux_amd64.tar.gz" | tar xz -C "${HOME}/bin" --strip-components=2 gh_2.42.1_linux_amd64/bin/gh
+#
+# Requires git user dataset_name and email to be set. For example:
+#  git config user.email "${{ secrets.GIT_USER_EMAIL }}"
+#  git config user.dataset_name "${{ secrets.GIT_USER_NAME }}"
+
+set -euxo pipefail
+trap 'exit' INT
+
+# Directory where this script resides
+THIS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)"
+
+
+BRANCH="auto-update-sc2-datasets"
+TITLE="Update SARS-CoV-2 datasets [automated]"
+
+declare -A trees=(
+  ["https://nextstrain.org/staging/nextclade/sars-cov-2"]="nextstrain/sars-cov-2/wuhan-hu-1/orfs"
+  ["https://nextstrain.org/staging/nextclade/sars-cov-2/nsp"]="nextstrain/sars-cov-2/wuhan-hu-1/proteins"
+  ["https://nextstrain.org/staging/nextclade/sars-cov-2/BA.2"]="nextstrain/sars-cov-2/BA.2"
+  ["https://nextstrain.org/staging/nextclade/sars-cov-2/BA.2.86"]="nextstrain/sars-cov-2/BA.2.86"
+  ["https://nextstrain.org/staging/nextclade/sars-cov-2/XBB"]="nextstrain/sars-cov-2/XBB"
+)
+
+function write_changelog() {
+  local dataset_name="${1:?}"
+
+  cat <<~~
+## Unreleased
+
+Automated update
+
+~~
+}
+export -f write_changelog
+
+
+function update_dataset() {
+  set -euxo pipefail
+
+  local tree_url="${1:?}"
+  local dataset_name="${2:?}"
+
+  curl -fsSL \
+      -o "data/${dataset_name}/tree.json" \
+      -H "Accept: application/vnd.nextstrain.dataset.main+json;q=1, application/json;q=0.9, text/plain;q=0.8, */*;q=0.1" \
+      "${tree_url}"
+
+  write_changelog "${dataset_name}" > "data/${dataset_name}/CHANGELOG.md"
+}
+export -f update_dataset
+parallel --jobs "${#trees[@]}" update_dataset ::: "${!trees[@]}" ::: "${trees[@]}"
+
+
+# Setup git identity
+gh auth setup-git >/dev/null
+
+# Delete the branch if already exists. This also closes the PR if exists.
+if git rev-parse --verify "${BRANCH}"; then
+  git branch -D "${BRANCH}"
+  git push origin --delete "${BRANCH}"
+fi
+
+# Create a new branch
+git switch --quiet --create "${BRANCH}"
+
+# Stage commit and push the changes
+git add $(printf "data/%s/tree.json " "${trees[@]}") $(printf "data/%s/CHANGELOG.md " "${trees[@]}")
+git commit --quiet -m "${TITLE}"
+git push --quiet
+
+# Function to generate markdown table from the associative array
+function summary_table() {
+  echo "| Tree on Nextstrain.org | Submitted dataset | Nextclade link¹ |"
+  echo "| --- | --- | --- |"
+  for tree_url in "${!trees[@]}"; do
+    local nextstrain_path="${tree_url#https://nextstrain.org/}"
+    local dataset_name="${trees[$tree_url]}"
+    echo "| [${nextstrain_path}](${tree_url}) | [${dataset_name}](https://github.com/nextstrain/nextclade_data/tree/${BRANCH}/data/${trees[$tree_url]}) | [${dataset_name}](https://clades.nextstrain.org/?dataset-server=gh:@${BRANCH}@&dataset-name=${dataset_name}) |"
+  done
+}
+
+# Create PR body
+function pr_body() {
+  cat <<~~
+Automatically updates SARS-CoV-2 datasets.
+
+$(summary_table)
+
+---
+
+¹ - Please make sure to wait for the CI to deploy dataset server before using links in the "Nextclade link" column. Once you see the "chore: rebuild [skip ci]" commit from nextstrain-bot below the links are ready to go. Otherwise they display the previous data (from master branch).
+
+---
+
+Note: this pull request is submitted [automatically](https://github.com/nextstrain/nextclade_data/blob/master/.github/workflows/update-sc2-datasets.yml).
+
+~~
+}
+
+# Submit the PR, reading message body from stdin
+function submit_pr() {
+  pr_body | gh pr create \
+    --title "${TITLE}" \
+    --body-file - \
+    --repo "nextstrain/nextclade_data"
+}
+
+# Get PR number from the dataset_name of gh command
+function get_pr_number() {
+  # The message from gh command typically ends with a URL to the PR and PR number is the last component of the path.
+  # Split the string on '/' and take the last component.
+  echo "${1##*/}"
+}
+
+# Close PR given its number
+function close_pr() {
+  gh pr close "${1:?}" --delete-branch --repo "nextstrain/nextclade_data"
+}
+
+if ! result=$(submit_pr 2>&1); then
+  echo "${result}" >&2
+  if [[ "${result}" == *"already exists"* ]]; then
+    # Failed because PR already exists. Close and resubmit.
+    pr_number=$(get_pr_number "${result}")
+    close_pr "${pr_number}"
+    submit_pr
+  else
+    exit 1
+  fi
+else
+  echo "${result}"
+fi
