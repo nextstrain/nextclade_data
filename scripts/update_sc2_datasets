@@ -74,7 +74,7 @@ git switch --quiet --create "${BRANCH}"
 # Stage commit and push the changes
 git add $(printf "data/%s/tree.json " "${trees[@]}") $(printf "data/%s/CHANGELOG.md " "${trees[@]}")
 git commit --quiet -m "${TITLE}"
-git push --quiet
+git push --quiet --set-upstream origin "${BRANCH}"
 
 # Function to generate markdown table from the associative array
 function summary_table() {
