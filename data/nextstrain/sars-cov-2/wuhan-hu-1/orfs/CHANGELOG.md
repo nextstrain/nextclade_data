@@ -1,3 +1,7 @@
+## Unreleased
+
+Automated update
+
 ## 2024-11-19T14:18:53Z
 
 Fix duplicate changelog entry, nothing else changed.
