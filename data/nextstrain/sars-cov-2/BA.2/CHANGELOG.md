@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-01-28T16:39:09Z
 
 - Add newly designated Nextstrain clade 25A (LP.8.1)
 - Add all 78 Pango lineages newly designated between 2024-11-14 and 2025-01-27. Unfold below to see a list of all newly included lineages with their designation dates:
