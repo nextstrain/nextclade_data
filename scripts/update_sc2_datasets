@@ -57,7 +57,7 @@ function update_dataset() {
   echo "$(write_changelog "${dataset_name}")$(<data/${dataset_name}/CHANGELOG.md)" > "data/${dataset_name}/CHANGELOG.md"
 }
 export -f update_dataset
-parallel --jobs "${#trees[@]}" update_dataset ::: "${!trees[@]}" ::: "${trees[@]}"
+parallel --jobs "${#trees[@]}" update_dataset :::+ "${!trees[@]}" :::+ "${trees[@]}"
 
 
 # Setup git identity
