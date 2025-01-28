@@ -62,9 +62,13 @@ parallel --jobs "${#trees[@]}" update_dataset ::: "${!trees[@]}" ::: "${trees[@]
 # Setup git identity
 gh auth setup-git >/dev/null
 
-# Delete the branch if already exists. This also closes the PR if exists.
-if git rev-parse --verify "${BRANCH}"; then
+# Delete the branch locally if it exists
+if git rev-parse --verify "${BRANCH}" &>/dev/null; then
   git branch -D "${BRANCH}"
+fi
+
+# Delete the branch on remote if it exists. This also closes the PR if exists.
+if git ls-remote --heads origin "${BRANCH}" | grep -q "${BRANCH}"; then
   git push origin --delete "${BRANCH}"
 fi
 
