@@ -95,7 +95,13 @@ function summary_table() {
 # Create PR body
 function pr_body() {
   cat <<~~
-Automatically updates SARS-CoV-2 datasets.
+Automatically update SARS-CoV-2 datasets.
+
+This requires scientific review. Once this PR is merged to `master`, the data will be available on [master.clades.nextstrain.org](https://master.clades.nextstrain.org/) and for Nextclade CLI with `--dataset-server=https://data.master.clades.nextstrain.org`.
+
+Like usual, the manual fast-forward of `release` branch to `master` branch is needed if you want these changes to be released, to appear on [clades.nextstrain.org](https://clades.nextstrain.org/) and be available for Nextclade CLI.
+
+Here are some links to facilitate the review:
 
 $(summary_table)
 
@@ -105,7 +111,12 @@ $(summary_table)
 
 ---
 
-Note: this pull request is submitted [automatically](https://github.com/nextstrain/nextclade_data/blob/master/.github/workflows/update-sc2-datasets.yml).
+Note: this pull request is submitted automatically. See: [.github/workflows/update-sars-cov-2-datasets.yml](https://github.com/nextstrain/nextclade_data/blob/master/.github/workflows/update-sars-cov-2-datasets.yml).
+
+---
+
+⚠️ WARNING: do not push any changes to this branch (`${BRANCH}`). The branch can be deleted or overwritten by the automation. If you want to add changes, create a new branch based on this branch and push there instead.
+
 
 ~~
 }
