@@ -41,7 +41,7 @@ jobs:
 
       - name: "Install dependencies"
         run: |
-          sudo apt-get curl --yes -qq >/dev/null
+          sudo apt-get install curl --yes -qq >/dev/null
 
           mkdir -p "${HOME}/bin"
           export PATH="${HOME}/bin:${PATH}"
