@@ -42,12 +42,12 @@ This Nextclade dataset incorporates these provisional `2.3.4.4` sub-clades.
 
 Two additional tools exist for assigning clades to A(H5) viruses that accommodate the recent `2.3.4.4` clade splits.
 
-1. [LABEL](https://wonder.cdc.gov/amd/flu/label/): this command-line tool is built and maintained by Sam Shepard, and performs clade assignment for all current `2.3.4.4` and `2.3.2.1` clade splits.
+1. [LABEL](https://wonder.cdc.gov/amd/flu/label/): this command-line tool is built and maintained by Sam Shepard, and performs clade assignment for all current `2.3.2.1` and `2.3.4.4` clade splits.
 2. [BVBRC Subspecies Classification Tool](https://www.bv-brc.org/app/SubspeciesClassification): this is a drag and drop tool that classifies a variety of viruses, including influenza A H1N1, H3N2, and H5N1.
 
-The clade assignments in this Nextclade dataset were validated against LABEL assignments and shown to be generally well-matched across subclades. The figure below shows a direct comparison of assignments for 1883 HA sequences from GISAID, performed using LABEL and this NextClade dataset for clade `2.3.4.4` and its subclades.
+The clade assignments in this Nextclade dataset were validated against LABEL assignments and shown to be generally well-matched across subclades. The figure below shows a direct comparison of assignments for 9,924 HA sequences from GISAID, performed using LABEL and this NextClade dataset for clade `2.3.4.4` and its subclades.
 
-![Figure 1: Comparison between LABEL and Nextclade for 2.3.2.1 assignments](https://raw.githubusercontent.com/moncla-lab/h5nx-Clades/main/jordan-h5-clades/testing-nextclade-datasets/2344/files/20240430_2344.png)
+![Figure 1: Comparison between LABEL and Nextclade for 2.3.4.4 assignments](https://raw.githubusercontent.com/moncla-lab/h5-nextclade/refs/heads/main/figures-for-dataset-readmes/2344.png)
 
 ## What is Nextclade dataset
 
