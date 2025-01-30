@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-01-30T18:05:53Z
 
 Updates to README, adding reference to the bioRxiv preprint on A(H5) Nextclade datasets (https://doi.org/10.1101/2025.01.07.631789) and changes for consistency with the preprint
 
