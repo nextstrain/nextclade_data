@@ -36,6 +36,17 @@ Viruses falling into a given clade share a common ancestor with significant boot
 When significant within-clade diversity is seen, these clades can be further split into sub-clades; for example, clade `2.3.4.4` is being split into eight additional sub-clades, named `2.3.4.4a` through `2.3.4.4h` due to high circulating diversity within the clade.
 This Nextclade dataset incorporates these provisional `2.3.4.4` sub-clades, as well as sub-clades `2.3.2.1a` through `2.3.2.1g` for the `2.3.2.1` split.
 
+## Alternative, and complementary approaches for A(H5) clade assignment
+
+Two additional tools exist for assigning clades to A(H5) viruses, which also accommodate the recent `2.3.2.1` and `2.3.4.4` clade splits.
+
+1. [LABEL](https://wonder.cdc.gov/amd/flu/label/): this command-line tool is built and maintained by Sam Shepard, and performs clade assignment for all current `2.3.2.1` and `2.3.4.4` clade splits.
+2. [BVBRC Subspecies Classification Tool](https://www.bv-brc.org/app/SubspeciesClassification): this is a drag and drop tool that classifies a variety of viruses, including influenza A H1N1, H3N2, and H5N1.
+
+The clade assignments in this Nextclade dataset were validated against LABEL assignments and shown to be generally well-matched across subclades. The figure below shows a direct comparison of assignments for 19,833 HA sequences from GISAID, performed using LABEL and this NextClade dataset for all A(H5) clades. Note that the results for clades `2.3.2.1`, `2.3.4.4`, and their subclades are not shown in this figure.
+
+![Figure 1: Comparison between LABEL and Nextclade for all-clade assignments](https://raw.githubusercontent.com/moncla-lab/h5-nextclade/refs/heads/main/figures-for-dataset-readmes/all-clades.png)
+
 ## What is Nextclade dataset
 
 Read more about Nextclade datasets in Nextclade documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
