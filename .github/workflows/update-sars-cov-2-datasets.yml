@@ -1,0 +1,56 @@
+name: update-sars-cov-2-datasets
+
+on:
+  schedule:
+    # At 21:15 on Monday
+    # https://crontab.guru/#15_21_*_*_1
+    - cron: '15 21 * * 1'
+
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: update-sars-cov-2-datasets
+
+concurrency:
+  group: update-sars-cov-2-datasets-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash -euxo pipefail {0}
+
+
+jobs:
+  update-sars-cov-2-datasets:
+    runs-on: ubuntu-24.04
+
+    environment:
+      name: ${{ github.ref }}
+
+    steps:
+      - name: "Checkout code"
+        if: ${{ steps.config.outputs.is_fork != 'true' }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
+          fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
+          ref: ${{ github.head_ref || github.ref }}
+
+      - name: "Install dependencies"
+        run: |
+          sudo apt-get install curl --yes -qq >/dev/null
+
+          mkdir -p "${HOME}/bin"
+          export PATH="${HOME}/bin:${PATH}"
+          curl -fsSL "https://github.com/cli/cli/releases/download/v2.42.1/gh_2.42.1_linux_amd64.tar.gz" | tar xz -C "${HOME}/bin" --strip-components=2 gh_2.42.1_linux_amd64/bin/gh
+
+      - name: "Configure git"
+        run: |
+          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
+
+      - name: "Update datasets"
+        run: |
+          export GITHUB_TOKEN="${{ secrets.GH_TOKEN_NEXTSTRAIN_BOT_REPO }}"
+
+          ./scripts/update_sc2_datasets
