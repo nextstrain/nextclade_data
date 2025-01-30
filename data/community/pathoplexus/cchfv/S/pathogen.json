@@ -2,14 +2,17 @@
   "alignmentParams": {
     "minSeedCover": 0.01,
     "kmerLength": 7,
-    "retryReverseComplement": true
+    "retryReverseComplement": true,
+    "penaltyGapOpen":18,
+    "penaltyGapOpenInFrame":19,
+    "penaltyGapOpenOutOfFrame":20
   },
   "files": {
     "reference": "reference_S.fasta",
     "pathogenJson": "pathogen.json",
     "genomeAnnotation": "genome_annotation.gff3",
-    "treeJson": "CCHF_notreeknit_S.json",
-    "examples": "selected_sequences_S.fasta",
+    "treeJson": "CCHF_S.json",
+    "examples": "sample_S.fasta",
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
