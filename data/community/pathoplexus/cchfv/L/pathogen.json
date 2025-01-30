@@ -1,24 +1,25 @@
 {
     "alignmentParams": {
         "minSeedCover": 0.01,
-        "kmerLength": 7,
-        "allowedMismatches": 10,
-        "retryReverseComplement": true
+        "retryReverseComplement": true,
+        "penaltyGapOpen":18,
+        "penaltyGapOpenInFrame":19,
+        "penaltyGapOpenOutOfFrame":20
     },
     "files": {
-        "reference": "reference_M.fasta",
+        "reference": "reference_L.fasta",
         "pathogenJson": "pathogen.json",
         "genomeAnnotation": "genome_annotation.gff3",
-        "treeJson": "CCHF_notreeknit_M.json",
-        "examples": "selected_sequences_M.fasta",
+        "treeJson": "CCHF_L.json",
+        "examples": "sample_L.fasta",
         "readme": "README.md",
         "changelog": "CHANGELOG.md"
     },
     "schemaVersion": "3.0.0",
     "attributes": {
-        "name": "CCHF (segment M)",
-        "reference name": "Crimean-Congo hemorrhagic fever virus segment M",
-        "reference accession": "NC_005300.2"
+        "name": "CCHF (segment L)",
+        "reference name": "Crimean-Congo hemorrhagic fever virus segment L",
+        "reference accession": "NC_005301.3"
     },
     "qc": {
         "privateMutations": {
@@ -37,7 +38,7 @@
         "snpClusters": {
             "enabled": false,
             "windowSize": 100,
-            "clusterCutOff": 12,
+            "clusterCutOff": 6,
             "scoreWeight": 50
         },
         "mixedSites": {
@@ -46,13 +47,8 @@
         },
         "frameShifts": {
             "enabled": true,
-            "ignoredFrameShifts": [{
-                "cdsName": "GPC",
-                "codonRange": {
-                    "begin": 76,
-                    "end": 76
-                }
-            }]
+            "ignoredFrameShifts": [
+            ]
         },
         "stopCodons": {
             "enabled": true,
