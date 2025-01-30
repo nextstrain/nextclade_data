@@ -1,22 +1,27 @@
 {
     "alignmentParams": {
         "minSeedCover": 0.01,
-        "retryReverseComplement": true
+        "kmerLength": 7,
+        "allowedMismatches": 10,
+        "retryReverseComplement": true,
+        "penaltyGapOpen":24,
+        "penaltyGapOpenInFrame":26,
+        "penaltyGapOpenOutOfFrame":28
     },
     "files": {
-        "reference": "reference_L.fasta",
+        "reference": "reference_M.fasta",
         "pathogenJson": "pathogen.json",
         "genomeAnnotation": "genome_annotation.gff3",
-        "treeJson": "CCHF_notreeknit_L.json",
-        "examples": "selected_sequences_L.fasta",
+        "treeJson": "CCHF_M.json",
+        "examples": "sample_M.fasta",
         "readme": "README.md",
         "changelog": "CHANGELOG.md"
     },
     "schemaVersion": "3.0.0",
     "attributes": {
-        "name": "CCHF (segment L)",
-        "reference name": "Crimean-Congo hemorrhagic fever virus segment L",
-        "reference accession": "NC_005301.3"
+        "name": "CCHF (segment M)",
+        "reference name": "Crimean-Congo hemorrhagic fever virus segment M",
+        "reference accession": "NC_005300.2"
     },
     "qc": {
         "privateMutations": {
@@ -35,7 +40,7 @@
         "snpClusters": {
             "enabled": false,
             "windowSize": 100,
-            "clusterCutOff": 6,
+            "clusterCutOff": 12,
             "scoreWeight": 50
         },
         "mixedSites": {
@@ -44,22 +49,7 @@
         },
         "frameShifts": {
             "enabled": true,
-            "ignoredFrameShifts": [
-                {
-                    "cdsName": "RdRp",
-                    "codonRange": {
-                        "begin": 791,
-                        "end": 795
-                    }
-                },
-                {
-                    "cdsName": "RdRp",
-                    "codonRange": {
-                        "begin": 3901,
-                        "end": 3903
-                    }
-                }
-            ]
+            "ignoredFrameShifts": []
         },
         "stopCodons": {
             "enabled": true,
