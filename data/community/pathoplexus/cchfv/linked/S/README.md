@@ -1,12 +1,12 @@
 # Nextclade dataset for "Crimean-Congo hemorrhagic fever virus segment S" based on reference "NC_005302.1"
 
-| Key                 | Value                                                                                                       |
-| ------------------- | ----------------------------------------------------------------------------------------------------------- |
-| authors             | Jessica Falkowski, [Richard Neher](https://neherlab.org), Anna Parker, [Nextstrain](https://nextstrain.org) |
-| name                | Crimean-Congo hemorrhagic fever virus segment S                                                             |
-| reference           | NC_005302.1                                                                                                 |
-| dataset path        | cchfv/linked/S                                                                                              |
-| reference accession |                                                                                                             |
+| Key                 | Value                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
+| authors             | Jessica Falkowski, [Richard Neher](https://neherlab.org), [Anna Parker](https://github.com/anna-parker) |
+| name                | Crimean-Congo hemorrhagic fever virus segment S                                                         |
+| reference           | NC_005302.1                                                                                             |
+| dataset path        | cchfv/linked/S                                                                                          |
+| reference accession |                                                                                                         |
 
 ## Scope of this dataset
 
