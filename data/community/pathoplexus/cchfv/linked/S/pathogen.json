@@ -1,0 +1,53 @@
+{
+  "alignmentParams": {
+    "minSeedCover": 0.01,
+    "kmerLength": 7,
+    "retryReverseComplement": true
+  },
+  "files": {
+    "reference": "reference_S.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "CCHF_notreeknit_S.json",
+    "examples": "selected_sequences_S.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "schemaVersion": "3.0.0",
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 50,
+      "cutoff": 200,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 3000,
+      "scoreBias": 500
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 12,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 8
+    },
+    "frameShifts": {
+      "enabled": true,
+      "ignoredFrameShifts": []
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": []
+    }
+  },
+  "mutLabels": {
+    "nucMutLabelMap": {}
+  }
+}
