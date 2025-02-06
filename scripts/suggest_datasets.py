@@ -88,6 +88,10 @@ if __name__ == '__main__':
 
     # determine the best dataset to add. This is the dataset that matches most queries. If multiple datasets have the same number of hits, take the one with the most top hits
     best_dataset = np.argmax(hit_by_ref)
+    if hit_by_ref[best_dataset] == 0:
+      print('no more hits') # shouldn't happen since we only iterate over qrys with hits
+      break
+
     best_top_dataset = np.argmax(tophit_by_ref)
 
     if hit_by_ref[best_top_dataset] == hit_by_ref[best_dataset]:
