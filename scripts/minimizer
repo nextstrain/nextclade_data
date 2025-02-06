@@ -71,7 +71,7 @@ def run_search(index, qrys):
     hit_count = np.zeros(len(index["references"]), dtype=np.int32)
     for m in minimizers:
       if m in index["minimizers"]:
-        hit_count += index["minimizers"][m]
+        hit_count[index["minimizers"][m]] += 1
 
     # we expect hits to be proportional to the length of the sequence and the number of minimizers per reference
     normalized_hits = normalization * hit_count / len(qry.seq)
