@@ -13,6 +13,11 @@
         "changelog": "CHANGELOG.md"
     },
     "schemaVersion": "3.0.0",
+    "attributes": {
+        "name": "CCHF (segment L)",
+        "reference name": "Crimean-Congo hemorrhagic fever virus segment L",
+        "reference accession": "NC_005301.3"
+    },
     "qc": {
         "privateMutations": {
             "enabled": true,
@@ -30,7 +35,7 @@
         "snpClusters": {
             "enabled": false,
             "windowSize": 100,
-            "clusterCutOff": 12,
+            "clusterCutOff": 6,
             "scoreWeight": 50
         },
         "mixedSites": {
@@ -39,7 +44,22 @@
         },
         "frameShifts": {
             "enabled": true,
-            "ignoredFrameShifts": []
+            "ignoredFrameShifts": [
+                {
+                    "cdsName": "RdRp",
+                    "codonRange": {
+                        "begin": 792,
+                        "end": 795
+                    }
+                },
+                {
+                    "cdsName": "RdRp",
+                    "codonRange": {
+                        "begin": 3902,
+                        "end": 3903
+                    }
+                }
+            ]
         },
         "stopCodons": {
             "enabled": true,

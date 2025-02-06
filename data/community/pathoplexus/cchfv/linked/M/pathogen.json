@@ -2,6 +2,7 @@
     "alignmentParams": {
         "minSeedCover": 0.01,
         "kmerLength": 7,
+        "allowedMismatches": 10,
         "retryReverseComplement": true
     },
     "files": {
@@ -14,6 +15,11 @@
         "changelog": "CHANGELOG.md"
     },
     "schemaVersion": "3.0.0",
+    "attributes": {
+        "name": "CCHF (segment M)",
+        "reference name": "Crimean-Congo hemorrhagic fever virus segment M",
+        "reference accession": "NC_005300.2"
+    },
     "qc": {
         "privateMutations": {
             "enabled": true,
