@@ -48,14 +48,14 @@
                 {
                     "cdsName": "RdRp",
                     "codonRange": {
-                        "begin": 792,
+                        "begin": 791,
                         "end": 795
                     }
                 },
                 {
                     "cdsName": "RdRp",
                     "codonRange": {
-                        "begin": 3902,
+                        "begin": 3901,
                         "end": 3903
                     }
                 }

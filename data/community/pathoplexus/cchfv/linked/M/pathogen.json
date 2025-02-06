@@ -46,7 +46,13 @@
         },
         "frameShifts": {
             "enabled": true,
-            "ignoredFrameShifts": []
+            "ignoredFrameShifts": [{
+                "cdsName": "GPC",
+                "codonRange": {
+                    "begin": 76,
+                    "end": 76
+                }
+            }]
         },
         "stopCodons": {
             "enabled": true,
