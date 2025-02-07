@@ -5476,7 +5476,7 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 1,
+            "clades": 8,
             "qc": [
               "privateMutations",
               "mixedSites",
