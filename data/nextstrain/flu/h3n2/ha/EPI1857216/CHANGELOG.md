@@ -1,3 +1,7 @@
+## Unreleased
+
+ - rename subclade proposals for J.2 to use amino acid substitutions instead of single-letter suffixes
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees
