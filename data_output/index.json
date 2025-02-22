@@ -3491,7 +3491,7 @@
           "path": "nextstrain/flu/vic/pb1",
           "enabled": true,
           "attributes": {
-            "name": "Influenza B(Vic) PB1 (segment 2)",
+            "name": "Influenza B(Vic) PB1 (segment 1)",
             "segment": "pb1",
             "reference accession": "CY115157",
             "reference name": "B/Brisbane/60/2008"
@@ -3677,7 +3677,7 @@
           "path": "nextstrain/flu/vic/pb2",
           "enabled": true,
           "attributes": {
-            "name": "Influenza B(Vic) PB2 (segment 1)",
+            "name": "Influenza B(Vic) PB2 (segment 2)",
             "segment": "pb2",
             "reference accession": "CY115158",
             "reference name": "B/Brisbane/60/2008"
