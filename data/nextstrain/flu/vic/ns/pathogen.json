@@ -16,6 +16,7 @@
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
+    "examples": "sequences.fasta",
     "reference": "reference.fasta"
   },
   "qc": {
