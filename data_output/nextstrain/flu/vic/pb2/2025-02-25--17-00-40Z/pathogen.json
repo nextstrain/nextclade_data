@@ -66,14 +66,15 @@
     ]
   },
   "attributes": {
-    "name": "Influenza B(Vic) NP (segment 5)",
-    "segment": "np",
-    "reference accession": "CY115154",
+    "name": "Influenza B(Vic) PB2 (segment 2)",
+    "segment": "pb2",
+    "reference accession": "CY115158",
     "reference name": "B/Brisbane/60/2008"
   },
-  "defaultCds": "NP",
+  "defaultCds": "PB2",
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2025-02-25T17:00:40Z",
+    "tag": "2025-02-25--17-00-40Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
