@@ -1,3 +1,8 @@
+## Unreleased
+
+ - update with new sequence data
+ - remove deprecated G-clades
+
 ## 2024-11-27T02:51:00Z
 
  - update reference tree with more recent data
