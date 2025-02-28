@@ -1,4 +1,3 @@
 .	.	CDS	25	2175	.	+	.	gene="PA"
-.	.	gene	25	784	.	+	.	gene=PAX;ID=gene-PAX
-.	.	CDS	25	594	.	+	.	gene=PAX;ID=cds-PAX;Parent=gene-PAX
-.	.	CDS	596	784	.	+	.	gene=PAX;ID=cds-PAX;Parent=gene-PAX
+.	.	CDS	25	594	.	+	.	gene=PAX;ID=cds-PAX
+.	.	CDS	596	784	.	+	.	gene=PAX;ID=cds-PAX
