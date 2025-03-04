@@ -93,7 +93,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -197,7 +198,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2025-03-04T17:31:25Z",
+            "tag": "2025-03-04--17-31-25Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -778,7 +780,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -882,7 +885,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2025-03-04T17:31:25Z",
+            "tag": "2025-03-04--17-31-25Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2096,7 +2100,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -2136,7 +2141,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2025-03-04T17:31:25Z",
+            "tag": "2025-03-04--17-31-25Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"

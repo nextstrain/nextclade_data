@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-03-04T17:31:25Z
 
  - designate new lineage B.D.4.1.2 and B.D.4.1.3. The former is an older group that doesn't seem to circulating at the moment, but is added for consistency
  - designate lineages B.D.E.1.2-6: these are several recent groups defined to break up the dominant B.D.E.1 lineage
