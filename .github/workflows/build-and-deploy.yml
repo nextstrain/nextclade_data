@@ -28,7 +28,7 @@ jobs:
     # Run only if it's not a fork
     if: ${{ !((github.event_name == 'pull_request') && (github.event.pull_request.head.repo.fork || ((github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) != github.repository))) }}
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     environment:
       name: ${{ github.ref }}
