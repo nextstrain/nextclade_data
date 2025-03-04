@@ -23,10 +23,10 @@ TITLE="Update SARS-CoV-2 datasets [automated]"
 
 declare -A trees=(
   ["https://nextstrain.org/staging/nextclade/sars-cov-2"]="nextstrain/sars-cov-2/wuhan-hu-1/orfs"
-  ["https://nextstrain.org/staging/nextclade/sars-cov-2/nsp"]="nextstrain/sars-cov-2/wuhan-hu-1/proteins"
-  ["https://nextstrain.org/staging/nextclade/sars-cov-2/BA.2"]="nextstrain/sars-cov-2/BA.2"
+#  ["https://nextstrain.org/staging/nextclade/sars-cov-2/nsp"]="nextstrain/sars-cov-2/wuhan-hu-1/proteins"
+#  ["https://nextstrain.org/staging/nextclade/sars-cov-2/BA.2"]="nextstrain/sars-cov-2/BA.2"
   ["https://nextstrain.org/staging/nextclade/sars-cov-2/BA.2.86"]="nextstrain/sars-cov-2/BA.2.86"
-  ["https://nextstrain.org/staging/nextclade/sars-cov-2/XBB"]="nextstrain/sars-cov-2/XBB"
+#  ["https://nextstrain.org/staging/nextclade/sars-cov-2/XBB"]="nextstrain/sars-cov-2/XBB"
 )
 
 function write_changelog() {
