@@ -369,9 +369,8 @@ def main():
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
   _, last_version = dataset_get_versions(dataset_from_index)
-  if last_version is None:
-    return True
   modified_files = list(git_get_modified_files(from_revision=dict_get(last_version, ["tag"]), dirs=dataset_dir))
+
   modified_files = list(map(lambda f: realpath(f), modified_files))
   return len(modified_files) > 0
 
