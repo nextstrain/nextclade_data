@@ -3850,6 +3850,42 @@
       },
       "datasets": [
         {
+          "path": "community/isuvdl/mazeller/prrsv1/orf5/yimim2025",
+          "enabled": true,
+          "attributes": {
+            "name": "PRRSV-1",
+            "reference name": "Porcine reproductive and respiratory syndrome virus 1, ORF5 cds",
+            "reference accession": "M96262.2"
+          },
+          "files": {
+            "reference": "lelystad_orf5.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "lelystad_orf5.gff",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
           "path": "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
           "enabled": true,
           "attributes": {
