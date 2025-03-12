@@ -23,7 +23,6 @@
     "reference accession": "M96262.2"
   },
   "qc": {
-    "schemaVersion": "1.2.0",
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,
