@@ -1,3 +1,7 @@
+## Unreleased
+
+ - add gff version to annotation
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees
