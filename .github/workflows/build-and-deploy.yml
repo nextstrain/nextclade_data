@@ -97,11 +97,15 @@ jobs:
 
       - name: "Install system dependencies"
         run: |
-          sudo apt-get install brotli pigz parallel python3 rename --yes -qq >/dev/null
+          sudo apt-get install brotli genometools pigz parallel python3 rename --yes -qq >/dev/null
 
       - name: "Install Python dependencies"
         run: |
           pip3 install -r requirements.txt
+
+      - name: "Validate GFF files"
+        run: |
+          ./scripts/validate-gff "data/"
 
       - name: "Rebuild datasets (fork)"
         if: ${{ steps.config.outputs.is_fork == 'true' }}
