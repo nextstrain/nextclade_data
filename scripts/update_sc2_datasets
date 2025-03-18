@@ -126,7 +126,9 @@ function submit_pr() {
   pr_body | gh pr create \
     --title "${TITLE}" \
     --body-file - \
-    --repo "nextstrain/nextclade_data"
+    --repo "nextstrain/nextclade_data" \
+    --reviewer "corneliusroemer" \
+    --reviewer "rneher"
 }
 
 # Get PR number from the dataset_name of gh command
