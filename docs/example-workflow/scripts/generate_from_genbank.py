@@ -8,6 +8,7 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser(description='Annotate sequences using a genbank reference')
     parser.add_argument('--reference', required=True, type=str, help='Genbank accession of reference sequence (will be fetched from genbank)')
+    parser.add_argument('--include-parent-features', action='store_true', help='Include parent features of CDS in the output')
     parser.add_argument('--output-dir', required=True, type=str, help='Output directory')
     return parser.parse_args()
 
@@ -71,6 +72,8 @@ if __name__=="__main__":
 
     # collect all cds and alternative annotations of protein sequences
     all_cds = defaultdict(lambda: defaultdict(list))
+    all_features = defaultdict(list)
+    parents = list()
     for line in gff:
         if line[0]=='#':
             continue
@@ -81,13 +84,21 @@ if __name__=="__main__":
         # parse attributes and feature type and ID
         attributes = {x.split('=')[0]:x.split('=')[1] for x in entries[-1].split(';')}
         feature_type = entries[2]
-        # IDs look like this: ID=id-NP_057850.1:133..363 where the part after to colon is the range in the translated sequence (exists in cases of mature protein annotations)
-        feature_id = attributes['ID'].split(':')[0].split('-')[-1]
+        if feature_type in ['CDS', 'mature_protein_region_of_CDS', 'mat_peptide', 'mat_protein']:
+            # IDs look like this: ID=id-NP_057850.1:133..363 where the part after to colon is the range in the translated sequence (exists in cases of mature protein annotations)
+            # the coordinates need to be trimmed to identify segments as part of the same CDS
+            feature_id = attributes['ID'].split(':')[0].split('-')[-1]
+        else:
+            feature_id = attributes['ID']
+
+        all_features[feature_id].append([entries[:-1], attributes])
         if feature_type=='CDS':
             all_cds[feature_id]['CDS'].append([entries[:-1], attributes])
         elif feature_type in ['mature_protein_region_of_CDS', 'mat_peptide', 'mat_protein']:
             all_cds[feature_id]['mature_protein'].append([entries[:-1], attributes])
 
+        if 'Parent' in attributes:
+            parents.append(attributes['Parent'])
 
     annotation_choice = 0
     if any([len(feat)>1 for feat in all_cds.values()]):
@@ -100,6 +111,13 @@ if __name__=="__main__":
                 break
             except:
                 print(f"You input '{annotation_choice}' is not valid. Please enter one of [0, 1, 2]")
+    elif all([len(feat['CDS'])>0 for feat in all_cds.values()]):
+        annotation_choice = 1
+    elif all([len(feat['mature_protein'])>0 for feat in all_cds.values()]):
+        annotation_choice = 2
+    else:
+        print("\nNo CDS or mature protein annotations found. Exiting.")
+        exit()
 
     available_attributes_by_type = {'CDS':set(), 'mature_protein': set()}
     for annot, annot_set in available_attributes_by_type.items():
@@ -175,11 +193,17 @@ if __name__=="__main__":
                 new_entries, new_attributes = list(segment[0]), dict(segment[1])
                 new_entries[2]='CDS'
                 new_attributes['Name']=names_by_id[segment_id]
-                if "Parent" in new_attributes: new_attributes.pop("Parent")
+                if not args.include_parent_features:
+                    if "Parent" in new_attributes: new_attributes.pop("Parent")
                 streamlined_cds[segment_id].append([new_entries, new_attributes])
+
+    def write_gff_line(entry):
+        attributes = ';'.join([f"{k}={v}" for k,v in sorted(entry[1].items(), key=lambda x:(x[0]!='Name', len(x[1])))])
+        return '\t'.join(entry[0])+'\t' + attributes + '\n'
 
     gff_fname = f"{args.output_dir}/annotation.gff"
     print(f"\nWriting annotation to GFF file: {gff_fname}\n")
+    already_written = set()
     # write the gff file as a simple text file line by line
     with open(gff_fname, "w") as f:
         # write the header and the region line
@@ -190,11 +214,20 @@ if __name__=="__main__":
 
         # write the CDS lines
         for cds in streamlined_cds:
-            if len(streamlined_cds[cds])==0: continue
+            if len(streamlined_cds[cds])==0:
+                continue
+            if 'Parent' in streamlined_cds[cds][0][1]:
+                parent = streamlined_cds[cds][0][1]['Parent']
+                if parent in already_written:
+                    continue
+                print(f"Exporting Parent '{parent}' of '{names_by_id[cds]}'.")
+                for segment in all_features[parent]:
+                    f.write(write_gff_line(segment))
+                already_written.add(parent)
+
             print(f"Exporting CDS '{names_by_id[cds]}' with {len(streamlined_cds[cds])} segments.")
             for segment in streamlined_cds[cds]:
-                attributes = ';'.join([f"{k}={v}" for k,v in sorted(segment[1].items(), key=lambda x:(x[0]!='Name', len(x[1])))])
-                f.write('\t'.join(segment[0])+'\t' + attributes + '\n')
+                f.write(write_gff_line(segment))
 
     gb_fname = f"{args.output_dir}/reference.gb"
     print("\nWriting annotation to genbank file: ", gb_fname)
