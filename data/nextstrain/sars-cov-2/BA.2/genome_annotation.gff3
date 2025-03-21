@@ -1,4 +1,5 @@
 ##gff-version 3
+##sequence-region   . 266 29533
 .	.	gene	26245	26472	.	+	.	gene_name=E
 .	.	gene	26523	27191	.	+	.	gene_name=M
 .	.	gene	28274	29533	.	+	.	gene_name=N
