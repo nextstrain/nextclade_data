@@ -1,3 +1,4 @@
+##gff-version 3
 ##sequence-region prM-E 1 672
 NC_002031.1	feature	source	1	672	.	+	.	gene=nuc
 NC_002031.1	feature	gene	1	333	.	+	.	gene_name=prM
