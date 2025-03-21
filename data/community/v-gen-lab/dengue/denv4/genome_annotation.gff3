@@ -1,5 +1,4 @@
 ##gff-version 3
-##source-version geneious 2022.2.2
 ##sequence-region	NC_002640	1	10649
 NC_002640	Geneious	gene	102	440	.	+	.	gene_name=C
 NC_002640	Geneious	gene	441	938	.	+	.	gene_name=prM
