@@ -1,5 +1,4 @@
 ##gff-version 3
-##source-version geneious 2022.2.2
 ##sequence-region	NC_001475	1	10707
 NC_001475	Geneious	gene	95	436	.	+	.	gene_name=C
 NC_001475	Geneious	gene	437	934	.	+	.	gene_name=prM
