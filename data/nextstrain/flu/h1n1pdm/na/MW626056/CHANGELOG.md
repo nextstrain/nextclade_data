@@ -1,3 +1,8 @@
+## Unreleased
+
+Fix GFF3 format issues in genome annotation
+
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees

@@ -1,3 +1,8 @@
+## Unreleased
+
+Fix GFF3 format issues in genome annotation
+
+
 ## 2025-01-28T16:39:09Z
 
 - Add newly designated Nextstrain clade 25A (LP.8.1)
