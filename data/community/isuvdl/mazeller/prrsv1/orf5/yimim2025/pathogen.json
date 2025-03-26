@@ -18,7 +18,7 @@
     "minLength": 400
   },
   "attributes": {
-    "name": "PRRSV-1",
+    "name": "PRRSV-1 ORF5",
     "reference name": "Porcine reproductive and respiratory syndrome virus 1, ORF5 cds",
     "reference accession": "M96262.2"
   },
