@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "lelystad_orf5.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "lelystad_orf5.gff",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "treeJson": "tree.json"
+  },
+  "alignmentParams": {
+    "penaltyGapOpen": 8,
+    "penaltyGapOpenInFrame": 12,
+    "penaltyGapOpenOutOfFrame": 14,
+    "gapAlignmentSide": "left",
+    "minSeedCover": 0.01,
+    "minLength": 400
+  },
+  "attributes": {
+    "name": "PRRSV-1 ORF5",
+    "reference name": "Porcine reproductive and respiratory syndrome virus 1, ORF5 cds",
+    "reference accession": "M96262.2"
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500,
+      "scoreWeight": 50
+    },
+    "snpClusters": {
+      "enabled": true,
+      "windowSize": 100,
+      "clusterCutOff": 6,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15,
+      "scoreWeight": 80
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 50
+    }
+  },
+  "version": {
+    "updatedAt": "2025-03-26T14:04:54Z",
+    "tag": "2025-03-26--14-04-54Z"
+  }
+}

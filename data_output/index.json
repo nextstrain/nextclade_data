@@ -3925,7 +3925,7 @@
           "path": "community/isuvdl/mazeller/prrsv1/orf5/yimim2025",
           "enabled": true,
           "attributes": {
-            "name": "PRRSV-1",
+            "name": "PRRSV-1 ORF5",
             "reference name": "Porcine reproductive and respiratory syndrome virus 1, ORF5 cds",
             "reference accession": "M96262.2"
           },
@@ -3950,6 +3950,10 @@
           },
           "versions": [
             {
+              "updatedAt": "2025-03-26T14:04:54Z",
+              "tag": "2025-03-26--14-04-54Z"
+            },
+            {
               "updatedAt": "2025-03-26T11:47:13Z",
               "tag": "2025-03-26--11-47-13Z"
             },
@@ -3959,8 +3963,8 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-03-26T11:47:13Z",
-            "tag": "2025-03-26--11-47-13Z"
+            "updatedAt": "2025-03-26T14:04:54Z",
+            "tag": "2025-03-26--14-04-54Z"
           }
         },
         {
