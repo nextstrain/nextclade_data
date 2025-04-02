@@ -67,7 +67,8 @@
   },
   "schemaVersion": "3.0.0",
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2025-04-02T19:11:08Z",
+    "tag": "2025-04-02--19-11-08Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
