@@ -18,8 +18,7 @@ The reference tree is mid-point rooted.
 
 ### Features
 This dataset supports:
- - Assignment to lineage nomenclature initially proposed by [van den Hoogen et al, 2004](https://wwwnc.cdc.gov/eid/article/10/4/03-0393_article)
+ - Assignment to lineage nomenclature initially proposed by [van den Hoogen et al, 2004](https://wwwnc.cdc.gov/eid/article/10/4/03-0393_article) and refined in [Groen et al, 2023](https://doi.org/10.1128/mbio.02280-22).
+ - In addition, alternative clade names in the literature are provided for completeness.
  - Phylogenetic placement
  - Sequence QC (though frame shifts in the G-protein can not be accurately called across all of HMPV diversity)
-
-
