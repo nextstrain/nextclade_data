@@ -10,7 +10,7 @@
 | clade definitions      | [github.com/rsv-lineages/lineage-designation-B](https://github.com/rsv-lineages/lineage-designation-B)              |
 
 ## Scope of this dataset
-This dataset for RSV-B uses reference sequence B/Australia/VIC-RCH056/2019 with is available at [OP975389](https://www.ncbi.nlm.nih.gov/nuccore/OP975389.1) and also deposited under accession number EPI_ISL_1653999 in GISAID. This sequence has the duplication in the G-protein shared by all currently circulating variants.
+This dataset for RSV-B uses reference sequence B/Australia/VIC-RCH056/2019 which is available at [OP975389](https://www.ncbi.nlm.nih.gov/nuccore/OP975389.1) and also deposited under accession number EPI_ISL_1653999 in GISAID. This sequence has the duplication in the G-protein shared by all currently circulating variants.
 The reference tree covers the diversity of RSV-B since the first sequenced samples.
 
 

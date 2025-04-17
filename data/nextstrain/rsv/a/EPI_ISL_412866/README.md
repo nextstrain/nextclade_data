@@ -6,11 +6,11 @@
 | data source            | Genbank + authorized other sequences                                                                                |
 | workflow               | [github.com/nextstrain/rsv](https://github.com/nextstrain/rsv)                                                      |
 | nextclade dataset path | nextstrain/rsv/a/EPI_ISL_412866                                                                                     |
-| reference              | EPI_ISL_412866                                                                                                      |
+| reference              | [PP109421](https://www.ncbi.nlm.nih.gov/nuccore/PP109421.1)                                                                                                      |
 | clade definitions      | [github.com/rsv-lineages/lineage-designation-A](https://github.com/rsv-lineages/lineage-designation-A)              |
 
 ## Scope of this dataset
-This dataset for RSV-A uses reference sequence A/England/397/2017 with is available at under accession number EPI_ISL_412866 in GISAID. An almost identical sequence (slightly longer, 12 mutations, no gaps or indels) is available in NCBI as [LR699737](https://www.ncbi.nlm.nih.gov/nuccore/LR699737).
+This dataset for RSV-A uses reference sequence A/England/397/2017 which is available at [PP109421](https://www.ncbi.nlm.nih.gov/nuccore/PP109421.1) and also deposited under accession number EPI_ISL_412866 in GISAID. 
 This sequence has the duplication in the G-protein shared by all currently circulating variants.
 The reference tree covers the diversity of RSV-A since the first sequenced samples.
 
