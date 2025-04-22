@@ -38,8 +38,9 @@
     },
     "missingData": {
       "enabled": true,
-      "missingDataThreshold": 20000,
-      "scoreBias": 1000
+      "missingDataThreshold": 50000,
+      "scoreBias": 1000,
+      "scoreWeight": 50
     },
     "mixedSites": {
       "enabled": true,
