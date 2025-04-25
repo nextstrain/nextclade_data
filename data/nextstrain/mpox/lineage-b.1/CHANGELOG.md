@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-04-25T12:24:24Z
 
 - Newly released sequences are included.
 - Sequences are now downloaded from Pathoplexus instead of NCBI virus. This allows inclusion of restricted-use clade I sequences from INRB (Placide Mbala-Kingebeni's group) in the DRC. This nearly doubles clade I sequences available.

@@ -1,0 +1,101 @@
+{
+  "alignmentParams": {
+    "allowedMismatches": 5,
+    "excessBandwidth": 40,
+    "gapAlignmentSide": "left",
+    "minSeedCover": 0.1,
+    "terminalBandwidth": 200,
+    "windowSize": 30
+  },
+  "attributes": {
+    "name": "Mpox virus (Clade IIb)",
+    "reference accession": "NC_063383.1",
+    "reference name": "MPXV-M5312_HM12_Rivers"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": false,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "official": true,
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "ignoredFrameShifts": [
+        {
+          "codonRange": {
+            "begin": 289,
+            "end": 346
+          },
+          "cdsName": "OPG174"
+        }
+      ],
+      "scoreWeight": 20
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 50000,
+      "scoreBias": 1000,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 40
+    },
+    "privateMutations": {
+      "cutoff": 50,
+      "enabled": true,
+      "typical": 5,
+      "weightLabeledSubstitutions": 6,
+      "weightReversionSubstitutions": 6,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": true,
+      "scoreWeight": 10,
+      "windowSize": 1000
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+        {
+          "codon": 187,
+          "cdsName": "OPG015_dup"
+        },
+        {
+          "codon": 187,
+          "cdsName": "OPG015"
+        },
+        {
+          "codon": 21,
+          "cdsName": "OPG176"
+        }
+      ],
+      "scoreWeight": 40
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "shortcuts": [
+    "hMPXV"
+  ],
+  "version": {
+    "updatedAt": "2025-04-25T12:24:24Z",
+    "tag": "2025-04-25--12-24-24Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}
