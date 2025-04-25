@@ -1,3 +1,10 @@
+## Unreleased
+
+- Newly released sequences are included.
+- Sequences are now downloaded from Pathoplexus instead of NCBI virus. This allows inclusion of restricted-use clade I sequences from INRB (Placide Mbala-Kingebeni's group) in the DRC. This nearly doubles clade I sequences available.
+- Based on user feedback, the QC rule for missing data (Ns) has been made more lenient.
+- Masked ranges that are ignored for placement have been updated.
+
 ## 2024-11-19T14:18:53Z
 
 - 11 newly designated B.1 sublineages are now included. See <https://github.com/mpxv-lineages/lineage-designation/pull/45> for details.
