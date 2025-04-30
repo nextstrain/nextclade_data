@@ -71,13 +71,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 51,
+            "clades": 52,
             "customClades": {
-              "Nextclade_pango": 3723,
-              "partiallyAliased": 3723,
-              "clade_nextstrain": 51,
+              "Nextclade_pango": 3761,
+              "partiallyAliased": 3761,
+              "clade_nextstrain": 52,
               "clade_who": 13,
-              "clade_display": 51
+              "clade_display": 52
             },
             "qc": [
               "frameShifts",
@@ -92,6 +92,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-04-01T08:20:12Z",
               "tag": "2025-04-01--08-20-12Z",
@@ -214,8 +221,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-04-01T08:20:12Z",
-            "tag": "2025-04-01--08-20-12Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -797,13 +803,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 28,
+            "clades": 29,
             "customClades": {
-              "Nextclade_pango": 2985,
-              "partiallyAliased": 2985,
-              "clade_nextstrain": 28,
+              "Nextclade_pango": 3023,
+              "partiallyAliased": 3023,
+              "clade_nextstrain": 29,
               "clade_who": 3,
-              "clade_display": 28
+              "clade_display": 29
             },
             "qc": [
               "frameShifts",
@@ -819,6 +825,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-04-01T08:20:12Z",
               "tag": "2025-04-01--08-20-12Z",
@@ -941,8 +954,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-04-01T08:20:12Z",
-            "tag": "2025-04-01--08-20-12Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
