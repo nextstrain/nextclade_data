@@ -1,7 +1,12 @@
+## Unreleased
+
+DEPRECATED: As almost none of the current circulation descends from XBB anymore, we are deprecating this dataset. It will no longer receive updates. 
+
+Please use the `wuhan-hu-1` or `BA.2.86` datasets instead.
+
 ## 2025-03-26T11:47:13Z
 
 Fix GFF3 format issues in genome annotation
-
 
 ## 2025-01-28T16:39:09Z
 

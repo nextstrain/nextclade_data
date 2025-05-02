@@ -1,4 +1,7 @@
 {
+  "deprecated": true,
+  "enabled": true,
+  "experimental": false,
   "alignmentParams": {
     "excessBandwidth": 12,
     "terminalBandwidth": 100,
