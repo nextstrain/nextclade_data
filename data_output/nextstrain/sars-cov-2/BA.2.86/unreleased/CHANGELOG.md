@@ -1,6 +1,6 @@
 ## Unreleased
 
-Automated update
+- Newly designated Nextstrain clade 25B (Pango lineage NB.1.8.1 = XDV.1.5.1.1.8.1) is now included.
 
 ## 2025-04-01T08:20:12Z
 
