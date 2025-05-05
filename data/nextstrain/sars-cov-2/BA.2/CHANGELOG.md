@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-05-05T13:15:29Z
 
 DEPRECATED: As almost all of the current circulation descends from BA.2 via BA.2.86, we are deprecating this dataset. It will no longer receive updates.
 

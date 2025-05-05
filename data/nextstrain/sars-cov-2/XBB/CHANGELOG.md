@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-05-05T13:15:29Z
 
 DEPRECATED: As almost none of the current circulation descends from XBB anymore, we are deprecating this dataset. It will no longer receive updates. 
 
