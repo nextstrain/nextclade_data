@@ -1,3 +1,7 @@
+## Unreleased
+
+- Newly designated Nextstrain clade 25B (Pango lineage NB.1.8.1 = XDV.1.5.1.1.8.1) is now included.
+
 ## 2025-04-01T08:20:12Z
 
 Automated update
@@ -5,7 +9,6 @@ Automated update
 ## 2025-03-26T11:47:13Z
 
 Fix GFF3 format issues in genome annotation
-
 
 ## 2025-03-04T17:31:25Z
 

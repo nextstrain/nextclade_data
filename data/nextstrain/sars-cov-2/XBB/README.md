@@ -1,4 +1,4 @@
-# SARS-CoV-2 dataset with mutations relative to XBB
+# \[DEPRECATED\] SARS-CoV-2 dataset with mutations relative to XBB
 
 | Key               | Value                                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -7,6 +7,8 @@
 | workflow          | https://github.com/neherlab/nextclade_data_workflows/tree/v3-sc2/sars-cov-2                                                                                      |
 | path              | `nextstrain/sars-cov-2/XBB`                                                                                                                                      |
 | clade definitions | [Nextstrain clades](https://nextstrain.org/blog/2022-04-29-SARS-CoV-2-clade-naming-2022) and [Pango lineages](https://www.nature.com/articles/s41564-020-0770-5) |
+
+__Deprecated__: This dataset is deprecated and will be removed in the future. Please use the `nextstrain/sars-cov-2/BA.2.86` dataset or `nextstrain/sars-cov-2/wuhan-hu-1` dataset instead.
 
 ## Scope of this dataset
 
