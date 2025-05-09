@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "minSeedCover": 0.01
+  },
+  "attributes": {
+    "name": "Influenza A/H5N1 (segment 6/NA)",
+    "reference name": "Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) neuraminidase (NA) gene, complete cds",
+    "reference accession": "NC_007361.1"
+  },
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "changelog": "CHANGELOG.md",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "readme": "README.md",
+    "examples": "examples.fasta"
+  }
+}
