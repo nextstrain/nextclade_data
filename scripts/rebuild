@@ -213,8 +213,11 @@ def sort_collections(collections, collections_order):
 
 
 def sort_datasets(datasets, dataset_order):
-  return [dataset for x in dataset_order for dataset in datasets if dataset["path"] == x]
-
+  sorted_by_order = [
+    dataset for x in dataset_order
+    for dataset in datasets if dataset["path"] == x
+  ]
+  return sorted(sorted_by_order, key=lambda d: d['attributes'].get('deprecated', False))
 
 def sort_release_infos(release_infos, dataset_order):
   return [release_info for x in dataset_order for release_info in release_infos if release_info["dataset"]["path"] == x]
