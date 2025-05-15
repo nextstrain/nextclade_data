@@ -1,0 +1,26 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_001489.1 1 7478
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=12092
+NC_001489.1	RefSeq	region	1	7478	.	+	.	ID=NC_001489.1:1..7478;Dbxref=taxon:12092;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Hepatitis A virus
+NC_001489.1	RefSeq	gene	735	7418	.	+	.	ID=gene-HAVgp1;Dbxref=GeneID:1493918;Name=HAVgp1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=HAVgp1
+NC_001489.1	RefSeq	CDS	735	7418	.	+	0	ID=cds-NP_041007.1;Parent=gene-HAVgp1;Dbxref=GenBank:NP_041007.1,GeneID:1493918;Name=NP_041007.1;gbkey=CDS;locus_tag=HAVgp1;product=hypothetical protein;protein_id=NP_041007.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	735	803	.	+	.	ID=id-NP_041007.1:1..23;Parent=cds-NP_041007.1;gbkey=Prot;product=1A VP4a mature peptide (alt.);protein_id=NP_740548.1
+NC_001489.1	RefSeq	gene	741	7418	.	+	.	ID=gene-HAVgp2;Dbxref=GeneID:1493919;Name=HAVgp2;gbkey=Gene;gene_biotype=protein_coding;locus_tag=HAVgp2
+NC_001489.1	RefSeq	CDS	741	7418	.	+	0	ID=cds-NP_041008.1;Parent=gene-HAVgp2;Dbxref=GenBank:NP_041008.1,GeneID:1493919;Name=NP_041008.1;gbkey=CDS;locus_tag=HAVgp2;product=hypothetical protein;protein_id=NP_041008.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	741	803	.	+	.	ID=id-NP_041008.1:1..21;Parent=cds-NP_041008.1;gbkey=Prot;product=1A VP4b mature peptide (alt.);protein_id=NP_740549.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	804	1469	.	+	.	ID=id-NP_041008.1:22..243;Parent=cds-NP_041008.1;gbkey=Prot;product=1B VP2 mature peptide;protein_id=NP_740550.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	1470	2207	.	+	.	ID=id-NP_041008.1:244..489;Parent=cds-NP_041008.1;gbkey=Prot;product=1C VP3 mature peptide;protein_id=NP_740551.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	2208	3107	.	+	.	ID=id-NP_041008.1:490..789;Parent=cds-NP_041008.1;gbkey=Prot;product=1D VP1 mature peptide;protein_id=NP_740552.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	3108	3674	.	+	.	ID=id-NP_041008.1:790..978;Note=Capsid assembly signal 2A is removed from the VP1-2A protein by a postassembly proteolytic event that presumably involves a host proteinase such as FXa.;Parent=cds-NP_041008.1;gbkey=Prot;product=2A mature peptide;protein_id=NP_740553.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	3675	3995	.	+	.	ID=id-NP_041008.1:979..1085;Parent=cds-NP_041008.1;gbkey=Prot;product=2B mature peptide;protein_id=NP_740554.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	3996	5000	.	+	.	ID=id-NP_041008.1:1086..1420;Parent=cds-NP_041008.1;gbkey=Prot;product=2C mature peptide;protein_id=NP_740555.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	5001	5222	.	+	.	ID=id-NP_041008.1:1421..1494;Parent=cds-NP_041008.1;gbkey=Prot;product=3A mature peptide;protein_id=NP_740556.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	5223	5291	.	+	.	ID=id-NP_041008.1:1495..1517;Parent=cds-NP_041008.1;gbkey=Prot;product=3B (VPg) mature peptide;protein_id=NP_740557.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	5292	5948	.	+	.	ID=id-NP_041008.1:1518..1736;Parent=cds-NP_041008.1;gbkey=Prot;product=3C mature peptide;protein_id=NP_740558.1
+NC_001489.1	RefSeq	mature_protein_region_of_CDS	5949	7415	.	+	.	ID=id-NP_041008.1:1737..2225;Parent=cds-NP_041008.1;gbkey=Prot;product=3D mature peptide;protein_id=NP_740559.1
+NC_001489.1	RefSeq	sequence_alteration	871	871	.	+	.	ID=id-HAVgp2;Dbxref=GeneID:1493919;Note=c in pHAVlb39%2C t in pHAVlb113;gbkey=variation;locus_tag=HAVgp2
+NC_001489.1	RefSeq	sequence_alteration	2196	2196	.	+	.	ID=id-HAVgp2-2;Dbxref=GeneID:1493919;Note=g in pHAVlb39%2C a in pHAVlb1307;gbkey=variation;locus_tag=HAVgp2
+NC_001489.1	RefSeq	sequence_alteration	6216	6216	.	+	.	ID=id-HAVgp2-3;Dbxref=GeneID:1493919;Note=t in pHAVlb93%2C c in pHAVlb24;gbkey=variation;locus_tag=HAVgp2
+
