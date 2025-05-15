@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Hepatitis A virus",
+    "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
+    "reference accession": "NC_001489.1"
+  }
+}
