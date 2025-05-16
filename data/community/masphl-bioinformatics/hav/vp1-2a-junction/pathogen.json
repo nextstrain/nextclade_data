@@ -7,7 +7,7 @@
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
     "treeJson": "tree.json",
-    "examples": "sequences.fasta",
+    "examples": "example_sequences.fasta",
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
