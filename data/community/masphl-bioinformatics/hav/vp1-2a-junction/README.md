@@ -13,7 +13,7 @@
 
 ## Scope of this dataset
 
-This dataset includes human host HAV clades IA, IB, IC, IIA, IIB, IIIA, and IIIB and is suitable for analysis of human host HAV sequences of any length as long as they include the VP1-2A junction region.
+This dataset includes human host HAV clades IA, IB, IC, IIA, IIB, IIIA, and IIIB and is suitable for analysis of human host HAV sequences of any length as long as they include the VP1-2A junction region; however, it is best suited for analysis of VP1-2A junction region sequences.
 
 ## About the VP1-2A junction region
 
