@@ -1,3 +1,4 @@
+##gff-version 3
 ##sequence-region E1 1 1443
 NC_001545.2	feature	source	1	1443	.	+	.	gene=nuc
 NC_001545.2	feature	gene	1	1443	.	+	.	gene_name=E1
