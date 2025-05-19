@@ -3653,6 +3653,43 @@
           }
         },
         {
+          "path": "nextstrain/rubella/E1",
+          "enabled": true,
+          "attributes": {
+            "name": "Rubella virus E1 region",
+            "reference name": "F-Therien",
+            "reference accession": "NC_001545.2"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
           "path": "nextstrain/sars-cov-2/BA.2",
           "shortcuts": [
             "sars-cov-2-21L"
