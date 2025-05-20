@@ -9,9 +9,37 @@
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
+  "alignmentParams": {
+    "alignmentPreset": "high-diversity"
+  },
   "attributes": {
     "name": "Hepatitis A virus",
     "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
     "reference accession": "NC_001489.1"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2700,
+      "scoreBias": 500
+    },
+    "mixedSites": {
+      "enabled": false,
+      "mixedSitesThreshold": 10
+    },
+    "privateMutations": {
+      "cutoff": 150,
+      "enabled": false,
+      "typical": 30,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "stopCodons": {
+      "enabled": true
+    }
   }
 }
