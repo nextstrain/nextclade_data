@@ -2,7 +2,7 @@
   "version": "v2",
   "meta": {
     "title": "Real-time tracking of rubella virus E1 gene evolution",
-    "updated": "2025-05-22",
+    "updated": "2025-05-23",
     "build_url": "https://github.com/nextstrain/rubella",
     "data_provenance": [
       {
@@ -48,51 +48,55 @@
         "scale": [
           [
             "1a",
-            "#4433BE"
+            "#492AB5"
+          ],
+          [
+            "1a(VAX)",
+            "#3F4CCB"
           ],
           [
             "1B",
-            "#3E5ACF"
+            "#4271CE"
           ],
           [
             "1C",
-            "#457FCB"
+            "#4C8FC0"
           ],
           [
             "1D",
-            "#529AB6"
+            "#5AA5A8"
           ],
           [
             "1E",
-            "#64AD98"
+            "#6DB38A"
           ],
           [
             "1F",
-            "#7BB77A"
+            "#85BA6F"
           ],
           [
             "1G",
-            "#96BD60"
+            "#A0BE59"
           ],
           [
             "1H",
-            "#B3BD4D"
+            "#BBBC49"
           ],
           [
             "1I",
-            "#CDB642"
+            "#D2B340"
           ],
           [
             "1J",
-            "#DFA43B"
+            "#E19F3A"
           ],
           [
             "2A",
-            "#E68434"
+            "#E68033"
           ],
           [
             "2B",
-            "#E2582C"
+            "#E2562B"
           ],
           [
             "2C",
@@ -142,12 +146,20 @@
             "#86BB6E"
           ],
           [
+            "Finland",
+            "#D5B03F"
+          ],
+          [
             "Belarus",
             "#DAAD3D"
           ],
           [
             "Russia",
             "#E29E39"
+          ],
+          [
+            "USA",
+            "#DD3225"
           ],
           [
             "Canada",
@@ -167,17 +179,9 @@
       {
         "key": "country",
         "demes": {
-          "Uganda": {
-            "latitude": 1.861287,
-            "longitude": 32.55149
-          },
           "Japan": {
             "latitude": 35.68536,
             "longitude": 139.75309
-          },
-          "Russia": {
-            "latitude": 64.6863136,
-            "longitude": 97.7453061
           },
           "Belarus": {
             "latitude": 53.704205,
@@ -186,27 +190,43 @@
           "Canada": {
             "latitude": 61.0666922,
             "longitude": -107.991707
+          },
+          "Uganda": {
+            "latitude": 1.861287,
+            "longitude": 32.55149
+          },
+          "USA": {
+            "latitude": 38.916963,
+            "longitude": -98.891372
+          },
+          "Finland": {
+            "latitude": 61.751734,
+            "longitude": 26.186437
+          },
+          "Russia": {
+            "latitude": 64.6863136,
+            "longitude": 97.7453061
           }
         }
       },
       {
         "key": "region",
         "demes": {
-          "Asia": {
-            "latitude": 35.000074,
-            "longitude": 104.999927
-          },
           "North America": {
             "latitude": 28.2367447,
             "longitude": -97.738017
           },
-          "Europe": {
-            "latitude": 49.646237,
-            "longitude": 10.799454
-          },
           "Africa": {
             "latitude": 4.070194,
             "longitude": 21.824559
+          },
+          "Asia": {
+            "latitude": 35.000074,
+            "longitude": 104.999927
+          },
+          "Europe": {
+            "latitude": 49.646237,
+            "longitude": 10.799454
           }
         }
       }
@@ -231,27 +251,31 @@
           "G49A",
           "T81C",
           "C105T",
-          "T138C",
-          "T150C",
           "G202A",
           "T210G",
           "T228C",
-          "C261T",
-          "T276C",
-          "C297G",
+          "A234G",
+          "C297A",
           "T300C",
+          "C303T",
           "T342C",
           "G354C",
-          "T480C",
+          "C369T",
+          "T432C",
+          "C466T",
           "T513A",
           "C600T",
           "T639C",
           "G642A",
+          "T672C",
           "C675T",
+          "C678T",
+          "T687C",
+          "T714C",
           "C726T",
           "T735C",
           "C756T",
-          "C777T",
+          "G771C",
           "G792T",
           "A810G",
           "T879C",
@@ -260,28 +284,28 @@
           "C912T",
           "T951C",
           "G969A",
-          "T987C",
           "A1009G",
-          "T1029C",
-          "T1035C",
-          "G1038A",
           "G1044C",
+          "T1059C",
           "C1089A",
           "C1098G",
           "C1129G",
           "G1138T",
           "C1226G",
           "C1239T",
-          "A1254G",
+          "T1260C",
           "G1296A",
           "C1335T",
           "C1376T",
+          "C1380T",
+          "A1389G",
           "T1440G"
         ],
         "E1": [
           "A17T",
           "A68T",
           "E118D",
+          "R156W",
           "T337A",
           "L377V",
           "V380F",
@@ -290,14 +314,14 @@
         ]
       },
       "labels": {
-        "aa": "E1: A17T, A68T, E118D, T337A, L377V, V380F, T409S, P459L"
+        "aa": "E1: A17T, A68T, E118D, R156W, T337A, L377V, V380F, T409S, P459L"
       }
     },
     "children": [
       {
         "name": "NODE_0000001",
         "node_attrs": {
-          "div": 0.00892864,
+          "div": 0.00889502,
           "clade_membership": {
             "value": "unassigned"
           }
@@ -305,28 +329,33 @@
         "branch_attrs": {
           "mutations": {
             "nuc": [
-              "A234G",
-              "C369T",
-              "T432C",
-              "C466A",
-              "T672C",
-              "T714C",
+              "T138C",
+              "T150C",
+              "T276C",
+              "T466A",
+              "T678C",
               "T720C",
-              "G771C",
               "A954G",
+              "T1029C",
+              "G1038A",
               "T1083C",
               "C1197G",
-              "T1260C",
-              "C1380T",
+              "A1254G",
               "G1413A"
+            ],
+            "E1": [
+              "W156R"
             ]
+          },
+          "labels": {
+            "aa": "E1: W156R"
           }
         },
         "children": [
           {
             "name": "NODE_0000002",
             "node_attrs": {
-              "div": 0.0312676,
+              "div": 0.0312072,
               "clade_membership": {
                 "value": "2C"
               }
@@ -342,29 +371,28 @@
                   "A141G",
                   "G169A",
                   "A198G",
+                  "C261T",
                   "C292T",
-                  "G297A",
+                  "T303C",
                   "C399T",
+                  "T480C",
                   "A483G",
                   "C507T",
                   "A513G",
-                  "T687C",
                   "C771T",
                   "T801C",
                   "T834C",
                   "C936T",
                   "C978T",
                   "A984G",
-                  "C987T",
                   "A1005G",
-                  "T1059C",
+                  "T1035C",
                   "A1089G",
                   "C1110T",
                   "T1119C",
                   "C1173G",
                   "G1360A",
-                  "G1367C",
-                  "A1389G"
+                  "G1367C"
                 ],
                 "E1": [
                   "V57I",
@@ -381,18 +409,18 @@
               {
                 "name": "DQ388279",
                 "node_attrs": {
-                  "div": 0.0350648,
+                  "div": 0.0350065,
                   "url": "https://www.ncbi.nlm.nih.gov/nuccore/DQ388279",
                   "accession": "DQ388279",
                   "author": {
                     "author": "Zhou et al.",
                     "value": "Zhou et al."
                   },
-                  "country": {
-                    "value": "Russia"
-                  },
                   "clade_membership": {
                     "value": "2C"
+                  },
+                  "country": {
+                    "value": "Russia"
                   },
                   "region": {
                     "value": "Europe"
@@ -404,7 +432,6 @@
                       "C192T",
                       "C534T",
                       "C768T",
-                      "T777C",
                       "C1155T",
                       "T1275C"
                     ]
@@ -414,7 +441,7 @@
               {
                 "name": "DQ085340",
                 "node_attrs": {
-                  "div": 0.0373317,
+                  "div": 0.0372822,
                   "url": "https://www.ncbi.nlm.nih.gov/nuccore/DQ085340",
                   "accession": "DQ085340",
                   "author": {
@@ -434,6 +461,7 @@
                       "A504G",
                       "T521C",
                       "G669A",
+                      "C777T",
                       "T1329C",
                       "C1361T"
                     ],
@@ -453,7 +481,7 @@
           {
             "name": "NODE_0000003",
             "node_attrs": {
-              "div": 0.0260874,
+              "div": 0.0261212,
               "clade_membership": {
                 "value": "unassigned"
               }
@@ -463,7 +491,7 @@
                 "nuc": [
                   "A202G",
                   "C264T",
-                  "C303T",
+                  "A297G",
                   "G333A",
                   "C420T",
                   "T435C",
@@ -475,13 +503,16 @@
                   "T621C",
                   "A708G",
                   "T756C",
+                  "C777T",
                   "C780T",
                   "T964C",
+                  "T987C",
                   "A1020C",
                   "C1023T",
                   "T1107C",
                   "C1200T",
-                  "C1362T"
+                  "C1362T",
+                  "G1389A"
                 ],
                 "E1": [
                   "T68A"
@@ -495,7 +526,7 @@
               {
                 "name": "NODE_0000004",
                 "node_attrs": {
-                  "div": 0.0537687,
+                  "div": 0.0538912,
                   "clade_membership": {
                     "value": "2A"
                   }
@@ -509,6 +540,7 @@
                       "T105C",
                       "T165C",
                       "G189A",
+                      "C261T",
                       "C309T",
                       "T312C",
                       "C324T",
@@ -519,6 +551,7 @@
                       "C438T",
                       "C444T",
                       "C454G",
+                      "T480C",
                       "A483G",
                       "C498G",
                       "C516T",
@@ -526,13 +559,12 @@
                       "G609A",
                       "T612C",
                       "T627C",
+                      "C687T",
                       "T801C",
                       "C900T",
                       "A984G",
                       "G993C",
                       "C1000T",
-                      "C1035T",
-                      "T1059C",
                       "C1062T",
                       "A1095T",
                       "G1098C",
@@ -554,50 +586,9 @@
                 },
                 "children": [
                   {
-                    "name": "AY258322",
-                    "node_attrs": {
-                      "div": 0.0644452,
-                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY258322",
-                      "accession": "AY258322",
-                      "author": {
-                        "author": "Zheng et al.",
-                        "value": "Zheng et al."
-                      },
-                      "clade_membership": {
-                        "value": "2A"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "C129T",
-                          "T250C",
-                          "C345T",
-                          "C387G",
-                          "G483C",
-                          "T516G",
-                          "T618C",
-                          "C696T",
-                          "T777C",
-                          "C837T",
-                          "G996C",
-                          "A1038G",
-                          "G1152A",
-                          "C1392T"
-                        ],
-                        "E1": [
-                          "F84L"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "E1: F84L"
-                      }
-                    }
-                  },
-                  {
                     "name": "AY258323",
                     "node_attrs": {
-                      "div": 0.0715388,
+                      "div": 0.0716628,
                       "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY258323",
                       "accession": "AY258323",
                       "author": {
@@ -645,13 +636,54 @@
                         "aa": "E1: Y473H"
                       }
                     }
+                  },
+                  {
+                    "name": "AY258322",
+                    "node_attrs": {
+                      "div": 0.0645757,
+                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY258322",
+                      "accession": "AY258322",
+                      "author": {
+                        "author": "Zheng et al.",
+                        "value": "Zheng et al."
+                      },
+                      "clade_membership": {
+                        "value": "2A"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C129T",
+                          "T250C",
+                          "C345T",
+                          "C387G",
+                          "G483C",
+                          "T516G",
+                          "T618C",
+                          "C696T",
+                          "T777C",
+                          "C837T",
+                          "G996C",
+                          "A1038G",
+                          "G1152A",
+                          "C1392T"
+                        ],
+                        "E1": [
+                          "F84L"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "E1: F84L"
+                      }
+                    }
                   }
                 ]
               },
               {
                 "name": "NODE_0000005",
                 "node_attrs": {
-                  "div": 0.0383468,
+                  "div": 0.0383941,
                   "clade_membership": {
                     "value": "2B"
                   }
@@ -661,16 +693,15 @@
                     "nuc": [
                       "T72C",
                       "G243A",
-                      "T261C",
-                      "C480T",
                       "A504G",
                       "C537G",
                       "T600C",
                       "G603C",
-                      "T687C",
                       "G957C",
                       "G1002A",
+                      "T1035C",
                       "C1041T",
+                      "C1059T",
                       "A1077G",
                       "G1092A",
                       "T1101C",
@@ -685,7 +716,7 @@
                   {
                     "name": "AY968219",
                     "node_attrs": {
-                      "div": 0.0637494,
+                      "div": 0.0638337,
                       "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968219",
                       "accession": "AY968219",
                       "author": {
@@ -751,7 +782,7 @@
                   {
                     "name": "NODE_0000006",
                     "node_attrs": {
-                      "div": 0.0532897,
+                      "div": 0.0533595,
                       "clade_membership": {
                         "value": "2B"
                       }
@@ -790,7 +821,7 @@
                       {
                         "name": "AY968220",
                         "node_attrs": {
-                          "div": 0.0632785,
+                          "div": 0.0633714,
                           "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968220",
                           "accession": "AY968220",
                           "author": {
@@ -830,7 +861,7 @@
                       {
                         "name": "AY968218",
                         "node_attrs": {
-                          "div": 0.069854,
+                          "div": 0.0699371,
                           "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968218",
                           "accession": "AY968218",
                           "author": {
@@ -889,7 +920,7 @@
       {
         "name": "NODE_0000007",
         "node_attrs": {
-          "div": 0.0208792,
+          "div": 0.0209541,
           "clade_membership": {
             "value": "unassigned"
           }
@@ -898,47 +929,49 @@
           "mutations": {
             "nuc": [
               "T105C",
-              "C138T",
-              "C150T",
               "G210T",
               "C228T",
-              "T261C",
-              "C276T",
-              "G297C",
+              "G234A",
+              "A297C",
               "C300T",
+              "T303C",
               "C354G",
-              "C480T",
+              "T369C",
+              "C432T",
+              "T466C",
               "C639T",
-              "C678T",
+              "C672T",
+              "C687T",
+              "C714T",
               "T726C",
               "C735T",
-              "T777C",
+              "C771G",
               "T792G",
               "C879T",
               "C894T",
               "C897T",
               "T912C",
               "A969G",
-              "C987T",
-              "C1029T",
-              "C1035T",
-              "A1038G",
-              "G1254A",
-              "A1296G"
+              "C1059T",
+              "C1260T",
+              "A1296G",
+              "T1380C",
+              "G1389A"
             ],
             "E1": [
-              "D118E"
+              "D118E",
+              "W156R"
             ]
           },
           "labels": {
-            "aa": "E1: D118E"
+            "aa": "E1: D118E, W156R"
           }
         },
         "children": [
           {
             "name": "NODE_0000008",
             "node_attrs": {
-              "div": 0.0233703,
+              "div": 0.0234475,
               "clade_membership": {
                 "value": "1a"
               }
@@ -960,7 +993,7 @@
               {
                 "name": "M30776",
                 "node_attrs": {
-                  "div": 0.0348211,
+                  "div": 0.0349316,
                   "url": "https://www.ncbi.nlm.nih.gov/nuccore/M30776",
                   "accession": "M30776",
                   "author": {
@@ -1003,7 +1036,7 @@
               {
                 "name": "AF188704",
                 "node_attrs": {
-                  "div": 0.029536,
+                  "div": 0.0296059,
                   "url": "https://www.ncbi.nlm.nih.gov/nuccore/AF188704",
                   "accession": "AF188704",
                   "author": {
@@ -1044,7 +1077,7 @@
           {
             "name": "NODE_0000009",
             "node_attrs": {
-              "div": 0.0263583,
+              "div": 0.0264563,
               "clade_membership": {
                 "value": "unassigned"
               }
@@ -1066,7 +1099,7 @@
               {
                 "name": "NODE_0000010",
                 "node_attrs": {
-                  "div": 0.0270488,
+                  "div": 0.0276601,
                   "clade_membership": {
                     "value": "unassigned"
                   }
@@ -1074,554 +1107,15 @@
                 "branch_attrs": {
                   "mutations": {
                     "nuc": [
-                      "C342T"
+                      "A1095G"
                     ]
                   }
                 },
                 "children": [
-                  {
-                    "name": "AB047330",
-                    "node_attrs": {
-                      "div": 0.0340209,
-                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AB047330",
-                      "accession": "AB047330",
-                      "author": {
-                        "author": "Kakizawa et al.",
-                        "value": "Kakizawa et al."
-                      },
-                      "clade_membership": {
-                        "value": "unassigned"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {
-                        "nuc": [
-                          "T9C",
-                          "T521C",
-                          "T540A",
-                          "C576G",
-                          "G645A",
-                          "C675T",
-                          "T834C",
-                          "C837T",
-                          "C921T",
-                          "A1194G"
-                        ],
-                        "E1": [
-                          "V174A"
-                        ]
-                      },
-                      "labels": {
-                        "aa": "E1: V174A"
-                      }
-                    }
-                  },
                   {
                     "name": "NODE_0000011",
                     "node_attrs": {
-                      "div": 0.0270513,
-                      "clade_membership": {
-                        "value": "unassigned"
-                      }
-                    },
-                    "branch_attrs": {
-                      "mutations": {}
-                    },
-                    "children": [
-                      {
-                        "name": "JF727653",
-                        "node_attrs": {
-                          "div": 0.031226,
-                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/JF727653",
-                          "accession": "JF727653",
-                          "author": {
-                            "author": "Sidorenko et al.",
-                            "value": "Sidorenko et al."
-                          },
-                          "country": {
-                            "value": "Russia"
-                          },
-                          "clade_membership": {
-                            "value": "unassigned"
-                          },
-                          "region": {
-                            "value": "Europe"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "A49G",
-                              "C516T",
-                              "T627C",
-                              "T628C",
-                              "C744T",
-                              "C1128T"
-                            ],
-                            "E1": [
-                              "T17A",
-                              "Y210H"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "E1: T17A, Y210H"
-                          }
-                        }
-                      },
-                      {
-                        "name": "NODE_0000012",
-                        "node_attrs": {
-                          "div": 0.0342335,
-                          "clade_membership": {
-                            "value": "unassigned"
-                          }
-                        },
-                        "branch_attrs": {
-                          "mutations": {
-                            "nuc": [
-                              "C24T",
-                              "T168C",
-                              "T228C",
-                              "C279T",
-                              "C705T",
-                              "G996T",
-                              "A1095G",
-                              "G1098C",
-                              "C1236T",
-                              "G1369A"
-                            ],
-                            "E1": [
-                              "A457T"
-                            ]
-                          },
-                          "labels": {
-                            "aa": "E1: A457T"
-                          }
-                        },
-                        "children": [
-                          {
-                            "name": "NODE_0000013",
-                            "node_attrs": {
-                              "div": 0.0485803,
-                              "clade_membership": {
-                                "value": "1J"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {
-                                "nuc": [
-                                  "C105T",
-                                  "T165C",
-                                  "G243A",
-                                  "C252T",
-                                  "A372G",
-                                  "A504G",
-                                  "T540C",
-                                  "G603A",
-                                  "T621C",
-                                  "C774T",
-                                  "C777T",
-                                  "T879C",
-                                  "A882G",
-                                  "T897C",
-                                  "C927T",
-                                  "C999G",
-                                  "G1002A",
-                                  "T1260C",
-                                  "T1332C",
-                                  "C1362T"
-                                ]
-                              },
-                              "labels": {
-                                "clade": "1J"
-                              }
-                            },
-                            "children": [
-                              {
-                                "name": "AB285130",
-                                "node_attrs": {
-                                  "div": 0.0542149,
-                                  "strain": {
-                                    "value": "RVi/Miyazaki.JPN/10.01CRS"
-                                  },
-                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AB285130",
-                                  "accession": "AB285130",
-                                  "author": {
-                                    "author": "Umino et al.",
-                                    "value": "Umino et al."
-                                  },
-                                  "country": {
-                                    "value": "Japan"
-                                  },
-                                  "clade_membership": {
-                                    "value": "1J"
-                                  },
-                                  "region": {
-                                    "value": "Asia"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "C78G",
-                                      "C261T",
-                                      "T435C",
-                                      "C477T",
-                                      "T821A",
-                                      "T1035C",
-                                      "T1329C",
-                                      "C1392T"
-                                    ],
-                                    "E1": [
-                                      "V274E"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "E1: V274E"
-                                  }
-                                }
-                              },
-                              {
-                                "name": "AB285129",
-                                "node_attrs": {
-                                  "div": 0.0527193,
-                                  "strain": {
-                                    "value": "RVi/Kagoshima.JPN/22.04"
-                                  },
-                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AB285129",
-                                  "accession": "AB285129",
-                                  "author": {
-                                    "author": "Umino et al.",
-                                    "value": "Umino et al."
-                                  },
-                                  "country": {
-                                    "value": "Japan"
-                                  },
-                                  "clade_membership": {
-                                    "value": "1J"
-                                  },
-                                  "region": {
-                                    "value": "Asia"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "C264T",
-                                      "C780T",
-                                      "T834C",
-                                      "G972C",
-                                      "C978T",
-                                      "C1158T"
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "name": "NODE_0000014",
-                            "node_attrs": {
-                              "div": 0.036123,
-                              "clade_membership": {
-                                "value": "unassigned"
-                              }
-                            },
-                            "branch_attrs": {
-                              "mutations": {
-                                "nuc": [
-                                  "C222T",
-                                  "C1047T"
-                                ]
-                              }
-                            },
-                            "children": [
-                              {
-                                "name": "NODE_0000015",
-                                "node_attrs": {
-                                  "div": 0.0390298,
-                                  "clade_membership": {
-                                    "value": "1D"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "T184C",
-                                      "T714C",
-                                      "C998T",
-                                      "T1059C",
-                                      "T1329C"
-                                    ],
-                                    "E1": [
-                                      "A333V"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "aa": "E1: A333V",
-                                    "clade": "1D"
-                                  }
-                                },
-                                "children": [
-                                  {
-                                    "name": "AY968214",
-                                    "node_attrs": {
-                                      "div": 0.0530947,
-                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968214",
-                                      "accession": "AY968214",
-                                      "author": {
-                                        "author": "Icenogle et al.",
-                                        "value": "Icenogle et al."
-                                      },
-                                      "clade_membership": {
-                                        "value": "1D"
-                                      }
-                                    },
-                                    "branch_attrs": {
-                                      "mutations": {
-                                        "nuc": [
-                                          "C12T",
-                                          "G87A",
-                                          "T138C",
-                                          "C144T",
-                                          "G156T",
-                                          "C192T",
-                                          "T312C",
-                                          "C524T",
-                                          "T540C",
-                                          "G645A",
-                                          "C717T",
-                                          "T720C",
-                                          "G885C",
-                                          "C978T",
-                                          "C1131T",
-                                          "C1248T",
-                                          "T1293C",
-                                          "C1354T",
-                                          "C1362T",
-                                          "C1380T"
-                                        ],
-                                        "E1": [
-                                          "E52D",
-                                          "S175L"
-                                        ]
-                                      },
-                                      "labels": {
-                                        "aa": "E1: E52D, S175L"
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "name": "AY968216",
-                                    "node_attrs": {
-                                      "div": 0.0582653,
-                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968216",
-                                      "accession": "AY968216",
-                                      "author": {
-                                        "author": "Icenogle et al.",
-                                        "value": "Icenogle et al."
-                                      },
-                                      "clade_membership": {
-                                        "value": "1D"
-                                      }
-                                    },
-                                    "branch_attrs": {
-                                      "mutations": {
-                                        "nuc": [
-                                          "T45C",
-                                          "T72G",
-                                          "T300C",
-                                          "T357C",
-                                          "C375T",
-                                          "T480C",
-                                          "G522A",
-                                          "G564A",
-                                          "A570C",
-                                          "C633T",
-                                          "T639C",
-                                          "T672C",
-                                          "T678C",
-                                          "T879C",
-                                          "A882G",
-                                          "C903T",
-                                          "G915A",
-                                          "A984G",
-                                          "G1009A",
-                                          "C1056T",
-                                          "G1092C",
-                                          "T1107C",
-                                          "C1350T",
-                                          "G1360A",
-                                          "G1413A",
-                                          "A1434T"
-                                        ],
-                                        "E1": [
-                                          "A337T",
-                                          "A454T"
-                                        ]
-                                      },
-                                      "labels": {
-                                        "aa": "E1: A337T, A454T"
-                                      }
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "name": "NODE_0000016",
-                                "node_attrs": {
-                                  "div": 0.0448719,
-                                  "clade_membership": {
-                                    "value": "1E"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "T45G",
-                                      "C318T",
-                                      "A360G",
-                                      "T363C",
-                                      "C411T",
-                                      "C531T",
-                                      "T678C",
-                                      "A708G",
-                                      "G975A",
-                                      "A984C",
-                                      "T1290C",
-                                      "T1293C",
-                                      "C1380T"
-                                    ]
-                                  },
-                                  "labels": {
-                                    "clade": "1E"
-                                  }
-                                },
-                                "children": [
-                                  {
-                                    "name": "AY968221",
-                                    "node_attrs": {
-                                      "div": 0.0560123,
-                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968221",
-                                      "accession": "AY968221",
-                                      "author": {
-                                        "author": "Icenogle et al.",
-                                        "value": "Icenogle et al."
-                                      },
-                                      "clade_membership": {
-                                        "value": "1E"
-                                      }
-                                    },
-                                    "branch_attrs": {
-                                      "mutations": {
-                                        "nuc": [
-                                          "T114C",
-                                          "C192T",
-                                          "A198G",
-                                          "G291A",
-                                          "T298A",
-                                          "C339T",
-                                          "C399T",
-                                          "T735C",
-                                          "C790T",
-                                          "G885C",
-                                          "A1005G",
-                                          "T1059C",
-                                          "T1119C",
-                                          "G1257T",
-                                          "T1329A",
-                                          "T1338C"
-                                        ],
-                                        "E1": [
-                                          "S100T"
-                                        ]
-                                      },
-                                      "labels": {
-                                        "aa": "E1: S100T"
-                                      }
-                                    }
-                                  },
-                                  {
-                                    "name": "AY968210",
-                                    "node_attrs": {
-                                      "div": 0.0614943,
-                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968210",
-                                      "accession": "AY968210",
-                                      "author": {
-                                        "author": "Icenogle et al.",
-                                        "value": "Icenogle et al."
-                                      },
-                                      "clade_membership": {
-                                        "value": "1E"
-                                      }
-                                    },
-                                    "branch_attrs": {
-                                      "mutations": {
-                                        "nuc": [
-                                          "T9C",
-                                          "C12T",
-                                          "G70A",
-                                          "T72C",
-                                          "C252T",
-                                          "T312C",
-                                          "C366A",
-                                          "A372G",
-                                          "T480C",
-                                          "G549A",
-                                          "G579A",
-                                          "G615A",
-                                          "T621C",
-                                          "C660T",
-                                          "G765C",
-                                          "A864G",
-                                          "C903T",
-                                          "A1014C",
-                                          "G1017A",
-                                          "C1113T",
-                                          "C1128T",
-                                          "T1365C",
-                                          "T1387C"
-                                        ],
-                                        "E1": [
-                                          "A24T",
-                                          "L338F"
-                                        ]
-                                      },
-                                      "labels": {
-                                        "aa": "E1: A24T, L338F"
-                                      }
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "NODE_0000017",
-                "node_attrs": {
-                  "div": 0.0271813,
-                  "clade_membership": {
-                    "value": "unassigned"
-                  }
-                },
-                "branch_attrs": {
-                  "mutations": {
-                    "nuc": [
-                      "G525A"
-                    ]
-                  }
-                },
-                "children": [
-                  {
-                    "name": "NODE_0000018",
-                    "node_attrs": {
-                      "div": 0.0415808,
+                      "div": 0.0419016,
                       "clade_membership": {
                         "value": "1F"
                       }
@@ -1636,11 +1130,11 @@
                           "C183T",
                           "T435C",
                           "C507T",
+                          "G525A",
                           "C696T",
                           "C936T",
                           "A1005G",
                           "C1050T",
-                          "A1095G",
                           "C1113T",
                           "T1119C",
                           "T1218C",
@@ -1659,7 +1153,7 @@
                       {
                         "name": "AY968215",
                         "node_attrs": {
-                          "div": 0.0560991,
+                          "div": 0.0566476,
                           "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968215",
                           "accession": "AY968215",
                           "author": {
@@ -1707,7 +1201,7 @@
                       {
                         "name": "AY968213",
                         "node_attrs": {
-                          "div": 0.0586983,
+                          "div": 0.0588245,
                           "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968213",
                           "accession": "AY968213",
                           "author": {
@@ -1759,9 +1253,9 @@
                     ]
                   },
                   {
-                    "name": "NODE_0000019",
+                    "name": "NODE_0000012",
                     "node_attrs": {
-                      "div": 0.0282356,
+                      "div": 0.0345301,
                       "clade_membership": {
                         "value": "unassigned"
                       }
@@ -1769,22 +1263,799 @@
                     "branch_attrs": {
                       "mutations": {
                         "nuc": [
-                          "A49G",
-                          "T897C"
+                          "C24T",
+                          "T168C",
+                          "T228C",
+                          "C279T",
+                          "C342T",
+                          "C705T",
+                          "G996T",
+                          "G1098C",
+                          "C1236T",
+                          "G1369A"
                         ],
                         "E1": [
-                          "T17A"
+                          "A457T"
                         ]
                       },
                       "labels": {
-                        "aa": "E1: T17A"
+                        "aa": "E1: A457T"
                       }
                     },
                     "children": [
                       {
-                        "name": "NODE_0000020",
+                        "name": "NODE_0000013",
                         "node_attrs": {
-                          "div": 0.0384998,
+                          "div": 0.0487359,
+                          "clade_membership": {
+                            "value": "1J"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C105T",
+                              "T165C",
+                              "G243A",
+                              "C252T",
+                              "A372G",
+                              "A504G",
+                              "T540C",
+                              "G603A",
+                              "T621C",
+                              "C774T",
+                              "C777T",
+                              "T879C",
+                              "A882G",
+                              "T897C",
+                              "C927T",
+                              "C999G",
+                              "G1002A",
+                              "T1260C",
+                              "T1332C",
+                              "C1362T"
+                            ]
+                          },
+                          "labels": {
+                            "clade": "1J"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "AB285130",
+                            "node_attrs": {
+                              "div": 0.0543773,
+                              "strain": {
+                                "value": "RVi/Miyazaki.JPN/10.01CRS"
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/AB285130",
+                              "accession": "AB285130",
+                              "author": {
+                                "author": "Umino et al.",
+                                "value": "Umino et al."
+                              },
+                              "clade_membership": {
+                                "value": "1J"
+                              },
+                              "country": {
+                                "value": "Japan"
+                              },
+                              "region": {
+                                "value": "Asia"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C78G",
+                                  "C261T",
+                                  "T435C",
+                                  "C477T",
+                                  "T821A",
+                                  "T1035C",
+                                  "T1329C",
+                                  "C1392T"
+                                ],
+                                "E1": [
+                                  "V274E"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "E1: V274E"
+                              }
+                            }
+                          },
+                          {
+                            "name": "AB285129",
+                            "node_attrs": {
+                              "div": 0.0528814,
+                              "strain": {
+                                "value": "RVi/Kagoshima.JPN/22.04"
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/AB285129",
+                              "accession": "AB285129",
+                              "author": {
+                                "author": "Umino et al.",
+                                "value": "Umino et al."
+                              },
+                              "clade_membership": {
+                                "value": "1J"
+                              },
+                              "country": {
+                                "value": "Japan"
+                              },
+                              "region": {
+                                "value": "Asia"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C264T",
+                                  "C780T",
+                                  "T834C",
+                                  "G972C",
+                                  "C978T",
+                                  "C1158T"
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NODE_0000014",
+                        "node_attrs": {
+                          "div": 0.036465,
+                          "clade_membership": {
+                            "value": "unassigned"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C222T",
+                              "C1047T"
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "NODE_0000015",
+                            "node_attrs": {
+                              "div": 0.0393692,
+                              "clade_membership": {
+                                "value": "1D"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T184C",
+                                  "T714C",
+                                  "C998T",
+                                  "T1059C",
+                                  "T1329C"
+                                ],
+                                "E1": [
+                                  "A333V"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "E1: A333V",
+                                "clade": "1D"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "AY968216",
+                                "node_attrs": {
+                                  "div": 0.0588107,
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968216",
+                                  "accession": "AY968216",
+                                  "author": {
+                                    "author": "Icenogle et al.",
+                                    "value": "Icenogle et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1D"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T45C",
+                                      "T72G",
+                                      "T300C",
+                                      "T357C",
+                                      "C375T",
+                                      "T480C",
+                                      "G522A",
+                                      "G564A",
+                                      "A570C",
+                                      "C633T",
+                                      "T639C",
+                                      "T672C",
+                                      "T678C",
+                                      "T879C",
+                                      "A882G",
+                                      "C903T",
+                                      "G915A",
+                                      "A984G",
+                                      "G1009A",
+                                      "C1056T",
+                                      "G1092C",
+                                      "T1107C",
+                                      "C1350T",
+                                      "G1360A",
+                                      "G1413A",
+                                      "A1434T"
+                                    ],
+                                    "E1": [
+                                      "A337T",
+                                      "A454T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "E1: A337T, A454T"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "AY968214",
+                                "node_attrs": {
+                                  "div": 0.0532647,
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968214",
+                                  "accession": "AY968214",
+                                  "author": {
+                                    "author": "Icenogle et al.",
+                                    "value": "Icenogle et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1D"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C12T",
+                                      "G87A",
+                                      "T138C",
+                                      "C144T",
+                                      "G156T",
+                                      "C192T",
+                                      "T312C",
+                                      "C524T",
+                                      "T540C",
+                                      "G645A",
+                                      "C717T",
+                                      "T720C",
+                                      "G885C",
+                                      "C978T",
+                                      "C1131T",
+                                      "C1248T",
+                                      "T1293C",
+                                      "C1354T",
+                                      "C1362T",
+                                      "C1380T"
+                                    ],
+                                    "E1": [
+                                      "E52D",
+                                      "S175L"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "E1: E52D, S175L"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NODE_0000016",
+                            "node_attrs": {
+                              "div": 0.0453454,
+                              "clade_membership": {
+                                "value": "1E"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T45G",
+                                  "C318T",
+                                  "A360G",
+                                  "T363C",
+                                  "C411T",
+                                  "C531T",
+                                  "T678C",
+                                  "A708G",
+                                  "G975A",
+                                  "A984C",
+                                  "T1290C",
+                                  "T1293C",
+                                  "C1380T"
+                                ]
+                              },
+                              "labels": {
+                                "clade": "1E"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "AY968221",
+                                "node_attrs": {
+                                  "div": 0.0564966,
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968221",
+                                  "accession": "AY968221",
+                                  "author": {
+                                    "author": "Icenogle et al.",
+                                    "value": "Icenogle et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1E"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T114C",
+                                      "C192T",
+                                      "A198G",
+                                      "G291A",
+                                      "T298A",
+                                      "C339T",
+                                      "C399T",
+                                      "T735C",
+                                      "C790T",
+                                      "G885C",
+                                      "A1005G",
+                                      "T1059C",
+                                      "T1119C",
+                                      "G1257T",
+                                      "T1329A",
+                                      "T1338C"
+                                    ],
+                                    "E1": [
+                                      "S100T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "E1: S100T"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "AY968210",
+                                "node_attrs": {
+                                  "div": 0.0619975,
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968210",
+                                  "accession": "AY968210",
+                                  "author": {
+                                    "author": "Icenogle et al.",
+                                    "value": "Icenogle et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1E"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T9C",
+                                      "C12T",
+                                      "G70A",
+                                      "T72C",
+                                      "C252T",
+                                      "T312C",
+                                      "C366A",
+                                      "A372G",
+                                      "T480C",
+                                      "G549A",
+                                      "G579A",
+                                      "G615A",
+                                      "T621C",
+                                      "C660T",
+                                      "G765C",
+                                      "A864G",
+                                      "C903T",
+                                      "A1014C",
+                                      "G1017A",
+                                      "C1113T",
+                                      "C1128T",
+                                      "T1365C",
+                                      "T1387C"
+                                    ],
+                                    "E1": [
+                                      "A24T",
+                                      "L338F"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "E1: A24T, L338F"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "NODE_0000017",
+                "node_attrs": {
+                  "div": 0.0271588,
+                  "clade_membership": {
+                    "value": "unassigned"
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "A49G"
+                    ],
+                    "E1": [
+                      "T17A"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "E1: T17A"
+                  }
+                },
+                "children": [
+                  {
+                    "name": "NODE_0000018",
+                    "node_attrs": {
+                      "div": 0.0313337,
+                      "clade_membership": {
+                        "value": "1a(VAX)"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C342T",
+                          "C516T",
+                          "T627C",
+                          "T628C",
+                          "C744T",
+                          "C1128T"
+                        ],
+                        "E1": [
+                          "Y210H"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "E1: Y210H",
+                        "clade": "1a(VAX)"
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "JF727653",
+                        "node_attrs": {
+                          "div": 0.0313364,
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/JF727653",
+                          "accession": "JF727653",
+                          "author": {
+                            "author": "Sidorenko et al.",
+                            "value": "Sidorenko et al."
+                          },
+                          "clade_membership": {
+                            "value": "1a(VAX)"
+                          },
+                          "country": {
+                            "value": "Russia"
+                          },
+                          "region": {
+                            "value": "Europe"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        }
+                      },
+                      {
+                        "name": "NODE_0000019",
+                        "node_attrs": {
+                          "div": 0.0336186,
+                          "clade_membership": {
+                            "value": "1a(VAX)"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C71T",
+                              "C369T",
+                              "C837T"
+                            ],
+                            "E1": [
+                              "A24V"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "E1: A24V"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "OQ296622",
+                            "node_attrs": {
+                              "div": 0.0688812,
+                              "strain": {
+                                "value": "RVs/GreenBay.WI.USA/44.19[1a]"
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OQ296622",
+                              "accession": "OQ296622",
+                              "author": {
+                                "author": "Wanat et al.",
+                                "value": "Wanat et al."
+                              },
+                              "clade_membership": {
+                                "value": "1a(VAX)"
+                              },
+                              "country": {
+                                "value": "USA"
+                              },
+                              "region": {
+                                "value": "North America"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T9G",
+                                  "C81T",
+                                  "T84C",
+                                  "T96C",
+                                  "G174T",
+                                  "C201T",
+                                  "A202G",
+                                  "G243A",
+                                  "T276C",
+                                  "G313A",
+                                  "C321T",
+                                  "C327T",
+                                  "C426T",
+                                  "T432C",
+                                  "C507T",
+                                  "T516C",
+                                  "C531T",
+                                  "C534T",
+                                  "C546T",
+                                  "G586A",
+                                  "C588G",
+                                  "C600T",
+                                  "T621C",
+                                  "G651T",
+                                  "C717T",
+                                  "C783T",
+                                  "T807C",
+                                  "G835A",
+                                  "C900T",
+                                  "C903T",
+                                  "C936T",
+                                  "A954G",
+                                  "G997A",
+                                  "A1014G",
+                                  "C1062T",
+                                  "C1069A",
+                                  "A1077T",
+                                  "C1081T",
+                                  "C1170T",
+                                  "C1197T",
+                                  "G1233A",
+                                  "T1260C",
+                                  "C1287T",
+                                  "G1308C",
+                                  "C1336T",
+                                  "T1383C",
+                                  "T1387C",
+                                  "C1392T",
+                                  "T1420C"
+                                ],
+                                "E1": [
+                                  "T68A",
+                                  "G105S",
+                                  "V196M",
+                                  "V279I",
+                                  "A333T",
+                                  "L357M",
+                                  "E359D",
+                                  "L361F",
+                                  "H446Y"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "E1: T68A, G105S, V196M, V279I, A333T, L357M, E359D, L361F, H446Y"
+                              }
+                            }
+                          },
+                          {
+                            "name": "NODE_0000020",
+                            "node_attrs": {
+                              "div": 0.0345744,
+                              "clade_membership": {
+                                "value": "1a(VAX)"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T250C",
+                                  "C1008T"
+                                ],
+                                "E1": [
+                                  "F84L"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "E1: F84L"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "MK787190",
+                                "node_attrs": {
+                                  "div": 0.0462119,
+                                  "strain": {
+                                    "value": "RVi/Oregon.USA/05.18[1a]"
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK787190",
+                                  "accession": "MK787190",
+                                  "author": {
+                                    "author": "Perelygina et al.",
+                                    "value": "Perelygina et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1a(VAX)"
+                                  },
+                                  "country": {
+                                    "value": "USA"
+                                  },
+                                  "region": {
+                                    "value": "North America"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C147T",
+                                      "T150G",
+                                      "C252T",
+                                      "C405T",
+                                      "C524T",
+                                      "A543G",
+                                      "C769T",
+                                      "C780T",
+                                      "T807C",
+                                      "C945T",
+                                      "T1059C",
+                                      "T1083C",
+                                      "A1095G",
+                                      "C1110T",
+                                      "G1299T",
+                                      "C1362T"
+                                    ],
+                                    "E1": [
+                                      "I50M",
+                                      "S175L"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "E1: I50M, S175L"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "KU958641",
+                                "node_attrs": {
+                                  "div": 0.0604546,
+                                  "strain": {
+                                    "value": "RVs/Oulu.FIN/22.15/PID[1a]"
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/KU958641",
+                                  "accession": "KU958641",
+                                  "author": {
+                                    "author": "Perelygina et al.",
+                                    "value": "Perelygina et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1a(VAX)"
+                                  },
+                                  "country": {
+                                    "value": "Finland"
+                                  },
+                                  "region": {
+                                    "value": "Europe"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C42T",
+                                      "C60T",
+                                      "C69T",
+                                      "T170C",
+                                      "C201A",
+                                      "C208T",
+                                      "C222T",
+                                      "C261T",
+                                      "T283C",
+                                      "G333A",
+                                      "C345T",
+                                      "C510T",
+                                      "C528T",
+                                      "C531T",
+                                      "C537T",
+                                      "C628T",
+                                      "C675T",
+                                      "A750G",
+                                      "G810C",
+                                      "T839C",
+                                      "G858A",
+                                      "C867T",
+                                      "C903T",
+                                      "C939T",
+                                      "C978T",
+                                      "G985A",
+                                      "C1155T",
+                                      "C1215T",
+                                      "C1243T",
+                                      "C1286T",
+                                      "C1309G",
+                                      "C1319T",
+                                      "G1330A",
+                                      "G1333T",
+                                      "G1347A",
+                                      "C1350G"
+                                    ],
+                                    "E1": [
+                                      "V57A",
+                                      "P70S",
+                                      "Y95H",
+                                      "H210Y",
+                                      "I280T",
+                                      "V329I",
+                                      "P415S",
+                                      "T429I",
+                                      "Q437E",
+                                      "A440V",
+                                      "A444T",
+                                      "A445S"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "E1: V57A, P70S, Y95H, H210Y, I280T, V329I, P415S, T429I, Q437E, A440V, A444T, A445S"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "NODE_0000021",
+                    "node_attrs": {
+                      "div": 0.0271609,
+                      "clade_membership": {
+                        "value": "unassigned"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    },
+                    "children": [
+                      {
+                        "name": "NODE_0000022",
+                        "node_attrs": {
+                          "div": 0.0374111,
                           "clade_membership": {
                             "value": "1C"
                           }
@@ -1797,7 +2068,7 @@
                               "T300C",
                               "T363C",
                               "T480C",
-                              "A525T",
+                              "G525T",
                               "G609C",
                               "T714C",
                               "G738C",
@@ -1817,7 +2088,7 @@
                           {
                             "name": "AY968217",
                             "node_attrs": {
-                              "div": 0.0575359,
+                              "div": 0.0558403,
                               "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968217",
                               "accession": "AY968217",
                               "author": {
@@ -1849,7 +2120,6 @@
                                   "G810A",
                                   "G831C",
                                   "G885C",
-                                  "C897T",
                                   "G996C",
                                   "T1035C",
                                   "T1059C",
@@ -1862,9 +2132,9 @@
                             }
                           },
                           {
-                            "name": "NODE_0000021",
+                            "name": "NODE_0000023",
                             "node_attrs": {
-                              "div": 0.0413962,
+                              "div": 0.0409289,
                               "clade_membership": {
                                 "value": "1C"
                               }
@@ -1874,6 +2144,7 @@
                                 "nuc": [
                                   "G669T",
                                   "C798T",
+                                  "T897C",
                                   "C1155T",
                                   "C1362T"
                                 ]
@@ -1881,9 +2152,35 @@
                             },
                             "children": [
                               {
+                                "name": "AY968212",
+                                "node_attrs": {
+                                  "div": 0.0450464,
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968212",
+                                  "accession": "AY968212",
+                                  "author": {
+                                    "author": "Icenogle et al.",
+                                    "value": "Icenogle et al."
+                                  },
+                                  "clade_membership": {
+                                    "value": "1C"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T228C",
+                                      "T432C",
+                                      "T540C",
+                                      "C774G",
+                                      "C1116T"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
                                 "name": "AY968211",
                                 "node_attrs": {
-                                  "div": 0.0650926,
+                                  "div": 0.0646968,
                                   "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968211",
                                   "accession": "AY968211",
                                   "author": {
@@ -1941,41 +2238,15 @@
                                     "aa": "E1: A17T, V57I"
                                   }
                                 }
-                              },
-                              {
-                                "name": "AY968212",
-                                "node_attrs": {
-                                  "div": 0.0455192,
-                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968212",
-                                  "accession": "AY968212",
-                                  "author": {
-                                    "author": "Icenogle et al.",
-                                    "value": "Icenogle et al."
-                                  },
-                                  "clade_membership": {
-                                    "value": "1C"
-                                  }
-                                },
-                                "branch_attrs": {
-                                  "mutations": {
-                                    "nuc": [
-                                      "T228C",
-                                      "T432C",
-                                      "T540C",
-                                      "C774G",
-                                      "C1116T"
-                                    ]
-                                  }
-                                }
                               }
                             ]
                           }
                         ]
                       },
                       {
-                        "name": "NODE_0000022",
+                        "name": "NODE_0000024",
                         "node_attrs": {
-                          "div": 0.0298144,
+                          "div": 0.0299373,
                           "clade_membership": {
                             "value": "unassigned"
                           }
@@ -1984,15 +2255,17 @@
                           "mutations": {
                             "nuc": [
                               "A48G",
-                              "T621C"
+                              "G525A",
+                              "T621C",
+                              "T897C"
                             ]
                           }
                         },
                         "children": [
                           {
-                            "name": "NODE_0000023",
+                            "name": "NODE_0000025",
                             "node_attrs": {
-                              "div": 0.0305181,
+                              "div": 0.0306573,
                               "clade_membership": {
                                 "value": "1B"
                               }
@@ -2011,7 +2284,7 @@
                               {
                                 "name": "AY968207",
                                 "node_attrs": {
-                                  "div": 0.0361627,
+                                  "div": 0.0362852,
                                   "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968207",
                                   "accession": "AY968207",
                                   "author": {
@@ -2044,9 +2317,9 @@
                                 }
                               },
                               {
-                                "name": "NODE_0000024",
+                                "name": "NODE_0000026",
                                 "node_attrs": {
-                                  "div": 0.0324629,
+                                  "div": 0.0326223,
                                   "clade_membership": {
                                     "value": "1B"
                                   }
@@ -2062,52 +2335,9 @@
                                 },
                                 "children": [
                                   {
-                                    "name": "AY968208",
-                                    "node_attrs": {
-                                      "div": 0.0440277,
-                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968208",
-                                      "accession": "AY968208",
-                                      "author": {
-                                        "author": "Icenogle et al.",
-                                        "value": "Icenogle et al."
-                                      },
-                                      "clade_membership": {
-                                        "value": "1B"
-                                      }
-                                    },
-                                    "branch_attrs": {
-                                      "mutations": {
-                                        "nuc": [
-                                          "G99A",
-                                          "T184C",
-                                          "A198G",
-                                          "C222T",
-                                          "T276C",
-                                          "T435C",
-                                          "T639C",
-                                          "T687C",
-                                          "C744G",
-                                          "G885C",
-                                          "T987C",
-                                          "C1041T",
-                                          "A1095G",
-                                          "T1107C",
-                                          "C1110T",
-                                          "T1376C"
-                                        ],
-                                        "E1": [
-                                          "L459P"
-                                        ]
-                                      },
-                                      "labels": {
-                                        "aa": "E1: L459P"
-                                      }
-                                    }
-                                  },
-                                  {
                                     "name": "AY968209",
                                     "node_attrs": {
-                                      "div": 0.0509842,
+                                      "div": 0.0511547,
                                       "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968209",
                                       "accession": "AY968209",
                                       "author": {
@@ -2150,15 +2380,58 @@
                                         ]
                                       }
                                     }
+                                  },
+                                  {
+                                    "name": "AY968208",
+                                    "node_attrs": {
+                                      "div": 0.044203,
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY968208",
+                                      "accession": "AY968208",
+                                      "author": {
+                                        "author": "Icenogle et al.",
+                                        "value": "Icenogle et al."
+                                      },
+                                      "clade_membership": {
+                                        "value": "1B"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G99A",
+                                          "T184C",
+                                          "A198G",
+                                          "C222T",
+                                          "T276C",
+                                          "T435C",
+                                          "T639C",
+                                          "T687C",
+                                          "C744G",
+                                          "G885C",
+                                          "T987C",
+                                          "C1041T",
+                                          "A1095G",
+                                          "T1107C",
+                                          "C1110T",
+                                          "T1376C"
+                                        ],
+                                        "E1": [
+                                          "L459P"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "E1: L459P"
+                                      }
+                                    }
                                   }
                                 ]
                               }
                             ]
                           },
                           {
-                            "name": "NODE_0000025",
+                            "name": "NODE_0000027",
                             "node_attrs": {
-                              "div": 0.0378472,
+                              "div": 0.0379721,
                               "clade_membership": {
                                 "value": "unassigned"
                               }
@@ -2188,9 +2461,9 @@
                             },
                             "children": [
                               {
-                                "name": "NODE_0000026",
+                                "name": "NODE_0000028",
                                 "node_attrs": {
-                                  "div": 0.039038,
+                                  "div": 0.0391684,
                                   "clade_membership": {
                                     "value": "1I"
                                   }
@@ -2210,7 +2483,7 @@
                                   {
                                     "name": "AY161360",
                                     "node_attrs": {
-                                      "div": 0.0496272,
+                                      "div": 0.0497358,
                                       "url": "https://www.ncbi.nlm.nih.gov/nuccore/AY161360",
                                       "accession": "AY161360",
                                       "author": {
@@ -2246,7 +2519,7 @@
                                   {
                                     "name": "AF039122",
                                     "node_attrs": {
-                                      "div": 0.0438299,
+                                      "div": 0.0440371,
                                       "url": "https://www.ncbi.nlm.nih.gov/nuccore/AF039122",
                                       "accession": "AF039122",
                                       "author": {
@@ -2272,9 +2545,9 @@
                                 ]
                               },
                               {
-                                "name": "NODE_0000027",
+                                "name": "NODE_0000029",
                                 "node_attrs": {
-                                  "div": 0.0448285,
+                                  "div": 0.044919,
                                   "clade_membership": {
                                     "value": "unassigned"
                                   }
@@ -2297,9 +2570,9 @@
                                 },
                                 "children": [
                                   {
-                                    "name": "NODE_0000028",
+                                    "name": "NODE_0000030",
                                     "node_attrs": {
-                                      "div": 0.062237,
+                                      "div": 0.0623525,
                                       "clade_membership": {
                                         "value": "1H"
                                       }
@@ -2341,7 +2614,7 @@
                                       {
                                         "name": "HG326276",
                                         "node_attrs": {
-                                          "div": 0.0643147,
+                                          "div": 0.0644328,
                                           "strain": {
                                             "value": "RVi/Ryazan.RUS/09.08"
                                           },
@@ -2351,11 +2624,11 @@
                                             "author": "Charpentier et al.",
                                             "value": "Charpentier et al."
                                           },
-                                          "country": {
-                                            "value": "Russia"
-                                          },
                                           "clade_membership": {
                                             "value": "1H"
+                                          },
+                                          "country": {
+                                            "value": "Russia"
                                           },
                                           "region": {
                                             "value": "Europe"
@@ -2380,7 +2653,7 @@
                                       {
                                         "name": "AM258953",
                                         "node_attrs": {
-                                          "div": 0.0657774,
+                                          "div": 0.0658978,
                                           "strain": {
                                             "value": "RVi/Minsk.BLR/28.05/2"
                                           },
@@ -2390,11 +2663,11 @@
                                             "author": "Hubschen et al.",
                                             "value": "Hubschen et al."
                                           },
-                                          "country": {
-                                            "value": "Belarus"
-                                          },
                                           "clade_membership": {
                                             "value": "1H"
+                                          },
+                                          "country": {
+                                            "value": "Belarus"
                                           },
                                           "region": {
                                             "value": "Europe"
@@ -2415,9 +2688,9 @@
                                     ]
                                   },
                                   {
-                                    "name": "NODE_0000029",
+                                    "name": "NODE_0000031",
                                     "node_attrs": {
-                                      "div": 0.0524918,
+                                      "div": 0.0525972,
                                       "clade_membership": {
                                         "value": "1G"
                                       }
@@ -2447,7 +2720,7 @@
                                       {
                                         "name": "EF588978",
                                         "node_attrs": {
-                                          "div": 0.0621201,
+                                          "div": 0.0622442,
                                           "strain": {
                                             "value": "RVi/UGA/20.01"
                                           },
@@ -2457,11 +2730,11 @@
                                             "author": "Caidi et al.",
                                             "value": "Caidi et al."
                                           },
-                                          "country": {
-                                            "value": "Uganda"
-                                          },
                                           "clade_membership": {
                                             "value": "1G"
+                                          },
+                                          "country": {
+                                            "value": "Uganda"
                                           },
                                           "region": {
                                             "value": "Africa"
@@ -2487,9 +2760,9 @@
                                         }
                                       },
                                       {
-                                        "name": "NODE_0000030",
+                                        "name": "NODE_0000032",
                                         "node_attrs": {
-                                          "div": 0.0646849,
+                                          "div": 0.0647983,
                                           "clade_membership": {
                                             "value": "1G"
                                           }
@@ -2521,7 +2794,7 @@
                                           {
                                             "name": "EF588970",
                                             "node_attrs": {
-                                              "div": 0.0715388,
+                                              "div": 0.0716628,
                                               "strain": {
                                                 "value": "RVi/Ontario.CAN/05"
                                               },
@@ -2531,11 +2804,11 @@
                                                 "author": "Hahne et al.",
                                                 "value": "Hahne et al."
                                               },
-                                              "country": {
-                                                "value": "Canada"
-                                              },
                                               "clade_membership": {
                                                 "value": "1G"
+                                              },
+                                              "country": {
+                                                "value": "Canada"
                                               },
                                               "region": {
                                                 "value": "North America"
@@ -2560,7 +2833,7 @@
                                           {
                                             "name": "AM258945",
                                             "node_attrs": {
-                                              "div": 0.0697597,
+                                              "div": 0.069878,
                                               "strain": {
                                                 "value": "RVi/Minsk.BLR/29.04/1"
                                               },
@@ -2570,11 +2843,11 @@
                                                 "author": "Hubschen et al.",
                                                 "value": "Hubschen et al."
                                               },
-                                              "country": {
-                                                "value": "Belarus"
-                                              },
                                               "clade_membership": {
                                                 "value": "1G"
+                                              },
+                                              "country": {
+                                                "value": "Belarus"
                                               },
                                               "region": {
                                                 "value": "Europe"
