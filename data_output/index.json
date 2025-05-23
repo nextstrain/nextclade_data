@@ -3670,7 +3670,7 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 14,
+            "clades": 15,
             "qc": [
               "missingData",
               "mixedSites",
