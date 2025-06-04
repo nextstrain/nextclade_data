@@ -1,0 +1,8 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_001489.1 1 7478
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=12092
+NC_001489.1	RefSeq	region	1	349	.	+	.	ID=NC_001489.1:2919..3267;Dbxref=taxon:12092;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Hepatitis A virus
+NC_001489.1	RefSeq	CDS	1	189	.	+	.	ID=gene-HAVgp2:490..789;gbkey=Prot;Name=truncatedVP1;product=1D VP1 mature peptide;protein_id=NP_740552.1
+NC_001489.1	RefSeq	CDS	190	348	.	+	.	ID=gene-HAVgp2:790..978;Note=gene-HAVgp2 2A is removed from the VP1-2A protein by a postassembly proteolytic event that presumably involves a host proteinase such as FXa.;gbkey=Prot;Name=2A;product=2A mature peptide;protein_id=NP_740553.1

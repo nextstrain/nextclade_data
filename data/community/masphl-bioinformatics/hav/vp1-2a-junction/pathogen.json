@@ -1,13 +1,15 @@
 {
   "schemaVersion": "3.0.0",
   "alignmentParams": {
-    "minSeedCover": 0
+    "minSeedCover": 0.0,
+    "alignmentPreset": "high-diversity"
   },
   "files": {
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
     "treeJson": "tree.json",
     "examples": "example_sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
