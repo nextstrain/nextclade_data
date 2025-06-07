@@ -73,8 +73,8 @@
           "capabilities": {
             "clades": 53,
             "customClades": {
-              "Nextclade_pango": 3957,
-              "partiallyAliased": 3957,
+              "Nextclade_pango": 3996,
+              "partiallyAliased": 3996,
               "clade_nextstrain": 53,
               "clade_who": 13,
               "clade_display": 53
@@ -470,8 +470,8 @@
           "capabilities": {
             "clades": 30,
             "customClades": {
-              "Nextclade_pango": 3221,
-              "partiallyAliased": 3221,
+              "Nextclade_pango": 3260,
+              "partiallyAliased": 3260,
               "clade_nextstrain": 30,
               "clade_who": 3,
               "clade_display": 30
