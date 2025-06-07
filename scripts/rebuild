@@ -394,7 +394,9 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
     try:
       dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at)
       datasets.append(dataset)
-      refs.update({dataset["path"]: ref})
+      # exclude deprecated datasets from list of refs that is later used to build minimizer index
+      if not dataset['attributes'].get('deprecated', False):
+        refs.update({dataset["path"]: ref})
     except Exception as e:
       raise ValueError(f"When processing '{pathogen_json_path}'") from e
 
