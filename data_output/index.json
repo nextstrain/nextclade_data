@@ -278,13 +278,13 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 51,
+            "clades": 41,
             "customClades": {
-              "Nextclade_pango": 3652,
-              "partiallyAliased": 3652,
-              "clade_nextstrain": 51,
+              "Nextclade_pango": 2766,
+              "partiallyAliased": 2766,
+              "clade_nextstrain": 41,
               "clade_who": 13,
-              "clade_display": 51
+              "clade_display": 41
             },
             "qc": [
               "frameShifts",
