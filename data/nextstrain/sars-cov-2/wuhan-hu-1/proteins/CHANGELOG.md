@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-06-09T15:42:38Z
 
 - Add newly designated Nextstrain clade 25C (XFG)
 - Add labeled mutations for clades 25B (NB.1.8.1) and 25C (XFG) to help identify recombinants
