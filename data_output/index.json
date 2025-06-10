@@ -3651,6 +3651,381 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "nextstrain/sars-cov-2/BA.2",
+          "shortcuts": [
+            "sars-cov-2-21L"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "SARS-CoV-2 (BA.2)",
+            "reference name": "Wuhan-Hu-1 with BA.2 SNPs",
+            "deprecated": true
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 28,
+            "customClades": {
+              "Nextclade_pango": 2805,
+              "partiallyAliased": 2805,
+              "clade_nextstrain": 28,
+              "clade_who": 3,
+              "clade_display": 28
+            },
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-16T04:00:32Z",
+              "tag": "2024-02-16--04-00-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-05-05T13:15:29Z",
+            "tag": "2025-05-05--13-15-29Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/sars-cov-2/XBB",
+          "enabled": true,
+          "attributes": {
+            "name": "SARS-CoV-2 (XBB)",
+            "reference name": "Wuhan-Hu-1 with XBB SNPs",
+            "deprecated": true
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 28,
+            "customClades": {
+              "Nextclade_pango": 2805,
+              "partiallyAliased": 2805,
+              "clade_nextstrain": 28,
+              "clade_who": 3,
+              "clade_display": 28
+            },
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-16T04:00:32Z",
+              "tag": "2024-02-16--04-00-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-05-05T13:15:29Z",
+            "tag": "2025-05-05--13-15-29Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     },
