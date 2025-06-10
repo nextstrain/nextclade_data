@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-06-10T16:01:10Z
 
 Bring back the erroneously deleted BA.2 and XBB datasets, to preserve backwards compatibility. The datasets themselves are unchanged.
 
