@@ -32,7 +32,7 @@ If you already have a dataset for Nextclade v2 and want to upgrade it to Nextcla
 
 ### Obtaining source code of this repository
 
-We use GitHug pull requests to manage contributions to Nextclade datasets.
+We use GitHub pull requests to manage contributions to Nextclade datasets.
 
 In order to add or modify datasets you will need to have a local copy of the GitHub repository [`nextstrain/nextclade_data`](https://github.com/nextstrain/nextclade_data) on your computer, make the desired changes, commit & push the changes to a new git branch, and submit a pull request to [`nextstrain/nextclade_data`](https://github.com/nextstrain/nextclade_data). The pull request will be reviewed by Nextclade maintainers and considered for inclusion to the Nextclade dataset collection.
 
