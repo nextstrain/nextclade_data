@@ -15,7 +15,10 @@
   },
   "schemaVersion": "3.0.0",
   "alignmentParams": {
-    "minSeedCover": 0.01
+    "minSeedCover": 0.01,
+    "terminalBandwidth": 100,
+    "excessBandwith": 18,
+    "minMatchLength": 20
   },
   "qc": {
     "missingData": {
@@ -35,7 +38,7 @@
     },
     "privateMutations": {
       "enabled": true,
-      "cutoff": 12,
+      "cutoff": 45,
       "typical": 4,
       "weightLabeledSubstitutions": 1,
       "weightReversionSubstitutions": 1,
@@ -43,7 +46,7 @@
     },
     "snpClusters": {
       "enabled": true,
-      "clusterCutOff": 3,
+      "clusterCutOff": 10,
       "scoreWeight": 50,
       "windowSize": 50
     }
