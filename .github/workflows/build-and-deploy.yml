@@ -51,6 +51,9 @@ jobs:
 
           echo 'is_release=${{ github.ref == 'refs/heads/release' }}' >> $GITHUB_OUTPUT
 
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+
       - name: "DEBUG"
         run: |
           set +x
