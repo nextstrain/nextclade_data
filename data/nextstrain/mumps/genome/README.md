@@ -15,9 +15,9 @@ This dataset assigns genotypes (e.g. A to N) to Mumps samples based on [criteria
 
 Strains picked from a combination of the following papers:
 
-Jin et al 2005 - https://doi.org/10.1007/s00705-005-0563-4
-Jin et al 2015 - https://doi.org/10.1002/rmv.1819
-WHO 2012 - https://iris.who.int/bitstream/handle/10665/241922/WER8722_217-224.PDF
+* Jin et al 2005 - https://doi.org/10.1007/s00705-005-0563-4
+* Jin et al 2015 - https://doi.org/10.1002/rmv.1819
+* WHO 2012 - https://iris.who.int/bitstream/handle/10665/241922/WER8722_217-224.PDF
 
 ## Features
 
