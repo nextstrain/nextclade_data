@@ -3656,7 +3656,7 @@
           "path": "nextstrain/mumps/sh",
           "enabled": true,
           "attributes": {
-            "name": "Mumps virus global tree",
+            "name": "Mumps MuV Genotypes (SH gene 315nt region)",
             "reference name": "Jeryl-Lynn (genotype A)",
             "reference accession": "D90232"
           },
@@ -3696,7 +3696,7 @@
           "path": "nextstrain/mumps/genome",
           "enabled": true,
           "attributes": {
-            "name": "Mumps virus global tree",
+            "name": "Mumps MuV Genotypes (Full genome)",
             "reference name": "Jeryl-Lynn (genotype A)",
             "reference accession": "D90232"
           },
