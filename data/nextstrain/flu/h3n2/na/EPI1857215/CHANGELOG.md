@@ -1,3 +1,7 @@
+## Unreleased
+
+Add score summarizing resistance mutations.
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees
