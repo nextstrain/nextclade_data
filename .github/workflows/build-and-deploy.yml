@@ -2,10 +2,6 @@ name: build-and-deploy
 
 on:
   push:
-    branches:
-      - master
-      - staging
-      - release
   pull_request:
   repository_dispatch:
     types: build-and-deploy
@@ -30,13 +26,16 @@ jobs:
 
     runs-on: ubuntu-24.04
 
+    permissions:
+      contents: write
+
     environment:
       name: ${{ github.ref }}
 
     env:
       VERBOSE: 0
       PYTHONUNBUFFERED: 1
-      GH_TOKEN: ${{ github.token }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: config
@@ -47,6 +46,9 @@ jobs:
           echo 'should_deploy=${{ github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging' || github.ref == 'refs/heads/release' }}' >> $GITHUB_OUTPUT
 
           echo 'is_release=${{ github.ref == 'refs/heads/release' }}' >> $GITHUB_OUTPUT
+
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
 
       - name: "DEBUG"
         run: |
@@ -115,39 +117,12 @@ jobs:
       - name: "Rebuild, commit and push datasets (non-release branch)"
         if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.is_release != 'true' }}
         run: |
-          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
-          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
-
           ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --push --repo="${GITHUB_REPOSITORY}"
 
       - name: "Rebuild, commit, push and make a release (release branch)"
         if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.is_release == 'true' }}
         run: |
-          git config --global user.email "${{ secrets.BOT_GIT_USER_EMAIL }}"
-          git config --global user.name "${{ secrets.BOT_GIT_USER_NAME }}"
-
           ./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --release --repo="${GITHUB_REPOSITORY}"
-
-      - name: "Install awscli"
-        if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.should_deploy == 'true' }}
-        run: |
-          pushd /tmp >/dev/null
-            curl -fsSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-            unzip -oqq awscliv2.zip
-            sudo ./aws/install --update
-          popd >/dev/null
-          aws --version
-
-      - name: "Deploy dataset server"
-        if: ${{ steps.config.outputs.is_fork != 'true' && steps.config.outputs.should_deploy == 'true' }}
-        env:
-          DATA_AWS_S3_BUCKET: ${{ secrets.DATA_AWS_S3_BUCKET }}
-          DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.DATA_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: us-east-2
-        run: |
-          ./scripts/upload 'data_output/'
 
       - name: "Upload build artifacts: dataset server"
         uses: actions/upload-artifact@v4

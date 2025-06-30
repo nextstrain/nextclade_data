@@ -29,6 +29,10 @@
     "community/v-gen-lab/dengue/denv2",
     "community/v-gen-lab/dengue/denv3",
     "community/v-gen-lab/dengue/denv4",
-    "community/genspectrum/marburg/HK1980/all-lineages"
+    "community/genspectrum/marburg/HK1980/all-lineages",
+    "community/hodcroftlab/enterovirus/cva16",
+    "community/hodcroftlab/enterovirus/cva10",
+    "community/hodcroftlab/enterovirus/evd68",
+    "community/hodcroftlab/enterovirus/eva71"
   ]
 }
