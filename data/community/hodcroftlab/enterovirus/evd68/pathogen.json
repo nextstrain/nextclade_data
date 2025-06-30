@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Enterovirus D68",
+    "reference name": "Human enterovirus 68 strain Fermon, complete genome.",
+    "reference accession": "AY426531.1"
+  },
+  "alignmentParams": {
+    "penaltyGapOpen": 15,
+    "penaltyGapOpenInFrame": 20,
+    "penaltyGapOpenOutOfFrame": 25,
+    "kmerLength": 10,
+    "kmerDistance": 50,
+    "minMatchLength": 40,
+    "allowedMismatches": 8,
+    "minLength": 100
+  },
+  "defaultCds": "VP1",
+  "compatibility": {
+        "cli": "3.0.0-alpha.0",
+        "web": "3.0.0-alpha.0"
+    },
+  "qc": {
+    "frameShifts": {
+      "enabled": false
+    },
+    "missingData": {
+    "enabled": true,
+    "missingDataThreshold": 500,
+    "scoreBias": 1000
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 10
+    },
+    "privateMutations": {
+      "enabled": true,
+      "cutoff": 100,
+      "typical": 50,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 2
+    },
+    "divergence": {
+      "enabled": true,
+      "maxDivergence": 0.05,
+      "scoreWeight": 50
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 40
+    }
+    },
+  "cdsOrderPreference":["VP4", "VP2", "VP3", "VP1", "2A", "2B", "2C", "3A", "3B", "3C", "3D"]
+
+}
