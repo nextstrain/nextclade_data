@@ -1,3 +1,7 @@
+## Unreleased
+
+Automated update
+
 ## 2025-06-09T15:42:38Z
 
 - Add newly designated Nextstrain clade 25C (XFG)
