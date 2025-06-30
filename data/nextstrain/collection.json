@@ -63,6 +63,7 @@
     "nextstrain/flu/vic/np",
     "nextstrain/flu/vic/mp",
     "nextstrain/flu/vic/pb2",
-    "nextstrain/flu/vic/ns"
+    "nextstrain/flu/vic/ns",
+    "nextstrain/rubella/E1"
   ]
 }
