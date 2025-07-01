@@ -4893,7 +4893,36 @@
           }
         },
         {
-          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/evd68",
+          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/CV-A16",
+          "enabled": true,
+          "attributes": {
+            "name": "Coxsackievirus A16",
+            "reference name": "Coxsackievirus A16 G-10, complete genome.",
+            "reference accession": "U05876.1"
+          },
+          "files": {
+            "reference": "reference-CVA16.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree-CVA16.json",
+            "examples": "sequences-CVA16.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 7
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/EV-D68",
           "enabled": true,
           "attributes": {
             "name": "Enterovirus D68",
@@ -4922,7 +4951,7 @@
           }
         },
         {
-          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/cva10",
+          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/CV-A10",
           "enabled": true,
           "attributes": {
             "name": "Coxsackievirus A10",
@@ -4951,7 +4980,7 @@
           }
         },
         {
-          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/eva71",
+          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/EV-A71",
           "enabled": true,
           "attributes": {
             "name": "Enterovirus A71 virus",
@@ -4969,35 +4998,6 @@
           },
           "capabilities": {
             "clades": 18
-          },
-          "versions": [
-            {
-              "tag": "unreleased"
-            }
-          ],
-          "version": {
-            "tag": "unreleased"
-          }
-        },
-        {
-          "path": "community/hodcroftlab/enterovirus/enterovirus/linked/cva16",
-          "enabled": true,
-          "attributes": {
-            "name": "Coxsackievirus A16",
-            "reference name": "Coxsackievirus A16 G-10, complete genome.",
-            "reference accession": "U05876.1"
-          },
-          "files": {
-            "reference": "reference-CVA16.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree-CVA16.json",
-            "examples": "sequences-CVA16.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 7
           },
           "versions": [
             {
