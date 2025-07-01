@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference-CVA16.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree-CVA16.json",
+    "examples": "sequences-CVA16.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  }
+}

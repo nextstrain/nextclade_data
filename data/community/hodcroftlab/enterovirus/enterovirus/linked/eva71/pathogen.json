@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference-EVA71.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree-EVA71.json",
+    "examples": "sequences-EVA71.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  }
+}

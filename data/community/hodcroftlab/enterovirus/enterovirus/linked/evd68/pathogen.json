@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference-EVD68.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree-EVD68.json",
+    "examples": "sequences-EVD68.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  }
+}
