@@ -1,5 +1,10 @@
 {
   "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "Enterovirus D68",
+    "reference name": "Human enterovirus 68 strain Fermon, complete genome.",
+    "reference accession": "AY426531.1"
+  },
   "files": {
     "reference": "reference-EVD68.fasta",
     "pathogenJson": "pathogen.json",

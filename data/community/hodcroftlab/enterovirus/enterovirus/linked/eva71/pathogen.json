@@ -1,5 +1,9 @@
 {
   "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "Enterovirus A71 virus",
+    "reference name": "Human enterovirus 71 polyprotein gene, complete cds.",
+    "reference accession": "U22521.1"},
   "files": {
     "reference": "reference-EVA71.fasta",
     "pathogenJson": "pathogen.json",

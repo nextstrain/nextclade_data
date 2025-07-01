@@ -1,5 +1,10 @@
 {
   "schemaVersion": "3.0.0",
+  "attributes": {
+    "name": "Coxsackievirus A10",
+    "reference name": "Human coxsackievirus A10 strain Kowalik, complete genome",
+    "reference accession": "AY421767.1"
+  },
   "files": {
     "reference": "reference-CVA10.fasta",
     "pathogenJson": "pathogen.json",
