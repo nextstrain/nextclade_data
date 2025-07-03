@@ -4,7 +4,7 @@
 | :-- | :-- |
 | name  | Mumps MuV Genotypes (genome) |
 | authors | [Nextstrain](https://nextstrain.org) |
-| reference | D90232 |
+| reference | Reconstructed ancestral sequence based on augur refine |
 | workflow  | https://github.com/nextstrain/mumps/tree/main/nextclade  |
 | path  | `nextstrain/mumps/genome` |
 
