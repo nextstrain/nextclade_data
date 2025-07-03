@@ -25,7 +25,6 @@ This dataset supports:
 
 - Assignment of genotype
 - Phylogenetic placement
-- Sequence quality control (QC)
 
 ## What are Nextclade datasets
 
