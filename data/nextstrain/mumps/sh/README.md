@@ -11,7 +11,7 @@
 
 ## Scope of this dataset
 
-This dataset assigns genotypes (e.g. A to N) to Mumps samples based on [criteria outlined by the WHO](https://iris.who.int/bitstream/handle/10665/241922/WER8722_217-224.PDF) and tree placement.
+Based on the SH gene region (~315nt), this dataset assigns genotypes (e.g. A to N) to Mumps samples based on [criteria outlined by the WHO](https://iris.who.int/bitstream/handle/10665/241922/WER8722_217-224.PDF) and tree placement.
 
 Strains picked from a combination of the following papers:
 
@@ -19,6 +19,7 @@ Strains picked from a combination of the following papers:
 * Jin et al 2015 - https://doi.org/10.1002/rmv.1819
 * WHO 2012 - https://iris.who.int/bitstream/handle/10665/241922/WER8722_217-224.PDF
 
+There is a "Mumps MuV Genotypes (genome)" Nextclade dataset based on the full genome region available at `nextstrain/mumps/genome`
 
 ## Features
 
