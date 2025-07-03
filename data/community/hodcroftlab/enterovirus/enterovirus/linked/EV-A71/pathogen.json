@@ -1,16 +1,67 @@
 {
   "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
   "attributes": {
     "name": "Enterovirus A71 virus",
     "reference name": "Human enterovirus 71 polyprotein gene, complete cds.",
-    "reference accession": "U22521.1"},
-  "files": {
-    "reference": "reference-EVA71.fasta",
-    "pathogenJson": "pathogen.json",
-    "genomeAnnotation": "genome_annotation.gff3",
-    "treeJson": "tree-EVA71.json",
-    "examples": "sequences-EVA71.fasta",
-    "readme": "README.md",
-    "changelog": "CHANGELOG.md"
-  }
+    "reference accession": "U22521.1"
+  },
+  "alignmentParams": {
+    "penaltyGapOpen": 15,
+    "penaltyGapOpenInFrame": 20,
+    "penaltyGapOpenOutOfFrame": 25,
+    "kmerLength": 10,
+    "kmerDistance": 50,
+    "minMatchLength": 50,
+    "allowedMismatches": 8,
+    "minLength": 69,
+    "minSeedCover": 0.35
+  },
+  "defaultCds": "VP1",
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 100
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 500,
+      "scoreBias": 1000
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 10
+    },
+    "privateMutations": {
+      "cutoff": 100,
+      "enabled": true,
+      "typical": 50,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "divergence": {
+      "enabled": true,
+      "maxDivergence": 0.15,
+      "scoreWeight": 50
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 40
+    }
+    },
+  "cdsOrderPreference":["VP4", "VP2", "VP3", "VP1", "2A", "2B", "2C", "3A", "3B", "3C", "3D"]
+
 }

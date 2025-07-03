@@ -3,15 +3,15 @@
 #!processor NCBI annotwriter
 ##sequence-region U22521.1 1 7408
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=39054
-U22521.1	Genbank	region	1	7408	.	+	.	ID=U22521.1:1..7408;Dbxref=taxon:39054;gb-acronym=EV-A71;gbkey=Src;mol_type=genomic RNA;nat-host=Homo sapiens;old-Name=EVA71-Enterovirus 71;strain=BrCr
-U22521.1	Genbank	CDS	744	950	.	+	.	Name=EVA71-VP4;gbkey=Prot;product=EVA71-VP4;Note=capsid protein;ID=id-AAB39968.1:1..69
-U22521.1	Genbank	CDS	951	1712	.	+	.	Name=EVA71-VP2;product=EVA71-VP2;gbkey=Prot;Note=capsid protein;ID=id-AAB39968.1:70..323
-U22521.1	Genbank	CDS	1713	2438	.	+	.	Name=EVA71-VP3;product=EVA71-VP3;gbkey=Prot;Note=capsid protein;ID=id-AAB39968.1:324..565
-U22521.1	Genbank	CDS	2439	3329	.	+	.	Name=EVA71-VP1;product=EVA71-VP1;gbkey=Prot;Note=capsid protein;ID=id-AAB39968.1:566..862
-U22521.1	Genbank	CDS	3330	3779	.	+	.	Name=EVA71-2A;product=EVA71-2A;gbkey=Prot;ID=id-AAB39968.1:863..1012
-U22521.1	Genbank	CDS	3780	4076	.	+	.	Name=EVA71-2B;product=EVA71-2B;gbkey=Prot;ID=id-AAB39968.1:1013..1111
-U22521.1	Genbank	CDS	4077	5063	.	+	.	Name=EVA71-2C;product=EVA71-2C;gbkey=Prot;ID=id-AAB39968.1:1112..1440
-U22521.1	Genbank	CDS	5064	5321	.	+	.	Name=EVA71-3A;product=EVA71-3A;gbkey=Prot;ID=id-AAB39968.1:1441..1526
-U22521.1	Genbank	CDS	5322	5387	.	+	.	Name=EVA71-3B;product=EVA71-3B;gbkey=Prot;ID=id-AAB39968.1:1527..1548
-U22521.1	Genbank	CDS	5388	5936	.	+	.	Name=EVA71-3C;product=EVA71-3C;gbkey=Prot;ID=id-AAB39968.1:1549..1731
-U22521.1	Genbank	CDS	5937	7322	.	+	.	Name=EVA71-3D;product=EVA71-3D;gbkey=Prot;ID=id-AAB39968.1:1732..2193
+U22521.1	Genbank	region	1	7408	.	+	.	ID=U22521.1:1..7408;Dbxref=taxon:39054;gb-acronym=EV-A71;gbkey=Src;mol_type=genomic RNA;nat-host=Homo sapiens;old-name=Enterovirus 71;strain=BrCr
+U22521.1	Genbank	CDS	744	950	.	+	.	Name=VP4;gbkey=Prot;product=VP4;Note=capsid protein;ID=id-AAB39968.1:1..69
+U22521.1	Genbank	CDS	951	1712	.	+	.	Name=VP2;product=VP2;gbkey=Prot;Note=capsid protein;ID=id-AAB39968.1:70..323
+U22521.1	Genbank	CDS	1713	2438	.	+	.	Name=VP3;product=VP3;gbkey=Prot;Note=capsid protein;ID=id-AAB39968.1:324..565
+U22521.1	Genbank	CDS	2439	3329	.	+	.	Name=VP1;product=VP1;gbkey=Prot;Note=capsid protein;ID=id-AAB39968.1:566..862
+U22521.1	Genbank	CDS	3330	3779	.	+	.	Name=2A;product=2A;gbkey=Prot;ID=id-AAB39968.1:863..1012
+U22521.1	Genbank	CDS	3780	4076	.	+	.	Name=2B;product=2B;gbkey=Prot;ID=id-AAB39968.1:1013..1111
+U22521.1	Genbank	CDS	4077	5063	.	+	.	Name=2C;product=2C;gbkey=Prot;ID=id-AAB39968.1:1112..1440
+U22521.1	Genbank	CDS	5064	5321	.	+	.	Name=3A;product=3A;gbkey=Prot;ID=id-AAB39968.1:1441..1526
+U22521.1	Genbank	CDS	5322	5387	.	+	.	Name=3B;product=3B;gbkey=Prot;ID=id-AAB39968.1:1527..1548
+U22521.1	Genbank	CDS	5388	5936	.	+	.	Name=3C;product=3C;gbkey=Prot;ID=id-AAB39968.1:1549..1731
+U22521.1	Genbank	CDS	5937	7322	.	+	.	Name=3D;product=3D;gbkey=Prot;ID=id-AAB39968.1:1732..2193
