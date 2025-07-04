@@ -290,5 +290,12 @@
     "segment": "na",
     "reference accession": "CY073894",
     "reference name": "B/Brisbane/60/2008"
+  },
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
   }
 }

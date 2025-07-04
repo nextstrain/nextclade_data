@@ -952,10 +952,19 @@
               "stopCodons"
             ],
             "other": [
+              "mutLabels",
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-03-26T11:47:13Z",
               "tag": "2025-03-26--11-47-13Z",
@@ -1006,8 +1015,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-03-26T11:47:13Z",
-            "tag": "2025-03-26--11-47-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1351,10 +1359,18 @@
               "stopCodons"
             ],
             "other": [
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-01-22T09:54:14Z",
               "tag": "2025-01-22--09-54-14Z",
@@ -1397,8 +1413,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-01-22T09:54:14Z",
-            "tag": "2025-01-22--09-54-14Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1573,10 +1588,18 @@
               "stopCodons"
             ],
             "other": [
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-03-26T11:47:13Z",
               "tag": "2025-03-26--11-47-13Z",
@@ -1619,8 +1642,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-03-26T11:47:13Z",
-            "tag": "2025-03-26--11-47-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2413,9 +2435,19 @@
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-06-04T16:27:23Z",
               "tag": "2024-06-04--16-27-23Z",
@@ -2434,8 +2466,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-06-04T16:27:23Z",
-            "tag": "2024-06-04--16-27-23Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2839,9 +2870,19 @@
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-06-04T16:27:23Z",
               "tag": "2024-06-04--16-27-23Z",
@@ -2860,8 +2901,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-06-04T16:27:23Z",
-            "tag": "2024-06-04--16-27-23Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3311,9 +3351,19 @@
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-02-25T17:00:40Z",
               "tag": "2025-02-25--17-00-40Z",
@@ -3324,8 +3374,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-02-25T17:00:40Z",
-            "tag": "2025-02-25--17-00-40Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
