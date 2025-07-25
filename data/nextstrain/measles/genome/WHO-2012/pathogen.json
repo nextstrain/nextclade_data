@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "annotation.gff3",
+    "tree": "tree.json",
+    "changelog": "CHANGELOG.md",
+    "readme": "README.md",
+    "examples": "sequences.fasta"
+  },
+  "attributes": {
+    "name": "Measles morbillivirus -- complete genome",
+    "reference name": "Ichinose-B95a",
+    "reference accession": "NC_001498 "
+  },
+  "alignmentParams":{
+    "retryReverseComplement": true
+  },
+  "qc": {
+    "schemaVersion": "1.2.0",
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500,
+      "scoreWeight": 50
+    },
+    "snpClusters": {
+      "enabled": true,
+      "windowSize": 100,
+      "clusterCutOff": 6,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15,
+      "scoreWeight": 50
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 50
+    }
+  }
+}
