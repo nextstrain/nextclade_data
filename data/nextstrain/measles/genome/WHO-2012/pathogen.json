@@ -9,6 +9,12 @@
     "readme": "README.md",
     "examples": "sequences.fasta"
   },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "shortcuts": ["measles"],
+  "defaultCds": "N",
   "attributes": {
     "name": "Measles morbillivirus -- complete genome",
     "reference name": "Ichinose-B95a",
