@@ -1,11 +1,15 @@
 # Nextclade dataset creation guide
 
-This guide describes how to create a new Nextclade dataset from scratch. Datasets are how Nextclade is customized to work with a particular virus.
-
-Once a dataset is created, it can be shared with other users via the Nextclade data repository or a separate Github repository.
-Please consult the [Nextclade dataset curation guide](dataset-curation-guide.md) for further information on how you can share your dataset using the Nextstrain dataset repository.
-
+This guide describes how to create a new Nextclade dataset from scratch.
+Datasets are how Nextclade is customized to work with a particular virus.
+Once a dataset is created, it can be optionally shared with other users via the Nextclade data repository or a separate Github repository.
 This page provides a detailed walk-through on how to put together a Nextclade dataset. Answers to [Frequently Asked Questions](#faqs) is provided below.
+
+> ⚠️ This guide serves for advanced Nextclade users and enthusiasts who want to create and maintain their own Nextclade datasets, e.g. to add a yet unsupported pathogen or strain. It assumes basic familiarity with Nextclade CLI and Nextclade Web and some experience with different datasets as a user. If you are not yet comfortable using Nextclade and want to learn more about Nextclade datasets, please refer to the [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/) first.
+
+> ⚠️ If you are looking for Nextclade software developer documentation, see [Nextclade developer guide](https://github.com/nextstrain/nextclade/blob/master/docs/dev/developer-guide.md) instead.
+
+> ⚠️ If you are looking how you can share your dataset using the Nextclade data repository please consult the [Nextclade dataset curation guide](dataset-curation-guide.md).
 
 ## Recommended prerequisites
 
