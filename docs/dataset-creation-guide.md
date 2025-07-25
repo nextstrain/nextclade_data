@@ -5,6 +5,8 @@ This guide describes how to create a new Nextclade dataset from scratch. Dataset
 Once a dataset is created, it can be shared with other users via the Nextclade data repository or a separate Github repository.
 Please consult the [Nextclade dataset creation guide](dataset-creation-guide.md) for further information on how you can share your dataset using the Nextstrain dataset repository.
 
+This page provides a detailed walk-through on how to put together a Nextclade dataset. Answers to [Frequently Asked Questions](#faqs) is provided below.
+
 ## Recommended prerequisites
 
 - Knowledge of command line bioinformatics
@@ -244,14 +246,14 @@ We provide a simple Snakemake workflow in this repository at [`example-workflow`
 
 You also need to provide paths to the reference sequence (in fasta and genbank formats) and the genome annotation.
 
-The example workflow is a good starting point, but if you want to customize the it's recommended to consult Nextstrain documentation, for example the [Creating a pathogen workflow tutorial](https://docs.nextstrain.org/en/latest/tutorials/creating-a-workflow.html).
+The example workflow is a good starting point, but if you want to customize the workflow, it's recommended to consult the Nextstrain documentation, for example the [Creating a pathogen workflow tutorial](https://docs.nextstrain.org/en/latest/tutorials/creating-a-workflow.html).
 
 ## Next steps
 
 Once you have your dataset created and committed in a Github repository, you can share it with others through a custom URL, e.g.
 
 ```url
-https://master.clades.nextstrain.org/?dataset-url=gh:nextstrain/nextclade_data@docs-v3@/docs/example-workflow/dataset
+https://master.clades.nextstrain.org/?dataset-url=gh:nextstrain/nextclade_data@master@/docs/example-workflow/dataset
 ```
 
 To make your dataset easily discoverable by all Nextclade users, you can submit it to the Nextclade data repository via a pull request. See the [dataset curation guide](dataset-curation-guide.md) for details. If you have any questions, please post them in the [Nextstrain discussion forum](https://discussion.nextstrain.org/).
