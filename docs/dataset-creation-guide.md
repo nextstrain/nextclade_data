@@ -107,6 +107,7 @@ Alternatively, one can use a custom script to perform these tasks. We provide an
 Further details on the genome annotation file format are available in the [Nextclade docs](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/03-genome-annotation.html).
 
 If Nextclade errors reading your annotation, please read the error message carefully. Common problems include (i) references to non-existing parents, (ii) non-unique names or IDs, and (iii) CDS that are not multiples of 3. To check you annotation, you can run
+
 ```bash
 nextclade read-annotation my_annotation.gff3
 ```
@@ -171,8 +172,6 @@ While only the `reference.fasta` and the `pathogen.json` are required input file
 `README.md`:
 
 ```md
-
-
 # Example dataset for Zika virus
 
 This is a minimal example dataset for demonstration purposes.
@@ -281,8 +280,10 @@ Yes, Nextclade supports genes with programmed ribosomal frameshifting as long as
 No, this is not required. However, the mutations from the reference sequence to the root of the tree must be added to the root branch of the tree. This can be achieved automatically by passing the reference sequence to the `--root-sequence` argument of [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html).
 
 ### My virus is very diverse; many sequences don't align!
+
 Nextclade was initially built for the analysis of SARS-COV-2 genomes that were all very similar to the reference. This is reflected in the default alignment parameters. For more diverse viruses, you can tune the alignment and seed-matching parameters by setting these parameters in the `pathogen.json`.
 Suggested parameters for high diversity viruses are given below (note that comments are not allowed in JSON, please remove `//...` when copying this into your `pathogen.json`):
+
 ```json
     "alignmentParams": {
         "penaltyGapExtend": 0,             // alignment: allow long gaps (same as default)
@@ -298,56 +299,64 @@ Suggested parameters for high diversity viruses are given below (note that comme
         "windowSize": 30,
     }
 ```
+
 You can tweak these parameters further if you think gap penalties should be even higher.
 
-
 ### My virus is very long with lots of indels; sequences align very poorly!
+
 Long viral genomes, such as mpox or herpes viruses, often have significant length variation in form of large insertions or deletions. In such cases, it can happen that the bandwidth Nextclade provisions in the banded alignment is insufficient and therefore does not align the sequences properly. In such cases, the bandwidth parameters should be adjusted by setting parameters in the `pathogen.json`.
 The `mpox/all-clades` dataset uses the following parameters:
+
 ```json
-"alignmentParams": {
-    "excessBandwidth": 100,
-    "terminalBandwidth": 300
-}
+  "alignmentParams": {
+      "excessBandwidth": 100,
+      "terminalBandwidth": 300
+  }
 ```
+
 The `excessBandwidth` is added in addition to what is estimated from the sketched band, `terminalBandwidth` is used for parts of the sequence before the first or after the last seed where indel variation is common and can't be reliably sketched.
 
 > ⚠️ Increasing these parameters increases the memory requirements and run-times of Nextclade.
 
-
 ### How can I align short fragments?
+
 By default, Nextclade requires sequences to be at least 100 bases long. You can reduce this by setting
+
 ```json
-"alignmentParams": {
-    "minLength": 30,
-    "minMatchLength": 20,
-    "kmerDistance": 3,
-    "kmerLength": 6,
-}
+  "alignmentParams": {
+      "minLength": 30,
+      "minMatchLength": 20,
+      "kmerDistance": 3,
+      "kmerLength": 6,
+  }
 ```
 
 ### Can I preview how Nextclade reads my annotation file?
+
 Yes. Try to run
+
 ```bash
 nextclade read-annotation my_annotation.gff3
 ```
+
 Nextclade will print a formatted output of how your gff3 is interpreted. If there are problems reading your annotation, Nextclade tries to identify the problem and prints an informative error message.
 
-
 ### How many example sequences should I include?
+
 Example sequences are meant for users to test the dataset and to help curators to develop the dataset. A few dozen sequences that cover viral diversity and different use cases (partial/complete, high quality/low quality) are usually sufficient. Too large example datasets make testing cumbersome, and increase storage and compute requirements necessarily. Ideally, the example sequences are different from the sequences use for the reference tree.
 
-
 ### Should I am make multiple datasets for the same virus with different reference sequences?
+
 In earlier versions, Nextclade only reported mutations relative to the alignment reference and private mutations. At that time, it was useful to have datasets that use different reference sequences (e.g. ancestral SARS-CoV-2 Wuhan-Hu-1 and Omicron). Now, Nextclade also reports mutations relative to clade/lineage founders as well as specific strains that can be specified in the `auspice.json`.
 Unless the virus is very diverse and there are clearly recognized 'types' (e.g. Dengue 1-4), it is preferable to provide only a single dataset. This reduces ambiguities with what dataset sequences should be analyzed and simplifies the automated dataset suggestion.
 
 The documentation on how to specify reference strains relative to which mutations should be reported can be found [here](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/04-reference-tree.html#relative-mutations).
 
 ### Are whole-genome datasets preferable to partial genome datasets?
+
 Yes, at least for viruses with limited recombination. A full genome dataset will cover most use cases and will provide all the functionality that a partial genome dataset does.
 Exceptions to this recommendation include cases where relevant diversity is not represented in the available complete sequences.
 
-
 ### How do I add multiple nomenclature systems to my dataset?
+
 Nextclade supports adding multiple 'clade-like' attributes to the reference tree. These need to be assigned to the nodes of the reference tree (for example using `augur clades`) and specified in the `tree.json` file. Please consult the documentation on [clade-like attributes](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/04-reference-tree.html#clade-like-attributes).

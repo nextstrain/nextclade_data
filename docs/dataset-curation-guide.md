@@ -10,7 +10,6 @@ This guide explains how Nextclade datasets are structured and how to you can con
 
 > ⚠️ If you are looking for guidance on how to assemble a dataset from scratch and tweak its parameters for a particular virus, see [Nextclade dataset creation guide](dataset-creation-guide.md) instead.
 
-
 ## Basic principles
 
 Nextclade software is built to be agnostic to pathogens it analyzes. Instead, the information about particularities of certain pathogens is provided in the form of so-called Nextclade datasets. A Nextclade dataset is a set of predefined files (in a directory or in a zip archive) which adds support for a particular pathogen or a strain to Nextclade CLI and Nextclade Web.
@@ -51,7 +50,7 @@ Add changes to your forked repository, commit and submit a pull request to the u
 
 Refer to [GitHub documentation "Contributing to projects"](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) for more details.
 
-> 💡 Make sure you [keep your local code up to date](https://github.com/git-guides/git-pull) with the origin repo,  [especially if it's forked](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+> 💡 Make sure you [keep your local code up to date](https://github.com/git-guides/git-pull) with the origin repo, [especially if it's forked](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
 > 💡 If you are a member of Nextstrain team, then you don't need a fork, and you can contribute directly to the origin repository `nextstrain/nextclade_data`. Nonetheless, please still submit a pull requests for review, rather than pushing changes to branches directly.
 
