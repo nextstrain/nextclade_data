@@ -359,7 +359,7 @@ Nextclade will print a formatted output of how your gff3 is interpreted. If ther
 
 Example sequences are meant for users to test the dataset and to help curators to develop the dataset. A few dozen sequences that cover viral diversity and different use cases (partial/complete, high quality/low quality) are usually sufficient. Too large example datasets make testing cumbersome, and increase storage and compute requirements necessarily. Ideally, the example sequences are different from the sequences use for the reference tree.
 
-### Should I am make multiple datasets for the same virus with different reference sequences?
+### Should I make multiple datasets for the same virus with different reference sequences?
 
 In earlier versions, Nextclade only reported mutations relative to the alignment reference and private mutations. At that time, it was useful to have datasets that use different reference sequences (e.g. ancestral SARS-CoV-2 Wuhan-Hu-1 and Omicron). Now, Nextclade also reports mutations relative to clade/lineage founders as well as specific strains that can be specified in the `auspice.json`.
 Unless the virus is very diverse and there are clearly recognized 'types' (e.g. Dengue 1-4), it is preferable to provide only a single dataset. This reduces ambiguities with what dataset sequences should be analyzed and simplifies the automated dataset suggestion.
