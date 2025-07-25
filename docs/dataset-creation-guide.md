@@ -340,10 +340,12 @@ Example sequences are meant for users to test the dataset and to help curators t
 In earlier versions, Nextclade only reported mutations relative to the alignment reference and private mutations. At that time, it was useful to have datasets that use different reference sequences (e.g. ancestral SARS-CoV-2 Wuhan-Hu-1 and Omicron). Now, Nextclade also reports mutations relative to clade/lineage founders as well as specific strains that can be specified in the `auspice.json`.
 Unless the virus is very diverse and there are clearly recognized 'types' (e.g. Dengue 1-4), it is preferable to provide only a single dataset. This reduces ambiguities with what dataset sequences should be analyzed and simplifies the automated dataset suggestion.
 
+The documentation on how to specify reference strains relative to which mutations should be reported can be found [here](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/04-reference-tree.html#relative-mutations).
+
 ### Are whole-genome datasets preferable to partial genome datasets?
 Yes, at least for viruses with limited recombination. A full genome dataset will cover most use cases and will provide all the functionality that a partial genome dataset does.
 Exceptions to this recommendation include cases where relevant diversity is not represented in the available complete sequences.
 
 
-
-
+### How do I add multiple nomenclature systems to my dataset?
+Nextclade supports adding multiple 'clade-like' attributes to the reference tree. These need to be assigned to the nodes of the reference tree (for example using `augur clades`) and specified in the `tree.json` file. Please consult the documentation on [clade-like attributes](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/04-reference-tree.html#clade-like-attributes).
