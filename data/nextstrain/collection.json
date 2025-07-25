@@ -64,6 +64,7 @@
     "nextstrain/flu/vic/mp",
     "nextstrain/flu/vic/pb2",
     "nextstrain/flu/vic/ns",
-    "nextstrain/rubella/E1"
+    "nextstrain/rubella/E1",
+    "nextstrain/measles/genome/WHO-2012"
   ]
 }
