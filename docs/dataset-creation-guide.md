@@ -288,7 +288,7 @@ No, this is not required. However, the mutations from the reference sequence to 
 Nextclade was initially built for the analysis of SARS-COV-2 genomes that were all very similar to the reference. This is reflected in the default alignment parameters. For more diverse viruses, you can tune the alignment and seed-matching parameters by setting these parameters in the `pathogen.json`.
 Suggested parameters for high diversity viruses are given below (note that comments are not allowed in JSON, please remove `//...` when copying this into your `pathogen.json`):
 
-```json
+```json5
     "alignmentParams": {
         "penaltyGapExtend": 0,             // alignment: allow long gaps (same as default)
         "penaltyGapOpen": 10,              // alignment: make gaps more expensive relative to mismatches (default 6)
