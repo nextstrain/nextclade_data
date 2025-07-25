@@ -296,7 +296,7 @@ Suggested parameters for high diversity viruses are given below (note that comme
         "minMatchLength": 30,              // seedmatching: reduce minimal extended match length to keep more seeds (default 40)
         "allowedMismatches": 15,           // seedmatching: increase allowed mismatches in window_size during seed extension to keep more seeds (default 8)
         "windowSize": 30,
-    },
+    }
 ```
 You can tweak these parameters further if you think gap penalties should be even higher.
 
