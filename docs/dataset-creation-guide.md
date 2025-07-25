@@ -306,6 +306,16 @@ Suggested parameters for high diversity viruses are given below (note that comme
 
 You can tweak these parameters further if you think gap penalties should be even higher.
 
+Nextclade CLI uses multiple sources to decide final alignment parameter values. In order of preference:
+
+- CLI arguments of the `nextclade run` command, if provided (e.g. `--min-seed-cover`)
+- the fields in `alignmentParams` section of `pathogen.json` file in the dataset, if dataset is used and `alignmentParams` are provided (e.g. `alignmentParams.minSeedCover`)
+- built-in hardcoded parameters (in Nextclade software code), when neither of the above is provided
+
+Note that CLI argument names use kebab-case (e.g. `--min-seed-cover`) while the corresponding JSON field names use camelCase (e.g. `minSeedCover`).
+
+You can see the resulting parameter values for a given dataset and command-line by invoking `nextclade run` command in verbose mode: add `--verbose` (`-v`) argument. This will display the final resolved values for all alignment parameters before processing begins.
+
 ### My virus is very long with lots of indels; sequences align very poorly!
 
 Long viral genomes, such as mpox or herpes viruses, often have significant length variation in form of large insertions or deletions. In such cases, it can happen that the bandwidth Nextclade provisions in the banded alignment is insufficient and therefore does not align the sequences properly. In such cases, the bandwidth parameters should be adjusted by setting parameters in the `pathogen.json`.
