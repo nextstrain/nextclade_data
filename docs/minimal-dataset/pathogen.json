@@ -14,7 +14,6 @@
     "reference accession": "NC_035889.1"
   },
   "qc": {
-    "schemaVersion": "1.2.0",
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,

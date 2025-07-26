@@ -1,12 +1,12 @@
 # Nextclade dataset curation guide
 
-This guide explains how to create, update and test Nextclade datasets as well as how to contribute them into the official Nextclade dataset collection.
+This guide explains how Nextclade datasets are structured and how to you can contribute or update datasets into the official Nextclade dataset collection.
 
-> ⚠️ If you are a user of Nextclade Web or Nextclade CLI and looking for documentation on how to use Nextclade, see [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/index.html) instead.
+> ⚠️ This guide serves for advanced Nextclade users and enthusiasts who want to create and maintain their own Nextclade datasets, e.g. to add a yet unsupported pathogen or strain. It assumes basic familiarity with Nextclade CLI and Nextclade Web and some experience with different datasets as a user. If you are not yet comfortable using Nextclade and want to learn more about Nextclade datasets, please refer to the [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/) first.
 
 > ⚠️ If you are looking for Nextclade software developer documentation, see [Nextclade developer guide](https://github.com/nextstrain/nextclade/blob/master/docs/dev/developer-guide.md) instead.
 
-> ⚠️ This guide serves for advanced Nextclade users and enthusiasts who want to create and maintain their own Nextclade datasets, e.g. to add a yet unsupported pathogen or strain. It assumes basic familiarity with Nextclade CLI and Nextclade Web and some experience with different datasets as a user. If you are not yet comfortable using Nextclade and want to learn more about Nextclade datasets, please refer to the [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/) first.
+> ⚠️ If you are looking for guidance on how to assemble a dataset from scratch and tweak its parameters for a particular virus, see [Nextclade dataset creation guide](dataset-creation-guide.md) instead.
 
 ## Basic principles
 
@@ -48,7 +48,7 @@ Add changes to your forked repository, commit and submit a pull request to the u
 
 Refer to [GitHub documentation "Contributing to projects"](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) for more details.
 
-> 💡 Make sure you [keep your local code up to date](https://github.com/git-guides/git-pull) with the origin repo,  [especially if it's forked](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+> 💡 Make sure you [keep your local code up to date](https://github.com/git-guides/git-pull) with the origin repo, [especially if it's forked](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
 > 💡 If you are a member of Nextstrain team, then you don't need a fork, and you can contribute directly to the origin repository `nextstrain/nextclade_data`. Nonetheless, please still submit a pull requests for review, rather than pushing changes to branches directly.
 
