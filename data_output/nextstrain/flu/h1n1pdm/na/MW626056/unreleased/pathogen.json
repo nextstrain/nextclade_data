@@ -77,12 +77,10 @@
       "Nextstrain team <https://nextstrain.org>"
     ]
   },
-  "nucMutLabelMap": {},
-  "nucMutLabelMapReverse": {},
   "shortcuts": [
-    "flu_vic_na",
-    "nextstrain/flu/vic/na",
-    "nextstrain/flu/vic/na/brisbane-60-2008"
+    "flu_h1n1pdm_na",
+    "nextstrain/flu/h1n1pdm/na",
+    "nextstrain/flu/h1n1pdm/na/wisconsin-588-2019"
   ],
   "aaMotifs": [
     {
@@ -96,7 +94,7 @@
           "ranges": [
             {
               "begin": 33,
-              "end": 466
+              "end": 470
             }
           ]
         }
@@ -121,163 +119,73 @@
           "name": "NAI_markers",
           "weight": 1,
           "locations": {
-            "100": {
-              "L": 1,
-              "default": 0.5
-            },
-            "103": {
-              "E": 2,
-              "default": 0.5
-            },
-            "104": {
-              "K": 1,
-              "default": 0.5
-            },
-            "107": {
-              "E": 2,
+            "109": {
+              "F": 1,
               "default": 0.5
             },
             "116": {
-              "A": 2,
-              "D": 2,
-              "G": 2,
-              "V": 2,
-              "default": 0.5
-            },
-            "133": {
-              "N": 1,
-              "Q": 1,
-              "Y": 1,
-              "default": 0.5
-            },
-            "137": {
               "R": 1,
               "default": 0.5
             },
-            "138": {
-              "S": 1,
+            "118": {
+              "A": 1,
+              "D": 1,
+              "G": 1,
+              "V": 1,
               "default": 0.5
             },
-            "139": {
-              "R": 1,
-              "default": 0.5
-            },
-            "141": {
-              "H": 1,
-              "default": 0.5
-            },
-            "144": {
-              "E": 1,
-              "R": 1,
-              "default": 0.5
-            },
-            "145": {
-              "I": 1,
+            "135": {
               "K": 1,
-              "P": 1,
-              "default": 0.5
-            },
-            "149": {
-              "K": 1,
-              "default": 0.5
-            },
-            "150": {
-              "S": 1,
+              "R": 1,
               "default": 0.5
             },
             "151": {
-              "M": 1,
-              "N": 1,
+              "K": 1,
               "default": 0.5
             },
-            "168": {
-              "S": 1,
-              "default": 0.5
-            },
-            "196": {
+            "198": {
               "E": 1,
               "G": 1,
-              "N": 1,
-              "Y": 2,
-              "default": 0.5
-            },
-            "199": {
-              "T": 1,
-              "default": 0.5
-            },
-            "220": {
-              "L": 2,
-              "N": 2,
-              "T": 1,
-              "V": 1,
-              "default": 0.5
-            },
-            "242": {
-              "D": 1,
-              "S": 1,
-              "default": 0.5
-            },
-            "244": {
-              "G": 1,
-              "T": 1,
-              "default": 0.5
-            },
-            "245": {
-              "P": 1,
-              "default": 0.5
-            },
-            "246": {
-              "D": 1,
-              "default": 0.5
-            },
-            "272": {
               "Y": 1,
               "default": 0.5
             },
-            "291": {
-              "K": 2,
-              "default": 0.5
-            },
-            "293": {
-              "S": 1,
-              "default": 0.5
-            },
-            "359": {
-              "E": 1,
-              "default": 0.5
-            },
-            "360": {
+            "222": {
+              "K": 1,
+              "L": 1,
+              "M": 1,
+              "R": 1,
+              "T": 1,
               "V": 1,
               "default": 0.5
             },
-            "373": {
-              "K": 2,
-              "default": 0.5
-            },
-            "394": {
-              "E": 1,
-              "default": 0.5
-            },
-            "395": {
-              "H": 1,
-              "default": 0.5
-            },
-            "406": {
-              "S": 1,
-              "default": 0.5
-            },
-            "431": {
+            "246": {
               "G": 1,
               "N": 1,
-              "default": 0.5
-            },
-            "438": {
-              "P": 1,
               "R": 1,
               "default": 0.5
             },
-            "463": {
+            "274": {
+              "Y": 2,
+              "default": 0.5
+            },
+            "292": {
+              "K": 1,
+              "default": 0.5
+            },
+            "294": {
+              "S": 1,
+              "default": 0.5
+            },
+            "426": {
               "T": 1,
+              "default": 0.5
+            },
+            "435": {
+              "N": 1,
+              "default": 0.5
+            },
+            "457": {
+              "T": 2,
               "default": 0.5
             }
           }
@@ -285,10 +193,96 @@
       ]
     }
   ],
+  "mutLabels": {
+    "aaMutLabelMap": {
+      "NA:110F": [
+        "NAI"
+      ],
+      "NA:117R": [
+        "NAI"
+      ],
+      "NA:119A": [
+        "NAI"
+      ],
+      "NA:119D": [
+        "NAI"
+      ],
+      "NA:119G": [
+        "NAI"
+      ],
+      "NA:119V": [
+        "NAI"
+      ],
+      "NA:136K": [
+        "NAI"
+      ],
+      "NA:136R": [
+        "NAI"
+      ],
+      "NA:152K": [
+        "NAI"
+      ],
+      "NA:199E": [
+        "NAI"
+      ],
+      "NA:199G": [
+        "NAI"
+      ],
+      "NA:199Y": [
+        "NAI"
+      ],
+      "NA:223K": [
+        "NAI"
+      ],
+      "NA:223L": [
+        "NAI"
+      ],
+      "NA:223M": [
+        "NAI"
+      ],
+      "NA:223T": [
+        "NAI"
+      ],
+      "NA:223V": [
+        "NAI"
+      ],
+      "NA:247G": [
+        "NAI"
+      ],
+      "NA:247N": [
+        "NAI"
+      ],
+      "NA:247R": [
+        "NAI"
+      ],
+      "NA:275Y": [
+        "NAI"
+      ],
+      "NA:293K": [
+        "NAI"
+      ],
+      "NA:436N": [
+        "NAI"
+      ],
+      "NA:427T": [
+        "NAI"
+      ],
+      "NA:458T": [
+        "NAI"
+      ]
+    }
+  },
   "attributes": {
-    "name": "Influenza B Victoria NA",
+    "name": "Influenza A H1N1pdm NA",
     "segment": "na",
-    "reference accession": "CY073894",
-    "reference name": "B/Brisbane/60/2008"
+    "reference accession": "MW626056",
+    "reference name": "A/Wisconsin/588/2019"
+  },
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
   }
 }
