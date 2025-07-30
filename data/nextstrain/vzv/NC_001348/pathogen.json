@@ -3,6 +3,7 @@
   "files": {
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
+    "examples": "sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "treeJson": "tree.json",
     "readme": "README.md",
@@ -16,7 +17,11 @@
   "alignmentParams":{
     "retryReverseComplement": true,
     "excessBandwidth": 100,
-    "terminalBandwidth": 300
+    "terminalBandwidth": 300,
+    "penaltyGapExtend": 0,
+    "penaltyGapOpen": 10,
+    "penaltyGapOpenInFrame": 15,
+    "penaltyGapOpenOutOfFrame": 17
   },
   "qc": {
     "missingData": {

@@ -2,7 +2,7 @@
 
 | Key                    | Value                                                                                                                             |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| authors                | Veronica Renne, [Aleksander Kuznetsov](https://neherlab.org), [Nextstrain](https://nextstrain.org),                                                                                                          |
+| authors                | Veronica Renne, [Aleksandr Kuznetsov](https://neherlab.org), [Nextstrain](https://nextstrain.org),                                                                                                          |
 | reference              | [NC_001348.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_001348.1)                                                                   |
 | genome annotation      | 71 annotated ORFs, including duplicated regions (ORF62/71, ORF63/70, ORF64/69)                                                    |
 | workflow               | [https://github.com/nextstrain/vzv](https://github.com/nextstrain/vzv)                                                            |
@@ -55,27 +55,35 @@ VZV clades are based on fixed SNPs, as described in [Jensen et al, 2017](https:/
 
 Defined clades:
 
-| Clade | Description                             | Geographic Association        |
-|-------|-----------------------------------------|-------------------------------|
-| 1     | European/North American lineage 1       | Europe, North America         |
-| 2     | European/North American lineage 2       | Europe, North America         |
-| 3     | Japanese lineage                        | Japan                         |
-| 4     | Mosaic recombinant clade (Africa)       | West Africa                   |
-| 5     | Mosaic recombinant clade (Africa/India) | Africa, Indian Subcontinent   |
-| 6     | Recombinant lineage with clade 4/5 SNPs | Africa/Asia                   |
-| 8     | Rare divergent lineage with unclear placement  | Not determined                         |
-| 9     | Basal divergent lineage, ancestral to other clades         | Europe                        |
+| **Clade name** | **Synonyms (CDC/UK/Iowa–Canada nomenclatures)** | **Geographic association**  | **Notes**                                       |
+| :------------: | ------------ | --------------------------- | ----------------------------------------------- |
+|   1   |  E1/C/A   |    Europe, North America  |    Common western lineage  |
+|   2   |   J/J/B   |   Japan, China    |   Dominant East Asian lineage; vaccine-origin clade |
+|   3   |  E2/B/D   |  Europe, North America    | Common western lineage |
+|   4   |   M2/J/C  | Africa, Asia  |  |
+|   5   | M1/A/--   | Africa, Indian subcontinent |    |
+|   6   | M4/--/--  | Global circulation    |   Recombinant of clades 1/3 and 4/5   |
+|   VII | M3/--/--  | --    |   Not circulating; only one partial-genome strain |
+|   VIII    | --    | Global circulation   | Putative clade; closely related to clade 6  |
+|   9   | --    | Identified in India for the first time   | Europe (UK, Germany, USA), India (newly reported)|
 
 
-Note: Clades 8 and 9 are rare and poorly sampled. Their placement and interpretation may change as more genomes become available.
+Note: Clades VIII and 9 are rare and poorly sampled. Their placement and interpretation may change as more genomes become available.
 
-### Sources
 
-- [*Genomic characterization and clade classification of Varicella-Zoster Virus (VZV) strains from India*](https://www.researchgate.net/publication/390730426_Genomic_analysis_of_Varicella_zoster_virus_strains_during_an_outbreak_with_atypical_clinical_presentations_in_Biswanath_district_of_Assam_India)
 
-- [*A Full-Genome Phylogenetic Analysis of Varicella-Zoster Virus Reveals a Novel Origin of Replication-Based Genotyping Scheme and Evidence of Recombination between Major Circulating Clades*](https://pubmed.ncbi.nlm.nih.gov/16973589/)
+### Further readings
 
-- [*Phylogenetic Analysis of Varicella–Zoster Virus in Cerebrospinal Fluid from Individuals with Acute Central Nervous System Infection: An Exploratory Study* ](https://www.mdpi.com/1999-4915/17/2/286)
+#### VZV in India and Emerging Clades
+- [*Kumar et al. (2023). First detection of Varicella Zoster Virus clade 9 cases in India during mpox surveillance*](https://doi.org/10.1080/07853890.2023.2253733)
 
-- [*Genomic analysis of Varicella zoster virus strains during an outbreak with atypical clinical presentations in Biswanath district of Assam, India*](https://www.researchgate.net/publication/390730426_Genomic_analysis_of_Varicella_zoster_virus_strains_during_an_outbreak_with_atypical_clinical_presentations_in_Biswanath_district_of_Assam_India)
+#### Global Distributio
+- [*Jonas Schmidt-Chanasit et al. (2011). Evolution and world-wide distribution of varicella–zoster virus clades*](https://doi.org/10.1016/j.meegid.2010.08.014.)
+
+#### Discovery of Novel Clades (8 & 9)
+- [*Zell et al. (2012). Sequencing of 21 Varicella-Zoster Virus Genomes Reveals Two Novel Genotypes and Evidence of Recombination*](https://doi.org/10.1128/JVI.06233-11)
+
+#### Clade Nomenclature Guidelines
+- [*Judith Breuer et al. (2010). A proposal for a common nomenclature for viral clades that form the species varicella-zoster virus: summary of VZV Nomenclature Meeting 2008, Barts and the London School of Medicine and Dentistry, 24–25 July 2008*](https://doi.org/10.1099/vir.0.017814-0)
+
 ---
