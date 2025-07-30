@@ -3694,7 +3694,10 @@
           }
         },
         {
-          "path": "nextstrain/vzv/NC_001348",
+          "path": "nextstrain/herpes/vzv/NC_001348",
+          "shortcuts": [
+            "vzv"
+          ],
           "enabled": true,
           "attributes": {
             "name": "Varicella-Zoster Virus (VZV)",
@@ -3704,6 +3707,7 @@
           "files": {
             "reference": "reference.fasta",
             "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "treeJson": "tree.json",
             "readme": "README.md",

@@ -65,6 +65,7 @@
     "nextstrain/flu/vic/pb2",
     "nextstrain/flu/vic/ns",
     "nextstrain/rubella/E1",
-    "nextstrain/vzv/NC_001348"
+    "nextstrain/vzv/NC_001348",
+    "nextstrain/herpes/vzv/NC_001348"
   ]
 }
