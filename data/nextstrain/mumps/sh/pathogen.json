@@ -1,0 +1,51 @@
+{
+  "alignmentParams": {
+    "minLength": 80,
+    "penaltyGapExtend": 1,
+    "penaltyGapOpen": 4,
+    "penaltyGapOpenInFrame": 4,
+    "penaltyGapOpenOutOfFrame": 6,
+    "penaltyMismatch": 1,
+    "scoreMatch": 4,
+    "noTranslatePastStop": false,
+    "excessBandwidth": 9,
+    "terminalBandwidth": 80,
+    "allowedMismatches": 12,
+    "minMatchLength": 30,
+    "maxAlignmentAttempts": 5,
+    "includeReference": true,
+    "includeNearestNodeInfo": true,
+    "retryReverseComplement": true,
+    "minSeedCover": 0.01
+  },
+  "attributes": {
+    "name": "Mumps MuV Genotypes (SH gene 315nt region)",
+    "reference name": "Jeryl-Lynn (genotype A)",
+    "reference accession": "D90232"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  },
+  "defaultCds": "SH"
+}
