@@ -6,7 +6,7 @@
 | reference              | [NC_001348.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_001348.1)                                                                   |
 | genome annotation      | 71 annotated ORFs, including duplicated regions (ORF62/71, ORF63/70, ORF64/69)                                                    |
 | workflow               | [https://github.com/nextstrain/vzv](https://github.com/nextstrain/vzv)                                                            |
-| nextclade dataset path | `nextstrain/vzv/nextclade/nextclade_dataset`                                                                                      |
+| nextclade dataset path | `nextstrain/herpes/vzv/NC_001348`                                                                                      |
 | clade definitions      | Genotypes and subclades of VZV defined in `clades.tsv`, based on literature-supported classification schemes                      |
 
 ---
@@ -21,19 +21,19 @@ It supports analysis of partial and full-genome VZV sequences, including quality
 
 ## Genome structure of VZV
 
-VZV has a class E herpesvirus genome structure, characterized by **inverted repeats** a long and short unique region (U<sub>L</sub> and U<sub>S</sub>) flanked by inverted repeats. This allows for **isomerization** of the genome and results in duplicated genes (e.g. ORF62/71, ORF63/70, ORF64/69), which are important to consider in alignment and phylogenetic analysis.
-Below is an illustration of the Varicella-Zoster Virus (VZV) genome, illustrating the repeat regions and gene organization:
+VZV has a class E herpesvirus genome structure, consisting of a long and short unique region (U<sub>L</sub> and U<sub>S</sub>) flanked by inverted repeats. This allows for isomerization of the genome and results in duplicated genes (e.g. ORF62/71, ORF63/70, ORF64/69), which are important to consider in alignment and phylogenetic analysis.
+Below is an illustration of the Varicella-Zoster Virus (VZV) genome, highlighting the repeat regions and gene organization:
 
-![VZV genome structure](https://journals.asm.org/cms/10.1128/cmr.00031-09/asset/07b0b0b7-1ba8-41db-a063-212ba5e66ebf/assets/graphic/zcm0011023060002.jpeg)
+![VZV genome structure](https://github.com/user-attachments/assets/95a1f277-6cf8-4b9c-85ca-3e999e5dd6dd)
 
-*Figure from: [Zerboni et al., 2009](https://journals.asm.org/doi/10.1128/cmr.00031-09).* The linear map of the VZV genome shows the terminal repeats (TR<sub>L</sub>/TR<sub>S</sub>) and internal repeats (IR<sub>L</sub>/IR<sub>S</sub>) flanking the unique long (U<sub>L</sub>) and unique short (U<sub>S</sub>) regions. The R1–R5 indicate major repeat elements. OriS represents the origin of replication. Mutations in the vaccine strains are indicated by inverted triangles at the top of the figure.
+*Figure from: [Schmid et al., 2010](https://journals.asm.org/doi/10.1128/cmr.00031-09).* The linear map of the VZV genome shows the terminal repeats (TR<sub>L</sub>/TR<sub>S</sub>) and internal repeats (IR<sub>L</sub>/IR<sub>S</sub>) flanking the unique long (U<sub>L</sub>) and unique short (U<sub>S</sub>) regions. The R1–R5 indicate major repeat elements. OriS represents the origin of replication. Mutations in the vaccine strains are indicated by inverted triangles at the top of the figure.
 
 
 ## Reference sequence and genome annotation
 
 The reference genome used is **[NC_001348.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_001348)**, corresponding to the *Varicella-Zoster Virus Dumas strain*.
 
-The GFF3 genome annotation includes 71 coding sequences, with duplicated genes manually curated and assigned distinct ORF names (e.g., ORF62_002, ORF63_002, etc.) to reflect repeated regions.
+The GFF3 genome annotation includes 71 coding sequences, with duplicated genes manually curated and assigned distinct ORF names (e.g., ORF62_002, ORF63_002, etc.) to reflect repeated regions. Repeated regions are masked during tree reconstruction, but mutations in these regions are annotated on the tree.
 
 ---
 
@@ -51,7 +51,8 @@ This dataset supports:
 
 ## Clade Definitions
 
-VZV clades are based on fixed SNPs, as described in [Jensen et al, 2017](https://www.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000772):
+VZV clades are described in [Breuer et al. 2010](https://doi.org/10.1099/vir.0.017814-0) and [Jensen et al, 2017](https://www.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000772).
+In the Nextclade reference tree, clades are assigned using signature mutations ancestral to genome representative for the different clades. These SNPs can be found in the `clades.tsv` file in the workflow. All clades other than VII are represented and annotated in the tree.
 
 Defined clades:
 
@@ -72,18 +73,18 @@ Note: Clades VIII and 9 are rare and poorly sampled. Their placement and interpr
 
 
 
-### Further readings
+### References
 
-#### VZV in India and Emerging Clades
-- [*Kumar et al. (2023). First detection of Varicella Zoster Virus clade 9 cases in India during mpox surveillance*](https://doi.org/10.1080/07853890.2023.2253733)
+#### Clade Nomenclature Guidelines
+- [*Judith Breuer et al. (2010). A proposal for a common nomenclature for viral clades that form the species varicella-zoster virus: summary of VZV Nomenclature Meeting 2008, Barts and the London School of Medicine and Dentistry, 24–25 July 2008*](https://doi.org/10.1099/vir.0.017814-0)
 
-#### Global Distributio
+#### Global Distribution
 - [*Jonas Schmidt-Chanasit et al. (2011). Evolution and world-wide distribution of varicella–zoster virus clades*](https://doi.org/10.1016/j.meegid.2010.08.014.)
 
 #### Discovery of Novel Clades (8 & 9)
 - [*Zell et al. (2012). Sequencing of 21 Varicella-Zoster Virus Genomes Reveals Two Novel Genotypes and Evidence of Recombination*](https://doi.org/10.1128/JVI.06233-11)
 
-#### Clade Nomenclature Guidelines
-- [*Judith Breuer et al. (2010). A proposal for a common nomenclature for viral clades that form the species varicella-zoster virus: summary of VZV Nomenclature Meeting 2008, Barts and the London School of Medicine and Dentistry, 24–25 July 2008*](https://doi.org/10.1099/vir.0.017814-0)
+#### VZV in India and Emerging Clades
+- [*Kumar et al. (2023). First detection of Varicella Zoster Virus clade 9 cases in India during mpox surveillance*](https://doi.org/10.1080/07853890.2023.2253733)
 
 ---

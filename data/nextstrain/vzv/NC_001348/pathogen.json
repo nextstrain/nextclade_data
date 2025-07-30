@@ -14,6 +14,7 @@
     "reference name": "NC_001348.1",
     "reference accession": "NC_001348.1"
   },
+  "shortcuts": ["vzv"],
   "alignmentParams":{
     "retryReverseComplement": true,
     "excessBandwidth": 100,
