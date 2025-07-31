@@ -1,3 +1,7 @@
+## Unreleased
+ - Define subclade [D.3.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.3.1.yml)
+
+
 ## 2025-01-22T09:54:14Z
 
  - include subclades C.1.9.1 - C.1.9.4 based on subclade proposals C.1.9.a/b/c/d

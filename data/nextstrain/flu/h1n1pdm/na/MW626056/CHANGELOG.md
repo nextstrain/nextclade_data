@@ -1,3 +1,10 @@
+## Unreleased
+
+ - alias subclade C.5.3.1 as [D](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/c7e0512eaf79c474915edb1004cf13244778b584/subclades/D.yml)
+ - add subclade [D.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/c7e0512eaf79c474915edb1004cf13244778b584/subclades/D.1.yml)
+ - add subclade [D.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/c7e0512eaf79c474915edb1004cf13244778b584/subclades/D.2.yml)
+ - add NAI marker score and NAI mutations
+
 ## 2025-03-26T11:47:13Z
 
 Fix GFF3 format issues in genome annotation
