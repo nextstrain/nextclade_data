@@ -1,3 +1,7 @@
+## Unreleased
+
+ - addition of subclades [C.3.1](https://github.com/influenza-clade-nomenclature/seasonal_B-Vic_HA/blob/main/subclades/C.3.1.yml) and [C.5.6.1](https://github.com/influenza-clade-nomenclature/seasonal_B-Vic_HA/blob/main/subclades/C.5.6.1.yml)
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees
