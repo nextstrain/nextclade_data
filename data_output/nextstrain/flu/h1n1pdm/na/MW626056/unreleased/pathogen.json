@@ -277,5 +277,12 @@
     "segment": "na",
     "reference accession": "MW626056",
     "reference name": "A/Wisconsin/588/2019"
+  },
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
   }
 }
