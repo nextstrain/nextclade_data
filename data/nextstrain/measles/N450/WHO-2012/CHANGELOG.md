@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-08-02T08:55:17Z
 
 Fix `schemaVersion` field in `pathogen.json`.
 
