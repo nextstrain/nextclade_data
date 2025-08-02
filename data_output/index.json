@@ -73,8 +73,8 @@
           "capabilities": {
             "clades": 53,
             "customClades": {
-              "Nextclade_pango": 4005,
-              "partiallyAliased": 4005,
+              "Nextclade_pango": 4189,
+              "partiallyAliased": 4189,
               "clade_nextstrain": 53,
               "clade_who": 13,
               "clade_display": 53
@@ -92,6 +92,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-06-09T15:42:38Z",
               "tag": "2025-06-09--15-42-38Z",
@@ -230,8 +237,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-06-09T15:42:38Z",
-            "tag": "2025-06-09--15-42-38Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -474,8 +480,8 @@
           "capabilities": {
             "clades": 30,
             "customClades": {
-              "Nextclade_pango": 3269,
-              "partiallyAliased": 3269,
+              "Nextclade_pango": 3453,
+              "partiallyAliased": 3453,
               "clade_nextstrain": 30,
               "clade_who": 3,
               "clade_display": 30
@@ -494,6 +500,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-06-09T15:42:38Z",
               "tag": "2025-06-09--15-42-38Z",
@@ -632,8 +645,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-06-09T15:42:38Z",
-            "tag": "2025-06-09--15-42-38Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
