@@ -1078,11 +1078,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 37,
+            "clades": 36,
             "customClades": {
-              "subclade": 45,
-              "short-clade": 37,
-              "proposedSubclade": 50
+              "subclade": 46,
+              "short-clade": 36,
+              "proposedSubclade": 49
             },
             "qc": [
               "privateMutations",
@@ -1095,6 +1095,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-01-22T09:54:14Z",
               "tag": "2025-01-22--09-54-14Z",
@@ -1161,8 +1168,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-01-22T09:54:14Z",
-            "tag": "2025-01-22--09-54-14Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1215,11 +1221,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 37,
+            "clades": 36,
             "customClades": {
-              "subclade": 45,
-              "short-clade": 37,
-              "proposedSubclade": 50
+              "subclade": 46,
+              "short-clade": 36,
+              "proposedSubclade": 49
             },
             "qc": [
               "privateMutations",
@@ -1228,11 +1234,19 @@
               "stopCodons"
             ],
             "other": [
+              "mutLabels",
               "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-01-22T09:54:14Z",
               "tag": "2025-01-22--09-54-14Z",
@@ -1307,8 +1321,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-01-22T09:54:14Z",
-            "tag": "2025-01-22--09-54-14Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1360,7 +1373,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 17,
+            "clades": 21,
             "customClades": {
               "proposedSubclade": 17
             },
@@ -1371,10 +1384,18 @@
               "stopCodons"
             ],
             "other": [
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-01-22T09:54:14Z",
               "tag": "2025-01-22--09-54-14Z",
@@ -1417,8 +1438,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-01-22T09:54:14Z",
-            "tag": "2025-01-22--09-54-14Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
