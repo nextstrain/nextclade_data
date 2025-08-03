@@ -1,3 +1,11 @@
+## Unreleased
+ - NAI scores
+ - addition of subclade [B.4.4](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/6519c11f846213aa8668976db4e6adb482ade82b/subclades/B.4.4.yml)
+- addition of subclade [B.4.2.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/6519c11f846213aa8668976db4e6adb482ade82b/subclades/B.4.2.1.yml)
+- addition of subclade [B.4.2.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/6519c11f846213aa8668976db4e6adb482ade82b/subclades/B.4.2.2.yml)
+- addition of subclade [B.4.2.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/6519c11f846213aa8668976db4e6adb482ade82b/subclades/B.4.2.3.yml)
+
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees

@@ -1,3 +1,8 @@
+## Unreleased
+
+ - addition of subclade [J.2.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/d79c221035496f273b7e2a31152b21df990a21b4/subclades/J.2.3.yml) with HA1 189R and 158K
+ - addition of subclade [J.2.4](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/d79c221035496f273b7e2a31152b21df990a21b4/subclades/J.2.4.yml) with HA1 189R and 135K
+
 ## 2025-01-22T09:54:14Z
 
  - update reference trees
