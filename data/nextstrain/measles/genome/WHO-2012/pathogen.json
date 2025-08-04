@@ -21,7 +21,18 @@
     "reference accession": "NC_001498 "
   },
   "alignmentParams":{
-    "retryReverseComplement": true
+    "retryReverseComplement": true,
+    "penaltyGapExtend": 1,
+    "penaltyGapOpen": 10,
+    "penaltyGapOpenInFrame": 15,
+    "penaltyGapOpenOutOfFrame": 17,
+    "excessBandwidth": 20,
+    "minSeedCover": 0.1,
+    "kmerLength": 6,
+    "kmerDistance": 25,
+    "minMatchLength": 30,
+    "allowedMismatches": 15,
+    "windowSize": 30
   },
   "qc": {
     "missingData": {
