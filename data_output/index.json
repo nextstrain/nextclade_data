@@ -1080,7 +1080,7 @@
           "capabilities": {
             "clades": 37,
             "customClades": {
-              "subclade": 47,
+              "subclade": 48,
               "short-clade": 37,
               "proposedSubclade": 50
             },
@@ -1223,7 +1223,7 @@
           "capabilities": {
             "clades": 37,
             "customClades": {
-              "subclade": 47,
+              "subclade": 48,
               "short-clade": 37,
               "proposedSubclade": 50
             },
@@ -1491,10 +1491,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 8,
+            "clades": 9,
             "customClades": {
-              "subclade": 24,
-              "proposedSubclade": 22
+              "subclade": 26,
+              "proposedSubclade": 23
             },
             "qc": [
               "privateMutations",
