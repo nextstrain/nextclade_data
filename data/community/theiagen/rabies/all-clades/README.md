@@ -20,7 +20,7 @@ dataformat tsv virus-genome \
 
 # Included clades
 
-We conservatively assigned clades as all accessions that descend from a most-recent common ancestor (MRCA) of classified accessions within the metadata. Subclades that were not monophyletic or did not contain uniquely defining mutations were removed. The following are the accounted clades, except where exclusion criteria are noted:
+We conservatively assigned clades as all accessions that descend from a most-recent common ancestor (MRCA) of classified accessions within the metadata. Subclades that were not monophyletic or did not contain uniquely defining mutations were removed. Clade-defining mutations were extracted using a [script](https://github.com/theiagen/utilities/blob/4c5a1126aa20d4a767fa709842242c156014daa7/scripts/extract_nextclades.py). The following are the accounted clades, except where exclusion criteria are noted:
 
 | Clade | Subclade | Exclusion Criteria |
 |-------|----------|-------------------|
