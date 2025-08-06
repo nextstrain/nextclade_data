@@ -91,7 +91,7 @@ We conservatively assigned clades as all accessions that descend from a most-rec
 
 # Phylogenetic tree reconstruction
 
-The tree was generated from the multifasta containing the sequences depicted above using the following commands:
+The tree was generated using the following commands:
 
 Align relative to the reference sequence
 ```bash
