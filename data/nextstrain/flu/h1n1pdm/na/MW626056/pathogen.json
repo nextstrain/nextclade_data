@@ -77,8 +77,6 @@
       "Nextstrain team <https://nextstrain.org>"
     ]
   },
-  "nucMutLabelMap": {},
-  "nucMutLabelMapReverse": {},
   "shortcuts": [
     "flu_h1n1pdm_na",
     "nextstrain/flu/h1n1pdm/na",
@@ -106,6 +104,112 @@
       ]
     }
   ],
+  "phenotypeData": [
+    {
+      "name": "NAI",
+      "nameFriendly": "NAI",
+      "description": "This column displays a score associated with reduced susceptibility to neuraminidase inhibitors. The score is a weighted sum of known substitutions (x1) or major substitutions (x2), while substitutions at positions that confer resistance but are to amino acids not previously described to confer resistance count x0.5.",
+      "cds": "NA",
+      "aaRange": {
+        "begin": 0,
+        "end": 460
+      },
+      "data": [
+        {
+          "name": "NAI_markers",
+          "weight": 1,
+          "locations": {
+            "109": {
+              "F": 1,
+              "default": 0.5
+            },
+            "116": {
+              "R": 1,
+              "default": 0.5
+            },
+            "118": {
+              "A": 1,
+              "D": 1,
+              "G": 1,
+              "V": 1,
+              "default": 0.5
+            },
+            "135": {
+              "K": 1,
+              "R": 1,
+              "default": 0.5
+            },
+            "151": {
+              "K": 1,
+              "default": 0.5
+            },
+            "198": {
+              "E": 1,
+              "G": 1,
+              "Y": 1,
+              "default": 0.5
+            },
+            "222": {
+              "K": 1,
+              "L": 1,
+              "M": 1,
+              "R": 1,
+              "T": 1,
+              "V": 1,
+              "default": 0.5
+            },
+            "246": {
+              "G": 1,
+              "N": 1,
+              "R": 1,
+              "default": 0.5
+            },
+            "274": {
+              "Y": 2,
+              "default": 0.5
+            },
+            "292": {
+              "K": 1,
+              "default": 0.5
+            },
+            "294": {
+              "S": 1,
+              "default": 0.5
+            },
+            "426": {
+              "T": 1,
+              "default": 0.5
+            },
+            "435": {
+              "N": 1,
+              "default": 0.5
+            },
+            "457": {
+              "T": 2,
+              "default": 0.5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "mutLabels": {
+    "aaMutLabelMap": {
+      "NA:110": ["NAI"],
+      "NA:117": ["NAI"],
+      "NA:119": ["NAI"],
+      "NA:136": ["NAI"],
+      "NA:152": ["NAI"],
+      "NA:199": ["NAI"],
+      "NA:223": ["NAI"],
+      "NA:247": ["NAI"],
+      "NA:275": ["NAI"],
+      "NA:293": ["NAI"],
+      "NA:436": ["NAI"],
+      "NA:427": ["NAI"],
+      "NA:458": ["NAI"]
+    }
+  },
   "attributes": {
     "name": "Influenza A H1N1pdm NA",
     "segment": "na",
