@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "annotation.gff3",
+    "treeJson": "tree.json",
+    "changelog": "CHANGELOG.md",
+    "readme": "README.md",
+    "examples": "sequences.fasta"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "shortcuts": ["measles"],
+  "defaultCds": "N",
+  "attributes": {
+    "name": "Measles morbillivirus -- complete genome",
+    "reference name": "Ichinose-B95a",
+    "reference accession": "NC_001498 "
+  },
+  "alignmentParams":{
+    "retryReverseComplement": true,
+    "penaltyGapExtend": 1,
+    "penaltyGapOpen": 10,
+    "penaltyGapOpenInFrame": 15,
+    "penaltyGapOpenOutOfFrame": 17,
+    "excessBandwidth": 20,
+    "minSeedCover": 0.1,
+    "kmerLength": 6,
+    "kmerDistance": 25,
+    "minMatchLength": 30,
+    "allowedMismatches": 15,
+    "windowSize": 30
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500,
+      "scoreWeight": 50
+    },
+    "snpClusters": {
+      "enabled": true,
+      "windowSize": 100,
+      "clusterCutOff": 6,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15,
+      "scoreWeight": 50
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 50
+    }
+  }
+}
