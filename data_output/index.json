@@ -4880,6 +4880,39 @@
             "updatedAt": "2025-03-26T11:47:13Z",
             "tag": "2025-03-26--11-47-13Z"
           }
+        },
+        {
+          "path": "community/theiagen/rabies/all-clades",
+          "enabled": true,
+          "attributes": {
+            "name": "Lyssavirus rabies GenBank WGS",
+            "reference name": "Rabies virus",
+            "reference accession": "NC_001542.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "examples": "example_sequences.fasta",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 49,
+            "qc": [
+              "missingData",
+              "mixedSites"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
         }
       ]
     }

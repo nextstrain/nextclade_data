@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "examples": "example_sequences.fasta",
+    "treeJson": "tree.json",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Lyssavirus rabies GenBank WGS",
+    "reference name": "Rabies virus",
+    "reference accession": "NC_001542.1"
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 6000,
+      "scoreBias": 1200
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 100
+    }
+  }
+}
+
