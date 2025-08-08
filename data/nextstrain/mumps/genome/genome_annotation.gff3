@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region HQ416907.1 1 15384
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2560602
+ROOT_UNCLASSIFIED	Genbank	gene	146	1795	.	+	.	ID=gene-NP;Name=NP;gbkey=Gene;gene=NP;gene_biotype=protein_coding
+ROOT_UNCLASSIFIED	Genbank	gene	1979	3151	.	+	.	ID=gene-P;Name=P;gbkey=Gene;gene=P;gene_biotype=protein_coding
+ROOT_UNCLASSIFIED	Genbank	gene	3264	4391	.	+	.	ID=gene-M;Name=M;gbkey=Gene;gene=M;gene_biotype=protein_coding
+ROOT_UNCLASSIFIED	Genbank	gene	4546	6162	.	+	.	ID=gene-F;Name=F;gbkey=Gene;gene=F;gene_biotype=protein_coding
+ROOT_UNCLASSIFIED	Genbank	gene	6268	6441	.	+	.	ID=gene-SH;Name=SH;gbkey=Gene;gene=SH;gene_biotype=protein_coding
+ROOT_UNCLASSIFIED	Genbank	gene	6614	8362	.	+	.	ID=gene-HN;Name=HN;gbkey=Gene;gene=HN;gene_biotype=protein_coding
+ROOT_UNCLASSIFIED	Genbank	gene	8438	15223	.	+	.	ID=gene-L;Name=L;gbkey=Gene;gene=L;gene_biotype=protein_coding
