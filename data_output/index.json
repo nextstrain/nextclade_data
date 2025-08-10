@@ -3192,6 +3192,53 @@
           }
         },
         {
+          "path": "nextstrain/measles/genome/WHO-2012",
+          "shortcuts": [
+            "measles"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Measles morbillivirus -- complete genome",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498 "
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff3",
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "examples": "sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/measles/N450/WHO-2012",
           "enabled": true,
           "attributes": {
