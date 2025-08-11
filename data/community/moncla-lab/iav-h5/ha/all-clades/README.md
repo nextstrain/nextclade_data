@@ -48,7 +48,3 @@ Two additional tools exist for assigning clades to A(H5) viruses, which also acc
 The clade assignments in this Nextclade dataset were validated against LABEL assignments and shown to be generally well-matched across subclades. The figure below shows a direct comparison of assignments for 19,833 HA sequences from GISAID, performed using LABEL and this NextClade dataset for all A(H5) clades. Note that the results for clades `2.3.2.1`, `2.3.4.4`, and their subclades are not shown in this figure.
 
 ![Figure 1: Comparison between LABEL and Nextclade for all-clade assignments](https://raw.githubusercontent.com/moncla-lab/h5-nextclade/refs/heads/main/figures-for-dataset-readmes/all-clades.svg)
-
-## What is Nextclade dataset
-
-Read more about Nextclade datasets in Nextclade documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
