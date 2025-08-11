@@ -14,7 +14,9 @@ With the help of: [Louise Moncla](https://lmoncla.github.io/monclalab/team/Louis
 
 ## Reference
 
-See [Ort et al. (preprint)](https://doi.org/10.1101/2025.01.07.631789) for more details on the development of this dataset. If you use these A(H5) Nextclade datasets, please cite: Ort, J. T., Shepard, S. S., Zolnoski, S. A., Lam, T. T.-Y., Davis, T., Neher, R., & Moncla, L. H. (2025). Development of avian influenza A(H5) virus datasets for Nextclade enables rapid and accurate clade assignment. bioRxiv, https://doi.org/10.1101/2025.01.07.631789.
+See [Ort et al.](https://doi.org/10.1093/ve/veaf058) for more details on the development of this dataset. If you use these A(H5) Nextclade datasets, please cite:
+
+Ort, J. T., Shepard, S. S., Zolnoski, S. A., Lam, T. T.-Y., Davis, C. T., Neher, R. A., & Moncla, L. H. (2025). Development of avian influenza A(H5) virus datasets for Nextclade enables rapid and accurate clade assignment. <i>Virus Evolution</i>, https://doi.org/10.1093/ve/veaf058.
 
 ## Scope of this dataset
 
