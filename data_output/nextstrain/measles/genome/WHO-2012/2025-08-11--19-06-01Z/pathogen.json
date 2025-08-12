@@ -64,7 +64,8 @@
     }
   },
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2025-08-11T19:06:01Z",
+    "tag": "2025-08-11--19-06-01Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
