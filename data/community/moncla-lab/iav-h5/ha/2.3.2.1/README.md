@@ -15,7 +15,9 @@ With the help of: [Louise Moncla](https://lmoncla.github.io/monclalab/team/Louis
 
 ## Reference
 
-See [Ort et al. (preprint)](https://doi.org/10.1101/2025.01.07.631789) for more details on the development of this dataset. If you use these A(H5) Nextclade datasets, please cite: Ort, J. T., Shepard, S. S., Zolnoski, S. A., Lam, T. T.-Y., Davis, T., Neher, R., & Moncla, L. H. (2025). Development of avian influenza A(H5) virus datasets for Nextclade enables rapid and accurate clade assignment. bioRxiv, https://doi.org/10.1101/2025.01.07.631789.
+See [Ort et al.](https://doi.org/10.1093/ve/veaf058) for more details on the development of this dataset. If you use these A(H5) Nextclade datasets, please cite:
+
+Ort, J. T., Shepard, S. S., Zolnoski, S. A., Lam, T. T.-Y., Davis, C. T., Neher, R. A., & Moncla, L. H. (2025). Development of avian influenza A(H5) virus datasets for Nextclade enables rapid and accurate clade assignment. <i>Virus Evolution</i>, https://doi.org/10.1093/ve/veaf058.
 
 ## Scope of this dataset
 
@@ -47,7 +49,3 @@ Two additional tools exist for assigning clades to A(H5) viruses that accommodat
 The clade assignments in this Nextclade dataset were validated against LABEL assignments and shown to be generally well-matched across subclades. The figure below shows a direct comparison of assignments for 2,406 HA sequences from GISAID, performed using LABEL and this NextClade dataset for clade `2.3.2.1` and its subclades.
 
 ![Figure 1: Comparison between LABEL and Nextclade for 2.3.2.1 assignments](https://raw.githubusercontent.com/moncla-lab/h5-nextclade/refs/heads/main/figures-for-dataset-readmes/2321.svg)
-
-## What is Nextclade dataset
-
-Read more about Nextclade datasets in Nextclade documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
