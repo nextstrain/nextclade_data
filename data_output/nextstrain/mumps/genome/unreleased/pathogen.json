@@ -1,0 +1,75 @@
+{
+  "alignmentParams": {
+    "minLength": 80,
+    "penaltyGapExtend": 1,
+    "penaltyGapOpen": 10,
+    "penaltyGapOpenInFrame": 15,
+    "penaltyGapOpenOutOfFrame": 17,
+    "penaltyMismatch": 1,
+    "scoreMatch": 3,
+    "noTranslatePastStop": false,
+    "excessBandwidth": 9,
+    "terminalBandwidth": 50,
+    "allowedMismatches": 15,
+    "minMatchLength": 20,
+    "maxAlignmentAttempts": 5,
+    "includeNearestNodeInfo": true,
+    "retryReverseComplement": true,
+    "minSeedCover": 0.1
+  },
+  "attributes": {
+    "name": "Mumps MuV Genotypes (Full genome)",
+    "reference name": "Jeryl-Lynn (genotype A)",
+    "reference accession": "D90232"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  },
+  "defaultCds": "SH",
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15,
+      "scoreWeight": 50
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 50
+    }
+  }
+}
