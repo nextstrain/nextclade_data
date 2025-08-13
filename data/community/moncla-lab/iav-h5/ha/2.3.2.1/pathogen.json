@@ -11,7 +11,7 @@
     "reference accession": "EPI424984",
     "reference name": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
     "segment": "ha",
-    "experimental": true
+    "experimental": false
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -19,7 +19,7 @@
   },
   "defaultCds": "HA",
   "deprecated": false,
-  "experimental": true,
+  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
