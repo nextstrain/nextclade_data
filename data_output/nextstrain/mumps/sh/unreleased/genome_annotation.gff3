@@ -1,3 +1,0 @@
-##gff-version 3
-##sequence-region D90232 1 361
-D90232	feature	gene	80	253	.	+	.	codon_start=1;gene=SH;gene_name=SH;

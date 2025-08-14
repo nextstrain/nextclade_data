@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-08-14T12:26:14Z
 
 Annual update: added new lineages to the classification system as determined by the scientific committee.
 Updated representative tree sequences to retain only publicly available data and to avoid assignment errors
