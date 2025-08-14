@@ -1,3 +1,8 @@
+## Unreleased
+
+Annual update: added new lineages to the classification system as determined by the scientific committee.
+Updated representative tree sequences to retain only publicly available data and to avoid assignment errors
+
 ## 2025-04-02T19:11:08Z
 
 Fix minor typo of "Outgoup" to "Outgroup"

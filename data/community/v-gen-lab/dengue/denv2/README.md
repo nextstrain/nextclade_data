@@ -10,7 +10,7 @@
 
 ## Scope of This Dataset
 
-This dataset is based on the dengue virus lineage system from [Hill et al., 2024](https://doi.org/10.1101/2024.05.16.24307504) and is suitable for the analysis of DENV-2 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
+This dataset is based on the dengue virus lineage system from [Hill V, Cleemput S, Pereira JS, et al., 2024](https://doi.org/10.1371/journal.pbio.3002834) and is suitable for the analysis of DENV-2 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
 
 ## Dengue Lineages System Project
 
