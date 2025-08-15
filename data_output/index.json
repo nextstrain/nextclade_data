@@ -3953,6 +3953,53 @@
           }
         },
         {
+          "path": "nextstrain/rubella/genome",
+          "shortcuts": [
+            "rubella"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Rubella",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498 "
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff3",
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "examples": "sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/sars-cov-2/BA.2",
           "shortcuts": [
             "sars-cov-2-21L"
