@@ -1,0 +1,8 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_076948.1 1 9761
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11041
+NC_076948.1	RefSeq	region	1	9761	.	+	.	ID=NC_076948.1:1..9761;Dbxref=taxon:11041;collection-date=2008;country=USA: North Dakota;gbkey=Src;genome=genomic;genotype=2B;mol_type=genomic RNA;nat-host=Homo sapiens;note=infection originated in India;strain=RVi/Bismarck.ND.USA/23.08/2B
+NC_076948.1	RefSeq	CDS	41	6391	.	+	0	Name=NSP;gbkey=CDS;gene=NSP;locus_tag=QKT28_gp1;protein_id=YP_010801281.1;ID=cds-YP_010801281.1;product=non-structural polyprotein p200;Dbxref=GenBank:YP_010801281.1,GeneID:80539971
+NC_076948.1	RefSeq	CDS	6511	9702	.	+	0	Name=SP;gene=SP;gbkey=CDS;locus_tag=QKT28_gp2;protein_id=YP_010801282.1;ID=cds-YP_010801282.1;product=structural polyprotein;Dbxref=GenBank:YP_010801282.1,GeneID:80539970
