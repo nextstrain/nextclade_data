@@ -80,7 +80,7 @@ jobs:
 
       - name: "Checkout code (fork)"
         if: ${{ steps.config.outputs.is_fork == 'true' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
@@ -89,7 +89,7 @@ jobs:
 
       - name: "Checkout code"
         if: ${{ steps.config.outputs.is_fork != 'true' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
