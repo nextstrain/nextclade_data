@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Coxsackievirus A10",
+    "reference name": "Human coxsackievirus A10 strain Kowalik, complete genome",
+    "reference accession": "AY421767.1"
+  },
+  "alignmentParams": {
+        "penaltyGapOpen": 13,
+        "penaltyGapOpenInFrame": 18,
+        "penaltyGapOpenOutOfFrame": 23,
+        "kmerLength": 6,
+        "kmerDistance": 25,
+        "minMatchLength": 30,
+        "allowedMismatches": 15,
+        "minLength": 30
+    },
+  "defaultCds": "VP1",
+  "compatibility": {
+        "cli": "3.0.0-alpha.0",
+        "web": "3.0.0-alpha.0"
+    },
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 40
+    },
+    "privateMutations": {
+      "cutoff": 700,
+      "enabled": true,
+      "typical": 600,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 40
+    }
+    },
+  "cdsOrderPreference":["VP4", "VP2", "VP3", "VP1", "2A", "2B", "2C", "3A", "3B", "3C", "3D"]
+
+}
