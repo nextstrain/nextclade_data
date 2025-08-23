@@ -11,5 +11,5 @@ EPI_ISL_412866	feature	CDS	4266	4460	.	.	0	codon_start=1;db_xref=GeneID:37607641
 EPI_ISL_412866	feature	CDS	4652	5617	.	.	0	codon_start=1;db_xref=GeneID:37607642;gene=G;gene_name=G;Name=G;product=attachment glycoprotein
 EPI_ISL_412866	feature	CDS	5697	7421	.	.	0	codon_start=1;db_xref=GeneID:37607643;gene=F;gene_name=F;Name=F;product=fusion glycoprotein
 EPI_ISL_412866	feature	CDS	7640	8224	.	.	0	codon_start=1;db_xref=GeneID:37607644;gene=M2;gene_name=M2-1;Name=M2-1;note=ORF 1%2C matrix protein 2;product=M2-1 protein
-EPI_ISL_412866	feature	CDS	8193	8465	.	.	0	codon_start=1;db_xref=GeneID:37607644;gene=M2;gene_name=M2-2;Name=M2-2;note=ORF 2%2C RNA processivity factor;product=M2-2 protein
+EPI_ISL_412866	feature	CDS	8199	8465	.	.	0	codon_start=1;db_xref=GeneID:37607644;gene=M2;gene_name=M2-2;Name=M2-2;note=ORF 2%2C RNA processivity factor;product=M2-2 protein
 EPI_ISL_412866	feature	CDS	8532	15029	.	.	0	codon_start=1;db_xref=GeneID:37607645;gene=L;gene_name=L;Name=L;note=RNA dependant RNA polymerase%3B RdRp;product=polymerase protein
