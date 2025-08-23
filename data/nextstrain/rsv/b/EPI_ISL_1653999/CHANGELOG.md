@@ -1,3 +1,13 @@
+## Unreleased
+
+
+Addition of sublineages of B.D.E.1.7-8 and B.D.E.6-7
+
+ - [B.D.E.1.7](https://github.com/rsv-lineages/lineage-designation-A/blob/main/lineages/B.D.E.1.7.yml)
+ - [B.D.E.1.8](https://github.com/rsv-lineages/lineage-designation-A/blob/main/lineages/B.D.E.1.8.yml)
+ - [B.D.E.6](https://github.com/rsv-lineages/lineage-designation-A/blob/main/lineages/B.D.E.6.yml)
+ - [B.D.E.7](https://github.com/rsv-lineages/lineage-designation-A/blob/main/lineages/B.D.E.7.yml)
+
 ## 2025-03-04T17:31:25Z
 
  - designate new lineage B.D.4.1.2 and B.D.4.1.3. The former is an older group that doesn't seem to circulating at the moment, but is added for consistency
