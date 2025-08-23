@@ -14,6 +14,9 @@ Addition of sublineages of A.D.1 and A.D.3
  - [A.D.3.11](https://github.com/rsv-lineages/lineage-designation-A/blob/main/lineages/A.D.3.11.yml)
  - [A.D.3.12](https://github.com/rsv-lineages/lineage-designation-A/blob/main/lineages/A.D.3.12.yml)
 
+Furthermore, the annotation of the M2-2 protein was corrected. It previously started 6 bases to early, which added an erroneous `TT` prior to the start of the protein at the methionine.
+
+
 
 ## 2024-11-27T02:51:00Z
 
