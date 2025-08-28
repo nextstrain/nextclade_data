@@ -1,0 +1,11 @@
+##gff-version 3
+##sequence-region	NC_004162.2	1	11826
+NC_004162.2	Geneious	gene	77	1681	.	+	.	gene_name=nsP1
+NC_004162.2	Geneious	gene	1682	4075	.	+	.	gene_name=nsP2
+NC_004162.2	Geneious	gene	4076	5665	.	+	.	gene_name=nsP3
+NC_004162.2	Geneious	gene	5666	7501	.	+	.	gene_name=nsP4
+NC_004162.2	Geneious	gene	7567	8349	.	+	.	gene_name=C
+NC_004162.2	Geneious	gene	8350	8541	.	+	.	gene_name=E3
+NC_004162.2	Geneious	gene	8542	9810	.	+	.	gene_name=E2
+NC_004162.2	Geneious	gene	9811	9993	.	+	.	gene_name=6K
+NC_004162.2	Geneious	gene	9994	11313	.	+	.	gene_name=E1
