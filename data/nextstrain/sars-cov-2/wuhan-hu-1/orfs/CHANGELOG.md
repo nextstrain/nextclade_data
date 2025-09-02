@@ -1,3 +1,7 @@
+## Unreleased
+
+Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
 ## 2025-08-02T08:55:17Z
 
 - Add all 185 Pango lineages newly designated between 2025-06-09 and 2025-07-30. Unfold below to see a list of all newly included lineages with their designation dates:

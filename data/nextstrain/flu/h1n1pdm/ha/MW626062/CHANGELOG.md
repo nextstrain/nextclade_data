@@ -1,3 +1,7 @@
+## Unreleased
+
+Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
 ## 2025-08-07T09:22:32Z
  - Define subclade [D.3.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.3.1.yml)
 

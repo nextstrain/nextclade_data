@@ -1,3 +1,7 @@
+## Unreleased
+
+Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
 ## 2025-04-25T12:24:24Z
 
 - Newly released sequences are included.

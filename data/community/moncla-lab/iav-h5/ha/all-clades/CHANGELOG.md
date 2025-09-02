@@ -1,3 +1,7 @@
+## Unreleased
+
+Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
 ## 2025-08-12T18:07:15Z
 
 Updated README to change reference to published manuscript (https://doi.org/10.1093/ve/veaf058) and removed experimental tag from dataset.
