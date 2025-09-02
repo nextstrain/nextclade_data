@@ -23,6 +23,9 @@ from lib.logger import l
 from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 
 
+
+JSON_SCHEMA_URL_INDEX_JSON = "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-index-json.schema.json"
+
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   ref_filename = dict_get(pathogen_json, ["files", "reference"])
   if not ref_filename:
@@ -343,6 +346,7 @@ def main():
   #   return
 
   index_json = {
+    "$schema": JSON_SCHEMA_URL_INDEX_JSON,
     "schemaVersion": "3.0.0",
     "collections": collections,
     "minimizerIndex": [
