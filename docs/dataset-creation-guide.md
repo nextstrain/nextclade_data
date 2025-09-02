@@ -124,6 +124,7 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "files": {
     "reference": "reference.fasta",
@@ -170,6 +171,8 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
 
 Further details on the `pathogen.json` file format are available in the [Nextclade docs](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/05-pathogen-config.html).
 The `files` field of the `pathogen.json` is mandatory and has to list all input files Nextclade should expect to find in the dataset.
+
+The `$schema` field contains a URL to the JSON schema that describes the structure of the `pathogen.json` file. This allows editors such as VSCode to provide auto-completion, documentation and validation of the fields. You can find the all schemas in Nextclade software repo [here](https://github.com/nextstrain/nextclade/tree/master/packages/nextclade-schemas).
 
 While only the `reference.fasta` and the `pathogen.json` are required input files, we recommend adding example sequences. These allow users to quickly explore available datasets and help during dataset creation. A README is useful to provide additional information about the dataset. Lastly, a CHANGELOG helps users understand what has changed between different versions of the dataset. As a starting point, they can be minimal:
 
