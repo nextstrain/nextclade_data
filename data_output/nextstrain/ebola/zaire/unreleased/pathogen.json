@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "alignmentParams": {
     "excessBandwidth": 100,
     "terminalBandwidth": 300,
@@ -21,7 +22,7 @@
   "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
-    "examples": "examples.fasta",
+    "examples": "example_sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
@@ -32,7 +33,7 @@
     "frameShifts": {
       "enabled": true,
       "ignoredFrameShifts": [],
-      "scoreWeight": 20
+      "scoreWeight": 50
     },
     "missingData": {
       "enabled": true,
@@ -41,14 +42,14 @@
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 40
+      "mixedSitesThreshold": 20
     },
     "privateMutations": {
-      "cutoff": 300,
+      "cutoff": 30,
       "enabled": true,
-      "typical": 50,
-      "weightLabeledSubstitutions": 6,
-      "weightReversionSubstitutions": 6,
+      "typical": 10,
+      "weightLabeledSubstitutions": 4,
+      "weightReversionSubstitutions": 2,
       "weightUnlabeledSubstitutions": 1
     },
     "snpClusters": {
@@ -60,7 +61,7 @@
     "stopCodons": {
       "enabled": true,
       "ignoredStopCodons": [],
-      "scoreWeight": 20
+      "scoreWeight": 50
     }
   },
   "schemaVersion": "3.0.0",
