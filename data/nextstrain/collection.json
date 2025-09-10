@@ -66,6 +66,7 @@
     "nextstrain/flu/vic/ns",
     "nextstrain/rubella/E1",
     "nextstrain/mumps/sh",
-    "nextstrain/mumps/genome"
+    "nextstrain/mumps/genome",
+    "nextstrain/rubella/genome"
   ]
 }
