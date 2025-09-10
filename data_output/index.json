@@ -3960,8 +3960,8 @@
           "enabled": true,
           "attributes": {
             "name": "Rubella",
-            "reference name": "Ichinose-B95a",
-            "reference accession": "NC_001498 "
+            "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
+            "reference accession": "NC_076948"
           },
           "files": {
             "reference": "reference.fasta",
@@ -3970,7 +3970,7 @@
             "treeJson": "tree.json",
             "changelog": "CHANGELOG.md",
             "readme": "README.md",
-            "examples": "sequences.fasta"
+            "examples": "example_sequences.fasta"
           },
           "capabilities": {
             "clades": 14,

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "files": {
     "reference": "reference.fasta",
@@ -7,7 +8,7 @@
     "treeJson": "tree.json",
     "changelog": "CHANGELOG.md",
     "readme": "README.md",
-    "examples": "sequences.fasta"
+    "examples": "example_sequences.fasta"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -16,11 +17,11 @@
   "shortcuts": [
     "rubella"
   ],
-  "defaultCds": "N",
+  "defaultCds": "NSP",
   "attributes": {
     "name": "Rubella",
-    "reference name": "Ichinose-B95a",
-    "reference accession": "NC_001498 "
+    "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
+    "reference accession": "NC_076948"
   },
   "alignmentParams": {
     "retryReverseComplement": true,
