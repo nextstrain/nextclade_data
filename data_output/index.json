@@ -2454,6 +2454,7 @@
             "reference name": "COD/1976/Yambuku-Mayinga"
           },
           "files": {
+            "treeJson": "tree.json",
             "changelog": "CHANGELOG.md",
             "examples": "example_sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
@@ -2462,6 +2463,7 @@
             "reference": "reference.fasta"
           },
           "capabilities": {
+            "clades": 14,
             "qc": [
               "frameShifts",
               "missingData",
