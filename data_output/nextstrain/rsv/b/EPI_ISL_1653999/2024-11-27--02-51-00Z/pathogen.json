@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "left",
+    "minSeedCover": 0.1
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "F",
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 50,
+      "cutoff": 150,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 10,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 8
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+        {
+          "codon": 320,
+          "cdsName": "G"
+        }
+      ]
+    }
+  },
+  "cdsOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ],
+  "maintenance": {
+    "website": [
+      "https://nextstrain.org",
+      "https://clades.nextstrain.org"
+    ],
+    "documentation": [
+      "https://github.com/nextstrain/rsv"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/rsv"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/rsv/issues"
+    ],
+    "organizations": [
+      "Nextstrain"
+    ],
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
+  },
+  "shortcuts": [
+    "rsv_b",
+    "nextstrain/rsv/b",
+    "nextstrain/rsv/b/hRSV-B-Australia-VIC-RCH056-2019"
+  ],
+  "attributes": {
+    "name": "RSV-B",
+    "reference accession": "EPI_ISL_1653999",
+    "reference name": "hRSV/B/Australia/VIC-RCH056/2019"
+  },
+  "geneOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ],
+  "version": {
+    "updatedAt": "2024-11-27T02:51:00Z",
+    "tag": "2024-11-27--02-51-00Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}

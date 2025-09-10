@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-index-json.schema.json",
   "schemaVersion": "3.0.0",
   "collections": [
     {
@@ -71,6 +72,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 53,
+            "customClades": {
+              "Nextclade_pango": 4189,
+              "partiallyAliased": 4189,
+              "clade_nextstrain": 53,
+              "clade_who": 13,
+              "clade_display": 53
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -84,6 +93,141 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-02T08:55:17Z",
+              "tag": "2025-08-02--08-55-17Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-06-09T15:42:38Z",
+              "tag": "2025-06-09--15-42-38Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-01T08:20:12Z",
+              "tag": "2025-04-01--08-20-12Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-02-16T04:00:32Z",
               "tag": "2024-02-16--04-00-32Z",
@@ -102,8 +246,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-02-16T04:00:32Z",
-            "tag": "2024-02-16--04-00-32Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -152,6 +295,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 51,
+            "customClades": {
+              "Nextclade_pango": 3652,
+              "partiallyAliased": 3652,
+              "clade_nextstrain": 51,
+              "clade_who": 13,
+              "clade_display": 51
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -166,170 +317,116 @@
           },
           "versions": [
             {
-              "updatedAt": "2024-02-16T04:00:32Z",
-              "tag": "2024-02-16--04-00-32Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
               }
             },
             {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2024-02-16T04:00:32Z",
-            "tag": "2024-02-16--04-00-32Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sars-cov-2/BA.2",
-          "shortcuts": [
-            "sars-cov-2-21L"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "SARS-CoV-2 (BA.2)",
-            "reference name": "Wuhan-Hu-1 with BA.2 SNPs"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://docs.nextstrain.org/projects/nextclade"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/neherlab/nextclade_data_workflows"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/nextstrain/nextclade_data/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "snpClusters",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels",
-              "phenotypeData"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2024-02-16T04:00:32Z",
-              "tag": "2024-02-16--04-00-32Z",
+              "updatedAt": "2025-06-09T15:42:38Z",
+              "tag": "2025-06-09--15-42-38Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
               }
             },
             {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
               }
-            }
-          ],
-          "version": {
-            "updatedAt": "2024-02-16T04:00:32Z",
-            "tag": "2024-02-16--04-00-32Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sars-cov-2/XBB",
-          "enabled": true,
-          "attributes": {
-            "name": "SARS-CoV-2 (XBB)",
-            "reference name": "Wuhan-Hu-1 with XBB SNPs"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://docs.nextstrain.org/projects/nextclade"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/neherlab/nextclade_data_workflows"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/nextstrain/nextclade_data/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "snpClusters",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels",
-              "phenotypeData"
-            ]
-          },
-          "versions": [
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-02-16T04:00:32Z",
               "tag": "2024-02-16--04-00-32Z",
@@ -348,8 +445,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-02-16T04:00:32Z",
-            "tag": "2024-02-16--04-00-32Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -397,6 +493,14 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 30,
+            "customClades": {
+              "Nextclade_pango": 3453,
+              "partiallyAliased": 3453,
+              "clade_nextstrain": 30,
+              "clade_who": 3,
+              "clade_display": 30
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -411,6 +515,141 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-02T08:55:17Z",
+              "tag": "2025-08-02--08-55-17Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-06-09T15:42:38Z",
+              "tag": "2025-06-09--15-42-38Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-01T08:20:12Z",
+              "tag": "2025-04-01--08-20-12Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-02-16T04:00:32Z",
               "tag": "2024-02-16--04-00-32Z",
@@ -429,8 +668,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-02-16T04:00:32Z",
-            "tag": "2024-02-16--04-00-32Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -481,6 +719,12 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 25,
+            "customClades": {
+              "short-clade": 16,
+              "subclade": 27,
+              "proposedSubclade": 27
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -493,6 +737,69 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -502,8 +809,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -556,6 +862,12 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 26,
+            "customClades": {
+              "short-clade": 16,
+              "subclade": 27,
+              "proposedSubclade": 27
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -568,6 +880,69 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -577,8 +952,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -630,6 +1004,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 26,
+            "customClades": {
+              "proposedSubclade": 26
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -637,10 +1015,67 @@
               "stopCodons"
             ],
             "other": [
+              "mutLabels",
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
@@ -651,8 +1086,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -703,6 +1137,12 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 37,
+            "customClades": {
+              "subclade": 48,
+              "short-clade": 37,
+              "proposedSubclade": 50
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -714,6 +1154,69 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-02-22T16:12:03Z",
               "tag": "2024-02-22--16-12-03Z",
@@ -732,8 +1235,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-02-22T16:12:03Z",
-            "tag": "2024-02-22--16-12-03Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -786,6 +1288,12 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 37,
+            "customClades": {
+              "subclade": 48,
+              "short-clade": 37,
+              "proposedSubclade": 50
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -793,11 +1301,83 @@
               "stopCodons"
             ],
             "other": [
+              "mutLabels",
               "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-08T05:08:21Z",
+              "tag": "2024-08-08--05-08-21Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-02-22T16:12:03Z",
               "tag": "2024-02-22--16-12-03Z",
@@ -816,8 +1396,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-02-22T16:12:03Z",
-            "tag": "2024-02-22--16-12-03Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -869,6 +1448,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 21,
+            "customClades": {
+              "proposedSubclade": 17
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -876,10 +1459,58 @@
               "stopCodons"
             ],
             "other": [
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
@@ -890,8 +1521,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -944,6 +1574,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 9,
+            "customClades": {
+              "subclade": 26,
+              "proposedSubclade": 23
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -956,6 +1591,53 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -965,8 +1647,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1018,6 +1699,10 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 19,
+            "customClades": {
+              "proposedSubclade": 19
+            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1025,10 +1710,59 @@
               "stopCodons"
             ],
             "other": [
+              "mutLabels",
+              "phenotypeData",
               "aaMotifs"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
@@ -1039,8 +1773,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1093,6 +1826,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 3,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1104,6 +1838,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-30T16:34:55Z",
               "tag": "2024-01-30--16-34-55Z",
@@ -1122,8 +1863,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-30T16:34:55Z",
-            "tag": "2024-01-30--16-34-55Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1174,14 +1914,50 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 45,
             "qc": [
               "privateMutations",
+              "missingData",
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-25T09:00:35Z",
+              "tag": "2025-08-25--09-00-35Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-01T22:31:31Z",
+              "tag": "2024-08-01--22-31-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-29T10:29:43Z",
               "tag": "2024-01-29--10-29-43Z",
@@ -1200,8 +1976,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-29T10:29:43Z",
-            "tag": "2024-01-29--10-29-43Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1252,14 +2027,58 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 30,
             "qc": [
               "privateMutations",
+              "missingData",
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-25T09:00:35Z",
+              "tag": "2025-08-25--09-00-35Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-01T22:31:31Z",
+              "tag": "2024-08-01--22-31-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-29T10:29:43Z",
               "tag": "2024-01-29--10-29-43Z",
@@ -1278,8 +2097,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-29T10:29:43Z",
-            "tag": "2024-01-29--10-29-43Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1308,15 +2126,60 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 7,
+            "customClades": {
+              "outbreak": 1,
+              "lineage": 44
+            },
             "qc": [
               "frameShifts",
               "missingData",
               "mixedSites",
               "privateMutations",
+              "snpClusters",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-25T12:24:24Z",
+              "tag": "2025-04-25--12-24-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-27T21:28:04Z",
+              "tag": "2024-08-27--21-28-04Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
@@ -1327,8 +2190,84 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/mpox/clade-i",
+          "enabled": true,
+          "attributes": {
+            "name": "Mpox virus (Clade I)",
+            "reference accession": "DQ011155.1",
+            "reference name": "Zaire_1979-005"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 4,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-25T12:24:24Z",
+              "tag": "2025-04-25--12-24-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-01T22:31:31Z",
+              "tag": "2024-08-01--22-31-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1356,6 +2295,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 2,
+            "customClades": {
+              "outbreak": 1,
+              "lineage": 44
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -1367,6 +2311,37 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-25T12:24:24Z",
+              "tag": "2025-04-25--12-24-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1376,8 +2351,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1405,6 +2379,11 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 2,
+            "customClades": {
+              "outbreak": 1,
+              "lineage": 36
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -1419,6 +2398,37 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-25T12:24:24Z",
+              "tag": "2025-04-25--12-24-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1428,8 +2438,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1482,6 +2491,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1491,8 +2515,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1545,6 +2568,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1554,8 +2592,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1604,9 +2641,36 @@
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
@@ -1617,8 +2681,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1671,6 +2734,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1680,8 +2758,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1734,6 +2811,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1743,8 +2835,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1797,6 +2888,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1806,8 +2912,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1860,6 +2965,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1869,8 +2989,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1923,6 +3042,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -1932,8 +3066,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1982,9 +3115,36 @@
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
@@ -1995,8 +3155,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2049,6 +3208,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -2058,8 +3232,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2112,6 +3285,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -2121,8 +3309,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2175,6 +3362,21 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
               "compatibility": {
@@ -2184,8 +3386,1247 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-01-16T20:31:02Z",
-            "tag": "2024-01-16--20-31-02Z",
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/measles/genome/WHO-2012",
+          "shortcuts": [
+            "measles"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Measles morbillivirus -- complete genome",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498 "
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff3",
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "examples": "sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-11T19:06:01Z",
+              "tag": "2025-08-11--19-06-01Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/measles/N450/WHO-2012",
+          "enabled": true,
+          "attributes": {
+            "name": "Measles N450 (WHO-2012)",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498.1"
+          },
+          "files": {
+            "reference": "measles_reference_N450.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "measles_reference_N450.gff3",
+            "treeJson": "measles_nextclade.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            },
+            {
+              "updatedAt": "2025-08-02T08:55:17Z",
+              "tag": "2025-08-02--08-55-17Z"
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z"
+            },
+            {
+              "updatedAt": "2024-06-07T06:48:19Z",
+              "tag": "2024-06-07--06-48-19Z"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "nextstrain/dengue/all",
+          "enabled": true,
+          "attributes": {
+            "name": "Dengue virus All serotypes",
+            "reference accession": "NC_002640",
+            "reference name": "dengue virus type 4"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 5,
+            "qc": [
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-18T19:09:40Z",
+              "tag": "2024-06-18--19-09-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/yellow-fever/prM-E",
+          "enabled": true,
+          "attributes": {
+            "name": "Yellow fever virus (YFV) prM-E region",
+            "reference name": "Asibi",
+            "reference accession": "AY640589.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 8,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z"
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "nextstrain/hmpv/all-clades/NC_039199",
+          "shortcuts": [
+            "hmpv"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Human Metapneumovirus",
+            "reference accession": "NC_039199",
+            "reference name": "hMPV/00-1"
+          },
+          "files": {
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 10,
+            "customClades": {
+              "legacy_clade": 10
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-25T12:24:24Z",
+              "tag": "2025-04-25--12-24-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-12-04T17:05:31Z",
+              "tag": "2024-12-04--17-05-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/pa",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B(Vic) PA (segment 3)",
+            "segment": "pa",
+            "reference accession": "CY115156",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/pb1",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B(Vic) PB1 (segment 1)",
+            "segment": "pb1",
+            "reference accession": "CY115157",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/np",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B(Vic) NP (segment 5)",
+            "segment": "np",
+            "reference accession": "CY115154",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/mp",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B(Vic) MP (segment 7)",
+            "segment": "mp",
+            "reference accession": "CY115152",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/pb2",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B(Vic) PB2 (segment 2)",
+            "segment": "pb2",
+            "reference accession": "CY115158",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/vic/ns",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B(Vic) NS (segment 8)",
+            "segment": "ns",
+            "reference accession": "CY115155",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/rubella/E1",
+          "enabled": true,
+          "attributes": {
+            "name": "Rubella virus E1 region",
+            "reference name": "F-Therien",
+            "reference accession": "NC_001545.2"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            },
+            {
+              "updatedAt": "2025-07-01T21:21:21Z",
+              "tag": "2025-07-01--21-21-21Z"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "nextstrain/mumps/sh",
+          "enabled": true,
+          "attributes": {
+            "name": "Mumps MuV Genotypes (SH gene 315nt region)",
+            "reference name": "Jeryl-Lynn (genotype A)",
+            "reference accession": "D90232"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 13,
+            "customClades": {
+              "MuV_genotype": 12
+            }
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/mumps/genome",
+          "enabled": true,
+          "attributes": {
+            "name": "Mumps MuV Genotypes (Full genome)",
+            "reference name": "Jeryl-Lynn (genotype A)",
+            "reference accession": "D90232"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 13,
+            "customClades": {
+              "MuV_genotype": 12
+            },
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/sars-cov-2/BA.2",
+          "shortcuts": [
+            "sars-cov-2-21L"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "SARS-CoV-2 (BA.2)",
+            "reference name": "Wuhan-Hu-1 with BA.2 SNPs",
+            "deprecated": true
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 28,
+            "customClades": {
+              "Nextclade_pango": 2805,
+              "partiallyAliased": 2805,
+              "clade_nextstrain": 28,
+              "clade_who": 3,
+              "clade_display": 28
+            },
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-06-10T16:01:10Z",
+              "tag": "2025-06-10--16-01-10Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-16T04:00:32Z",
+              "tag": "2024-02-16--04-00-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/sars-cov-2/XBB",
+          "enabled": true,
+          "attributes": {
+            "name": "SARS-CoV-2 (XBB)",
+            "reference name": "Wuhan-Hu-1 with XBB SNPs",
+            "deprecated": true
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 28,
+            "customClades": {
+              "Nextclade_pango": 2805,
+              "partiallyAliased": 2805,
+              "clade_nextstrain": 28,
+              "clade_who": 3,
+              "clade_display": 28
+            },
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-06-10T16:01:10Z",
+              "tag": "2025-06-10--16-01-10Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-16T04:00:32Z",
+              "tag": "2024-02-16--04-00-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2296,6 +4737,54 @@
       },
       "datasets": [
         {
+          "path": "community/isuvdl/mazeller/prrsv1/orf5/yimim2025",
+          "enabled": true,
+          "attributes": {
+            "name": "PRRSV-1 ORF5",
+            "reference name": "Porcine reproductive and respiratory syndrome virus 1, ORF5 cds",
+            "reference accession": "M96262.2"
+          },
+          "files": {
+            "reference": "lelystad_orf5.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "lelystad_orf5.gff",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            },
+            {
+              "updatedAt": "2025-03-26T14:04:54Z",
+              "tag": "2025-03-26--14-04-54Z"
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z"
+            },
+            {
+              "updatedAt": "2025-03-12T21:00:00Z",
+              "tag": "2025-03-12--21-00-00Z"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
           "path": "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
           "enabled": true,
           "attributes": {
@@ -2313,6 +4802,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 33,
             "qc": [
               "frameShifts",
               "mixedSites",
@@ -2321,6 +4811,21 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2024-02-22T16:12:03Z",
               "tag": "2024-02-22--16-12-03Z",
@@ -2339,12 +4844,664 @@
             }
           ],
           "version": {
-            "updatedAt": "2024-02-22T16:12:03Z",
-            "tag": "2024-02-22--16-12-03Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
             }
+          }
+        },
+        {
+          "path": "community/neherlab/hiv-1/hxb2",
+          "shortcuts": [
+            "neherlab/hiv-1"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "HIV-1 (HXB2)",
+            "reference accession": "NC_001802",
+            "reference name": "HIV-1, strain HXB2",
+            "experimental": true
+          },
+          "files": {
+            "pathogenJson": "pathogen.json",
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 100,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/moncla-lab/iav-h5/ha/2.3.4.4",
+          "enabled": true,
+          "attributes": {
+            "name": "H5Nx clade 2.3.4.4",
+            "reference accession": "EPI1846961",
+            "reference name": "A/Astrakhan/3212/2020(H5N8)",
+            "segment": "ha",
+            "experimental": false
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 11,
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-12T18:07:15Z",
+              "tag": "2025-08-12--18-07-15Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-30T18:05:53Z",
+              "tag": "2025-01-30--18-05-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-12-04T17:05:31Z",
+              "tag": "2024-12-04--17-05-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/moncla-lab/iav-h5/ha/all-clades",
+          "enabled": true,
+          "attributes": {
+            "name": "H5Nx (all clades)",
+            "reference accession": "AF144305.1",
+            "reference name": "A/Goose/Guangdong/1/96(H5N1)",
+            "segment": "ha",
+            "experimental": false
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 57,
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-12T18:07:15Z",
+              "tag": "2025-08-12--18-07-15Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-30T18:05:53Z",
+              "tag": "2025-01-30--18-05-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-12-04T17:05:31Z",
+              "tag": "2024-12-04--17-05-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/moncla-lab/iav-h5/ha/2.3.2.1",
+          "enabled": true,
+          "attributes": {
+            "name": "H5Nx clade 2.3.2.1",
+            "reference accession": "EPI424984",
+            "reference name": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
+            "segment": "ha",
+            "experimental": false
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 10,
+            "qc": [
+              "frameShifts",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-12T18:07:15Z",
+              "tag": "2025-08-12--18-07-15Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-30T18:05:53Z",
+              "tag": "2025-01-30--18-05-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-05-08T11:39:52Z",
+              "tag": "2024-05-08--11-39-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/v-gen-lab/dengue/denv1",
+          "enabled": true,
+          "attributes": {
+            "name": "DENV-1",
+            "reference accession": "NC_001477.1",
+            "reference name": "Nauru/NMRI-45AZ5PDK-0/1974"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 72,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-02T19:11:08Z",
+              "tag": "2025-04-02--19-11-08Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-31T20:44:06Z",
+              "tag": "2024-08-31--20-44-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/v-gen-lab/dengue/denv2",
+          "enabled": true,
+          "attributes": {
+            "name": "DENV-2",
+            "reference accession": "NC_001474.2",
+            "reference name": "Thailand/CDC-16681/1964"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 84,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-31T20:44:06Z",
+              "tag": "2024-08-31--20-44-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/v-gen-lab/dengue/denv3",
+          "enabled": true,
+          "attributes": {
+            "name": "DENV-3",
+            "reference accession": "NC_001475.2",
+            "reference name": "D3/H/IMTSSA-SRI/2000"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 39,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-31T20:44:06Z",
+              "tag": "2024-08-31--20-44-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/v-gen-lab/dengue/denv4",
+          "enabled": true,
+          "attributes": {
+            "name": "DENV-4",
+            "reference accession": "NC_002640.1",
+            "reference name": "rDEN4"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 31,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-08-31T20:44:06Z",
+              "tag": "2024-08-31--20-44-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/genspectrum/marburg/HK1980/all-lineages",
+          "enabled": true,
+          "attributes": {
+            "name": "Orthomarburgvirus marburgense",
+            "reference name": "Marburg marburgvirus isolate Marburg virus/H.sapiens-tc/KEN/1980/Mt. Elgon-Musoke, complete genome",
+            "reference accession": "NC_001608.3"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "treeJson": "marburg_tree.json",
+            "examples": "examples.fasta"
+          },
+          "capabilities": {
+            "clades": 11,
+            "customClades": {
+              "lineage": 2
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z"
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
           }
         }
       ]

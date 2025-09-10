@@ -28,7 +28,7 @@ jobs:
     # Run only if it's not a fork
     if: ${{ !((github.event_name == 'pull_request') && (github.event.pull_request.head.repo.fork || ((github.event.pull_request.head.repo.full_name || github.event.pull_request.base.repo.full_name) != github.repository))) }}
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     environment:
       name: ${{ github.ref }}
@@ -80,7 +80,7 @@ jobs:
 
       - name: "Checkout code (fork)"
         if: ${{ steps.config.outputs.is_fork == 'true' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
@@ -89,7 +89,7 @@ jobs:
 
       - name: "Checkout code"
         if: ${{ steps.config.outputs.is_fork != 'true' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-tags: true # Whether to fetch tags, even if fetch-depth > 0.
@@ -97,11 +97,15 @@ jobs:
 
       - name: "Install system dependencies"
         run: |
-          sudo apt-get install brotli pigz parallel python3 rename --yes -qq >/dev/null
+          sudo apt-get install brotli genometools pigz parallel python3 rename --yes -qq >/dev/null
 
       - name: "Install Python dependencies"
         run: |
           pip3 install -r requirements.txt
+
+      - name: "Validate GFF files"
+        run: |
+          ./scripts/validate-gff "data/"
 
       - name: "Rebuild datasets (fork)"
         if: ${{ steps.config.outputs.is_fork == 'true' }}

@@ -1,0 +1,76 @@
+{
+  "alignmentParams": {
+    "penaltyGapOpen": 8,
+    "penaltyGapOpenInFrame": 12,
+    "penaltyGapOpenOutOfFrame": 14,
+    "gapAlignmentSide": "left",
+    "minSeedCover": 0.01,
+    "minLength": 1000
+  },
+  "attributes": {
+    "name": "Dengue virus All serotypes",
+    "reference accession": "NC_002640",
+    "reference name": "dengue virus type 4"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": false
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 2700,
+      "scoreBias": 300
+    },
+    "mixedSites": {
+      "enabled": false,
+      "mixedSitesThreshold": 10
+    },
+    "privateMutations": {
+      "cutoff": 24,
+      "enabled": false,
+      "typical": 8,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "updatedAt": "2024-06-18T19:09:40Z",
+    "tag": "2024-06-18--19-09-40Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  },
+  "defaultCds": "E"
+}

@@ -1,0 +1,19 @@
+##gff-version 3
+##sequence-region NC_001498.1 1 15894
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11234
+NC_001498.1	RefSeq	region	1	15894	.	+	.	ID=NC_001498.1:1..15894;Dbxref=taxon:11234;gbkey=Src;genome=genomic;mol_type=viral cRNA;old-name=Measles virus;
+NC_001498.1	RefSeq	gene	56	1744	.	+	.	gene=N;locus_tag=MeVgp1;product=gene N;ID=rna-MeVgp1;Dbxref=GeneID:1489804
+NC_001498.1	RefSeq	CDS	108	1685	.	+	0	Name=N;gene=N;gbkey=CDS;locus_tag=MeVgp1;Parent=rna-MeVgp1;protein_id=NP_056918.1;ID=cds-NP_056918.1;product=nucleocapsid protein;Dbxref=GenBank:NP_056918.1,GeneID:1489804
+NC_001498.1	RefSeq	gene	1748	3402	.	+	.	Name=P_V_C;gene_synonym=P;gbkey=Gene;gene=P_V_C;locus_tag=MeVgp2;ID=gene-MeVgp2;Dbxref=GeneID:1489805;gene_biotype=protein_coding
+NC_001498.1	RefSeq	CDS	1807	2499	.	+	0	Name=V;gbkey=CDS;gene=V;locus_tag=MeVgp2;product=V protein;Parent=gene-MeVgp2;protein_id=YP_003873249.2;ID=cds-YP_003873249.2;Dbxref=GenBank:YP_003873249.2,GeneID:1489805
+NC_001498.1	RefSeq	CDS	2499	2705	.	+	0	Name=V;gbkey=CDS;gene=V;locus_tag=MeVgp2;product=V protein;Parent=gene-MeVgp2;protein_id=YP_003873249.2;ID=cds-YP_003873249.2;Dbxref=GenBank:YP_003873249.2,GeneID:1489805
+NC_001498.1	RefSeq	CDS	1807	3330	.	+	0	Name=P;gbkey=CDS;gene=P;locus_tag=MeVgp2;Parent=gene-MeVgp2;protein_id=NP_056919.1;product=phosphoprotein;ID=cds-NP_056919.1;Dbxref=GenBank:NP_056919.1,GeneID:1489805
+NC_001498.1	RefSeq	CDS	1829	2389	.	+	0	Name=C;gbkey=CDS;gene=C;locus_tag=MeVgp2;Parent=gene-MeVgp2;protein_id=NP_056920.1;product=C protein;ID=cds-NP_056920.1;Dbxref=GeneID:1489805
+NC_001498.1	RefSeq	gene	3406	4872	.	+	.	gene=M;locus_tag=MeVgp3;product=M gene;ID=rna-MeVgp3;Dbxref=GeneID:1489803
+NC_001498.1	RefSeq	CDS	3438	4445	.	+	0	Name=M;gene=M;gbkey=CDS;locus_tag=MeVgp3;Parent=rna-MeVgp3;protein_id=NP_056921.1;product=matrix protein;ID=cds-NP_056921.1;Dbxref=GenBank:NP_056921.1,GeneID:1489803
+NC_001498.1	RefSeq	gene	4876	7247	.	+	.	gene=F;locus_tag=MeVgp4;product=F gene;ID=rna-MeVgp4;Dbxref=GeneID:1489800
+NC_001498.1	RefSeq	CDS	5458	7110	.	+	0	Name=F;gene=F;gbkey=CDS;locus_tag=MeVgp4;Parent=rna-MeVgp4;protein_id=NP_056922.1;product=fusion protein;ID=cds-NP_056922.1;Dbxref=GenBank:NP_056922.1,GeneID:1489800
+NC_001498.1	RefSeq	gene	7251	9208	.	+	.	gene=H;locus_tag=MeVgp5;product=H gene;ID=rna-MeVgp5;Dbxref=GeneID:1489801
+NC_001498.1	RefSeq	CDS	7271	9124	.	+	0	Name=H;gene=H;gbkey=CDS;locus_tag=MeVgp5;Parent=rna-MeVgp5;protein_id=NP_056923.1;ID=cds-NP_056923.1;product=hemagglutinin protein;Dbxref=GenBank:NP_056923.1,GeneID:1489801
+NC_001498.1	RefSeq	gene	9212	15854	.	+	.	gene=L;locus_tag=MeVgp6;product=L gene;ID=rna-MeVgp6;Dbxref=GeneID:1489802
+NC_001498.1	RefSeq	CDS	9234	15785	.	+	0	Name=L;gene=L;gbkey=CDS;locus_tag=MeVgp6;Parent=rna-MeVgp6;protein_id=NP_056924.1;ID=cds-NP_056924.1;product=large polymerase protein;Dbxref=GenBank:NP_056924.1,GeneID:1489802

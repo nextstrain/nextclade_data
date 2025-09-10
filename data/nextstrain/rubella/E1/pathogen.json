@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Rubella virus E1 region",
+    "reference name": "F-Therien",
+    "reference accession": "NC_001545.2"
+  },
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "minSeedCover": 0.01,
+    "terminalBandwidth": 100,
+    "excessBandwith": 18,
+    "minMatchLength": 20
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 20,
+      "scoreBias": 4
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true
+    },
+    "privateMutations": {
+      "enabled": true,
+      "cutoff": 45,
+      "typical": 4,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": true,
+      "clusterCutOff": 10,
+      "scoreWeight": 50,
+      "windowSize": 50
+    }
+  }
+}

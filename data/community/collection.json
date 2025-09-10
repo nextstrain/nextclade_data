@@ -15,6 +15,20 @@
     ]
   },
   "dataset_order": [
-    "community/isuvdl/mazeller/prrsv2/orf5/yimim2023"
+    "community/isuvdl/mazeller/prrsv1/orf5/yimim2025",
+    "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
+    "community/neherlab/hiv-1",
+    "community/neherlab/hiv-1/hxb2",
+    "community/moncla-lab/iav-h5/all-clades",
+    "community/moncla-lab/iav-h5/2.3.4.4",
+    "community/moncla-lab/iav-h5/2.3.2.1",
+    "community/moncla-lab/iav-h5/ha/2.3.4.4",
+    "community/moncla-lab/iav-h5/ha/all-clades",
+    "community/moncla-lab/iav-h5/ha/2.3.2.1",
+    "community/v-gen-lab/dengue/denv1",
+    "community/v-gen-lab/dengue/denv2",
+    "community/v-gen-lab/dengue/denv3",
+    "community/v-gen-lab/dengue/denv4",
+    "community/genspectrum/marburg/HK1980/all-lineages"
   ]
 }

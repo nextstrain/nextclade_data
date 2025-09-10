@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "alignmentParams": {
     "excessBandwidth": 9,
@@ -70,5 +71,55 @@
     "reference accession": "NC_007371",
     "reference name": "A/NewYork/392/2004"
   },
-  "defaultCds": "PA"
+  "defaultCds": "PA",
+"phenotypeData":[
+    {
+      "name": "PAI",
+      "nameFriendly": "PAI",
+      "description": "This column displays a score associated with reduced susceptibility to polymerase inhibitors. The score is a weighted sum of known substitutions (x1) or major substitutions (x2), while substitutions at positions that confer resistance but are to amino acids not previously described to confer resistance count x0.5.",
+      "cds": "PA",
+      "aaRange": {
+        "begin":0,
+        "end": 460
+      },
+      "data": [
+        {
+          "name": "PAI_markers",
+          "weight": 1,
+          "locations": {
+            "27": {"P":1, "default":0.5},
+            "22": {"G":1, "K":2, "R": 2, "default":0.5},
+            "33": {"R":1, "default":0.5},
+            "35": {"V":2, "default":0.5},
+            "36": {"T":2, "default":0.5},
+            "37": {"F":2, "L":1, "M":2, "N":2, "S":1, "T":2,  "V":1, "default":0.5},
+            "118": {"D":1, "default":0.5},
+            "197": {"K":1, "default":0.5},
+            "198": {"G":1, "default":0.5}
+          }
+        }
+      ]
+    }
+  ],
+  "mutLabels": {
+    "aaMutLabelMap": {
+      "PA:23G":["Baloxavir"],
+      "PA:23K":["Baloxavir"],
+      "PA:23R":["Baloxavir"],
+      "PA:28P":["Baloxavir"],
+      "PA:34R":["Baloxavir"],
+      "PA:36V":["Baloxavir"],
+      "PA:37T":["Baloxavir"],
+      "PA:38F":["Baloxavir"],
+      "PA:38L":["Baloxavir"],
+      "PA:38M":["Baloxavir"],
+      "PA:38N":["Baloxavir"],
+      "PA:38S":["Baloxavir"],
+      "PA:38T":["Baloxavir"],
+      "PA:38V":["Baloxavir"],
+      "PA:119D":["Baloxavir"],
+      "PA:198K":["Baloxavir"],
+      "PA:200G":["Baloxavir"]
+    }
+  }
 }

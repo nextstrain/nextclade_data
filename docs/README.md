@@ -1,14 +1,15 @@
 # Nextclade dataset documentation
 
-## Dataset migration from version 2 to 3
-Version 2 dataset are not compatible with Nextclade v3 and need migrating.
-See our [dataset migration guide](migration-guide-v3.md) for tips and tools on how to create v3 dataset from your existing v2 datasets.
+- [Create a new dataset](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-creation-guide.md) - this guide explains how to create a new dataset from scratch. To help you to get going, there is also a [minimal dataset](minimal-dataset) and a [script](example-workflow/scripts/generate_from_genbank.py) to walk you through the creation of a suitable annotation using data from RefSeq.
 
-## Create new datasets
-You can create your own NextClade datasets!
-We provide a [dataset creation tutorial](dataset-creation-guide.md) to help you assemble datasets for your virus of interest. To help you to get going, there is a [minimal dataset](minimal-dataset) and a [script](example-workflow/scripts/generate_from_genbank.py) to walk you through the creation of a suitable annotation using data from RefSeq.
+- [Add dataset to Nextclade](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-curation-guide.md) - if you have a dataset and want to contribute it to the Nextclade official dataset collection and make it available in Nextclade Web and Nextclade CLI.
 
-## Contribute datasets to a collection on NextClade
+- [Nextclade dataset server maintenance guide](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-server-maintenance.md) - if you are maintainer of the official Nextclade dataset server or want to deploy your own dataset sever.
 
-If you want your dataset to be included in those served by the Nextclade Web application, you can create a pull request in this repository.
-The [dataset curation guide](dataset-curation-guide.md) describes the relevant steps.
+Additional links:
+
+- [Nextclade Web v3](https://clades.nextstrain.org)
+- [Nextclade Web v2](https://v2.clades.nextstrain.org) - if you need the old version
+- [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/index.html) - for detailed instructions on how to use Nextclade Web and Nextclade CLI
+- [Nextclade source code repository](https://github.com/nextstrain/nextclade) - for contributors to Nextclade software (code, bug reports, feature requests etc.)
+- [Nextstrain discussion forum](https://discussion.nextstrain.org) - for general discussion and questions

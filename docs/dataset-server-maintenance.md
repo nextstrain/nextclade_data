@@ -46,7 +46,7 @@ This allows each environment to act as an independent static file web server and
 This table contains a list of environments:
 
 | Dataset repo branch | Data domain name            | Nextclade Web domain name | Nextclade repo branch | Meaning                                                                                                                       |
-|---------------------|-----------------------------|---------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | --------------------------- | ------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | release             | data.clades.nextstrain.org  | clades.nextstrain.org     | release               | Final release, targeting all end users                                                                                        |
 | staging             | data.staging.nextstrain.org | staging.nextstrain.org    | staging               | Staging release, for last-minute testing and fixes before a final release is made, to not block progress on the master branch |
 | master              | data.master.nextstrain.org  | master.nextstrain.org     | all other branches    | Main development branch - accumulates features and bug fixes from pull requests branches                                      |
@@ -63,7 +63,6 @@ The build process can also be reproduced locally. This is useful when developing
 
 The release is done by simply fast-forwarding the `release` branch to the current `master` branch. The Continuous integration will then deploy the dataset server directory to the `release` environment and the updated datasets will become available in the `release` deployment of Nextclade Web and for release versions of Nextclade CLI.
 
-
 ## Maintenance of a custom Nextclade dataset server
 
 Instead of using official dataset server (at `https://data.clades.nextstrain.org`), Nextclade can also be configured to use any other dataset server.
@@ -74,16 +73,16 @@ As explained earlier, the official deployment uses a setup based on AWS S3 and A
 
 The discussion of file servers is out of scope here, but the minimum requirements to the server are:
 
- - Nextclade software should be able to access the server address over HTTP protocol. The server could be accessible publicly on the internet, or only in your private network, or just locally on your computer - it does not matter. What matter is that there should be an HTTP route from the computer where Nextclade is to the computer where the datasets are deployed. Any authentication should be included into the server URL.
+- Nextclade software should be able to access the server address over HTTP protocol. The server could be accessible publicly on the internet, or only in your private network, or just locally on your computer - it does not matter. What matter is that there should be an HTTP route from the computer where Nextclade is to the computer where the datasets are deployed. Any authentication should be included into the server URL.
 
- - In order for datasets to be usable in Nextclade Web, [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) should be enabled on your server. This is a requirement of most web browsers. Please refer to your server's documentation on how to enable CORS.
+- In order for datasets to be usable in Nextclade Web, [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) should be enabled on your server. This is a requirement of most web browsers. Please refer to your server's documentation on how to enable CORS.
 
-After the dataset server is deployed, make sure files can be accessed (downloaded) from a web browser and/or using `curl` command. 
+After the dataset server is deployed, make sure files can be accessed (downloaded) from a web browser and/or using `curl` command.
 
 You can then configure Nextclade to use your dataset server. Assuming the files are deployed to the address `https://example.com/`:
 
- - In Nextclade Web, add URL parameter `dataset-server=https://example.com/`
+- In Nextclade Web, add URL parameter `dataset-server=https://example.com/`
 
- - In Nextclade CLI `run` and `dataset` subcommands, add additional argument `--server=https://example.com/`
+- In Nextclade CLI `run` and `dataset` subcommands, add additional argument `--server=https://example.com/`
 
 Nextclade will then ignore the official servers and will instead use datasets deployed to your custom server.

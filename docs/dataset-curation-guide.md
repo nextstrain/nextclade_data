@@ -1,12 +1,12 @@
 # Nextclade dataset curation guide
 
-This guide explains how to create, update and test Nextclade datasets as well as how to contribute them into the official Nextclade dataset collection.
+This guide explains how Nextclade datasets are structured and how to you can contribute or update datasets into the official Nextclade dataset collection.
 
-> ⚠️ If you are a user of Nextclade Web or Nextclade CLI and looking for documentation on how to use Nextclade, see [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/index.html) instead.
+> ⚠️ This guide serves for advanced Nextclade users and enthusiasts who want to create and maintain their own Nextclade datasets, e.g. to add a yet unsupported pathogen or strain. It assumes basic familiarity with Nextclade CLI and Nextclade Web and some experience with different datasets as a user. If you are not yet comfortable using Nextclade and want to learn more about Nextclade datasets, please refer to the [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/) first.
 
 > ⚠️ If you are looking for Nextclade software developer documentation, see [Nextclade developer guide](https://github.com/nextstrain/nextclade/blob/master/docs/dev/developer-guide.md) instead.
 
-> ⚠️ This guide serves for advanced Nextclade users and enthusiasts who want to create and maintain their own Nextclade datasets, e.g. to add a yet unsupported pathogen or strain. It assumes basic familiarity with Nextclade CLI and Nextclade Web and some experience with different datasets as a user. If you are not yet comfortable using Nextclade and want to learn more about Nextclade datasets, please refer to the [Nextclade user documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/) first.
+> ⚠️ If you are looking for guidance on how to assemble a dataset from scratch and tweak its parameters for a particular virus, see [Nextclade dataset creation guide](dataset-creation-guide.md) instead.
 
 ## Basic principles
 
@@ -32,7 +32,7 @@ If you already have a dataset for Nextclade v2 and want to upgrade it to Nextcla
 
 ### Obtaining source code of this repository
 
-We use GitHug pull requests to manage contributions to Nextclade datasets.
+We use GitHub pull requests to manage contributions to Nextclade datasets.
 
 In order to add or modify datasets you will need to have a local copy of the GitHub repository [`nextstrain/nextclade_data`](https://github.com/nextstrain/nextclade_data) on your computer, make the desired changes, commit & push the changes to a new git branch, and submit a pull request to [`nextstrain/nextclade_data`](https://github.com/nextstrain/nextclade_data). The pull request will be reviewed by Nextclade maintainers and considered for inclusion to the Nextclade dataset collection.
 
@@ -48,7 +48,7 @@ Add changes to your forked repository, commit and submit a pull request to the u
 
 Refer to [GitHub documentation "Contributing to projects"](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) for more details.
 
-> 💡 Make sure you [keep your local code up to date](https://github.com/git-guides/git-pull) with the origin repo,  [especially if it's forked](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+> 💡 Make sure you [keep your local code up to date](https://github.com/git-guides/git-pull) with the origin repo, [especially if it's forked](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
 > 💡 If you are a member of Nextstrain team, then you don't need a fork, and you can contribute directly to the origin repository `nextstrain/nextclade_data`. Nonetheless, please still submit a pull requests for review, rather than pushing changes to branches directly.
 
@@ -70,7 +70,7 @@ This section describes a sequence of steps to add a new Nextclade dataset for a 
 
   > ⚠️ It is important to name the section exactly: two hashes, space and the word "Unreleased", starting with the capital letter "U". This text will be used to automatically find and extract release notes, which are then published along with the next dataset release.
 
-- Add remaining dataset files. At a very minimum, you should have required files: `reference.fasta`, `pathogen.json` and `CHANGELOG.md`.
+- Add remaining dataset files. At a very minimum, you should have required files: `reference.fasta`, `pathogen.json` and `CHANGELOG.md`. See [dataset creation guide](dataset-creation-guide.md) for a detailed walkthrough.
 
 - Optionally, [test your dataset locally](#testing-datasets-locally)
 

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "files": {
     "reference": "reference.fasta",
@@ -14,7 +15,6 @@
     "reference accession": "NC_035889.1"
   },
   "qc": {
-    "schemaVersion": "1.2.0",
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,

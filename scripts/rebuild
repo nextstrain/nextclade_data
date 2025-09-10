@@ -13,7 +13,7 @@ from os.path import dirname, realpath, join, relpath, isfile
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
-  dict_remove_many, find_duplicates, dict_cleanup, find
+  dict_remove_many, find_duplicates, dict_cleanup, find, unique
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -23,18 +23,32 @@ from lib.logger import l
 from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 
 
+
+JSON_SCHEMA_URL_INDEX_JSON = "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-index-json.schema.json"
+
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
-  reference_fasta_path = join(dataset_dir, "reference.fasta")
-  if not isfile(reference_fasta_path):
-    raise FileNotFoundError(f"Reference sequence must be present, but not found: {reference_fasta_path}")
+  ref_filename = dict_get(pathogen_json, ["files", "reference"])
+  if not ref_filename:
+    raise FileNotFoundError(f"Reference sequence file must be declared `.files.reference` field of pathogen.json")
+
+  files = dict_get_required(pathogen_json, ["files"])
+  for (name, filename) in files.items():
+    filepath = join(dataset_dir, filename)
+    if not isfile(filepath):
+      raise FileNotFoundError(
+        f"'Filename '{filename}' is declared in `.files.{name}` field of pathogen.json, but the actual file is not "
+        f"found: '{filepath}'")
 
   other = []
-  tree_json_path = join(dataset_dir, "tree.json")
-  has_tree_json = isfile(join(dataset_dir, "tree.json"))
-  if has_tree_json:
+
+  tree_filename = dict_get(pathogen_json, ["files", "treeJson"])
+  tree_json_path = join(dataset_dir, tree_filename) if tree_filename else None
+  clades = []
+  custom_clades = {}
+  if tree_json_path is not None and isfile(tree_json_path):
     tree_json = json_read(tree_json_path)
-    if dict_get(tree_json, ["extensions", "nextclade", "clade_node_attrs"]) is not None:
-      other.append("customClades")
+    clades = tree_find_clades(tree_json)
+    custom_clades = tree_find_clade_like_attrs(tree_json)
 
   if dict_get(pathogen_json, ["mutLabels"]) is not None:
     other.append("mutLabels")
@@ -50,11 +64,56 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
     if dict_get(q, ["enabled"]):
       qc.append(k)
 
+  custom_clades = dict_cleanup({attr: len(values) for attr, values in custom_clades.items() if len(values) > 0})
+
   return dict_cleanup({
+    "clades": len(clades) if len(clades) > 0 else None,
+    "customClades": custom_clades,
     "qc": qc,
     "primers": True if len(dict_get(pathogen_json, ["primers"]) or []) > 0 else None,
     "other": other
   })
+
+
+def tree_find_clades(auspice_json):
+  def tree_find_clades_recursive(node, clades=None):
+    if clades is None:
+      clades = []
+
+    clade_membership = node.get('node_attrs', {}).get('clade_membership', {}).get('value')
+    if clade_membership:
+      clades.append(clade_membership)
+
+    children = node.get('children', [])
+    for child in children:
+      tree_find_clades_recursive(child, clades)
+
+    return clades
+
+  clades = tree_find_clades_recursive(auspice_json["tree"])
+  return list(sorted(unique(clades)))
+
+
+def tree_find_clade_like_attrs(auspice_json):
+  def tree_find_clade_like_attrs_recursive(node, attr_names, attributes=None):
+    if attributes is None:
+      attributes = {attr: [] for attr in attr_names}
+
+    for attr in attr_names:
+      attr_value = node.get('node_attrs', {}).get(attr, {}).get('value')
+      if attr_value is not None:
+        attributes[attr].append(attr_value)
+
+    children = node.get('children', [])
+    for child in children:
+      tree_find_clade_like_attrs_recursive(child, attr_names, attributes)
+
+    return attributes
+
+  clade_node_attrs = dict_get(auspice_json, ["meta", "extensions", "nextclade", "clade_node_attrs"]) or []
+  attr_names = [attr["name"] for attr in clade_node_attrs]
+  attributes = tree_find_clade_like_attrs_recursive(auspice_json["tree"], attr_names)
+  return {attr: list(sorted(unique(values))) for attr, values in attributes.items() if len(values) > 0}
 
 
 def dataset_get_versions(dataset):
@@ -70,6 +129,7 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
   path = relpath(dataset_dir, args.input_dir)
 
   ref = get_ref_seq(pathogen_json, dataset_dir)
+  check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
 
   versions, last_version = dataset_get_versions(dataset)
 
@@ -107,6 +167,20 @@ def get_ref_seq(pathogen_json, dataset_dir):
     raise ValueError(f"When reading reference sequence") from e
 
 
+def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir):
+  tree_filename = dict_get(pathogen_json, ["files", "treeJson"])
+  tree_json_path = join(dataset_dir, tree_filename) if tree_filename else None
+  if tree_json_path is not None and isfile(tree_json_path):
+    tree_json = json_read(tree_json_path)
+    tree_ref = dict_get(tree_json, ["root_sequence", "nuc"])
+    if tree_ref is not None:
+      if standalone_ref.seq != tree_ref:
+        l.warning(
+          f"{path}: Reference sequence provided does not exactly match reference (root) sequence in Auspice JSON. "
+          f"This warning signals that there is a potential for failures if the mismatch is not intended."
+        )
+
+
 def get_new_dataset_order(datasets, dataset_order):
   paths = list(map(lambda d: d["path"], datasets))
 
@@ -142,8 +216,11 @@ def sort_collections(collections, collections_order):
 
 
 def sort_datasets(datasets, dataset_order):
-  return [dataset for x in dataset_order for dataset in datasets if dataset["path"] == x]
-
+  sorted_by_order = [
+    dataset for x in dataset_order
+    for dataset in datasets if dataset["path"] == x
+  ]
+  return sorted(sorted_by_order, key=lambda d: d['attributes'].get('deprecated', False))
 
 def sort_release_infos(release_infos, dataset_order):
   return [release_info for x in dataset_order for release_info in release_infos if release_info["dataset"]["path"] == x]
@@ -269,6 +346,7 @@ def main():
   #   return
 
   index_json = {
+    "$schema": JSON_SCHEMA_URL_INDEX_JSON,
     "schemaVersion": "3.0.0",
     "collections": collections,
     "minimizerIndex": [
@@ -300,9 +378,6 @@ def dataset_has_changes(dataset_from_index, dataset_dir):
   _, last_version = dataset_get_versions(dataset_from_index)
   modified_files = list(git_get_modified_files(from_revision=dict_get(last_version, ["tag"]), dirs=dataset_dir))
 
-  # HACK: this is temporary hack to ignore version removal from pathogen.json. Remove this after a release!
-  modified_files = filter(lambda f: not f.endswith("/pathogen.json"), modified_files)
-
   modified_files = list(map(lambda f: realpath(f), modified_files))
   return len(modified_files) > 0
 
@@ -323,7 +398,9 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
     try:
       dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at)
       datasets.append(dataset)
-      refs.update({dataset["path"]: ref})
+      # exclude deprecated datasets from list of refs that is later used to build minimizer index
+      if not dataset['attributes'].get('deprecated', False):
+        refs.update({dataset["path"]: ref})
     except Exception as e:
       raise ValueError(f"When processing '{pathogen_json_path}'") from e
 
@@ -481,7 +558,7 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
   for _, file in files.items():
     inpath = join(dataset_dir, file)
     outpath = join(out_dir, file)
-    if file == "tree.json":
+    if file == dict_get(files, ["tree"]):
       # Minify tree.json
       json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
     elif file == "pathogen.json":
