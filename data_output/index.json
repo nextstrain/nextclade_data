@@ -2129,7 +2129,7 @@
             "clades": 7,
             "customClades": {
               "outbreak": 1,
-              "lineage": 44
+              "lineage": 59
             },
             "qc": [
               "frameShifts",
@@ -2298,7 +2298,7 @@
             "clades": 2,
             "customClades": {
               "outbreak": 1,
-              "lineage": 44
+              "lineage": 59
             },
             "qc": [
               "frameShifts",
@@ -2382,7 +2382,7 @@
             "clades": 2,
             "customClades": {
               "outbreak": 1,
-              "lineage": 36
+              "lineage": 46
             },
             "qc": [
               "frameShifts",

@@ -1,6 +1,8 @@
 ## Unreleased
 
-Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+- The 10 newly designated clade IIb B.1 outbreak lineages are now included in the dataset. A description of all new lineages is available in this [mpxv-lineages repo document](https://github.com/mpxv-lineages/lineage-designation/blob/master/designation_records/A.2.5-C.1.3-E.3.1-E-4-F.4.1-G.1-etc_2025-09-07.md).
+- Sequences released since the last update in April 2025 are now included.
+- Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
 
 ## 2025-04-25T12:24:24Z
 
