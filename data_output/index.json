@@ -5419,6 +5419,120 @@
           "version": {
             "tag": "unreleased"
           }
+        },
+        {
+          "path": "community/pathoplexus/cchfv/L",
+          "enabled": true,
+          "attributes": {
+            "name": "CCHF (segment L)",
+            "reference name": "Crimean-Congo hemorrhagic fever virus segment L",
+            "reference accession": "NC_005301.3"
+          },
+          "files": {
+            "reference": "reference_L.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "CCHF_L.json",
+            "examples": "sample_L.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 1,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/pathoplexus/cchfv/S",
+          "enabled": true,
+          "attributes": {
+            "name": "CCHF (segment S)",
+            "reference name": "Crimean-Congo hemorrhagic fever virus segment S",
+            "reference accession": "NC_005302.1"
+          },
+          "files": {
+            "reference": "reference_S.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "CCHF_S.json",
+            "examples": "sample_S.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 8,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/pathoplexus/cchfv/M",
+          "enabled": true,
+          "attributes": {
+            "name": "CCHF (segment M)",
+            "reference name": "Crimean-Congo hemorrhagic fever virus segment M",
+            "reference accession": "NC_005300.2"
+          },
+          "files": {
+            "reference": "reference_M.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "CCHF_M.json",
+            "examples": "sample_M.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 1,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
         }
       ]
     }
