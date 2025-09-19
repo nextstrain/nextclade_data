@@ -2463,7 +2463,7 @@
             "reference": "reference.fasta"
           },
           "capabilities": {
-            "clades": 18,
+            "clades": 21,
             "qc": [
               "frameShifts",
               "missingData",
