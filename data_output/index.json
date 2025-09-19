@@ -4254,12 +4254,16 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 13,
-            "customClades": {
-              "MuV_genotype": 12
-            }
+            "clades": 13
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -4278,8 +4282,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -4305,9 +4308,6 @@
           },
           "capabilities": {
             "clades": 13,
-            "customClades": {
-              "MuV_genotype": 12
-            },
             "qc": [
               "missingData",
               "mixedSites",
@@ -4316,6 +4316,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -4334,8 +4341,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
