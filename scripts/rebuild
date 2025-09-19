@@ -167,26 +167,29 @@ def get_ref_seq(pathogen_json, dataset_dir):
     raise ValueError(f"When reading reference sequence") from e
 
 
-def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir):
+def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir) -> None:
   tree_filename = dict_get(pathogen_json, ["files", "treeJson"])
   tree_json_path = join(dataset_dir, tree_filename) if tree_filename else None
   if tree_json_path is not None and isfile(tree_json_path):
     tree_json = json_read(tree_json_path)
     tree_ref = dict_get(tree_json, ["root_sequence", "nuc"])
     if tree_ref is not None:
-      if standalone_ref.seq != tree_ref:
+      alignment_ref = standalone_ref.seq.upper()
+      tree_root = tree_ref.upper()
+
+      if alignment_ref != tree_root:
         shared_log_prefix = (
           f"{path}: Reference sequence provided does not exactly match reference (root) sequence in Auspice JSON. "
           "This warning signals that there is a potential for failures if the mismatch is not intended."
         )
-        if len(standalone_ref.seq) != len(tree_ref):
+        if len(alignment_ref) != len(tree_root):
           l.warning(
-            f"{shared_log_prefix} Reference sequence length: {len(standalone_ref.seq)}, Auspice JSON root sequence length: {len(tree_ref)}"
+            f"{shared_log_prefix} Reference sequence length: {len(alignment_ref)}, Auspice JSON root sequence length: {len(tree_root)}"
           )
           return
 
         mismatches = []
-        for i, (a, b) in enumerate(zip(standalone_ref.seq, tree_ref), start=1):
+        for i, (a, b) in enumerate(zip(alignment_ref, tree_root), start=1):
           if a != b:
             mismatches.append(f"{a}{i}{b}")
         l.warning(
