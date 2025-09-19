@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Yellow fever virus (YFV) prM-E region",
+    "reference name": "Asibi",
+    "reference accession": "AY640589.1"
+  },
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "minSeedCover": 0.01
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 20,
+      "scoreBias": 4
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true
+    },
+    "privateMutations": {
+      "enabled": true,
+      "cutoff": 12,
+      "typical": 4,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": true,
+      "clusterCutOff": 3,
+      "scoreWeight": 50,
+      "windowSize": 50
+    }
+  },
+  "version": {
+    "updatedAt": "2025-09-09T12:13:13Z",
+    "tag": "2025-09-09--12-13-13Z"
+  }
+}
