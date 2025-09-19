@@ -175,9 +175,22 @@ def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir):
     tree_ref = dict_get(tree_json, ["root_sequence", "nuc"])
     if tree_ref is not None:
       if standalone_ref.seq != tree_ref:
-        l.warning(
+        shared_log_prefix = (
           f"{path}: Reference sequence provided does not exactly match reference (root) sequence in Auspice JSON. "
-          f"This warning signals that there is a potential for failures if the mismatch is not intended."
+          "This warning signals that there is a potential for failures if the mismatch is not intended."
+        )
+        if len(standalone_ref.seq) != len(tree_ref):
+          l.warning(
+            f"{shared_log_prefix} Reference sequence length: {len(standalone_ref.seq)}, Auspice JSON root sequence length: {len(tree_ref)}"
+          )
+          return
+
+        mismatches = []
+        for i, (a, b) in enumerate(zip(standalone_ref.seq, tree_ref), start=1):
+          if a != b:
+            mismatches.append(f"{a}{i}{b}")
+        l.warning(
+          f"{shared_log_prefix} Mismatches (refbase>pos>treerootbase): {', '.join(mismatches)}"
         )
 
 
