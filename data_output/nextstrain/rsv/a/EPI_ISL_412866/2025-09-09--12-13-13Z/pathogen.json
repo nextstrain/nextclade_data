@@ -1,0 +1,152 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "left",
+    "minSeedCover": 0.1
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "F",
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 50,
+      "cutoff": 150,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 10,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 8
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+        {
+          "codon": 320,
+          "cdsName": "G"
+        }
+      ]
+    }
+  },
+  "cdsOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ],
+  "maintenance": {
+    "website": [
+      "https://nextstrain.org",
+      "https://clades.nextstrain.org"
+    ],
+    "documentation": [
+      "https://github.com/nextstrain/rsv"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/rsv"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/rsv/issues"
+    ],
+    "organizations": [
+      "Nextstrain"
+    ],
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
+  },
+  "shortcuts": [
+    "rsv_a",
+    "nextstrain/rsv/a",
+    "nextstrain/rsv/a/hRSV-A-England-397-2017"
+  ],
+  "phenotypeData": [
+    {
+      "name": "escape",
+      "nameFriendly": "Escape mutations",
+      "description": "This column displays a score associated with reduced binding of nirsevimab and palivizumab. Positions 67, 208, 272, 275",
+      "cds": "F",
+      "aaRange": {
+        "begin": 0,
+        "end": 600
+      },
+      "data": [
+        {
+          "name": "escape_markers",
+          "weight": 1,
+          "locations": {
+            "66": {
+              "T": 1,
+              "default": 0.5
+            },
+            "67": {
+              "E": 1,
+              "default": 0.5
+            },
+            "207": {
+              "Y": 1,
+              "default": 0.5
+            },
+            "271": {
+              "M": 1,
+              "T": 1,
+              "default": 0.5
+            },
+            "274": {
+              "F": 1,
+              "default": 0.5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "attributes": {
+    "name": "RSV-A",
+    "reference accession": "EPI_ISL_412866",
+    "reference name": "hRSV/A/England/397/2017"
+  },
+  "geneOrderPreference": [
+    "F",
+    "G",
+    "L"
+  ],
+  "version": {
+    "updatedAt": "2025-09-09T12:13:13Z",
+    "tag": "2025-09-09--12-13-13Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}
