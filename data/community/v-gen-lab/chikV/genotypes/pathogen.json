@@ -11,11 +11,11 @@
   "placementMaskRanges": [
     {
       "begin": 0,
-      "end": 77
+      "end": 76
     },
     {
-      "begin": 11314,
-      "end": 11826
+      "begin": 11313,
+      "end": 11825
     }
   ],
   "deprecated": false,
@@ -35,30 +35,40 @@
     "source code": "https://github.com/V-GEN-Lab/nextclade-datasets-workflow/tree/main/chikV"
   },
   "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
     "missingData": {
       "enabled": true,
-      "missingDataThreshold": 2000,
-      "scoreBias": 500,
-      "scoreWeight": 50
-    },
-    "snpClusters": {
-      "enabled": true,
-      "windowSize": 100,
-      "clusterCutOff": 6,
-      "scoreWeight": 50
+      "missingDataThreshold": 1000,
+      "scoreBias": 500
     },
     "mixedSites": {
-      "enabled": true,
-      "mixedSitesThreshold": 15,
-      "scoreWeight": 50
+      "enabled": false,
+      "mixedSitesThreshold": 8
     },
-    "frameShifts": {
+    "privateMutations": {
+      "cutoff": 168,
       "enabled": true,
-      "scoreWeight": 20
+      "typical": 56,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 50,
+      "windowSize": 100
     },
     "stopCodons": {
       "enabled": true,
-      "scoreWeight": 50
+      "ignoredStopCodons": [
+        {
+          "cdsName": "nsP3",
+          "codon": 523
+        }
+      ]
     }
   },
   "schemaVersion": "3.0.0",
