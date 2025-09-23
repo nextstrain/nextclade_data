@@ -2446,10 +2446,14 @@
           }
         },
         {
-          "path": "nextstrain/ebola/zaire",
+          "path": "nextstrain/orthoebolavirus/ebov",
+          "shortcuts": [
+            "ebola",
+            "ebola/zaire"
+          ],
           "enabled": true,
           "attributes": {
-            "name": "Ebolavirus Zaire",
+            "name": "Ebola virus",
             "reference accession": "NC_002549.1",
             "reference name": "COD/1976/Yambuku-Mayinga"
           },
@@ -2463,7 +2467,7 @@
             "reference": "reference.fasta"
           },
           "capabilities": {
-            "clades": 21,
+            "clades": 22,
             "qc": [
               "frameShifts",
               "missingData",
@@ -2490,10 +2494,13 @@
           }
         },
         {
-          "path": "nextstrain/ebola/sudan",
+          "path": "nextstrain/orthoebolavirus/sudv",
+          "shortcuts": [
+            "ebola/sudan"
+          ],
           "enabled": true,
           "attributes": {
-            "name": "Ebolavirus Sudan",
+            "name": "Sudan virus",
             "reference accession": "NC_006432.1",
             "reference name": "UGA/2000/Gulu-808892"
           },
