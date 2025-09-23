@@ -2506,6 +2506,99 @@
           }
         },
         {
+          "path": "nextstrain/orthoebolavirus/ebov",
+          "shortcuts": [
+            "ebola",
+            "ebola/zaire"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Ebola virus",
+            "reference accession": "NC_002549.1",
+            "reference name": "COD/1976/Yambuku-Mayinga"
+          },
+          "files": {
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "examples": "example_sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "clades": 22,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/orthoebolavirus/sudv",
+          "shortcuts": [
+            "ebola/sudan"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Sudan virus",
+            "reference accession": "NC_006432.1",
+            "reference name": "UGA/2000/Gulu-808892"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/flu/h3n2/pb1",
           "enabled": true,
           "attributes": {

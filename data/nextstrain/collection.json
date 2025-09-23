@@ -41,6 +41,8 @@
     "nextstrain/mpox/clade-i",
     "nextstrain/mpox/clade-iib",
     "nextstrain/mpox/lineage-b.1",
+    "nextstrain/orthoebolavirus/ebov",
+    "nextstrain/orthoebolavirus/sudv",
     "nextstrain/flu/h3n2/pb1",
     "nextstrain/flu/h3n2/np",
     "nextstrain/flu/h1n1pdm/pa",
