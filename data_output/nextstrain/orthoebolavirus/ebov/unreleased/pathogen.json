@@ -68,7 +68,8 @@
   "schemaVersion": "3.0.0",
   "shortcuts": [
     "ebola",
-    "ebola/zaire"
+    "nextstrain/ebola",
+    "nextstrain/ebola/zaire"
   ],
   "version": {
     "tag": "unreleased",
