@@ -1,11 +1,12 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "alignmentParams": {
     "minSeedCover": 0.01,
     "kmerLength": 7,
     "retryReverseComplement": true,
-    "penaltyGapOpen":18,
-    "penaltyGapOpenInFrame":19,
-    "penaltyGapOpenOutOfFrame":20
+    "penaltyGapOpen": 18,
+    "penaltyGapOpenInFrame": 19,
+    "penaltyGapOpenOutOfFrame": 20
   },
   "files": {
     "reference": "reference_S.fasta",
