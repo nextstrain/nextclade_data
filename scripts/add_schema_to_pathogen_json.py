@@ -72,10 +72,10 @@ def process_dataset_directory(dataset_dir: Path) -> tuple[bool, bool]:
     else:
         print(f"Warning: pathogen.json not found in {dataset_dir}")
 
-    # Process CHANGELOG.md
-    if changelog_md.exists():
+    # Process CHANGELOG.md only if pathogen.json was modified
+    if json_modified and changelog_md.exists():
         changelog_modified = add_unreleased_to_changelog(changelog_md)
-    else:
+    elif json_modified and not changelog_md.exists():
         print(f"Warning: CHANGELOG.md not found in {dataset_dir}")
 
     return json_modified, changelog_modified
