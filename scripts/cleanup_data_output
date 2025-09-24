@@ -1,0 +1,197 @@
+#!/usr/bin/env python3
+
+"""
+Cleanup script that removes datasets from data_output/ that are not mentioned in index.json
+
+This script identifies actual datasets by finding pathogen.json files, then compares
+against the datasets listed in index.json to find and remove orphaned datasets.
+
+Usage:
+  ./scripts/cleanup_data_output                    # Interactive mode with confirmation
+  ./scripts/cleanup_data_output --dry-run          # Preview what would be deleted
+  ./scripts/cleanup_data_output --force            # Delete without confirmation
+  ./scripts/cleanup_data_output --output-dir path  # Use custom output directory
+
+Examples:
+  # Preview orphaned datasets
+  ./scripts/cleanup_data_output --dry-run
+  
+  # Clean up with confirmation
+  ./scripts/cleanup_data_output
+  
+  # Clean up automatically (for scripts)
+  ./scripts/cleanup_data_output --force
+"""
+
+import json
+import os
+import shutil
+from pathlib import Path
+
+from lib.fs import json_read
+
+
+def find_actual_datasets(data_output_dir):
+  """Find actual dataset directories by locating pathogen.json files and going one level up"""
+  actual_datasets = set()
+  data_output_path = Path(data_output_dir)
+  
+  # Skip non-collection files and directories
+  skip_items = {"index.json", "minimizer_index.json", "404.json", "robots.txt", "DO_NOT_MODIFY.md"}
+  
+  # Find all pathogen.json files
+  for root, dirs, files in os.walk(data_output_path):
+    if "pathogen.json" in files:
+      # Found a pathogen.json - this indicates a versioned dataset directory
+      # Go one level up to get the actual dataset path
+      pathogen_dir = Path(root)
+      dataset_dir = pathogen_dir.parent
+      
+      # Convert to relative path from data_output_dir
+      relative_dataset_path = dataset_dir.relative_to(data_output_path)
+      
+      # Skip if this is a top-level file in data_output
+      if relative_dataset_path.name not in skip_items:
+        actual_datasets.add(str(relative_dataset_path))
+  
+  return actual_datasets
+
+
+def get_expected_datasets_from_index(index_json):
+  """Extract all dataset paths from all collections in index.json"""
+  expected_datasets = set()
+  
+  collections = index_json.get("collections", [])
+  for collection in collections:
+    datasets = collection.get("datasets", [])
+    for dataset in datasets:
+      dataset_path = dataset.get("path")
+      if dataset_path:
+        expected_datasets.add(dataset_path)
+  
+  return expected_datasets
+
+
+def cleanup_orphaned_datasets(data_output_dir="data_output", force=False, dry_run=False):
+  """Main cleanup function"""
+  print(f"Reading index from {data_output_dir}/index.json...")
+  
+  index_path = Path(data_output_dir) / "index.json"
+  if not index_path.exists():
+    print(f"Error: {index_path} does not exist")
+    return 1
+  
+  # Read the index
+  index_json = json_read(str(index_path))
+  
+  # Get expected datasets from index
+  expected_datasets = get_expected_datasets_from_index(index_json)
+  print(f"Found {len(expected_datasets)} expected datasets in index.json")
+  
+  # Find actual dataset directories by looking for pathogen.json files
+  actual_datasets = find_actual_datasets(data_output_dir)
+  print(f"Found {len(actual_datasets)} actual datasets in {data_output_dir}")
+  
+  # Find orphaned datasets (exist but not in index)
+  orphaned_datasets = actual_datasets - expected_datasets
+  
+  # Find missing datasets (in index but not found)
+  missing_datasets = expected_datasets - actual_datasets
+  
+  # Report missing datasets
+  if missing_datasets:
+    print(f"\nWARNING: Found {len(missing_datasets)} missing datasets (expected in index but not found):")
+    for missing_dataset in sorted(missing_datasets):
+      print(f"  - {missing_dataset}")
+  
+  # Report orphaned datasets  
+  if orphaned_datasets:
+    print(f"\nFound {len(orphaned_datasets)} orphaned datasets:")
+    for orphaned_dataset in sorted(orphaned_datasets):
+      print(f"  - {orphaned_dataset}")
+  
+  # Summary message
+  if not orphaned_datasets and not missing_datasets:
+    print("\nNo orphaned or missing datasets found. Everything looks good!")
+    return 0
+  elif not orphaned_datasets:
+    print("\nNo orphaned datasets found to clean up.")
+    return 0
+  
+  if dry_run:
+    print(f"\nDRY RUN: Would delete {len(orphaned_datasets)} orphaned datasets.")
+    return 0
+  
+  # Confirm deletion unless forced
+  if not force:
+    try:
+      response = input(f"\nDelete these {len(orphaned_datasets)} orphaned datasets? [y/N]: ")
+      if response.lower() not in ['y', 'yes']:
+        print("Cleanup cancelled.")
+        return 0
+    except EOFError:
+      print("\nNo input available. Use --force to skip confirmation or --dry-run to preview changes.")
+      return 1
+  
+  # Delete orphaned dataset directories
+  data_output_path = Path(data_output_dir)
+  deleted_count = 0
+  
+  for orphaned_dataset in sorted(orphaned_datasets):
+    full_path = data_output_path / orphaned_dataset
+    try:
+      if full_path.exists():
+        print(f"Deleting: {orphaned_dataset}")
+        shutil.rmtree(full_path)
+        deleted_count += 1
+      else:
+        print(f"Warning: {orphaned_dataset} no longer exists")
+    except Exception as e:
+      print(f"Error deleting {orphaned_dataset}: {e}")
+  
+  print(f"\nCleanup completed. Deleted {deleted_count} orphaned datasets.")
+  return 0
+
+
+def main():
+  import argparse
+  
+  parser = argparse.ArgumentParser(
+    description="Remove orphaned datasets from data_output/",
+    epilog="""
+Examples:
+  %(prog)s --dry-run                    Preview what would be deleted
+  %(prog)s                              Interactive cleanup with confirmation
+  %(prog)s --force                      Delete without confirmation
+  %(prog)s --output-dir custom_output   Use custom output directory
+    """,
+    formatter_class=argparse.RawDescriptionHelpFormatter
+  )
+  parser.add_argument(
+    "--output-dir", 
+    default="data_output",
+    metavar="DIR",
+    help="Output directory containing the index.json and datasets (default: %(default)s)"
+  )
+  parser.add_argument(
+    "--force",
+    action="store_true",
+    help="Skip confirmation prompt and delete orphaned datasets immediately"
+  )
+  parser.add_argument(
+    "--dry-run",
+    action="store_true", 
+    help="Show what would be deleted without actually deleting anything"
+  )
+  
+  args = parser.parse_args()
+  
+  if args.force and args.dry_run:
+    print("Error: --force and --dry-run cannot be used together")
+    return 1
+  
+  return cleanup_orphaned_datasets(args.output_dir, args.force, args.dry_run)
+
+
+if __name__ == "__main__":
+  exit(main())
