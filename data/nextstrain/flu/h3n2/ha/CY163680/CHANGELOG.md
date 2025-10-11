@@ -1,3 +1,8 @@
+## Unreleased
+
+ - add designation of J.2.4.1
+ - make `subclade` the default clade like feature, while including a column `subclade` into the tabular output to maintain backwards compatibility of other pipelines. The previous `clade` that hasn't been updated in for 2y as now `legacy-clade`.
+
 ## 2025-09-09T12:13:13Z
 
 Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
