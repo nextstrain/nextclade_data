@@ -7,6 +7,8 @@
         "id": "nextstrain",
         "title": "Nextstrain",
         "description": "Set of official Nextclade datasets maintained by Nextstrain team",
+        "icon": "nextstrain/icon.svg",
+        "color": "#9067b5",
         "maintainers": [
           {
             "name": "Nextstrain team",
@@ -4903,6 +4905,8 @@
         "id": "community",
         "title": "Community",
         "description": "Set of datasets provided by community members",
+        "icon": "community/icon.svg",
+        "color": "#868f89",
         "urls": [
           {
             "name": "source",

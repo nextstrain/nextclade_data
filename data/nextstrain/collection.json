@@ -3,6 +3,8 @@
     "id": "nextstrain",
     "title": "Nextstrain",
     "description": "Set of official Nextclade datasets maintained by Nextstrain team",
+    "icon": "icon.svg",
+    "color": "#9067b5",
     "maintainers": [
       {
         "name": "Nextstrain team",
