@@ -227,8 +227,50 @@ def get_new_dataset_order(datasets, dataset_order):
   return dataset_order
 
 
-def sort_collections(collections, collections_order):
-  return [collection for x in collections_order for collection in collections if collection["meta"]["id"] == x]
+def sort_collections(collections, head=None, tail=None):
+  """
+  Sort collections with specified head and tail ordering.
+
+  Args:
+    collections: List of collection objects to sort
+    head: List of collection IDs to place at the beginning (in given order)
+    tail: List of collection IDs to place at the end (in given order)
+
+  Returns:
+    Sorted list of collections
+  """
+  if head is None:
+    head = []
+  if tail is None:
+    tail = []
+
+  collection_map = {collection["meta"]["id"]: collection for collection in collections}
+  result = []
+  used_ids = set()
+
+  # Add head collections first
+  for collection_id in head:
+    if collection_id in collection_map:
+      result.append(collection_map[collection_id])
+      used_ids.add(collection_id)
+
+  # Add remaining collections (not in head or tail) in alphabetical order
+  remaining_ids = []
+  for collection_id in collection_map.keys():
+    if collection_id not in used_ids and collection_id not in tail:
+      remaining_ids.append(collection_id)
+
+  for collection_id in sorted(remaining_ids):
+    result.append(collection_map[collection_id])
+    used_ids.add(collection_id)
+
+  # Add tail collections last
+  for collection_id in tail:
+    if collection_id in collection_map:
+      result.append(collection_map[collection_id])
+      used_ids.add(collection_id)
+
+  return result
 
 
 def sort_datasets(datasets, dataset_order):
@@ -345,7 +387,7 @@ def main():
     release_infos.extend(release_infos_for_dataset)
     all_refs.update(refs)
 
-  collections = sort_collections(collections, ["nextstrain", "community"])
+  collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
   validate_shortcuts(collections)
 
   minimizer_index = make_ref_search_index(all_refs)
