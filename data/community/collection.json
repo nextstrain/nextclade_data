@@ -3,6 +3,8 @@
     "id": "community",
     "title": "Community",
     "description": "Set of datasets provided by community members",
+    "icon": "icon.svg",
+    "color": "#868f89",
     "urls": [
       {
         "name": "source",

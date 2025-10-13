@@ -446,6 +446,21 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
   collection_id = dict_get_required(collection_json, ["meta", "id"])
   datasets_from_index_json = get_datasets_from_index_json(index_json, collection_id)
 
+  # Handle collection icon
+  icon_filename = dict_get(collection_json, ["meta", "icon"])
+  icon_copied = False
+  if icon_filename:
+    icon_src_path = join(collection_dir, icon_filename)
+    if not isfile(icon_src_path):
+      raise FileNotFoundError(
+        f"Icon file '{icon_filename}' is declared in collection.json but not found at '{icon_src_path}'. "
+        f"Please ensure the icon file exists or remove the icon field from collection.json."
+      )
+    collection_output_dir = join(args.output_dir, collection_id)
+    icon_dst_path = join(collection_output_dir, icon_filename)
+    copy(icon_src_path, icon_dst_path)
+    icon_copied = True
+
   datasets = []
   refs = {}
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
@@ -478,6 +493,10 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
   collection_info = deepcopy(collection_json)
   dict_remove_many(collection_info, ["dataset_order"])
   dict_remove_many(collection_info, ["schemaVersion"])
+
+  # Update icon path to be relative to dataset server root
+  if icon_copied:
+    collection_info["meta"]["icon"] = f"{collection_id}/{icon_filename}"
 
   collection_info = {
     **collection_info,
