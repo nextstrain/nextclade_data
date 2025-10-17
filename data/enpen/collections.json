@@ -1,0 +1,29 @@
+{
+    "meta": {
+      "id": "enpen",
+      "title": "European non-polio enterovirus network",
+      "description": "Set of official Enterovirus datasets maintained by ENPEN",
+      "icon": "ENPEN.jpg",
+      "color": "#E6F1FA",
+      "maintainers": [
+        {
+          "name": "Nadia Neuner-Jehle, Alejandra Gonzalez-Sanchez, Emma B. Hodcroft on behalf of the ENPEN network",
+          "url": "https://eve-lab.org"
+        }
+      ],
+      "urls": [
+        {
+          "name": "source",
+          "url": "https://github.com/nextstrain/nextclade_data"
+        },
+        {
+          "name": "contact",
+          "url": "https://github.com/nextstrain/nextclade_data/issues"
+        }
+      ]
+    },
+    "dataset_order": [
+      "enpen/enterovirus/ev-d68"
+
+    ]
+  }
