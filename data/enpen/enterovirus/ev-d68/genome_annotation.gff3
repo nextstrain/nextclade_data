@@ -9,8 +9,8 @@ AY426531.1	Genbank	CDS	733	939	.	+	.	Name=VP4;gbkey=Prot;product=VP4;ID=id-AAR98
 AY426531.1	Genbank	CDS	940	1683	.	+	.	Name=VP2;gbkey=Prot;product=VP2;ID=id-AAR98503.1:70..317
 AY426531.1	Genbank	CDS	1684	2388	.	+	.	Name=VP3;gbkey=Prot;product=VP3;ID=id-AAR98503.1:318..552
 AY426531.1	Genbank	CDS	2389	3315	.	+	.	Name=VP1;gbkey=Prot;product=VP1;ID=id-AAR98503.1:553..861
-AY426531.1	Genbank	CDS	1684	2424	.	+	.	Name=VP3_new;gbkey=Prot;product=VP3;ID=id-AAR98503.1:318..552
-AY426531.1	Genbank	CDS	2425	3315	.	+	.	Name=VP1_new;gbkey=Prot;product=VP1;ID=id-AAR98503.1:553..861
+AY426531.1	Genbank	CDS	1684	2424	.	+	.	Name=VP3_new;gbkey=Prot;product=VP3;ID=id-AAR98503.1:318..552_new
+AY426531.1	Genbank	CDS	2425	3315	.	+	.	Name=VP1_new;gbkey=Prot;product=VP1;ID=id-AAR98503.1:553..861_new
 AY426531.1	Genbank	CDS	3316	3756	.	+	.	Name=2A;gbkey=Prot;product=2A;ID=id-AAR98503.1:862..1008
 AY426531.1	Genbank	CDS	3757	4053	.	+	.	Name=2B;gbkey=Prot;product=2B;ID=id-AAR98503.1:1009..1107
 AY426531.1	Genbank	CDS	4054	5043	.	+	.	Name=2C;gbkey=Prot;product=2C;ID=id-AAR98503.1:1108..1437
