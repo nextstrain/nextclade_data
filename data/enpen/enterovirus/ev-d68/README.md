@@ -44,5 +44,3 @@ Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universal, standardized
 ## What is a Nextclade dataset?
 
 A Nextclade dataset includes the reference sequence, genome annotations, tree, clade definitions, and QC rules. Learn more in the [Nextclade documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html).
-
-Test

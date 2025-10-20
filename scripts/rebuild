@@ -433,7 +433,7 @@ def main():
 
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
-  return True
+  # return True
   _, last_version = dataset_get_versions(dataset_from_index)
   modified_files = list(git_get_modified_files(from_revision=dict_get(last_version, ["tag"]), dirs=dataset_dir))
 
@@ -537,7 +537,8 @@ def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, coll
 
     changelog_path = join(dataset_dir, "CHANGELOG.md")
     release_notes = changelog_get_unreleased_section(changelog_path)
-    if len(release_notes) == 0 and False:
+    # if len(release_notes) == 0 and False:
+    if len(release_notes) == 0:
       raise ValueError(
         f"Changelog not found: dataset '{path}' has changes, but no valid changelog entry is found. Automated "
         f"releases will fail.\n\nTo fix this, please modify the file '{changelog_path}': add '## Unreleased' second "
