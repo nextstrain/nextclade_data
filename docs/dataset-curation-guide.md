@@ -80,6 +80,12 @@ This section describes a sequence of steps to add a new Nextclade dataset for a 
 
   > ⚠️ Note that `nextstrain-bot` will automatically run the rebuild script, and will commit changes to the `data/` and `data_output/` directories on your git branch. Don't forget to pull these changes if you are going to make more commits.
 
+  > ⚠️ Note that if you are working from a fork, `nextstrain-bot` will not run, for security reasons: neither in your forked repo (because it does not have permissions), nor in our upstream repo when you submit a Pull Request (because we cannot grant write access to anyone forking our repo).
+  >
+  > This will likely result in failing GitHub Actions checks. You can safely ignore them or even disable GitHub Actions. Unless you have a particular use for Actions, in which case you can set it up on your own.
+  >
+  > In order to build a dataset server distribution, either [run rebuild script locally](#running-rebuild-script-locally), or ask a member of Nextstrain team to run it for you.
+
 - Optionally, [test your dataset from GitHub](#testing-datasets-from-github)
 
 - Wait for maintainers and community members to review and either accept or reject your proposal. Be ready to discuss the proposed changes, and to apply modifications if requested.
@@ -107,6 +113,31 @@ If your pull request got merged, the changes weren't yet released, and you want 
 If your pull request is not merged yet, simply close the pull request. Explain your decision in a comment message.
 
 If you want to signal users that a dataset is no longer maintained, is inaccurate or obsolete, rather than deleting it you can set the field `"deprecated": true` in `pathogen.json` file. In this case the dataset will be listed in Nextclade with a "deprecated" badge and at the bottom of the list. Please explain the reason for deprecation in the changelog section (as described in the usual update steps), and add some details to the readme file if there is one, so that users could make an informed decision themselves whether to use it or not.
+
+### Running rebuild script locally
+
+```bash
+./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --no-pull --allow-dirty
+```
+
+This will process all datasets from `data/` directory and produce the output in `data_output/` directory.
+
+> If you receive errors `bad revision '<some date tag>'`, this means `rebuild` script cannot find git tags. They are needed to detect changes in datasets compared to the previous release.
+>
+> For example, GitHub forks do not copy upstream tags by default.
+>
+> In this case you could fetch tags like that:
+>
+> ```bash
+> # Add upstream repo
+> git remote add upstream https://github.com/nextstrain/nextclade_data
+>
+> # Fetch all tags from upstream to your local working copy
+> git fetch upstream --tags
+>
+> # Optioanlly push them to your origin repo (e.g. on GitHub)
+> git push origin --tags
+> ```
 
 ### What happens to accepted datasets
 
