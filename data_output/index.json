@@ -4911,7 +4911,7 @@
         "id": "enpen",
         "title": "ENPEN",
         "description": "Official Enterovirus datasets by the European non-polio enterovirus network",
-        "icon": "enpen/ENPEN.jpg",
+        "icon": "enpen/ENPEN.svg",
         "color": "#E6F1FA",
         "maintainers": [
           {
