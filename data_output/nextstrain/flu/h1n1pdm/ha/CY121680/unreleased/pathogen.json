@@ -82,10 +82,8 @@
   "nucMutLabelMap": {},
   "nucMutLabelMapReverse": {},
   "shortcuts": [
-    "flu_h1n1pdm_ha",
-    "nextstrain/flu/h1n1pdm",
-    "nextstrain/flu/h1n1pdm/ha",
-    "nextstrain/flu/h1n1pdm/ha/wisconsin-588-2019"
+    "flu_h1n1pdm_ha_broad",
+    "nextstrain/flu/h1n1pdm/ha/california-7-2009"
   ],
   "aaMotifs": [
     {
@@ -116,7 +114,14 @@
   "attributes": {
     "name": "Influenza A H1N1pdm HA",
     "segment": "ha",
-    "reference accession": "MW626062",
-    "reference name": "A/Wisconsin/588/2019"
+    "reference accession": "CY121680",
+    "reference name": "A/California/7/2009-egg"
+  },
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
   }
 }
