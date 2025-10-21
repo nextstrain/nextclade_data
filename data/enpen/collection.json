@@ -1,8 +1,8 @@
 {
     "meta": {
       "id": "enpen",
-      "title": "European non-polio enterovirus network",
-      "description": "Set of official Enterovirus datasets maintained by ENPEN",
+      "title": "ENPEN",
+      "description": "Official Enterovirus datasets by the European non-polio enterovirus network",
       "icon": "ENPEN.jpg",
       "color": "#E6F1FA",
       "maintainers": [
