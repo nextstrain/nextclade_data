@@ -4956,7 +4956,8 @@
               "mixedSites",
               "privateMutations",
               "divergence",
-              "stopCodons"
+              "stopCodons",
+              "recombinants"
             ],
             "other": [
               "mutLabels"
