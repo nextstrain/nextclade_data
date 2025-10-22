@@ -3,24 +3,23 @@
   "alignmentParams": {
     "minLength": 80,
     "penaltyGapExtend": 1,
-    "penaltyGapOpen": 4,
-    "penaltyGapOpenInFrame": 4,
-    "penaltyGapOpenOutOfFrame": 6,
+    "penaltyGapOpen": 10,
+    "penaltyGapOpenInFrame": 15,
+    "penaltyGapOpenOutOfFrame": 17,
     "penaltyMismatch": 1,
-    "scoreMatch": 4,
+    "scoreMatch": 3,
     "noTranslatePastStop": false,
     "excessBandwidth": 9,
-    "terminalBandwidth": 80,
-    "allowedMismatches": 12,
-    "minMatchLength": 30,
+    "terminalBandwidth": 50,
+    "allowedMismatches": 15,
+    "minMatchLength": 20,
     "maxAlignmentAttempts": 5,
-    "includeReference": true,
     "includeNearestNodeInfo": true,
     "retryReverseComplement": true,
-    "minSeedCover": 0.01
+    "minSeedCover": 0.1
   },
   "attributes": {
-    "name": "Mumps MuV Genotypes (SH gene 315nt region)",
+    "name": "Mumps MuV Genotypes (Full genome)",
     "reference name": "Jeryl-Lynn (genotype A)",
     "reference accession": "D90232"
   },
@@ -46,11 +45,33 @@
   },
   "schemaVersion": "3.0.0",
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2025-10-22T18:11:36Z",
+    "tag": "2025-10-22--18-11-36Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
     }
   },
-  "defaultCds": "SH"
+  "defaultCds": "SH",
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15,
+      "scoreWeight": 50
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 50
+    }
+  }
 }
