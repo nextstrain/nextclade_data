@@ -12432,8 +12432,8 @@
     },
     "missingData": {
       "enabled": true,
-      "missingDataThreshold": 300,
-      "scoreBias": 2700
+      "missingDataThreshold": 200,
+      "scoreBias": 2400
     },
     "mixedSites": {
       "enabled": true,
@@ -12441,9 +12441,9 @@
     },
     "privateMutations": {
       "enabled": true,
-      "cutoff": 115,
+      "cutoff": 120,
       "typical": 50,
-      "weightLabeledSubstitutions": 1,
+      "weightLabeledSubstitutions": 1.5,
       "weightReversionSubstitutions": 2,
       "weightUnlabeledSubstitutions": 1
     },
