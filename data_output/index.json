@@ -4382,6 +4382,45 @@
           }
         },
         {
+          "path": "nextstrain/herpes/vzv/NC_001348",
+          "shortcuts": [
+            "vzv"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Varicella-Zoster Virus (VZV)",
+            "reference name": "NC_001348.1",
+            "reference accession": "NC_001348.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 10,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
           "path": "nextstrain/mumps/sh",
           "enabled": true,
           "attributes": {
@@ -4544,45 +4583,6 @@
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
             }
-          }
-        },
-        {
-          "path": "nextstrain/herpes/vzv/NC_001348",
-          "shortcuts": [
-            "vzv"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Varicella-Zoster Virus (VZV)",
-            "reference name": "NC_001348.1",
-            "reference accession": "NC_001348.1"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 10,
-            "qc": [
-              "missingData",
-              "snpClusters",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased"
-            }
-          ],
-          "version": {
-            "tag": "unreleased"
           }
         },
         {
