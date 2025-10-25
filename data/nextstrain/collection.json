@@ -69,6 +69,7 @@
     "nextstrain/flu/vic/pb2",
     "nextstrain/flu/vic/ns",
     "nextstrain/rubella/E1",
+    "nextstrain/herpes/vzv/NC_001348",
     "nextstrain/mumps/sh",
     "nextstrain/mumps/genome",
     "nextstrain/rubella/genome"
