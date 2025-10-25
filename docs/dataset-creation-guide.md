@@ -124,6 +124,7 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "files": {
     "reference": "reference.fasta",
@@ -170,6 +171,8 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
 
 Further details on the `pathogen.json` file format are available in the [Nextclade docs](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/05-pathogen-config.html).
 The `files` field of the `pathogen.json` is mandatory and has to list all input files Nextclade should expect to find in the dataset.
+
+The `$schema` field contains a URL to the JSON schema that describes the structure of the `pathogen.json` file. This allows editors such as VSCode to provide auto-completion, documentation and validation of the fields. You can find the all schemas in Nextclade software repo [here](https://github.com/nextstrain/nextclade/tree/master/packages/nextclade-schemas).
 
 While only the `reference.fasta` and the `pathogen.json` are required input files, we recommend adding example sequences. These allow users to quickly explore available datasets and help during dataset creation. A README is useful to provide additional information about the dataset. Lastly, a CHANGELOG helps users understand what has changed between different versions of the dataset. As a starting point, they can be minimal:
 
@@ -251,6 +254,14 @@ You also need to provide paths to the reference sequence (in fasta and genbank f
 
 The example workflow is a good starting point, but if you want to customize the workflow, it's recommended to consult the Nextstrain documentation, for example the [Creating a pathogen workflow tutorial](https://docs.nextstrain.org/en/latest/tutorials/creating-a-workflow.html).
 
+### Important considerations when creating a reference tree
+
+ * **Align and translate your sequences using Nextclade with the final alignment parameters**: This will guarantee that the mutation annotation of the reference tree is consistent with the reference alignment that Nextclade does when it analyzes new query sequences. The command [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html#augur-make_parser-amino-acid-options) supports using the translation from Nextclade. Note that you might need a genbank reference file as support for gff3 in augur is incomplete.
+ * **Choose sequences that represent relevant diversity**: The primary goal of the reference tree is to cover relevant diversity. So make sure also small clades are represented, ideally by several genomes such that their common ancestor approximates the common ancestor of the clade. Overrepresentation of clades with many very similar genomes is often not helpful.
+ * **Inspect you alignment**: Alignment parameters might need fine tuning, in particular if your dataset is diverse or sequence has self-similar regions. Please see the FAQ section below for guidance.
+
+
+
 ## Next steps
 
 Once you have your dataset created and committed in a Github repository, you can share it with others through a custom URL, e.g.
@@ -305,6 +316,7 @@ Suggested parameters for high diversity viruses are given below (note that comme
 ```
 
 You can tweak these parameters further if you think gap penalties should be even higher.
+In particular, if the genomes you are analyzing have similar regions far apart in the genome, you might encounter spurious very long gaps. In that case, you should set `penaltyGapExtend=1` to penalize long gaps.
 
 Nextclade CLI uses multiple sources to decide final alignment parameter values. In order of preference:
 

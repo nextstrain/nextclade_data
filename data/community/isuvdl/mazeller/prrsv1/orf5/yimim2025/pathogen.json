@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "files": {
     "reference": "lelystad_orf5.fasta",
@@ -7,7 +8,7 @@
     "examples": "sequences.fasta",
     "readme": "README.md",
     "changelog": "CHANGELOG.md",
-	"treeJson": "tree.json"
+    "treeJson": "tree.json"
   },
   "alignmentParams": {
     "penaltyGapOpen": 8,

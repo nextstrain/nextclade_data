@@ -3,6 +3,8 @@
     "id": "nextstrain",
     "title": "Nextstrain",
     "description": "Set of official Nextclade datasets maintained by Nextstrain team",
+    "icon": "icon.svg",
+    "color": "#9067b5",
     "maintainers": [
       {
         "name": "Nextstrain team",
@@ -41,6 +43,8 @@
     "nextstrain/mpox/clade-i",
     "nextstrain/mpox/clade-iib",
     "nextstrain/mpox/lineage-b.1",
+    "nextstrain/orthoebolavirus/ebov",
+    "nextstrain/orthoebolavirus/sudv",
     "nextstrain/flu/h3n2/pb1",
     "nextstrain/flu/h3n2/np",
     "nextstrain/flu/h1n1pdm/pa",
@@ -53,7 +57,7 @@
     "nextstrain/flu/h1n1pdm/pb2",
     "nextstrain/flu/h1n1pdm/pb1",
     "nextstrain/flu/h3n2/pb2",
-    "nextstrain/measles",
+    "nextstrain/measles/genome/WHO-2012",
     "nextstrain/measles/N450/WHO-2012",
     "nextstrain/dengue/all",
     "nextstrain/yellow-fever/prM-E",
@@ -65,7 +69,9 @@
     "nextstrain/flu/vic/pb2",
     "nextstrain/flu/vic/ns",
     "nextstrain/rubella/E1",
-    "nextstrain/vzv/NC_001348",
-    "nextstrain/herpes/vzv/NC_001348"
+    "nextstrain/herpes/vzv/NC_001348",
+    "nextstrain/mumps/sh",
+    "nextstrain/mumps/genome",
+    "nextstrain/rubella/genome"
   ]
 }

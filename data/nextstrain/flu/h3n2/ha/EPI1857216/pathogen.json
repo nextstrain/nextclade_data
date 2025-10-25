@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
   "alignmentParams": {
     "excessBandwidth": 9,
@@ -158,6 +159,31 @@
       ]
     }
   ],
+  "mutLabels": {
+    "aaMutLabelMap": {
+      "HA1:145": [
+        "RBD"
+      ],
+      "HA1:155": [
+        "RBD"
+      ],
+      "HA1:156": [
+        "RBD"
+      ],
+      "HA1:158": [
+        "RBD"
+      ],
+      "HA1:159": [
+        "RBD"
+      ],
+      "HA1:189": [
+        "RBD"
+      ],
+      "HA1:193": [
+        "RBD"
+      ]
+    }
+  },
   "attributes": {
     "name": "Influenza A H3N2 HA",
     "segment": "ha",

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "alignmentParams": {
+    "excessBandwidth": 100,
+    "terminalBandwidth": 300,
+    "allowedMismatches": 10,
+    "windowSize": 40,
+    "minSeedCover": 0.03,
+    "gapAlignmentSide": "left"
+  },
+  "attributes": {
+    "name": "Ebola virus",
+    "reference accession": "NC_002549.1",
+    "reference name": "COD/1976/Yambuku-Mayinga"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "treeJson": "tree.json",
+    "changelog": "CHANGELOG.md",
+    "examples": "example_sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta"
+  },
+  "official": true,
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "ignoredFrameShifts": [
+      ],
+      "scoreWeight": 50
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 3000,
+      "scoreBias": 500
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 20
+    },
+    "privateMutations": {
+      "cutoff": 30,
+      "enabled": true,
+      "typical": 10,
+      "weightLabeledSubstitutions": 4,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 10,
+      "enabled": false,
+      "scoreWeight": 10,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+      ],
+      "scoreWeight": 50
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "shortcuts": [
+    "ebola",
+    "nextstrain/ebola",
+    "nextstrain/ebola/zaire"
+  ]
+}

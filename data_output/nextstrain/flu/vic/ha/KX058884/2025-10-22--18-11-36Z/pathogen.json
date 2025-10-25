@@ -1,0 +1,130 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "right",
+    "minSeedCover": 0.1
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "HA1",
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 5,
+      "cutoff": 15,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 100,
+      "scoreBias": 10
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 5,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": []
+    }
+  },
+  "cdsOrderPreference": [
+    "HA1",
+    "HA2"
+  ],
+  "maintenance": {
+    "website": [
+      "https://nextstrain.org",
+      "https://clades.nextstrain.org"
+    ],
+    "documentation": [
+      "https://github.com/nextstrain/seasonal-flu"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/seasonal_flu"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/seasonal_flu/issues"
+    ],
+    "organizations": [
+      "Nextstrain"
+    ],
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
+  },
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
+  "shortcuts": [
+    "flu_vic_ha",
+    "nextstrain/flu/vic",
+    "nextstrain/flu/vic/ha",
+    "nextstrain/flu/vic/ha/brisbane-60-2008"
+  ],
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
+      "includeCdses": [
+        {
+          "cds": "HA1",
+          "ranges": []
+        },
+        {
+          "cds": "HA2",
+          "ranges": [
+            {
+              "begin": 0,
+              "end": 186
+            }
+          ]
+        }
+      ],
+      "motifs": [
+        "N[^P][ST]"
+      ]
+    }
+  ],
+  "attributes": {
+    "name": "Influenza B Victoria HA",
+    "segment": "ha",
+    "reference accession": "KX058884",
+    "reference name": "B/Brisbane/60/2008-egg"
+  },
+  "version": {
+    "updatedAt": "2025-10-22T18:11:36Z",
+    "tag": "2025-10-22--18-11-36Z",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}

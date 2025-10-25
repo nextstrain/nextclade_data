@@ -17,6 +17,8 @@ MAGIC_NUMBER_K = 17
 # minimizer cutoff. The max is 1<<32 - 1, so with 28 uses roughly 1/16 of all kmers
 CUTOFF = 1 << 28
 
+JSON_SCHEMA_URL_MINIMIZER_JSON=  "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-minimizer-index-json.schema.json"
+
 
 # from lh3
 def invertible_hash(x):
@@ -89,6 +91,7 @@ def make_ref_search_index(refs):
   normalization = np.array([x['length'] / x['nMinimizers'] for x in index["references"]])
 
   return {
+    "$schema": JSON_SCHEMA_URL_MINIMIZER_JSON,
     "schemaVersion": MINIMIZER_JSON_SCHEMA_VERSION,
     "version": MINIMIZER_ALGO_VERSION,
     "params": {

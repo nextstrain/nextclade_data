@@ -5,3 +5,5 @@
 \.env
 \.vscode
 /docs/tmp/
+.venv
+.claude/settings.local.json
