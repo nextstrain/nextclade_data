@@ -1,21 +1,20 @@
 ##gff-version 3
 #!gff-spec-version 1.21
-#!processor NCBI annotwriter
 ##sequence-region NC_001489.1 1 7478
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=12092
 NC_001489.1	RefSeq	region	1	7478	.	+	.	ID=NC_001489.1:1..7478;Dbxref=taxon:12092;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Hepatitis A virus
 NC_001489.1	RefSeq	gene	735	7418	.	+	.	ID=gene-HAVgp1;Dbxref=GeneID:1493918;Name=HAVgp1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=HAVgp1
-NC_001489.1	RefSeq	CDS	735	803	.	+	.	ID=gene-HAVgp1:1..23;Parent=gene-HAVgp1;gbkey=Prot;Name=VP4a;product=1A VP4a mature peptide (alt.);protein_id=NP_740548.1
+NC_001489.1	RefSeq	CDS	735	803	.	+	.	Note=VP4 capsid protein coded by 1A genome segment;Parent=gene-HAVgp1;gbkey=Prot;Name=VP4
 NC_001489.1	RefSeq	gene	741	7418	.	+	.	ID=gene-HAVgp2;Dbxref=GeneID:1493919;Name=HAVgp2;gbkey=Gene;gene_biotype=protein_coding;locus_tag=HAVgp2
-NC_001489.1	RefSeq	CDS	741	803	.	+	.	ID=gene-HAVgp2:1..21;Parent=gene-HAVgp2;gbkey=Prot;Name=VP4b;product=1A VP4b mature peptide (alt.);protein_id=NP_740549.1
-NC_001489.1	RefSeq	CDS	804	1469	.	+	.	ID=gene-HAVgp2:22..243;Parent=gene-HAVgp2;gbkey=Prot;Name=VP2;product=1B VP2 mature peptide;protein_id=NP_740550.1
-NC_001489.1	RefSeq	CDS	1470	2207	.	+	.	ID=gene-HAVgp2:244..489;Parent=gene-HAVgp2;gbkey=Prot;Name=VP3;product=1C VP3 mature peptide;protein_id=NP_740551.1
-NC_001489.1	RefSeq	CDS	2208	3107	.	+	.	ID=gene-HAVgp2:490..789;Parent=gene-HAVgp2;gbkey=Prot;Name=VP1;product=1D VP1 mature peptide;protein_id=NP_740552.1
-NC_001489.1	RefSeq	CDS	3108	3674	.	+	.	ID=gene-HAVgp2:790..978;Note=gene-HAVgp2 2A is removed from the VP1-2A protein by a postassembly proteolytic event that presumably involves a host proteinase such as FXa.;Parent=gene-HAVgp2;gbkey=Prot;Name=2A;product=2A mature peptide;protein_id=NP_740553.1
-NC_001489.1	RefSeq	CDS	3675	3995	.	+	.	ID=gene-HAVgp2:979..1085;Parent=gene-HAVgp2;gbkey=Prot;Name=2B;product=2B mature peptide;protein_id=NP_740554.1
-NC_001489.1	RefSeq	CDS	3996	5000	.	+	.	ID=gene-HAVgp2:1086..1420;Parent=gene-HAVgp2;gbkey=Prot;Name=2C;product=2C mature peptide;protein_id=NP_740555.1
-NC_001489.1	RefSeq	CDS	5001	5222	.	+	.	ID=gene-HAVgp2:1421..1494;Parent=gene-HAVgp2;gbkey=Prot;Name=3A;product=3A mature peptide;protein_id=NP_740556.1
-NC_001489.1	RefSeq	CDS	5223	5291	.	+	.	ID=gene-HAVgp2:1495..1517;Parent=gene-HAVgp2;gbkey=Prot;Name=3B;product=3B (VPg) mature peptide;protein_id=NP_740557.1
-NC_001489.1	RefSeq	CDS	5292	5948	.	+	.	ID=gene-HAVgp2:1518..1736;Parent=gene-HAVgp2;gbkey=Prot;Name=3C;product=3C mature peptide;protein_id=NP_740558.1
-NC_001489.1	RefSeq	CDS	5949	7415	.	+	.	ID=gene-HAVgp2:1737..2225;Parent=gene-HAVgp2;gbkey=Prot;Name=3D;product=3D mature peptide;protein_id=NP_740559.1
+NC_001489.1	RefSeq	CDS	741	803	.	+	.	Note=alternate transcription start at position 741 sometimes preferred;Parent=gene-HAVgp2;gbkey=Prot;Name=VP4alt;product=1A VP4b mature peptide (alt.);protein_id=NP_740549.1
+NC_001489.1	RefSeq	CDS	804	1469	.	+	.	Note=VP2 capsid protein coded by 1B genome segment;Parent=gene-HAVgp2;gbkey=Prot;Name=VP2;product=1B VP2 mature peptide;protein_id=NP_740550.1
+NC_001489.1	RefSeq	CDS	1470	2207	.	+	.	Note=VP3 capsid protein coded by 1C genome segment;Parent=gene-HAVgp2;gbkey=Prot;Name=VP3;product=1C VP3 mature peptide;protein_id=NP_740551.1
+NC_001489.1	RefSeq	CDS	2208	3029	.	+	.	Note=VP1 capsid protein coded by 1D genome segment;Parent=gene-HAVgp2;gbkey=Prot;Name=VP1;product=1D VP1 mature peptide
+NC_001489.1	RefSeq	CDS	3030	3242	.	+	.	Note=HAV 2A is better referred to as pX;Parent=gene-HAVgp2;gbkey=Prot;Name=2A
+NC_001489.1	RefSeq	CDS	3243	3995	.	+	.	Parent=gene-HAVgp2;gbkey=Prot;Name=2B
+NC_001489.1	RefSeq	CDS	3996	5000	.	+	.	Parent=gene-HAVgp2;gbkey=Prot;Name=2C
+NC_001489.1	RefSeq	CDS	5001	5222	.	+	.	Parent=gene-HAVgp2;gbkey=Prot;Name=3A;product=3A mature peptide;protein_id=NP_740556.1
+NC_001489.1	RefSeq	CDS	5223	5291	.	+	.	Parent=gene-HAVgp2;gbkey=Prot;Name=3B;product=3B (VPg) mature peptide;protein_id=NP_740557.1
+NC_001489.1	RefSeq	CDS	5292	5948	.	+	.	Parent=gene-HAVgp2;gbkey=Prot;Name=3C;product=3C mature peptide;protein_id=NP_740558.1
+NC_001489.1	RefSeq	CDS	5949	7415	.	+	.	Parent=gene-HAVgp2;gbkey=Prot;Name=3D;product=3D mature peptide;protein_id=NP_740559.1
 
