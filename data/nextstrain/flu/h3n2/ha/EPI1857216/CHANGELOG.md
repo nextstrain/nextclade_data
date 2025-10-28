@@ -1,3 +1,7 @@
+## Unreleased
+
+ - aliasing of J.2.4.1 as K
+
 ## 2025-10-22T18:11:36Z
 
  - add designation of J.2.4.1
