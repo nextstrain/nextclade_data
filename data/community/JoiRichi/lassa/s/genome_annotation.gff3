@@ -1,0 +1,4 @@
+##sequence-region NC_004296 1 3402
+NC_004296	source	region	1	3402	.	+	.	gene=nuc
+NC_004296	source	gene	101	1810	.	+	.	gene_name=NP
+NC_004296	source	gene	1872	3347	.	-	.	gene_name=GPC
