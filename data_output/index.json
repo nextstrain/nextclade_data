@@ -1361,12 +1361,12 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 48,
+            "clades": 49,
             "customClades": {
-              "legacy-clade": 36,
-              "subclade": 48,
-              "short-clade": 36,
-              "proposedSubclade": 48
+              "legacy-clade": 37,
+              "subclade": 49,
+              "short-clade": 37,
+              "proposedSubclade": 49
             },
             "qc": [
               "privateMutations",
