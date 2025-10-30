@@ -10,7 +10,8 @@
     "changelog": "CHANGELOG.md"
   },
   "alignmentParams": {
-    "alignmentPreset": "high-diversity"
+    "alignmentPreset": "high-diversity",
+    "minSeedCover": 0.20
   },
   "attributes": {
     "name": "Hepatitis A virus",
