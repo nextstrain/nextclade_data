@@ -1,6 +1,7 @@
 {
   "schemaVersion": "3.0.0",
   "alignmentParams": {
+    "alignmentPreset": "high-diversity",
     "minSeedCover": 0
   },
   "files": {
@@ -13,7 +14,7 @@
   },
   "attributes": {
     "name": "Hepatitis A virus",
-    "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
+    "reference name": "Hepatitis A virus, VP1-2B junction framgment of NCBI Reference Sequence",
     "reference accession": "NC_001489.1"
   }
 }
