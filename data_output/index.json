@@ -4949,15 +4949,14 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 9,
+            "clades": 10,
             "qc": [
               "frameShifts",
               "missingData",
               "mixedSites",
               "privateMutations",
               "divergence",
-              "stopCodons",
-              "recombinants"
+              "stopCodons"
             ],
             "other": [
               "mutLabels"
