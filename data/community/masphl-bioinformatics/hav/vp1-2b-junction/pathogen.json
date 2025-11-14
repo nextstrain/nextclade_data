@@ -9,6 +9,7 @@
     "pathogenJson": "pathogen.json",
     "treeJson": "tree.json",
     "examples": "example_sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
