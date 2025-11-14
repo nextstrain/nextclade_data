@@ -6,8 +6,8 @@
 | name                 | Enterovirus D68                                                       |
 | reference            | [AY426531.1](https://www.ncbi.nlm.nih.gov/nuccore/AY426531.1)         |
 | workflow             | https://github.com/enterovirus-phylo/nextclade_d68                    |
-| path                 | `TBD`                                                                 |
-| clade definitions    |  A–C (D)                                                              |
+| path                 | `enpen/enterovirus/ev-d68`                                                                 |
+| clade definitions    | A–C (D)                                                              |
 
 ## Scope of this dataset
 
@@ -34,7 +34,7 @@ These designations are based on the phylogenetic structure and mutations, and ar
 ## Reference types
 
 This dataset includes several reference points used in analyses:
-- *Reference:*: RefSeq or similarly established reference sequence. Here Fermon.
+- *Reference:* RefSeq or similarly established reference sequence. Here Fermon.
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
 
