@@ -9,6 +9,14 @@
 | path                 | `enpen/enterovirus/ev-d68`                                                                 |
 | clade definitions    | A–C (D)                                                              |
 
+## Citation
+
+If you use this dataset in your research, please cite:
+
+> Neuner-Jehle, N., González Sánchez, A., Hodcroft, E. B., & European Non-Polio Enterovirus Network (ENPEN). (2025). *enterovirus-phylo/nextclade_d68: Enterovirus D68 Nextclade Dataset v1.0.0* (v1.0.0--2025-11-18). Zenodo. https://doi.org/10.5281/zenodo.17642339
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17642339.svg)](https://doi.org/10.5281/zenodo.17642339)
+
 ## Scope of this dataset
 
 Based on full-genome sequences, this dataset uses the **Fermon reference sequence** ([AY426531.1](https://www.ncbi.nlm.nih.gov/nuccore/AY426531.1)), originally isolated in 1962. It serves as the basis for quality control, clade assignment, and mutation calling across global EV-D68 diversity.
