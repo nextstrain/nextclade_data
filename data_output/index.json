@@ -5848,114 +5848,6 @@
           }
         },
         {
-          "path": "community/v-gen-lab/chikV/genotypes",
-          "enabled": true,
-          "attributes": {
-            "name": "chikV",
-            "reference accession": "NC_004162.2",
-            "reference name": "S27-African"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 4,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-24T07:29:03Z",
-              "tag": "2025-09-24--07-29-03Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-24T07:29:03Z",
-            "tag": "2025-09-24--07-29-03Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "community/masphl-bioinformatics/hav/vp1-2b-junction",
-          "enabled": true,
-          "attributes": {
-            "name": "Hepatitis A virus",
-            "reference name": "Hepatitis A virus, VP1-2B junction framgment of NCBI Reference Sequence",
-            "reference accession": "NC_001489.1"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "treeJson": "tree.json",
-            "examples": "example_sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 8
-          },
-          "versions": [
-            {
-              "tag": "unreleased"
-            }
-          ],
-          "version": {
-            "tag": "unreleased"
-          }
-        },
-        {
-          "path": "community/masphl-bioinformatics/hav/whole-genome",
-          "enabled": true,
-          "attributes": {
-            "name": "Hepatitis A virus",
-            "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
-            "reference accession": "NC_001489.1"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "example_sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 7,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased"
-            }
-          ],
-          "version": {
-            "tag": "unreleased"
-          }
-        },
-        {
           "path": "community/genspectrum/marburg/HK1980/all-lineages",
           "enabled": true,
           "attributes": {
@@ -6136,6 +6028,114 @@
           "version": {
             "updatedAt": "2025-09-24T07:29:03Z",
             "tag": "2025-09-24--07-29-03Z"
+          }
+        },
+        {
+          "path": "community/v-gen-lab/chikV/genotypes",
+          "enabled": true,
+          "attributes": {
+            "name": "chikV",
+            "reference accession": "NC_004162.2",
+            "reference name": "S27-African"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 4,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-24T07:29:03Z",
+              "tag": "2025-09-24--07-29-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-24T07:29:03Z",
+            "tag": "2025-09-24--07-29-03Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/masphl-bioinformatics/hav/vp1-2b-junction",
+          "enabled": true,
+          "attributes": {
+            "name": "Hepatitis A virus",
+            "reference name": "Hepatitis A virus, VP1-2B junction framgment of NCBI Reference Sequence",
+            "reference accession": "NC_001489.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 8
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
+          "path": "community/masphl-bioinformatics/hav/whole-genome",
+          "enabled": true,
+          "attributes": {
+            "name": "Hepatitis A virus",
+            "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
+            "reference accession": "NC_001489.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "example_sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 7,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
           }
         }
       ]
