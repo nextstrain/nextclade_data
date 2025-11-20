@@ -13,7 +13,7 @@
 
 If you use this dataset in your research, please cite:
 
-> Neuner-Jehle, N., González Sánchez, A., Hodcroft, E. B., & European Non-Polio Enterovirus Network (ENPEN). (2025). *enterovirus-phylo/nextclade_d68: Enterovirus D68 Nextclade Dataset v1.0.0* (v1.0.0--2025-11-18). Zenodo. https://doi.org/10.5281/zenodo.17642339
+> Neuner-Jehle, N., González Sánchez, A., Hodcroft, E. B., & European Non-Polio Enterovirus Network (ENPEN). (2025). *enterovirus-phylo/nextclade_d68: Enterovirus D68 Nextclade Dataset v1.0.0* (v1.0.0--2025-11-18). Zenodo. https://doi.org/10.5281/zenodo.17642338
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17642339.svg)](https://doi.org/10.5281/zenodo.17642339)
 
