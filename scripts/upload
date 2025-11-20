@@ -37,7 +37,7 @@ DATA_VERSION="v3"
 rm -rf "${DATA_TEMP_DIR}"
 mkdir -p "${DATA_TEMP_DIR}"
 
-rsync --archive --exclude='*.zip' "${DATA_OUTPUT_DIR}/" "${DATA_TEMP_DIR}/"
+rsync --archive --exclude='*.zip' --exclude='DO_NOT_MODIFY.md' "${DATA_OUTPUT_DIR}/" "${DATA_TEMP_DIR}/"
 
 pushd "${DATA_TEMP_DIR}" >/dev/null
   pigz -kfrq .
