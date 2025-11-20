@@ -41,7 +41,7 @@ rsync --archive --exclude='*.zip' --exclude='DO_NOT_MODIFY.md' "${DATA_OUTPUT_DI
 
 pushd "${DATA_TEMP_DIR}" >/dev/null
   pigz -kfrq .
-  find . -type f \( ! -iname "*.gz" -a ! -iname "*.br" \) | parallel brotli -kf || true
+  find . -type f \( ! -iname "*.gz" -a ! -iname "*.br" \) | parallel -j4 brotli -kf -q 6
 popd >/dev/null
 
 
