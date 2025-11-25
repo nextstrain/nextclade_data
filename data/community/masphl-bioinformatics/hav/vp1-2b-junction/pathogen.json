@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "alignmentPreset": "high-diversity",
+    "minSeedCover": 0
+  },
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "treeJson": "tree.json",
+    "examples": "example_sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Hepatitis A virus",
+    "reference name": "Hepatitis A virus, VP1-2B junction framgment of NCBI Reference Sequence",
+    "reference accession": "NC_001489.1"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "example_sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "alignmentParams": {
+    "alignmentPreset": "high-diversity",
+    "minSeedCover": 0.2
+  },
+  "attributes": {
+    "name": "Hepatitis A virus",
+    "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
+    "reference accession": "NC_001489.1"
+  },
+  "defaultCds": "VP1",
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2700,
+      "scoreBias": 500
+    },
+    "mixedSites": {
+      "enabled": false,
+      "mixedSitesThreshold": 10
+    },
+    "privateMutations": {
+      "cutoff": 150,
+      "enabled": false,
+      "typical": 30,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "version": {
+    "tag": "unreleased"
+  }
+}

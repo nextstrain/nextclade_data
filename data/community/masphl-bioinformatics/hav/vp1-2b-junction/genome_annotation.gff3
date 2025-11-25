@@ -1,0 +1,9 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_001489.1 1 7478
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=12092
+NC_001489.1	RefSeq	region	1	349	.	+	.	ID=NC_001489.1:2919..3029;Dbxref=taxon:12092;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Hepatitis A virus
+NC_001489.1	RefSeq	CDS	1	111	.	+	0	Note=VP1 capsid protein coded by 1D genome segment;Name=VP1truncated
+NC_001489.1	RefSeq	CDS	112	324	.	+	0	Note=HAV 2A is better referred to as pX;Name=2A
+NC_001489.1	RefSeq	CDS	325	348	.	+	0	Name=2Btruncated;Note=artifically truncated at position 348 because Nextclade requires multiples of 3
