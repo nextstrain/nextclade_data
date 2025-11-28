@@ -1,0 +1,17 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region U05876.1 1 7413
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=31704
+U05876.1	Genbank	region	1	7413	.	+	0	ID=U05876.1:1..7413;Dbxref=taxon:31704;gb-acronym=CV-A16;gbkey=Src;mol_type=genomic RNA;nat-host=Homo sapiens;strain=G-10
+U05876.1	Genbank	CDS	751	957	.	+	0	Name=VP4;gbkey=Prot;product=VP4;ID=id-AAA50478.1:1..69
+U05876.1	Genbank	CDS	958	1719	.	+	0	Name=VP2;gbkey=Prot;product=VP2;ID=id-AAA50478.1:70..323
+U05876.1	Genbank	CDS	1720	2445	.	+	0	Name=VP3;gbkey=Prot;product=VP3;ID=id-AAA50478.1:324..565
+U05876.1	Genbank	CDS	2446	3336	.	+	0	Name=VP1;gbkey=Prot;product=VP1;ID=id-AAA50478.1:566..862
+U05876.1	Genbank	CDS	3337	3786	.	+	0	Name=2A;product=2A;gbkey=Prot;ID=id-AAA50478.1:863..1012
+U05876.1	Genbank	CDS	3787	4083	.	+	0	Name=2B;product=2B;gbkey=Prot;ID=id-AAA50478.1:1013..1111
+U05876.1	Genbank	CDS	4084	5070	.	+	0	Name=2C;product=2C;gbkey=Prot;ID=id-AAA50478.1:1112..1440
+U05876.1	Genbank	CDS	5071	5328	.	+	0	Name=3A;product=3A;gbkey=Prot;ID=id-AAA50478.1:1441..1526
+U05876.1	Genbank	CDS	5329	5394	.	+	0	Name=3B;product=3B;gbkey=Prot;ID=id-AAA50478.1:1527..1548
+U05876.1	Genbank	CDS	5395	5943	.	+	0	Name=3C;product=3C;gbkey=Prot;ID=id-AAA50478.1:1549..1731
+U05876.1	Genbank	CDS	5944	7329	.	+	0	Name=3D;product=3D;gbkey=Prot;ID=id-AAA50478.1:1732..2193
