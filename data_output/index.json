@@ -5038,12 +5038,12 @@
       },
       "datasets": [
         {
-          "path": "enpen/enterovirus/ev-d68",
+          "path": "enpen/enterovirus/cv-a10",
           "enabled": true,
           "attributes": {
-            "name": "Enterovirus D68",
-            "reference name": "Human enterovirus 68 strain Fermon, complete genome.",
-            "reference accession": "AY426531.1"
+            "name": "Coxsackievirus A10",
+            "reference name": "Human coxsackievirus A10 strain Kowalik, complete genome",
+            "reference accession": "AY421767.1"
           },
           "files": {
             "reference": "reference.fasta",
@@ -5055,14 +5055,15 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 10,
+            "clades": 7,
             "qc": [
               "frameShifts",
               "missingData",
               "mixedSites",
               "privateMutations",
+              "stopCodons",
               "divergence",
-              "stopCodons"
+              "recombinants"
             ],
             "other": [
               "mutLabels"
@@ -5070,16 +5071,56 @@
           },
           "versions": [
             {
-              "updatedAt": "2025-11-20T19:02:04Z",
-              "tag": "2025-11-20--19-02-04Z",
+              "tag": "unreleased",
               "compatibility": {
-                "cli": "3.0.0",
-                "web": "3.0.0"
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
               }
-            },
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "enpen/enterovirus/ev-a71",
+          "enabled": true,
+          "attributes": {
+            "name": "Enterovirus A71",
+            "reference name": "Human enterovirus 71 polyprotein gene, complete cds.",
+            "reference accession": "U22521.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 19,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "divergence",
+              "stopCodons",
+              "recombinants"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
             {
-              "updatedAt": "2025-11-19T20:40:14Z",
-              "tag": "2025-11-19--20-40-14Z",
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0",
                 "web": "3.0.0"
@@ -5087,11 +5128,58 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-11-20T19:02:04Z",
-            "tag": "2025-11-20--19-02-04Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0",
               "web": "3.0.0"
+            }
+          }
+        },
+        {
+          "path": "enpen/enterovirus/cv-a16",
+          "enabled": true,
+          "attributes": {
+            "name": "Coxsackievirus A16",
+            "reference name": "Coxsackievirus A16",
+            "reference accession": "U05876.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 6,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons",
+              "recombinants"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
             }
           }
         }
