@@ -88,13 +88,21 @@
               "mixedSites",
               "privateMutations",
               "snpClusters",
-              "stopCodons"
+              "stopCodons",
+              "recombinants"
             ],
             "other": [
               "mutLabels"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-19T14:53:06Z",
               "tag": "2025-09-19--14-53-06Z",
@@ -257,8 +265,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-19T14:53:06Z",
-            "tag": "2025-09-19--14-53-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
