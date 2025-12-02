@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-12-02T12:30:02Z
  - Define subclade [D.3.1.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/D.3.1.1.yml)
 
 ## 2025-10-22T18:11:36Z

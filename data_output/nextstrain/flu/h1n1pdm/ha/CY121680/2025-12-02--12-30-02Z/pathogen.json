@@ -118,7 +118,8 @@
     "reference name": "A/California/7/2009-egg"
   },
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2025-12-02T12:30:02Z",
+    "tag": "2025-12-02--12-30-02Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
