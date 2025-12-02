@@ -2691,6 +2691,11 @@
           "cdsName": "ORF9b"
         }
       ]
+    },
+    "recombinants": {
+      "enabled": true,
+      "mutationsThreshold": 3,
+      "scoreWeight": 100.0
     }
   },
   "schemaVersion": "3.0.0",
