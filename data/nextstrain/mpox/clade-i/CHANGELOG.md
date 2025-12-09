@@ -1,3 +1,7 @@
+## Unreleased
+
+- Breaking change: outbreak nomenclature now follows the system described in [Ruis et al. (2025)](https://www.nature.com/articles/s41591-025-03820-6). As a result, outbreak `hMPXV-1` is now called `sh2017`. In addition, the clade Ib outbreak is labeled as outbreak `sh2023`, and the clade Ia outbreak described in [Wawina-Bokalanga et al. (2025)](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00294-6) is labeled as outbreak `sh2024`.
+
 ## 2025-09-09T12:13:13Z
 
 - Sequences released since the last update in April 2025 are now included.
