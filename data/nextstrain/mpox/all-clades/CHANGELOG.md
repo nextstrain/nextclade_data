@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-12-10T14:52:38Z
 
 - Breaking change: outbreak nomenclature now follows the system described in [Ruis et al. (2025)](https://www.nature.com/articles/s41591-025-03820-6). As a result, outbreak `hMPXV-1` is now called `sh2017`. In addition, the clade Ib outbreak is labeled as outbreak `sh2023`, and the clade Ia outbreak described in [Wawina-Bokalanga et al. (2025)](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00294-6) is labeled as outbreak `sh2024`.
 - The clade Ib/IIb recombinant described in [Pullan et al. (2025)](https://virological.org/t/inter-clade-recombinant-mpox-virus-detected-in-england-in-a-traveller-recently-returned-from-asia/1015) is included in the reference tree with the ad-hoc clade and outbreak labels `Ib/IIb` and `rec2025`, respectively.

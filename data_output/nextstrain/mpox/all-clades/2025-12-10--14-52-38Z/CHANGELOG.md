@@ -1,0 +1,46 @@
+## 2025-12-10T14:52:38Z
+
+- Breaking change: outbreak nomenclature now follows the system described in [Ruis et al. (2025)](https://www.nature.com/articles/s41591-025-03820-6). As a result, outbreak `hMPXV-1` is now called `sh2017`. In addition, the clade Ib outbreak is labeled as outbreak `sh2023`, and the clade Ia outbreak described in [Wawina-Bokalanga et al. (2025)](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00294-6) is labeled as outbreak `sh2024`.
+- The clade Ib/IIb recombinant described in [Pullan et al. (2025)](https://virological.org/t/inter-clade-recombinant-mpox-virus-detected-in-england-in-a-traveller-recently-returned-from-asia/1015) is included in the reference tree with the ad-hoc clade and outbreak labels `Ib/IIb` and `rec2025`, respectively.
+
+## 2025-09-09T12:13:13Z
+
+- The 15 newly designated clade IIb outbreak lineages are now included in the dataset. A description of all new lineages is available in this [mpxv-lineages repo document](https://github.com/mpxv-lineages/lineage-designation/blob/master/designation_records/A.2.5-C.1.3-E.3.1-E-4-F.4.1-G.1-etc_2025-09-07.md). A notable new lineage is G.1, the 2025 Sierra Leone outbreak lineage, which is a descendant of A.2.2.
+- Sequences released since the last update in April 2025 are now included.
+- Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
+## 2025-04-25T12:24:24Z
+
+- Newly released sequences are included.
+- Sequences are now downloaded from Pathoplexus instead of NCBI virus. This allows inclusion of restricted-use clade I sequences from INRB (Placide Mbala-Kingebeni's group) in the DRC. This nearly doubles clade I sequences available.
+- Based on user feedback, the QC rule for missing data (Ns) has been made more lenient.
+- Masked ranges that are ignored for placement have been updated.
+
+## 2024-11-19T14:18:53Z
+
+- 11 newly designated B.1 sublineages are now included. See <https://github.com/mpxv-lineages/lineage-designation/pull/45> for details.
+- Newly shared sequences are now included
+
+## 2024-08-27T21:28:04Z
+
+- Clade Ia and clade Ib are now distinguished
+- Sequences shared via Genbank since 2024 have been added
+
+## 2024-04-19T07:50:39Z
+
+- New hMPXV-1 lineages B.1.21, B.1.22, and C.1.1 are now included in the dataset. For more information on these lineages, see the [hMPXV-1 lineage definitions PR](https://github.com/mpxv-lineages/lineage-designation/pull/37)
+- The sequences used in the reference trees have been updated to include the latest sequences available in Genbank as of 2024-04-16
+
+## 2024-01-16T20:31:02Z
+
+Initial release of this dataset. This dataset is similar to the v2 dataset [`MPXV/ancestral`](https://github.com/nextstrain/nextclade_data/tree/2023-08-17--15-51-24--UTC/data/datasets/MPXV/references/ancestral/versions/2023-08-01T12%3A00%3A00Z/files) with some differences.
+
+### New and changed gene names
+
+Some genes have been renamed and one has been added. The new annotation is based on NCBI refseq annotations that were released in November 2022. The v2 dataset predates this refseq:
+
+- The 4 genes in the inverted terminal repeat segment (ITR) on both ends of the genome (OPG001, OPG002, OPG003,OPG015) are now all included. The genes on the 3' end (~positions 190000-197000) now have an `_dup` appended to distinguish them.
+- The gene previously named `NBT03_gp052` is now called `OPG073`
+- The gene previously named `NBT03_gp174` is now called `OPG016`
+- The gene previously named `NBT03_gp175` is now called `OPG015_dup`
+- Gene `OPG166` has been added
