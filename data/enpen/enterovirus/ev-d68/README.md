@@ -6,8 +6,8 @@
 | name                 | Enterovirus D68                                                       |
 | reference            | [AY426531.1](https://www.ncbi.nlm.nih.gov/nuccore/AY426531.1)         |
 | workflow             | https://github.com/enterovirus-phylo/nextclade_d68                    |
-| path                 | `enpen/enterovirus/ev-d68`                                                                 |
-| clade definitions    | A–C (D)                                                              |
+| path                 | `enpen/enterovirus/ev-d68`                                            |
+| clade definitions    | A–C (D)                                                               |
 
 ## Citation
 
