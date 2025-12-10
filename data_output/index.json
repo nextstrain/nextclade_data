@@ -5110,6 +5110,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0",
+                "web": "3.0.0"
+              }
+            },
+            {
               "updatedAt": "2025-11-20T19:02:04Z",
               "tag": "2025-11-20--19-02-04Z",
               "compatibility": {
@@ -5127,8 +5134,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-11-20T19:02:04Z",
-            "tag": "2025-11-20--19-02-04Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0",
               "web": "3.0.0"
