@@ -27,7 +27,7 @@
     "minLength": 100,
     "gapAlignmentSide": "right",
     "retryReverseComplement": true,
-    "minSeedCover": 0.40
+    "minSeedCover": 0.4
   },
   "defaultCds": "VP1",
   "compatibility": {
@@ -21081,5 +21081,12 @@
     "3B",
     "3C",
     "3D"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0",
+      "web": "3.0.0"
+    }
+  }
 }
