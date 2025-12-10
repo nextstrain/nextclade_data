@@ -1,3 +1,7 @@
+## Unreleased
+
+- Breaking change: outbreak nomenclature now follows the system described in [Ruis et al. (2025)](https://www.nature.com/articles/s41591-025-03820-6). As a result, outbreak `hMPXV-1` is now called `sh2017`.
+
 ## 2025-09-09T12:13:13Z
 
 - The 15 newly designated clade IIb outbreak lineages are now included in the dataset. A description of all new lineages is available in this [mpxv-lineages repo document](https://github.com/mpxv-lineages/lineage-designation/blob/master/designation_records/A.2.5-C.1.3-E.3.1-E-4-F.4.1-G.1-etc_2025-09-07.md). A notable new lineage is G.1, the 2025 Sierra Leone outbreak lineage, which is a descendant of A.2.2.
