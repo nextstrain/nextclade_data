@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-12-10T13:21:04Z
 
 - Update alignment parameters in pathogen.json:
     - Fix gap extension penalty
