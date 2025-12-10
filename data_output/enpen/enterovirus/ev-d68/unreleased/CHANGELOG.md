@@ -3,6 +3,9 @@
 - Update alignment parameters in pathogen.json:
     - Fix gap extension penalty
     - Enable reverse-complement handling
+- Recompute tree topology (ML tree rerun)
+- Regenerate mutation labels for all clades
+- Update reference example sequences
 
 ## 2025-11-20T19:02:04Z
 
