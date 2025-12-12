@@ -1,4 +1,4 @@
-## Unreleased
+## 2025-12-12T16:44:41Z
 
 - Add placement priors to discourage attachment at the recombinant clade Ib/IIb. Previously, short sequences would be called recombinant even if they could just as well be clade Ib (which they more likely are).
 
