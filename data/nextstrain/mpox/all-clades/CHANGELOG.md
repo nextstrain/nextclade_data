@@ -1,6 +1,6 @@
 ## Unreleased
 
-- Fix clade labeling of some clade I sequences wrongly reported as `unassigned` instead of `I`.
+- Fix clade labeling of some clade Ia sequences wrongly reported as `unassigned` instead of `Ia`.
 - Add some newly released sequences.
 
 ## 2025-12-12T16:44:41Z
