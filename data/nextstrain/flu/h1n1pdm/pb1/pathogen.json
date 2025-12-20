@@ -12,14 +12,25 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
+  "defaultCds": "HA1",
   "files": {
     "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
-    "reference": "reference.fasta"
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
   },
   "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 5,
+      "cutoff": 15,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
     "missingData": {
       "enabled": false,
       "missingDataThreshold": 100,
@@ -66,10 +77,9 @@
     ]
   },
   "attributes": {
-    "name": "Influenza A H1N1pdm PB1 (segment 2)",
+    "name": "Influenza A H1N1pdm PB1",
     "segment": "pb1",
     "reference accession": "NC_026435",
-    "reference name": "A/California/07/2009"
-  },
-  "defaultCds": "PB1"
+    "reference name": "A/California/7/2009"
+  }
 }
