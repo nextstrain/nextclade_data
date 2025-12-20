@@ -775,13 +775,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 28,
-            "customClades": {
-              "legacy-clade": 25,
-              "short-clade": 16,
-              "subclade": 28,
-              "proposedSubclade": 28
-            },
+            "clades": 27,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -793,6 +787,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-12-02T12:30:02Z",
               "tag": "2025-12-02--12-30-02Z",
@@ -883,8 +884,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-12-02T12:30:02Z",
-            "tag": "2025-12-02--12-30-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -937,13 +937,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 28,
-            "customClades": {
-              "legacy-clade": 26,
-              "short-clade": 16,
-              "subclade": 28,
-              "proposedSubclade": 28
-            },
+            "clades": 27,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -955,6 +949,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-12-02T12:30:02Z",
               "tag": "2025-12-02--12-30-02Z",
@@ -1045,8 +1046,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-12-02T12:30:02Z",
-            "tag": "2025-12-02--12-30-02Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1099,9 +1099,6 @@
           },
           "capabilities": {
             "clades": 26,
-            "customClades": {
-              "proposedSubclade": 26
-            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1115,6 +1112,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -1181,8 +1185,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1234,12 +1237,6 @@
           },
           "capabilities": {
             "clades": 49,
-            "customClades": {
-              "legacy-clade": 37,
-              "subclade": 49,
-              "short-clade": 37,
-              "proposedSubclade": 49
-            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1251,6 +1248,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-11-04T15:46:13Z",
               "tag": "2025-11-04--15-46-13Z",
@@ -1349,8 +1353,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-11-04T15:46:13Z",
-            "tag": "2025-11-04--15-46-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1404,12 +1407,6 @@
           },
           "capabilities": {
             "clades": 49,
-            "customClades": {
-              "legacy-clade": 37,
-              "subclade": 49,
-              "short-clade": 37,
-              "proposedSubclade": 49
-            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1423,6 +1420,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-11-04T15:46:13Z",
               "tag": "2025-11-04--15-46-13Z",
@@ -1529,8 +1533,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-11-04T15:46:13Z",
-            "tag": "2025-11-04--15-46-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1582,10 +1585,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 21,
-            "customClades": {
-              "proposedSubclade": 17
-            },
+            "clades": 22,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1598,6 +1598,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -1656,8 +1663,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1711,11 +1717,6 @@
           },
           "capabilities": {
             "clades": 25,
-            "customClades": {
-              "legacy-clade": 8,
-              "subclade": 25,
-              "proposedSubclade": 22
-            },
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1727,6 +1728,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-10-22T18:11:36Z",
               "tag": "2025-10-22--18-11-36Z",
@@ -1793,8 +1801,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-10-22T18:11:36Z",
-            "tag": "2025-10-22--18-11-36Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1846,10 +1853,7 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
-            "clades": 19,
-            "customClades": {
-              "proposedSubclade": 19
-            },
+            "clades": 18,
             "qc": [
               "privateMutations",
               "mixedSites",
@@ -1863,6 +1867,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -1921,8 +1932,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2761,7 +2771,7 @@
           "path": "nextstrain/flu/h3n2/pb1",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 PB1 (segment 2)",
+            "name": "Influenza A H3N2 PB1",
             "segment": "pb1",
             "reference accession": "NC_007372",
             "reference name": "A/NewYork/392/2004"
@@ -2789,19 +2799,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -2828,8 +2848,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2840,7 +2859,7 @@
           "path": "nextstrain/flu/h3n2/np",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 NP (segment 5)",
+            "name": "Influenza A H3N2 NP",
             "segment": "np",
             "reference accession": "NC_007369",
             "reference name": "A/NewYork/392/2004"
@@ -2868,19 +2887,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -2907,8 +2936,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2917,12 +2945,16 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/pa",
+          "shortcuts": [
+            "flu_h1n1pdm_pa",
+            "nextstrain/flu/h1n1pdm/pa"
+          ],
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1pdm PA (segment 3)",
+            "name": "Influenza A H1N1pdm PA",
             "segment": "pa",
             "reference accession": "NC_026437",
-            "reference name": "A/California/07/2009"
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -2947,13 +2979,16 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
@@ -2964,6 +2999,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -2998,8 +3040,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3010,7 +3051,7 @@
           "path": "nextstrain/flu/h3n2/ns",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 NS (segment 8)",
+            "name": "Influenza A H3N2 NS",
             "segment": "ns",
             "reference accession": "NC_007370",
             "reference name": "A/NewYork/392/2004"
@@ -3038,19 +3079,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3077,8 +3128,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3089,10 +3139,10 @@
           "path": "nextstrain/flu/h1n1pdm/mp",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1pdm MP (segment 7)",
+            "name": "Influenza A H1N1pdm MP",
             "segment": "mp",
             "reference accession": "NC_026431",
-            "reference name": "A/California/07/2009"
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -3117,19 +3167,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3156,8 +3216,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3168,10 +3227,10 @@
           "path": "nextstrain/flu/h1n1pdm/np",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1pdm NP (segment 5)",
+            "name": "Influenza A H1N1pdm NP",
             "segment": "np",
             "reference accession": "NC_026436",
-            "reference name": "A/California/07/2009"
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -3196,19 +3255,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3235,8 +3304,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3247,10 +3315,10 @@
           "path": "nextstrain/flu/h1n1pdm/ns",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1pdm NS (segment 8)",
+            "name": "Influenza A H1N1pdm NS",
             "segment": "ns",
             "reference accession": "NC_026432",
-            "reference name": "A/California/07/2009"
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -3275,19 +3343,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3314,8 +3392,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3326,7 +3403,7 @@
           "path": "nextstrain/flu/h3n2/mp",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 MP (segment 7)",
+            "name": "Influenza A H3N2 MP",
             "segment": "mp",
             "reference accession": "NC_007367",
             "reference name": "A/NewYork/392/2004"
@@ -3354,19 +3431,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3393,8 +3480,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3403,9 +3489,13 @@
         },
         {
           "path": "nextstrain/flu/h3n2/pa",
+          "shortcuts": [
+            "flu_h3n2_pa",
+            "nextstrain/flu/h3n2/pa"
+          ],
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 PA (segment 3)",
+            "name": "Influenza A H3N2 PA",
             "segment": "pa",
             "reference accession": "NC_007371",
             "reference name": "A/NewYork/392/2004"
@@ -3433,13 +3523,16 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
@@ -3450,6 +3543,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3484,8 +3584,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3496,10 +3595,10 @@
           "path": "nextstrain/flu/h1n1pdm/pb2",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1pdm PB2 (segment 1)",
+            "name": "Influenza A H1N1pdm PB2",
             "segment": "pb2",
             "reference accession": "NC_026438",
-            "reference name": "A/California/07/2009"
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -3524,19 +3623,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3563,8 +3672,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3575,10 +3683,10 @@
           "path": "nextstrain/flu/h1n1pdm/pb1",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1pdm PB1 (segment 2)",
+            "name": "Influenza A H1N1pdm PB1",
             "segment": "pb1",
             "reference accession": "NC_026435",
-            "reference name": "A/California/07/2009"
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -3603,19 +3711,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3642,8 +3760,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3654,7 +3771,7 @@
           "path": "nextstrain/flu/h3n2/pb2",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 PB2 (segment 1)",
+            "name": "Influenza A H3N2 PB2",
             "segment": "pb2",
             "reference accession": "NC_007373",
             "reference name": "A/NewYork/392/2004"
@@ -3682,19 +3799,29 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta"
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
           },
           "capabilities": {
             "qc": [
+              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3721,8 +3848,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
