@@ -12,7 +12,7 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "defaultCds": "HA1",
+  "defaultCds": "NP",
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
