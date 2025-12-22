@@ -1,3 +1,7 @@
+## Unreleased
+
+Automated update
+
 ## 2025-12-05T10:40:14Z
 
 - Add all 299 Pango lineages newly designated between 2025-09-20 and 2025-12-04. Unfold below to see a list of all newly included lineages with their designation dates:
