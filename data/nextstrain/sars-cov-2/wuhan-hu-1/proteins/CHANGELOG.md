@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-01-06T14:59:32Z
 
 - Include the 6 newly designated Nextstrain clades 25D (MC.10.2.1), 25E (PY.1), 25F (NW.1.2), 25G (XFC), 25H (XFJ), and 25I (BA.3.2). See <https://github.com/nextstrain/ncov/pull/1192> for details.
 - Add all 77 Pango lineages newly designated between 2025-12-05 and 2025-01-05. Unfold below to see a list of all newly included lineages with their designation dates:
@@ -86,7 +86,7 @@
 
 </details>
 
-## Unreleased
+## 2026-01-06T14:59:32Z
 
 - Add all 299 Pango lineages newly designated between 2025-09-20 and 2025-12-04. Unfold below to see a list of all newly included lineages with their designation dates:
 
