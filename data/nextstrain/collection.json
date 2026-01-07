@@ -72,6 +72,14 @@
     "nextstrain/herpes/vzv/NC_001348",
     "nextstrain/mumps/sh",
     "nextstrain/mumps/genome",
-    "nextstrain/rubella/genome"
+    "nextstrain/rubella/genome",
+    "nextstrain/flu/b/mp",
+    "nextstrain/flu/b/ns",
+    "nextstrain/flu/b/pb1",
+    "nextstrain/flu/b/ha/KX058884",
+    "nextstrain/flu/b/pb2",
+    "nextstrain/flu/b/na/CY073894",
+    "nextstrain/flu/b/pa",
+    "nextstrain/flu/b/np"
   ]
 }

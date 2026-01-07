@@ -4821,6 +4821,569 @@
           }
         },
         {
+          "path": "nextstrain/flu/b/mp",
+          "shortcuts": [
+            "flu_b_mp",
+            "nextstrain/flu/b/mp",
+            "nextstrain/flu/b/mp/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B MP",
+            "segment": "mp",
+            "reference accession": "CY115152",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/ns",
+          "shortcuts": [
+            "flu_b_ns",
+            "nextstrain/flu/b/ns",
+            "nextstrain/flu/b/ns/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B NS",
+            "segment": "ns",
+            "reference accession": "CY115155",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/pb1",
+          "shortcuts": [
+            "flu_b_pb1",
+            "nextstrain/flu/b/pb1",
+            "nextstrain/flu/b/pb1/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B PB1",
+            "segment": "pb1",
+            "reference accession": "CY115157",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/ha/KX058884",
+          "shortcuts": [
+            "flu_b_ha",
+            "nextstrain/flu/b",
+            "nextstrain/flu/b/ha",
+            "nextstrain/flu/b/ha/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B HA",
+            "segment": "ha",
+            "reference accession": "KX058884",
+            "reference name": "B/Brisbane/60/2008-egg"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 26,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/pb2",
+          "shortcuts": [
+            "flu_b_pb2",
+            "nextstrain/flu/b/pb2",
+            "nextstrain/flu/b/pb2/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B PB2",
+            "segment": "pb2",
+            "reference accession": "CY115158",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/na/CY073894",
+          "shortcuts": [
+            "flu_b_na",
+            "nextstrain/flu/b/na",
+            "nextstrain/flu/b/na/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B NA",
+            "segment": "na",
+            "reference accession": "CY073894",
+            "reference name": "B/Brisbane/60/2008-egg"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 20,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData",
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/pa",
+          "shortcuts": [
+            "flu_b_pa",
+            "nextstrain/flu/b/pa",
+            "nextstrain/flu/b/pa/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B PA",
+            "segment": "pa",
+            "reference accession": "CY115156",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/np",
+          "shortcuts": [
+            "flu_b_np",
+            "nextstrain/flu/b/np",
+            "nextstrain/flu/b/np/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B NP",
+            "segment": "np",
+            "reference accession": "CY115154",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/sars-cov-2/BA.2",
           "shortcuts": [
             "sars-cov-2-21L"
