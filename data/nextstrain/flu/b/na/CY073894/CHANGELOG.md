@@ -1,3 +1,2 @@
 ## Unreleased
-
 Initial release
