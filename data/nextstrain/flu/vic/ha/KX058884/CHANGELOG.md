@@ -1,6 +1,3 @@
-## Unreleased
-
-
 ## 2025-10-22T18:11:36Z
 
  - make `subclade` the default clade like feature, while including a column `subclade` into the tabular output to maintain backwards compatibility of other pipelines. The previous `clade` that hasn't been updated in for 2y as now `legacy-clade`.
