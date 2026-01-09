@@ -274,624 +274,6 @@
           }
         },
         {
-          "path": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
-          "enabled": true,
-          "attributes": {
-            "name": "SARS-CoV-2 (Mature proteins)",
-            "reference name": "Wuhan-Hu-1/2019",
-            "reference accession": "MN908947"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://docs.nextstrain.org/projects/nextclade"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/neherlab/nextclade_data_workflows"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/nextstrain/nextclade_data/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 53,
-            "customClades": {
-              "Nextclade_pango": 4654,
-              "partiallyAliased": 4654,
-              "clade_nextstrain": 53,
-              "clade_who": 13,
-              "clade_display": 53
-            },
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "snpClusters",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-12-05T10:40:14Z",
-              "tag": "2025-12-05--10-40-14Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-19T14:53:06Z",
-              "tag": "2025-09-19--14-53-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-06-09T15:42:38Z",
-              "tag": "2025-06-09--15-42-38Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-05-05T13:15:29Z",
-              "tag": "2025-05-05--13-15-29Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-03-26T11:47:13Z",
-              "tag": "2025-03-26--11-47-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-01-28T16:39:09Z",
-              "tag": "2025-01-28--16-39-09Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-19T14:18:53Z",
-              "tag": "2024-11-19--14-18-53Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-14T17:22:16Z",
-              "tag": "2024-11-14--17-22-16Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-03T08:29:55Z",
-              "tag": "2024-07-03--08-29-55Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-13T23:42:47Z",
-              "tag": "2024-06-13--23-42-47Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-04-25T01:03:07Z",
-              "tag": "2024-04-25--01-03-07Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-04-15T15:08:22Z",
-              "tag": "2024-04-15--15-08-22Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-02-16T04:00:32Z",
-              "tag": "2024-02-16--04-00-32Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-12-05T10:40:14Z",
-            "tag": "2025-12-05--10-40-14Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/sars-cov-2/BA.2.86",
-          "enabled": true,
-          "attributes": {
-            "name": "SARS-CoV-2 (BA.2.86)",
-            "reference name": "Wuhan-Hu-1 with BA.2.86 SNPs"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://docs.nextstrain.org/projects/nextclade"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/neherlab/nextclade_data_workflows"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/nextclade_data",
-              "https://github.com/nextstrain/nextclade_data/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 30,
-            "customClades": {
-              "Nextclade_pango": 3918,
-              "partiallyAliased": 3918,
-              "clade_nextstrain": 30,
-              "clade_who": 3,
-              "clade_display": 30
-            },
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "snpClusters",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels",
-              "phenotypeData"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-12-05T10:40:14Z",
-              "tag": "2025-12-05--10-40-14Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-19T14:53:06Z",
-              "tag": "2025-09-19--14-53-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-08-02T08:55:17Z",
-              "tag": "2025-08-02--08-55-17Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-06-09T15:42:38Z",
-              "tag": "2025-06-09--15-42-38Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-05-05T13:15:29Z",
-              "tag": "2025-05-05--13-15-29Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-04-01T08:20:12Z",
-              "tag": "2025-04-01--08-20-12Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-03-26T11:47:13Z",
-              "tag": "2025-03-26--11-47-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-03-04T17:31:25Z",
-              "tag": "2025-03-04--17-31-25Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-01-28T16:39:09Z",
-              "tag": "2025-01-28--16-39-09Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-19T14:18:53Z",
-              "tag": "2024-11-19--14-18-53Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-14T17:22:16Z",
-              "tag": "2024-11-14--17-22-16Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-10-17T16:48:48Z",
-              "tag": "2024-10-17--16-48-48Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-09-25T21:50:30Z",
-              "tag": "2024-09-25--21-50-30Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-17T12:57:03Z",
-              "tag": "2024-07-17--12-57-03Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-03T08:29:55Z",
-              "tag": "2024-07-03--08-29-55Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-13T23:42:47Z",
-              "tag": "2024-06-13--23-42-47Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-04-25T01:03:07Z",
-              "tag": "2024-04-25--01-03-07Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-04-15T15:08:22Z",
-              "tag": "2024-04-15--15-08-22Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-02-16T04:00:32Z",
-              "tag": "2024-02-16--04-00-32Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-12-05T10:40:14Z",
-            "tag": "2025-12-05--10-40-14Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/ha/CY121680",
-          "shortcuts": [
-            "flu_h1n1pdm_ha_broad",
-            "nextstrain/flu/h1n1pdm/ha/california-7-2009"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1pdm HA",
-            "segment": "ha",
-            "reference accession": "CY121680",
-            "reference name": "A/California/7/2009-egg"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 27,
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-12-02T12:30:02Z",
-              "tag": "2025-12-02--12-30-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-10-22T18:11:36Z",
-              "tag": "2025-10-22--18-11-36Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-08-07T09:22:32Z",
-              "tag": "2025-08-07--09-22-32Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-01-22T09:54:14Z",
-              "tag": "2025-01-22--09-54-14Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-01-09T08:17:24Z",
-              "tag": "2025-01-09--08-17-24Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-27T02:51:00Z",
-              "tag": "2024-11-27--02-51-00Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-05T09:19:52Z",
-              "tag": "2024-11-05--09-19-52Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-03T08:29:55Z",
-              "tag": "2024-07-03--08-29-55Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-04-19T07:50:39Z",
-              "tag": "2024-04-19--07-50-39Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
           "path": "nextstrain/flu/h1n1pdm/ha/MW626062",
           "shortcuts": [
             "flu_h1n1pdm_ha",
@@ -1173,174 +555,6 @@
             {
               "updatedAt": "2024-04-19T07:50:39Z",
               "tag": "2024-04-19--07-50-39Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/ha/CY163680",
-          "shortcuts": [
-            "flu_h3n2_ha_broad",
-            "nextstrain/flu/h3n2/ha/wisconsin-67-2005"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H3N2 HA",
-            "segment": "ha",
-            "reference accession": "CY163680",
-            "reference name": "A/Wisconsin/67/2005-egg"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 49,
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-11-04T15:46:13Z",
-              "tag": "2025-11-04--15-46-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-10-22T18:11:36Z",
-              "tag": "2025-10-22--18-11-36Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-08-07T09:22:32Z",
-              "tag": "2025-08-07--09-22-32Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-01-22T09:54:14Z",
-              "tag": "2025-01-22--09-54-14Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-01-09T08:17:24Z",
-              "tag": "2025-01-09--08-17-24Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-27T02:51:00Z",
-              "tag": "2024-11-27--02-51-00Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-11-05T09:19:52Z",
-              "tag": "2024-11-05--09-19-52Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-07-03T08:29:55Z",
-              "tag": "2024-07-03--08-29-55Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-04-19T07:50:39Z",
-              "tag": "2024-04-19--07-50-39Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-02-22T16:12:03Z",
-              "tag": "2024-02-22--16-12-03Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -1662,6 +876,160 @@
             {
               "updatedAt": "2024-01-16T20:31:02Z",
               "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/ha/KX058884",
+          "shortcuts": [
+            "flu_b_ha",
+            "nextstrain/flu/b",
+            "nextstrain/flu/b/ha",
+            "nextstrain/flu/b/ha/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B HA",
+            "segment": "ha",
+            "reference accession": "KX058884",
+            "reference name": "B/Brisbane/60/2008-egg"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 26,
+            "customClades": {
+              "lineage": 3,
+              "legacy-clade-vic": 9,
+              "legacy-clade-yam": 4
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/na/CY073894",
+          "shortcuts": [
+            "flu_b_na",
+            "nextstrain/flu/b/na",
+            "nextstrain/flu/b/na/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B NA",
+            "segment": "na",
+            "reference accession": "CY073894",
+            "reference name": "B/Brisbane/60/2008-egg"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 20,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData",
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -2770,6 +2138,1073 @@
           }
         },
         {
+          "path": "nextstrain/measles/genome/WHO-2012",
+          "shortcuts": [
+            "measles"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Measles morbillivirus -- complete genome",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498 "
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff3",
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "examples": "sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-11T19:06:01Z",
+              "tag": "2025-08-11--19-06-01Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/measles/N450/WHO-2012",
+          "enabled": true,
+          "attributes": {
+            "name": "Measles N450 (WHO-2012)",
+            "reference name": "Ichinose-B95a",
+            "reference accession": "NC_001498.1"
+          },
+          "files": {
+            "reference": "measles_reference_N450.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "measles_reference_N450.gff3",
+            "treeJson": "measles_nextclade.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 25,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z"
+            },
+            {
+              "updatedAt": "2025-08-02T08:55:17Z",
+              "tag": "2025-08-02--08-55-17Z"
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z"
+            },
+            {
+              "updatedAt": "2024-06-07T06:48:19Z",
+              "tag": "2024-06-07--06-48-19Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z"
+          }
+        },
+        {
+          "path": "nextstrain/dengue/all",
+          "enabled": true,
+          "attributes": {
+            "name": "Dengue virus All serotypes",
+            "reference accession": "NC_002640",
+            "reference name": "dengue virus type 4"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 5,
+            "qc": [
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-18T19:09:40Z",
+              "tag": "2024-06-18--19-09-40Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/yellow-fever/prM-E",
+          "enabled": true,
+          "attributes": {
+            "name": "Yellow fever virus (YFV) prM-E region",
+            "reference name": "Asibi",
+            "reference accession": "AY640589.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 8,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z"
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z"
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z"
+          }
+        },
+        {
+          "path": "nextstrain/hmpv/all-clades/NC_039199",
+          "shortcuts": [
+            "hmpv"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Human Metapneumovirus",
+            "reference accession": "NC_039199",
+            "reference name": "hMPV/00-1"
+          },
+          "files": {
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 10,
+            "customClades": {
+              "legacy_clade": 10
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-25T12:24:24Z",
+              "tag": "2025-04-25--12-24-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-12-04T17:05:31Z",
+              "tag": "2024-12-04--17-05-31Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/herpes/vzv/NC_001348",
+          "shortcuts": [
+            "vzv"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Varicella-Zoster Virus (VZV)",
+            "reference name": "NC_001348.1",
+            "reference accession": "NC_001348.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 10,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-11-04T15:46:13Z",
+              "tag": "2025-11-04--15-46-13Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-11-04T15:46:13Z",
+            "tag": "2025-11-04--15-46-13Z"
+          }
+        },
+        {
+          "path": "nextstrain/rubella/E1",
+          "enabled": true,
+          "attributes": {
+            "name": "Rubella virus E1 region",
+            "reference name": "F-Therien",
+            "reference accession": "NC_001545.2"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z"
+            },
+            {
+              "updatedAt": "2025-07-01T21:21:21Z",
+              "tag": "2025-07-01--21-21-21Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z"
+          }
+        },
+        {
+          "path": "nextstrain/mumps/sh",
+          "enabled": true,
+          "attributes": {
+            "name": "Mumps MuV Genotypes (SH gene 315nt region)",
+            "reference name": "Jeryl-Lynn (genotype A)",
+            "reference accession": "D90232"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 13
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-10-22T18:11:36Z",
+              "tag": "2025-10-22--18-11-36Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-10-22T18:11:36Z",
+            "tag": "2025-10-22--18-11-36Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/mumps/genome",
+          "enabled": true,
+          "attributes": {
+            "name": "Mumps MuV Genotypes (Full genome)",
+            "reference name": "Jeryl-Lynn (genotype A)",
+            "reference accession": "D90232"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 13,
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-10-22T18:11:36Z",
+              "tag": "2025-10-22--18-11-36Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-14T12:26:14Z",
+              "tag": "2025-08-14--12-26-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-10-22T18:11:36Z",
+            "tag": "2025-10-22--18-11-36Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
+          "enabled": true,
+          "attributes": {
+            "name": "SARS-CoV-2 (Mature proteins)",
+            "reference name": "Wuhan-Hu-1/2019",
+            "reference accession": "MN908947"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 53,
+            "customClades": {
+              "Nextclade_pango": 4654,
+              "partiallyAliased": 4654,
+              "clade_nextstrain": 53,
+              "clade_who": 13,
+              "clade_display": 53
+            },
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-12-05T10:40:14Z",
+              "tag": "2025-12-05--10-40-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-19T14:53:06Z",
+              "tag": "2025-09-19--14-53-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-06-09T15:42:38Z",
+              "tag": "2025-06-09--15-42-38Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-16T04:00:32Z",
+              "tag": "2024-02-16--04-00-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-12-05T10:40:14Z",
+            "tag": "2025-12-05--10-40-14Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/sars-cov-2/BA.2.86",
+          "enabled": true,
+          "attributes": {
+            "name": "SARS-CoV-2 (BA.2.86)",
+            "reference name": "Wuhan-Hu-1 with BA.2.86 SNPs"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://docs.nextstrain.org/projects/nextclade"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/neherlab/nextclade_data_workflows"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data",
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 30,
+            "customClades": {
+              "Nextclade_pango": 3918,
+              "partiallyAliased": 3918,
+              "clade_nextstrain": 30,
+              "clade_who": 3,
+              "clade_display": 30
+            },
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "snpClusters",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-12-05T10:40:14Z",
+              "tag": "2025-12-05--10-40-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-19T14:53:06Z",
+              "tag": "2025-09-19--14-53-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-02T08:55:17Z",
+              "tag": "2025-08-02--08-55-17Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-06-09T15:42:38Z",
+              "tag": "2025-06-09--15-42-38Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-05-05T13:15:29Z",
+              "tag": "2025-05-05--13-15-29Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-04-01T08:20:12Z",
+              "tag": "2025-04-01--08-20-12Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-26T11:47:13Z",
+              "tag": "2025-03-26--11-47-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-03-04T17:31:25Z",
+              "tag": "2025-03-04--17-31-25Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-28T16:39:09Z",
+              "tag": "2025-01-28--16-39-09Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-19T14:18:53Z",
+              "tag": "2024-11-19--14-18-53Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-14T17:22:16Z",
+              "tag": "2024-11-14--17-22-16Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-10-17T16:48:48Z",
+              "tag": "2024-10-17--16-48-48Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-09-25T21:50:30Z",
+              "tag": "2024-09-25--21-50-30Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-17T12:57:03Z",
+              "tag": "2024-07-17--12-57-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-13T23:42:47Z",
+              "tag": "2024-06-13--23-42-47Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-25T01:03:07Z",
+              "tag": "2024-04-25--01-03-07Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-15T15:08:22Z",
+              "tag": "2024-04-15--15-08-22Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-16T04:00:32Z",
+              "tag": "2024-02-16--04-00-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-12-05T10:40:14Z",
+            "tag": "2025-12-05--10-40-14Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/rubella/genome",
+          "shortcuts": [
+            "rubella"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Rubella",
+            "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
+            "reference accession": "NC_076948"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff3",
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2025-09-19T14:53:06Z",
+              "tag": "2025-09-19--14-53-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2025-09-19T14:53:06Z",
+            "tag": "2025-09-19--14-53-06Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/pb2",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 PB2",
+            "segment": "pb2",
+            "reference accession": "NC_007373",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/flu/h3n2/pb1",
           "enabled": true,
           "attributes": {
@@ -2858,6 +3293,278 @@
           }
         },
         {
+          "path": "nextstrain/flu/h3n2/pa",
+          "shortcuts": [
+            "flu_h3n2_pa",
+            "nextstrain/flu/h3n2/pa"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 PA",
+            "segment": "pa",
+            "reference accession": "NC_007371",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "mutLabels",
+              "phenotypeData"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/ha/CY163680",
+          "shortcuts": [
+            "flu_h3n2_ha_broad",
+            "nextstrain/flu/h3n2/ha/wisconsin-67-2005"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 HA",
+            "segment": "ha",
+            "reference accession": "CY163680",
+            "reference name": "A/Wisconsin/67/2005-egg"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 49,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-11-04T15:46:13Z",
+              "tag": "2025-11-04--15-46-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-10-22T18:11:36Z",
+              "tag": "2025-10-22--18-11-36Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-02-22T16:12:03Z",
+              "tag": "2024-02-22--16-12-03Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/flu/h3n2/np",
           "enabled": true,
           "attributes": {
@@ -2865,6 +3572,358 @@
             "segment": "np",
             "reference accession": "NC_007369",
             "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/mp",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 MP",
+            "segment": "mp",
+            "reference accession": "NC_007367",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h3n2/ns",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H3N2 NS",
+            "segment": "ns",
+            "reference accession": "NC_007370",
+            "reference name": "A/NewYork/392/2004"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/pb2",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm PB2",
+            "segment": "pb2",
+            "reference accession": "NC_026438",
+            "reference name": "A/California/7/2009"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-09T12:13:13Z",
+              "tag": "2025-09-09--12-13-13Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-06-04T16:27:23Z",
+              "tag": "2024-06-04--16-27-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-01-16T20:31:02Z",
+              "tag": "2024-01-16--20-31-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1pdm/pb1",
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1pdm PB1",
+            "segment": "pb1",
+            "reference accession": "NC_026435",
+            "reference name": "A/California/7/2009"
           },
           "maintenance": {
             "website": [
@@ -3050,13 +4109,17 @@
           }
         },
         {
-          "path": "nextstrain/flu/h3n2/ns",
+          "path": "nextstrain/flu/h1n1pdm/ha/CY121680",
+          "shortcuts": [
+            "flu_h1n1pdm_ha_broad",
+            "nextstrain/flu/h1n1pdm/ha/california-7-2009"
+          ],
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 NS",
-            "segment": "ns",
-            "reference accession": "NC_007370",
-            "reference name": "A/NewYork/392/2004"
+            "name": "Influenza A H1N1pdm HA",
+            "segment": "ha",
+            "reference accession": "CY121680",
+            "reference name": "A/California/7/2009-egg"
           },
           "maintenance": {
             "website": [
@@ -3089,16 +4152,36 @@
             "treeJson": "tree.json"
           },
           "capabilities": {
+            "clades": 27,
             "qc": [
               "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
             ]
           },
           "versions": [
             {
               "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-12-02T12:30:02Z",
+              "tag": "2025-12-02--12-30-02Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-10-22T18:11:36Z",
+              "tag": "2025-10-22--18-11-36Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -3113,8 +4196,56 @@
               }
             },
             {
-              "updatedAt": "2024-06-04T16:27:23Z",
-              "tag": "2024-06-04--16-27-23Z",
+              "updatedAt": "2025-08-07T09:22:32Z",
+              "tag": "2025-08-07--09-22-32Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-22T09:54:14Z",
+              "tag": "2025-01-22--09-54-14Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-01-09T08:17:24Z",
+              "tag": "2025-01-09--08-17-24Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-27T02:51:00Z",
+              "tag": "2024-11-27--02-51-00Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-11-05T09:19:52Z",
+              "tag": "2024-11-05--09-19-52Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-07-03T08:29:55Z",
+              "tag": "2024-07-03--08-29-55Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2024-04-19T07:50:39Z",
+              "tag": "2024-04-19--07-50-39Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -3402,293 +4533,13 @@
           }
         },
         {
-          "path": "nextstrain/flu/h3n2/mp",
+          "path": "nextstrain/flu/vic/pb1",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 MP",
-            "segment": "mp",
-            "reference accession": "NC_007367",
-            "reference name": "A/NewYork/392/2004"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-04T16:27:23Z",
-              "tag": "2024-06-04--16-27-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h3n2/pa",
-          "shortcuts": [
-            "flu_h3n2_pa",
-            "nextstrain/flu/h3n2/pa"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H3N2 PA",
-            "segment": "pa",
-            "reference accession": "NC_007371",
-            "reference name": "A/NewYork/392/2004"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels",
-              "phenotypeData"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-08-07T09:22:32Z",
-              "tag": "2025-08-07--09-22-32Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-04T16:27:23Z",
-              "tag": "2024-06-04--16-27-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/pb2",
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1pdm PB2",
-            "segment": "pb2",
-            "reference accession": "NC_026438",
-            "reference name": "A/California/7/2009"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-04T16:27:23Z",
-              "tag": "2024-06-04--16-27-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1pdm/pb1",
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1pdm PB1",
+            "name": "Influenza B(Vic) PB1 (segment 1)",
             "segment": "pb1",
-            "reference accession": "NC_026435",
-            "reference name": "A/California/7/2009"
+            "reference accession": "CY115157",
+            "reference name": "B/Brisbane/60/2008"
           },
           "maintenance": {
             "website": [
@@ -3713,29 +4564,20 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
           },
           "capabilities": {
             "qc": [
-              "privateMutations",
               "mixedSites",
               "frameShifts",
               "stopCodons"
             ]
           },
           "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
             {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
@@ -3745,16 +4587,8 @@
               }
             },
             {
-              "updatedAt": "2024-06-04T16:27:23Z",
-              "tag": "2024-06-04--16-27-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -3762,7 +4596,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2025-09-09T12:13:13Z",
+            "tag": "2025-09-09--12-13-13Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -3770,13 +4605,13 @@
           }
         },
         {
-          "path": "nextstrain/flu/h3n2/pb2",
+          "path": "nextstrain/flu/vic/pb2",
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H3N2 PB2",
+            "name": "Influenza B(Vic) PB2 (segment 2)",
             "segment": "pb2",
-            "reference accession": "NC_007373",
-            "reference name": "A/NewYork/392/2004"
+            "reference accession": "CY115158",
+            "reference name": "B/Brisbane/60/2008"
           },
           "maintenance": {
             "website": [
@@ -3801,87 +4636,14 @@
           },
           "files": {
             "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
             "pathogenJson": "pathogen.json",
             "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
+            "examples": "sequences.fasta",
+            "reference": "reference.fasta"
           },
           "capabilities": {
             "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-04T16:27:23Z",
-              "tag": "2024-06-04--16-27-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-01-16T20:31:02Z",
-              "tag": "2024-01-16--20-31-02Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/measles/genome/WHO-2012",
-          "shortcuts": [
-            "measles"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Measles morbillivirus -- complete genome",
-            "reference name": "Ichinose-B95a",
-            "reference accession": "NC_001498 "
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "annotation.gff3",
-            "treeJson": "tree.json",
-            "changelog": "CHANGELOG.md",
-            "readme": "README.md",
-            "examples": "sequences.fasta"
-          },
-          "capabilities": {
-            "clades": 25,
-            "qc": [
-              "missingData",
-              "snpClusters",
               "mixedSites",
               "frameShifts",
               "stopCodons"
@@ -3897,223 +4659,8 @@
               }
             },
             {
-              "updatedAt": "2025-08-11T19:06:01Z",
-              "tag": "2025-08-11--19-06-01Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/measles/N450/WHO-2012",
-          "enabled": true,
-          "attributes": {
-            "name": "Measles N450 (WHO-2012)",
-            "reference name": "Ichinose-B95a",
-            "reference accession": "NC_001498.1"
-          },
-          "files": {
-            "reference": "measles_reference_N450.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "measles_reference_N450.gff3",
-            "treeJson": "measles_nextclade.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 25,
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z"
-            },
-            {
-              "updatedAt": "2025-08-02T08:55:17Z",
-              "tag": "2025-08-02--08-55-17Z"
-            },
-            {
-              "updatedAt": "2025-03-26T11:47:13Z",
-              "tag": "2025-03-26--11-47-13Z"
-            },
-            {
-              "updatedAt": "2024-06-07T06:48:19Z",
-              "tag": "2024-06-07--06-48-19Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z"
-          }
-        },
-        {
-          "path": "nextstrain/dengue/all",
-          "enabled": true,
-          "attributes": {
-            "name": "Dengue virus All serotypes",
-            "reference accession": "NC_002640",
-            "reference name": "dengue virus type 4"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 5,
-            "qc": [
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-06-18T19:09:40Z",
-              "tag": "2024-06-18--19-09-40Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/yellow-fever/prM-E",
-          "enabled": true,
-          "attributes": {
-            "name": "Yellow fever virus (YFV) prM-E region",
-            "reference name": "Asibi",
-            "reference accession": "AY640589.1"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 8,
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z"
-            },
-            {
-              "updatedAt": "2025-03-26T11:47:13Z",
-              "tag": "2025-03-26--11-47-13Z"
-            },
-            {
-              "updatedAt": "2024-11-05T09:19:52Z",
-              "tag": "2024-11-05--09-19-52Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z"
-          }
-        },
-        {
-          "path": "nextstrain/hmpv/all-clades/NC_039199",
-          "shortcuts": [
-            "hmpv"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Human Metapneumovirus",
-            "reference accession": "NC_039199",
-            "reference name": "hMPV/00-1"
-          },
-          "files": {
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 10,
-            "customClades": {
-              "legacy_clade": 10
-            },
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-04-25T12:24:24Z",
-              "tag": "2025-04-25--12-24-24Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2024-12-04T17:05:31Z",
-              "tag": "2024-12-04--17-05-31Z",
+              "updatedAt": "2025-02-25T17:00:40Z",
+              "tag": "2025-02-25--17-00-40Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -4190,78 +4737,6 @@
             {
               "updatedAt": "2025-08-07T09:22:32Z",
               "tag": "2025-08-07--09-22-32Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-02-25T17:00:40Z",
-              "tag": "2025-02-25--17-00-40Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/vic/pb1",
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza B(Vic) PB1 (segment 1)",
-            "segment": "pb1",
-            "reference accession": "CY115157",
-            "reference name": "B/Brisbane/60/2008"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "examples": "sequences.fasta",
-            "reference": "reference.fasta"
-          },
-          "capabilities": {
-            "qc": [
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
               "compatibility": {
                 "cli": "3.0.0-alpha.0",
                 "web": "3.0.0-alpha.0"
@@ -4430,78 +4905,6 @@
           }
         },
         {
-          "path": "nextstrain/flu/vic/pb2",
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza B(Vic) PB2 (segment 2)",
-            "segment": "pb2",
-            "reference accession": "CY115158",
-            "reference name": "B/Brisbane/60/2008"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "examples": "sequences.fasta",
-            "reference": "reference.fasta"
-          },
-          "capabilities": {
-            "qc": [
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-02-25T17:00:40Z",
-              "tag": "2025-02-25--17-00-40Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
           "path": "nextstrain/flu/vic/ns",
           "enabled": true,
           "attributes": {
@@ -4567,393 +4970,6 @@
           "version": {
             "updatedAt": "2025-09-09T12:13:13Z",
             "tag": "2025-09-09--12-13-13Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/rubella/E1",
-          "enabled": true,
-          "attributes": {
-            "name": "Rubella virus E1 region",
-            "reference name": "F-Therien",
-            "reference accession": "NC_001545.2"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 14,
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z"
-            },
-            {
-              "updatedAt": "2025-07-01T21:21:21Z",
-              "tag": "2025-07-01--21-21-21Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z"
-          }
-        },
-        {
-          "path": "nextstrain/herpes/vzv/NC_001348",
-          "shortcuts": [
-            "vzv"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Varicella-Zoster Virus (VZV)",
-            "reference name": "NC_001348.1",
-            "reference accession": "NC_001348.1"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "clades": 10,
-            "qc": [
-              "missingData",
-              "snpClusters",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-11-04T15:46:13Z",
-              "tag": "2025-11-04--15-46-13Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-11-04T15:46:13Z",
-            "tag": "2025-11-04--15-46-13Z"
-          }
-        },
-        {
-          "path": "nextstrain/mumps/sh",
-          "enabled": true,
-          "attributes": {
-            "name": "Mumps MuV Genotypes (SH gene 315nt region)",
-            "reference name": "Jeryl-Lynn (genotype A)",
-            "reference accession": "D90232"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 13
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-10-22T18:11:36Z",
-              "tag": "2025-10-22--18-11-36Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-08-14T12:26:14Z",
-              "tag": "2025-08-14--12-26-14Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-10-22T18:11:36Z",
-            "tag": "2025-10-22--18-11-36Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/mumps/genome",
-          "enabled": true,
-          "attributes": {
-            "name": "Mumps MuV Genotypes (Full genome)",
-            "reference name": "Jeryl-Lynn (genotype A)",
-            "reference accession": "D90232"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 13,
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-10-22T18:11:36Z",
-              "tag": "2025-10-22--18-11-36Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-09T12:13:13Z",
-              "tag": "2025-09-09--12-13-13Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-08-14T12:26:14Z",
-              "tag": "2025-08-14--12-26-14Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-10-22T18:11:36Z",
-            "tag": "2025-10-22--18-11-36Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/rubella/genome",
-          "shortcuts": [
-            "rubella"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Rubella",
-            "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
-            "reference accession": "NC_076948"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "annotation.gff3",
-            "treeJson": "tree.json",
-            "changelog": "CHANGELOG.md",
-            "readme": "README.md",
-            "examples": "example_sequences.fasta"
-          },
-          "capabilities": {
-            "clades": 14,
-            "qc": [
-              "missingData",
-              "snpClusters",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2025-09-19T14:53:06Z",
-              "tag": "2025-09-19--14-53-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2025-09-19T14:53:06Z",
-            "tag": "2025-09-19--14-53-06Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/b/mp",
-          "shortcuts": [
-            "flu_b_mp",
-            "nextstrain/flu/b/mp",
-            "nextstrain/flu/b/mp/brisbane-60-2008"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza B B MP",
-            "segment": "mp",
-            "reference accession": "CY115152",
-            "reference name": "B/Brisbane/60/2008"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/b/ns",
-          "shortcuts": [
-            "flu_b_ns",
-            "nextstrain/flu/b/ns",
-            "nextstrain/flu/b/ns/brisbane-60-2008"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza B B NS",
-            "segment": "ns",
-            "reference accession": "CY115155",
-            "reference name": "B/Brisbane/60/2008"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -5030,85 +5046,6 @@
           }
         },
         {
-          "path": "nextstrain/flu/b/ha/KX058884",
-          "shortcuts": [
-            "flu_b_ha",
-            "nextstrain/flu/b",
-            "nextstrain/flu/b/ha",
-            "nextstrain/flu/b/ha/brisbane-60-2008"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza B B HA",
-            "segment": "ha",
-            "reference accession": "KX058884",
-            "reference name": "B/Brisbane/60/2008-egg"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 26,
-            "customClades": {
-              "lineage": 3,
-              "legacy-clade-vic": 9,
-              "legacy-clade-yam": 4
-            },
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ],
-            "other": [
-              "aaMotifs"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
           "path": "nextstrain/flu/b/pb2",
           "shortcuts": [
             "flu_b_pb2",
@@ -5158,81 +5095,6 @@
               "mixedSites",
               "frameShifts",
               "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/b/na/CY073894",
-          "shortcuts": [
-            "flu_b_na",
-            "nextstrain/flu/b/na",
-            "nextstrain/flu/b/na/brisbane-60-2008"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza B B NA",
-            "segment": "na",
-            "reference accession": "CY073894",
-            "reference name": "B/Brisbane/60/2008-egg"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 20,
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ],
-            "other": [
-              "mutLabels",
-              "phenotypeData",
-              "aaMotifs"
             ]
           },
           "versions": [
@@ -5391,17 +5253,155 @@
           }
         },
         {
-          "path": "nextstrain/flu/h1n1/mp",
+          "path": "nextstrain/flu/b/mp",
           "shortcuts": [
-            "flu_h1n1_mp",
-            "nextstrain/flu/h1n1/mp",
-            "nextstrain/flu/h1n1/mp/puertorico-8-1934"
+            "flu_b_mp",
+            "nextstrain/flu/b/mp",
+            "nextstrain/flu/b/mp/brisbane-60-2008"
           ],
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1 MP",
+            "name": "Influenza B B MP",
             "segment": "mp",
-            "reference accession": "NC_002016",
+            "reference accession": "CY115152",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/b/ns",
+          "shortcuts": [
+            "flu_b_ns",
+            "nextstrain/flu/b/ns",
+            "nextstrain/flu/b/ns/brisbane-60-2008"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza B B NS",
+            "segment": "ns",
+            "reference accession": "CY115155",
+            "reference name": "B/Brisbane/60/2008"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1/pb2",
+          "shortcuts": [
+            "flu_h1n1_pb2",
+            "nextstrain/flu/h1n1/pb2",
+            "nextstrain/flu/h1n1/pb2/puertorico-8-1934"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1 PB2",
+            "segment": "pb2",
+            "reference accession": "NC_002023",
             "reference name": "A/PuertoRico/8/1934"
           },
           "maintenance": {
@@ -5460,18 +5460,363 @@
           }
         },
         {
-          "path": "nextstrain/flu/h2n2/pa",
+          "path": "nextstrain/flu/h1n1/pb1",
           "shortcuts": [
-            "flu_h2n2_pa",
-            "nextstrain/flu/h2n2/pa",
-            "nextstrain/flu/h2n2/pa/korea-426-1968"
+            "flu_h1n1_pb1",
+            "nextstrain/flu/h1n1/pb1",
+            "nextstrain/flu/h1n1/pb1/puertorico-8-1934"
           ],
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H2N2 PA",
+            "name": "Influenza A H1N1 PB1",
+            "segment": "pb1",
+            "reference accession": "NC_002021",
+            "reference name": "A/PuertoRico/8/1934"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1/pa",
+          "shortcuts": [
+            "flu_h1n1_pa",
+            "nextstrain/flu/h1n1/pa",
+            "nextstrain/flu/h1n1/pa/puertorico-8-1934"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1 PA",
             "segment": "pa",
-            "reference accession": "NC_007376",
-            "reference name": "A/Korea/426/1968"
+            "reference accession": "NC_002022",
+            "reference name": "A/PuertoRico/8/1934"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1/ha",
+          "shortcuts": [
+            "flu_h1n1_ha",
+            "nextstrain/flu/h1n1/ha",
+            "nextstrain/flu/h1n1/ha/puertorico-8-1934"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1 HA",
+            "segment": "ha",
+            "reference accession": "NC_002017",
+            "reference name": "A/PuertoRico/8/1934"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1/np",
+          "shortcuts": [
+            "flu_h1n1_np",
+            "nextstrain/flu/h1n1/np",
+            "nextstrain/flu/h1n1/np/puertorico-8-1934"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1 NP",
+            "segment": "np",
+            "reference accession": "NC_002019",
+            "reference name": "A/PuertoRico/8/1934"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1/na",
+          "shortcuts": [
+            "flu_h1n1_na",
+            "nextstrain/flu/h1n1/na",
+            "nextstrain/flu/h1n1/na/puertorico-8-1934"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1 NA",
+            "segment": "na",
+            "reference accession": "NC_002018",
+            "reference name": "A/PuertoRico/8/1934"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h1n1/mp",
+          "shortcuts": [
+            "flu_h1n1_mp",
+            "nextstrain/flu/h1n1/mp",
+            "nextstrain/flu/h1n1/mp/puertorico-8-1934"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H1N1 MP",
+            "segment": "mp",
+            "reference accession": "NC_002016",
+            "reference name": "A/PuertoRico/8/1934"
           },
           "maintenance": {
             "website": [
@@ -5598,18 +5943,225 @@
           }
         },
         {
-          "path": "nextstrain/flu/h1n1/na",
+          "path": "nextstrain/flu/h2n2/pb2",
           "shortcuts": [
-            "flu_h1n1_na",
-            "nextstrain/flu/h1n1/na",
-            "nextstrain/flu/h1n1/na/puertorico-8-1934"
+            "flu_h2n2_pb2",
+            "nextstrain/flu/h2n2/pb2",
+            "nextstrain/flu/h2n2/pb2/korea-426-1968"
           ],
           "enabled": true,
           "attributes": {
-            "name": "Influenza A H1N1 NA",
-            "segment": "na",
-            "reference accession": "NC_002018",
-            "reference name": "A/PuertoRico/8/1934"
+            "name": "Influenza A H2N2 PB2",
+            "segment": "pb2",
+            "reference accession": "NC_007378",
+            "reference name": "A/Korea/426/1968"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h2n2/pb1",
+          "shortcuts": [
+            "flu_h2n2_pb1",
+            "nextstrain/flu/h2n2/pb1",
+            "nextstrain/flu/h2n2/pb1/korea-426-1968"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H2N2 PB1",
+            "segment": "pb1",
+            "reference accession": "NC_007375",
+            "reference name": "A/Korea/426/1968"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h2n2/pa",
+          "shortcuts": [
+            "flu_h2n2_pa",
+            "nextstrain/flu/h2n2/pa",
+            "nextstrain/flu/h2n2/pa/korea-426-1968"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H2N2 PA",
+            "segment": "pa",
+            "reference accession": "NC_007376",
+            "reference name": "A/Korea/426/1968"
+          },
+          "maintenance": {
+            "website": [
+              "https://nextstrain.org",
+              "https://clades.nextstrain.org"
+            ],
+            "documentation": [
+              "https://github.com/nextstrain/seasonal-flu"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/seasonal_flu"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/seasonal_flu/issues"
+            ],
+            "organizations": [
+              "Nextstrain"
+            ],
+            "authors": [
+              "Nextstrain team <https://nextstrain.org>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/flu/h2n2/np",
+          "shortcuts": [
+            "flu_h2n2_np",
+            "nextstrain/flu/h2n2/np",
+            "nextstrain/flu/h2n2/np/korea-426-1968"
+          ],
+          "enabled": true,
+          "attributes": {
+            "name": "Influenza A H2N2 NP",
+            "segment": "np",
+            "reference accession": "NC_007381",
+            "reference name": "A/Korea/426/1968"
           },
           "maintenance": {
             "website": [
@@ -5874,351 +6426,6 @@
           }
         },
         {
-          "path": "nextstrain/flu/h1n1/pa",
-          "shortcuts": [
-            "flu_h1n1_pa",
-            "nextstrain/flu/h1n1/pa",
-            "nextstrain/flu/h1n1/pa/puertorico-8-1934"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1 PA",
-            "segment": "pa",
-            "reference accession": "NC_002022",
-            "reference name": "A/PuertoRico/8/1934"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1/np",
-          "shortcuts": [
-            "flu_h1n1_np",
-            "nextstrain/flu/h1n1/np",
-            "nextstrain/flu/h1n1/np/puertorico-8-1934"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1 NP",
-            "segment": "np",
-            "reference accession": "NC_002019",
-            "reference name": "A/PuertoRico/8/1934"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h2n2/np",
-          "shortcuts": [
-            "flu_h2n2_np",
-            "nextstrain/flu/h2n2/np",
-            "nextstrain/flu/h2n2/np/korea-426-1968"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H2N2 NP",
-            "segment": "np",
-            "reference accession": "NC_007381",
-            "reference name": "A/Korea/426/1968"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h2n2/pb2",
-          "shortcuts": [
-            "flu_h2n2_pb2",
-            "nextstrain/flu/h2n2/pb2",
-            "nextstrain/flu/h2n2/pb2/korea-426-1968"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H2N2 PB2",
-            "segment": "pb2",
-            "reference accession": "NC_007378",
-            "reference name": "A/Korea/426/1968"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1/pb1",
-          "shortcuts": [
-            "flu_h1n1_pb1",
-            "nextstrain/flu/h1n1/pb1",
-            "nextstrain/flu/h1n1/pb1/puertorico-8-1934"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1 PB1",
-            "segment": "pb1",
-            "reference accession": "NC_002021",
-            "reference name": "A/PuertoRico/8/1934"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
           "path": "nextstrain/flu/h2n2/ns",
           "shortcuts": [
             "flu_h2n2_ns",
@@ -6230,213 +6437,6 @@
             "name": "Influenza A H2N2 NS",
             "segment": "ns",
             "reference accession": "NC_007380",
-            "reference name": "A/Korea/426/1968"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1/ha",
-          "shortcuts": [
-            "flu_h1n1_ha",
-            "nextstrain/flu/h1n1/ha",
-            "nextstrain/flu/h1n1/ha/puertorico-8-1934"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1 HA",
-            "segment": "ha",
-            "reference accession": "NC_002017",
-            "reference name": "A/PuertoRico/8/1934"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h1n1/pb2",
-          "shortcuts": [
-            "flu_h1n1_pb2",
-            "nextstrain/flu/h1n1/pb2",
-            "nextstrain/flu/h1n1/pb2/puertorico-8-1934"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H1N1 PB2",
-            "segment": "pb2",
-            "reference accession": "NC_002023",
-            "reference name": "A/PuertoRico/8/1934"
-          },
-          "maintenance": {
-            "website": [
-              "https://nextstrain.org",
-              "https://clades.nextstrain.org"
-            ],
-            "documentation": [
-              "https://github.com/nextstrain/seasonal-flu"
-            ],
-            "source code": [
-              "https://github.com/nextstrain/seasonal_flu"
-            ],
-            "issues": [
-              "https://github.com/nextstrain/seasonal_flu/issues"
-            ],
-            "organizations": [
-              "Nextstrain"
-            ],
-            "authors": [
-              "Nextstrain team <https://nextstrain.org>"
-            ]
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "sequences.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "qc": [
-              "privateMutations",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/flu/h2n2/pb1",
-          "shortcuts": [
-            "flu_h2n2_pb1",
-            "nextstrain/flu/h2n2/pb1",
-            "nextstrain/flu/h2n2/pb1/korea-426-1968"
-          ],
-          "enabled": true,
-          "attributes": {
-            "name": "Influenza A H2N2 PB1",
-            "segment": "pb1",
-            "reference accession": "NC_007375",
             "reference name": "A/Korea/426/1968"
           },
           "maintenance": {
