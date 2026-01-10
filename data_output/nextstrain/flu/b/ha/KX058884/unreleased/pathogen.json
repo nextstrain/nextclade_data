@@ -114,7 +114,7 @@
     }
   ],
   "attributes": {
-    "name": "Influenza B B HA",
+    "name": "Influenza B (all) HA",
     "segment": "ha",
     "reference accession": "KX058884",
     "reference name": "B/Brisbane/60/2008-egg"
