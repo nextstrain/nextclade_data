@@ -64,22 +64,46 @@ def get_ref_search_minimizers(seq: SeqRecord, k=MAGIC_NUMBER_K):
 
 
 def make_ref_search_index(refs):
-  # collect minimizers for each reference sequence first
-  minimizers_by_reference = list()
-  for name, ref in sorted(refs.items()):
-    minimizers = get_ref_search_minimizers(ref)
-    minimizers_by_reference.append({
-      "minimizers": minimizers,
+  """
+  Build minimizer search index from reference sequences.
+
+  Args:
+    refs: dict mapping dataset name to either:
+      - a single SeqRecord (backward compatible)
+      - a list of SeqRecords (multiple references per dataset)
+
+  Returns:
+    Minimizer index dict ready for JSON serialization.
+  """
+  # collect minimizers for each dataset (possibly from multiple references)
+  minimizers_by_dataset = list()
+  for name, ref_or_refs in sorted(refs.items()):
+    # normalize to list for uniform handling
+    ref_list = ref_or_refs if isinstance(ref_or_refs, list) else [ref_or_refs]
+
+    # collect minimizers from all references for this dataset
+    all_minimizers = set()
+    total_length = 0
+    for ref in ref_list:
+      minimizers = get_ref_search_minimizers(ref)
+      all_minimizers.update(minimizers)
+      total_length += len(ref.seq)
+
+    # use average length for normalization
+    avg_length = total_length / len(ref_list)
+
+    minimizers_by_dataset.append({
+      "minimizers": np.array(list(all_minimizers)),
       "meta": {
         "name": name,
-        "length": len(ref.seq),
-        "nMinimizers": len(minimizers)
+        "length": int(avg_length),
+        "nMinimizers": len(all_minimizers)
       }
     })
 
-  # construct an index where each minimizer maps to the references it contains via a bit set (here boolean np array)
+  # construct an index where each minimizer maps to the datasets it belongs to
   index = {"minimizers": {}, "references": []}
-  for ri, minimizer_set in enumerate(minimizers_by_reference):
+  for ri, minimizer_set in enumerate(minimizers_by_dataset):
     for m in minimizer_set["minimizers"]:
       if m not in index["minimizers"]:
         index["minimizers"][m] = []

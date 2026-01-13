@@ -15,7 +15,7 @@ from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup, find, unique
 from lib.date import now_iso, iso_to_iso_safe
-from lib.fasta import fasta_read_exactly_one_seq
+from lib.fasta import fasta_read_exactly_one_seq, fasta_read
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   github_create_release, git_pull, git_commit_all, git_push
@@ -33,11 +33,14 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
 
   files = dict_get_required(pathogen_json, ["files"])
   for (name, filename) in files.items():
-    filepath = join(dataset_dir, filename)
-    if not isfile(filepath):
-      raise FileNotFoundError(
-        f"'Filename '{filename}' is declared in `.files.{name}` field of pathogen.json, but the actual file is not "
-        f"found: '{filepath}'")
+    # handle array of filenames (e.g., minimizerReferences)
+    filenames = filename if isinstance(filename, list) else [filename]
+    for fname in filenames:
+      filepath = join(dataset_dir, fname)
+      if not isfile(filepath):
+        raise FileNotFoundError(
+          f"'Filename '{fname}' is declared in `.files.{name}` field of pathogen.json, but the actual file is not "
+          f"found: '{filepath}'")
 
   other = []
 
@@ -131,6 +134,9 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
   ref = get_ref_seq(pathogen_json, dataset_dir)
   check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
 
+  # get references for minimizer index (may be multiple)
+  minimizer_refs = get_minimizer_refs(pathogen_json, dataset_dir)
+
   versions, last_version = dataset_get_versions(dataset)
 
   if dataset_has_changes(dataset, dataset_dir):
@@ -154,7 +160,7 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
     "version": last_version,
   })
 
-  return dataset_out, ref
+  return dataset_out, minimizer_refs
 
 
 def get_ref_seq(pathogen_json, dataset_dir):
@@ -165,6 +171,38 @@ def get_ref_seq(pathogen_json, dataset_dir):
     return fasta_read_exactly_one_seq(ref_filepath)
   except Exception as e:
     raise ValueError(f"When reading reference sequence") from e
+
+
+def get_minimizer_refs(pathogen_json, dataset_dir):
+  """
+  Get reference sequences for minimizer index.
+
+  If minimizerReferences is specified (array of file paths), returns sequences
+  from all files combined. Otherwise, returns the main reference sequence.
+  """
+  files = dict_get(pathogen_json, ["files"]) or {}
+  minimizer_refs_filenames = dict_get(files, ["minimizerReferences"]) or []
+
+  if len(minimizer_refs_filenames) > 0:
+    all_refs = []
+    for filename in minimizer_refs_filenames:
+      filepath = join(dataset_dir, filename)
+      if not isfile(filepath):
+        raise FileNotFoundError(
+          f"Minimizer references file '{filename}' is declared in pathogen.json "
+          f"but not found at '{filepath}'"
+        )
+      refs = list(fasta_read(filepath))
+      if len(refs) == 0:
+        raise ValueError(
+          f"Minimizer references file '{filename}' is empty. "
+          f"At least one reference sequence is required per file."
+        )
+      all_refs.extend(refs)
+    return all_refs
+
+  # fall back to main reference
+  return [get_ref_seq(pathogen_json, dataset_dir)]
 
 
 def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir) -> None:
