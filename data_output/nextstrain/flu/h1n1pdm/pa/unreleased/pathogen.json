@@ -1,0 +1,194 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "right",
+    "minSeedCover": 0.1
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "PA",
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 5,
+      "cutoff": 15,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 100,
+      "scoreBias": 10
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 5,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": []
+    }
+  },
+  "cdsOrderPreference": [],
+  "maintenance": {
+    "website": [
+      "https://nextstrain.org",
+      "https://clades.nextstrain.org"
+    ],
+    "documentation": [
+      "https://github.com/nextstrain/seasonal-flu"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/seasonal_flu"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/seasonal_flu/issues"
+    ],
+    "organizations": [
+      "Nextstrain"
+    ],
+    "authors": [
+      "Nextstrain team <https://nextstrain.org>"
+    ]
+  },
+  "shortcuts": [
+    "flu_h1n1pdm_pa",
+    "nextstrain/flu/h1n1pdm/pa"
+  ],
+  "phenotypeData": [
+    {
+      "name": "PAI",
+      "nameFriendly": "PAI",
+      "description": "This column displays a score associated with reduced susceptibility to polymerase inhibitors. The score is a weighted sum of known substitutions (x1) or major substitutions (x2), while substitutions at positions that confer resistance but are to amino acids not previously described to confer resistance count x0.5.",
+      "cds": "PA",
+      "aaRange": {
+        "begin": 0,
+        "end": 460
+      },
+      "data": [
+        {
+          "name": "PAI_markers",
+          "weight": 1,
+          "locations": {
+            "22": {
+              "G": 1,
+              "K": 1,
+              "R": 1,
+              "default": 0.5
+            },
+            "33": {
+              "R": 1,
+              "default": 0.5
+            },
+            "36": {
+              "T": 1,
+              "default": 0.5
+            },
+            "37": {
+              "F": 2,
+              "L": 2,
+              "M": 2,
+              "S": 2,
+              "T": 2,
+              "V": 1,
+              "default": 0.5
+            },
+            "197": {
+              "K": 1,
+              "default": 0.5
+            },
+            "198": {
+              "D": 1,
+              "G": 1,
+              "default": 0.5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "mutLabels": {
+    "aaMutLabelMap": {
+      "PA:23G": [
+        "Baloxavir"
+      ],
+      "PA:23K": [
+        "Baloxavir"
+      ],
+      "PA:23R": [
+        "Baloxavir"
+      ],
+      "PA:34R": [
+        "Baloxavir"
+      ],
+      "PA:37T": [
+        "Baloxavir"
+      ],
+      "PA:38F": [
+        "Baloxavir"
+      ],
+      "PA:38L": [
+        "Baloxavir"
+      ],
+      "PA:38M": [
+        "Baloxavir"
+      ],
+      "PA:38S": [
+        "Baloxavir"
+      ],
+      "PA:38T": [
+        "Baloxavir"
+      ],
+      "PA:38V": [
+        "Baloxavir"
+      ],
+      "PA:198K": [
+        "Baloxavir"
+      ],
+      "PA:199D": [
+        "Baloxavir"
+      ],
+      "PA:199G": [
+        "Baloxavir"
+      ]
+    }
+  },
+  "attributes": {
+    "name": "Influenza A H1N1pdm PA",
+    "segment": "pa",
+    "reference accession": "NC_026437",
+    "reference name": "A/California/7/2009"
+  },
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}
