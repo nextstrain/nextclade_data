@@ -1,6 +1,8 @@
+## Unreleased
+Fix missing clade attributes and export of legacy clade.
+
 ## 2026-01-14T08:53:00Z
 Update reference tree.
-
 
 ## 2025-11-04T15:46:13Z
 
