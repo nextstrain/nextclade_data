@@ -1,3 +1,7 @@
+## Unreleased
+
+Automated update
+
 ## 2026-01-06T14:59:32Z
 
 - Include the 6 newly designated Nextstrain clades 25D (MC.10.2.1), 25E (PY.1), 25F (NW.1.2), 25G (XFC), 25H (XFJ), and 25I (BA.3.2). See <https://github.com/nextstrain/ncov/pull/1192> for details.
