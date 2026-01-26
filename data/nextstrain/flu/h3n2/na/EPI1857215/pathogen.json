@@ -195,24 +195,56 @@
       ]
     }
   ],
-  "mutLabelMap":{
-    "aaMutLabelMap":{
-      "NA:119":["NAI"],
-      "NA:136":["NAI"],
-      "NA:142":["NAI"],
-      "NA:151":["NAI"],
-      "NA:222":["NAI"],
-      "NA:224":["NAI"],
-      "NA:245":["NAI"],
-      "NA:246":["NAI"],
-      "NA:247":["NAI"],
-      "NA:248":["NAI"],
-      "NA:249":["NAI"],
-      "NA:250":["NAI"],
-      "NA:276":["NAI"],
-      "NA:292":["NAI"],
-      "NA:294":["NAI"],
-      "NA:372":["NAI"]
+  "mutLabelMap": {
+    "aaMutLabelMap": {
+      "NA:119": [
+        "NAI"
+      ],
+      "NA:136": [
+        "NAI"
+      ],
+      "NA:142": [
+        "NAI"
+      ],
+      "NA:151": [
+        "NAI"
+      ],
+      "NA:222": [
+        "NAI"
+      ],
+      "NA:224": [
+        "NAI"
+      ],
+      "NA:245": [
+        "NAI"
+      ],
+      "NA:246": [
+        "NAI"
+      ],
+      "NA:247": [
+        "NAI"
+      ],
+      "NA:248": [
+        "NAI"
+      ],
+      "NA:249": [
+        "NAI"
+      ],
+      "NA:250": [
+        "NAI"
+      ],
+      "NA:276": [
+        "NAI"
+      ],
+      "NA:292": [
+        "NAI"
+      ],
+      "NA:294": [
+        "NAI"
+      ],
+      "NA:372": [
+        "NAI"
+      ]
     }
   },
   "attributes": {
