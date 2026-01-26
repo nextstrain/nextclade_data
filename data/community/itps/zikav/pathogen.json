@@ -5,7 +5,7 @@
     "alignmentPreset": "high-diversity"
   },
   "attributes": {
-    "name": "zikav",
+    "name": "Zika virus",
     "reference accession": "NC_035889.1",
     "reference name": "Natal RGN"
   },
@@ -53,7 +53,7 @@
       "mixedSitesThreshold": 11
     },
     "privateMutations": {
-      "cutoff": 25,
+      "cutoff": 35,
       "enabled": true,
       "typical": 5,
       "weightLabeledSubstitutions": 2,

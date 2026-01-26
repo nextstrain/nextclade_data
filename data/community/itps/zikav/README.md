@@ -1,10 +1,10 @@
-# Nextclade Dataset for "zikav" Based on Reference "Natal RGN"
+# Nextclade Dataset for Zika virus Based on Reference "Natal RGN"
 
 ## Dataset Attributes
 
 | Attribute            | Value                                    |
 | -------------------- | ---------------------------------------- |
-| Name                 | zikav                                    |
+| Name                 | Zika virus                               |
 | RefName              | Natal RGN                                |
 | RefAccession         | NC_035889.1                              |
 
