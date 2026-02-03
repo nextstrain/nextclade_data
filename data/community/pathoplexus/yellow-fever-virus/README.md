@@ -9,7 +9,7 @@
 
 ## Features
 
-This dataset was created using open data from NCBI Virus and the pipeline in https://github.com/neherlab/CCHFV running in no-linkage mode. As the L segment shows high divergence at the terminals we increase the gap open penalty to reduce the number of falsely inferred insertions.
+This dataset was created using open data from NCBI Virus and the pipeline in https://github.com/maverbiest/yellow-fever-virus.
 
 This dataset offers:
 
