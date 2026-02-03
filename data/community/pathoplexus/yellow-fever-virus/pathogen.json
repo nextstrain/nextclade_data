@@ -1,6 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "schemaVersion": "3.0.0",
+  "compatibility": {
+        "cli": "3.0.0-alpha.0",
+        "web": "3.0.0-alpha.0"
+  },
   "files": {
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
@@ -18,12 +22,8 @@
   "alignmentParams": {
         "retryReverseComplement": true,
         "includeReference": false
-    },
+  },
   "defaultCds": "M",
-  "compatibility": {
-        "cli": "3.0.0-alpha.0",
-        "web": "3.0.0-alpha.0"
-    },
   "qc": {
     "frameShifts": {
       "enabled": true,
@@ -49,6 +49,6 @@
     "stopCodons": {
       "enabled": true
     }
-    },
+  },
   "cdsOrderPreference": ["C", "M", "E", "NS1", "NS2a", "NS2b", "NS3", "NS4a", "2K", "NS4b", "RdRPol"]
 }
