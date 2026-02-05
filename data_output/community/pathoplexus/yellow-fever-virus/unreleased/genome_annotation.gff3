@@ -5,6 +5,7 @@
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11089
 NC_002031.1	RefSeq	region	1	10862	.	+	.	ID=NC_002031.1:1..10862;Dbxref=taxon:11089;gb-acronym=YFV;gbkey=Src;mol_type=genomic RNA;note=virion RNA mosquito-borne;strain=17D vaccine strain
 NC_002031.1	RefSeq	gene	119	421	.	+	.	gene_name=C;gbkey=Prot;protein_id=NP_775998.1;product=core protein C;ID=id-NP_041726.1:1..101
+NC_002031.1	RefSeq	gene	482	973	.	+	.	gene_name=prM;gbkey=Prot;protein_id=NP_776000.1;product=M protein precursor;ID=id-NP_041726.1:122..285
 NC_002031.1	RefSeq	gene	749	973	.	+	.	gene_name=M;gbkey=Prot;protein_id=NP_776001.1;product=matrix protein M;ID=id-NP_041726.1:211..285
 NC_002031.1	RefSeq	gene	974	2452	.	+	.	gene_name=E;gbkey=Prot;protein_id=NP_740305.1;product=envelope protein;ID=id-NP_041726.1:286..778
 NC_002031.1	RefSeq	gene	2453	3508	.	+	.	gene_name=NS1;gbkey=Prot;protein_id=NP_776002.1;ID=id-NP_041726.1:779..1130;product=non-structural protein NS1

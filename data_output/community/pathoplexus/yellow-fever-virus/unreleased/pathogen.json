@@ -21,7 +21,8 @@
   },
   "alignmentParams": {
     "retryReverseComplement": true,
-    "includeReference": false
+    "includeReference": false,
+    "minSeedCover": 0.01
   },
   "defaultCds": "M",
   "qc": {
@@ -52,6 +53,7 @@
   },
   "cdsOrderPreference": [
     "C",
+    "prM",
     "M",
     "E",
     "NS1",
