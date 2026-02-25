@@ -8204,6 +8204,49 @@
             "updatedAt": "2025-12-02T12:30:02Z",
             "tag": "2025-12-02--12-30-02Z"
           }
+        },
+        {
+          "path": "community/itps/zikav",
+          "enabled": true,
+          "attributes": {
+            "name": "Zika virus",
+            "reference accession": "NC_035889.1",
+            "reference name": "Natal RGN"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 3,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     }

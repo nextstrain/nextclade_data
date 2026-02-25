@@ -37,6 +37,7 @@
     "community/pathoplexus/cchfv/M",
     "community/v-gen-lab/chikV/genotypes",
     "community/masphl-bioinformatics/hav/vp1-2b-junction",
-    "community/masphl-bioinformatics/hav/whole-genome"
+    "community/masphl-bioinformatics/hav/whole-genome",
+    "community/itps/zikav"
   ]
 }
