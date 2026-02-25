@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "alignmentParams": {
+    "retryReverseComplement": true
+  },
+  "attributes": {
+    "name": "orov/M/tefe",
+    "reference accession": "PP154171.1",
+    "reference name": "Oropouche virus ILMD_TF29 (tefe), M segment"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "placementMaskRanges": [
+    {
+      "begin": 0,
+      "end": 21
+    },
+    {
+      "begin": 4284,
+      "end": 4371
+    }
+  ],
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/dezordi/nextclade_data_workflows/issues",
+    "source code": "https://github.com/dezordi/nextclade_data_workflows/tree/main/oroV"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 874,
+      "scoreBias": 108
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "privateMutations": {
+      "cutoff": 15,
+      "enabled": true,
+      "typical": 5,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": false
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  },
+  "defaultCds": "M"
+}

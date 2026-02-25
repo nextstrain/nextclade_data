@@ -1,0 +1,8 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PP154170.1 1 944
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=118655
+PP154170.1	Genbank	region	1	944	.	+	.	ID=PP154170.1:1..944;Dbxref=taxon:118655;Name=S;collection-date=2015-04-13;country=Brazil: Amazonas_Tefe;gbkey=Src;genome=genomic;isolate=ILMD_TF29;isolation-source=plasma;mol_type=viral cRNA;nat-host=Homo sapiens;segment=S
+PP154170.1	GenBank	gene	44	739	.	+	.	gene_name=N
+PP154170.1	GenBank	gene	66	341	.	+	.	gene_name=NSs
