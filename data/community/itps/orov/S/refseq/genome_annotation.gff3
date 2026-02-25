@@ -1,0 +1,8 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_005777.1 1 754
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=118655
+NC_005777.1	RefSeq	region	1	754	.	+	.	ID=NC_005777.1:1..754;Dbxref=taxon:118655;Name=S;gbkey=Src;genome=genomic;mol_type=genomic RNA;segment=S
+NC_005777.1	GenBank	gene	45	740	.	+	.	gene_name=N
+NC_005777.1	GenBank	gene	67	342	.	+	.	gene_name=NSs

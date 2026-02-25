@@ -1,0 +1,1955 @@
+{
+  "version": "v2",
+  "meta": {
+    "title": "Oropouche S segment refseq",
+    "updated": "2025-12-05",
+    "data_provenance": [
+      {
+        "name": "NCBI Virus",
+        "url": "https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Instituto Todos pela Sa\u00fade",
+        "url": "https://www.itps.org.br/"
+      }
+    ],
+    "display_defaults": {
+      "map_triplicate": true
+    },
+    "genome_annotations": {
+      "N": {
+        "end": 740,
+        "seqid": "resources/S/refseq/genome_annotation.gff3",
+        "start": 45,
+        "strand": "+",
+        "type": "gene"
+      },
+      "NSs": {
+        "end": 342,
+        "seqid": "resources/S/refseq/genome_annotation.gff3",
+        "start": 67,
+        "strand": "+",
+        "type": "gene"
+      },
+      "nuc": {
+        "end": 754,
+        "start": 1,
+        "strand": "+",
+        "type": "source"
+      }
+    },
+    "colorings": [
+      {
+        "key": "gt",
+        "title": "Genotype",
+        "type": "categorical"
+      },
+      {
+        "key": "country",
+        "title": "Country",
+        "type": "categorical"
+      }
+    ],
+    "filters": [
+      "genotype",
+      "country"
+    ],
+    "geo_resolutions": [
+      {
+        "key": "country",
+        "demes": {
+          "Cuba": {
+            "latitude": 23.0131338,
+            "longitude": -80.8328748
+          },
+          "Brazil": {
+            "latitude": -10.3333332,
+            "longitude": -53.1999999
+          },
+          "Peru": {
+            "latitude": -9.650468,
+            "longitude": -75.328211
+          }
+        }
+      }
+    ],
+    "panels": [
+      "tree",
+      "map",
+      "entropy",
+      "frequencies"
+    ]
+  },
+  "tree": {
+    "name": "NODE_0000000",
+    "node_attrs": {
+      "div": 0
+    },
+    "branch_attrs": {
+      "mutations": {
+        "nuc": [
+          "A216C",
+          "G281A",
+          "C392T",
+          "A395G",
+          "A425G",
+          "C431T",
+          "A455G",
+          "T476C",
+          "C491T",
+          "T516C",
+          "G518A",
+          "T539C",
+          "T548C",
+          "T553C",
+          "C581T",
+          "G590A",
+          "T596C",
+          "A599G",
+          "C608T",
+          "G611A",
+          "A614G",
+          "C665A",
+          "C669T",
+          "A683G",
+          "C725T",
+          "C746T",
+          "T754A"
+        ],
+        "N": [
+          "M170T"
+        ],
+        "NSs": [
+          "S72N"
+        ]
+      },
+      "labels": {
+        "aa": "N: M170T; NSs: S72N"
+      }
+    },
+    "children": [
+      {
+        "name": "NODE_0000001",
+        "node_attrs": {
+          "div": 0.00153429
+        },
+        "branch_attrs": {
+          "mutations": {
+            "nuc": [
+              "T392C",
+              "G395A"
+            ]
+          }
+        },
+        "children": [
+          {
+            "name": "PQ247798.1",
+            "node_attrs": {
+              "div": 0.00303538,
+              "country": {
+                "value": "Brazil"
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "T172C"
+                ],
+                "N": [
+                  "F43S"
+                ],
+                "NSs": [
+                  "S36P"
+                ]
+              },
+              "labels": {
+                "aa": "N: F43S; NSs: S36P"
+              }
+            }
+          },
+          {
+            "name": "NODE_0000002",
+            "node_attrs": {
+              "div": 0.0125711
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "G344T",
+                  "T356C",
+                  "G425A",
+                  "T431C",
+                  "T443G",
+                  "C548T",
+                  "C553T",
+                  "T746C"
+                ],
+                "N": [
+                  "N133K",
+                  "T170M"
+                ]
+              },
+              "labels": {
+                "aa": "N: N133K, T170M"
+              }
+            },
+            "children": [
+              {
+                "name": "PQ247825.1",
+                "node_attrs": {
+                  "div": 0.0168201,
+                  "country": {
+                    "value": "Brazil"
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "A74G",
+                      "T557C",
+                      "T566C"
+                    ],
+                    "NSs": [
+                      "H3R"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "NSs: H3R"
+                  }
+                }
+              },
+              {
+                "name": "NODE_0000003",
+                "node_attrs": {
+                  "div": 0.0139321
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G614A"
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "PQ247804.1",
+                    "node_attrs": {
+                      "div": 0.0323161,
+                      "country": {
+                        "value": "Brazil"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C65T",
+                          "T314C",
+                          "C476T",
+                          "T491C",
+                          "C516T",
+                          "C539T",
+                          "T581C",
+                          "A590G",
+                          "C596T",
+                          "G599A",
+                          "T608C",
+                          "A611G",
+                          "T725C"
+                        ],
+                        "NSs": [
+                          "L83S"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "NSs: L83S"
+                      }
+                    }
+                  },
+                  {
+                    "name": "PQ247819.1",
+                    "node_attrs": {
+                      "div": 0.0153248,
+                      "country": {
+                        "value": "Brazil"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "A304C"
+                        ],
+                        "N": [
+                          "D87A"
+                        ],
+                        "NSs": [
+                          "T80P"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "N: D87A; NSs: T80P"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "NODE_0000004",
+        "node_attrs": {
+          "div": 0.00535655
+        },
+        "branch_attrs": {
+          "mutations": {
+            "nuc": [
+              "A404G",
+              "A407G",
+              "T419A"
+            ]
+          }
+        },
+        "children": [
+          {
+            "name": "PQ247800.1",
+            "node_attrs": {
+              "div": 0.00689276,
+              "country": {
+                "value": "Brazil"
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "C269T"
+                ],
+                "NSs": [
+                  "T68I"
+                ]
+              },
+              "labels": {
+                "aa": "NSs: T68I"
+              }
+            }
+          },
+          {
+            "name": "NODE_0000005",
+            "node_attrs": {
+              "div": 0.00655035
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "G344T"
+                ]
+              }
+            },
+            "children": [
+              {
+                "name": "NODE_0000006",
+                "node_attrs": {
+                  "div": 0.0323138
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "A212G",
+                      "G287A",
+                      "C323T",
+                      "C339T",
+                      "G455A",
+                      "C461T",
+                      "G467A",
+                      "C516T",
+                      "A518G",
+                      "G527A",
+                      "C553T",
+                      "T566C",
+                      "A590G",
+                      "A656G",
+                      "A665C",
+                      "T669C",
+                      "C750A",
+                      "C753A"
+                    ],
+                    "N": [
+                      "T170M"
+                    ],
+                    "NSs": [
+                      "H49R",
+                      "S74N",
+                      "T86I"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "N: T170M; NSs: H49R, S74N, T86I"
+                  }
+                },
+                "children": [
+                  {
+                    "name": "PP966967.1",
+                    "node_attrs": {
+                      "div": 0.0323158,
+                      "country": {
+                        "value": "Peru"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    }
+                  },
+                  {
+                    "name": "PP966964.1",
+                    "node_attrs": {
+                      "div": 0.0323161,
+                      "country": {
+                        "value": "Peru"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "NODE_0000007",
+                "node_attrs": {
+                  "div": 0.00919337
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "T356C",
+                      "T557C"
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "NODE_0000008",
+                    "node_attrs": {
+                      "div": 0.00919578
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    },
+                    "children": [
+                      {
+                        "name": "NODE_0000009",
+                        "node_attrs": {
+                          "div": 0.0105385
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C65T"
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "PQ247802.1",
+                            "node_attrs": {
+                              "div": 0.0132261,
+                              "country": {
+                                "value": "Brazil"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "A642G",
+                                  "T746C"
+                                ],
+                                "N": [
+                                  "R200G"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "N: R200G"
+                              }
+                            }
+                          },
+                          {
+                            "name": "PQ247805.1",
+                            "node_attrs": {
+                              "div": 0.0105407,
+                              "country": {
+                                "value": "Brazil"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NODE_0000010",
+                        "node_attrs": {
+                          "div": 0.00919795
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        },
+                        "children": [
+                          {
+                            "name": "NODE_0000011",
+                            "node_attrs": {
+                              "div": 0.00920037
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            },
+                            "children": [
+                              {
+                                "name": "PQ247799.1",
+                                "node_attrs": {
+                                  "div": 0.0105455,
+                                  "country": {
+                                    "value": "Brazil"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "A147G"
+                                    ],
+                                    "N": [
+                                      "N35D"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "N: N35D"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000012",
+                                "node_attrs": {
+                                  "div": 0.00920323
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "PQ247740.1",
+                                    "node_attrs": {
+                                      "div": 0.0105423,
+                                      "country": {
+                                        "value": "Brazil"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G33A"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "PQ247735.1",
+                                    "node_attrs": {
+                                      "div": 0.0105426,
+                                      "country": {
+                                        "value": "Brazil"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "T128C"
+                                        ],
+                                        "NSs": [
+                                          "L21P"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "NSs: L21P"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NODE_0000013",
+                            "node_attrs": {
+                              "div": 0.00920025
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            },
+                            "children": [
+                              {
+                                "name": "PQ247767.1",
+                                "node_attrs": {
+                                  "div": 0.0105367,
+                                  "country": {
+                                    "value": "Brazil"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G351A"
+                                    ],
+                                    "N": [
+                                      "A103T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "N: A103T"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000014",
+                                "node_attrs": {
+                                  "div": 0.00920323
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "PQ247793.1",
+                                    "node_attrs": {
+                                      "div": 0.0105428,
+                                      "country": {
+                                        "value": "Brazil"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "A193G"
+                                        ],
+                                        "N": [
+                                          "K50R"
+                                        ],
+                                        "NSs": [
+                                          "K43E"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "N: K50R; NSs: K43E"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "PQ247733.1",
+                                    "node_attrs": {
+                                      "div": 0.0105398,
+                                      "country": {
+                                        "value": "Brazil"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C100T"
+                                        ],
+                                        "N": [
+                                          "P19L"
+                                        ],
+                                        "NSs": [
+                                          "R12W"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "N: P19L; NSs: R12W"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "NODE_0000015",
+                    "node_attrs": {
+                      "div": 0.0105307
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "A374T"
+                        ]
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "PQ247803.1",
+                        "node_attrs": {
+                          "div": 0.0118711,
+                          "country": {
+                            "value": "Brazil"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C750A"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "name": "NODE_0000016",
+                        "node_attrs": {
+                          "div": 0.011863
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "T566C"
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "PQ247760.1",
+                            "node_attrs": {
+                              "div": 0.0132007,
+                              "country": {
+                                "value": "Brazil"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "G102A"
+                                ],
+                                "N": [
+                                  "E20K"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "N: E20K"
+                              }
+                            }
+                          },
+                          {
+                            "name": "NODE_0000017",
+                            "node_attrs": {
+                              "div": 0.0145346
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C548T",
+                                  "C553T"
+                                ],
+                                "N": [
+                                  "T170M"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "N: T170M"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "NODE_0000018",
+                                "node_attrs": {
+                                  "div": 0.0145375
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "NODE_0000019",
+                                    "node_attrs": {
+                                      "div": 0.0163428
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C65T",
+                                          "C719T"
+                                        ]
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "NODE_0000020",
+                                        "node_attrs": {
+                                          "div": 0.0172411
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {}
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "PQ537329.1",
+                                            "node_attrs": {
+                                              "div": 0.0172434,
+                                              "country": {
+                                                "value": "Brazil"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            }
+                                          },
+                                          {
+                                            "name": "PQ247716.1",
+                                            "node_attrs": {
+                                              "div": 0.0172435,
+                                              "country": {
+                                                "value": "Brazil"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "NODE_0000021",
+                                        "node_attrs": {
+                                          "div": 0.0179711
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {
+                                            "nuc": [
+                                              "T266C"
+                                            ],
+                                            "NSs": [
+                                              "I67T"
+                                            ]
+                                          },
+                                          "labels": {
+                                            "aa": "NSs: I67T"
+                                          }
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "PP921386.1",
+                                            "node_attrs": {
+                                              "div": 0.0179734,
+                                              "country": {
+                                                "value": "Cuba"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            }
+                                          },
+                                          {
+                                            "name": "NODE_0000022",
+                                            "node_attrs": {
+                                              "div": 0.0179733
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            },
+                                            "children": [
+                                              {
+                                                "name": "PP921387.1",
+                                                "node_attrs": {
+                                                  "div": 0.0179756,
+                                                  "country": {
+                                                    "value": "Cuba"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                }
+                                              },
+                                              {
+                                                "name": "PP921389.1",
+                                                "node_attrs": {
+                                                  "div": 0.0179756,
+                                                  "country": {
+                                                    "value": "Cuba"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "NODE_0000023",
+                                    "node_attrs": {
+                                      "div": 0.014732
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "PQ550997.1",
+                                        "node_attrs": {
+                                          "div": 0.0147343,
+                                          "country": {
+                                            "value": "Brazil"
+                                          }
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {}
+                                        }
+                                      },
+                                      {
+                                        "name": "NODE_0000024",
+                                        "node_attrs": {
+                                          "div": 0.0147347
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {}
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "PQ381542.1",
+                                            "node_attrs": {
+                                              "div": 0.014737,
+                                              "country": {
+                                                "value": "Brazil"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            }
+                                          },
+                                          {
+                                            "name": "NODE_0000025",
+                                            "node_attrs": {
+                                              "div": 0.014737
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            },
+                                            "children": [
+                                              {
+                                                "name": "PQ156583.1",
+                                                "node_attrs": {
+                                                  "div": 0.0147393,
+                                                  "country": {
+                                                    "value": "Brazil"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                }
+                                              },
+                                              {
+                                                "name": "NODE_0000026",
+                                                "node_attrs": {
+                                                  "div": 0.0147699
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                },
+                                                "children": [
+                                                  {
+                                                    "name": "NODE_0000027",
+                                                    "node_attrs": {
+                                                      "div": 0.0161412
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {
+                                                        "nuc": [
+                                                          "T746C"
+                                                        ]
+                                                      }
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "name": "PQ247839.1",
+                                                        "node_attrs": {
+                                                          "div": 0.0161435,
+                                                          "country": {
+                                                            "value": "Brazil"
+                                                          }
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "PV254757.1",
+                                                        "node_attrs": {
+                                                          "div": 0.0161441,
+                                                          "country": {
+                                                            "value": "Brazil"
+                                                          }
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "name": "NODE_0000028",
+                                                    "node_attrs": {
+                                                      "div": 0.0182523
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {
+                                                        "nuc": [
+                                                          "G9A",
+                                                          "C750A",
+                                                          "C753A"
+                                                        ]
+                                                      }
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "name": "PV254759.1",
+                                                        "node_attrs": {
+                                                          "div": 0.0182546,
+                                                          "country": {
+                                                            "value": "Brazil"
+                                                          }
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "NODE_0000029",
+                                                        "node_attrs": {
+                                                          "div": 0.0182541
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        },
+                                                        "children": [
+                                                          {
+                                                            "name": "NODE_0000030",
+                                                            "node_attrs": {
+                                                              "div": 0.0196595
+                                                            },
+                                                            "branch_attrs": {
+                                                              "mutations": {
+                                                                "nuc": [
+                                                                  "A281G"
+                                                                ],
+                                                                "NSs": [
+                                                                  "N72S"
+                                                                ]
+                                                              },
+                                                              "labels": {
+                                                                "aa": "NSs: N72S"
+                                                              }
+                                                            },
+                                                            "children": [
+                                                              {
+                                                                "name": "PV254749.1",
+                                                                "node_attrs": {
+                                                                  "div": 0.0196621,
+                                                                  "country": {
+                                                                    "value": "Brazil"
+                                                                  }
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {}
+                                                                }
+                                                              },
+                                                              {
+                                                                "name": "NODE_0000031",
+                                                                "node_attrs": {
+                                                                  "div": 0.021065
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {
+                                                                    "nuc": [
+                                                                      "C566T"
+                                                                    ]
+                                                                  }
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "name": "PV254760.1",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0210674,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      }
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "name": "PV254765.1",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0210673,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      }
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "NODE_0000032",
+                                                            "node_attrs": {
+                                                              "div": 0.0182551
+                                                            },
+                                                            "branch_attrs": {
+                                                              "mutations": {}
+                                                            },
+                                                            "children": [
+                                                              {
+                                                                "name": "NODE_0000033",
+                                                                "node_attrs": {
+                                                                  "div": 0.0182575
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {}
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "name": "PV254764.1",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0182598,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      }
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "name": "NODE_0000034",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0182596
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    },
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "PQ197396.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0183867,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        }
+                                                                      },
+                                                                      {
+                                                                        "name": "PV254766.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0182619,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "name": "NODE_0000035",
+                                                                "node_attrs": {
+                                                                  "div": 0.0182574
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {}
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "name": "PV254761.1",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0182574,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      }
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "name": "NODE_0000036",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0182574
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    },
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "PV254763.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0182574,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        }
+                                                                      },
+                                                                      {
+                                                                        "name": "PV254767.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0182574,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "NODE_0000037",
+                                "node_attrs": {
+                                  "div": 0.0145369
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "PQ247726.1",
+                                    "node_attrs": {
+                                      "div": 0.015884,
+                                      "country": {
+                                        "value": "Brazil"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "T693C"
+                                        ],
+                                        "N": [
+                                          "S217P"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "N: S217P"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "NODE_0000038",
+                                    "node_attrs": {
+                                      "div": 0.0145379
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "PQ247730.1",
+                                        "node_attrs": {
+                                          "div": 0.0158837,
+                                          "country": {
+                                            "value": "Brazil"
+                                          }
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {
+                                            "nuc": [
+                                              "C385T"
+                                            ],
+                                            "N": [
+                                              "A114V"
+                                            ]
+                                          },
+                                          "labels": {
+                                            "aa": "N: A114V"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "name": "NODE_0000039",
+                                        "node_attrs": {
+                                          "div": 0.0145405
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {}
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "NODE_0000040",
+                                            "node_attrs": {
+                                              "div": 0.0150547
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            },
+                                            "children": [
+                                              {
+                                                "name": "PQ149814.1",
+                                                "node_attrs": {
+                                                  "div": 0.0158777,
+                                                  "country": {
+                                                    "value": "Brazil"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {
+                                                    "nuc": [
+                                                      "T54C"
+                                                    ],
+                                                    "N": [
+                                                      "F4L"
+                                                    ]
+                                                  },
+                                                  "labels": {
+                                                    "aa": "N: F4L"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "name": "PQ381541.1",
+                                                "node_attrs": {
+                                                  "div": 0.015057,
+                                                  "country": {
+                                                    "value": "Brazil"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "name": "NODE_0000041",
+                                            "node_attrs": {
+                                              "div": 0.0145565
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            },
+                                            "children": [
+                                              {
+                                                "name": "PQ247727.1",
+                                                "node_attrs": {
+                                                  "div": 0.0158957,
+                                                  "country": {
+                                                    "value": "Brazil"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {
+                                                    "nuc": [
+                                                      "T233C"
+                                                    ],
+                                                    "NSs": [
+                                                      "L56S"
+                                                    ]
+                                                  },
+                                                  "labels": {
+                                                    "aa": "NSs: L56S"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "name": "NODE_0000042",
+                                                "node_attrs": {
+                                                  "div": 0.0159632
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {
+                                                    "nuc": [
+                                                      "A754T"
+                                                    ]
+                                                  }
+                                                },
+                                                "children": [
+                                                  {
+                                                    "name": "PQ247718.1",
+                                                    "node_attrs": {
+                                                      "div": 0.0186594,
+                                                      "country": {
+                                                        "value": "Brazil"
+                                                      }
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {
+                                                        "nuc": [
+                                                          "G447A",
+                                                          "G455A"
+                                                        ],
+                                                        "N": [
+                                                          "G135S"
+                                                        ]
+                                                      },
+                                                      "labels": {
+                                                        "aa": "N: G135S"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "name": "NODE_0000043",
+                                                    "node_attrs": {
+                                                      "div": 0.016005
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {}
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "name": "PQ381544.1",
+                                                        "node_attrs": {
+                                                          "div": 0.0160073,
+                                                          "country": {
+                                                            "value": "Brazil"
+                                                          }
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "NODE_0000044",
+                                                        "node_attrs": {
+                                                          "div": 0.0160075
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        },
+                                                        "children": [
+                                                          {
+                                                            "name": "NODE_0000045",
+                                                            "node_attrs": {
+                                                              "div": 0.0173479
+                                                            },
+                                                            "branch_attrs": {
+                                                              "mutations": {
+                                                                "nuc": [
+                                                                  "T374A"
+                                                                ]
+                                                              }
+                                                            },
+                                                            "children": [
+                                                              {
+                                                                "name": "PQ247719.1",
+                                                                "node_attrs": {
+                                                                  "div": 0.0187,
+                                                                  "country": {
+                                                                    "value": "Brazil"
+                                                                  }
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {
+                                                                    "nuc": [
+                                                                      "G648A"
+                                                                    ],
+                                                                    "N": [
+                                                                      "A202T"
+                                                                    ]
+                                                                  },
+                                                                  "labels": {
+                                                                    "aa": "N: A202T"
+                                                                  }
+                                                                }
+                                                              },
+                                                              {
+                                                                "name": "NODE_0000046",
+                                                                "node_attrs": {
+                                                                  "div": 0.0173501
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {}
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "name": "PQ247720.1",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0186977,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      }
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {
+                                                                        "nuc": [
+                                                                          "G334A"
+                                                                        ],
+                                                                        "N": [
+                                                                          "G97E"
+                                                                        ],
+                                                                        "NSs": [
+                                                                          "D90N"
+                                                                        ]
+                                                                      },
+                                                                      "labels": {
+                                                                        "aa": "N: G97E; NSs: D90N"
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "name": "NODE_0000047",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0200434
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {
+                                                                        "nuc": [
+                                                                          "G535A",
+                                                                          "C750A"
+                                                                        ],
+                                                                        "N": [
+                                                                          "R164K"
+                                                                        ]
+                                                                      },
+                                                                      "labels": {
+                                                                        "aa": "N: R164K"
+                                                                      }
+                                                                    },
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "PQ458649.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0200456,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        }
+                                                                      },
+                                                                      {
+                                                                        "name": "PQ247717.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0200457,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "NODE_0000048",
+                                                            "node_attrs": {
+                                                              "div": 0.0173405
+                                                            },
+                                                            "branch_attrs": {
+                                                              "mutations": {
+                                                                "nuc": [
+                                                                  "C65T"
+                                                                ]
+                                                              }
+                                                            },
+                                                            "children": [
+                                                              {
+                                                                "name": "PQ381547.1",
+                                                                "node_attrs": {
+                                                                  "div": 0.0173428,
+                                                                  "country": {
+                                                                    "value": "Brazil"
+                                                                  }
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {}
+                                                                }
+                                                              },
+                                                              {
+                                                                "name": "NODE_0000049",
+                                                                "node_attrs": {
+                                                                  "div": 0.0173417
+                                                                },
+                                                                "branch_attrs": {
+                                                                  "mutations": {}
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "name": "PQ247723.1",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0173447,
+                                                                      "country": {
+                                                                        "value": "Brazil"
+                                                                      }
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {}
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "name": "NODE_0000050",
+                                                                    "node_attrs": {
+                                                                      "div": 0.0187134
+                                                                    },
+                                                                    "branch_attrs": {
+                                                                      "mutations": {
+                                                                        "nuc": [
+                                                                          "C750A"
+                                                                        ]
+                                                                      }
+                                                                    },
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "PV254750.1",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0215276,
+                                                                          "country": {
+                                                                            "value": "Brazil"
+                                                                          }
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {
+                                                                            "nuc": [
+                                                                              "T94C",
+                                                                              "C566T"
+                                                                            ],
+                                                                            "N": [
+                                                                              "F17S"
+                                                                            ]
+                                                                          },
+                                                                          "labels": {
+                                                                            "aa": "N: F17S"
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      {
+                                                                        "name": "NODE_0000051",
+                                                                        "node_attrs": {
+                                                                          "div": 0.0187216
+                                                                        },
+                                                                        "branch_attrs": {
+                                                                          "mutations": {}
+                                                                        },
+                                                                        "children": [
+                                                                          {
+                                                                            "name": "PQ381559.1",
+                                                                            "node_attrs": {
+                                                                              "div": 0.0187239,
+                                                                              "country": {
+                                                                                "value": "Brazil"
+                                                                              }
+                                                                            },
+                                                                            "branch_attrs": {
+                                                                              "mutations": {}
+                                                                            }
+                                                                          },
+                                                                          {
+                                                                            "name": "NODE_0000052",
+                                                                            "node_attrs": {
+                                                                              "div": 0.0187237
+                                                                            },
+                                                                            "branch_attrs": {
+                                                                              "mutations": {}
+                                                                            },
+                                                                            "children": [
+                                                                              {
+                                                                                "name": "PQ381551.1",
+                                                                                "node_attrs": {
+                                                                                  "div": 0.018726,
+                                                                                  "country": {
+                                                                                    "value": "Brazil"
+                                                                                  }
+                                                                                },
+                                                                                "branch_attrs": {
+                                                                                  "mutations": {}
+                                                                                }
+                                                                              },
+                                                                              {
+                                                                                "name": "NODE_0000053",
+                                                                                "node_attrs": {
+                                                                                  "div": 0.0187253
+                                                                                },
+                                                                                "branch_attrs": {
+                                                                                  "mutations": {}
+                                                                                },
+                                                                                "children": [
+                                                                                  {
+                                                                                    "name": "PQ381545.1",
+                                                                                    "node_attrs": {
+                                                                                      "div": 0.0187276,
+                                                                                      "country": {
+                                                                                        "value": "Brazil"
+                                                                                      }
+                                                                                    },
+                                                                                    "branch_attrs": {
+                                                                                      "mutations": {}
+                                                                                    }
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "NODE_0000054",
+                                                                                    "node_attrs": {
+                                                                                      "div": 0.0187289
+                                                                                    },
+                                                                                    "branch_attrs": {
+                                                                                      "mutations": {}
+                                                                                    },
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "name": "PQ381555.1",
+                                                                                        "node_attrs": {
+                                                                                          "div": 0.0202205,
+                                                                                          "country": {
+                                                                                            "value": "Brazil"
+                                                                                          }
+                                                                                        },
+                                                                                        "branch_attrs": {
+                                                                                          "mutations": {
+                                                                                            "nuc": [
+                                                                                              "A137G"
+                                                                                            ],
+                                                                                            "NSs": [
+                                                                                              "D24G"
+                                                                                            ]
+                                                                                          },
+                                                                                          "labels": {
+                                                                                            "aa": "NSs: D24G"
+                                                                                          }
+                                                                                        }
+                                                                                      },
+                                                                                      {
+                                                                                        "name": "NODE_0000055",
+                                                                                        "node_attrs": {
+                                                                                          "div": 0.0187311
+                                                                                        },
+                                                                                        "branch_attrs": {
+                                                                                          "mutations": {}
+                                                                                        },
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "name": "PQ197204.1",
+                                                                                            "node_attrs": {
+                                                                                              "div": 0.0187334,
+                                                                                              "country": {
+                                                                                                "value": "Brazil"
+                                                                                              }
+                                                                                            },
+                                                                                            "branch_attrs": {
+                                                                                              "mutations": {}
+                                                                                            }
+                                                                                          },
+                                                                                          {
+                                                                                            "name": "NODE_0000056",
+                                                                                            "node_attrs": {
+                                                                                              "div": 0.0201217
+                                                                                            },
+                                                                                            "branch_attrs": {
+                                                                                              "mutations": {
+                                                                                                "nuc": [
+                                                                                                  "T443G"
+                                                                                                ],
+                                                                                                "N": [
+                                                                                                  "N133K"
+                                                                                                ]
+                                                                                              },
+                                                                                              "labels": {
+                                                                                                "aa": "N: N133K"
+                                                                                              }
+                                                                                            },
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "name": "PQ247824.1",
+                                                                                                "node_attrs": {
+                                                                                                  "div": 0.0215317,
+                                                                                                  "country": {
+                                                                                                    "value": "Brazil"
+                                                                                                  }
+                                                                                                },
+                                                                                                "branch_attrs": {
+                                                                                                  "mutations": {
+                                                                                                    "nuc": [
+                                                                                                      "C557T"
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              },
+                                                                                              {
+                                                                                                "name": "NODE_0000057",
+                                                                                                "node_attrs": {
+                                                                                                  "div": 0.0215209
+                                                                                                },
+                                                                                                "branch_attrs": {
+                                                                                                  "mutations": {
+                                                                                                    "nuc": [
+                                                                                                      "A419T"
+                                                                                                    ]
+                                                                                                  }
+                                                                                                },
+                                                                                                "children": [
+                                                                                                  {
+                                                                                                    "name": "PQ247833.1",
+                                                                                                    "node_attrs": {
+                                                                                                      "div": 0.0229155,
+                                                                                                      "country": {
+                                                                                                        "value": "Brazil"
+                                                                                                      }
+                                                                                                    },
+                                                                                                    "branch_attrs": {
+                                                                                                      "mutations": {
+                                                                                                        "nuc": [
+                                                                                                          "A625C"
+                                                                                                        ],
+                                                                                                        "N": [
+                                                                                                          "E194A"
+                                                                                                        ]
+                                                                                                      },
+                                                                                                      "labels": {
+                                                                                                        "aa": "N: E194A"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  },
+                                                                                                  {
+                                                                                                    "name": "NODE_0000058",
+                                                                                                    "node_attrs": {
+                                                                                                      "div": 0.0215239
+                                                                                                    },
+                                                                                                    "branch_attrs": {
+                                                                                                      "mutations": {}
+                                                                                                    },
+                                                                                                    "children": [
+                                                                                                      {
+                                                                                                        "name": "PQ247813.1",
+                                                                                                        "node_attrs": {
+                                                                                                          "div": 0.02441,
+                                                                                                          "country": {
+                                                                                                            "value": "Brazil"
+                                                                                                          }
+                                                                                                        },
+                                                                                                        "branch_attrs": {
+                                                                                                          "mutations": {
+                                                                                                            "nuc": [
+                                                                                                              "A164G",
+                                                                                                              "G599A"
+                                                                                                            ],
+                                                                                                            "NSs": [
+                                                                                                              "E33G"
+                                                                                                            ]
+                                                                                                          },
+                                                                                                          "labels": {
+                                                                                                            "aa": "NSs: E33G"
+                                                                                                          }
+                                                                                                        }
+                                                                                                      },
+                                                                                                      {
+                                                                                                        "name": "PQ247820.1",
+                                                                                                        "node_attrs": {
+                                                                                                          "div": 0.0243683,
+                                                                                                          "country": {
+                                                                                                            "value": "Brazil"
+                                                                                                          }
+                                                                                                        },
+                                                                                                        "branch_attrs": {
+                                                                                                          "mutations": {
+                                                                                                            "nuc": [
+                                                                                                              "T65C",
+                                                                                                              "G455A"
+                                                                                                            ]
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                ]
+                                                                                              }
+                                                                                            ]
+                                                                                          }
+                                                                                        ]
+                                                                                      }
+                                                                                    ]
+                                                                                  }
+                                                                                ]
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "root_sequence": {
+    "N": "MSEFIFNDVPQRTTSTFDPEAAYVAFEARYGQVLNAGVVRVFFLNQKKAKDVLRKTSRPMVDLTFGGVQFAMVNNHFPQFQSNPVPDNGLTLHRLSGYLARWAFTQMRSPIKQAEFRATVVVPLAEVKGCTWNDGDAMYLGFAAGAEMFLQTFTFFPLVIEMHRVLKDGMDVNFMKKVLRQRYGQKTAEQWMREEIVAVRAAFEAVGTLAWARTGFSPAARDFLRQFGIDI*",
+    "NSs": "MYHNGLHLHLIRRQHMWHLKLDTDKCSMLVLLESSSSTKRRPKMSYVRHRGPWLTLLLVGSNLQWLITISHSSSRIQCRTTVLPCTVCQDT*",
+    "nuc": "AGTAGTGTGCTCCACAATTCAAAACATAAAAAGAAATTCCAATAATGTCAGAGTTCATTTTCAACGATGTACCACAACGGACTACATCTACATTTGATCCGGAGGCAGCATATGTGGCATTTGAAGCTAGATACGGACAAGTGCTCAATGCTGGTGTTGTTAGAGTCTTCTTCCTCAACCAAAAGAAGGCCAAAGATGTCTTACGTAAGACATCGAGGCCCATGGTTGACCTTACTTTTGGTGGGGTCCAATTTGCAATGGTTAATAACCATTTCCCACAGTTCCAGTCGAATCCAGTGCCGGACAACGGTCTTACCCTGCACCGTCTGTCAGGATACCTAGCGCGCTGGGCCTTTACCCAGATGCGATCACCAATTAAGCAAGCTGAGTTCAGAGCCACTGTAGTAGTGCCTTTGGCTGAGGTAAAGGGCTGTACTTGGAATGATGGTGACGCAATGTACCTGGGGTTTGCTGCTGGTGCTGAGATGTTCCTGCAAACATTCACTTTCTTCCCTTTGGTGATTGAGATGCATAGGGTTCTCAAGGATGGCATGGATGTCAACTTTATGAAGAAAGTCCTCCGGCAGAGGTATGGTCAAAAGACTGCCGAGCAATGGATGCGTGAAGAAATAGTTGCTGTAAGAGCAGCTTTTGAAGCTGTAGGCACTCTGGCCTGGGCCAGAACTGGATTCTCCCCAGCAGCAAGAGACTTCTTGCGCCAATTCGGAATTGACATATAGTGGAGCACACTACT"
+  }
+}
