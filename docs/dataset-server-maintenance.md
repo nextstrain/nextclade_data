@@ -77,6 +77,8 @@ The discussion of file servers is out of scope here, but the minimum requirement
 
 - In order for datasets to be usable in Nextclade Web, [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) should be enabled on your server. This is a requirement of most web browsers. Please refer to your server's documentation on how to enable CORS.
 
+- **Localhost servers:** Chromium-based browsers block requests from `https://clades.nextstrain.org` to localhost due to [Private Network Access](https://developer.chrome.com/blog/private-network-access-update) restrictions. Use file drag-and-drop, Nextclade CLI, or host files on a public server instead.
+
 After the dataset server is deployed, make sure files can be accessed (downloaded) from a web browser and/or using `curl` command.
 
 You can then configure Nextclade to use your dataset server. Assuming the files are deployed to the address `https://example.com/`:
