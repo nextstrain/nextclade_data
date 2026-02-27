@@ -4,7 +4,7 @@
 ##sequence-region NC_009942.1 1 11029
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11082
 NC_009942.1	RefSeq	region	1	11029	.	+	.	ID=NC_009942.1:1..11029;Dbxref=taxon:11082;country=USA;gb-acronym=WNV;gbkey=Src;genome=genomic;isolate=385-99;mol_type=genomic RNA;note=lineage 1%3B Vero cell passage 2 after isolation;strain=NY99
-NC_009942.1	RefSeq	gene	97	10395	.	+	.	gene=POLY;ID=gene-WNVNY99_gp1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=YP_005097850.1
+NC_009942.1	RefSeq	gene	97	10398	.	+	.	gene=POLY;ID=gene-WNVNY99_gp1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=YP_005097850.1
 NC_009942.1	RefSeq	CDS	97	465	.	+	.	gene=capsid;Parent=gene-WNVNY99_gp1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=YP_005097850.1
 NC_009942.1	RefSeq	CDS	466	966	.	+	.	gene=prM;Parent=gene-WNVNY99_gp1;gbkey=Prot;product=protein pr;protein_id=YP_009164953.1
 NC_009942.1	RefSeq	CDS	967	2469	.	+	.	gene=env;Parent=gene-WNVNY99_gp1;gbkey=Prot;product=envelope protein E;protein_id=YP_001527880.1
