@@ -1,0 +1,72 @@
+{
+  "alignmentParams": {
+    "excessBandwidth": 40,
+    "terminalBandwidth": 200,
+    "allowedMismatches": 5,
+    "windowSize": 30,
+    "minSeedCover": 0.01,
+    "gapAlignmentSide": "left"
+  },
+  "attributes": {
+    "name": "West Nile Virus",
+    "reference accession": "NC_009942.1",
+  "reference name": "Strain NY99 (lineage 1A)"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
+  "experimental": false,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "examples.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "official": true,
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 20
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 20000,
+      "scoreBias": 1000
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 40
+    },
+    "privateMutations": {
+      "cutoff": 200,
+      "enabled": true,
+      "typical": 50,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 2,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "clusterCutOff": 5,
+      "enabled": false,
+      "scoreWeight": 20,
+      "windowSize": 100
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 40
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "shortcuts": [
+    "wnv", "west-nile", "west-nile-virus"
+  ],
+  "version": {
+    "tag": "unreleased"
+  }
+}
