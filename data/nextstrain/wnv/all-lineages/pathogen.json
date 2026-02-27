@@ -5,7 +5,8 @@
     "allowedMismatches": 5,
     "windowSize": 30,
     "minSeedCover": 0.01,
-    "gapAlignmentSide": "left"
+    "gapAlignmentSide": "left",
+    "retryReverseComplement": true
   },
   "attributes": {
     "name": "West Nile Virus",
