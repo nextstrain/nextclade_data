@@ -2,11 +2,11 @@
 
 | Key                  | Value                                                                 |
 |----------------------|-----------------------------------------------------------------------|
-| authors              | [Alejandra González-Sánchez](https://github.com/alejandra-gonzalezsanchez),[Nadia Neuner-Jehle](https://www.swisstph.ch/en/staff/profile/people/nadia-neuner-jehle), [Emma B. Hodcroft](http://emmahodcroft.com/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)     |
+| authors              | [Nadia Neuner-Jehle](https://www.swisstph.ch/en/staff/profile/people/nadia-neuner-jehle), [Alejandra González-Sánchez](https://github.com/alejandra-gonzalezsanchez), [Emma B. Hodcroft](http://emmahodcroft.com/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)     |
 | name                 | Coxsackievirus A16                                                     |
 | reference            | [U05876.1](https://www.ncbi.nlm.nih.gov/nuccore/U05876)               |
-| workflow             | https://github.com/hodcroftlab/nextclade_a16                          |
-| path                 | `TBD`                                                                 |
+| workflow             | https://github.com/enterovirus-phylo/nextclade_a16                          |
+| path                 | `enpen/enterovirus/cva16`                                                                 |
 | clade definitions    | A–F                                                                   |
 
 ## Scope of this dataset
@@ -27,7 +27,7 @@ This dataset supports:
 
 ## Subgenogroups of Cocksackievirus A16
 
-Genogroups A, B1, and B2 are the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and literature. They are defined by phylogenetic clustering and do not necessarily indicate antigenic differences. In recent years, recombinant forms were identified and labeled C-F. They cluster with the prototype strain, clade A.
+Subgenogroups B1 and B2 are the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and literature. They are defined by phylogenetic clustering and do not necessarily indicate antigenic differences. In recent years, recombinant forms were identified and labeled C-F (also known as B2, B3, and D). These recombinant forms cluster with the prototype strain, clade A.
 
 These designations are based on the phylogenetic structure and mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universal, standardized global lineage nomenclature for enteroviruses. Naming follows conventions from published studies and surveillance practices.
 
