@@ -6,11 +6,11 @@ Converts datasets from v2 to v3 format
 import argparse
 from os.path import join, isfile
 
-from lib.changelog import format_dataset_attributes_md_table
-from lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
-from lib.date import now_iso
-from lib.fs import json_write, copy, json_read, file_write
-from migrate_002_default_gene import rename_default_gene
+from scripts.lib.changelog import format_dataset_attributes_md_table
+from scripts.lib.container import dict_set, dict_cleanup, dict_get, dict_remove_many
+from scripts.lib.date import now_iso
+from scripts.lib.fs import json_write, copy, json_read, file_write
+from migrations.migrate_002_default_gene import rename_default_gene
 
 
 def check_file(dataset_dir, filename):

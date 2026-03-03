@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 from os.path import dirname, join
 
-from lib.changelog import changelog_get_unreleased_section
-from lib.container import dict_set
-from lib.fs import find_files, json_read, json_write, file_read, file_write
+from scripts.lib.changelog import changelog_get_unreleased_section
+from scripts.lib.container import dict_set
+from scripts.lib.fs import find_files, json_read, json_write, file_read, file_write
 
 """
 Replace .meta.extensions.nextclade.ref_nodes" in all tree.json files matching a subdirectory recursively

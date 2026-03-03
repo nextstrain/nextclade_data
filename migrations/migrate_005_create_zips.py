@@ -1,7 +1,7 @@
 from os.path import join, dirname
 from shutil import move
 
-from lib.fs import find_files, make_zip, rmrf
+from scripts.lib.fs import find_files, make_zip, rmrf
 
 tmp_dir = "data_temp/"
 

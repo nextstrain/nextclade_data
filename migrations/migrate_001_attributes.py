@@ -1,5 +1,5 @@
-from lib.fs import find_files, json_read, json_write
-from lib.container import dict_get, dict_remove, dict_cleanup, true_or_none
+from scripts.lib.fs import find_files, json_read, json_write
+from scripts.lib.container import dict_get, dict_remove, dict_cleanup, true_or_none
 
 
 def main():

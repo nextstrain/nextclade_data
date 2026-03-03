@@ -1,5 +1,5 @@
-from lib.container import dict_rename_many
-from lib.fs import find_files, json_read, json_write
+from scripts.lib.container import dict_rename_many
+from scripts.lib.fs import find_files, json_read, json_write
 
 
 def rename_default_gene(pathogen):
