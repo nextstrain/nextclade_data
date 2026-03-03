@@ -90,15 +90,12 @@ class DefectReport:
     return None
 
 
-_defect_reports: dict[str, DefectReport] = {}
+@dataclass
+class ValidationContext:
+  reports: dict[str, DefectReport] = field(default_factory=dict)
 
-
-def get_defect_reports() -> list[DefectReport]:
-  return list(_defect_reports.values())
-
-
-def clear_defect_reports() -> None:
-  _defect_reports.clear()
+  def get_reports(self) -> list[DefectReport]:
+    return list(self.reports.values())
 
 
 def get_current_branch() -> str:
@@ -151,11 +148,12 @@ def _fetch_remote_schema() -> dict:
 def validate_pathogen_json(
   data: Any,
   filepath: str,
+  ctx: ValidationContext,
   schemas_dir: Path | None = None,
   dataset_path: str | None = None,
 ) -> None:
   # Skip if already validated (called from multiple places in rebuild)
-  if filepath in _defect_reports:
+  if filepath in ctx.reports:
     return
 
   schema = fetch_schema(schemas_dir)
@@ -172,7 +170,7 @@ def validate_pathogen_json(
     dataset_path=dataset_path or _extract_dataset_path(filepath),
   )
   report.defects = _check_known_defects(data, report.infer_upstream_repo())
-  _defect_reports[filepath] = report
+  ctx.reports[filepath] = report
 
   # Build set of paths handled by defect checkers to suppress duplicate warnings
   known_defect_paths = {d.json_path for d in report.defects}
@@ -262,8 +260,8 @@ def _emit_defect(filepath: str, defect: Defect, json_path: str | None = None) ->
     log_fn(f"{location}: {message}")
 
 
-def print_defect_summary() -> None:
-  reports = [r for r in _defect_reports.values() if r.defects]
+def print_defect_summary(ctx: ValidationContext) -> None:
+  reports = [r for r in ctx.reports.values() if r.defects]
   if not reports:
     return
 

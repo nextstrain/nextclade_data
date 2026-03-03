@@ -15,7 +15,7 @@ from pathlib import Path
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup, find, unique, JsonPath
-from lib.schema import validate_pathogen_json, print_defect_summary, clear_defect_reports
+from lib.schema import validate_pathogen_json, print_defect_summary, ValidationContext
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -125,9 +125,9 @@ def dataset_get_versions(dataset):
   return versions, last_version
 
 
-def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str):
+def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str, validation_ctx):
   pathogen_json = json_read(pathogen_json_path)
-  validate_pathogen_json(pathogen_json, pathogen_json_path, args.nextclade_schemas_dir)
+  validate_pathogen_json(pathogen_json, pathogen_json_path, validation_ctx, args.nextclade_schemas_dir)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
 
@@ -367,7 +367,7 @@ def validate_shortcuts(collections):
 
 def main():
   args = parse_args()
-  clear_defect_reports()
+  validation_ctx = ValidationContext()
 
   if not args.allow_dirty and not git_dir_is_clean():
     dirty_files = "\n  ".join(git_get_dirty_files())
@@ -396,7 +396,7 @@ def main():
   all_refs = {}
   for collection_json_path in collection_json_paths:
     collection, release_infos_for_dataset, refs = process_one_collection(
-      collection_json_path, index_json, args, tag, updated_at
+      collection_json_path, index_json, args, tag, updated_at, validation_ctx
     )
     collections.append(collection)
     release_infos.extend(release_infos_for_dataset)
@@ -446,7 +446,7 @@ def main():
         time.sleep(5)
         publish_to_github_releases(args, tag, commit_hash, release_notes)
 
-  print_defect_summary()
+  print_defect_summary(validation_ctx)
 
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
@@ -457,7 +457,7 @@ def dataset_has_changes(dataset_from_index, dataset_dir):
   return len(modified_files) > 0
 
 
-def process_one_collection(collection_json_path, index_json, args, tag, updated_at):
+def process_one_collection(collection_json_path, index_json, args, tag, updated_at, validation_ctx):
   collection_json = json_read(collection_json_path)
   collection_dir = dirname(collection_json_path)
   collection_id = dict_get_required(collection_json, ["meta", "id"])
@@ -486,7 +486,7 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
     dataset_from_index = find(lambda dataset: dataset["path"] == path, datasets_from_index_json) or {}
 
     try:
-      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at)
+      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at, validation_ctx)
       datasets.append(dataset)
       # exclude deprecated datasets from list of refs that is later used to build minimizer index
       if not dataset['attributes'].get('deprecated', False):
@@ -504,7 +504,7 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
   json_write(collection_json, collection_json_path, no_sort_keys=True)
 
   release_infos = prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag,
-                                                updated_at)
+                                                updated_at, validation_ctx)
   release_infos = sort_release_infos(release_infos, dataset_order)
 
   collection_info = deepcopy(collection_json)
@@ -529,11 +529,11 @@ def get_datasets_from_index_json(index_json, collection_id):
   return dict_get(collection, ["datasets"]) or []
 
 
-def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag, updated_at):
+def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag, updated_at, validation_ctx):
   release_infos = []
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     pathogen_json = json_read(pathogen_json_path)
-    validate_pathogen_json(pathogen_json, pathogen_json_path, args.nextclade_schemas_dir)
+    validate_pathogen_json(pathogen_json, pathogen_json_path, validation_ctx, args.nextclade_schemas_dir)
     dataset_dir = dirname(pathogen_json_path)
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 
