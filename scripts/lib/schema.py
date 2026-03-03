@@ -76,6 +76,9 @@ def validate_pathogen_json(data: Any, filepath: str, schemas_dir: Path | None = 
   for warning in _find_extra_properties(data, schema):
     emit_ci_warning(filepath, warning)
 
+  for warning in _check_known_defects(data):
+    emit_ci_warning(filepath, warning)
+
 
 def _find_extra_properties(data: Any, schema: dict) -> list[str]:
   strict_schema = _make_strict_schema(schema)
@@ -123,3 +126,145 @@ def emit_ci_warning(filepath: str, message: str) -> None:
     print(f"::warning file={filepath}::{message}")
   else:
     l.warning(f"{filepath}: {message}")
+
+
+def _check_known_defects(data: dict) -> list[str]:
+  warnings: list[str] = []
+  warnings.extend(_check_misplaced_mut_labels(data))
+  warnings.extend(_check_qc_defects(data))
+  warnings.extend(_check_misplaced_properties(data))
+  warnings.extend(_check_alignment_param_typos(data))
+  return warnings
+
+
+def _check_misplaced_mut_labels(data: dict) -> list[str]:
+  """Detect mutation label maps at wrong nesting level."""
+  warnings: list[str] = []
+
+  if "nucMutLabelMap" in data:
+    warnings.append(
+      "Misplaced 'nucMutLabelMap' at root level. "
+      "Move to 'mutLabels.nucMutLabelMap'. "
+      "Fix: migrations/migrate_008_move_mut_labels.py"
+    )
+
+  if "nucMutLabelMapReverse" in data:
+    warnings.append(
+      "Legacy v2 field 'nucMutLabelMapReverse' at root level. "
+      "This field is not used by Nextclade v3 (reverse map is computed at runtime). "
+      "Fix: migrations/migrate_009_remove_nuc_mut_label_map_reverse.py"
+    )
+
+  if "mutLabelMap" in data:
+    warnings.append(
+      "Misplaced 'mutLabelMap' at root level. "
+      "Move contents to 'mutLabels' (e.g. 'mutLabels.aaMutLabelMap'). "
+      "Fix: migrations/migrate_008_move_mut_labels.py"
+    )
+
+  mut_labels = data.get("mutLabels")
+  if isinstance(mut_labels, dict) and "nucMutLabelMapReverse" in mut_labels:
+    warnings.append(
+      "Legacy v2 field 'mutLabels.nucMutLabelMapReverse'. "
+      "This field is not used by Nextclade v3 (reverse map is computed at runtime). "
+      "Fix: migrations/migrate_009_remove_nuc_mut_label_map_reverse.py"
+    )
+
+  return warnings
+
+
+def _check_qc_defects(data: dict) -> list[str]:
+  """Detect nonexistent or renamed QC properties."""
+  warnings: list[str] = []
+  qc = data.get("qc")
+  if not isinstance(qc, dict):
+    return warnings
+
+  if "divergence" in qc:
+    warnings.append(
+      "Unknown QC rule 'qc.divergence'. "
+      "Divergence is computed at runtime, not a configurable QC rule. "
+      "Fix: migrations/migrate_012_remove_qc_divergence.py"
+    )
+
+  missing_data = qc.get("missingData")
+  if isinstance(missing_data, dict) and "scoreWeight" in missing_data:
+    warnings.append(
+      "Unknown field 'qc.missingData.scoreWeight'. "
+      "This QC rule has no scoreWeight parameter. "
+      "Tune sensitivity via 'missingDataThreshold' and 'scoreBias' instead. "
+      "Fix: migrations/migrate_011_remove_qc_score_weight.py"
+    )
+
+  mixed_sites = qc.get("mixedSites")
+  if isinstance(mixed_sites, dict) and "scoreWeight" in mixed_sites:
+    warnings.append(
+      "Unknown field 'qc.mixedSites.scoreWeight'. "
+      "This QC rule has no scoreWeight parameter. "
+      "Tune sensitivity via 'mixedSitesThreshold' instead. "
+      "Fix: migrations/migrate_011_remove_qc_score_weight.py"
+    )
+
+  frame_shifts = qc.get("frameShifts")
+  if isinstance(frame_shifts, dict) and "ignoreFrameShifts" in frame_shifts:
+    warnings.append(
+      "Renamed field 'qc.frameShifts.ignoreFrameShifts'. "
+      "Use 'ignoredFrameShifts' (past tense). "
+      "The current value is silently ignored, so listed frame shifts are NOT being excluded from QC. "
+      "Fix: migrations/migrate_010_rename_ignore_frame_shifts.py"
+    )
+
+  return warnings
+
+
+def _check_misplaced_properties(data: dict) -> list[str]:
+  """Detect properties at wrong location or with old names."""
+  warnings: list[str] = []
+
+  if "geneOrderPreference" in data:
+    warnings.append(
+      "Renamed field 'geneOrderPreference'. "
+      "Use 'cdsOrderPreference'. "
+      "The current value is silently ignored, so CDS display order falls back to default. "
+      "Fix: migrations/migrate_013_rename_gene_order_preference.py"
+    )
+
+  if "placementMaskRanges" in data:
+    warnings.append(
+      "Misplaced 'placementMaskRanges' in pathogen.json. "
+      "This field belongs in tree.json at '.meta.extensions.nextclade.placementMaskRanges'. "
+      "The current value is silently ignored, so placement masking is NOT applied. "
+      "Requires manual edit of tree.json."
+    )
+
+  alignment_params = data.get("alignmentParams")
+  if isinstance(alignment_params, dict):
+    if "includeReference" in alignment_params:
+      warnings.append(
+        "Misplaced 'alignmentParams.includeReference'. "
+        "This is not an alignment parameter. Move to 'generalParams.includeReference'. "
+        "Fix: migrations/migrate_014_move_general_params.py"
+      )
+
+    if "includeNearestNodeInfo" in alignment_params:
+      warnings.append(
+        "Misplaced 'alignmentParams.includeNearestNodeInfo'. "
+        "This is not an alignment parameter. Move to 'generalParams.includeNearestNodeInfo'. "
+        "Fix: migrations/migrate_014_move_general_params.py"
+      )
+
+  return warnings
+
+
+def _check_alignment_param_typos(data: dict) -> list[str]:
+  """Detect known typos in alignment parameters."""
+  warnings: list[str] = []
+  alignment_params = data.get("alignmentParams")
+  if isinstance(alignment_params, dict) and "excessBandwith" in alignment_params:
+    warnings.append(
+      "Typo 'alignmentParams.excessBandwith' (missing 'd'). "
+      "Rename to 'alignmentParams.excessBandwidth'. "
+      "The current value is silently ignored, so the default bandwidth (9) is used instead. "
+      "Fix: migrations/migrate_015_fix_excess_bandwidth_typo.py"
+    )
+  return warnings
