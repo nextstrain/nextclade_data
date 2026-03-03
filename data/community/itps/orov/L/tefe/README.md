@@ -1,4 +1,4 @@
-# Nextclade Dataset for "oroV" L segment based on Reference "ILMD_TF29"
+# Nextclade Dataset for "OROV" L segment based on Reference "ILMD_TF29"
 
 ## Dataset Attributes
 
@@ -10,7 +10,7 @@
 
 ## Scope of This Dataset
 
-The dataset aims to enable the quality control of segment L of Oropouche virus using a genome from [Tefe outbreak](https://pubmed.ncbi.nlm.nih.gov/29623245/) (ILMD_TF29) as reference.
+The dataset aims to enable the quality control of segment L ofOropouche virus using a genome from [Tefe outbreak](https://pubmed.ncbi.nlm.nih.gov/29623245/) (ILMD_TF29) as reference.
 
 The source code is available at [InstitutoTodosPelaSaude/nextclade-datasets-workflows](https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/tree/main/orov).
 

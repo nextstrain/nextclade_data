@@ -15,10 +15,10 @@
   "placementMaskRanges": [
     {
       "begin": 0,
-      "end": 45
+      "end": 44
     },
     {
-      "begin": 741,
+      "begin": 740,
       "end": 754
     }
   ],
@@ -35,8 +35,8 @@
     "treeJson": "tree.json"
   },
   "meta": {
-    "bugs": "https://github.com/dezordi/nextclade_data_workflows/issues",
-    "source code": "https://github.com/dezordi/nextclade_data_workflows/tree/main/oroV"
+    "bugs": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/issues",
+    "source code": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/tree/main/orov"
   },
   "qc": {
     "frameShifts": {
@@ -52,7 +52,7 @@
       "mixedSitesThreshold": 1
     },
     "privateMutations": {
-      "cutoff": 15,
+      "cutoff": 20,
       "enabled": true,
       "typical": 5,
       "weightLabeledSubstitutions": 2,
