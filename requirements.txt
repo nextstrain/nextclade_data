@@ -1,4 +1,5 @@
 biopython
 jsonschema
 numpy
+rapidfuzz>=3.0
 repro-zipfile
