@@ -232,9 +232,10 @@ def _check_misplaced_properties(data: dict) -> list[str]:
   if "placementMaskRanges" in data:
     warnings.append(
       "Misplaced 'placementMaskRanges' in pathogen.json. "
-      "This field belongs in tree.json at '.meta.extensions.nextclade.placementMaskRanges'. "
+      "This field belongs in tree.json at '.meta.extensions.nextclade.placement_mask_ranges'. "
       "The current value is silently ignored, so placement masking is NOT applied. "
-      "Requires manual edit of tree.json."
+      "One-time fix: migrations/migrate_016_fix_misplaced_placement_mask_ranges.py. "
+      "Dataset authors must also fix their upstream build pipeline to place this field in tree.json directly."
     )
 
   alignment_params = data.get("alignmentParams")
