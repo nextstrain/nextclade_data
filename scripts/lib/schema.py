@@ -154,6 +154,10 @@ def validate_pathogen_json(
   schemas_dir: Path | None = None,
   dataset_path: str | None = None,
 ) -> None:
+  # Skip if already validated (called from multiple places in rebuild)
+  if filepath in _defect_reports:
+    return
+
   schema = fetch_schema(schemas_dir)
   validator = Draft7Validator(schema)
   errors = []
@@ -163,20 +167,24 @@ def validate_pathogen_json(
   if errors:
     raise ValidationError(f"Schema validation failed for '{filepath}':\n" + '\n'.join(errors))
 
-  for message, json_path in _find_extra_properties(data, schema):
-    _emit_ci_warning(filepath, message, json_path)
-
   report = DefectReport(
     filepath=filepath,
     dataset_path=dataset_path or _extract_dataset_path(filepath),
   )
   report.defects = _check_known_defects(data, report.infer_upstream_repo())
+  _defect_reports[filepath] = report
 
-  if report.defects:
-    if filepath not in _defect_reports:
-      _defect_reports[filepath] = report
-      for defect in report.defects:
-        _emit_defect(filepath, defect, defect.json_path)
+  # Build set of paths handled by defect checkers to suppress duplicate warnings
+  known_defect_paths = {d.json_path for d in report.defects}
+
+  # Emit generic warnings only for properties NOT covered by defect handlers
+  for message, json_path in _find_extra_properties(data, schema):
+    if json_path not in known_defect_paths:
+      _emit_ci_warning(filepath, message, json_path)
+
+  # Emit actionable defect warnings
+  for defect in report.defects:
+    _emit_defect(filepath, defect, defect.json_path)
 
 
 def _extract_dataset_path(filepath: str) -> str:
