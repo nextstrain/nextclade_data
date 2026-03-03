@@ -259,40 +259,42 @@ def print_defect_summary() -> None:
   if not reports:
     return
 
-  errors = [r for r in reports if r.has_errors]
-  warnings = [r for r in reports if r.has_warnings and not r.has_errors]
-  info_only = [r for r in reports if not r.has_errors and not r.has_warnings]
+  # Group reports by dataset_path
+  datasets: dict[str, list[DefectReport]] = {}
+  for r in reports:
+    datasets.setdefault(r.dataset_path, []).append(r)
+
+  # Count totals
+  error_count = sum(1 for r in reports if r.has_errors)
+  warning_count = sum(1 for r in reports if r.has_warnings)
 
   print("\n" + "=" * 60)
   print("DATASET DEFECTS SUMMARY")
   print("=" * 60)
+  print(f"\n{len(datasets)} dataset(s), {error_count} error(s), {warning_count} warning(s)\n")
 
-  if errors:
-    print(f"\n{len(errors)} dataset(s) with ERRORS (features broken):")
-    for r in errors:
-      upstream = r.infer_upstream_repo()
-      upstream_hint = f" [upstream: {upstream}]" if upstream else ""
-      print(f"  - {r.dataset_path}{upstream_hint}")
-      for d in r.defects:
-        if d.severity == Severity.ERROR:
-          print(f"      {d.problem}")
+  for dataset_path in sorted(datasets.keys()):
+    dataset_reports = datasets[dataset_path]
+    upstream = dataset_reports[0].infer_upstream_repo()
+    upstream_hint = f" [upstream: {upstream}]" if upstream else ""
 
-  if warnings:
-    print(f"\n{len(warnings)} dataset(s) with WARNINGS (using defaults):")
-    for r in warnings:
-      upstream = r.infer_upstream_repo()
-      upstream_hint = f" [upstream: {upstream}]" if upstream else ""
-      print(f"  - {r.dataset_path}{upstream_hint}")
-      for d in r.defects:
-        if d.severity == Severity.WARNING:
-          print(f"      {d.problem}")
+    # Determine dataset severity marker
+    has_errors = any(r.has_errors for r in dataset_reports)
+    has_warnings = any(r.has_warnings for r in dataset_reports)
+    marker = "ERROR" if has_errors else "WARNING" if has_warnings else "INFO"
 
-  if info_only:
-    print(f"\n{len(info_only)} dataset(s) with INFO (deprecated fields):")
-    for r in info_only:
-      print(f"  - {r.dataset_path}")
+    print(f"[{marker}] {dataset_path}{upstream_hint}")
 
-  print("\n" + "-" * 60)
+    for r in sorted(dataset_reports, key=lambda x: x.filepath):
+      filename = Path(r.filepath).name
+      print(f"  {filename}:")
+      for d in sorted(r.defects, key=lambda x: (x.severity.value, x.json_path)):
+        severity_tag = d.severity.name
+        print(f"    [{severity_tag}] {d.problem}")
+
+    print()
+
+  print("-" * 60)
   print("Run migration scripts to fix locally.")
   print("Notify upstream maintainers to prevent defect recurrence.")
   print(f"Docs: {SCHEMA_DOCS_URL}")
