@@ -13,7 +13,8 @@ from os.path import dirname, realpath, join, relpath, isfile
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
-  dict_remove_many, find_duplicates, dict_cleanup, find, unique
+  dict_remove_many, find_duplicates, dict_cleanup, find, unique, JsonPath
+from lib.schema import validate_pathogen_json
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -60,8 +61,8 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
     other.append("aaMotifs")
 
   qc = []
-  for k, q in (dict_get(pathogen_json, ["qc"]) or {}).items():
-    if dict_get(q, ["enabled"]):
+  for k, q in JsonPath(pathogen_json, "pathogen_json").get("qc").items():
+    if q.get("enabled").val:
       qc.append(k)
 
   custom_clades = dict_cleanup({attr: len(values) for attr, values in custom_clades.items() if len(values) > 0})
@@ -125,6 +126,7 @@ def dataset_get_versions(dataset):
 
 def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str):
   pathogen_json = json_read(pathogen_json_path)
+  validate_pathogen_json(pathogen_json, pathogen_json_path)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
 
@@ -516,6 +518,7 @@ def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, coll
   release_infos = []
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     pathogen_json = json_read(pathogen_json_path)
+    validate_pathogen_json(pathogen_json, pathogen_json_path)
     dataset_dir = dirname(pathogen_json_path)
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 

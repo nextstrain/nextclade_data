@@ -1,7 +1,49 @@
 from collections import namedtuple, Counter
-from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any, Hashable, Optional, Sequence
+from dataclasses import dataclass
+from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any, Hashable, Optional, Sequence, Iterator
 
 T = TypeVar('T')
+
+
+@dataclass(frozen=True)
+class JsonPath:
+  """Path-tracking wrapper for JSON traversal with automatic error context."""
+  data: Any
+  path: str = ""
+
+  def get(self, key: str) -> "JsonPath":
+    new_path = f"{self.path}.{key}" if self.path else key
+    if self.data is None:
+      return JsonPath(None, new_path)
+    if not isinstance(self.data, dict):
+      raise TypeError(f"expected dict at '{self.path or '(root)'}' while accessing '{key}', got {type(self.data).__name__}")
+    return JsonPath(self.data.get(key), new_path)
+
+  def items(self) -> Iterator[tuple[str, "JsonPath"]]:
+    if self.data is None:
+      return
+    if not isinstance(self.data, dict):
+      raise TypeError(f"expected dict at '{self.path or '(root)'}', got {type(self.data).__name__}")
+    for k, v in self.data.items():
+      yield k, JsonPath(v, f"{self.path}.{k}" if self.path else k)
+
+  def __iter__(self) -> Iterator["JsonPath"]:
+    if self.data is None:
+      return
+    if not isinstance(self.data, list):
+      raise TypeError(f"expected list at '{self.path or '(root)'}', got {type(self.data).__name__}")
+    for i, v in enumerate(self.data):
+      yield JsonPath(v, f"{self.path}[{i}]")
+
+  def __bool__(self) -> bool:
+    return self.data is not None and bool(self.data)
+
+  @property
+  def val(self) -> Any:
+    return self.data
+
+  def or_default(self, default: T) -> T:
+    return self.data if self.data is not None else default
 
 
 def is_iterable(obj):
