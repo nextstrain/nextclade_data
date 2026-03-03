@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import urllib.request
 from dataclasses import dataclass, field
 from enum import Enum, auto
@@ -12,6 +13,28 @@ from jsonschema import Draft7Validator, ValidationError
 
 from .logger import l
 from .process import run
+
+
+def _find_line_number(filepath: str, json_path: str) -> int | None:
+  """Find line number where a JSON path's final key appears."""
+  if not json_path:
+    return None
+  key = json_path.split(".")[-1]
+  pattern = re.compile(rf'^\s*"{re.escape(key)}"\s*:')
+  try:
+    with open(filepath, encoding="utf-8") as f:
+      for lineno, line in enumerate(f, start=1):
+        if pattern.match(line):
+          return lineno
+  except OSError:
+    pass
+  return None
+
+
+def _format_location(filepath: str, lineno: int | None) -> str:
+  if lineno:
+    return f"{filepath}:{lineno}"
+  return filepath
 
 NEXTCLADE_REPO = "nextstrain/nextclade"
 SCHEMA_FILENAME = "input-pathogen-json.schema.json"
@@ -32,6 +55,7 @@ class Defect:
   problem: str
   impact: str
   migration: str
+  json_path: str
   upstream_fix: str | None = None
 
   def format_message(self) -> str:
@@ -139,8 +163,8 @@ def validate_pathogen_json(
   if errors:
     raise ValidationError(f"Schema validation failed for '{filepath}':\n" + '\n'.join(errors))
 
-  for warning in _find_extra_properties(data, schema):
-    _emit_ci_warning(filepath, warning)
+  for message, json_path in _find_extra_properties(data, schema):
+    _emit_ci_warning(filepath, message, json_path)
 
   report = DefectReport(
     filepath=filepath,
@@ -152,7 +176,7 @@ def validate_pathogen_json(
     if filepath not in _defect_reports:
       _defect_reports[filepath] = report
       for defect in report.defects:
-        _emit_defect(filepath, defect)
+        _emit_defect(filepath, defect, defect.json_path)
 
 
 def _extract_dataset_path(filepath: str) -> str:
@@ -164,22 +188,25 @@ def _extract_dataset_path(filepath: str) -> str:
     return filepath
 
 
-def _find_extra_properties(data: Any, schema: dict) -> list[str]:
+def _find_extra_properties(data: Any, schema: dict) -> list[tuple[str, str]]:
   strict_schema = _make_strict_schema(schema)
   validator = Draft7Validator(strict_schema)
   return _collect_extra_property_warnings(validator.iter_errors(data))
 
 
-def _collect_extra_property_warnings(errors: Any) -> list[str]:
-  """Recursively collect additionalProperties errors from nested contexts."""
-  warnings = []
+def _collect_extra_property_warnings(errors: Any) -> list[tuple[str, str]]:
+  """Recursively collect additionalProperties errors from nested contexts.
+
+  Returns list of (message, json_path) tuples.
+  """
+  warnings: list[tuple[str, str]] = []
   for error in errors:
     if error.validator == "additionalProperties":
       path_parts = [str(p) for p in error.absolute_path]
       extras = [e for e in error.message.split("'")[1::2] if e != "$schema"]
       for extra in extras:
         full_path = '.'.join(path_parts + [extra]) if path_parts else extra
-        warnings.append(f"Unknown property '{full_path}'")
+        warnings.append((f"Unknown property '{full_path}'", full_path))
     if error.context:
       warnings.extend(_collect_extra_property_warnings(error.context))
   return warnings
@@ -204,21 +231,27 @@ def _add_strict_recursive(node: Any) -> None:
       _add_strict_recursive(item)
 
 
-def _emit_ci_warning(filepath: str, message: str) -> None:
+def _emit_ci_warning(filepath: str, message: str, json_path: str | None = None) -> None:
+  lineno = _find_line_number(filepath, json_path) if json_path else None
+  location = _format_location(filepath, lineno)
   if os.environ.get("GITHUB_ACTIONS"):
-    print(f"::warning file={filepath}::{message}")
+    line_part = f",line={lineno}" if lineno else ""
+    print(f"::warning file={filepath}{line_part}::{message}")
   else:
-    l.warning(f"{filepath}: {message}")
+    l.warning(f"{location}: {message}")
 
 
-def _emit_defect(filepath: str, defect: Defect) -> None:
+def _emit_defect(filepath: str, defect: Defect, json_path: str | None = None) -> None:
+  lineno = _find_line_number(filepath, json_path) if json_path else None
+  location = _format_location(filepath, lineno)
   message = defect.format_message()
   if os.environ.get("GITHUB_ACTIONS"):
     level = "error" if defect.severity == Severity.ERROR else "warning"
-    print(f"::{level} file={filepath}::{message}")
+    line_part = f",line={lineno}" if lineno else ""
+    print(f"::{level} file={filepath}{line_part}::{message}")
   else:
     log_fn = l.error if defect.severity == Severity.ERROR else l.warning
-    log_fn(f"{filepath}: {message}")
+    log_fn(f"{location}: {message}")
 
 
 def print_defect_summary() -> None:
@@ -291,6 +324,7 @@ def _check_misplaced_mut_labels(data: dict, upstream_repo: str | None) -> list[D
       problem="Misplaced 'nucMutLabelMap' at root level",
       impact="Nucleotide mutation labels not applied to results",
       migration="migrations/migrate_008_move_mut_labels.py",
+      json_path="nucMutLabelMap",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -300,6 +334,7 @@ def _check_misplaced_mut_labels(data: dict, upstream_repo: str | None) -> list[D
       problem="Legacy v2 field 'nucMutLabelMapReverse' at root level",
       impact="No effect (reverse map computed at runtime in v3)",
       migration="migrations/migrate_009_remove_nuc_mut_label_map_reverse.py",
+      json_path="nucMutLabelMapReverse",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -309,6 +344,7 @@ def _check_misplaced_mut_labels(data: dict, upstream_repo: str | None) -> list[D
       problem="Misplaced 'mutLabelMap' at root level",
       impact="Mutation labels not applied to results",
       migration="migrations/migrate_008_move_mut_labels.py",
+      json_path="mutLabelMap",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -319,6 +355,7 @@ def _check_misplaced_mut_labels(data: dict, upstream_repo: str | None) -> list[D
       problem="Legacy v2 field 'mutLabels.nucMutLabelMapReverse'",
       impact="No effect (reverse map computed at runtime in v3)",
       migration="migrations/migrate_009_remove_nuc_mut_label_map_reverse.py",
+      json_path="mutLabels.nucMutLabelMapReverse",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -338,6 +375,7 @@ def _check_qc_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
       problem="Unknown QC rule 'qc.divergence'",
       impact="No effect (divergence computed at runtime, not a QC rule)",
       migration="migrations/migrate_012_remove_qc_divergence.py",
+      json_path="qc.divergence",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -348,6 +386,7 @@ def _check_qc_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
       problem="Unknown field 'qc.missingData.scoreWeight'",
       impact="No effect (use 'missingDataThreshold' and 'scoreBias' instead)",
       migration="migrations/migrate_011_remove_qc_score_weight.py",
+      json_path="qc.missingData.scoreWeight",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -358,6 +397,7 @@ def _check_qc_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
       problem="Unknown field 'qc.mixedSites.scoreWeight'",
       impact="No effect (use 'mixedSitesThreshold' instead)",
       migration="migrations/migrate_011_remove_qc_score_weight.py",
+      json_path="qc.mixedSites.scoreWeight",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -368,6 +408,7 @@ def _check_qc_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
       problem="Renamed field 'qc.frameShifts.ignoreFrameShifts'",
       impact="Frame shift exclusions NOT applied (use 'ignoredFrameShifts')",
       migration="migrations/migrate_010_rename_ignore_frame_shifts.py",
+      json_path="qc.frameShifts.ignoreFrameShifts",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -384,6 +425,7 @@ def _check_misplaced_properties(data: dict, upstream_repo: str | None) -> list[D
       problem="Renamed field 'geneOrderPreference'",
       impact="CDS display order falls back to default (use 'cdsOrderPreference')",
       migration="migrations/migrate_013_rename_gene_order_preference.py",
+      json_path="geneOrderPreference",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -393,6 +435,7 @@ def _check_misplaced_properties(data: dict, upstream_repo: str | None) -> list[D
       problem="Misplaced 'placementMaskRanges' in pathogen.json",
       impact="Placement masking NOT applied (belongs in tree.json at .meta.extensions.nextclade.placement_mask_ranges)",
       migration="migrations/migrate_016_fix_misplaced_placement_mask_ranges.py",
+      json_path="placementMaskRanges",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
 
@@ -404,6 +447,7 @@ def _check_misplaced_properties(data: dict, upstream_repo: str | None) -> list[D
         problem="Misplaced 'alignmentParams.includeReference'",
         impact="Setting ignored (move to 'generalParams.includeReference')",
         migration="migrations/migrate_014_move_general_params.py",
+        json_path="alignmentParams.includeReference",
         upstream_fix=_upstream_hint(upstream_repo),
       ))
 
@@ -413,6 +457,7 @@ def _check_misplaced_properties(data: dict, upstream_repo: str | None) -> list[D
         problem="Misplaced 'alignmentParams.includeNearestNodeInfo'",
         impact="Setting ignored (move to 'generalParams.includeNearestNodeInfo')",
         migration="migrations/migrate_014_move_general_params.py",
+        json_path="alignmentParams.includeNearestNodeInfo",
         upstream_fix=_upstream_hint(upstream_repo),
       ))
 
@@ -429,6 +474,7 @@ def _check_alignment_param_typos(data: dict, upstream_repo: str | None) -> list[
       problem="Typo 'alignmentParams.excessBandwith' (missing 'd')",
       impact="Default bandwidth (9) used instead (rename to 'excessBandwidth')",
       migration="migrations/migrate_015_fix_excess_bandwidth_typo.py",
+      json_path="alignmentParams.excessBandwith",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
   return defects
