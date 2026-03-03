@@ -1,4 +1,4 @@
-# Nextclade Dataset for "oroV" L segment based on RefSeq reference genome
+# Nextclade Dataset for "OROV" L segment based on RefSeq reference genome
 
 ## Dataset Attributes
 
@@ -10,7 +10,7 @@
 
 ## Scope of This Dataset
 
-The dataset aims to enable the quality control of segment L of Oropouche virus using ncbi refseq as reference.
+The dataset aims to enable the quality control of segment L ofOropouche virus using ncbi refseq as reference.
 
 
 The source code is available at [InstitutoTodosPelaSaude/nextclade-datasets-workflows](https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/tree/main/orov).
