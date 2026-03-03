@@ -15,7 +15,7 @@ from pathlib import Path
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup, find, unique, JsonPath
-from lib.schema import validate_pathogen_json
+from lib.schema import validate_pathogen_json, print_defect_summary, clear_defect_reports
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -367,6 +367,7 @@ def validate_shortcuts(collections):
 
 def main():
   args = parse_args()
+  clear_defect_reports()
 
   if not args.allow_dirty and not git_dir_is_clean():
     dirty_files = "\n  ".join(git_get_dirty_files())
@@ -444,6 +445,8 @@ def main():
         l.info(f"Release notes:\n-------\n{release_notes}\n-------\nEnd of release notes\n")
         time.sleep(5)
         publish_to_github_releases(args, tag, commit_hash, release_notes)
+
+  print_defect_summary()
 
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
