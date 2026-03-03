@@ -96,6 +96,7 @@
     "nextstrain/flu/h2n2/ha",
     "nextstrain/flu/h2n2/na",
     "nextstrain/flu/h2n2/mp",
-    "nextstrain/flu/h2n2/ns"
+    "nextstrain/flu/h2n2/ns",
+    "nextstrain/wnv/all-lineages"
   ]
 }
