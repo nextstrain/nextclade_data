@@ -1,5 +1,4 @@
 from collections import namedtuple, Counter
-from functools import reduce
 from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any, Hashable, Optional, Sequence
 
 T = TypeVar('T')
@@ -14,13 +13,34 @@ def dict_to_namedtuple(name: str, dic: dict):
 
 
 def dict_set(obj: dict, key_path: List[str], value):
-  for key in key_path[:-1]:
+  for i, key in enumerate(key_path[:-1]):
+    _assert_dict(obj, key_path, i)
     obj = obj.setdefault(key, {})
+  _assert_dict(obj, key_path, len(key_path) - 1)
   obj[key_path[-1]] = value
 
 
 def dict_get(obj: dict, keys: List[str]):
-  return reduce(lambda d, key: d.get(key) if d else None, keys, obj)
+  current = obj
+  for i, key in enumerate(keys):
+    if current is None:
+      return None
+    _assert_dict(current, keys, i)
+    current = current.get(key)
+  return current
+
+
+def _assert_dict(obj: Any, keys: List[str], index: int):
+  if isinstance(obj, dict):
+    return
+  try:
+    traversed = '.'.join(str(k) for k in keys[:index]) if index > 0 else None
+    remaining = '.'.join(str(k) for k in keys[index:]) or '?'
+    location = f"after '{traversed}'" if traversed else "at root"
+    type_name = type(obj).__name__
+  except Exception:
+    location, remaining, type_name = "at unknown", "?", "?"
+  raise TypeError(f"expected dict {location} while accessing '{remaining}', got {type_name}")
 
 
 def dict_get_required(obj: dict, keys: List[str]):
