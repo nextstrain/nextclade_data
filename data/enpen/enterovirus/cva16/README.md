@@ -2,7 +2,7 @@
 
 | Key                  | Value                                                                 |
 |----------------------|-----------------------------------------------------------------------|
-| authors              | [Nadia Neuner-Jehle](https://www.swisstph.ch/en/staff/profile/people/nadia-neuner-jehle), [Alejandra González-Sánchez](https://github.com/alejandra-gonzalezsanchez), [Emma B. Hodcroft](http://emmahodcroft.com/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)     |
+| authors              | [Nadia Neuner-Jehle](https://eve-lab.org/people/nadia-neuner-jehle/), [Alejandra González-Sánchez](https://www.vallhebron.com/en/professionals/alejandra-gonzalez-sanchez), [Emma B. Hodcroft](https://eve-lab.org/people/emma-hodcroft/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)                                                 |
 | name                 | Coxsackievirus A16                                                     |
 | reference            | [U05876.1](https://www.ncbi.nlm.nih.gov/nuccore/U05876)               |
 | workflow             | https://github.com/enterovirus-phylo/nextclade_a16                          |
