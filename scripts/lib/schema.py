@@ -95,7 +95,7 @@ def _collect_extra_property_warnings(errors: Any) -> list[str]:
       extras = [e for e in error.message.split("'")[1::2] if e != "$schema"]
       for extra in extras:
         full_path = '.'.join(path_parts + [extra]) if path_parts else extra
-        warnings.append(f"Unknown property '{full_path}' - may be a typo or misplaced field")
+        warnings.append(f"Unknown property '{full_path}'")
     if error.context:
       warnings.extend(_collect_extra_property_warnings(error.context))
   return warnings
