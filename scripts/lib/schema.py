@@ -1,6 +1,7 @@
 import json
 import urllib.request
 from functools import lru_cache
+from pathlib import Path
 from urllib.error import HTTPError
 from typing import Any
 
@@ -10,7 +11,8 @@ from .logger import l
 from .process import run
 
 NEXTCLADE_REPO = "nextstrain/nextclade"
-SCHEMA_PATH = "packages/nextclade-schemas/input-pathogen-json.schema.json"
+SCHEMA_FILENAME = "input-pathogen-json.schema.json"
+SCHEMA_PATH = f"packages/nextclade-schemas/{SCHEMA_FILENAME}"
 SCHEMA_URL_TEMPLATE = "https://raw.githubusercontent.com/{repo}/refs/heads/{branch}/{path}"
 
 
@@ -40,8 +42,20 @@ def get_schema_branch() -> str:
   return "master"
 
 
+def fetch_schema(schemas_dir: Path | None = None) -> dict:
+  if schemas_dir is not None:
+    return _load_local_schema(schemas_dir)
+  return _fetch_remote_schema()
+
+
+def _load_local_schema(schemas_dir: Path) -> dict:
+  schema_path = schemas_dir / SCHEMA_FILENAME
+  with schema_path.open() as f:
+    return json.load(f)
+
+
 @lru_cache(maxsize=1)
-def fetch_schema() -> dict:
+def _fetch_remote_schema() -> dict:
   branch = get_schema_branch()
   url = SCHEMA_URL_TEMPLATE.format(repo=NEXTCLADE_REPO, branch=branch, path=SCHEMA_PATH)
   l.info(f"Fetching schema from {url}")
@@ -49,14 +63,9 @@ def fetch_schema() -> dict:
     return json.loads(response.read().decode('utf-8'))
 
 
-@lru_cache(maxsize=1)
-def get_validator() -> Draft7Validator:
-  schema = fetch_schema()
-  return Draft7Validator(schema)
-
-
-def validate_pathogen_json(data: Any, filepath: str) -> None:
-  validator = get_validator()
+def validate_pathogen_json(data: Any, filepath: str, schemas_dir: Path | None = None) -> None:
+  schema = fetch_schema(schemas_dir)
+  validator = Draft7Validator(schema)
   errors = []
   for error in validator.iter_errors(data):
     path = '.'.join(str(p) for p in error.absolute_path) or '(root)'
@@ -64,13 +73,12 @@ def validate_pathogen_json(data: Any, filepath: str) -> None:
   if errors:
     raise ValidationError(f"Schema validation failed for '{filepath}':\n" + '\n'.join(errors))
 
-  for warning in find_extra_properties(data):
+  for warning in _find_extra_properties(data, schema):
     emit_ci_warning(filepath, warning)
 
 
-def find_extra_properties(data: Any) -> list[str]:
-  """Validate with strict schema (additionalProperties: false) to find extras."""
-  strict_schema = _make_strict_schema(fetch_schema())
+def _find_extra_properties(data: Any, schema: dict) -> list[str]:
+  strict_schema = _make_strict_schema(schema)
   validator = Draft7Validator(strict_schema)
   return _collect_extra_property_warnings(validator.iter_errors(data))
 

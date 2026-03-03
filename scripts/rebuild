@@ -10,6 +10,7 @@ from collections import defaultdict
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
+from pathlib import Path
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
@@ -126,7 +127,7 @@ def dataset_get_versions(dataset):
 
 def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str):
   pathogen_json = json_read(pathogen_json_path)
-  validate_pathogen_json(pathogen_json, pathogen_json_path)
+  validate_pathogen_json(pathogen_json, pathogen_json_path, args.nextclade_schemas_dir)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
 
@@ -307,6 +308,10 @@ def parse_args():
   parser.add_argument('--repo', required=False,
                       help="GitHub repo to push and to release to. You need to have write permission for that."
                       )
+  parser.add_argument('--nextclade-schemas-dir', required=False,
+                      help="Local directory containing nextclade schema files (e.g., ../nextclade/packages/nextclade-schemas). "
+                           "When set, schemas are loaded from this directory instead of fetching from GitHub."
+                      )
 
   args = parser.parse_args()
 
@@ -320,6 +325,13 @@ def parse_args():
 
   if args.push:
     args.commit = True
+
+  if args.nextclade_schemas_dir:
+    resolved = Path(args.nextclade_schemas_dir).resolve()
+    if not resolved.is_dir():
+      parser.error(f"--nextclade-schemas-dir: directory does not exist: {resolved}")
+    args.nextclade_schemas_dir = resolved
+    l.info(f"Using local schema directory: {resolved}")
 
   return args
 
@@ -518,7 +530,7 @@ def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, coll
   release_infos = []
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     pathogen_json = json_read(pathogen_json_path)
-    validate_pathogen_json(pathogen_json, pathogen_json_path)
+    validate_pathogen_json(pathogen_json, pathogen_json_path, args.nextclade_schemas_dir)
     dataset_dir = dirname(pathogen_json_path)
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 
