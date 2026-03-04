@@ -148,7 +148,6 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
   dataset_out = dict_cleanup({
     "path": path,
     "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
-    "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
     "attributes": dict_get(pathogen_json, ["attributes"]),
     "maintenance": dict_get(pathogen_json, ["maintenance"]),
     "files": dict_get_required(pathogen_json, ["files"]),
