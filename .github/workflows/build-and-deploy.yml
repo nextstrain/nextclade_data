@@ -2,10 +2,6 @@ name: build-and-deploy
 
 on:
   push:
-    branches:
-      - master
-      - staging
-      - release
   pull_request:
   repository_dispatch:
     types: build-and-deploy
@@ -13,7 +9,7 @@ on:
   workflow_call:
 
 concurrency:
-  group: cli-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
+  group: cli-${{ github.workflow }}-${{ github.ref_type }}-${{ github.head_ref || github.ref_name || github.run_id }}
   cancel-in-progress: true
 
 defaults:
