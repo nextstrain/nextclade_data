@@ -287,7 +287,21 @@
       "map",
       "entropy",
       "frequencies"
-    ]
+    ],
+    "extensions": {
+      "nextclade": {
+        "placement_mask_ranges": [
+          {
+            "begin": 0,
+            "end": 94
+          },
+          {
+            "begin": 10271,
+            "end": 10735
+          }
+        ]
+      }
+    }
   },
   "tree": {
     "name": "NODE_0000000",

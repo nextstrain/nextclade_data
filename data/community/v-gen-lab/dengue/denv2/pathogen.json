@@ -9,10 +9,6 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "placementMaskRanges":[
-    {"begin":0, "end":94},
-    {"begin":10271, "end":10735}
-  ],
   "deprecated": false,
   "enabled": true,
   "experimental": true,
