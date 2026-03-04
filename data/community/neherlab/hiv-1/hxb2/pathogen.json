@@ -14,18 +14,11 @@
     "windowSize": 30
   },
   "compatibility": {
-      "cli": "3.0.0-alpha.0",
-      "web": "3.0.0-alpha.0"
-    },
-    "placementMaskRanges":[
-      {"begin":0, "end":336},
-      {"begin":5780, "end":5870},
-      {"begin":6160, "end":6240},
-      {"begin":6940, "end":7020},
-      {"begin":8963, "end":9181}
-    ],
-    "deprecated": false,
-    "enabled": true,
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "deprecated": false,
+  "enabled": true,
   "experimental": true,
   "defaultCds": "RT-p66",
   "files": {
@@ -60,13 +53,16 @@
       "weightReversionSubstitutions": 2,
       "weightUnlabeledSubstitutions": 1
     },
-      "stopCodons": {
-        "enabled": true,
-        "ignoredStopCodons": [
-          {"cdsName": "p6", "codon":49}
-        ],
-        "scoreWeight": 40
-      }
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": [
+        {
+          "cdsName": "p6",
+          "codon": 49
+        }
+      ],
+      "scoreWeight": 40
+    }
   },
   "schemaVersion": "3.0.0",
   "attributes": {
