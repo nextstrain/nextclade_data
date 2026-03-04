@@ -25,7 +25,7 @@ This dataset supports:
 - Phylogenetic placement
 - Sequence quality control (QC)
 
-## Subgenogroups of Cocksackievirus A16
+## Subgenogroups of Coxsackievirus A16
 
 Subgenogroups B1 and B2 are the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and literature. They are defined by phylogenetic clustering and do not necessarily indicate antigenic differences. In recent years, recombinant forms were identified and labeled C-F (also known as B2, B3, and D). These recombinant forms cluster with the prototype strain, clade A.
 
