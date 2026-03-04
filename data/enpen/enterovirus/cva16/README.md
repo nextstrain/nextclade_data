@@ -27,7 +27,7 @@ This dataset supports:
 
 ## Subgenogroups of Coxsackievirus A16
 
-Subgenogroups B1 and B2 are the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and literature. They are defined by phylogenetic clustering and do not necessarily indicate antigenic differences. In recent years, recombinant forms were identified and labeled C-F (also known as B2, B3, and D). These recombinant forms cluster with the prototype strain, clade A.
+Subgenogroups B1a, B1b and B1c are the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and literature. They are defined by phylogenetic clustering and do not necessarily indicate antigenic differences. In recent years, recombinant forms were identified and labeled C-F (also known as B2, B3, and D). These recombinant forms cluster with the prototype strain, clade A.
 
 These designations are based on the phylogenetic structure and mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universal, standardized global lineage nomenclature for enteroviruses. Naming follows conventions from published studies and surveillance practices.
 
