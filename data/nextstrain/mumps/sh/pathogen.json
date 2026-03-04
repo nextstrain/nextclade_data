@@ -14,8 +14,6 @@
     "allowedMismatches": 12,
     "minMatchLength": 30,
     "maxAlignmentAttempts": 5,
-    "includeReference": true,
-    "includeNearestNodeInfo": true,
     "retryReverseComplement": true,
     "minSeedCover": 0.01
   },
@@ -48,5 +46,9 @@
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "SH"
+  "defaultCds": "SH",
+  "generalParams": {
+    "includeReference": true,
+    "includeNearestNodeInfo": true
+  }
 }
