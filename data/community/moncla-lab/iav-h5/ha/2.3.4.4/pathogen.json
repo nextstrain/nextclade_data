@@ -11,8 +11,7 @@
     "name": "H5Nx clade 2.3.4.4",
     "reference accession": "EPI1846961",
     "reference name": "A/Astrakhan/3212/2020(H5N8)",
-    "segment": "ha",
-    "experimental": false
+    "segment": "ha"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",

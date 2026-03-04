@@ -11,8 +11,7 @@
     "name": "H5Nx clade 2.3.2.1",
     "reference accession": "EPI424984",
     "reference name": "A/duck/Vietnam/NCVD-1584/2012(H5N1)",
-    "segment": "ha",
-    "experimental": false
+    "segment": "ha"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
