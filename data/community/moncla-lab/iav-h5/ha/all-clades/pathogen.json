@@ -11,8 +11,7 @@
     "name": "H5Nx (all clades)",
     "reference accession": "AF144305.1",
     "reference name": "A/Goose/Guangdong/1/96(H5N1)",
-    "segment": "ha",
-    "experimental": false
+    "segment": "ha"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
