@@ -1,8 +1,13 @@
+## Unreleased
+
+- Remove deprecated `nucMutLabelMapReverse` field (computed at runtime in v3)
+- Remove invalid `qc.divergence` rule (not a configurable parameter)
+
 ## 2025-12-10T13:21:04Z
 
 - Update alignment parameters in pathogen.json:
-    - Fix gap extension penalty
-    - Enable reverse-complement handling
+  - Fix gap extension penalty
+  - Enable reverse-complement handling
 - Recompute tree topology (ML tree rerun)
 - Regenerate mutation labels for all clades
 - Update reference example sequences
