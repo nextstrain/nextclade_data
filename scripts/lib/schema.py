@@ -431,6 +431,7 @@ def _check_known_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
   defects.extend(_check_qc_defects(data, upstream_repo))
   defects.extend(_check_misplaced_properties(data, upstream_repo))
   defects.extend(_check_alignment_param_typos(data, upstream_repo))
+  defects.extend(_check_toplevel_attributes(data, upstream_repo))
   return defects
 
 
@@ -593,4 +594,51 @@ def _check_alignment_param_typos(data: dict, upstream_repo: str | None) -> list[
       json_path="alignmentParams.excessBandwith",
       upstream_fix=_upstream_hint(upstream_repo),
     ))
+  return defects
+
+
+def _check_toplevel_attributes(data: dict, upstream_repo: str | None) -> list[Defect]:
+  defects: list[Defect] = []
+  migration = "migrations/migrate_017_unify_attributes.py"
+
+  if "deprecated" in data:
+    defects.append(Defect(
+      severity=Severity.WARNING,
+      problem="Top-level 'deprecated' should be in 'attributes.deprecated'",
+      impact="Field may not be read correctly by Nextclade",
+      migration=migration,
+      json_path="deprecated",
+      upstream_fix=_upstream_hint(upstream_repo),
+    ))
+
+  if "experimental" in data:
+    defects.append(Defect(
+      severity=Severity.WARNING,
+      problem="Top-level 'experimental' should be in 'attributes.experimental'",
+      impact="Field may not be read correctly by Nextclade",
+      migration=migration,
+      json_path="experimental",
+      upstream_fix=_upstream_hint(upstream_repo),
+    ))
+
+  if "enabled" in data:
+    defects.append(Defect(
+      severity=Severity.WARNING,
+      problem="Field 'enabled' is obsolete (removed)",
+      impact="No effect (field was never used)",
+      migration=migration,
+      json_path="enabled",
+      upstream_fix=_upstream_hint(upstream_repo),
+    ))
+
+  if "official" in data:
+    defects.append(Defect(
+      severity=Severity.WARNING,
+      problem="Field 'official' is obsolete (removed)",
+      impact="No effect (official status derived from dataset path)",
+      migration=migration,
+      json_path="official",
+      upstream_fix=_upstream_hint(upstream_repo),
+    ))
+
   return defects
