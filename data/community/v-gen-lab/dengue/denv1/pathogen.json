@@ -3,15 +3,13 @@
   "attributes": {
     "name": "DENV-1",
     "reference accession": "NC_001477.1",
-    "reference name": "Nauru/NMRI-45AZ5PDK-0/1974"
+    "reference name": "Nauru/NMRI-45AZ5PDK-0/1974",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",

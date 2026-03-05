@@ -3,15 +3,13 @@
   "attributes": {
     "name": "DENV-2",
     "reference accession": "NC_001474.2",
-    "reference name": "Thailand/CDC-16681/1964"
+    "reference name": "Thailand/CDC-16681/1964",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
