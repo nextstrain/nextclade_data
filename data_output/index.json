@@ -34,7 +34,6 @@
             "nextstrain/sars-cov-2",
             "nextstrain/sars-cov-2/wuhan-hu-1"
           ],
-          "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2",
             "reference name": "Wuhan-Hu-1/2019",
@@ -289,7 +288,6 @@
             "nextstrain/flu/h1n1pdm/ha",
             "nextstrain/flu/h1n1pdm/ha/wisconsin-588-2019"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm HA",
             "segment": "ha",
@@ -466,7 +464,6 @@
             "nextstrain/flu/h1n1pdm/na",
             "nextstrain/flu/h1n1pdm/na/wisconsin-588-2019"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm NA",
             "segment": "na",
@@ -611,7 +608,6 @@
             "nextstrain/flu/h3n2/ha",
             "nextstrain/flu/h3n2/ha/darwin-6-2021"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 HA",
             "segment": "ha",
@@ -806,7 +802,6 @@
             "nextstrain/flu/h3n2/na",
             "nextstrain/flu/h3n2/na/darwin-6-2021"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 NA",
             "segment": "na",
@@ -942,7 +937,6 @@
             "nextstrain/flu/b/ha",
             "nextstrain/flu/b/ha/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) HA",
             "segment": "ha",
@@ -1022,7 +1016,6 @@
             "nextstrain/flu/b/na",
             "nextstrain/flu/b/na/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) NA",
             "segment": "na",
@@ -1100,7 +1093,6 @@
             "nextstrain/flu/vic/ha",
             "nextstrain/flu/vic/ha/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B Victoria HA",
             "segment": "ha",
@@ -1236,7 +1228,6 @@
             "nextstrain/flu/vic/na",
             "nextstrain/flu/vic/na/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B Victoria NA",
             "segment": "na",
@@ -1365,7 +1356,6 @@
             "nextstrain/flu/yam/ha",
             "nextstrain/flu/yam/ha/wisconsin-1-2010"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B Yamagata HA",
             "segment": "ha",
@@ -1456,7 +1446,6 @@
             "nextstrain/rsv/a",
             "nextstrain/rsv/a/hRSV-A-England-397-2017"
           ],
-          "enabled": true,
           "attributes": {
             "name": "RSV-A",
             "reference accession": "EPI_ISL_412866",
@@ -1571,7 +1560,6 @@
             "nextstrain/rsv/b",
             "nextstrain/rsv/b/hRSV-B-Australia-VIC-RCH056-2019"
           ],
-          "enabled": true,
           "attributes": {
             "name": "RSV-B",
             "reference accession": "EPI_ISL_1653999",
@@ -1693,7 +1681,6 @@
             "MPXV",
             "nextstrain/mpox"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Mpox virus (All clades)",
             "reference accession": "NC_063383.1",
@@ -1808,7 +1795,6 @@
         },
         {
           "path": "nextstrain/mpox/clade-i",
-          "enabled": true,
           "attributes": {
             "name": "Mpox virus (Clade I)",
             "reference accession": "DQ011155.1",
@@ -1901,7 +1887,6 @@
           "shortcuts": [
             "hMPXV"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Mpox virus (Clade IIb)",
             "reference accession": "NC_063383.1",
@@ -1995,7 +1980,6 @@
           "shortcuts": [
             "hMPXV_B1"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Mpox virus (Lineage B.1)",
             "reference accession": "NC_063383.1 (with B.1 SNPs)",
@@ -2094,7 +2078,6 @@
             "nextstrain/ebola",
             "nextstrain/ebola/zaire"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Ebola virus",
             "reference accession": "NC_002549.1",
@@ -2143,7 +2126,6 @@
           "shortcuts": [
             "nextstrain/ebola/sudan"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Sudan virus",
             "reference accession": "NC_006432.1",
@@ -2190,7 +2172,6 @@
           "shortcuts": [
             "measles"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Measles morbillivirus -- complete genome",
             "reference name": "Ichinose-B95a",
@@ -2244,7 +2225,6 @@
         },
         {
           "path": "nextstrain/measles/N450/WHO-2012",
-          "enabled": true,
           "attributes": {
             "name": "Measles N450 (WHO-2012)",
             "reference name": "Ichinose-B95a",
@@ -2295,7 +2275,6 @@
         },
         {
           "path": "nextstrain/dengue/all",
-          "enabled": true,
           "attributes": {
             "name": "Dengue virus All serotypes",
             "reference accession": "NC_002640",
@@ -2345,7 +2324,6 @@
         },
         {
           "path": "nextstrain/yellow-fever/prM-E",
-          "enabled": true,
           "attributes": {
             "name": "Yellow fever virus (YFV) prM-E region",
             "reference name": "Asibi",
@@ -2395,7 +2373,6 @@
           "shortcuts": [
             "hmpv"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Human Metapneumovirus",
             "reference accession": "NC_039199",
@@ -2462,7 +2439,6 @@
           "shortcuts": [
             "vzv"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Varicella-Zoster Virus (VZV)",
             "reference name": "NC_001348.1",
@@ -2500,7 +2476,6 @@
         },
         {
           "path": "nextstrain/rubella/E1",
-          "enabled": true,
           "attributes": {
             "name": "Rubella virus E1 region",
             "reference name": "F-Therien",
@@ -2543,7 +2518,6 @@
         },
         {
           "path": "nextstrain/mumps/sh",
-          "enabled": true,
           "attributes": {
             "name": "Mumps MuV Genotypes (SH gene 315nt region)",
             "reference name": "Jeryl-Lynn (genotype A)",
@@ -2598,7 +2572,6 @@
         },
         {
           "path": "nextstrain/mumps/genome",
-          "enabled": true,
           "attributes": {
             "name": "Mumps MuV Genotypes (Full genome)",
             "reference name": "Jeryl-Lynn (genotype A)",
@@ -2659,7 +2632,6 @@
         },
         {
           "path": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
-          "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2 (Mature proteins)",
             "reference name": "Wuhan-Hu-1/2019",
@@ -2884,7 +2856,6 @@
         },
         {
           "path": "nextstrain/sars-cov-2/BA.2.86",
-          "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2 (BA.2.86)",
             "reference name": "Wuhan-Hu-1 with BA.2.86 SNPs"
@@ -3136,7 +3107,6 @@
           "shortcuts": [
             "rubella"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Rubella",
             "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
@@ -3182,7 +3152,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/pb2",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 PB2",
             "segment": "pb2",
@@ -3272,7 +3241,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/pb1",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 PB1",
             "segment": "pb1",
@@ -3366,7 +3334,6 @@
             "flu_h3n2_pa",
             "nextstrain/flu/h3n2/pa"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 PA",
             "segment": "pa",
@@ -3472,7 +3439,6 @@
             "flu_h3n2_ha_broad",
             "nextstrain/flu/h3n2/ha/wisconsin-67-2005"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 HA",
             "segment": "ha",
@@ -3652,7 +3618,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/np",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 NP",
             "segment": "np",
@@ -3742,7 +3707,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/mp",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 MP",
             "segment": "mp",
@@ -3832,7 +3796,6 @@
         },
         {
           "path": "nextstrain/flu/h3n2/ns",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H3N2 NS",
             "segment": "ns",
@@ -3922,7 +3885,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/pb2",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm PB2",
             "segment": "pb2",
@@ -4012,7 +3974,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/pb1",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm PB1",
             "segment": "pb1",
@@ -4106,7 +4067,6 @@
             "flu_h1n1pdm_pa",
             "nextstrain/flu/h1n1pdm/pa"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm PA",
             "segment": "pa",
@@ -4212,7 +4172,6 @@
             "flu_h1n1pdm_ha_broad",
             "nextstrain/flu/h1n1pdm/ha/california-7-2009"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm HA",
             "segment": "ha",
@@ -4384,7 +4343,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/mp",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm MP",
             "segment": "mp",
@@ -4474,7 +4432,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/np",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm NP",
             "segment": "np",
@@ -4564,7 +4521,6 @@
         },
         {
           "path": "nextstrain/flu/h1n1pdm/ns",
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1pdm NS",
             "segment": "ns",
@@ -4654,7 +4610,6 @@
         },
         {
           "path": "nextstrain/flu/vic/pb1",
-          "enabled": true,
           "attributes": {
             "name": "Influenza B(Vic) PB1 (segment 1)",
             "segment": "pb1",
@@ -4726,7 +4681,6 @@
         },
         {
           "path": "nextstrain/flu/vic/pb2",
-          "enabled": true,
           "attributes": {
             "name": "Influenza B(Vic) PB2 (segment 2)",
             "segment": "pb2",
@@ -4798,7 +4752,6 @@
         },
         {
           "path": "nextstrain/flu/vic/pa",
-          "enabled": true,
           "attributes": {
             "name": "Influenza B(Vic) PA (segment 3)",
             "segment": "pa",
@@ -4882,7 +4835,6 @@
         },
         {
           "path": "nextstrain/flu/vic/np",
-          "enabled": true,
           "attributes": {
             "name": "Influenza B(Vic) NP (segment 5)",
             "segment": "np",
@@ -4954,7 +4906,6 @@
         },
         {
           "path": "nextstrain/flu/vic/mp",
-          "enabled": true,
           "attributes": {
             "name": "Influenza B(Vic) MP (segment 7)",
             "segment": "mp",
@@ -5026,7 +4977,6 @@
         },
         {
           "path": "nextstrain/flu/vic/ns",
-          "enabled": true,
           "attributes": {
             "name": "Influenza B(Vic) NS (segment 8)",
             "segment": "ns",
@@ -5103,7 +5053,6 @@
             "nextstrain/flu/b/pb1",
             "nextstrain/flu/b/pb1/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) PB1",
             "segment": "pb1",
@@ -5174,7 +5123,6 @@
             "nextstrain/flu/b/pb2",
             "nextstrain/flu/b/pb2/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) PB2",
             "segment": "pb2",
@@ -5245,7 +5193,6 @@
             "nextstrain/flu/b/pa",
             "nextstrain/flu/b/pa/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) PA",
             "segment": "pa",
@@ -5316,7 +5263,6 @@
             "nextstrain/flu/b/np",
             "nextstrain/flu/b/np/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) NP",
             "segment": "np",
@@ -5387,7 +5333,6 @@
             "nextstrain/flu/b/mp",
             "nextstrain/flu/b/mp/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) MP",
             "segment": "mp",
@@ -5458,7 +5403,6 @@
             "nextstrain/flu/b/ns",
             "nextstrain/flu/b/ns/brisbane-60-2008"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza B (all) NS",
             "segment": "ns",
@@ -5529,7 +5473,6 @@
             "nextstrain/flu/h1n1/pb2",
             "nextstrain/flu/h1n1/pb2/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 PB2",
             "segment": "pb2",
@@ -5600,7 +5543,6 @@
             "nextstrain/flu/h1n1/pb1",
             "nextstrain/flu/h1n1/pb1/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 PB1",
             "segment": "pb1",
@@ -5671,7 +5613,6 @@
             "nextstrain/flu/h1n1/pa",
             "nextstrain/flu/h1n1/pa/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 PA",
             "segment": "pa",
@@ -5742,7 +5683,6 @@
             "nextstrain/flu/h1n1/ha",
             "nextstrain/flu/h1n1/ha/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 HA",
             "segment": "ha",
@@ -5813,7 +5753,6 @@
             "nextstrain/flu/h1n1/np",
             "nextstrain/flu/h1n1/np/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 NP",
             "segment": "np",
@@ -5884,7 +5823,6 @@
             "nextstrain/flu/h1n1/na",
             "nextstrain/flu/h1n1/na/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 NA",
             "segment": "na",
@@ -5955,7 +5893,6 @@
             "nextstrain/flu/h1n1/mp",
             "nextstrain/flu/h1n1/mp/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 MP",
             "segment": "mp",
@@ -6026,7 +5963,6 @@
             "nextstrain/flu/h1n1/ns",
             "nextstrain/flu/h1n1/ns/puertorico-8-1934"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H1N1 NS",
             "segment": "ns",
@@ -6097,7 +6033,6 @@
             "nextstrain/flu/h2n2/pb2",
             "nextstrain/flu/h2n2/pb2/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 PB2",
             "segment": "pb2",
@@ -6168,7 +6103,6 @@
             "nextstrain/flu/h2n2/pb1",
             "nextstrain/flu/h2n2/pb1/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 PB1",
             "segment": "pb1",
@@ -6239,7 +6173,6 @@
             "nextstrain/flu/h2n2/pa",
             "nextstrain/flu/h2n2/pa/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 PA",
             "segment": "pa",
@@ -6310,7 +6243,6 @@
             "nextstrain/flu/h2n2/np",
             "nextstrain/flu/h2n2/np/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 NP",
             "segment": "np",
@@ -6381,7 +6313,6 @@
             "nextstrain/flu/h2n2/ha",
             "nextstrain/flu/h2n2/ha/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 HA",
             "segment": "ha",
@@ -6452,7 +6383,6 @@
             "nextstrain/flu/h2n2/na",
             "nextstrain/flu/h2n2/na/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 NA",
             "segment": "na",
@@ -6523,7 +6453,6 @@
             "nextstrain/flu/h2n2/mp",
             "nextstrain/flu/h2n2/mp/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 MP",
             "segment": "mp",
@@ -6594,7 +6523,6 @@
             "nextstrain/flu/h2n2/ns",
             "nextstrain/flu/h2n2/ns/korea-426-1968"
           ],
-          "enabled": true,
           "attributes": {
             "name": "Influenza A H2N2 NS",
             "segment": "ns",
@@ -6665,7 +6593,6 @@
             "west-nile",
             "west-nile-virus"
           ],
-          "enabled": true,
           "attributes": {
             "name": "West Nile Virus",
             "reference accession": "NC_009942.1",
@@ -6714,7 +6641,6 @@
           "shortcuts": [
             "sars-cov-2-21L"
           ],
-          "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2 (BA.2)",
             "reference name": "Wuhan-Hu-1 with BA.2 SNPs",
@@ -6916,7 +6842,6 @@
         },
         {
           "path": "nextstrain/sars-cov-2/XBB",
-          "enabled": true,
           "attributes": {
             "name": "SARS-CoV-2 (XBB)",
             "reference name": "Wuhan-Hu-1 with XBB SNPs",
@@ -7145,7 +7070,6 @@
       "datasets": [
         {
           "path": "enpen/enterovirus/ev-d68",
-          "enabled": true,
           "attributes": {
             "name": "Enterovirus D68",
             "reference name": "Human enterovirus 68 strain Fermon, complete genome.",
@@ -7232,7 +7156,6 @@
       "datasets": [
         {
           "path": "community/isuvdl/mazeller/prrsv1/orf5/yimim2025",
-          "enabled": true,
           "attributes": {
             "name": "PRRSV-1 ORF5",
             "reference name": "Porcine reproductive and respiratory syndrome virus 1, ORF5 cds",
@@ -7282,7 +7205,6 @@
         },
         {
           "path": "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
-          "enabled": true,
           "attributes": {
             "name": "PRRSV-2 ORF5 Lineages, Yim-im & Zhang 2023 Microbiol Spectr",
             "reference accession": "DQ478308.1",
@@ -7354,7 +7276,6 @@
           "shortcuts": [
             "neherlab/hiv-1"
           ],
-          "enabled": true,
           "attributes": {
             "name": "HIV-1 (HXB2)",
             "reference accession": "NC_001802",
@@ -7409,7 +7330,6 @@
         },
         {
           "path": "community/moncla-lab/iav-h5/ha/2.3.4.4",
-          "enabled": true,
           "attributes": {
             "name": "H5Nx clade 2.3.4.4",
             "reference accession": "EPI1846961",
@@ -7499,7 +7419,6 @@
         },
         {
           "path": "community/moncla-lab/iav-h5/ha/all-clades",
-          "enabled": true,
           "attributes": {
             "name": "H5Nx (all clades)",
             "reference accession": "AF144305.1",
@@ -7581,7 +7500,6 @@
         },
         {
           "path": "community/moncla-lab/iav-h5/ha/2.3.2.1",
-          "enabled": true,
           "attributes": {
             "name": "H5Nx clade 2.3.2.1",
             "reference accession": "EPI424984",
@@ -7655,7 +7573,6 @@
         },
         {
           "path": "community/v-gen-lab/dengue/denv1",
-          "enabled": true,
           "attributes": {
             "name": "DENV-1",
             "reference accession": "NC_001477.1",
@@ -7740,7 +7657,6 @@
         },
         {
           "path": "community/v-gen-lab/dengue/denv2",
-          "enabled": true,
           "attributes": {
             "name": "DENV-2",
             "reference accession": "NC_001474.2",
@@ -7817,7 +7733,6 @@
         },
         {
           "path": "community/v-gen-lab/dengue/denv3",
-          "enabled": true,
           "attributes": {
             "name": "DENV-3",
             "reference accession": "NC_001475.2",
@@ -7894,7 +7809,6 @@
         },
         {
           "path": "community/v-gen-lab/dengue/denv4",
-          "enabled": true,
           "attributes": {
             "name": "DENV-4",
             "reference accession": "NC_002640.1",
@@ -7971,7 +7885,6 @@
         },
         {
           "path": "community/genspectrum/marburg/HK1980/all-lineages",
-          "enabled": true,
           "attributes": {
             "name": "Orthomarburgvirus marburgense",
             "reference name": "Marburg marburgvirus isolate Marburg virus/H.sapiens-tc/KEN/1980/Mt. Elgon-Musoke, complete genome",
@@ -8022,7 +7935,6 @@
         },
         {
           "path": "community/pathoplexus/cchfv/L",
-          "enabled": true,
           "attributes": {
             "name": "CCHF (segment L)",
             "reference name": "Crimean-Congo hemorrhagic fever virus segment L",
@@ -8066,7 +7978,6 @@
         },
         {
           "path": "community/pathoplexus/cchfv/S",
-          "enabled": true,
           "attributes": {
             "name": "CCHF (segment S)",
             "reference name": "Crimean-Congo hemorrhagic fever virus segment S",
@@ -8110,7 +8021,6 @@
         },
         {
           "path": "community/pathoplexus/cchfv/M",
-          "enabled": true,
           "attributes": {
             "name": "CCHF (segment M)",
             "reference name": "Crimean-Congo hemorrhagic fever virus segment M",
@@ -8154,7 +8064,6 @@
         },
         {
           "path": "community/v-gen-lab/chikV/genotypes",
-          "enabled": true,
           "attributes": {
             "name": "chikV",
             "reference accession": "NC_004162.2",
@@ -8199,7 +8108,6 @@
         },
         {
           "path": "community/masphl-bioinformatics/hav/vp1-2b-junction",
-          "enabled": true,
           "attributes": {
             "name": "Hepatitis A virus",
             "reference name": "Hepatitis A virus, VP1-2B junction framgment of NCBI Reference Sequence",
@@ -8230,7 +8138,6 @@
         },
         {
           "path": "community/masphl-bioinformatics/hav/whole-genome",
-          "enabled": true,
           "attributes": {
             "name": "Hepatitis A virus",
             "reference name": "Hepatitis A virus, complete genome NCBI Reference Sequence",
@@ -8266,7 +8173,6 @@
         },
         {
           "path": "community/itps/zikav",
-          "enabled": true,
           "attributes": {
             "name": "Zika virus",
             "reference accession": "NC_035889.1",
