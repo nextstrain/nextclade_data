@@ -120,7 +120,7 @@ nextclade read-annotation my_annotation.gff3
 
 A `pathogen.json` config file is required to use a dataset with Nextclade web. Luckily, it is very simple to create by hand. All that is required is the schema version, a manifest of files and their paths. In addition, it is recommended to include basic attributes for display in the UI, such as name of the virus and the reference sequence.
 
-Lastly, one can enable basic quality control for frame shifts, stop codons, missing or ambiguous nucleotides and mutation clusters.
+Lastly, one can enable basic quality control for frame shifts, stop codons, missing or ambiguous nucleotides, mutation clusters, and private mutations.
 
 ```json
 {
@@ -154,6 +154,11 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
     "mixedSites": {
       "enabled": true,
       "mixedSitesThreshold": 15
+    },
+    "privateMutations": {
+      "enabled": true,
+      "typical": 8,
+      "cutoff": 100
     },
     "frameShifts": {
       "enabled": true,
