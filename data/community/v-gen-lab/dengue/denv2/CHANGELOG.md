@@ -1,3 +1,8 @@
+## Unreleased
+
+- Move `placementMaskRanges` to tree.json
+- Unify attributes per schema update
+
 ## 2025-09-09T12:13:13Z
 
 Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
