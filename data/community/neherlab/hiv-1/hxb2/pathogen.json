@@ -17,9 +17,6 @@
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "defaultCds": "RT-p66",
   "files": {
     "pathogenJson": "pathogen.json",
@@ -30,7 +27,6 @@
     "reference": "reference.fasta",
     "treeJson": "tree.json"
   },
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true,
@@ -68,7 +64,8 @@
   "attributes": {
     "name": "HIV-1 (HXB2)",
     "reference accession": "NC_001802",
-    "reference name": "HIV-1, strain HXB2"
+    "reference name": "HIV-1, strain HXB2",
+    "experimental": true
   },
   "shortcuts": [
     "neherlab/hiv-1"
