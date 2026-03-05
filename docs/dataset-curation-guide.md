@@ -112,7 +112,16 @@ If your pull request got merged, the changes weren't yet released, and you want 
 
 If your pull request is not merged yet, simply close the pull request. Explain your decision in a comment message.
 
-If you want to signal users that a dataset is no longer maintained, is inaccurate or obsolete, rather than deleting it you can set the field `"deprecated": true` in `pathogen.json` file. In this case the dataset will be listed in Nextclade with a "deprecated" badge and at the bottom of the list. Please explain the reason for deprecation in the changelog section (as described in the usual update steps), and add some details to the readme file if there is one, so that users could make an informed decision themselves whether to use it or not.
+If you want to signal users that a dataset is no longer maintained, is inaccurate or obsolete, rather than deleting it you can set `"deprecated": true` inside the `attributes` object of `pathogen.json`. In this case the dataset will be listed in Nextclade with a "deprecated" badge and at the bottom of the list. Please explain the reason for deprecation in the changelog section (as described in the usual update steps), and add some details to the readme file if there is one, so that users could make an informed decision themselves whether to use it or not.
+
+```json
+{
+  "attributes": {
+    "name": "...",
+    "deprecated": true
+  }
+}
+```
 
 ### Running rebuild script locally
 
