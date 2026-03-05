@@ -37,7 +37,7 @@ As all sequences are aligned to the reference sequence and all mutations are rep
 
 A good reference sequence should be of high quality and cover the entire genome (or at least the regions of interest).
 
-A good default choice is an NCBI refseq. For example, for Zika virus, the most recent NCBI refseq is `NC_035889.1`. It is available on GenBank at <https://www.ncbi.nlm.nih.gov/nuccore/NC_012532.1>.
+A good default choice is an NCBI refseq. For example, for Zika virus, the most recent NCBI refseq is `NC_035889.1`. It is available on GenBank at <https://www.ncbi.nlm.nih.gov/nuccore/NC_035889.1>.
 
 If all current circulation is derived from a more recent common ancestor, it may be better to use a more recent reference sequence to reduce the number of mutations reported.
 
@@ -84,7 +84,7 @@ NC_035889.1	RefSeq	mature_protein_region_of_CDS	7668	10376	.	+	.	ID=id-YP_009428
 </details>
 
 <details>
-<summary> Modified GFF3 file for the Zika refseq `NC_012532.1` </summary>
+<summary> Modified GFF3 file for the Zika refseq `NC_035889.1` </summary>
 
 ```gff3
 ##gff-version 3
@@ -256,11 +256,9 @@ The example workflow is a good starting point, but if you want to customize the 
 
 ### Important considerations when creating a reference tree
 
- * **Align and translate your sequences using Nextclade with the final alignment parameters**: This will guarantee that the mutation annotation of the reference tree is consistent with the reference alignment that Nextclade does when it analyzes new query sequences. The command [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html#augur-make_parser-amino-acid-options) supports using the translation from Nextclade. Note that you might need a genbank reference file as support for gff3 in augur is incomplete.
- * **Choose sequences that represent relevant diversity**: The primary goal of the reference tree is to cover relevant diversity. So make sure also small clades are represented, ideally by several genomes such that their common ancestor approximates the common ancestor of the clade. Overrepresentation of clades with many very similar genomes is often not helpful.
- * **Inspect you alignment**: Alignment parameters might need fine tuning, in particular if your dataset is diverse or sequence has self-similar regions. Please see the FAQ section below for guidance.
-
-
+- **Align and translate your sequences using Nextclade with the final alignment parameters**: This will guarantee that the mutation annotation of the reference tree is consistent with the reference alignment that Nextclade does when it analyzes new query sequences. The command [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html#augur-make_parser-amino-acid-options) supports using the translation from Nextclade. Note that you might need a genbank reference file as support for gff3 in augur is incomplete.
+- **Choose sequences that represent relevant diversity**: The primary goal of the reference tree is to cover relevant diversity. So make sure also small clades are represented, ideally by several genomes such that their common ancestor approximates the common ancestor of the clade. Overrepresentation of clades with many very similar genomes is often not helpful.
+- **Inspect you alignment**: Alignment parameters might need fine tuning, in particular if your dataset is diverse or sequence has self-similar regions. Please see the FAQ section below for guidance.
 
 ## Next steps
 
