@@ -17,8 +17,7 @@
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,
-      "scoreBias": 500,
-      "scoreWeight": 50
+      "scoreBias": 500
     },
     "snpClusters": {
       "enabled": true,
@@ -28,8 +27,7 @@
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 15,
-      "scoreWeight": 50
+      "mixedSitesThreshold": 15
     },
     "frameShifts": {
       "enabled": true,

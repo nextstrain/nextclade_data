@@ -143,8 +143,7 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,
-      "scoreBias": 500,
-      "scoreWeight": 50
+      "scoreBias": 500
     },
     "snpClusters": {
       "enabled": true,
@@ -154,8 +153,7 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 15,
-      "scoreWeight": 50
+      "mixedSitesThreshold": 15
     },
     "frameShifts": {
       "enabled": true,
