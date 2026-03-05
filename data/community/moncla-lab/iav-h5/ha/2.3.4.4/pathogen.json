@@ -18,8 +18,6 @@
     "web": "3.0.0-alpha.0"
   },
   "defaultCds": "HA",
-  "deprecated": false,
-  "experimental": false,
   "files": {
     "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
