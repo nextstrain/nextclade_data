@@ -78,8 +78,6 @@
       "Nextstrain team <https://nextstrain.org>"
     ]
   },
-  "nucMutLabelMap": {},
-  "nucMutLabelMapReverse": {},
   "shortcuts": [
     "flu_vic_na",
     "nextstrain/flu/vic/na",
