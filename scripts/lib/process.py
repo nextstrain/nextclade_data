@@ -1,12 +1,14 @@
 import subprocess
 
+from .reporting import reporter
+
 
 def run(command, none_if_empty=False, error_if_empty=False, ignore_errors=False, custom_error_msg=None, stdin=None,
         verbose=False):
-  if verbose:
-    print(command)
+  reporter.command_started(command, visible=verbose)
 
   res = subprocess.run(command, shell=True, check=False, capture_output=True, text=True, input=stdin)
+  reporter.command_finished(command, res.returncode, res.stdout.strip(), res.stderr.strip(), visible=verbose)
 
   if not ignore_errors and res.returncode != 0:
     message = res.stderr.strip() or res.stdout.strip() or custom_error_msg or ''

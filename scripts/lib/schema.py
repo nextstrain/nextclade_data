@@ -1,28 +1,24 @@
 import json
-import os
 import re
 import urllib.request
-from collections import defaultdict
 from dataclasses import dataclass, field
-from enum import Enum, auto
 from functools import lru_cache
 from pathlib import Path
-from typing import IO, Any
+from typing import Any
 from urllib.error import HTTPError
 
 from jsonschema import Draft7Validator, ValidationError
 from rapidfuzz import fuzz, process
 
-from .logger import logger
 from .process import run
+from .reporting import reporter
+from .reporting_model import DefectFinding, Severity
 
 
 NEXTCLADE_REPO = "nextstrain/nextclade"
 SCHEMA_FILENAME = "input-pathogen-json.schema.json"
 SCHEMA_PATH = f"packages/nextclade-schemas/{SCHEMA_FILENAME}"
 SCHEMA_URL_TEMPLATE = "https://raw.githubusercontent.com/{repo}/refs/heads/{branch}/{path}"
-SCHEMA_DOCS_URL = "https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html"
-
 FUZZY_MATCH_THRESHOLD = 80.0
 
 
@@ -33,7 +29,7 @@ def validate_pathogen_json(
   schemas_dir: Path | None = None,
   dataset_path: str | None = None,
 ) -> None:
-  if filepath in ctx.reports:
+  if filepath in ctx.validated_files:
     return
 
   schema = fetch_schema(schemas_dir)
@@ -45,22 +41,36 @@ def validate_pathogen_json(
   if errors:
     raise ValidationError(f"Schema validation failed for '{filepath}':\n" + '\n'.join(errors))
 
-  report = DefectReport(
-    filepath=filepath,
-    dataset_path=dataset_path or _extract_dataset_path(filepath),
-  )
-  report.defects = _check_known_defects(data, report.infer_upstream_repo())
-  ctx.reports[filepath] = report
+  dataset_path = dataset_path or _extract_dataset_path(filepath)
+  upstream_repo = _infer_upstream_repo(dataset_path)
+  findings = _check_known_defects(data, dataset_path, filepath, upstream_repo)
+  ctx.validated_files.add(filepath)
 
-  known_defect_paths = {d.json_path for d in report.defects}
+  known_defect_paths = {finding.json_path for finding in findings if finding.json_path}
 
   schema_index = _build_schema_index(schema)
-  for message, json_path in _find_unknown_properties(data, schema, schema_index):
+  for json_path, suggestion in _find_unknown_properties(data, schema, schema_index):
     if json_path not in known_defect_paths:
-      _emit_ci_warning(filepath, message, json_path)
+      line, column = _find_location(filepath, json_path)
+      reporter.report_defect(
+        DefectFinding(
+          severity=Severity.NOTICE,
+          code="schema.unknown_property",
+          title="Schema notice",
+          problem=f"Unknown property '{json_path}'",
+          impact="Property is ignored by dataset validation",
+          dataset_path=dataset_path,
+          filepath=filepath,
+          line=line,
+          column=column,
+          json_path=json_path,
+          recommended_action=suggestion or "Remove the property or rename it to a supported field",
+          source="schema-validator",
+        )
+      )
 
-  for defect in report.defects:
-    _emit_defect(filepath, defect, defect.json_path)
+  for finding in findings:
+    reporter.report_defect(finding)
 
 
 def fetch_schema(schemas_dir: Path | None = None) -> dict:
@@ -69,146 +79,9 @@ def fetch_schema(schemas_dir: Path | None = None) -> dict:
   return _fetch_remote_schema()
 
 
-def print_defect_summary(ctx: "ValidationContext") -> int:
-  reports = [r for r in ctx.reports.values() if r.defects]
-  if not reports:
-    return 0
-
-  datasets: dict[str, list[DefectReport]] = {}
-  for r in reports:
-    datasets.setdefault(r.dataset_path, []).append(r)
-
-  error_count = sum(1 for r in reports if r.has_errors)
-  warning_count = sum(1 for r in reports if r.has_warnings)
-
-  print("\n" + "=" * 60)
-  print("DATASET DEFECTS SUMMARY")
-  print("=" * 60)
-  print(f"\n{len(datasets)} dataset(s), {error_count} error(s), {warning_count} warning(s)\n")
-
-  for dataset_path in sorted(datasets.keys()):
-    dataset_reports = datasets[dataset_path]
-    upstream = dataset_reports[0].infer_upstream_repo()
-    upstream_hint = f" [upstream: {upstream}]" if upstream else ""
-
-    has_errors = any(r.has_errors for r in dataset_reports)
-    has_warnings = any(r.has_warnings for r in dataset_reports)
-    marker = "ERROR" if has_errors else "WARNING" if has_warnings else "INFO"
-
-    print(f"[{marker}] {dataset_path}{upstream_hint}")
-
-    for r in sorted(dataset_reports, key=lambda x: x.filepath):
-      filename = Path(r.filepath).name
-      print(f"  {filename}:")
-      for d in sorted(r.defects, key=lambda x: (x.severity.value, x.json_path)):
-        severity_tag = d.severity.name
-        print(f"    [{severity_tag}] {d.problem}")
-
-    print()
-
-  print("-" * 60)
-  print("Run migration scripts to fix locally.")
-  print("Notify upstream maintainers to prevent defect recurrence.")
-  print(f"Docs: {SCHEMA_DOCS_URL}")
-  print("=" * 60 + "\n")
-
-  return error_count
-
-
-def write_defect_summary_markdown(ctx: "ValidationContext", out: "IO[str]") -> int:
-  reports = [r for r in ctx.reports.values() if r.defects]
-  if not reports:
-    return 0
-
-  error_count = sum(1 for r in reports if r.has_errors)
-  total_errors = sum(sum(1 for d in r.defects if d.severity == Severity.ERROR) for r in reports)
-  total_warnings = sum(sum(1 for d in r.defects if d.severity == Severity.WARNING) for r in reports)
-
-  out.write("## Dataset Validation Results\n\n")
-  out.write(f"**{len(reports)}** dataset(s) with defects: **{total_errors}** error(s), **{total_warnings}** warning(s)\n\n")
-
-  out.write("| Status | Dataset | File | Defect | Impact | Migration |\n")
-  out.write("|--------|---------|------|--------|--------|-----------|\n")
-
-  rows: list[tuple[Severity, str, str, Defect]] = []
-  for r in reports:
-    filename = Path(r.filepath).name
-    for d in r.defects:
-      rows.append((d.severity, r.dataset_path, filename, d))
-
-  rows.sort(key=lambda row: (row[0].value, row[1], row[2]))
-
-  severity_badge = {
-    Severity.ERROR: "**ERROR**",
-    Severity.WARNING: "**WARNING**",
-    Severity.INFO: "**INFO**",
-  }
-
-  for severity, dataset_path, filename, defect in rows:
-    badge = severity_badge[severity]
-    problem = defect.problem.replace("|", "\\|")
-    impact = defect.impact.replace("|", "\\|")
-    migration = f"`{defect.migration}`".replace("|", "\\|")
-    out.write(f"| {badge} | {dataset_path} | {filename} | {problem} | {impact} | {migration} |\n")
-
-  out.write(f"\nRun migration scripts to fix locally. Docs: {SCHEMA_DOCS_URL}\n")
-
-  return error_count
-
-
-class Severity(Enum):
-  ERROR = auto()
-  WARNING = auto()
-  INFO = auto()
-
-
-@dataclass(frozen=True)
-class Defect:
-  severity: Severity
-  problem: str
-  impact: str
-  migration: str
-  json_path: str
-  upstream_fix: str | None = None
-
-  def format_message(self) -> str:
-    lines = [f"{self.problem}. {self.impact}.", f"Run {self.migration} to fix locally."]
-    if self.upstream_fix:
-      lines.append(self.upstream_fix + ".")
-    return " ".join(lines)
-
-
-@dataclass
-class DefectReport:
-  filepath: str
-  dataset_path: str
-  defects: list[Defect] = field(default_factory=list)
-
-  @property
-  def has_errors(self) -> bool:
-    return any(d.severity == Severity.ERROR for d in self.defects)
-
-  @property
-  def has_warnings(self) -> bool:
-    return any(d.severity == Severity.WARNING for d in self.defects)
-
-  def infer_upstream_repo(self) -> str | None:
-    parts = self.dataset_path.split("/")
-    if len(parts) >= 2:
-      collection, org = parts[0], parts[1]
-      if collection == "nextstrain":
-        return f"nextstrain/{org}"
-      if collection == "community":
-        return f"{org}/{parts[2]}" if len(parts) >= 3 else org
-    return None
-
-
 @dataclass
 class ValidationContext:
-  reports: dict[str, DefectReport] = field(default_factory=dict)
-
-  def get_reports(self) -> list[DefectReport]:
-    return list(self.reports.values())
+  validated_files: set[str] = field(default_factory=set)
 
 
 @dataclass(frozen=True)
@@ -237,9 +110,9 @@ def remote_branch_exists(repo: str, branch: str) -> bool:
 def get_schema_branch() -> str:
   current = get_current_branch()
   if remote_branch_exists(NEXTCLADE_REPO, current):
-    logger.info(f"Using schema from '{NEXTCLADE_REPO}' branch '{current}'")
+    reporter.info(f"Using schema from '{NEXTCLADE_REPO}' branch '{current}'")
     return current
-  logger.info(f"Branch '{current}' not found in '{NEXTCLADE_REPO}', using 'master'")
+  reporter.info(f"Branch '{current}' not found in '{NEXTCLADE_REPO}', using 'master'")
   return "master"
 
 
@@ -253,7 +126,7 @@ def _load_local_schema(schemas_dir: Path) -> dict:
 def _fetch_remote_schema() -> dict:
   branch = get_schema_branch()
   url = SCHEMA_URL_TEMPLATE.format(repo=NEXTCLADE_REPO, branch=branch, path=SCHEMA_PATH)
-  logger.info(f"Fetching schema from {url}")
+  reporter.info(f"Fetching schema from {url}")
   with urllib.request.urlopen(url, timeout=30) as response:
     return json.loads(response.read().decode('utf-8'))
 
@@ -265,6 +138,17 @@ def _extract_dataset_path(filepath: str) -> str:
     return "/".join(parts[data_idx + 1 : -1])
   except ValueError:
     return filepath
+
+
+def _infer_upstream_repo(dataset_path: str) -> str | None:
+  parts = dataset_path.split("/")
+  if len(parts) >= 2:
+    collection, org = parts[0], parts[1]
+    if collection == "nextstrain":
+      return f"nextstrain/{org}"
+    if collection == "community":
+      return f"{org}/{parts[2]}" if len(parts) >= 3 else org
+  return None
 
 
 def _build_schema_index(schema: dict) -> SchemaIndex:
@@ -376,7 +260,7 @@ def _find_unknown_properties(
   data: Any,
   schema: dict,
   schema_index: SchemaIndex,
-) -> list[tuple[str, str]]:
+) -> list[tuple[str, str | None]]:
   strict_schema = _make_strict_schema(schema)
   validator = Draft7Validator(strict_schema)
   return _collect_unknown_property_warnings(validator.iter_errors(data), schema_index)
@@ -385,8 +269,8 @@ def _find_unknown_properties(
 def _collect_unknown_property_warnings(
   errors: Any,
   schema_index: SchemaIndex,
-) -> list[tuple[str, str]]:
-  warnings: list[tuple[str, str]] = []
+) -> list[tuple[str, str | None]]:
+  warnings: list[tuple[str, str | None]] = []
   for error in errors:
     if error.validator == "additionalProperties":
       path_parts = [str(p) for p in error.absolute_path]
@@ -395,8 +279,7 @@ def _collect_unknown_property_warnings(
       for extra in extras:
         full_path = f"{parent_path}.{extra}" if parent_path else extra
         suggestion = _suggest_correction(extra, parent_path, schema_index)
-        message = f"Unknown property '{full_path}' - {suggestion}" if suggestion else f"Unknown property '{full_path}'"
-        warnings.append((message, full_path))
+        warnings.append((full_path, suggestion))
     if error.context:
       warnings.extend(_collect_unknown_property_warnings(error.context, schema_index))
   return warnings
@@ -420,46 +303,21 @@ def _add_strict_recursive(node: Any) -> None:
       _add_strict_recursive(item)
 
 
-def _find_line_number(filepath: str, json_path: str) -> int | None:
+def _find_location(filepath: str, json_path: str) -> tuple[int | None, int | None]:
   if not json_path:
-    return None
+    return None, None
   key = json_path.split(".")[-1]
-  pattern = re.compile(rf'^\s*"{re.escape(key)}"\s*:')
+  pattern = re.compile(rf'^(\s*)"{re.escape(key)}"\s*:')
   try:
     with open(filepath, encoding="utf-8") as f:
       for lineno, line in enumerate(f, start=1):
-        if pattern.match(line):
-          return lineno
+        match = pattern.match(line)
+        if match:
+          indent = len(match.group(1))
+          return lineno, indent + 2
   except OSError:
     pass
-  return None
-
-
-def _format_location(filepath: str, lineno: int | None) -> str:
-  return f"{filepath}:{lineno}" if lineno else filepath
-
-
-def _emit_ci_warning(filepath: str, message: str, json_path: str | None = None) -> None:
-  lineno = _find_line_number(filepath, json_path) if json_path else None
-  location = _format_location(filepath, lineno)
-  if os.environ.get("GITHUB_ACTIONS"):
-    line_part = f",line={lineno}" if lineno else ""
-    print(f"::warning file={filepath}{line_part}::{message}")
-  else:
-    logger.warning(f"{location}: {message}")
-
-
-def _emit_defect(filepath: str, defect: Defect, json_path: str | None = None) -> None:
-  lineno = _find_line_number(filepath, json_path) if json_path else None
-  location = _format_location(filepath, lineno)
-  message = defect.format_message()
-  if os.environ.get("GITHUB_ACTIONS"):
-    level = "error" if defect.severity == Severity.ERROR else "warning"
-    line_part = f",line={lineno}" if lineno else ""
-    print(f"::{level} file={filepath}{line_part}::{message}")
-  else:
-    log_fn = logger.error if defect.severity == Severity.ERROR else logger.warning
-    log_fn(f"{location}: {message}")
+  return None, None
 
 
 def _upstream_hint(repo: str | None) -> str:
@@ -468,220 +326,332 @@ def _upstream_hint(repo: str | None) -> str:
   return "Fix in upstream build pipeline to prevent recurrence"
 
 
-def _check_known_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
-  defects: list[Defect] = []
-  defects.extend(_check_misplaced_mut_labels(data, upstream_repo))
-  defects.extend(_check_qc_defects(data, upstream_repo))
-  defects.extend(_check_misplaced_properties(data, upstream_repo))
-  defects.extend(_check_alignment_param_typos(data, upstream_repo))
-  defects.extend(_check_toplevel_attributes(data, upstream_repo))
+def _make_defect(
+  *,
+  severity: Severity,
+  code: str,
+  problem: str,
+  impact: str,
+  migration: str | None,
+  json_path: str,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> DefectFinding:
+  line, column = _find_location(filepath, json_path)
+  return DefectFinding(
+    severity=severity,
+    code=code,
+    title="Dataset defect",
+    problem=problem,
+    impact=impact,
+    migration=migration,
+    dataset_path=dataset_path,
+    filepath=filepath,
+    line=line,
+    column=column,
+    json_path=json_path,
+    upstream_action=_upstream_hint(upstream_repo),
+    source="known-defect-check",
+    details={"upstream_repo": upstream_repo} if upstream_repo else {},
+  )
+
+
+def _check_known_defects(
+  data: dict,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> list[DefectFinding]:
+  defects: list[DefectFinding] = []
+  defects.extend(_check_misplaced_mut_labels(data, dataset_path, filepath, upstream_repo))
+  defects.extend(_check_qc_defects(data, dataset_path, filepath, upstream_repo))
+  defects.extend(_check_misplaced_properties(data, dataset_path, filepath, upstream_repo))
+  defects.extend(_check_alignment_param_typos(data, dataset_path, filepath, upstream_repo))
+  defects.extend(_check_toplevel_attributes(data, dataset_path, filepath, upstream_repo))
   return defects
 
 
-def _check_misplaced_mut_labels(data: dict, upstream_repo: str | None) -> list[Defect]:
-  defects: list[Defect] = []
+def _check_misplaced_mut_labels(
+  data: dict,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> list[DefectFinding]:
+  defects: list[DefectFinding] = []
 
   if "nucMutLabelMap" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.ERROR,
+      code="schema.misplaced_mut_label_map",
       problem="Misplaced 'nucMutLabelMap' at root level",
       impact="Nucleotide mutation labels not applied to results",
       migration="migrations/migrate_008_move_mut_labels.py",
       json_path="nucMutLabelMap",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   if "nucMutLabelMapReverse" in data:
-    defects.append(Defect(
-      severity=Severity.INFO,
+    defects.append(_make_defect(
+      severity=Severity.NOTICE,
+      code="schema.legacy_field",
       problem="Legacy v2 field 'nucMutLabelMapReverse' at root level",
       impact="No effect (reverse map computed at runtime in v3)",
       migration="migrations/migrate_009_remove_nuc_mut_label_map_reverse.py",
       json_path="nucMutLabelMapReverse",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   if "mutLabelMap" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.ERROR,
+      code="schema.misplaced_mut_label_map",
       problem="Misplaced 'mutLabelMap' at root level",
       impact="Mutation labels not applied to results",
       migration="migrations/migrate_008_move_mut_labels.py",
       json_path="mutLabelMap",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   mut_labels = data.get("mutLabels")
   if isinstance(mut_labels, dict) and "nucMutLabelMapReverse" in mut_labels:
-    defects.append(Defect(
-      severity=Severity.INFO,
+    defects.append(_make_defect(
+      severity=Severity.NOTICE,
+      code="schema.legacy_field",
       problem="Legacy v2 field 'mutLabels.nucMutLabelMapReverse'",
       impact="No effect (reverse map computed at runtime in v3)",
       migration="migrations/migrate_009_remove_nuc_mut_label_map_reverse.py",
       json_path="mutLabels.nucMutLabelMapReverse",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   return defects
 
 
-def _check_qc_defects(data: dict, upstream_repo: str | None) -> list[Defect]:
-  defects: list[Defect] = []
+def _check_qc_defects(
+  data: dict,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> list[DefectFinding]:
+  defects: list[DefectFinding] = []
   qc = data.get("qc")
   if not isinstance(qc, dict):
     return defects
 
   if "divergence" in qc:
-    defects.append(Defect(
-      severity=Severity.INFO,
+    defects.append(_make_defect(
+      severity=Severity.NOTICE,
+      code="schema.unknown_qc_rule",
       problem="Unknown QC rule 'qc.divergence'",
       impact="No effect (divergence computed at runtime, not a QC rule)",
       migration="migrations/migrate_012_remove_qc_divergence.py",
       json_path="qc.divergence",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   missing_data = qc.get("missingData")
   if isinstance(missing_data, dict) and "scoreWeight" in missing_data:
-    defects.append(Defect(
-      severity=Severity.INFO,
+    defects.append(_make_defect(
+      severity=Severity.NOTICE,
+      code="schema.legacy_qc_weight",
       problem="Unknown field 'qc.missingData.scoreWeight'",
       impact="No effect (use 'missingDataThreshold' and 'scoreBias' instead)",
       migration="migrations/migrate_011_remove_qc_score_weight.py",
       json_path="qc.missingData.scoreWeight",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   mixed_sites = qc.get("mixedSites")
   if isinstance(mixed_sites, dict) and "scoreWeight" in mixed_sites:
-    defects.append(Defect(
-      severity=Severity.INFO,
+    defects.append(_make_defect(
+      severity=Severity.NOTICE,
+      code="schema.legacy_qc_weight",
       problem="Unknown field 'qc.mixedSites.scoreWeight'",
       impact="No effect (use 'mixedSitesThreshold' instead)",
       migration="migrations/migrate_011_remove_qc_score_weight.py",
       json_path="qc.mixedSites.scoreWeight",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   frame_shifts = qc.get("frameShifts")
   if isinstance(frame_shifts, dict) and "ignoreFrameShifts" in frame_shifts:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.ERROR,
+      code="schema.renamed_field",
       problem="Field 'qc.frameShifts.ignoreFrameShifts' was renamed to 'ignoredFrameShifts'",
       impact="Frame shift exclusions not applied",
       migration="migrations/migrate_010_rename_ignore_frame_shifts.py",
       json_path="qc.frameShifts.ignoreFrameShifts",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   return defects
 
 
-def _check_misplaced_properties(data: dict, upstream_repo: str | None) -> list[Defect]:
-  defects: list[Defect] = []
+def _check_misplaced_properties(
+  data: dict,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> list[DefectFinding]:
+  defects: list[DefectFinding] = []
 
   if "geneOrderPreference" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.WARNING,
+      code="schema.renamed_field",
       problem="Field 'geneOrderPreference' was renamed to 'cdsOrderPreference'",
       impact="CDS display order uses default",
       migration="migrations/migrate_013_rename_gene_order_preference.py",
       json_path="geneOrderPreference",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   if "placementMaskRanges" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.ERROR,
+      code="schema.misplaced_property",
       problem="Misplaced 'placementMaskRanges' in pathogen.json",
       impact="Placement masking not applied (belongs in tree.json at .meta.extensions.nextclade.placement_mask_ranges)",
       migration="migrations/migrate_016_fix_misplaced_placement_mask_ranges.py",
       json_path="placementMaskRanges",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   alignment_params = data.get("alignmentParams")
   if isinstance(alignment_params, dict):
     if "includeReference" in alignment_params:
-      defects.append(Defect(
+      defects.append(_make_defect(
         severity=Severity.WARNING,
+        code="schema.misplaced_property",
         problem="Misplaced 'alignmentParams.includeReference'",
         impact="Setting ignored (move to 'generalParams.includeReference')",
         migration="migrations/migrate_014_move_general_params.py",
         json_path="alignmentParams.includeReference",
-        upstream_fix=_upstream_hint(upstream_repo),
+        dataset_path=dataset_path,
+        filepath=filepath,
+        upstream_repo=upstream_repo,
       ))
 
     if "includeNearestNodeInfo" in alignment_params:
-      defects.append(Defect(
+      defects.append(_make_defect(
         severity=Severity.WARNING,
+        code="schema.misplaced_property",
         problem="Misplaced 'alignmentParams.includeNearestNodeInfo'",
         impact="Setting ignored (move to 'generalParams.includeNearestNodeInfo')",
         migration="migrations/migrate_014_move_general_params.py",
         json_path="alignmentParams.includeNearestNodeInfo",
-        upstream_fix=_upstream_hint(upstream_repo),
+        dataset_path=dataset_path,
+        filepath=filepath,
+        upstream_repo=upstream_repo,
       ))
 
   return defects
 
 
-def _check_alignment_param_typos(data: dict, upstream_repo: str | None) -> list[Defect]:
-  defects: list[Defect] = []
+def _check_alignment_param_typos(
+  data: dict,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> list[DefectFinding]:
+  defects: list[DefectFinding] = []
   alignment_params = data.get("alignmentParams")
   if isinstance(alignment_params, dict) and "excessBandwith" in alignment_params:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.WARNING,
+      code="schema.typo",
       problem="Typo 'alignmentParams.excessBandwith' (missing 'd')",
       impact="Default bandwidth (9) used instead (rename to 'excessBandwidth')",
       migration="migrations/migrate_015_fix_excess_bandwidth_typo.py",
       json_path="alignmentParams.excessBandwith",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
   return defects
 
 
-def _check_toplevel_attributes(data: dict, upstream_repo: str | None) -> list[Defect]:
-  defects: list[Defect] = []
+def _check_toplevel_attributes(
+  data: dict,
+  dataset_path: str,
+  filepath: str,
+  upstream_repo: str | None,
+) -> list[DefectFinding]:
+  defects: list[DefectFinding] = []
   migration = "migrations/migrate_017_unify_attributes.py"
 
   if "deprecated" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.WARNING,
+      code="schema.misplaced_attribute",
       problem="Top-level 'deprecated' should be in 'attributes.deprecated'",
       impact="Field may not be read correctly by Nextclade",
       migration=migration,
       json_path="deprecated",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   if "experimental" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.WARNING,
+      code="schema.misplaced_attribute",
       problem="Top-level 'experimental' should be in 'attributes.experimental'",
       impact="Field may not be read correctly by Nextclade",
       migration=migration,
       json_path="experimental",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   if "enabled" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.WARNING,
+      code="schema.obsolete_field",
       problem="Field 'enabled' is obsolete (removed)",
       impact="No effect (field was never used)",
       migration=migration,
       json_path="enabled",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   if "official" in data:
-    defects.append(Defect(
+    defects.append(_make_defect(
       severity=Severity.WARNING,
+      code="schema.obsolete_field",
       problem="Field 'official' is obsolete (removed)",
       impact="No effect (official status derived from dataset path)",
       migration=migration,
       json_path="official",
-      upstream_fix=_upstream_hint(upstream_repo),
+      dataset_path=dataset_path,
+      filepath=filepath,
+      upstream_repo=upstream_repo,
     ))
 
   return defects

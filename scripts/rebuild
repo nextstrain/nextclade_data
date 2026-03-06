@@ -5,7 +5,6 @@ Builds a fresh data repo from source data
 """
 import argparse
 import json
-import os
 import sys
 import time
 from collections import defaultdict
@@ -17,7 +16,9 @@ from pathlib import Path
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup, find, unique, JsonPath
-from lib.schema import validate_pathogen_json, print_defect_summary, write_defect_summary_markdown, ValidationContext
+from lib.reporting import reporter
+from lib.reporting_model import DefectFinding, Severity
+from lib.schema import validate_pathogen_json, ValidationContext
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -129,36 +130,43 @@ def dataset_get_versions(dataset):
 
 def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str, validation_ctx):
   pathogen_json = json_read(pathogen_json_path)
-  validate_pathogen_json(pathogen_json, pathogen_json_path, validation_ctx, args.nextclade_schemas_dir)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
+  reporter.dataset_start(path)
 
-  ref = get_ref_seq(pathogen_json, dataset_dir)
-  check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
+  try:
+    validate_pathogen_json(pathogen_json, pathogen_json_path, validation_ctx, args.nextclade_schemas_dir, dataset_path=path)
 
-  versions, last_version = dataset_get_versions(dataset)
+    ref = get_ref_seq(pathogen_json, dataset_dir)
+    check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
 
-  if dataset_has_changes(dataset, dataset_dir):
-    new_version = dict_cleanup({
-      "updatedAt": None if tag == "unreleased" else updated_at,
-      "tag": tag,
-      "compatibility": dict_get(pathogen_json, ["compatibility"]),
+    versions, last_version = dataset_get_versions(dataset)
+
+    if dataset_has_changes(dataset, dataset_dir):
+      new_version = dict_cleanup({
+        "updatedAt": None if tag == "unreleased" else updated_at,
+        "tag": tag,
+        "compatibility": dict_get(pathogen_json, ["compatibility"]),
+      })
+      versions.insert(0, new_version)
+      last_version = new_version
+
+    dataset_out = dict_cleanup({
+      "path": path,
+      "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
+      "attributes": dict_get(pathogen_json, ["attributes"]),
+      "maintenance": dict_get(pathogen_json, ["maintenance"]),
+      "files": dict_get_required(pathogen_json, ["files"]),
+      "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
+      "versions": versions,
+      "version": last_version,
     })
-    versions.insert(0, new_version)
-    last_version = new_version
 
-  dataset_out = dict_cleanup({
-    "path": path,
-    "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
-    "attributes": dict_get(pathogen_json, ["attributes"]),
-    "maintenance": dict_get(pathogen_json, ["maintenance"]),
-    "files": dict_get_required(pathogen_json, ["files"]),
-    "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
-    "versions": versions,
-    "version": last_version,
-  })
-
-  return dataset_out, ref
+    reporter.dataset_finish(path, "ok")
+    return dataset_out, ref
+  except Exception:
+    reporter.dataset_finish(path, "error")
+    raise
 
 
 def get_ref_seq(pathogen_json, dataset_dir):
@@ -187,8 +195,23 @@ def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir) -> 
           "This warning signals that there is a potential for failures if the mismatch is not intended."
         )
         if len(alignment_ref) != len(tree_root):
-          logger.warning(
-            f"{shared_log_prefix} Reference sequence length: {len(alignment_ref)}, Auspice JSON root sequence length: {len(tree_root)}"
+          reporter.report_defect(
+            DefectFinding(
+              severity=Severity.WARNING,
+              code="dataset.reference_mismatch.length",
+              title="Reference mismatch",
+              problem="Reference sequence length does not match Auspice root sequence length",
+              impact="Dataset reference sources disagree and downstream behavior can be wrong if the mismatch is unintended",
+              dataset_path=path,
+              filepath=tree_json_path,
+              recommended_action="Ensure reference.fasta and tree.json root sequence describe the same reference sequence",
+              source="dataset-integrity-check",
+              details={
+                "reference_length": len(alignment_ref),
+                "tree_root_length": len(tree_root),
+                "message": shared_log_prefix,
+              },
+            )
           )
           return
 
@@ -196,8 +219,23 @@ def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir) -> 
         for i, (a, b) in enumerate(zip(alignment_ref, tree_root), start=1):
           if a != b:
             mismatches.append(f"{a}{i}{b}")
-        logger.warning(
-          f"{shared_log_prefix} Mismatches (refbase>pos>treerootbase): {', '.join(mismatches)}"
+        reporter.report_defect(
+          DefectFinding(
+            severity=Severity.WARNING,
+            code="dataset.reference_mismatch.base",
+            title="Reference mismatch",
+            problem="Reference sequence content does not match Auspice root sequence content",
+            impact="Dataset reference sources disagree and downstream behavior can be wrong if the mismatch is unintended",
+            dataset_path=path,
+            filepath=tree_json_path,
+            recommended_action="Ensure reference.fasta and tree.json root sequence describe the same reference sequence",
+            source="dataset-integrity-check",
+            details={
+              "mismatch_count": len(mismatches),
+              "mismatch_preview": mismatches[:20],
+              "message": shared_log_prefix,
+            },
+          )
         )
 
 
@@ -313,8 +351,10 @@ def parse_args():
                       help="Local directory containing nextclade schema files (e.g., ../nextclade/packages/nextclade-schemas). "
                            "When set, schemas are loaded from this directory instead of fetching from GitHub."
                       )
+  parser.add_argument('--report-jsonl', required=False, help='Write structured machine-readable JSONL report to this file')
 
   args = parser.parse_args()
+  reporter.configure(report_jsonl_path=args.report_jsonl)
 
   if args.push and not args.repo:
     parser.error("--push requires --repo")
@@ -369,92 +409,88 @@ def validate_shortcuts(collections):
 def main():
   args = parse_args()
   validation_ctx = ValidationContext()
-
-  if not args.allow_dirty and not git_dir_is_clean():
-    dirty_files = "\n  ".join(git_get_dirty_files())
-    raise ValueError(
-      f"Uncommitted changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
-      f"override (not recommended):\n  {dirty_files}"
-    )
-
-  if not args.no_pull:
-    git_pull()
-
-  updated_at = now_iso()
-  tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
-  git_check_tag(tag)
-
-  collection_json_paths = list(find_files("collection.json", args.input_dir))
-
-  index_json_path = join(args.output_dir, "index.json")
   try:
-    index_json = json_read(index_json_path)
-  except FileNotFoundError as _:
-    index_json = {}
+    with reporter.stage("Repository checks"):
+      if not args.allow_dirty and not git_dir_is_clean():
+        dirty_files = "\n  ".join(git_get_dirty_files())
+        raise ValueError(
+          f"Uncommitted changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
+          f"override (not recommended):\n  {dirty_files}"
+        )
 
-  collections = []
-  release_infos = []
-  all_refs = {}
-  for collection_json_path in collection_json_paths:
-    collection, release_infos_for_dataset, refs = process_one_collection(
-      collection_json_path, index_json, args, tag, updated_at, validation_ctx
-    )
-    collections.append(collection)
-    release_infos.extend(release_infos_for_dataset)
-    all_refs.update(refs)
+      if not args.no_pull:
+        git_pull()
 
-  collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
-  validate_shortcuts(collections)
+      updated_at = now_iso()
+      tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
+      git_check_tag(tag)
 
-  minimizer_index = make_ref_search_index(all_refs)
+    with reporter.stage("Build collections"):
+      collection_json_paths = list(find_files("collection.json", args.input_dir))
 
-  minimizer_index_json_path = "minimizer_index.json"
-  json_write(
-    serialize_ref_search_index(minimizer_index),
-    join(args.output_dir, minimizer_index_json_path),
-    no_sort_keys=True
-  )
+      index_json_path = join(args.output_dir, "index.json")
+      try:
+        index_json = json_read(index_json_path)
+      except FileNotFoundError as _:
+        index_json = {}
 
-  # if len(release_infos) == 0:
-  #   logger.info("No dataset modifications detected. Will not release anything.")
-  #   return
+      collections = []
+      release_infos = []
+      all_refs = {}
+      for collection_json_path in collection_json_paths:
+        collection, release_infos_for_dataset, refs = process_one_collection(
+          collection_json_path, index_json, args, tag, updated_at, validation_ctx
+        )
+        collections.append(collection)
+        release_infos.extend(release_infos_for_dataset)
+        all_refs.update(refs)
 
-  index_json = {
-    "$schema": JSON_SCHEMA_URL_INDEX_JSON,
-    "schemaVersion": "3.0.0",
-    "collections": collections,
-    "minimizerIndex": [
-      {
-        "version": minimizer_index["version"],
-        "path": minimizer_index_json_path,
+      collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
+      validate_shortcuts(collections)
+
+    with reporter.stage("Build minimizer index"):
+      minimizer_index = make_ref_search_index(all_refs)
+
+      minimizer_index_json_path = "minimizer_index.json"
+      json_write(
+        serialize_ref_search_index(minimizer_index),
+        join(args.output_dir, minimizer_index_json_path),
+        no_sort_keys=True
+      )
+
+    with reporter.stage("Write output index"):
+      index_json = {
+        "$schema": JSON_SCHEMA_URL_INDEX_JSON,
+        "schemaVersion": "3.0.0",
+        "collections": collections,
+        "minimizerIndex": [
+          {
+            "version": minimizer_index["version"],
+            "path": minimizer_index_json_path,
+          }
+        ]
       }
-    ]
-  }
 
-  json_write(index_json, index_json_path, no_sort_keys=True)
+      json_write(index_json, index_json_path, no_sort_keys=True)
 
-  if args.commit:
-    commit_hash = commit_changes(args, tag, release_infos)
+    if args.commit:
+      with reporter.stage("Publish changes"):
+        commit_hash = commit_changes(args, tag, release_infos)
 
-    if args.push:
-      logger.info("Pushing committed changes to GitHub")
-      git_push()
+        if args.push:
+          logger.info("Pushing committed changes to GitHub")
+          git_push()
 
-      if args.release:
-        logger.info("Releasing to GitHub")
-        release_notes = aggregate_release_notes(release_infos)
-        logger.info(f"Release notes:\n-------\n{release_notes}\n-------\nEnd of release notes\n")
-        time.sleep(5)
-        publish_to_github_releases(args, tag, commit_hash, release_notes)
+          if args.release:
+            logger.info("Releasing to GitHub")
+            release_notes = aggregate_release_notes(release_infos)
+            logger.info(f"Release notes:\n-------\n{release_notes}\n-------\nEnd of release notes\n")
+            time.sleep(5)
+            publish_to_github_releases(args, tag, commit_hash, release_notes)
+  finally:
+    reporter.write_outputs()
 
-  error_count = print_defect_summary(validation_ctx)
-
-  summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
-  if summary_path:
-    with open(summary_path, "a") as f:
-      write_defect_summary_markdown(validation_ctx, f)
-
-  if error_count > 0:
+  if reporter.error_count() > 0:
     sys.exit(1)
 
 
