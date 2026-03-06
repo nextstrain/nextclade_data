@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "alignmentParams": {
+    "retryReverseComplement": true,
+    "alignmentPreset": "high-diversity"
+  },
+  "attributes": {
+    "name": "orov/L/refseq",
+    "reference accession": "NC_005776.1",
+    "reference name": "Oropouche virus, L segment"
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "placementMaskRanges": [
+    {
+      "begin": 0,
+      "end": 43
+    },
+    {
+      "begin": 6796,
+      "end": 6846
+    }
+  ],
+  "deprecated": false,
+  "enabled": true,
+  "experimental": true,
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "meta": {
+    "bugs": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/issues",
+    "source code": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/tree/main/orov"
+  },
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "ignoredFrameShifts": [
+        {
+          "codonRange": {
+            "begin": 788,
+            "end": 792
+          },
+          "cdsName": "L"
+        },
+        {
+          "codonRange": {
+            "begin": 797,
+            "end": 800
+          },
+          "cdsName": "L"
+        },
+        {
+          "codonRange": {
+            "begin": 846,
+            "end": 855
+          },
+          "cdsName": "L"
+        }
+      ]
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 1369,
+      "scoreBias": 95
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 7
+    },
+    "privateMutations": {
+      "cutoff": 30,
+      "enabled": true,
+      "typical": 10,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": false
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "version": {
+    "tag": "unreleased"
+  },
+  "defaultCds": "L"
+}
