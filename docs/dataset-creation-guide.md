@@ -294,8 +294,17 @@ No, this is not required. However, the mutations from the reference sequence to 
 
 ### My virus is very diverse; many sequences don't align!
 
-Nextclade was initially built for the analysis of SARS-COV-2 genomes that were all very similar to the reference. This is reflected in the default alignment parameters. For more diverse viruses, you can tune the alignment and seed-matching parameters by setting these parameters in the `pathogen.json`.
-Suggested parameters for high diversity viruses are given below (note that comments are not allowed in JSON, please remove `//...` when copying this into your `pathogen.json`):
+Nextclade was initially built for the analysis of SARS-COV-2 genomes that were all very similar to the reference. This is reflected in the default alignment parameters. For more diverse viruses, set `"alignmentPreset": "high-diversity"` in the `alignmentParams` section of `pathogen.json`. This preset adjusts gap penalties, seed matching, and alignment band width to handle diverse sequences. It is equivalent to the individual parameter overrides listed below, and is the recommended starting point.
+
+```json
+"alignmentParams": {
+    "alignmentPreset": "high-diversity"
+}
+```
+
+This feature is experimental and subject to adjustments. Valid values are `"default"` (similar sequences, the built-in default) and `"high-diversity"` (diverse viruses).
+
+Individual parameters override the preset and are useful for further fine-tuning. Suggested parameters for high diversity viruses are given below (comments are not allowed in JSON, remove `//...` when copying this into your `pathogen.json`):
 
 ```json5
     "alignmentParams": {
