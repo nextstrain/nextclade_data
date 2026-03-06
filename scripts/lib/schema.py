@@ -1,6 +1,7 @@
 import json
 import re
 import urllib.request
+from collections import defaultdict
 from dataclasses import dataclass, field
 from functools import lru_cache
 from pathlib import Path
