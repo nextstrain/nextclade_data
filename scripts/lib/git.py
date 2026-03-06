@@ -1,3 +1,4 @@
+import shlex
 from os import getcwd
 from typing import List, Union
 
@@ -64,7 +65,7 @@ def git_add_all():
 
 def git_commit(commit_message: str):
   try:
-    run(f"git commit -q -m '{commit_message}'")
+    run(f"git commit -q -m {shlex.quote(commit_message)}")
   except ValueError as e:
     if "nothing to commit, working tree clean" in str(e):
       l.info("nothing to commit, working tree clean")
@@ -95,14 +96,14 @@ def git_commit_and_push(commit_message):
 def github_create_release(repo: str, version: str, commit_hash: str, release_notes: str, files=None):
   if files is None:
     files = []
-  files = " ".join(quote(files))
+  files = " ".join(shlex.quote(f) for f in files)
   run(
     f"""
     gh release create \
-      '{version}' \
-      --repo "{repo}" \
-      --title "{version}" \
-      --target "{commit_hash}" \
+      {shlex.quote(version)} \
+      --repo {shlex.quote(repo)} \
+      --title {shlex.quote(version)} \
+      --target {shlex.quote(commit_hash)} \
       --notes-file - \
       {files}
     """,
