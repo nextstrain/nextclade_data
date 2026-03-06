@@ -9,13 +9,6 @@ def quote(strs: List[str]):
   return surround(strs, "'")
 
 
-def append(s: List[str], symbol: str):
-  return list(f"{s}{symbol}")
-
-
-def prepend(s: List[str], symbol: str):
-  return list(f"{symbol}{s}")
-
 
 def removesuffix(s, suffix):
   if s.endswith(suffix):
