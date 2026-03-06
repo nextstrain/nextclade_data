@@ -148,8 +148,7 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
     "snpClusters": {
       "enabled": true,
       "windowSize": 100,
-      "clusterCutOff": 6,
-      "scoreWeight": 50
+      "clusterCutOff": 6
     },
     "mixedSites": {
       "enabled": true,
@@ -161,12 +160,10 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
       "cutoff": 100
     },
     "frameShifts": {
-      "enabled": true,
-      "scoreWeight": 20
+      "enabled": true
     },
     "stopCodons": {
-      "enabled": true,
-      "scoreWeight": 50
+      "enabled": true
     }
   }
 }
