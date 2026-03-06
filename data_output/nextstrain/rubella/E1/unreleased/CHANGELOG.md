@@ -1,0 +1,11 @@
+## Unreleased
+
+- Fix typo: `excessBandwith` to `excessBandwidth`
+
+## 2025-09-09T12:13:13Z
+
+Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
+## 2025-07-01T21:21:21Z
+
+Initial release of rubella virus (E1 region only) dataset.
