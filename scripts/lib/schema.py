@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from enum import Enum, auto
 from functools import lru_cache
 from pathlib import Path
-from typing import Any
+from typing import IO, Any
 from urllib.error import HTTPError
 
 from jsonschema import Draft7Validator, ValidationError
@@ -69,10 +69,10 @@ def fetch_schema(schemas_dir: Path | None = None) -> dict:
   return _fetch_remote_schema()
 
 
-def print_defect_summary(ctx: "ValidationContext") -> None:
+def print_defect_summary(ctx: "ValidationContext") -> int:
   reports = [r for r in ctx.reports.values() if r.defects]
   if not reports:
-    return
+    return 0
 
   datasets: dict[str, list[DefectReport]] = {}
   for r in reports:
@@ -111,6 +111,49 @@ def print_defect_summary(ctx: "ValidationContext") -> None:
   print("Notify upstream maintainers to prevent defect recurrence.")
   print(f"Docs: {SCHEMA_DOCS_URL}")
   print("=" * 60 + "\n")
+
+  return error_count
+
+
+def write_defect_summary_markdown(ctx: "ValidationContext", out: "IO[str]") -> int:
+  reports = [r for r in ctx.reports.values() if r.defects]
+  if not reports:
+    return 0
+
+  error_count = sum(1 for r in reports if r.has_errors)
+  total_errors = sum(sum(1 for d in r.defects if d.severity == Severity.ERROR) for r in reports)
+  total_warnings = sum(sum(1 for d in r.defects if d.severity == Severity.WARNING) for r in reports)
+
+  out.write("## Dataset Validation Results\n\n")
+  out.write(f"**{len(reports)}** dataset(s) with defects: **{total_errors}** error(s), **{total_warnings}** warning(s)\n\n")
+
+  out.write("| Status | Dataset | File | Defect | Impact | Migration |\n")
+  out.write("|--------|---------|------|--------|--------|-----------|\n")
+
+  rows: list[tuple[Severity, str, str, Defect]] = []
+  for r in reports:
+    filename = Path(r.filepath).name
+    for d in r.defects:
+      rows.append((d.severity, r.dataset_path, filename, d))
+
+  rows.sort(key=lambda row: (row[0].value, row[1], row[2]))
+
+  severity_badge = {
+    Severity.ERROR: "**ERROR**",
+    Severity.WARNING: "**WARNING**",
+    Severity.INFO: "**INFO**",
+  }
+
+  for severity, dataset_path, filename, defect in rows:
+    badge = severity_badge[severity]
+    problem = defect.problem.replace("|", "\\|")
+    impact = defect.impact.replace("|", "\\|")
+    migration = f"`{defect.migration}`".replace("|", "\\|")
+    out.write(f"| {badge} | {dataset_path} | {filename} | {problem} | {impact} | {migration} |\n")
+
+  out.write(f"\nRun migration scripts to fix locally. Docs: {SCHEMA_DOCS_URL}\n")
+
+  return error_count
 
 
 class Severity(Enum):
