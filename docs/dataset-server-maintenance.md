@@ -26,7 +26,7 @@ A "Nextclade dataset collection" is a collection of multiple datasets grouped by
 ### Continuous integration (CI)
 
 Dataset maintenance process is automated using GitHub Actions. The GitHub Actions workflow is described
-in [.github/workflows/data-curation.yml](.github/workflows/data-curation.yml). It runs on every pull request on GitHub and push to a major branch.
+in [.github/workflows/build-and-deploy.yml](.github/workflows/build-and-deploy.yml). It runs on every pull request on GitHub and push to a major branch.
 
 The GitHub Action rebuilds a fresh, complete data server directory (`data_output/`), including the datasets themselves and required index files. It then uploads the directory to one of the deployment environments, so that the new data becomes available for Nextclade users.
 
