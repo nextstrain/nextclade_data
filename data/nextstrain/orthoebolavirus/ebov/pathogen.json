@@ -11,15 +11,13 @@
   "attributes": {
     "name": "Ebola virus",
     "reference accession": "NC_002549.1",
-    "reference name": "COD/1976/Yambuku-Mayinga"
+    "reference name": "COD/1976/Yambuku-Mayinga",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "treeJson": "tree.json",
     "changelog": "CHANGELOG.md",
@@ -29,7 +27,6 @@
     "readme": "README.md",
     "reference": "reference.fasta"
   },
-  "official": true,
   "qc": {
     "frameShifts": {
       "enabled": true,
