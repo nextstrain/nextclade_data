@@ -654,7 +654,8 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
     outpath = join(out_dir, file)
     if file == dict_get(files, ["tree"]):
       # Minify tree.json
-      json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
+      with open(outpath, "w") as f:
+        json.dump(json_read(inpath), f, separators=(",", ":"), indent=None)
     elif file == "pathogen.json":
       pathogen_json = json_read(inpath)
       pathogen_json["version"] = dataset["version"]
