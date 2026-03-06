@@ -8339,7 +8339,8 @@
           "attributes": {
             "name": "Zika virus",
             "reference accession": "NC_035889.1",
-            "reference name": "Natal RGN"
+            "reference name": "Natal RGN",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -8361,6 +8362,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-03-04T12:40:26Z",
               "tag": "2026-03-04--12-40-26Z",
               "compatibility": {
@@ -8370,8 +8378,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-03-04T12:40:26Z",
-            "tag": "2026-03-04--12-40-26Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
