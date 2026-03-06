@@ -6,7 +6,8 @@ from .process import run
 from .string import quote
 
 
-def prepare_paths_args(paths: Union[str, List[str]] = getcwd()):
+def prepare_paths_args(paths: str | list[str] | None = None):
+  paths = paths or getcwd()
   return ' '.join(quote([paths] if type(paths) == str else paths))
 
 
@@ -16,12 +17,14 @@ def get_lines(s: str):
   return iter(filter(len, lines))
 
 
-def git_get_dirty_files(dirs: Union[str, List[str]] = getcwd()):
+def git_get_dirty_files(dirs: str | list[str] | None = None):
+  dirs = dirs or getcwd()
   lines = get_lines(run(f"git status --untracked --porcelain -- {prepare_paths_args(dirs)}"))
   return iter(map(lambda line: line.split(" ")[1], lines))
 
 
-def git_dir_is_clean(dirs: Union[str, List[str]] = getcwd()):
+def git_dir_is_clean(dirs: str | list[str] | None = None):
+  dirs = dirs or getcwd()
   return len(list(git_get_dirty_files(dirs))) == 0
 
 
@@ -35,10 +38,11 @@ def git_get_current_commit_hash(branch: str = "HEAD", short=False):
 
 
 def git_get_modified_files(
-  from_revision: str = git_get_initial_commit_hash(),
-  to_revision: str = git_get_current_commit_hash(),
-  dirs: Union[str, List[str]] = getcwd()
+  from_revision: str | None = None,
+  to_revision: str | None = None,
+  dirs: str | list[str] | None = None
 ):
+  dirs = dirs or getcwd()
   from_revision = from_revision or git_get_initial_commit_hash()
   to_revision = to_revision or git_get_current_commit_hash()
   return get_lines(
