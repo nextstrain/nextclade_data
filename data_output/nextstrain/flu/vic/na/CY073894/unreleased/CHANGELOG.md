@@ -1,5 +1,7 @@
 ## Unreleased
 
+- Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
+- Move `aaMutLabelMap` (NAI resistance markers) into `mutLabels` section
 
 ## 2025-09-09T12:13:13Z
 
