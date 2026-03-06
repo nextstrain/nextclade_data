@@ -1,5 +1,6 @@
 ## Unreleased
 
+- Align `pathogen.json` metadata with the current Nextclade schema layout.
 - Move `includeReference` and `includeNearestNodeInfo` from `alignmentParams` to `generalParams`
 
 ## 2025-10-22T18:11:36Z
