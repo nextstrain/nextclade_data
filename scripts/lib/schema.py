@@ -13,7 +13,7 @@ from urllib.error import HTTPError
 from jsonschema import Draft7Validator, ValidationError
 from rapidfuzz import fuzz, process
 
-from .logger import l
+from .logger import logger
 from .process import run
 
 
@@ -237,9 +237,9 @@ def remote_branch_exists(repo: str, branch: str) -> bool:
 def get_schema_branch() -> str:
   current = get_current_branch()
   if remote_branch_exists(NEXTCLADE_REPO, current):
-    l.info(f"Using schema from '{NEXTCLADE_REPO}' branch '{current}'")
+    logger.info(f"Using schema from '{NEXTCLADE_REPO}' branch '{current}'")
     return current
-  l.info(f"Branch '{current}' not found in '{NEXTCLADE_REPO}', using 'master'")
+  logger.info(f"Branch '{current}' not found in '{NEXTCLADE_REPO}', using 'master'")
   return "master"
 
 
@@ -253,7 +253,7 @@ def _load_local_schema(schemas_dir: Path) -> dict:
 def _fetch_remote_schema() -> dict:
   branch = get_schema_branch()
   url = SCHEMA_URL_TEMPLATE.format(repo=NEXTCLADE_REPO, branch=branch, path=SCHEMA_PATH)
-  l.info(f"Fetching schema from {url}")
+  logger.info(f"Fetching schema from {url}")
   with urllib.request.urlopen(url, timeout=30) as response:
     return json.loads(response.read().decode('utf-8'))
 
@@ -446,7 +446,7 @@ def _emit_ci_warning(filepath: str, message: str, json_path: str | None = None) 
     line_part = f",line={lineno}" if lineno else ""
     print(f"::warning file={filepath}{line_part}::{message}")
   else:
-    l.warning(f"{location}: {message}")
+    logger.warning(f"{location}: {message}")
 
 
 def _emit_defect(filepath: str, defect: Defect, json_path: str | None = None) -> None:
@@ -458,7 +458,7 @@ def _emit_defect(filepath: str, defect: Defect, json_path: str | None = None) ->
     line_part = f",line={lineno}" if lineno else ""
     print(f"::{level} file={filepath}{line_part}::{message}")
   else:
-    log_fn = l.error if defect.severity == Severity.ERROR else l.warning
+    log_fn = logger.error if defect.severity == Severity.ERROR else logger.warning
     log_fn(f"{location}: {message}")
 
 

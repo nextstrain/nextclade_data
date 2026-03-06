@@ -60,4 +60,4 @@ def _setup_logger() -> logging.Logger:
     return logger
 
 
-l = _setup_logger()
+logger = _setup_logger()

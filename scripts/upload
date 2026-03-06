@@ -9,10 +9,10 @@ trap "exit" INT
 export AWS_MAX_ATTEMPTS=10
 
 # Directory where this script resides
-THIS_DIR=$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)
+THIS_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)
 
 # Where the source code is
-PROJECT_ROOT_DIR="$(realpath ${THIS_DIR}/..)"
+PROJECT_ROOT_DIR="$(realpath "${THIS_DIR}"/..)"
 
 source "${PROJECT_ROOT_DIR}/.env.example"
 if [ -f "${PROJECT_ROOT_DIR}/.env" ]; then

@@ -9,7 +9,6 @@ def quote(strs: List[str]):
   return surround(strs, "'")
 
 
-
 def removesuffix(s, suffix):
   if s.endswith(suffix):
     return s[:-len(suffix)]

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # If you have forks, make sure to set `git config --global checkout.defaultRemote origin`
 # Make sure that you local machine has the latest changes from the remote server
 git pull --all

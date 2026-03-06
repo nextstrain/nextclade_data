@@ -2,14 +2,14 @@ import shlex
 from os import getcwd
 from typing import List, Union
 
-from .logger import l
+from .logger import logger
 from .process import run
 from .string import quote
 
 
 def prepare_paths_args(paths: str | list[str] | None = None):
   paths = paths or getcwd()
-  return ' '.join(quote([paths] if type(paths) == str else paths))
+  return ' '.join(quote([paths] if isinstance(paths, str) else paths))
 
 
 def get_lines(s: str):
@@ -41,7 +41,7 @@ def git_get_current_commit_hash(branch: str = "HEAD", short=False):
 def git_get_modified_files(
   from_revision: str | None = None,
   to_revision: str | None = None,
-  dirs: str | list[str] | None = None
+  dirs: Union[str, List[str]] | None = None
 ):
   dirs = dirs or getcwd()
   from_revision = from_revision or git_get_initial_commit_hash()
@@ -68,7 +68,7 @@ def git_commit(commit_message: str):
     run(f"git commit -q -m {shlex.quote(commit_message)}")
   except ValueError as e:
     if "nothing to commit, working tree clean" in str(e):
-      l.info("nothing to commit, working tree clean")
+      logger.info("nothing to commit, working tree clean")
     else:
       raise e
 

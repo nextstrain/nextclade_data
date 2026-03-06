@@ -38,7 +38,8 @@ def get_hash(kmer):
   x = 0
   j = 0
   for i, nuc in enumerate(kmer):
-    if i % 3 == 2: continue  # skip every third nucleotide to pick up conserved patterns
+    if i % 3 == 2:
+      continue  # skip every third nucleotide to pick up conserved patterns
     if nuc not in 'ACGT':
       return CUTOFF + 1  # break out of loop, return hash above cutoff
     else:  # A=11=3, C=10=2, G=00=0, T=01=1

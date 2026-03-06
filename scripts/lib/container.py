@@ -176,10 +176,10 @@ def find_duplicates(it: Iterable[T]) -> List[T]:
 
 
 def format_list(it: Iterable, sep: str = ", ", marker="", quote="'") -> str:
-  if quote == False or quote is None:
+  if not quote:
     quote = ""
   return sep.join(map(lambda x: f"{quote}{marker}{x}{quote}", it))
 
 
-def true_or_none(x: Union[bool, None]) -> Union[bool, None]:
-  return True if x == True else None
+def true_or_none(x: bool | None) -> bool | None:
+  return True if x else None
