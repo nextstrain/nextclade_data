@@ -1773,6 +1773,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-12-16T20:07:31Z",
               "tag": "2025-12-16--20-07-31Z",
               "compatibility": {
@@ -1846,8 +1853,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-12-16T20:07:31Z",
-            "tag": "2025-12-16--20-07-31Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1885,6 +1891,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-12-10T14:52:38Z",
               "tag": "2025-12-10--14-52-38Z",
@@ -1935,8 +1948,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-12-10T14:52:38Z",
-            "tag": "2025-12-10--14-52-38Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -1978,6 +1990,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2025-12-10T14:52:38Z",
               "tag": "2025-12-10--14-52-38Z",
@@ -2028,8 +2047,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-12-10T14:52:38Z",
-            "tag": "2025-12-10--14-52-38Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2075,6 +2093,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-12-10T14:52:38Z",
               "tag": "2025-12-10--14-52-38Z",
               "compatibility": {
@@ -2124,8 +2149,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-12-10T14:52:38Z",
-            "tag": "2025-12-10--14-52-38Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2142,7 +2166,8 @@
           "attributes": {
             "name": "Ebola virus",
             "reference accession": "NC_002549.1",
-            "reference name": "COD/1976/Yambuku-Mayinga"
+            "reference name": "COD/1976/Yambuku-Mayinga",
+            "experimental": true
           },
           "files": {
             "treeJson": "tree.json",
@@ -2165,6 +2190,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-09-24T07:29:03Z",
               "tag": "2025-09-24--07-29-03Z",
               "compatibility": {
@@ -2174,8 +2206,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-24T07:29:03Z",
-            "tag": "2025-09-24--07-29-03Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2190,7 +2221,8 @@
           "attributes": {
             "name": "Sudan virus",
             "reference accession": "NC_006432.1",
-            "reference name": "UGA/2000/Gulu-808892"
+            "reference name": "UGA/2000/Gulu-808892",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -2211,6 +2243,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-09-24T07:29:03Z",
               "tag": "2025-09-24--07-29-03Z",
               "compatibility": {
@@ -2220,8 +2259,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-24T07:29:03Z",
-            "tag": "2025-09-24--07-29-03Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2259,6 +2297,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
               "compatibility": {
@@ -2276,8 +2321,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2339,7 +2383,8 @@
           "attributes": {
             "name": "Dengue virus All serotypes",
             "reference accession": "NC_002640",
-            "reference name": "dengue virus type 4"
+            "reference name": "dengue virus type 4",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -2358,6 +2403,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-09-09T12:13:13Z",
               "tag": "2025-09-09--12-13-13Z",
               "compatibility": {
@@ -2375,8 +2427,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-09T12:13:13Z",
-            "tag": "2025-09-09--12-13-13Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -2532,13 +2583,15 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2025-11-04T15:46:13Z",
               "tag": "2025-11-04--15-46-13Z"
             }
           ],
           "version": {
-            "updatedAt": "2025-11-04T15:46:13Z",
-            "tag": "2025-11-04--15-46-13Z"
+            "tag": "unreleased"
           }
         },
         {
@@ -2590,7 +2643,8 @@
           "attributes": {
             "name": "Mumps MuV Genotypes (SH gene 315nt region)",
             "reference name": "Jeryl-Lynn (genotype A)",
-            "reference accession": "D90232"
+            "reference accession": "D90232",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -2650,7 +2704,8 @@
           "attributes": {
             "name": "Mumps MuV Genotypes (Full genome)",
             "reference name": "Jeryl-Lynn (genotype A)",
-            "reference accession": "D90232"
+            "reference accession": "D90232",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -3214,6 +3269,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2025-09-19T14:53:06Z",
               "tag": "2025-09-19--14-53-06Z",
               "compatibility": {
@@ -3223,8 +3285,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2025-09-19T14:53:06Z",
-            "tag": "2025-09-19--14-53-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -6712,6 +6773,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-03-04T12:40:26Z",
               "tag": "2026-03-04--12-40-26Z",
               "compatibility": {
@@ -6721,8 +6789,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-03-04T12:40:26Z",
-            "tag": "2026-03-04--12-40-26Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"

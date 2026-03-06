@@ -20,15 +20,13 @@
   "attributes": {
     "name": "Mumps MuV Genotypes (SH gene 315nt region)",
     "reference name": "Jeryl-Lynn (genotype A)",
-    "reference accession": "D90232"
+    "reference accession": "D90232",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
