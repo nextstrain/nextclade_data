@@ -5,6 +5,8 @@ Builds a fresh data repo from source data
 """
 import argparse
 import json
+import os
+import sys
 import time
 from collections import defaultdict
 from copy import deepcopy
@@ -15,7 +17,7 @@ from pathlib import Path
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
   dict_remove_many, find_duplicates, dict_cleanup, find, unique, JsonPath
-from lib.schema import validate_pathogen_json, print_defect_summary, ValidationContext
+from lib.schema import validate_pathogen_json, print_defect_summary, write_defect_summary_markdown, ValidationContext
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
@@ -445,7 +447,15 @@ def main():
         time.sleep(5)
         publish_to_github_releases(args, tag, commit_hash, release_notes)
 
-  print_defect_summary(validation_ctx)
+  error_count = print_defect_summary(validation_ctx)
+
+  summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+  if summary_path:
+    with open(summary_path, "a") as f:
+      write_defect_summary_markdown(validation_ctx, f)
+
+  if error_count > 0:
+    sys.exit(1)
 
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
