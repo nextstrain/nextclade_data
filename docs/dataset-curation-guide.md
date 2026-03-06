@@ -78,13 +78,13 @@ This section describes a sequence of steps to add a new Nextclade dataset for a 
 
 - Submit your changes as a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to the `nextstrain/nextclade_data` repository on GitHub.
 
-  > ⚠️ Note that `nextstrain-bot` will automatically run the rebuild script, and will commit changes to the `data/` and `data_output/` directories on your git branch. Don't forget to pull these changes if you are going to make more commits.
+  > ⚠️ `nextstrain-bot` will automatically run the rebuild script and commit changes to the `data/` and `data_output/` directories on your git branch. Pull these changes if you are going to make more commits.
 
-  > ⚠️ Note that if you are working from a fork, `nextstrain-bot` will not run, for security reasons: neither in your forked repo (because it does not have permissions), nor in our upstream repo when you submit a Pull Request (because we cannot grant write access to anyone forking our repo).
+  > ⚠️ Automated validation runs on all pull requests, including those from forks. The validation checks GFF files, pathogen.json schema compliance, and known defect patterns. If the validation check shows a red X, click "Details" to see the validation summary and fix the reported issues.
+
+  > ⚠️ If you are working from a fork, `nextstrain-bot` will not commit `data_output/` changes on your branch, for security reasons: the bot cannot run in forked repos or on fork PRs. A maintainer will handle the `data_output/` rebuild after review. Make sure the ["Allow edits from maintainers"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) checkbox is enabled so `nextstrain-bot` and maintainers can push to your branch.
   >
-  > This will likely result in failing GitHub Actions checks. You can safely ignore them or even disable GitHub Actions. Unless you have a particular use for Actions, in which case you can set it up on your own.
-  >
-  > In order to build a dataset server distribution, either [run rebuild script locally](#running-rebuild-script-locally), or ask a member of Nextstrain team to run it for you.
+  > To build a dataset server distribution locally, [run the rebuild script](#running-rebuild-script-locally).
 
 - Optionally, [test your dataset from GitHub](#testing-datasets-from-github)
 
