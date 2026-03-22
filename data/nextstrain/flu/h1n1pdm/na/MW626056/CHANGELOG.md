@@ -1,5 +1,6 @@
 ## Unreleased
-
+ - add subclade [D.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/main/subclades/D.3.yml)
+ - add HA clade annotations to tree
 
 ## 2026-01-14T08:53:00Z
 Update reference tree.
