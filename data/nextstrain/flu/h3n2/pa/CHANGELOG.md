@@ -1,3 +1,7 @@
+## Unreleased
+- updates to reference trees
+ - added coloring by HA and NA clades by isolate
+
 ## 2026-01-14T08:53:00Z
 - addition of trees to datasets for internal segments of Influenza A and B viruses
 
