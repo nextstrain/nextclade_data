@@ -23,7 +23,6 @@ Examples:
   ./scripts/cleanup_data_output --force
 """
 
-import json
 import os
 import shutil
 from pathlib import Path

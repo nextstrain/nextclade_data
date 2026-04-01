@@ -1,8 +1,49 @@
 from collections import namedtuple, Counter
-from functools import reduce
-from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any, Hashable, Optional, Sequence
+from dataclasses import dataclass
+from typing import List, Iterable, TypeVar, Callable, Union, Dict, Any, Hashable, Optional, Sequence, Iterator
 
 T = TypeVar('T')
+
+
+@dataclass(frozen=True)
+class JsonPath:
+  """Path-tracking wrapper for JSON traversal with automatic error context."""
+  data: Any
+  path: str = ""
+
+  def get(self, key: str) -> "JsonPath":
+    new_path = f"{self.path}.{key}" if self.path else key
+    if self.data is None:
+      return JsonPath(None, new_path)
+    if not isinstance(self.data, dict):
+      raise TypeError(f"expected dict at '{self.path or '(root)'}' while accessing '{key}', got {type(self.data).__name__}")
+    return JsonPath(self.data.get(key), new_path)
+
+  def items(self) -> Iterator[tuple[str, "JsonPath"]]:
+    if self.data is None:
+      return
+    if not isinstance(self.data, dict):
+      raise TypeError(f"expected dict at '{self.path or '(root)'}', got {type(self.data).__name__}")
+    for k, v in self.data.items():
+      yield k, JsonPath(v, f"{self.path}.{k}" if self.path else k)
+
+  def __iter__(self) -> Iterator["JsonPath"]:
+    if self.data is None:
+      return
+    if not isinstance(self.data, list):
+      raise TypeError(f"expected list at '{self.path or '(root)'}', got {type(self.data).__name__}")
+    for i, v in enumerate(self.data):
+      yield JsonPath(v, f"{self.path}[{i}]")
+
+  def __bool__(self) -> bool:
+    return self.data is not None and bool(self.data)
+
+  @property
+  def val(self) -> Any:
+    return self.data
+
+  def or_default(self, default: T) -> T:
+    return self.data if self.data is not None else default
 
 
 def is_iterable(obj):
@@ -14,13 +55,34 @@ def dict_to_namedtuple(name: str, dic: dict):
 
 
 def dict_set(obj: dict, key_path: List[str], value):
-  for key in key_path[:-1]:
+  for i, key in enumerate(key_path[:-1]):
+    _assert_dict(obj, key_path, i)
     obj = obj.setdefault(key, {})
+  _assert_dict(obj, key_path, len(key_path) - 1)
   obj[key_path[-1]] = value
 
 
 def dict_get(obj: dict, keys: List[str]):
-  return reduce(lambda d, key: d.get(key) if d else None, keys, obj)
+  current = obj
+  for i, key in enumerate(keys):
+    if current is None:
+      return None
+    _assert_dict(current, keys, i)
+    current = current.get(key)
+  return current
+
+
+def _assert_dict(obj: Any, keys: List[str], index: int):
+  if isinstance(obj, dict):
+    return
+  try:
+    traversed = '.'.join(str(k) for k in keys[:index]) if index > 0 else None
+    remaining = '.'.join(str(k) for k in keys[index:]) or '?'
+    location = f"after '{traversed}'" if traversed else "at root"
+    type_name = type(obj).__name__
+  except Exception:
+    location, remaining, type_name = "at unknown", "?", "?"
+  raise TypeError(f"expected dict {location} while accessing '{remaining}', got {type_name}")
 
 
 def dict_get_required(obj: dict, keys: List[str]):
@@ -114,10 +176,10 @@ def find_duplicates(it: Iterable[T]) -> List[T]:
 
 
 def format_list(it: Iterable, sep: str = ", ", marker="", quote="'") -> str:
-  if quote == False or quote is None:
+  if not quote:
     quote = ""
   return sep.join(map(lambda x: f"{quote}{marker}{x}{quote}", it))
 
 
-def true_or_none(x: Union[bool, None]) -> Union[bool, None]:
-  return True if x == True else None
+def true_or_none(x: bool | None) -> bool | None:
+  return True if x else None

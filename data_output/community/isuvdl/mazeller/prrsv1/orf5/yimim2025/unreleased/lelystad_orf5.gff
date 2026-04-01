@@ -1,0 +1,4 @@
+##gff-version 3
+##sequence-region	lelystad_orf5	1	606
+lelystad_orf5	Geneious	extracted region	1	606	.	+	.	Name=Extracted region from LEYPOLYENV
+lelystad_orf5	Geneious	gene	1	606	.	+	0	Name=ORF5 CDS

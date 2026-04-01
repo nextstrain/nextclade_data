@@ -8,6 +8,7 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser(description='Annotate sequences using a genbank reference')
     parser.add_argument('--reference', required=True, type=str, help='Genbank accession of reference sequence (will be fetched from genbank)')
+    parser.add_argument('--sequence-file', required=False, type=str, help='genbank')
     parser.add_argument('--include-parent-features', action='store_true', help='Include parent features of CDS in the output')
     parser.add_argument('--output-dir', required=True, type=str, help='Output directory')
     return parser.parse_args()
@@ -62,7 +63,14 @@ def check_name(new_name):
 
 if __name__=="__main__":
     args = parse_args()
-    reference = get_reference_sequence(args.reference)
+
+    if args.sequence_file:
+        print(f"Reading reference sequence from file: {args.sequence_file}")
+        reference = SeqIO.read(args.sequence_file, "genbank")
+    else:
+        reference = get_reference_sequence(args.reference)
+
+
     gff = get_gff(args.reference)
     if not os.path.isdir(args.output_dir):
         os.makedirs(args.output_dir)
@@ -214,6 +222,10 @@ if __name__=="__main__":
 
         # write the CDS lines
         for cds in streamlined_cds:
+            if 'pseudo' in streamlined_cds[cds][0][1]:
+                print(f"Skipping pseudo CDS '{cds}'.")
+                continue
+
             if len(streamlined_cds[cds])==0:
                 continue
             if 'Parent' in streamlined_cds[cds][0][1]:

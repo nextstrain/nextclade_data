@@ -14,22 +14,19 @@
     "allowedMismatches": 15,
     "minMatchLength": 20,
     "maxAlignmentAttempts": 5,
-    "includeNearestNodeInfo": true,
     "retryReverseComplement": true,
     "minSeedCover": 0.1
   },
   "attributes": {
     "name": "Mumps MuV Genotypes (Full genome)",
     "reference name": "Jeryl-Lynn (genotype A)",
-    "reference accession": "D90232"
+    "reference accession": "D90232",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",
@@ -52,13 +49,11 @@
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,
-      "scoreBias": 500,
-      "scoreWeight": 50
+      "scoreBias": 500
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 15,
-      "scoreWeight": 50
+      "mixedSitesThreshold": 15
     },
     "frameShifts": {
       "enabled": true,
@@ -68,5 +63,8 @@
       "enabled": true,
       "scoreWeight": 50
     }
+  },
+  "generalParams": {
+    "includeNearestNodeInfo": true
   }
 }

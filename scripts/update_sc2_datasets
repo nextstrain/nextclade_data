@@ -14,10 +14,6 @@
 set -euxo pipefail
 trap 'exit' INT
 
-# Directory where this script resides
-THIS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)"
-
-
 BRANCH="auto-update-sc2-datasets"
 TITLE="Update SARS-CoV-2 datasets [automated]"
 
@@ -54,7 +50,7 @@ function update_dataset() {
       -H "Accept: application/vnd.nextstrain.dataset.main+json;q=1, application/json;q=0.9, text/plain;q=0.8, */*;q=0.1" \
       "${tree_url}"
 
-  echo -e "$(write_changelog "${dataset_name}")\n\n$(<data/${dataset_name}/CHANGELOG.md)" > "data/${dataset_name}/CHANGELOG.md"
+  echo -e "$(write_changelog "${dataset_name}")\n\n$(<"data/${dataset_name}/CHANGELOG.md")" > "data/${dataset_name}/CHANGELOG.md"
 }
 export -f update_dataset
 parallel --jobs "${#trees[@]}" update_dataset :::+ "${!trees[@]}" :::+ "${trees[@]}"
@@ -77,7 +73,11 @@ fi
 git switch --quiet --create "${BRANCH}"
 
 # Stage commit and push the changes
-git add $(printf "data/%s/tree.json " "${trees[@]}") $(printf "data/%s/CHANGELOG.md " "${trees[@]}")
+add_files=()
+for dataset in "${trees[@]}"; do
+  add_files+=("data/${dataset}/tree.json" "data/${dataset}/CHANGELOG.md")
+done
+git add "${add_files[@]}"
 git commit --quiet -m "${TITLE}"
 git push --quiet --set-upstream origin "${BRANCH}"
 

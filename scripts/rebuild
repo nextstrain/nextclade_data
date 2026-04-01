@@ -5,21 +5,26 @@ Builds a fresh data repo from source data
 """
 import argparse
 import json
+import sys
 import time
 from collections import defaultdict
 from copy import deepcopy
 from os import getcwd
 from os.path import dirname, realpath, join, relpath, isfile
+from pathlib import Path
 
 from lib.changelog import changelog_prepare, changelog_get_unreleased_section
 from lib.container import dict_get, dict_get_required, find_index_by, first, format_list, \
-  dict_remove_many, find_duplicates, dict_cleanup, find, unique
+  dict_remove_many, find_duplicates, dict_cleanup, find, unique, JsonPath
+from lib.reporting import reporter
+from lib.reporting_model import DefectFinding, Severity
+from lib.schema import validate_pathogen_json, ValidationContext
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq, fasta_read
 from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   github_create_release, git_pull, git_commit_all, git_push
-from lib.logger import l
+from lib.logger import logger
 from lib.minimizer import make_ref_search_index, serialize_ref_search_index
 
 
@@ -29,7 +34,7 @@ JSON_SCHEMA_URL_INDEX_JSON = "https://raw.githubusercontent.com/nextstrain/nextc
 def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
   ref_filename = dict_get(pathogen_json, ["files", "reference"])
   if not ref_filename:
-    raise FileNotFoundError(f"Reference sequence file must be declared `.files.reference` field of pathogen.json")
+    raise FileNotFoundError("Reference sequence file must be declared `.files.reference` field of pathogen.json")
 
   files = dict_get_required(pathogen_json, ["files"])
   for (name, filename) in files.items():
@@ -63,8 +68,8 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
     other.append("aaMotifs")
 
   qc = []
-  for k, q in (dict_get(pathogen_json, ["qc"]) or {}).items():
-    if dict_get(q, ["enabled"]):
+  for k, q in JsonPath(pathogen_json, "pathogen_json").get("qc").items():
+    if q.get("enabled").val:
       qc.append(k)
 
   custom_clades = dict_cleanup({attr: len(values) for attr, values in custom_clades.items() if len(values) > 0})
@@ -126,41 +131,48 @@ def dataset_get_versions(dataset):
   return versions, last_version
 
 
-def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str):
+def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, updated_at: str, validation_ctx):
   pathogen_json = json_read(pathogen_json_path)
   dataset_dir = dirname(pathogen_json_path)
   path = relpath(dataset_dir, args.input_dir)
+  reporter.dataset_start(path)
 
-  ref = get_ref_seq(pathogen_json, dataset_dir)
-  check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
+  try:
+    validate_pathogen_json(pathogen_json, pathogen_json_path, validation_ctx, args.nextclade_schemas_dir, dataset_path=path)
 
-  # get references for minimizer index (may be multiple)
-  minimizer_refs = get_minimizer_refs(pathogen_json, dataset_dir)
+    ref = get_ref_seq(pathogen_json, dataset_dir)
+    check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
 
-  versions, last_version = dataset_get_versions(dataset)
+    # get references for minimizer index (may be multiple)
+    minimizer_refs = get_minimizer_refs(pathogen_json, dataset_dir)
 
-  if dataset_has_changes(dataset, dataset_dir):
-    new_version = dict_cleanup({
-      "updatedAt": None if tag == "unreleased" else updated_at,
-      "tag": tag,
-      "compatibility": dict_get(pathogen_json, ["compatibility"]),
+    versions, last_version = dataset_get_versions(dataset)
+
+    if dataset_has_changes(dataset, dataset_dir):
+      new_version = dict_cleanup({
+        "updatedAt": None if tag == "unreleased" else updated_at,
+        "tag": tag,
+        "compatibility": dict_get(pathogen_json, ["compatibility"]),
+      })
+      versions.insert(0, new_version)
+      last_version = new_version
+
+    dataset_out = dict_cleanup({
+      "path": path,
+      "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
+      "attributes": dict_get(pathogen_json, ["attributes"]),
+      "maintenance": dict_get(pathogen_json, ["maintenance"]),
+      "files": dict_get_required(pathogen_json, ["files"]),
+      "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
+      "versions": versions,
+      "version": last_version,
     })
-    versions.insert(0, new_version)
-    last_version = new_version
 
-  dataset_out = dict_cleanup({
-    "path": path,
-    "shortcuts": dict_get(pathogen_json, ["shortcuts"]),
-    "enabled": False if dict_get(pathogen_json, ["enabled"]) == False else True,
-    "attributes": dict_get(pathogen_json, ["attributes"]),
-    "maintenance": dict_get(pathogen_json, ["maintenance"]),
-    "files": dict_get_required(pathogen_json, ["files"]),
-    "capabilities": get_dataset_capabilities(pathogen_json, dataset_dir),
-    "versions": versions,
-    "version": last_version,
-  })
-
-  return dataset_out, minimizer_refs
+    reporter.dataset_finish(path, "ok")
+    return dataset_out, minimizer_refs
+  except Exception:
+    reporter.dataset_finish(path, "error")
+    raise
 
 
 def get_ref_seq(pathogen_json, dataset_dir):
@@ -170,18 +182,18 @@ def get_ref_seq(pathogen_json, dataset_dir):
   try:
     return fasta_read_exactly_one_seq(ref_filepath)
   except Exception as e:
-    raise ValueError(f"When reading reference sequence") from e
+    raise ValueError("When reading reference sequence") from e
 
 
 def get_minimizer_refs(pathogen_json, dataset_dir):
   """
   Get reference sequences for minimizer index.
 
-  If minimizerReferences is specified (array of file paths), returns sequences
-  from all files combined. Otherwise, returns the main reference sequence.
+  If buildFiles.minimizerReferences is specified (array of file paths), returns
+  sequences from all files combined. Otherwise, returns the main reference sequence.
   """
-  files = dict_get(pathogen_json, ["files"]) or {}
-  minimizer_refs_filenames = dict_get(files, ["minimizerReferences"]) or []
+  build_files = dict_get(pathogen_json, ["buildFiles"]) or {}
+  minimizer_refs_filenames = dict_get(build_files, ["minimizerReferences"]) or []
 
   if len(minimizer_refs_filenames) > 0:
     all_refs = []
@@ -221,8 +233,23 @@ def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir) -> 
           "This warning signals that there is a potential for failures if the mismatch is not intended."
         )
         if len(alignment_ref) != len(tree_root):
-          l.warning(
-            f"{shared_log_prefix} Reference sequence length: {len(alignment_ref)}, Auspice JSON root sequence length: {len(tree_root)}"
+          reporter.report_defect(
+            DefectFinding(
+              severity=Severity.WARNING,
+              code="dataset.reference_mismatch.length",
+              title="Reference mismatch",
+              problem="Reference sequence length does not match Auspice root sequence length",
+              impact="Dataset reference sources disagree and downstream behavior can be wrong if the mismatch is unintended",
+              dataset_path=path,
+              filepath=tree_json_path,
+              recommended_action="Ensure reference.fasta and tree.json root sequence describe the same reference sequence",
+              source="dataset-integrity-check",
+              details={
+                "reference_length": len(alignment_ref),
+                "tree_root_length": len(tree_root),
+                "message": shared_log_prefix,
+              },
+            )
           )
           return
 
@@ -230,8 +257,23 @@ def check_ref_seq_mismatch(path, standalone_ref, pathogen_json, dataset_dir) -> 
         for i, (a, b) in enumerate(zip(alignment_ref, tree_root), start=1):
           if a != b:
             mismatches.append(f"{a}{i}{b}")
-        l.warning(
-          f"{shared_log_prefix} Mismatches (refbase>pos>treerootbase): {', '.join(mismatches)}"
+        reporter.report_defect(
+          DefectFinding(
+            severity=Severity.WARNING,
+            code="dataset.reference_mismatch.base",
+            title="Reference mismatch",
+            problem="Reference sequence content does not match Auspice root sequence content",
+            impact="Dataset reference sources disagree and downstream behavior can be wrong if the mismatch is unintended",
+            dataset_path=path,
+            filepath=tree_json_path,
+            recommended_action="Ensure reference.fasta and tree.json root sequence describe the same reference sequence",
+            source="dataset-integrity-check",
+            details={
+              "mismatch_count": len(mismatches),
+              "mismatch_preview": mismatches[:20],
+              "message": shared_log_prefix,
+            },
+          )
         )
 
 
@@ -256,7 +298,7 @@ def get_new_dataset_order(datasets, dataset_order):
 
   missing = set(paths).difference(set(dataset_order))
   if len(missing):
-    l.info(
+    logger.info(
       f"Adding '.dataset_order' entries to 'collection.json' for the following datasets: {format_list(missing)}. "
       f"Please reorder them manually as needed. This order is used when displaying datasets of the collection in the "
       f"user interface."
@@ -331,11 +373,11 @@ def parse_args():
                       help='Where to temporarily store release files')
 
   parser.add_argument('--no-pull', action='store_true',
-                      help="Skip pulling latest changes from remote. Note that if "
+                      help="Skip pulling latest changes from remote. If "
                            "there are incompatible changes this can create hard to resolve merge conflicts.")
   parser.add_argument('--allow-dirty', action='store_true',
-                      help="Allow working directory to contain uncommitted files. Note that these files will also be "
-                           "committed and can potentially be released along with the datasets",
+                      help="Allow working directory to contain uncommitted files. These files will also be "
+                           "committed and released along with the datasets",
                       )
   parser.add_argument('--commit', action='store_true', help="Commit updates into the repository")
   parser.add_argument('--push', action='store_true', help="Push updates into the remote repository. Implies --commit")
@@ -343,8 +385,14 @@ def parse_args():
   parser.add_argument('--repo', required=False,
                       help="GitHub repo to push and to release to. You need to have write permission for that."
                       )
+  parser.add_argument('--nextclade-schemas-dir', required=False,
+                      help="Local directory containing nextclade schema files (e.g., ../nextclade/packages/nextclade-schemas). "
+                           "When set, schemas are loaded from this directory instead of fetching from GitHub."
+                      )
+  parser.add_argument('--report-jsonl', required=False, help='Write structured machine-readable JSONL report to this file')
 
   args = parser.parse_args()
+  reporter.configure(report_jsonl_path=args.report_jsonl)
 
   if args.push and not args.repo:
     parser.error("--push requires --repo")
@@ -356,6 +404,13 @@ def parse_args():
 
   if args.push:
     args.commit = True
+
+  if args.nextclade_schemas_dir:
+    resolved = Path(args.nextclade_schemas_dir).resolve()
+    if not resolved.is_dir():
+      parser.error(f"--nextclade-schemas-dir: directory does not exist: {resolved}")
+    args.nextclade_schemas_dir = resolved
+    logger.info(f"Using local schema directory: {resolved}")
 
   return args
 
@@ -391,83 +446,90 @@ def validate_shortcuts(collections):
 
 def main():
   args = parse_args()
-
-  if not args.allow_dirty and not git_dir_is_clean():
-    dirty_files = "\n  ".join(git_get_dirty_files())
-    raise ValueError(
-      f"Uncommitted changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
-      f"override (not recommended):\n  {dirty_files}"
-    )
-
-  if not args.no_pull:
-    git_pull()
-
-  updated_at = now_iso()
-  tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
-  git_check_tag(tag)
-
-  collection_json_paths = list(find_files("collection.json", args.input_dir))
-
-  index_json_path = join(args.output_dir, "index.json")
+  validation_ctx = ValidationContext()
   try:
-    index_json = json_read(index_json_path)
-  except FileNotFoundError as _:
-    index_json = {}
+    with reporter.stage("Repository checks"):
+      if not args.allow_dirty and not git_dir_is_clean():
+        dirty_files = "\n  ".join(git_get_dirty_files())
+        raise ValueError(
+          f"Uncommitted changes detected. Refusing to proceed. Commit or stash changes first, or use --allow-dirty to "
+          f"override (not recommended):\n  {dirty_files}"
+        )
 
-  collections = []
-  release_infos = []
-  all_refs = {}
-  for collection_json_path in collection_json_paths:
-    collection, release_infos_for_dataset, refs = process_one_collection(
-      collection_json_path, index_json, args, tag, updated_at
-    )
-    collections.append(collection)
-    release_infos.extend(release_infos_for_dataset)
-    all_refs.update(refs)
+      if not args.no_pull:
+        git_pull()
 
-  collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
-  validate_shortcuts(collections)
+      updated_at = now_iso()
+      tag = iso_to_iso_safe(updated_at) if args.release else "unreleased"
+      git_check_tag(tag)
 
-  minimizer_index = make_ref_search_index(all_refs)
+    with reporter.stage("Build collections"):
+      collection_json_paths = list(find_files("collection.json", args.input_dir))
 
-  minimizer_index_json_path = "minimizer_index.json"
-  json_write(
-    serialize_ref_search_index(minimizer_index),
-    join(args.output_dir, minimizer_index_json_path),
-    no_sort_keys=True
-  )
+      index_json_path = join(args.output_dir, "index.json")
+      try:
+        index_json = json_read(index_json_path)
+      except FileNotFoundError as _:
+        index_json = {}
 
-  # if len(release_infos) == 0:
-  #   l.info("No dataset modifications detected. Will not release anything.")
-  #   return
+      collections = []
+      release_infos = []
+      all_refs = {}
+      for collection_json_path in collection_json_paths:
+        collection, release_infos_for_dataset, refs = process_one_collection(
+          collection_json_path, index_json, args, tag, updated_at, validation_ctx
+        )
+        collections.append(collection)
+        release_infos.extend(release_infos_for_dataset)
+        all_refs.update(refs)
 
-  index_json = {
-    "$schema": JSON_SCHEMA_URL_INDEX_JSON,
-    "schemaVersion": "3.0.0",
-    "collections": collections,
-    "minimizerIndex": [
-      {
-        "version": minimizer_index["version"],
-        "path": minimizer_index_json_path,
+      collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
+      validate_shortcuts(collections)
+
+    with reporter.stage("Build minimizer index"):
+      minimizer_index = make_ref_search_index(all_refs)
+
+      minimizer_index_json_path = "minimizer_index.json"
+      json_write(
+        serialize_ref_search_index(minimizer_index),
+        join(args.output_dir, minimizer_index_json_path),
+        no_sort_keys=True
+      )
+
+    with reporter.stage("Write output index"):
+      index_json = {
+        "$schema": JSON_SCHEMA_URL_INDEX_JSON,
+        "schemaVersion": "3.0.0",
+        "collections": collections,
+        "minimizerIndex": [
+          {
+            "version": minimizer_index["version"],
+            "path": minimizer_index_json_path,
+          }
+        ]
       }
-    ]
-  }
 
-  json_write(index_json, index_json_path, no_sort_keys=True)
+      json_write(index_json, index_json_path, no_sort_keys=True)
 
-  if args.commit:
-    commit_hash = commit_changes(args, tag, release_infos)
+    if args.commit:
+      with reporter.stage("Publish changes"):
+        commit_hash = commit_changes(args, tag, release_infos)
 
-    if args.push:
-      l.info("Pushing committed changes to GitHub")
-      git_push()
+        if args.push:
+          logger.info("Pushing committed changes to GitHub")
+          git_push()
 
-      if args.release:
-        l.info("Releasing to GitHub")
-        release_notes = aggregate_release_notes(release_infos)
-        l.info(f"Release notes:\n-------\n{release_notes}\n-------\nEnd of release notes\n")
-        time.sleep(5)
-        publish_to_github_releases(args, tag, commit_hash, release_notes)
+          if args.release:
+            logger.info("Releasing to GitHub")
+            release_notes = aggregate_release_notes(release_infos)
+            logger.info(f"Release notes:\n-------\n{release_notes}\n-------\nEnd of release notes\n")
+            time.sleep(5)
+            publish_to_github_releases(args, tag, commit_hash, release_notes)
+  finally:
+    reporter.write_outputs()
+
+  if reporter.error_count() > 0:
+    sys.exit(1)
 
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
@@ -478,7 +540,7 @@ def dataset_has_changes(dataset_from_index, dataset_dir):
   return len(modified_files) > 0
 
 
-def process_one_collection(collection_json_path, index_json, args, tag, updated_at):
+def process_one_collection(collection_json_path, index_json, args, tag, updated_at, validation_ctx):
   collection_json = json_read(collection_json_path)
   collection_dir = dirname(collection_json_path)
   collection_id = dict_get_required(collection_json, ["meta", "id"])
@@ -507,7 +569,7 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
     dataset_from_index = find(lambda dataset: dataset["path"] == path, datasets_from_index_json) or {}
 
     try:
-      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at)
+      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at, validation_ctx)
       datasets.append(dataset)
       # exclude deprecated datasets from list of refs that is later used to build minimizer index
       if not dataset['attributes'].get('deprecated', False):
@@ -525,7 +587,7 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
   json_write(collection_json, collection_json_path, no_sort_keys=True)
 
   release_infos = prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag,
-                                                updated_at)
+                                                updated_at, validation_ctx)
   release_infos = sort_release_infos(release_infos, dataset_order)
 
   collection_info = deepcopy(collection_json)
@@ -550,10 +612,11 @@ def get_datasets_from_index_json(index_json, collection_id):
   return dict_get(collection, ["datasets"]) or []
 
 
-def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag, updated_at):
+def prepare_dataset_release_infos(args, datasets, datasets_from_index_json, collection_dir, tag, updated_at, validation_ctx):
   release_infos = []
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     pathogen_json = json_read(pathogen_json_path)
+    validate_pathogen_json(pathogen_json, pathogen_json_path, validation_ctx, args.nextclade_schemas_dir)
     dataset_dir = dirname(pathogen_json_path)
     dataset_dir_rel = relpath(dataset_dir, args.input_dir)
 
@@ -618,20 +681,20 @@ def format_dataset_list_entry(release_info):
 
 
 def commit_changes(args, tag, release_infos):
-  l.info(f"Committing changes for '{tag}'")
+  logger.info(f"Committing changes for '{tag}'")
 
   commit_message = "chore: rebuild [skip ci]"
   if args.release:
     dataset_list = format_dataset_list(release_infos)
     commit_message = f"chore: release '{tag}'\n\nUpdated datasets:\n\n{dataset_list}"
 
-  l.info(f"Commit message:\n--------\n{commit_message}\n--------\nEnd of commit message\n\n")
+  logger.info(f"Commit message:\n--------\n{commit_message}\n--------\nEnd of commit message\n\n")
 
   return git_commit_all(commit_message)
 
 
 def publish_to_github_releases(args, tag, commit_hash, release_notes):
-  l.info(f"Publishing to GitHub Releases: tag: '{tag}', commit: '{commit_hash}'")
+  logger.info(f"Publishing to GitHub Releases: tag: '{tag}', commit: '{commit_hash}'")
   release_files = list(find_files("*", join(args.temp_dir)))
   github_create_release(
     repo=args.repo,
@@ -650,7 +713,7 @@ def prepare_dataset_release_info(dataset_dir, dataset, last_version, updated_at)
   #   return None
 
   path = dataset["path"]
-  l.info(f"Preparing release of '{path}'")
+  logger.info(f"Preparing release of '{path}'")
 
   changelog_path = join(dataset_dir, "CHANGELOG.md")
 
@@ -675,7 +738,8 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
     outpath = join(out_dir, file)
     if file == dict_get(files, ["tree"]):
       # Minify tree.json
-      json.dump(json_read(inpath), open(outpath, "w"), separators=(",", ":"), indent=None)
+      with open(outpath, "w") as f:
+        json.dump(json_read(inpath), f, separators=(",", ":"), indent=None)
     elif file == "pathogen.json":
       pathogen_json = json_read(inpath)
       pathogen_json["version"] = dataset["version"]
@@ -687,7 +751,7 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
   zip_filename = join(args.temp_dir, f"{path_safe}__{tag}.zip")
   make_zip(out_dir, zip_filename)
 
-  copy(f"{zip_filename}", join(out_dir, f"dataset.zip"))
+  copy(zip_filename, join(out_dir, "dataset.zip"))
 
   not_found_json = {"status": 404, "message": "Not found"}
   json_write(not_found_json, join(args.output_dir, "404.json"))
