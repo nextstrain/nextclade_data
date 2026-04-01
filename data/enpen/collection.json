@@ -23,6 +23,7 @@
     ]
   },
   "dataset_order": [
-    "enpen/enterovirus/ev-d68"
+    "enpen/enterovirus/ev-d68",
+    "enpen/enterovirus/cva16"
   ]
 }
