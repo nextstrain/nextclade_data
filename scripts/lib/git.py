@@ -1,13 +1,15 @@
+import shlex
 from os import getcwd
 from typing import List, Union
 
-from .logger import l
+from .logger import logger
 from .process import run
 from .string import quote
 
 
-def prepare_paths_args(paths: Union[str, List[str]] = getcwd()):
-  return ' '.join(quote([paths] if type(paths) == str else paths))
+def prepare_paths_args(paths: str | list[str] | None = None):
+  paths = paths or getcwd()
+  return ' '.join(quote([paths] if isinstance(paths, str) else paths))
 
 
 def get_lines(s: str):
@@ -16,12 +18,14 @@ def get_lines(s: str):
   return iter(filter(len, lines))
 
 
-def git_get_dirty_files(dirs: Union[str, List[str]] = getcwd()):
+def git_get_dirty_files(dirs: str | list[str] | None = None):
+  dirs = dirs or getcwd()
   lines = get_lines(run(f"git status --untracked --porcelain -- {prepare_paths_args(dirs)}"))
   return iter(map(lambda line: line.split(" ")[1], lines))
 
 
-def git_dir_is_clean(dirs: Union[str, List[str]] = getcwd()):
+def git_dir_is_clean(dirs: str | list[str] | None = None):
+  dirs = dirs or getcwd()
   return len(list(git_get_dirty_files(dirs))) == 0
 
 
@@ -35,10 +39,11 @@ def git_get_current_commit_hash(branch: str = "HEAD", short=False):
 
 
 def git_get_modified_files(
-  from_revision: str = git_get_initial_commit_hash(),
-  to_revision: str = git_get_current_commit_hash(),
-  dirs: Union[str, List[str]] = getcwd()
+  from_revision: str | None = None,
+  to_revision: str | None = None,
+  dirs: Union[str, List[str]] | None = None
 ):
+  dirs = dirs or getcwd()
   from_revision = from_revision or git_get_initial_commit_hash()
   to_revision = to_revision or git_get_current_commit_hash()
   return get_lines(
@@ -60,10 +65,10 @@ def git_add_all():
 
 def git_commit(commit_message: str):
   try:
-    run(f"git commit -q -m '{commit_message}'")
+    run(f"git commit -q -m {shlex.quote(commit_message)}")
   except ValueError as e:
     if "nothing to commit, working tree clean" in str(e):
-      l.info("nothing to commit, working tree clean")
+      logger.info("nothing to commit, working tree clean")
     else:
       raise e
 
@@ -91,14 +96,14 @@ def git_commit_and_push(commit_message):
 def github_create_release(repo: str, version: str, commit_hash: str, release_notes: str, files=None):
   if files is None:
     files = []
-  files = " ".join(quote(files))
+  files = " ".join(shlex.quote(f) for f in files)
   run(
     f"""
     gh release create \
-      '{version}' \
-      --repo "{repo}" \
-      --title "{version}" \
-      --target "{commit_hash}" \
+      {shlex.quote(version)} \
+      --repo {shlex.quote(repo)} \
+      --title {shlex.quote(version)} \
+      --target {shlex.quote(commit_hash)} \
       --notes-file - \
       {files}
     """,

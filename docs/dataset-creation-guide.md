@@ -37,7 +37,7 @@ As all sequences are aligned to the reference sequence and all mutations are rep
 
 A good reference sequence should be of high quality and cover the entire genome (or at least the regions of interest).
 
-A good default choice is an NCBI refseq. For example, for Zika virus, the most recent NCBI refseq is `NC_035889.1`. It is available on GenBank at <https://www.ncbi.nlm.nih.gov/nuccore/NC_012532.1>.
+A good default choice is an NCBI refseq. For example, for Zika virus, the most recent NCBI refseq is `NC_035889.1`. It is available on GenBank at <https://www.ncbi.nlm.nih.gov/nuccore/NC_035889.1>.
 
 If all current circulation is derived from a more recent common ancestor, it may be better to use a more recent reference sequence to reduce the number of mutations reported.
 
@@ -84,7 +84,7 @@ NC_035889.1	RefSeq	mature_protein_region_of_CDS	7668	10376	.	+	.	ID=id-YP_009428
 </details>
 
 <details>
-<summary> Modified GFF3 file for the Zika refseq `NC_012532.1` </summary>
+<summary> Modified GFF3 file for the Zika refseq `NC_035889.1` </summary>
 
 ```gff3
 ##gff-version 3
@@ -120,7 +120,7 @@ nextclade read-annotation my_annotation.gff3
 
 A `pathogen.json` config file is required to use a dataset with Nextclade web. Luckily, it is very simple to create by hand. All that is required is the schema version, a manifest of files and their paths. In addition, it is recommended to include basic attributes for display in the UI, such as name of the virus and the reference sequence.
 
-Lastly, one can enable basic quality control for frame shifts, stop codons, missing or ambiguous nucleotides and mutation clusters.
+Lastly, one can enable basic quality control for frame shifts, stop codons, missing or ambiguous nucleotides, mutation clusters, and private mutations.
 
 ```json
 {
@@ -143,27 +143,27 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
     "missingData": {
       "enabled": true,
       "missingDataThreshold": 2000,
-      "scoreBias": 500,
-      "scoreWeight": 50
+      "scoreBias": 500
     },
     "snpClusters": {
       "enabled": true,
       "windowSize": 100,
-      "clusterCutOff": 6,
-      "scoreWeight": 50
+      "clusterCutOff": 6
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 15,
-      "scoreWeight": 50
+      "mixedSitesThreshold": 15
+    },
+    "privateMutations": {
+      "enabled": true,
+      "typical": 8,
+      "cutoff": 100
     },
     "frameShifts": {
-      "enabled": true,
-      "scoreWeight": 20
+      "enabled": true
     },
     "stopCodons": {
-      "enabled": true,
-      "scoreWeight": 50
+      "enabled": true
     }
   }
 }
@@ -256,11 +256,9 @@ The example workflow is a good starting point, but if you want to customize the 
 
 ### Important considerations when creating a reference tree
 
- * **Align and translate your sequences using Nextclade with the final alignment parameters**: This will guarantee that the mutation annotation of the reference tree is consistent with the reference alignment that Nextclade does when it analyzes new query sequences. The command [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html#augur-make_parser-amino-acid-options) supports using the translation from Nextclade. Note that you might need a genbank reference file as support for gff3 in augur is incomplete.
- * **Choose sequences that represent relevant diversity**: The primary goal of the reference tree is to cover relevant diversity. So make sure also small clades are represented, ideally by several genomes such that their common ancestor approximates the common ancestor of the clade. Overrepresentation of clades with many very similar genomes is often not helpful.
- * **Inspect you alignment**: Alignment parameters might need fine tuning, in particular if your dataset is diverse or sequence has self-similar regions. Please see the FAQ section below for guidance.
-
-
+- **Align and translate your sequences using Nextclade with the final alignment parameters**: This will guarantee that the mutation annotation of the reference tree is consistent with the reference alignment that Nextclade does when it analyzes new query sequences. The command [`augur ancestral`](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/ancestral.html#augur-make_parser-amino-acid-options) supports using the translation from Nextclade. Note that you might need a genbank reference file as support for gff3 in augur is incomplete.
+- **Choose sequences that represent relevant diversity**: The primary goal of the reference tree is to cover relevant diversity. So make sure also small clades are represented, ideally by several genomes such that their common ancestor approximates the common ancestor of the clade. Overrepresentation of clades with many very similar genomes is often not helpful.
+- **Inspect you alignment**: Alignment parameters might need fine tuning, in particular if your dataset is diverse or sequence has self-similar regions. Please see the FAQ section below for guidance.
 
 ## Next steps
 
@@ -296,8 +294,17 @@ No, this is not required. However, the mutations from the reference sequence to 
 
 ### My virus is very diverse; many sequences don't align!
 
-Nextclade was initially built for the analysis of SARS-COV-2 genomes that were all very similar to the reference. This is reflected in the default alignment parameters. For more diverse viruses, you can tune the alignment and seed-matching parameters by setting these parameters in the `pathogen.json`.
-Suggested parameters for high diversity viruses are given below (note that comments are not allowed in JSON, please remove `//...` when copying this into your `pathogen.json`):
+Nextclade was initially built for the analysis of SARS-COV-2 genomes that were all very similar to the reference. This is reflected in the default alignment parameters. For more diverse viruses, set `"alignmentPreset": "high-diversity"` in the `alignmentParams` section of `pathogen.json`. This preset adjusts gap penalties, seed matching, and alignment band width to handle diverse sequences. It is equivalent to the individual parameter overrides listed below, and is the recommended starting point.
+
+```json
+"alignmentParams": {
+    "alignmentPreset": "high-diversity"
+}
+```
+
+This feature is experimental and subject to adjustments. Valid values are `"default"` (similar sequences, the built-in default) and `"high-diversity"` (diverse viruses).
+
+Individual parameters override the preset and are useful for further fine-tuning. Suggested parameters for high diversity viruses are given below (comments are not allowed in JSON, remove `//...` when copying this into your `pathogen.json`):
 
 ```json5
     "alignmentParams": {

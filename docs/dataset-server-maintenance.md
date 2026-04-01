@@ -26,7 +26,7 @@ A "Nextclade dataset collection" is a collection of multiple datasets grouped by
 ### Continuous integration (CI)
 
 Dataset maintenance process is automated using GitHub Actions. The GitHub Actions workflow is described
-in [.github/workflows/data-curation.yml](.github/workflows/data-curation.yml). It runs on every pull request on GitHub and push to a major branch.
+in [.github/workflows/build-and-deploy.yml](.github/workflows/build-and-deploy.yml). It runs on every pull request on GitHub and push to a major branch.
 
 The GitHub Action rebuilds a fresh, complete data server directory (`data_output/`), including the datasets themselves and required index files. It then uploads the directory to one of the deployment environments, so that the new data becomes available for Nextclade users.
 
@@ -76,6 +76,8 @@ The discussion of file servers is out of scope here, but the minimum requirement
 - Nextclade software should be able to access the server address over HTTP protocol. The server could be accessible publicly on the internet, or only in your private network, or just locally on your computer - it does not matter. What matter is that there should be an HTTP route from the computer where Nextclade is to the computer where the datasets are deployed. Any authentication should be included into the server URL.
 
 - In order for datasets to be usable in Nextclade Web, [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) should be enabled on your server. This is a requirement of most web browsers. Please refer to your server's documentation on how to enable CORS.
+
+- **Localhost servers:** Chromium-based browsers block requests from `https://clades.nextstrain.org` to localhost due to [Private Network Access](https://developer.chrome.com/blog/private-network-access-update) restrictions. Use file drag-and-drop, Nextclade CLI, or host files on a public server instead.
 
 After the dataset server is deployed, make sure files can be accessed (downloaded) from a web browser and/or using `curl` command.
 

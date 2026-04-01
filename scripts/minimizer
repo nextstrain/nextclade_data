@@ -90,7 +90,7 @@ def run_search(index, qrys):
     print(f"\t{ref['name']}\t{overall_hits[i]}")
   ## we could offer the user to run the analysis on these datasets in reverse order of the number of hits
 
-  print(f"\nIndex statistics:")
+  print("\nIndex statistics:")
   print(f"\tNumber of references: {len(index['references'])}")
   print(f"\tNumber of minimizers: {len(index['minimizers'])}")
   print(

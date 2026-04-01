@@ -1,0 +1,4 @@
+##gff-version 3
+##sequence-region MW626056.1 1 1433
+MW626056.1	annotation	remark	1	1433	.	.	.	accessions=MW626056;
+MW626056.1	feature	gene	9	1418	.	+	.	codon_start=1;gene=NA;gene_name=NA;product=neuraminidase;protein_id=QRV63257.1;

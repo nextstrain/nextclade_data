@@ -1,0 +1,56 @@
+name: "validate-pr"
+
+on:
+  pull_request:
+
+permissions:
+  contents: "read"
+
+concurrency:
+  group: "validate-pr-${{ github.event.pull_request.number || github.run_id }}"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: "bash -euxo pipefail {0}"
+
+env:
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  validate:
+    runs-on: "ubuntu-24.04"
+
+    steps:
+      - name: "Checkout PR code"
+        uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
+        with:
+          repository: "${{ github.event.pull_request.head.repo.full_name }}"
+          ref: "${{ github.event.pull_request.head.ref }}"
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: "Install system dependencies"
+        run: "sudo apt-get install genometools python3 --yes -qq >/dev/null"
+
+      - name: "Install Python dependencies"
+        run: "pip3 install -r requirements.txt"
+
+      - name: "Validate GFF files"
+        run: "./scripts/validate-gff 'data/'"
+
+      - name: "Rebuild (validation only)"
+        id: "rebuild"
+        continue-on-error: true
+        run: "./scripts/rebuild --input-dir 'data/' --output-dir 'data_output/' --no-pull --allow-dirty"
+
+      - name: "Upload validation artifacts"
+        if: "always()"
+        uses: "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02" # v4.6.2
+        with:
+          name: "validation-output"
+          path: "data_output/"
+
+      - name: "Fail if rebuild or validation found errors"
+        if: "steps.rebuild.outcome == 'failure'"
+        run: "exit 1"

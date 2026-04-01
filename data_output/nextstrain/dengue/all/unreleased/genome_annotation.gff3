@@ -1,0 +1,14 @@
+##gff-version 3
+##sequence-region Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome 1 10649
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	102	440	.	+	.	codon_start=1;gene=C;gene_name=C;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	441	713	.	+	.	codon_start=1;gene=pr;gene_name=pr;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	441	938	.	+	.	codon_start=1;gene=M;gene_name=M;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	939	2423	.	+	.	codon_start=1;gene=E;gene_name=E;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	2424	3479	.	+	.	codon_start=1;gene=NS1;gene_name=NS1;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	3480	4133	.	+	.	codon_start=1;gene=NS2A;gene_name=NS2A;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	4134	4523	.	+	.	codon_start=1;gene=NS2B;gene_name=NS2B;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	4524	6377	.	+	.	codon_start=1;gene=NS3;gene_name=NS3;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	6378	6758	.	+	.	codon_start=1;gene=NS4A;gene_name=NS4A;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	6759	6827	.	+	.	codon_start=1;gene=2K;gene_name=2K;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	6828	7562	.	+	.	codon_start=1;gene=NS4B;gene_name=NS4B;
+Reconstructed_root_sequence_of_https_nextstrain_org_dengue/all/genome	feature	gene	7563	10262	.	+	.	codon_start=1;gene=NS5;gene_name=NS5;
