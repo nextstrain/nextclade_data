@@ -177,11 +177,11 @@ def get_minimizer_refs(pathogen_json, dataset_dir):
   """
   Get reference sequences for minimizer index.
 
-  If minimizerReferences is specified (array of file paths), returns sequences
-  from all files combined. Otherwise, returns the main reference sequence.
+  If buildFiles.minimizerReferences is specified (array of file paths), returns
+  sequences from all files combined. Otherwise, returns the main reference sequence.
   """
-  files = dict_get(pathogen_json, ["files"]) or {}
-  minimizer_refs_filenames = dict_get(files, ["minimizerReferences"]) or []
+  build_files = dict_get(pathogen_json, ["buildFiles"]) or {}
+  minimizer_refs_filenames = dict_get(build_files, ["minimizerReferences"]) or []
 
   if len(minimizer_refs_filenames) > 0:
     all_refs = []
