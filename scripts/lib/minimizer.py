@@ -139,5 +139,54 @@ def serialize_ref_search_index(index):
   return index
 
 
+def deserialize_ref_search_index(data: dict) -> dict:
+  data = copy.deepcopy(data)
+  data["minimizers"] = {int(k): v for k, v in data["minimizers"].items()}
+  data["normalization"] = np.array(data["normalization"])
+  return data
+
+
+def search_one_query(
+  index: dict,
+  qry: SeqRecord,
+) -> tuple[np.ndarray, np.ndarray]:
+  n_refs = len(index["references"])
+  minimizers = get_ref_search_minimizers(qry)
+  hit_count = np.zeros(n_refs, dtype=np.int32)
+  for m in minimizers:
+    if m in index["minimizers"]:
+      hit_count[index["minimizers"][m]] += 1
+  seq_len = len(preprocess_seq(qry))
+  normalized_hits = index["normalization"] * hit_count / seq_len
+  return normalized_hits, hit_count
+
+
+def filter_matches(
+  normalized_hits: np.ndarray,
+  hit_count: np.ndarray,
+  min_score: float,
+  min_hits: int,
+  max_score_gap: float,
+  all_matches: bool,
+) -> list[tuple[int, float, int]]:
+  total_hits = int(np.sum(hit_count))
+  max_score = float(np.max(normalized_hits))
+  if max_score < min_score or total_hits < min_hits:
+    return []
+
+  order = np.argsort(normalized_hits)[::-1]
+  matches = []
+  for idx in order:
+    score = float(normalized_hits[idx])
+    if score < min_score:
+      break
+    if matches and matches[-1][1] - score > max_score_gap:
+      break
+    matches.append((int(idx), score, int(hit_count[idx])))
+    if not all_matches:
+      break
+  return matches
+
+
 def to_bitstring(arr) -> str:
   return "".join([str(x) for x in arr])

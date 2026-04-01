@@ -1,114 +1,343 @@
 #!/usr/bin/env python3
-
-"""
-Runs minimizers test: creates an index of refs and performs search on query sequences.
-
-Example:
-
-  ./scripts/minimizer \
-    --input-refs tests/minimizers/data/references.fasta \
-    --input-qrys tests/minimizers/data/queries.fasta \
-    --output-json tests/minimizers/output/minimizer_index.json
-
-"""
+#
+# Usage: minimizer <command> [options]
+#
+# Build and search minimizer indexes for dataset auto-detection.
+#
+# Commands:
+#   build   Build a minimizer index from reference sequences
+#   search  Search query sequences against a minimizer index
+#
+# build arguments:
+#   -r, --refs FASTA [FASTA ...]   Reference FASTA files. Each sequence becomes
+#                                  a separate index entry (unless --group-by-file)
+#   -d, --from-dataset DIR         Dataset directory with pathogen.json. Reads
+#                                  buildFiles.minimizerReferences for multi-ref,
+#                                  falls back to files.reference
+#   -g, --group-by-file            Treat each FASTA file as one index entry with
+#                                  all its sequences contributing minimizers
+#   -o, --output JSON              Output minimizer index JSON path
+#
+# search arguments:
+#   -i, --index JSON               Pre-built minimizer index JSON file
+#   -q, --queries FASTA [FASTA ...]  Query FASTA files to match against the index
+#   -O, --output-dir DIR           Write matched sequences to per-dataset
+#                                  subdirectories (<dir>/<name>/sequences.fasta).
+#                                  Unmatched go to <dir>/unmatched.fasta
+#   -s, --min-score FLOAT          Minimum normalized score (default: 0.1)
+#   -n, --min-hits INT             Minimum raw hit count (default: 10)
+#   -G, --max-score-gap FLOAT      Discard secondary matches whose score drops
+#                                  more than this below the previous (default: 0.2)
+#   -a, --all-matches              Show all matching datasets per query, not just
+#                                  the best
+#
+# Examples:
+#   # Build index from a single FASTA (each sequence becomes a separate index entry)
+#   minimizer build --output data_temp/minimizer_index.json \
+#     --refs data/enpen/enterovirus/cva16/reference.fasta
+#
+#   # Build index with multi-ref: each FASTA file is one index entry, all its
+#   # sequences contribute minimizers (tests clade-specific reference grouping)
+#   minimizer build --output data_temp/minimizer_index.json \
+#     --refs data/enpen/enterovirus/cva16/minimizer_refs/*.fasta --group-by-file
+#
+#   # Build index from dataset directory (reads buildFiles.minimizerReferences
+#   # from pathogen.json, falls back to main reference if absent)
+#   minimizer build --output data_temp/minimizer_index.json \
+#     --from-dataset data/enpen/enterovirus/cva16
+#
+#   # Search queries against the full index. The rebuild script
+#   # (./scripts/rebuild) generates data_output/minimizer_index.json from all
+#   # datasets in data/. Run rebuild to create or update it:
+#   #   ./scripts/rebuild --input-dir data/ --output-dir data_output/ --no-pull --allow-dirty
+#   minimizer search --index data_output/minimizer_index.json \
+#     --queries data/enpen/enterovirus/cva16/sequences.fasta
+#
+#   # Search against a custom index built with "minimizer build". Useful for
+#   # testing a subset of datasets or comparing single-ref vs multi-ref indexes.
+#   # By default, prints a table to stdout: one line per query with best match,
+#   # score, and hit count. Use --all-matches to show all matching datasets per
+#   # query. Use --output-dir to write matched sequences to FASTA files.
+#   minimizer search --index data_temp/minimizer_index.json \
+#     --queries data/nextstrain/flu/h3n2/ha/EPI1857216/sequences.fasta \
+#              data/nextstrain/dengue/all/sequences.fasta
+#
+#   # Write matched sequences into per-dataset subdirectories, mirroring the
+#   # output of "nextclade sort --output-dir". Each dataset gets a
+#   # <output-dir>/<dataset-name>/sequences.fasta file. Unmatched sequences go
+#   # to <output-dir>/unmatched.fasta. The table is still printed to stdout.
+#   minimizer search --index data_output/minimizer_index.json \
+#     --queries data/enpen/enterovirus/cva16/sequences.fasta \
+#     --output-dir data_temp/sorted/
+#
 
 import argparse
+import json
+import logging
+import sys
+from pathlib import Path
 
 import numpy as np
 
+from Bio import SeqIO
+
 from lib.fasta import fasta_read
 from lib.fs import json_write
-from lib.minimizer import make_ref_search_index, get_ref_search_minimizers, invertible_hash, serialize_ref_search_index
+from lib.minimizer import (
+  deserialize_ref_search_index,
+  filter_matches,
+  make_ref_search_index,
+  search_one_query,
+  serialize_ref_search_index,
+)
+
+MIN_SCORE_DEFAULT = 0.1
+MIN_HITS_DEFAULT = 10
+MAX_SCORE_GAP_DEFAULT = 0.2
+
+log = logging.getLogger(__name__)
 
 
-def parse_args():
-  parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+def cmd_build(args: argparse.Namespace) -> None:
+  refs = load_refs(args)
+  index = make_ref_search_index(refs)
+  json_write(serialize_ref_search_index(index), args.output, no_sort_keys=True)
+  log.info(f"Index written to {args.output}")
+  print_index_stats(index)
 
-  parser.add_argument(
-    '--input-refs', required=True, nargs='+',
-    help='One or more fasta files with reference sequences',
+
+def cmd_search(args: argparse.Namespace) -> None:
+  index = load_index(args.index)
+  queries = list(fasta_read(args.queries))
+  output_dir = Path(args.output_dir) if args.output_dir else None
+  search_and_report(index, queries, args.min_score, args.min_hits, args.max_score_gap, args.all_matches, output_dir)
+
+
+def load_refs(args: argparse.Namespace) -> dict:
+  if args.from_dataset:
+    return load_refs_from_dataset(Path(args.from_dataset))
+
+  if args.group_by_file:
+    return {Path(fp).stem: list(fasta_read(fp)) for fp in args.refs}
+
+  return {seq.name: seq for seq in fasta_read(args.refs)}
+
+
+def load_refs_from_dataset(dataset_dir: Path) -> dict:
+  pathogen_json_path = dataset_dir / "pathogen.json"
+  if not pathogen_json_path.is_file():
+    raise FileNotFoundError(f"pathogen.json not found: {pathogen_json_path}")
+
+  with open(pathogen_json_path) as f:
+    pathogen_json = json.load(f)
+
+  dataset_name = (
+    pathogen_json.get("attributes", {}).get("name")
+    or dataset_dir.name
+  )
+
+  minimizer_ref_filenames = (
+    pathogen_json.get("buildFiles", {}).get("minimizerReferences", [])
+  )
+
+  if minimizer_ref_filenames:
+    all_refs = []
+    for filename in minimizer_ref_filenames:
+      filepath = dataset_dir / filename
+      if not filepath.is_file():
+        raise FileNotFoundError(f"Minimizer reference file not found: {filepath}")
+      all_refs.extend(fasta_read(str(filepath)))
+    log.info(f"{dataset_name}: {len(all_refs)} sequences from {len(minimizer_ref_filenames)} minimizer reference files")
+    return {dataset_name: all_refs}
+
+  ref_filename = pathogen_json.get("files", {}).get("reference")
+  if not ref_filename:
+    raise FileNotFoundError(f"No reference file declared in {pathogen_json_path}")
+
+  ref = list(fasta_read(str(dataset_dir / ref_filename)))
+  log.info(f"{dataset_name}: using main reference ({ref_filename})")
+  return {dataset_name: ref[0] if len(ref) == 1 else ref}
+
+
+def load_index(index_path: str) -> dict:
+  with open(index_path) as f:
+    return deserialize_ref_search_index(json.load(f))
+
+
+def search_and_report(
+  index: dict,
+  queries: list,
+  min_score: float,
+  min_hits: int,
+  max_score_gap: float,
+  all_matches: bool,
+  output_dir: Path | None = None,
+) -> None:
+  refs = index["references"]
+  n_refs = len(refs)
+  overall_hits = np.zeros(n_refs, dtype=np.int32)
+  n_matched = 0
+  n_unmatched = 0
+  sorted_seqs: dict[str, list] = {}
+  unmatched_seqs: list = []
+
+  print(f"\n{'Query':<40} {'Best match':<30} {'Score':>8} {'Hits':>8}")
+  print("-" * 90)
+
+  for qry in queries:
+    normalized_hits, hit_count = search_one_query(index, qry)
+    matches = filter_matches(normalized_hits, hit_count, min_score, min_hits, max_score_gap, all_matches)
+
+    if not matches:
+      max_score = float(np.max(normalized_hits))
+      total_hits = int(np.sum(hit_count))
+      print(f"{qry.name:<40} {'(no match)':<30} {max_score:>8.3f} {total_hits:>8d}")
+      n_unmatched += 1
+      unmatched_seqs.append(qry)
+    else:
+      n_matched += 1
+      for ri, score, hits in matches:
+        ref_name = refs[ri]["name"]
+        overall_hits[ri] += 1
+        print(f"{qry.name:<40} {ref_name:<30} {score:>8.3f} {hits:>8d}")
+        sorted_seqs.setdefault(ref_name, []).append(qry)
+
+  print(f"\n{'Reference':<40} {'Matches':>8}")
+  print("-" * 50)
+  for i, ref in enumerate(refs):
+    print(f"{ref['name']:<40} {overall_hits[i]:>8d}")
+
+  print(f"\nTotal: {n_matched} matched, {n_unmatched} unmatched out of {n_matched + n_unmatched} queries")
+
+  if output_dir:
+    write_sorted_sequences(output_dir, sorted_seqs, unmatched_seqs)
+
+
+def write_sorted_sequences(
+  output_dir: Path,
+  sorted_seqs: dict[str, list],
+  unmatched_seqs: list,
+) -> None:
+  for dataset_name, seqs in sorted_seqs.items():
+    dataset_dir = output_dir / dataset_name
+    dataset_dir.mkdir(parents=True, exist_ok=True)
+    fasta_path = dataset_dir / "sequences.fasta"
+    SeqIO.write(seqs, str(fasta_path), "fasta")
+    log.info(f"Wrote {len(seqs)} sequences to {fasta_path}")
+
+  if unmatched_seqs:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    fasta_path = output_dir / "unmatched.fasta"
+    SeqIO.write(unmatched_seqs, str(fasta_path), "fasta")
+    log.info(f"Wrote {len(unmatched_seqs)} unmatched sequences to {fasta_path}")
+
+
+def print_index_stats(index: dict) -> None:
+  refs = index["references"]
+  total_minimizers = sum(r["nMinimizers"] for r in refs)
+  total_length = sum(r["length"] for r in refs)
+  density = 1000 * total_minimizers / total_length if total_length > 0 else 0
+
+  log.info(f"Index: {len(refs)} references, {len(index['minimizers'])} unique minimizers, {density:.2f} per kb")
+  for ref in refs:
+    log.info(f"  {ref['name']}: {ref['nMinimizers']} minimizers, {ref['length']} bp")
+
+
+def add_ref_args(parser: argparse.ArgumentParser) -> None:
+  group = parser.add_mutually_exclusive_group(required=True)
+  group.add_argument(
+    "-r", "--refs", nargs="+", metavar="FASTA",
+    help="reference FASTA files (each sequence = one index entry, or use --group-by-file)",
+  )
+  group.add_argument(
+    "-d", "--from-dataset", metavar="DIR",
+    help="dataset directory containing pathogen.json (reads buildFiles.minimizerReferences)",
   )
   parser.add_argument(
-    '--input-qrys', required=False, nargs='+',
-    help='One or more fasta files with query sequences. If omitted, only minimizer index will be '
-         'calculated, the search in query sequences will not be performed',
+    "-g", "--group-by-file", action="store_true",
+    help="treat each FASTA file as one index entry with multiple sequences (multi-ref)",
+  )
+
+
+def add_search_args(parser: argparse.ArgumentParser) -> None:
+  parser.add_argument(
+    "-q", "--queries", nargs="+", required=True, metavar="FASTA",
+    help="query FASTA files to search against the index",
   )
   parser.add_argument(
-    '--output-json', required=False,
-    help='Where to output minimizer index file'
+    "-O", "--output-dir", metavar="DIR",
+    help="write matched sequences to per-dataset subdirectories (like nextclade sort)",
   )
+  parser.add_argument(
+    "-s", "--min-score", type=float, default=MIN_SCORE_DEFAULT,
+    help=f"minimum normalized score threshold (default: {MIN_SCORE_DEFAULT})",
+  )
+  parser.add_argument(
+    "-n", "--min-hits", type=int, default=MIN_HITS_DEFAULT,
+    help=f"minimum raw hit count threshold (default: {MIN_HITS_DEFAULT})",
+  )
+  parser.add_argument(
+    "-G", "--max-score-gap", type=float, default=MAX_SCORE_GAP_DEFAULT,
+    help=f"discard matches whose score drops more than this below the previous match (default: {MAX_SCORE_GAP_DEFAULT})",
+  )
+  parser.add_argument(
+    "-a", "--all-matches", action="store_true",
+    help="show all matching datasets per query, not just the best",
+  )
+
+
+def main() -> None:
+  logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stderr)
+
+  parser = argparse.ArgumentParser(
+    description="Build and search minimizer indexes for dataset auto-detection",
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    epilog="""examples:
+  # build index from single FASTA (each sequence = separate entry)
+  %(prog)s build --output data_temp/minimizer_index.json --refs reference.fasta
+
+  # build multi-ref index (each file = one entry with multiple sequences)
+  %(prog)s build --output data_temp/minimizer_index.json --refs clade_a.fasta clade_b.fasta --group-by-file
+
+  # build from dataset directory (reads buildFiles.minimizerReferences from pathogen.json)
+  %(prog)s build --output data_temp/minimizer_index.json --from-dataset data/enpen/enterovirus/cva16
+
+  # search against full index (generated by ./scripts/rebuild)
+  %(prog)s search --index data_output/minimizer_index.json --queries sequences.fasta
+
+  # search custom index, show all matching datasets per query
+  %(prog)s search --index data_temp/minimizer_index.json --queries batch1.fasta batch2.fasta --all-matches
+
+  # sort matched sequences into per-dataset directories
+  %(prog)s search --index data_output/minimizer_index.json --queries sequences.fasta --output-dir data_temp/sorted/""",
+  )
+  subparsers = parser.add_subparsers(dest="command", required=True)
+
+  build_parser = subparsers.add_parser(
+    "build", help="build a minimizer index from reference sequences",
+  )
+  add_ref_args(build_parser)
+  build_parser.add_argument(
+    "-o", "--output", required=True, metavar="JSON",
+    help="output minimizer index JSON path",
+  )
+
+  search_parser = subparsers.add_parser(
+    "search", help="search query sequences against a pre-built minimizer index",
+  )
+  search_parser.add_argument(
+    "-i", "--index", required=True, metavar="JSON",
+    help="pre-built minimizer index JSON file",
+  )
+  add_search_args(search_parser)
 
   args = parser.parse_args()
 
-  return args
+  if args.command == "build":
+    cmd_build(args)
+  elif args.command == "search":
+    cmd_search(args)
 
 
-def main():
-  args = parse_args()
-
-  refs = fasta_read(args.input_refs)
-  refs = {ref.name: ref for ref in refs}
-
-  index = make_ref_search_index(refs)
-
-  if args.output_json:
-    json_write(
-      serialize_ref_search_index(index),
-      args.output_json,
-      no_sort_keys=True
-    )
-
-  if args.input_qrys:
-    qrys = fasta_read(args.input_qrys)
-    run_search(index, qrys)
-
-
-def run_search(index, qrys):
-  normalization = index['normalization']
-  overall_hits = np.zeros(len(index["references"]), dtype=np.int32)
-  for qry in qrys:
-    minimizers = get_ref_search_minimizers(qry)
-    hit_count = np.zeros(len(index["references"]), dtype=np.int32)
-    for m in minimizers:
-      if m in index["minimizers"]:
-        hit_count[index["minimizers"][m]] += 1
-
-    # we expect hits to be proportional to the length of the sequence and the number of minimizers per reference
-    normalized_hits = normalization * hit_count / len(qry.seq)
-    # require at least 30% of the maximal hits and at least 10 hits
-    if np.max(normalized_hits) < 0.3 or np.sum(hit_count) < 10:
-      print(qry.name, "no hit")
-    else:
-      overall_hits += normalized_hits > 0.3
-      ri = np.argmax(normalized_hits)
-      print(
-        f"{qry.name}\t best hit={normalized_hits[ri]:1.2f} to reference "
-        f"{index['references'][ri]['name']}")
-
-  print("\nHits statistics:")
-  for i, ref in enumerate(index["references"]):
-    print(f"\t{ref['name']}\t{overall_hits[i]}")
-  ## we could offer the user to run the analysis on these datasets in reverse order of the number of hits
-
-  print("\nIndex statistics:")
-  print(f"\tNumber of references: {len(index['references'])}")
-  print(f"\tNumber of minimizers: {len(index['minimizers'])}")
-  print(
-    f"\tNumber of minimizers per kb: "
-    f"{1000 * np.sum([x['nMinimizers'] for x in index['references']]) / np.sum([x['length'] for x in index['references']]):1.2f}")
-  for ref in index["references"]:
-    print(f"\t\t{ref['name']}\t{ref['nMinimizers']}")
-
-  # check uniformity of hash function
-  import matplotlib.pyplot as plt
-
-  plt.figure()
-  for start in range(0, 1 << 29, 1 << 22):
-    # compute hashes for 2^12 integers starting at start
-    hashes = [invertible_hash(x) for x in range(start, start + (1 << 12))]
-    # sort and plot --> should be a straight line from 0 to 2^32-1
-    plt.plot(sorted(hashes))
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
   main()
