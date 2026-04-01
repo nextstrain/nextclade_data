@@ -8,7 +8,9 @@
     "treeJson": "tree.json",
     "examples": "sequences.fasta",
     "readme": "README.md",
-    "changelog": "CHANGELOG.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "buildFiles": {
     "minimizerReferences": [
       "minimizer_refs/additional_refs_B.fasta",
       "minimizer_refs/additional_refs_B1a.fasta",
