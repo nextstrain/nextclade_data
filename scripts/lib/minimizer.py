@@ -15,7 +15,7 @@ MINIMIZER_JSON_SCHEMA_VERSION = "3.0.0"
 MAGIC_NUMBER_K = 17
 
 # minimizer cutoff. The max is 1<<32 - 1, so with 28 uses roughly 1/16 of all kmers
-CUTOFF = 1 << 28
+# CUTOFF = 1 << 28
 
 JSON_SCHEMA_URL_MINIMIZER_JSON=  "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-minimizer-index-json.schema.json"
 
@@ -34,14 +34,14 @@ def invertible_hash(x):
 
 
 # turn a kmer into an integer
-def get_hash(kmer):
+def get_hash(kmer, cutoff):
   x = 0
   j = 0
   for i, nuc in enumerate(kmer):
     if i % 3 == 2:
       continue  # skip every third nucleotide to pick up conserved patterns
     if nuc not in 'ACGT':
-      return CUTOFF + 1  # break out of loop, return hash above cutoff
+      return cutoff + 1  # break out of loop, return hash above cutoff
     else:  # A=11=3, C=10=2, G=00=0, T=01=1
       if nuc in 'AC':
         x += 1 << j
@@ -52,19 +52,19 @@ def get_hash(kmer):
   return invertible_hash(x)
 
 
-def get_ref_search_minimizers(seq: SeqRecord, k=MAGIC_NUMBER_K):
+def get_ref_search_minimizers(seq: SeqRecord, cutoff, k=MAGIC_NUMBER_K):
   seq_str = preprocess_seq(seq)
   minimizers = []
   # we know the rough number of minimizers, so we can pre-allocate the array if needed
   for i in range(len(seq_str) - k):
     kmer = seq_str[i:i + k]
-    mhash = get_hash(kmer)
-    if mhash < CUTOFF:  # accept only hashes below cutoff --> reduces the size of the index and the number of look-ups
+    mhash = get_hash(kmer, cutoff)
+    if mhash < cutoff:  # accept only hashes below cutoff --> reduces the size of the index and the number of look-ups
       minimizers.append(mhash)
   return np.unique(minimizers)
 
 
-def make_ref_search_index(refs):
+def make_ref_search_index(refs, cutoff):
   """
   Build minimizer search index from reference sequences.
 
@@ -86,7 +86,7 @@ def make_ref_search_index(refs):
     all_minimizers = set()
     total_length = 0
     for ref in ref_list:
-      minimizers = get_ref_search_minimizers(ref)
+      minimizers = get_ref_search_minimizers(ref, cutoff)
       all_minimizers.update(minimizers)
       total_length += len(ref.seq)
 
@@ -94,7 +94,9 @@ def make_ref_search_index(refs):
     avg_length = total_length / len(ref_list)
 
     minimizers_by_dataset.append({
-      "minimizers": np.array(list(all_minimizers)),
+      "minimizers": np.array(list(all_minimizers)), # unique kmer hashes, if occurs in multiple references still only added once
+      # very divergent sequences, each will add unqiue kmers
+      # this will decrease the normalization score, in order to be assigned to the organism you still need have 10%e  kmer matches
       "meta": {
         "name": name,
         "length": int(avg_length),
@@ -113,6 +115,7 @@ def make_ref_search_index(refs):
     # reference will be a list in same order as the bit set
     index["references"].append(minimizer_set['meta'])
 
+  # average length / number of unique references, if references are very divergent this score will be lower, if references are non divergent less unique kmers and thus the score will be higher
   normalization = np.array([x['length'] / x['nMinimizers'] for x in index["references"]])
 
   return {
@@ -121,7 +124,7 @@ def make_ref_search_index(refs):
     "version": MINIMIZER_ALGO_VERSION,
     "params": {
       "k": MAGIC_NUMBER_K,
-      "cutoff": CUTOFF,
+      "cutoff": cutoff,
     },
     **index,
     "normalization": normalization
@@ -149,14 +152,17 @@ def deserialize_ref_search_index(data: dict) -> dict:
 def search_one_query(
   index: dict,
   qry: SeqRecord,
+  cutoff
 ) -> tuple[np.ndarray, np.ndarray]:
   n_refs = len(index["references"])
-  minimizers = get_ref_search_minimizers(qry)
+  minimizers = get_ref_search_minimizers(qry, cutoff)
   hit_count = np.zeros(n_refs, dtype=np.int32)
   for m in minimizers:
     if m in index["minimizers"]:
       hit_count[index["minimizers"][m]] += 1
   seq_len = len(preprocess_seq(qry))
+    # many divergent references, normalization score will be low, normalized hits will be lowere
+    # many references with some that are similar, then score will be higher 
   normalized_hits = index["normalization"] * hit_count / seq_len
   return normalized_hits, hit_count
 
