@@ -12,14 +12,7 @@
   },
   "buildFiles": {
     "minimizerReferences": [
-      "minimizer_refs/additional_refs_B.fasta",
-      "minimizer_refs/additional_refs_B1a.fasta",
-      "minimizer_refs/additional_refs_B1b.fasta",
-      "minimizer_refs/additional_refs_B1c.fasta",
-      "minimizer_refs/additional_refs_C.fasta",
-      "minimizer_refs/additional_refs_D.fasta",
-      "minimizer_refs/additional_refs_E.fasta",
-      "minimizer_refs/additional_refs_F.fasta"
+      "minimizer_refs/additional_refs.fasta"
     ]
   },
   "attributes": {
