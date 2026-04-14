@@ -1,5 +1,6 @@
 ## Unreleased
 
+- Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
 
 ## 2026-01-14T19:24:43Z
 Fix missing clade attributes and export of legacy clade.

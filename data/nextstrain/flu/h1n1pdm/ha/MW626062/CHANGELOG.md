@@ -1,4 +1,6 @@
 ## Unreleased
+
+- Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
 - add NA clade annotations to tree
 
 ## 2026-01-14T19:24:43Z
