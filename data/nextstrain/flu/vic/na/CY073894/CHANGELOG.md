@@ -1,7 +1,8 @@
 ## Unreleased
 
-- Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
-- Move `aaMutLabelMap` (NAI resistance markers) into `mutLabels` section
+ - Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
+ - Move `aaMutLabelMap` (NAI resistance markers) into `mutLabels` section
+ - inclusion of older sequences that precede the current subclade system
 
 ## 2025-09-09T12:13:13Z
 
