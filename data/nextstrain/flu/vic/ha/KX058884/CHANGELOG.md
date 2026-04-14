@@ -1,6 +1,6 @@
 ## Unreleased
-
-- Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
+ - addition of subclade [C.3.3](https://github.com/influenza-clade-nomenclature/seasonal_B-Vic_HA/blob/main/subclades/C.3.3.yml)
+ - inclusion of older sequences that precede the current subclade system
 
 ## 2025-10-22T18:11:36Z
 
