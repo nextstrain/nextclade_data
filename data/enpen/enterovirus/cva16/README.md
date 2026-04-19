@@ -4,18 +4,18 @@
 |----------------------|-----------------------------------------------------------------------|
 | authors              | [Nadia Neuner-Jehle](https://eve-lab.org/people/nadia-neuner-jehle/), [Alejandra González-Sánchez](https://www.vallhebron.com/en/professionals/alejandra-gonzalez-sanchez), [Emma B. Hodcroft](https://eve-lab.org/people/emma-hodcroft/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)                                                 |
 | name                 | Coxsackievirus A16                                                     |
-| reference            | [U05876.1](https://www.ncbi.nlm.nih.gov/nuccore/U05876)               |
+| reference            | [ancestral sequence](https://github.com/enterovirus-phylo/nextclade_a16/blob/master/resources/inferred-root.fasta)               |
 | workflow             | https://github.com/enterovirus-phylo/nextclade_a16                          |
 | path                 | `enpen/enterovirus/cva16`                                                                 |
 | clade definitions    | A–F                                                                   |
 
 ## Scope of this dataset
 
-This dataset uses the historical G-10 prototype sequence ([U05876.1](https://www.ncbi.nlm.nih.gov/nuccore/U05876)), which may differ from contemporary global CVA16 strains. It is intended for broad subgenogroup classification, mutation quality control, and phylogenetic analysis of CVA16 diversity.
+This dataset uses the [Static Inferred Ancestor](https://github.com/enterovirus-phylo/nextclade_a16/blob/master/resources/inferred-root.fasta) instead of the historical G-10 prototype sequence ([U05876.1](https://www.ncbi.nlm.nih.gov/nuccore/U05876)). It is intended for broad subgenogroup classification, mutation quality control, and phylogenetic analysis of CVA16 diversity.
 
 *Note: The G-10 reference differs substantially from currently circulating strains.* This is common for enterovirus datasets, in contrast to some other virus datasets (e.g., seasonal influenza), where the reference is updated more frequently to reflect recent lineages.
 
-To address this, the dataset is *rooted* on a Static Inferred Ancestor — a phylogenetically reconstructed ancestral sequence near the tree root. This provides a stable reference point that can be used, optionally, as an alternative for mutation calling.
+To address this, the dataset is *rooted* on a Static Inferred Ancestor, a phylogenetically reconstructed ancestral sequence near the tree root. This provides a stable reference point that can be used as an alternative for mutation calling.
 
 ## Features
 
@@ -27,14 +27,26 @@ This dataset supports:
 
 ## Subgenogroups of Coxsackievirus A16
 
-Subgenogroups B1a, B1b and B1c are the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and literature. They are defined by phylogenetic clustering and do not necessarily indicate antigenic differences. In recent years, recombinant forms were identified and labeled C-F (also known as B2, B3, and D). These recombinant forms cluster with the prototype strain, clade A.
+Subgenogroups B1a, B1b and B1c represent the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and the literature. They are defined based on phylogenetic clustering and do not necessarily reflect antigenic differences. 
 
-These designations are based on the phylogenetic structure and mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universal, standardized global lineage nomenclature for enteroviruses. Naming follows conventions from published studies and surveillance practices.
+In recent years, additional recombinant forms have been identified and labeled C-F (also referred to as B2, B3, and D). These recombinant forms cluster with the prototype strain (clade A).
+
+Overall, these designations are based on phylogenetic structure and characteristic mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universally standardized global lineage nomenclature for enteroviruses; naming instead follows conventions established in published studies and surveillance practices.
+
+## Related Enteroviruses
+
+CVA16 is closely related to other EV-A viruses, including EV-A71, EV-A120, and CVA5. If you are not certain that your sequences contain only CVA16, we recommend using the "[Multiple Datasets](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-web/getting-started.html#multi-dataset-mode)" tab instead of "Single Dataset".
+
+This prevents Nextclade from forcing sequences to align to the CVA16 reference tree. For example, EV-A71 sequences may still align and receive a clade assignment (often near recombinant forms).
+
+Please be cautious when working with short genes or fragments (e.g., 5'UTR sequences). These regions can be highly conserved across EV-A viruses, making genogroup and subgenogroup assignment prone to errors. In addition, such fragments may originate from recombinant genomes. Recombination is common in enteroviruses, and when analyzing only a fragment, this may go undetected.
+
+If you are unsure how to proceed, please [contact us](## Issues & Contact). We are happy to assist.
 
 ## Reference types
 
 This dataset includes several reference points used in analyses:
-- *Reference:* RefSeq or similarly established reference sequence. Here G-10.
+- *Reference:* RefSeq or similarly established prototype sequence. Here G-10.
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
 
