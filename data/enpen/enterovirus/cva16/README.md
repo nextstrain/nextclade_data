@@ -1,4 +1,4 @@
-# Coxsackievirus A16 dataset based on reference "G-10"
+# Coxsackievirus A16 dataset
 
 | Key                  | Value                                                                 |
 |----------------------|-----------------------------------------------------------------------|
@@ -41,7 +41,7 @@ This prevents Nextclade from forcing sequences to align to the CVA16 reference t
 
 Please be cautious when working with short genes or fragments (e.g., 5'UTR sequences). These regions can be highly conserved across EV-A viruses, making genogroup and subgenogroup assignment prone to errors. In addition, such fragments may originate from recombinant genomes. Recombination is common in enteroviruses, and when analyzing only a fragment, this may go undetected.
 
-If you are unsure how to proceed, please [contact us](#issues--contact). We are happy to assist.
+If you are unsure how to proceed, please contact us. We are happy to assist.
 
 ## Reference types
 
