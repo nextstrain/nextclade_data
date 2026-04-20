@@ -4,7 +4,7 @@
 |----------------------|-----------------------------------------------------------------------|
 | authors              | [Nadia Neuner-Jehle](https://eve-lab.org/people/nadia-neuner-jehle/), [Alejandra González-Sánchez](https://www.vallhebron.com/en/professionals/alejandra-gonzalez-sanchez), [Emma B. Hodcroft](https://eve-lab.org/people/emma-hodcroft/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)                                                 |
 | name                 | Coxsackievirus A16                                                     |
-| reference            | [ancestral sequence](https://github.com/enterovirus-phylo/nextclade_a16/blob/master/resources/inferred-root.fasta)               |
+| reference            | [Static Inferred Ancestor](https://github.com/enterovirus-phylo/nextclade_a16/blob/master/resources/inferred-root.fasta)               |
 | workflow             | https://github.com/enterovirus-phylo/nextclade_a16                          |
 | path                 | `enpen/enterovirus/cva16`                                                                 |
 | clade definitions    | A–F                                                                   |
@@ -46,13 +46,13 @@ If you are unsure how to proceed, please contact us. We are happy to assist.
 ## Reference types
 
 This dataset includes several reference points used in analyses:
-- *Reference:* RefSeq or similarly established prototype sequence. Here G-10.
+- *Static Inferred Ancestor:* Reconstructed ancestral sequence inferred with an outgroup, representing the likely founder of CVA16. Serves as a stable reference.
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
 
 - *Clade founder:* The inferred ancestral node defining a clade (e.g., B1a, B2). Mutations "since clade founder" describe changes that define that clade.
 
-- *Static Inferred Ancestor:* Reconstructed ancestral sequence inferred with an outgroup, representing the likely founder of CVA16. Serves as a stable reference.
+- *Reference:* RefSeq or similarly established prototype sequence. Here G-10 (U05876.1).
 
 - *Tree root:* Corresponds to the root of the tree, it may change in future updates as more data become available.
 
