@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-04-21T09:39:50Z
 
 - Add all 202 Pango lineages newly designated between 2025-12-24 and 2026-04-15. Unfold below to see a list of all newly included lineages with their designation dates:
 
@@ -210,7 +210,7 @@
 
 </details>
 
-## Unreleased
+## 2026-04-21T09:39:50Z
 
 - Add all 202 Pango lineages newly designated between 2025-12-24 and 2026-04-15. Unfold below to see a list of all newly included lineages with their designation dates:
 
@@ -422,7 +422,7 @@
 
 </details>
 
-## Unreleased
+## 2026-04-21T09:39:50Z
 
 - Add all 202 Pango lineages newly designated between 2025-12-24 and 2026-04-15. Unfold below to see a list of all newly included lineages with their designation dates:
 
@@ -634,7 +634,7 @@
 
 </details>
 
-## Unreleased
+## 2026-04-21T09:39:50Z
 
 - Add all 202 Pango lineages newly designated between 2025-12-24 and 2026-04-15. Unfold below to see a list of all newly included lineages with their designation dates:
 
