@@ -75,8 +75,8 @@
           "capabilities": {
             "clades": 59,
             "customClades": {
-              "Nextclade_pango": 4929,
-              "partiallyAliased": 4929,
+              "Nextclade_pango": 4930,
+              "partiallyAliased": 4930,
               "clade_nextstrain": 59,
               "clade_who": 13,
               "clade_display": 59
@@ -2869,8 +2869,8 @@
           "capabilities": {
             "clades": 59,
             "customClades": {
-              "Nextclade_pango": 4929,
-              "partiallyAliased": 4929,
+              "Nextclade_pango": 4930,
+              "partiallyAliased": 4930,
               "clade_nextstrain": 59,
               "clade_who": 13,
               "clade_display": 59
@@ -3098,8 +3098,8 @@
           "capabilities": {
             "clades": 36,
             "customClades": {
-              "Nextclade_pango": 4193,
-              "partiallyAliased": 4193,
+              "Nextclade_pango": 4194,
+              "partiallyAliased": 4194,
               "clade_nextstrain": 36,
               "clade_who": 3,
               "clade_display": 36
