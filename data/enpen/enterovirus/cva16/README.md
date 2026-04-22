@@ -35,7 +35,7 @@ Overall, these designations are based on phylogenetic structure and characterist
 
 ## Related Enteroviruses
 
-CVA16 is closely related to other EV-A viruses, including EV-A71, EV-A120, and CVA5. If you are not certain that your sequences contain only CVA16, we recommend using the "[Multiple Datasets](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-web/getting-started.html#multi-dataset-mode)" tab instead of "Single Dataset".
+CVA16 is closely related to other Enterovirus A (EV-A) viruses, including EV-A71, EV-A120, and CVA5. If you are not certain that your sequences contain only CVA16, we recommend using the "[Multiple Datasets](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-web/getting-started.html#multi-dataset-mode)" tab instead of "Single Dataset". We are currently working on improving multiple virus assignment. 
 
 This prevents Nextclade from forcing sequences to align to the CVA16 reference tree. For example, EV-A71 sequences may still align and receive a clade assignment (often near recombinant forms).
 
