@@ -18149,7 +18149,8 @@
     "3D"
   ],
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-04-22T11:53:11Z",
+    "tag": "2026-04-22--11-53-11Z",
     "compatibility": {
       "cli": "3.0.0",
       "web": "3.0.0"
