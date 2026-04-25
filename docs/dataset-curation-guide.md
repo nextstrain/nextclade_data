@@ -214,6 +214,14 @@ This will tell Nextclade to fetch your modified datasets right from GitHub (GitH
 
 If you don't want to submit your datasets to this repository, or prefer to deploy your datasets to your own GitHub repository or to your own web server, then follow [Dataset server maintenance guide](dataset-server-maintenance.md) for how to set it up.
 
+## Version tags and releases
+
+When the rebuild script processes datasets for a release, it creates a new version tag only for datasets whose files have changed since the previous release. The script compares each dataset directory against its last known tag using `git diff` and skips version creation for unchanged datasets. This means that a given release timestamp (e.g. `2026-04-14--11-55-23Z`) exists as a version tag only for the datasets that were modified in that release.
+
+Unchanged datasets retain their previous version tag and continue to be served under it. The `version` field in `index.json` always points to the latest available tag for each dataset, regardless of which release produced it.
+
+For user-facing documentation on how this affects workflows and how to query the latest tag for a dataset, see [Version tags are per-dataset](https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html#version-tags-are-per-dataset).
+
 ## Questions, ideas, bug reports
 
 For all questions, ideas, bug reports relevant to datasets, please open [a GitHub issue](https://github.com/nextstrain/nextclade_data/issues) in this repository or join our [discussion forum](https://discussion.nextstrain.org/).
