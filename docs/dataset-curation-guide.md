@@ -220,7 +220,7 @@ When the rebuild script processes datasets for a release, it creates a new versi
 
 Unchanged datasets retain their previous version tag and continue to be served under it. The `version` field in `index.json` always points to the latest available tag for each dataset, regardless of which release produced it.
 
-For user-facing documentation on how this affects workflows and how to query the latest tag for a dataset, see [Version tags are per-dataset](https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html#version-tags-are-per-dataset).
+For user-facing documentation on how this affects workflows and how to query the latest tag for a dataset, see [Version tags are per-dataset](https://github.com/nextstrain/nextclade/blob/master/docs/user/datasets.md#version-tags-are-per-dataset).
 
 ## Questions, ideas, bug reports
 
