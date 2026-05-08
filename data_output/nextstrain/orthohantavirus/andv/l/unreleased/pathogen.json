@@ -47,8 +47,8 @@
     },
     "privateMutations": {
       "enabled": true,
-      "cutoff": 50,
-      "typical": 30,
+      "cutoff": 150,
+      "typical": 100,
       "weightLabeledSubstitutions": 1,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
