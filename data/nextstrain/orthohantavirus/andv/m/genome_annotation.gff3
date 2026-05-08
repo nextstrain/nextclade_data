@@ -1,0 +1,7 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_003467.2 1 3671
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1980456
+NC_003467.2	RefSeq	region	1	3671	.	+	.	ID=NC_003467.2:1..3671;Dbxref=taxon:1980456;Name=M;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Andes virus;segment=M;strain=Chile-9717869
+NC_003467.2	RefSeq	CDS	52	3468	.	+	0	Name=GPC;gbkey=CDS;locus_tag=ANDVsMgp1;protein_id=NP_604472.1;ID=cds-NP_604472.1;Dbxref=GenBank:NP_604472.1,GeneID:991233;product=G1 and G2 surface glycoprotein precursor
