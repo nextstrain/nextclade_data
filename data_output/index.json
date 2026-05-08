@@ -6981,7 +6981,7 @@
         {
           "path": "nextstrain/orthohantavirus/andv/l",
           "attributes": {
-            "name": "Andesvirus",
+            "name": "Andesvirus (segment L)",
             "reference name": "Chile-9717869",
             "reference accession": "NC_003468"
           },
@@ -7016,7 +7016,7 @@
         {
           "path": "nextstrain/orthohantavirus/andv/m",
           "attributes": {
-            "name": "Andesvirus",
+            "name": "Andesvirus (segment M)",
             "reference name": "Chile-9717869",
             "reference accession": "NC_003467"
           },
@@ -7051,7 +7051,7 @@
         {
           "path": "nextstrain/orthohantavirus/andv/s",
           "attributes": {
-            "name": "Andesvirus",
+            "name": "Andesvirus (segment S)",
             "reference name": "Chile-9717869",
             "reference accession": "NC_003466"
           },

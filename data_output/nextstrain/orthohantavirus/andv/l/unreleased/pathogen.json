@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "files": {
     "reference": "reference.fasta",
     "pathogenJson": "pathogen.json",
@@ -11,10 +12,11 @@
   "schemaVersion": "3.0.0",
   "defaultCds": "RdRp",
   "attributes": {
-    "name": "Andesvirus",
+    "name": "Andesvirus (segment L)",
     "reference name": "Chile-9717869",
     "reference accession": "NC_003468"
   },
+  "experimental": true,
   "alignmentParams": {
     "penaltyGapExtend": 1,
     "penaltyGapOpen": 8,
