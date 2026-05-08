@@ -1,0 +1,8 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_003466.1 1 1871
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1980456
+NC_003466.1	RefSeq	region	1	1871	.	+	.	ID=NC_003466.1:1..1871;Dbxref=taxon:1980456;Name=S;gbkey=Src;genome=genomic;mol_type=viral cRNA;old-name=Andes virus;segment=S;strain=Chile-9717869
+NC_003466.1	RefSeq	CDS	43	1329	.	+	0	Name=N;gbkey=CDS;locus_tag=ANDVsSgp1;protein_id=NP_604471.1;ID=cds-NP_604471.1;product=nucleocapsid protein;Dbxref=GenBank:NP_604471.1,GeneID:991232
+NC_003466.1	RefSeq	CDS	122	313	.	+	0	Name=NSs;gbkey=CDS;locus_tag=ANDVsSgp2;protein_id=YP_004928151.1;ID=cds-YP_004928151.1;product=putative nonstructural protein;Dbxref=GenBank:YP_004928151.1,GeneID:11293630

@@ -97,6 +97,9 @@
     "nextstrain/flu/h2n2/na",
     "nextstrain/flu/h2n2/mp",
     "nextstrain/flu/h2n2/ns",
-    "nextstrain/wnv/all-lineages"
+    "nextstrain/wnv/all-lineages",
+    "nextstrain/orthohantavirus/andv/l",
+    "nextstrain/orthohantavirus/andv/m",
+    "nextstrain/orthohantavirus/andv/s"
   ]
 }

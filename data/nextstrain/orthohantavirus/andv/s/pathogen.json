@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "schemaVersion": "3.0.0",
+  "defaultCds": "N",
+  "attributes": {
+    "name": "Andesvirus (segment S)",
+    "reference name": "Chile-9717869",
+    "reference accession": "NC_003466"
+  },
+  "experimental": true,
+  "alignmentParams": {
+    "penaltyGapExtend": 1,
+    "penaltyGapOpen": 8,
+    "penaltyGapOpenInFrame": 9,
+    "penaltyGapOpenOutOfFrame": 10,
+    "penaltyMismatch": 1,
+    "scoreMatch": 5,
+    "retryReverseComplement": true,
+    "allowedMismatches": 10,
+    "minSeedCover": 0.12,
+    "minLength": 100
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 200,
+      "scoreBias": 100
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true
+    },
+    "privateMutations": {
+      "enabled": true,
+      "cutoff": 50,
+      "typical": 30,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": true,
+      "clusterCutOff": 15,
+      "scoreWeight": 50,
+      "windowSize": 50
+    }
+  }
+}
