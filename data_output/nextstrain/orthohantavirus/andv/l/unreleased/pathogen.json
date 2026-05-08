@@ -20,8 +20,8 @@
   "alignmentParams": {
     "penaltyGapExtend": 1,
     "penaltyGapOpen": 8,
-    "penaltyGapOpenInFrame": 9,
-    "penaltyGapOpenOutOfFrame": 10,
+    "penaltyGapOpenInFrame": 15,
+    "penaltyGapOpenOutOfFrame": 18,
     "penaltyMismatch": 1,
     "scoreMatch": 5,
     "retryReverseComplement": true,
