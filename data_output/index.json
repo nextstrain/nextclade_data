@@ -2829,6 +2829,231 @@
           }
         },
         {
+          "path": "nextstrain/rubella/genome",
+          "shortcuts": [
+            "rubella"
+          ],
+          "attributes": {
+            "name": "Rubella",
+            "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
+            "reference accession": "NC_076948"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff3",
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "readme": "README.md",
+            "examples": "example_sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "missingData",
+              "snpClusters",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2026-04-14T11:55:23Z",
+              "tag": "2026-04-14--11-55-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2025-09-19T14:53:06Z",
+              "tag": "2025-09-19--14-53-06Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2026-04-14T11:55:23Z",
+            "tag": "2026-04-14--11-55-23Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/wnv/all-lineages",
+          "shortcuts": [
+            "wnv",
+            "west-nile",
+            "west-nile-virus"
+          ],
+          "attributes": {
+            "name": "West Nile Virus",
+            "reference accession": "NC_009942.1",
+            "reference name": "Strain NY99 (lineage 1A)"
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 9,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2026-04-14T11:55:23Z",
+              "tag": "2026-04-14--11-55-23Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
+              "updatedAt": "2026-03-04T12:40:26Z",
+              "tag": "2026-03-04--12-40-26Z",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "updatedAt": "2026-04-14T11:55:23Z",
+            "tag": "2026-04-14--11-55-23Z",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/orthohantavirus/andv/l",
+          "attributes": {
+            "name": "Andesvirus (segment L)",
+            "reference name": "Chile-9717869",
+            "reference accession": "NC_003468"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2026-05-08T21:17:05Z",
+              "tag": "2026-05-08--21-17-05Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2026-05-08T21:17:05Z",
+            "tag": "2026-05-08--21-17-05Z"
+          }
+        },
+        {
+          "path": "nextstrain/orthohantavirus/andv/m",
+          "attributes": {
+            "name": "Andesvirus (segment M)",
+            "reference name": "Chile-9717869",
+            "reference accession": "NC_003467"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2026-05-08T21:17:05Z",
+              "tag": "2026-05-08--21-17-05Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2026-05-08T21:17:05Z",
+            "tag": "2026-05-08--21-17-05Z"
+          }
+        },
+        {
+          "path": "nextstrain/orthohantavirus/andv/s",
+          "attributes": {
+            "name": "Andesvirus (segment S)",
+            "reference name": "Chile-9717869",
+            "reference accession": "NC_003466"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons",
+              "privateMutations",
+              "snpClusters"
+            ]
+          },
+          "versions": [
+            {
+              "updatedAt": "2026-05-08T21:17:05Z",
+              "tag": "2026-05-08--21-17-05Z"
+            }
+          ],
+          "version": {
+            "updatedAt": "2026-05-08T21:17:05Z",
+            "tag": "2026-05-08--21-17-05Z"
+          }
+        },
+        {
           "path": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
           "attributes": {
             "name": "SARS-CoV-2 (Mature proteins)",
@@ -3310,62 +3535,6 @@
           "version": {
             "updatedAt": "2026-04-21T09:39:50Z",
             "tag": "2026-04-21--09-39-50Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/rubella/genome",
-          "shortcuts": [
-            "rubella"
-          ],
-          "attributes": {
-            "name": "Rubella",
-            "reference name": "RVi/Bismarck.ND.USA/23.08/2B",
-            "reference accession": "NC_076948"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "annotation.gff3",
-            "treeJson": "tree.json",
-            "changelog": "CHANGELOG.md",
-            "readme": "README.md",
-            "examples": "example_sequences.fasta"
-          },
-          "capabilities": {
-            "clades": 14,
-            "qc": [
-              "missingData",
-              "snpClusters",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2026-04-14T11:55:23Z",
-              "tag": "2026-04-14--11-55-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2025-09-19T14:53:06Z",
-              "tag": "2025-09-19--14-53-06Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2026-04-14T11:55:23Z",
-            "tag": "2026-04-14--11-55-23Z",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -6918,175 +7087,6 @@
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
             }
-          }
-        },
-        {
-          "path": "nextstrain/wnv/all-lineages",
-          "shortcuts": [
-            "wnv",
-            "west-nile",
-            "west-nile-virus"
-          ],
-          "attributes": {
-            "name": "West Nile Virus",
-            "reference accession": "NC_009942.1",
-            "reference name": "Strain NY99 (lineage 1A)"
-          },
-          "files": {
-            "changelog": "CHANGELOG.md",
-            "examples": "examples.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta",
-            "treeJson": "tree.json"
-          },
-          "capabilities": {
-            "clades": 9,
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2026-04-14T11:55:23Z",
-              "tag": "2026-04-14--11-55-23Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            },
-            {
-              "updatedAt": "2026-03-04T12:40:26Z",
-              "tag": "2026-03-04--12-40-26Z",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "updatedAt": "2026-04-14T11:55:23Z",
-            "tag": "2026-04-14--11-55-23Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/orthohantavirus/andv/l",
-          "attributes": {
-            "name": "Andesvirus (segment L)",
-            "reference name": "Chile-9717869",
-            "reference accession": "NC_003468"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2026-05-08T21:17:05Z",
-              "tag": "2026-05-08--21-17-05Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2026-05-08T21:17:05Z",
-            "tag": "2026-05-08--21-17-05Z"
-          }
-        },
-        {
-          "path": "nextstrain/orthohantavirus/andv/m",
-          "attributes": {
-            "name": "Andesvirus (segment M)",
-            "reference name": "Chile-9717869",
-            "reference accession": "NC_003467"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2026-05-08T21:17:05Z",
-              "tag": "2026-05-08--21-17-05Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2026-05-08T21:17:05Z",
-            "tag": "2026-05-08--21-17-05Z"
-          }
-        },
-        {
-          "path": "nextstrain/orthohantavirus/andv/s",
-          "attributes": {
-            "name": "Andesvirus (segment S)",
-            "reference name": "Chile-9717869",
-            "reference accession": "NC_003466"
-          },
-          "files": {
-            "reference": "reference.fasta",
-            "pathogenJson": "pathogen.json",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "treeJson": "tree.json",
-            "examples": "sequences.fasta",
-            "readme": "README.md",
-            "changelog": "CHANGELOG.md"
-          },
-          "capabilities": {
-            "qc": [
-              "missingData",
-              "mixedSites",
-              "frameShifts",
-              "stopCodons",
-              "privateMutations",
-              "snpClusters"
-            ]
-          },
-          "versions": [
-            {
-              "updatedAt": "2026-05-08T21:17:05Z",
-              "tag": "2026-05-08--21-17-05Z"
-            }
-          ],
-          "version": {
-            "updatedAt": "2026-05-08T21:17:05Z",
-            "tag": "2026-05-08--21-17-05Z"
           }
         },
         {
