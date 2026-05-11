@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-05-11T18:59:50Z
 
 - Updating Nextclade dataset with the latest sequences and metadata from Pathoplexus
 - Include 2026 outbreak sequences
