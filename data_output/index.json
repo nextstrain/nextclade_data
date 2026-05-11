@@ -2959,6 +2959,9 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
+            "customClades": {
+              "outbreak": 2
+            },
             "qc": [
               "missingData",
               "mixedSites",
@@ -2970,13 +2973,15 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2026-05-08T21:17:05Z",
               "tag": "2026-05-08--21-17-05Z"
             }
           ],
           "version": {
-            "updatedAt": "2026-05-08T21:17:05Z",
-            "tag": "2026-05-08--21-17-05Z"
+            "tag": "unreleased"
           }
         },
         {
@@ -2996,6 +3001,9 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
+            "customClades": {
+              "outbreak": 2
+            },
             "qc": [
               "missingData",
               "mixedSites",
@@ -3007,13 +3015,15 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2026-05-08T21:17:05Z",
               "tag": "2026-05-08--21-17-05Z"
             }
           ],
           "version": {
-            "updatedAt": "2026-05-08T21:17:05Z",
-            "tag": "2026-05-08--21-17-05Z"
+            "tag": "unreleased"
           }
         },
         {
@@ -3033,6 +3043,9 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
+            "customClades": {
+              "outbreak": 2
+            },
             "qc": [
               "missingData",
               "mixedSites",
@@ -3044,13 +3057,15 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2026-05-08T21:17:05Z",
               "tag": "2026-05-08--21-17-05Z"
             }
           ],
           "version": {
-            "updatedAt": "2026-05-08T21:17:05Z",
-            "tag": "2026-05-08--21-17-05Z"
+            "tag": "unreleased"
           }
         },
         {
