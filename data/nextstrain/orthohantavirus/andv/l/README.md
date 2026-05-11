@@ -4,11 +4,14 @@
 | :-- | :-- |
 | name  | Andes virus segment L Tree |
 | authors | [Nextstrain](https://nextstrain.org) |
-| reference | NC_003468 |
+| reference | [NC_003468](www.ncbi.nlm.nih.gov/nuccore/NC_003468) |
 | workflow  | https://github.com/nextstrain/andv/tree/main/nextclade  |
 | path  | `nextstrain/orthohantavirus/andv/l` |
 
 
+This dataset aligns sequences to the RefSeq entry [NC_003468](www.ncbi.nlm.nih.gov/nuccore/NC_003468) and places the sequences onto a tree build using sequences from INSDC and Pathoplexus.
+Sequences from the 2026 outbreak were rapidly shared by several laboratories around the world to facilitate outbreak investigations. These data have been released under RESTRICTED USE terms on Pathoplexus.
+We refer to the [summary of the initial investigations by this collaboration on virological.org](https://virological.org/t/preliminary-analysis-of-orthohantavirus-andesense-virus-sequences-from-a-cruise-ship-related-cluster-may-2026/1029) for further details.
 
 ## What are Nextclade datasets
 

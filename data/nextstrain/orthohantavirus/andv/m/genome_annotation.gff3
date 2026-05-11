@@ -4,5 +4,6 @@
 ##sequence-region NC_003467.2 1 3671
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1980456
 NC_003467.2	RefSeq	region	1	3671	.	+	.	ID=NC_003467.2:1..3671;Dbxref=taxon:1980456;Name=M;gbkey=Src;genome=genomic;mol_type=genomic RNA;old-name=Andes virus;segment=M;strain=Chile-9717869
-NC_003467.2	RefSeq	CDS	52	2004	.	+	0	Name=G1;
-NC_003467.2	RefSeq	CDS	2005	3468	.	+	0	Name=G2;
+NC_003467.2	RefSeq	CDS	52	3468	.	+	0	Name=GPC;
+NC_003467.2	RefSeq	CDS	52	2004	.	+	0	Name=Gn;
+NC_003467.2	RefSeq	CDS	2005	3468	.	+	0	Name=Gc;
