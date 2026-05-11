@@ -10,7 +10,7 @@
     "changelog": "CHANGELOG.md"
   },
   "schemaVersion": "3.0.0",
-  "defaultCds": "G1",
+  "defaultCds": "GPC",
   "attributes": {
     "name": "Andesvirus (segment M)",
     "reference name": "Chile-9717869",
