@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-05-12T16:39:06Z
 
 - update outbreak name to 2026-Hondius
 - make nucleotide default sequence view.
