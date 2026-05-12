@@ -10,7 +10,6 @@
     "changelog": "CHANGELOG.md"
   },
   "schemaVersion": "3.0.0",
-  "defaultCds": "RdRp",
   "attributes": {
     "name": "Andesvirus (segment L)",
     "reference name": "Chile-9717869",
