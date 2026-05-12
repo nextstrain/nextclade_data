@@ -13,9 +13,9 @@
   "attributes": {
     "name": "Andesvirus (segment S)",
     "reference name": "Chile-9717869",
-    "reference accession": "NC_003466"
+    "reference accession": "NC_003466",
+    "experimental": true
   },
-  "experimental": true,
   "alignmentParams": {
     "penaltyGapExtend": 1,
     "penaltyGapOpen": 8,
