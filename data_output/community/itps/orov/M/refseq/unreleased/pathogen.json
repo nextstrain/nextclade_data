@@ -6,25 +6,13 @@
   "attributes": {
     "name": "orov/M/refseq",
     "reference accession": "NC_005775.1",
-    "reference name": "Oropouche virus, M segment"
+    "reference name": "Oropouche virus, M segment",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "placementMaskRanges": [
-    {
-      "begin": 0,
-      "end": 31
-    },
-    {
-      "begin": 4294,
-      "end": 4385
-    }
-  ],
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",

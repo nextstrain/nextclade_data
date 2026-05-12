@@ -6,25 +6,13 @@
   "attributes": {
     "name": "orov/M/tefe",
     "reference accession": "PP154171.1",
-    "reference name": "Oropouche virus ILMD_TF29 (tefe), M segment"
+    "reference name": "Oropouche virus ILMD_TF29 (tefe), M segment",
+    "experimental": true
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
-  "placementMaskRanges": [
-    {
-      "begin": 0,
-      "end": 20
-    },
-    {
-      "begin": 4283,
-      "end": 4371
-    }
-  ],
-  "deprecated": false,
-  "enabled": true,
-  "experimental": true,
   "files": {
     "changelog": "CHANGELOG.md",
     "examples": "sequences.fasta",

@@ -11,9 +11,9 @@
   },
   "schemaVersion": "3.0.0",
   "attributes": {
-    "name": "Andesvirus (segment S)",
+    "name": "Andesvirus (segment L)",
     "reference name": "Chile-9717869",
-    "reference accession": "NC_003466",
+    "reference accession": "NC_003468",
     "experimental": true
   },
   "alignmentParams": {
@@ -24,8 +24,6 @@
     "penaltyMismatch": 1,
     "scoreMatch": 5,
     "retryReverseComplement": true,
-    "excessBandwidth": 50,
-    "terminalBandwidth": 100,
     "allowedMismatches": 10,
     "minSeedCover": 0.12,
     "minLength": 100
@@ -48,8 +46,8 @@
     },
     "privateMutations": {
       "enabled": true,
-      "cutoff": 50,
-      "typical": 30,
+      "cutoff": 150,
+      "typical": 100,
       "weightLabeledSubstitutions": 1,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
@@ -60,5 +58,8 @@
       "scoreWeight": 50,
       "windowSize": 50
     }
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }

@@ -60,5 +60,8 @@
       "scoreWeight": 50,
       "windowSize": 50
     }
+  },
+  "version": {
+    "tag": "unreleased"
   }
 }

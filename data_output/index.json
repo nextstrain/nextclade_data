@@ -2947,7 +2947,8 @@
           "attributes": {
             "name": "Andesvirus (segment L)",
             "reference name": "Chile-9717869",
-            "reference accession": "NC_003468"
+            "reference accession": "NC_003468",
+            "experimental": true
           },
           "files": {
             "reference": "reference.fasta",
@@ -2973,6 +2974,9 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2026-05-11T18:59:50Z",
               "tag": "2026-05-11--18-59-50Z"
             },
@@ -2982,8 +2986,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-11T18:59:50Z",
-            "tag": "2026-05-11--18-59-50Z"
+            "tag": "unreleased"
           }
         },
         {
@@ -2991,7 +2994,8 @@
           "attributes": {
             "name": "Andesvirus (segment M)",
             "reference name": "Chile-9717869",
-            "reference accession": "NC_003467"
+            "reference accession": "NC_003467",
+            "experimental": true
           },
           "files": {
             "reference": "reference.fasta",
@@ -3017,6 +3021,9 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2026-05-11T18:59:50Z",
               "tag": "2026-05-11--18-59-50Z"
             },
@@ -3026,8 +3033,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-11T18:59:50Z",
-            "tag": "2026-05-11--18-59-50Z"
+            "tag": "unreleased"
           }
         },
         {
@@ -3035,7 +3041,8 @@
           "attributes": {
             "name": "Andesvirus (segment S)",
             "reference name": "Chile-9717869",
-            "reference accession": "NC_003466"
+            "reference accession": "NC_003466",
+            "experimental": true
           },
           "files": {
             "reference": "reference.fasta",
@@ -3061,6 +3068,9 @@
           },
           "versions": [
             {
+              "tag": "unreleased"
+            },
+            {
               "updatedAt": "2026-05-11T18:59:50Z",
               "tag": "2026-05-11--18-59-50Z"
             },
@@ -3070,8 +3080,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-11T18:59:50Z",
-            "tag": "2026-05-11--18-59-50Z"
+            "tag": "unreleased"
           }
         },
         {
@@ -8846,7 +8855,8 @@
           "attributes": {
             "name": "orov/L/refseq",
             "reference accession": "NC_005776.1",
-            "reference name": "Oropouche virus, L segment"
+            "reference name": "Oropouche virus, L segment",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -8888,7 +8898,8 @@
           "attributes": {
             "name": "orov/M/refseq",
             "reference accession": "NC_005775.1",
-            "reference name": "Oropouche virus, M segment"
+            "reference name": "Oropouche virus, M segment",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -8930,7 +8941,8 @@
           "attributes": {
             "name": "orov/M/tefe",
             "reference accession": "PP154171.1",
-            "reference name": "Oropouche virus ILMD_TF29 (tefe), M segment"
+            "reference name": "Oropouche virus ILMD_TF29 (tefe), M segment",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -8972,7 +8984,8 @@
           "attributes": {
             "name": "orov/L/tefe",
             "reference accession": "PP154172.1",
-            "reference name": "Oropouche virus ILMD_TF29 (tefe), L segment"
+            "reference name": "Oropouche virus ILMD_TF29 (tefe), L segment",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -9014,7 +9027,8 @@
           "attributes": {
             "name": "orov/S/tefe",
             "reference accession": "PP154170.1",
-            "reference name": "Oropouche virus ILMD_TF29 (tefe), S segment"
+            "reference name": "Oropouche virus ILMD_TF29 (tefe), S segment",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
@@ -9056,7 +9070,8 @@
           "attributes": {
             "name": "orov/S/refseq",
             "reference accession": "NC_005777.1",
-            "reference name": "Oropouche virus, S segment"
+            "reference name": "Oropouche virus, S segment",
+            "experimental": true
           },
           "files": {
             "changelog": "CHANGELOG.md",
