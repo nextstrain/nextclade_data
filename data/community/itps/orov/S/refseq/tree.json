@@ -11,7 +11,7 @@
     ],
     "maintainers": [
       {
-        "name": "Instituto Todos pela Sa\u00fade",
+        "name": "Instituto Todos pela Saúde",
         "url": "https://www.itps.org.br/"
       }
     ],
@@ -76,7 +76,21 @@
       "map",
       "entropy",
       "frequencies"
-    ]
+    ],
+    "extensions": {
+      "nextclade": {
+        "placement_mask_ranges": [
+          {
+            "begin": 0,
+            "end": 44
+          },
+          {
+            "begin": 740,
+            "end": 754
+          }
+        ]
+      }
+    }
   },
   "tree": {
     "name": "NODE_0000000",
