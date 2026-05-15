@@ -2315,6 +2315,52 @@
           }
         },
         {
+          "path": "nextstrain/orthoebolavirus/bdbv",
+          "shortcuts": [
+            "nextstrain/ebola/bebov"
+          ],
+          "attributes": {
+            "name": "Bundibugyo ebolavirus",
+            "reference accession": "NC_014373.1",
+            "reference name": "UGA/2007/Butalya-811250",
+            "experimental": true
+          },
+          "files": {
+            "treeJson": "tree.json",
+            "changelog": "CHANGELOG.md",
+            "examples": "examples.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "readme": "README.md",
+            "reference": "reference.fasta"
+          },
+          "capabilities": {
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/measles/genome/WHO-2012",
           "shortcuts": [
             "measles"
@@ -7119,52 +7165,6 @@
           "version": {
             "updatedAt": "2026-01-14T08:53:00Z",
             "tag": "2026-01-14--08-53-00Z",
-            "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
-            }
-          }
-        },
-        {
-          "path": "nextstrain/orthoebolavirus/bdbv",
-          "shortcuts": [
-            "nextstrain/ebola/bebov"
-          ],
-          "attributes": {
-            "name": "Bundibugyo ebolavirus",
-            "reference accession": "NC_014373.1",
-            "reference name": "UGA/2007/Butalya-811250",
-            "experimental": true
-          },
-          "files": {
-            "treeJson": "tree.json",
-            "changelog": "CHANGELOG.md",
-            "examples": "examples.fasta",
-            "genomeAnnotation": "genome_annotation.gff3",
-            "pathogenJson": "pathogen.json",
-            "readme": "README.md",
-            "reference": "reference.fasta"
-          },
-          "capabilities": {
-            "qc": [
-              "frameShifts",
-              "missingData",
-              "mixedSites",
-              "privateMutations",
-              "stopCodons"
-            ]
-          },
-          "versions": [
-            {
-              "tag": "unreleased",
-              "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
-              }
-            }
-          ],
-          "version": {
-            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
