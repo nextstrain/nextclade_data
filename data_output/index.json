@@ -7137,6 +7137,7 @@
             "experimental": true
           },
           "files": {
+            "treeJson": "tree.json",
             "changelog": "CHANGELOG.md",
             "examples": "examples.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
