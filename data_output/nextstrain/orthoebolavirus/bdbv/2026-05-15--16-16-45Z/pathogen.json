@@ -68,7 +68,8 @@
     "nextstrain/ebola/bebov"
   ],
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-05-15T16:16:45Z",
+    "tag": "2026-05-15--16-16-45Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
