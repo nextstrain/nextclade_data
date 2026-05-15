@@ -41,6 +41,7 @@
     "nextstrain/mpox/lineage-b.1",
     "nextstrain/orthoebolavirus/ebov",
     "nextstrain/orthoebolavirus/sudv",
+    "nextstrain/orthoebolavirus/bdbv",
     "nextstrain/measles/genome/WHO-2012",
     "nextstrain/measles/N450/WHO-2012",
     "nextstrain/dengue/all",
@@ -100,7 +101,6 @@
     "nextstrain/flu/h2n2/ha",
     "nextstrain/flu/h2n2/na",
     "nextstrain/flu/h2n2/mp",
-    "nextstrain/flu/h2n2/ns",
-    "nextstrain/orthoebolavirus/bdbv"
+    "nextstrain/flu/h2n2/ns"
   ]
 }
