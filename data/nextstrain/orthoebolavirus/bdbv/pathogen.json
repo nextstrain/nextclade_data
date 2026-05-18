@@ -6,7 +6,8 @@
     "allowedMismatches": 10,
     "windowSize": 40,
     "minSeedCover": 0.03,
-    "gapAlignmentSide": "left"
+    "gapAlignmentSide": "left",
+    "retryReverseComplement": true
   },
   "attributes": {
     "name": "Bundibugyo ebolavirus",
@@ -59,13 +60,13 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [],
+      "ignoredStopCodons": [{"cdsName": "GP_003", "codon": 366}],
       "scoreWeight": 20
     }
   },
   "schemaVersion": "3.0.0",
   "shortcuts": [
-    "nextstrain/ebola/bebov"
+    "nextstrain/ebola/bdbv"
   ],
   "version": {
     "updatedAt": "2026-04-14T11:55:23Z",
