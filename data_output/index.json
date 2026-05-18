@@ -2317,7 +2317,7 @@
         {
           "path": "nextstrain/orthoebolavirus/bdbv",
           "shortcuts": [
-            "nextstrain/ebola/bebov"
+            "nextstrain/ebola/bdbv"
           ],
           "attributes": {
             "name": "Bundibugyo ebolavirus",
@@ -2335,6 +2335,9 @@
             "reference": "reference.fasta"
           },
           "capabilities": {
+            "customClades": {
+              "outbreak": 4
+            },
             "qc": [
               "frameShifts",
               "missingData",
@@ -2345,6 +2348,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-15T16:16:45Z",
               "tag": "2026-05-15--16-16-45Z",
               "compatibility": {
@@ -2354,8 +2364,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-15T16:16:45Z",
-            "tag": "2026-05-15--16-16-45Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"

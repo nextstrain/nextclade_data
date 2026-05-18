@@ -1,0 +1,15 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_014373.1 1 18940
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=565995
+NC_014373.1	RefSeq	region	1	18940	.	+	.	ID=NC_014373.1:1..18940;Dbxref=taxon:565995;collection-date=Nov-2007;country=Uganda;gbkey=Src;genome=genomic;isolate=Bundibugyo virus/H.sapiens-tc/UGA/2007/Butalya-811250;isolation-source=blood;mol_type=viral cRNA;nat-host=Homo sapiens;old-name=Bundibugyo ebolavirus
+NC_014373.1	RefSeq	CDS	458	2677	.	+	0	Name=NP;gene=NP;gbkey=CDS;locus_tag=BDBVp1;product=nucleoprotein;protein_id=YP_003815432.1;ID=cds-YP_003815432.1;Note=encapsidation of genomic RNA;Dbxref=GenBank:YP_003815432.1,GeneID:9487269
+NC_014373.1	RefSeq	CDS	3108	4133	.	+	0	Name=VP35;gbkey=CDS;gene=VP35;locus_tag=BDBVp2;protein_id=YP_003815433.1;ID=cds-YP_003815433.1;product=polymerase complex protein;Note=putative type-1 IFN antagonist;Dbxref=GenBank:YP_003815433.1,GeneID:9487263
+NC_014373.1	RefSeq	CDS	4461	5441	.	+	0	Name=VP40;gbkey=CDS;gene=VP40;locus_tag=BDBVp3;product=matrix protein;protein_id=YP_003815434.1;ID=cds-YP_003815434.1;Dbxref=GenBank:YP_003815434.1,GeneID:9487264
+NC_014373.1	RefSeq	CDS	6021	6905	.	+	0	Name=GP;gene=GP;gbkey=CDS;locus_tag=BDBVp4;exception=RNA editing;protein_id=YP_003815435.1;ID=cds-YP_003815435.1;product=spike glycoprotein;Dbxref=GenBank:YP_003815435.1,GeneID:9487265;Note=GP1%2C2%3B structural glycoprotein%3B cleaved by furin into subunits GP1 and GP2 to yield a heterodimer linked by a disulfide bond
+NC_014373.1	RefSeq	CDS	6905	8050	.	+	0	Name=GP;gene=GP;gbkey=CDS;locus_tag=BDBVp4;exception=RNA editing;protein_id=YP_003815435.1;ID=cds-YP_003815435.1;product=spike glycoprotein;Dbxref=GenBank:YP_003815435.1,GeneID:9487265;Note=GP1%2C2%3B structural glycoprotein%3B cleaved by furin into subunits GP1 and GP2 to yield a heterodimer linked by a disulfide bond
+NC_014373.1	RefSeq	CDS	6021	7142	.	+	0	Name=GP_003;gene=GP;gbkey=CDS;locus_tag=BDBVp4;protein_id=YP_003815436.1;ID=cds-YP_003815436.1;product=small secreted glycoprotein;Dbxref=GenBank:YP_003815436.1,GeneID:9487265;Note=solulbe secreted glycoprotein%3B small non-structural secreted glycoprotein%3B sGP
+NC_014373.1	RefSeq	CDS	8496	9365	.	+	0	Name=VP30;gbkey=CDS;gene=VP30;locus_tag=BDBVp5;protein_id=YP_003815438.1;ID=cds-YP_003815438.1;product=minor nucleoprotein;Note=polymerase complex protein;Dbxref=GenBank:YP_003815438.1,GeneID:9487266
+NC_014373.1	RefSeq	CDS	10335	11090	.	+	0	Name=VP24;gbkey=CDS;gene=VP24;locus_tag=BDBVp6;protein_id=YP_003815439.1;ID=cds-YP_003815439.1;product=membrane-associated protein;Dbxref=GenBank:YP_003815439.1,GeneID:9487267
+NC_014373.1	RefSeq	CDS	11567	18199	.	+	0	Name=L;gene=L;gbkey=CDS;locus_tag=BDBVp7;protein_id=YP_003815440.1;ID=cds-YP_003815440.1;product=RNA-dependent RNA polymerase;Dbxref=GenBank:YP_003815440.1,GeneID:9487268;Note=synthesis of viral RNAs%3B transcriptional RNA editing
