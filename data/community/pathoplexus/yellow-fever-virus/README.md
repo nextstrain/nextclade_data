@@ -11,7 +11,7 @@
 ## Scope of this dataset
 
 This dataset can be used for clade assignment of yellow fever virus samples. 
-In contrast to the existing `nextstrain/yellow-fever/prM-E` dataset (which covers subsection of the yellow fever virus genome) this dataset comprises the full yellow fever virus genome.
+In contrast to the existing `nextstrain/yellow-fever/prM-E` dataset (which covers subsection of the yellow fever virus genome), this dataset comprises the full yellow fever virus genome.
 
 ## Features
 
