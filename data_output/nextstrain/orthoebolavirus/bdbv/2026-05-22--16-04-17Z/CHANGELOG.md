@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-05-22T16:04:17Z
 
 - adjust QC param settings to reudce private mutation threshold (outbreak genomes should be very similar)
 - add SNP cluster QC rule to trigger on stretches of high private mutation density
