@@ -1,11 +1,17 @@
-# Nextclade dataset for "Crimean-Congo hemorrhagic fever virus segment L" based on reference "NC_005301.3"
+# Yellow fever virus dataset (full genome)
 
 | Key          | Value                                                                                                   |
 | ------------ | ------------------------------------------------------------------------------------------------------- |
-| authors      | [Max Verbiest](https://github.com/maverbiest)                                                           |
-| name         | Yellow Fever Virus                                                                                      |
+| name         | Yellow Fever Virus (full genome)                                                                        |
+| workflow     | <https://github.com/hodcroftlab/nextclade-yellow-fever>                                                 |
+| authors      | [Hodcroft Lab](https://github.com/hodcroftlab)                                                          |
 | reference    | [NC_002031.i](1https://www.ncbi.nlm.nih.gov/nuccore/NC_002031.1)                                        |
-| dataset path | community/pathoplexus/yellow-fever-virus                                                                |
+| dataset path | `community/pathoplexus/yellow-fever-virus`                                                              |
+
+## Scope of this dataset
+
+This dataset can be used for clade assignment of yellow fever virus samples. 
+In contrast to the existing `nextstrain/yellow-fever/prM-E` dataset (which covers subsection of the yellow fever virus genome) this dataset comprises the full yellow fever virus genome.
 
 ## Features
 
