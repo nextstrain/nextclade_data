@@ -60,12 +60,24 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [{"cdsName": "GP_003", "codon": 366}],
+      "ignoredStopCodons": [
+        {
+          "cdsName": "GP_003",
+          "codon": 366
+        }
+      ],
       "scoreWeight": 20
     }
   },
   "schemaVersion": "3.0.0",
   "shortcuts": [
     "nextstrain/ebola/bdbv"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
 }
