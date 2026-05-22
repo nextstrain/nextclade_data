@@ -1,3 +1,9 @@
+## Unreleased
+
+- adjust QC param settings to reudce private mutation threshold (outbreak genomes should be very similar)
+- add SNP cluster QC rule to trigger on stretches of high private mutation density
+- update tree
+
 ## 2026-05-18T20:09:34Z
 
 - Add outbreak annotation
