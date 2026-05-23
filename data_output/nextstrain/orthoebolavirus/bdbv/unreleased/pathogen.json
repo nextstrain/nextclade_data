@@ -38,13 +38,21 @@
         "events": [
           {
             "type": "nucSubstitution",
-            "ref": ["A"],
-            "qry": ["G"]
+            "ref": [
+              "A"
+            ],
+            "qry": [
+              "G"
+            ]
           },
           {
             "type": "nucSubstitution",
-            "ref": ["T"],
-            "qry": ["C"]
+            "ref": [
+              "T"
+            ],
+            "qry": [
+              "C"
+            ]
           }
         ],
         "cluster": {
@@ -59,9 +67,15 @@
         "events": [
           {
             "type": "nucSubstitution",
-            "ref": ["G"],
-            "qry": ["A"],
-            "motifs": ["[CT]G[ACT]"]
+            "ref": [
+              "G"
+            ],
+            "qry": [
+              "A"
+            ],
+            "motifs": [
+              "[CT]G[ACT]"
+            ]
           }
         ],
         "cluster": {
@@ -114,5 +128,12 @@
   "schemaVersion": "3.0.0",
   "shortcuts": [
     "nextstrain/ebola/bdbv"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
 }
