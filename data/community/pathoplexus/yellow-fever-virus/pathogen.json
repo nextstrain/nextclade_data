@@ -24,7 +24,7 @@
         "includeReference": false,
         "minSeedCover": 0.01
   },
-  "defaultCds": "M",
+  "defaultCds": "E",
   "qc": {
     "frameShifts": {
       "enabled": true,
