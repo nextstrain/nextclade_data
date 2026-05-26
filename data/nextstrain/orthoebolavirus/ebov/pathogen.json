@@ -27,11 +27,41 @@
     "readme": "README.md",
     "reference": "reference.fasta"
   },
+  "mutationPatterns": {
+    "patterns": [
+      {
+        "id": "rna_editing",
+        "name": "RNA editing signatures",
+        "description": "ADAR editing (A>G, T>C) and APOBEC-like deamination (C>T in CpG context)",
+        "events": [
+          {
+            "type": "nucSubstitution",
+            "ref": ["A"],
+            "qry": ["G"]
+          },
+          {
+            "type": "nucSubstitution",
+            "ref": ["T"],
+            "qry": ["C"]
+          },
+          {
+            "type": "nucSubstitution",
+            "ref": ["C"],
+            "qry": ["T"],
+            "motifs": ["[ACGT]CG"]
+          }
+        ],
+        "cluster": {
+          "windowSize": 100,
+          "cutoff": 5
+        }
+      }
+    ]
+  },
   "qc": {
     "frameShifts": {
       "enabled": true,
-      "ignoredFrameShifts": [
-      ],
+      "ignoredFrameShifts": [],
       "scoreWeight": 50
     },
     "missingData": {
@@ -59,8 +89,7 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [
-      ],
+      "ignoredStopCodons": [],
       "scoreWeight": 50
     }
   },
