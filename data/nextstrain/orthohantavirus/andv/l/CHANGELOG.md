@@ -1,3 +1,7 @@
+## Unreleased
+
+- Update tree with the latest sequences submitted to Pathoplexus
+
 ## 2026-05-12T16:39:06Z
 
 - update outbreak name to 2026-Hondius
