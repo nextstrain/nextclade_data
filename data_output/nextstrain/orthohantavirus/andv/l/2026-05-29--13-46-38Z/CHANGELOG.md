@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-05-29T13:46:38Z
 
 - Update tree with the latest sequences submitted to Pathoplexus
 
@@ -7,6 +7,7 @@
 - update outbreak name to 2026-Hondius
 - make nucleotide default sequence view.
 - add GPC amino acid substitutions
+
 
 ## 2026-05-11T18:59:50Z
 

@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-05-29T13:46:38Z
 
 - Update tree with the latest sequences submitted to Pathoplexus
 
