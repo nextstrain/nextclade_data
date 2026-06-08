@@ -1,3 +1,49 @@
+## Unreleased
+
+- Add all 36 Pango lineages newly designated between 2026-04-16 and 2026-06-08. Unfold below to see a list of all newly included lineages with their designation dates:
+
+<details>
+  <summary> Newly included lineages, with designation date in parentheses</summary>
+
+- XGY (2026-04-24)
+- SS.1 (2026-04-24)
+- RS.1.5 (2026-04-24)
+- RS.1.1.1 (2026-04-24)
+- ST.1 (2026-04-27)
+- PQ.2.5.6 (2026-04-27)
+- XFG.40 (2026-05-04)
+- XFG.3.8.2 (2026-05-04)
+- SU.1 (2026-05-04)
+- RV.1.1 (2026-05-04)
+- RV.1.2 (2026-05-04)
+- RV.1.3 (2026-05-04)
+- RV.1.4 (2026-05-04)
+- SV.1 (2026-05-04)
+- SV.1.1 (2026-05-04)
+- RK.1.1 (2026-05-04)
+- RK.1.2 (2026-05-04)
+- RK.1.3 (2026-05-04)
+- PQ.2.15 (2026-05-04)
+- SW.1 (2026-05-04)
+- XFG.6.14 (2026-05-04)
+- RF.5.1 (2026-05-04)
+- RF.5.2 (2026-05-04)
+- RF.5.3 (2026-05-04)
+- RC.11 (2026-05-06)
+- RS.6 (2026-05-07)
+- SS.2 (2026-05-07)
+- XGZ (2026-05-08)
+- PQ.2.7.2 (2026-05-08)
+- XFG.6.14.1 (2026-05-15)
+- SW.2 (2026-05-15)
+- QF.3.1 (2026-05-15)
+- SV.2 (2026-05-15)
+- SV.2.1 (2026-05-15)
+- SE.2.1.1 (2026-05-21)
+- SY.1 (2026-05-21)
+
+</details>
+
 ## 2026-04-21T09:39:50Z
 
 - Add all 202 Pango lineages newly designated between 2025-12-24 and 2026-04-15. Unfold below to see a list of all newly included lineages with their designation dates:
