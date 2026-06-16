@@ -9,9 +9,9 @@
     "gapAlignmentSide": "left"
   },
   "attributes": {
-    "name": "Sudan virus",
-    "reference accession": "NC_006432.1",
-    "reference name": "UGA/2000/Gulu-808892",
+    "name": "Ebola virus",
+    "reference accession": "NC_002549.1",
+    "reference name": "COD/1976/Yambuku-Mayinga",
     "experimental": true
   },
   "compatibility": {
@@ -19,8 +19,9 @@
     "web": "3.0.0-alpha.0"
   },
   "files": {
+    "treeJson": "tree.json",
     "changelog": "CHANGELOG.md",
-    "examples": "examples.fasta",
+    "examples": "example_sequences.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
     "readme": "README.md",
@@ -29,24 +30,44 @@
   "mutationPatterns": {
     "patterns": [
       {
-        "id": "adar",
-        "name": "ADAR-like RNA editing",
-        "description": "ADAR-mediated A-to-I editing",
+        "id": "rna_editing",
+        "name": "RNA editing signatures",
+        "description": "ADAR editing (A>G, T>C) and APOBEC-like deamination (C>T in CpG context)",
         "events": [
           {
             "type": "nucSubstitution",
-            "ref": ["A"],
-            "qry": ["G"]
+            "ref": [
+              "A"
+            ],
+            "qry": [
+              "G"
+            ]
           },
           {
             "type": "nucSubstitution",
-            "ref": ["T"],
-            "qry": ["C"]
+            "ref": [
+              "T"
+            ],
+            "qry": [
+              "C"
+            ]
+          },
+          {
+            "type": "nucSubstitution",
+            "ref": [
+              "C"
+            ],
+            "qry": [
+              "T"
+            ],
+            "motifs": [
+              "[ACGT]CG"
+            ]
           }
         ],
         "cluster": {
-          "windowSize": 80,
-          "cutoff": 4
+          "windowSize": 100,
+          "cutoff": 5
         }
       }
     ]
@@ -55,7 +76,7 @@
     "frameShifts": {
       "enabled": true,
       "ignoredFrameShifts": [],
-      "scoreWeight": 20
+      "scoreWeight": 50
     },
     "missingData": {
       "enabled": true,
@@ -64,14 +85,14 @@
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 40
+      "mixedSitesThreshold": 20
     },
     "privateMutations": {
-      "cutoff": 300,
+      "cutoff": 30,
       "enabled": true,
-      "typical": 50,
-      "weightLabeledSubstitutions": 6,
-      "weightReversionSubstitutions": 6,
+      "typical": 10,
+      "weightLabeledSubstitutions": 4,
+      "weightReversionSubstitutions": 2,
       "weightUnlabeledSubstitutions": 1
     },
     "snpClusters": {
@@ -83,11 +104,20 @@
     "stopCodons": {
       "enabled": true,
       "ignoredStopCodons": [],
-      "scoreWeight": 20
+      "scoreWeight": 50
     }
   },
   "schemaVersion": "3.0.0",
   "shortcuts": [
-    "nextstrain/ebola/sudan"
-  ]
+    "ebola",
+    "nextstrain/ebola",
+    "nextstrain/ebola/zaire"
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
 }
