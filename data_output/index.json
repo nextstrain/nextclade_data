@@ -9223,6 +9223,48 @@
               "web": "3.0.0-alpha.0"
             }
           }
+        },
+        {
+          "path": "community/UdeM-LMIVV/BabyV/PRRSV2/nsp3-4-5/Baby2026",
+          "attributes": {
+            "name": "Betaartivirus americense nsp3-4-5 classification",
+            "reference name": "NC_038291.1-nsp3-4-5",
+            "reference accession": "NC_038291.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "examples": "sequences.fasta",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 77,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0",
+                "web": "3.0.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0",
+              "web": "3.0.0"
+            }
+          }
         }
       ]
     }
