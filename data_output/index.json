@@ -2330,8 +2330,7 @@
           "attributes": {
             "name": "Bundibugyo ebolavirus",
             "reference accession": "NC_014373.1",
-            "reference name": "UGA/2007/Butalya-811250",
-            "experimental": true
+            "reference name": "UGA/2007/Butalya-811250"
           },
           "files": {
             "treeJson": "tree.json",
