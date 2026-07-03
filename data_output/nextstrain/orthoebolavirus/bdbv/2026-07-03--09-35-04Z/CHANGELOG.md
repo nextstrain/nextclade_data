@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-07-03T09:35:04Z
 
  - Include open 2026 Outbreak sequences as examples;
  - squash zero length branches
