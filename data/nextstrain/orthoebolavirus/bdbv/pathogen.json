@@ -12,8 +12,7 @@
   "attributes": {
     "name": "Bundibugyo ebolavirus",
     "reference accession": "NC_014373.1",
-    "reference name": "UGA/2007/Butalya-811250",
-    "experimental": true
+    "reference name": "UGA/2007/Butalya-811250"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -28,7 +27,6 @@
     "readme": "README.md",
     "reference": "reference.fasta"
   },
-  "defaultCds": "GP",
   "qc": {
     "frameShifts": {
       "enabled": true,

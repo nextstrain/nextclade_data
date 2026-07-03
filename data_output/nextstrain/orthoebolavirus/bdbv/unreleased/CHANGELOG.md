@@ -1,6 +1,8 @@
 ## Unreleased
 
- - update tree with additional DRC genomes.
+ - Include open 2026 Outbreak sequences as examples;
+ - squash zero length branches
+ - change display defaults to show mutations relative to reference tree
 
 
 ## 2026-05-22T16:04:17Z
