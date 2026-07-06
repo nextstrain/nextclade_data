@@ -18,7 +18,7 @@ This dataset is for Mpox viruses of all clades (Ia, Ib, IIa and IIb). For a focu
 
 ## Clade, outbreak and lineage nomenclature
 
-The clade, outbreak and lineage nomenclature used in this dataset is described in [Ruis et al. (2025)](https://www.nature.com/articles/s41591-025-03820-6). Clades comprise Ia, Ib, IIa, and IIb. Outbreaks are labeled as `sh2017` (clade IIb), `sh2023` (clade Ib), and `sh2024` (clade Ia). Some outbreaks have lineage systems that follow [Happi et al. (2022)](https://doi.org/10.1371/journal.pbio.3001769). To unambigously refer to a lineage, include the outbreak, e.g. `sh2017/B.1` for clade IIb outbreak sh2017 lineage B.1. Up to date outbreak and lineage definitions, including aliases, defining mutations and reference sequences are available at [github.com/mpxv-lineages/lineage-designation](https://github.com/mpxv-lineages/lineage-designation).
+The clade, outbreak and lineage nomenclature used in this dataset is described in [Ruis et al. (2025)](https://www.nature.com/articles/s41591-025-03820-6). Clades comprise Ia, Ib, IIa, and IIb. Outbreaks are labeled as `sh2017` (clade IIb), `sh2023` (clade Ib), and `sh2024` (clade Ia). Some outbreaks have lineage systems that follow [Happi et al. (2022)](https://doi.org/10.1371/journal.pbio.3001769). To unambiguously refer to a lineage, include the outbreak, e.g. `sh2017/B.1` for clade IIb outbreak sh2017 lineage B.1. Up to date outbreak and lineage definitions, including aliases, defining mutations and reference sequences are available at [github.com/mpxv-lineages/lineage-designation](https://github.com/mpxv-lineages/lineage-designation).
 
 ## Reference sequence and reference tree
 
