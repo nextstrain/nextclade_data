@@ -12,9 +12,7 @@
 
 ## Scope of this dataset
 
-TODO: Copy to other datasets before merging to main
-
-This dataset is for Mpox viruses of all clades (Ia, Ib, IIa and IIb). For a focused analysis of sequences from clade IIb, you may want to use the more specific dataset: "Clade IIb" (`nextstrain/mpox/clade-iib`). For an even more focused analysis of clade IIb outbreak sh2023 lineage B.1 outbreak sequences (lineage B.1 and sublineages), you may want to use the even more specific dataset: "Lineage B.1" (`nextstrain/mpox/lineage-b.1`). For clade I sequences, you may want to use the dataset "Clade I" (`nextstrain/mpox/clade-i`).
+This dataset is for Mpox viruses of all clades (Ia, Ib, IIa and IIb). For a focused analysis of sequences from clade IIb, you may want to use the more specific dataset: "Clade IIb" (`nextstrain/mpox/clade-iib`). For an even more focused analysis of clade IIb outbreak sh2017 lineage B.1 sequences (lineage B.1 and sublineages), you may want to use the even more specific dataset: "Lineage B.1" (`nextstrain/mpox/lineage-b.1`). For clade I sequences, you may want to use the dataset "Clade I" (`nextstrain/mpox/clade-i`).
 
 ## Clade, outbreak and lineage nomenclature
 
