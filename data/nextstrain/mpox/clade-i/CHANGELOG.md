@@ -1,5 +1,9 @@
 ## Unreleased
 
+- Breaking change: Clade Ib outbreak sh2023 now has lineages defined. Those lineages follow the same scheme as the existing clade IIb outbreak sh2017 lineage system. The root lineage is A, and B might become an alias for another lineage than in IIb/sh2017. Hence, to unambiguously refer to a lineage, the outbreak must be included as well. To facilitate this, a new `outbreakLineage` field has been added that concatenates outbreak and lineage separated by a slash, e.g. `sh2023/A.1`. Existing `clade`, `outbreak`, and `lineage` fields remain unchanged - except that `lineage` `A` is now assigned to both clade Ib/sh2023 lineage `A` and (in datasets that contain it) clade IIb/sh2017 lineage `A`. The new `outbreakLineage` field is the way to unambiguously refer to a lineage.
+- New sequences that have become available on Pathoplexus between December 2025 and June 2026 are now included in the dataset.
+- The range 185990-186092 is no longer masked for placement. It is informative, reliable and relevant for assignment `sh2023/A.1`.
+
 ## 2026-04-14T11:55:23Z
 
 - Align `pathogen.json` metadata with the current Nextclade schema layout.

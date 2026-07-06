@@ -1,5 +1,8 @@
 ## Unreleased
 
+- A new `outbreakLineage` field has been added that concatenates outbreak and lineage separated by a slash, e.g. `sh2017/B.1`. It unambiguously identifies a lineage across outbreaks: clade Ib outbreak sh2023 now also has a lineage system that reuses the same lineage names (e.g. root lineage `A`) as clade IIb outbreak sh2017. Existing `clade`, `outbreak`, and `lineage` fields remain unchanged. Clade Ib sequences are not part of this clade IIb dataset; use `nextstrain/mpox/all-clades` or `nextstrain/mpox/clade-i` for those.
+- New sequences that have become available on Pathoplexus between December 2025 and June 2026 are now included in the dataset.
+
 ## 2026-04-14T11:55:23Z
 
 - Align `pathogen.json` metadata with the current Nextclade schema layout.
