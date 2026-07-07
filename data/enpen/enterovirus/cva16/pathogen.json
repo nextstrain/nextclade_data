@@ -87,6 +87,7 @@
   "minimizerIndex": {
     "references": [
       "minimizer_refs/additional_refs.fasta"
-    ]
+    ],
+    "cutoff": 31
   }
 }
