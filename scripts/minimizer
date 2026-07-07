@@ -84,6 +84,7 @@ from Bio import SeqIO
 from lib.fasta import fasta_read
 from lib.fs import json_write
 from lib.minimizer import (
+  cutoff_from_exponent,
   deserialize_ref_search_index,
   filter_matches,
   make_ref_search_index,
@@ -99,8 +100,8 @@ log = logging.getLogger(__name__)
 
 
 def cmd_build(args: argparse.Namespace) -> None:
-  refs = load_refs(args)
-  index = make_ref_search_index(refs)
+  refs, cutoffs = load_refs(args)
+  index = make_ref_search_index(refs, cutoffs)
   json_write(serialize_ref_search_index(index), args.output, no_sort_keys=True)
   log.info(f"Index written to {args.output}")
   print_index_stats(index)
@@ -113,18 +114,18 @@ def cmd_search(args: argparse.Namespace) -> None:
   search_and_report(index, queries, args.min_score, args.min_hits, args.max_score_gap, args.all_matches, output_dir)
 
 
-def load_refs(args: argparse.Namespace) -> dict:
-  """Return refs dict mapping dataset name to SeqRecord(s)."""
+def load_refs(args: argparse.Namespace) -> tuple[dict, dict]:
+  """Return (refs, cutoffs). cutoffs maps dataset name to its minimizer cutoff; empty means defaults."""
   if args.from_dataset:
     return load_refs_from_dataset(Path(args.from_dataset))
 
   if args.group_by_file:
-    return {Path(fp).stem: list(fasta_read(fp)) for fp in args.refs}
+    return {Path(fp).stem: list(fasta_read(fp)) for fp in args.refs}, {}
 
-  return {seq.name: seq for seq in fasta_read(args.refs)}
+  return {seq.name: seq for seq in fasta_read(args.refs)}, {}
 
 
-def load_refs_from_dataset(dataset_dir: Path) -> dict:
+def load_refs_from_dataset(dataset_dir: Path) -> tuple[dict, dict]:
   pathogen_json_path = dataset_dir / "pathogen.json"
   if not pathogen_json_path.is_file():
     raise FileNotFoundError(f"pathogen.json not found: {pathogen_json_path}")
@@ -138,6 +139,8 @@ def load_refs_from_dataset(dataset_dir: Path) -> dict:
   )
 
   minimizer_index = pathogen_json.get("minimizerIndex", {})
+  cutoff = cutoff_from_exponent(minimizer_index.get("cutoff"))
+  cutoffs = {dataset_name: cutoff}
   minimizer_ref_filenames = minimizer_index.get("references", [])
 
   if minimizer_ref_filenames:
@@ -148,7 +151,7 @@ def load_refs_from_dataset(dataset_dir: Path) -> dict:
         raise FileNotFoundError(f"Minimizer reference file not found: {filepath}")
       all_refs.extend(fasta_read(str(filepath)))
     log.info(f"{dataset_name}: {len(all_refs)} sequences from {len(minimizer_ref_filenames)} minimizer reference files")
-    return {dataset_name: all_refs}
+    return {dataset_name: all_refs}, cutoffs
 
   ref_filename = pathogen_json.get("files", {}).get("reference")
   if not ref_filename:
@@ -156,7 +159,7 @@ def load_refs_from_dataset(dataset_dir: Path) -> dict:
 
   ref = list(fasta_read(str(dataset_dir / ref_filename)))
   log.info(f"{dataset_name}: using main reference ({ref_filename})")
-  return {dataset_name: ref[0] if len(ref) == 1 else ref}
+  return {dataset_name: ref[0] if len(ref) == 1 else ref}, cutoffs
 
 
 def load_index(index_path: str) -> dict:

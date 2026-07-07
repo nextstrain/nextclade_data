@@ -204,12 +204,14 @@ For a genetically diverse pathogen, a single reference may not be similar enough
 ```json
 {
   "minimizerIndex": {
-    "references": ["minimizer_refs/additional_refs.fasta"]
+    "references": ["minimizer_refs/additional_refs.fasta"],
+    "cutoff": 28
   }
 }
 ```
 
 - `references` is an array of FASTA file paths relative to the dataset directory. Every sequence in every listed file contributes minimizers for this dataset; a single file may hold many sequences. When `minimizerIndex.references` is absent, the dataset's main `reference.fasta` is used. These references only affect dataset suggestion -- alignment and mutation calling still use `files.reference`.
+- `cutoff` is an optional acceptance threshold given as an **exponent**: the retained fraction of k-mers is `2**cutoff / 2**32`, so `28` keeps roughly one k-mer in sixteen (the default when the field is absent) and a larger value keeps more, producing a denser and more sensitive index. Allowed range is `1`-`32`. It is an exponent, not a raw threshold value: writing a raw value such as `2147483648` is rejected so that a small number is never mistaken for a near-empty index.
 
 A dataset with multiple references stores the union of its references' minimizers, but a query only ever resembles one of them. The suggestion score therefore divides matched minimizers by the expected number of hits from a single reference, not by the union size, so adding references broadens coverage without depressing the score.
 

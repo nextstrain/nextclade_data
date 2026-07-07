@@ -25,7 +25,7 @@ from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   github_create_release, git_pull, git_commit_all, git_push
 from lib.logger import logger
-from lib.minimizer import make_ref_search_index, serialize_ref_search_index
+from lib.minimizer import cutoff_from_exponent, make_ref_search_index, serialize_ref_search_index
 
 
 
@@ -143,8 +143,9 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
     ref = get_ref_seq(pathogen_json, dataset_dir)
     check_ref_seq_mismatch(path, ref, pathogen_json, dataset_dir)
 
-    # get references for minimizer index (may be multiple)
+    # get references and cutoff for minimizer index (references may be multiple)
     minimizer_refs = get_minimizer_refs(pathogen_json, dataset_dir)
+    minimizer_cutoff = get_minimizer_cutoff(pathogen_json)
 
     versions, last_version = dataset_get_versions(dataset)
 
@@ -169,7 +170,7 @@ def index_one_dataset(args, pathogen_json_path: str, dataset: object, tag: str, 
     })
 
     reporter.dataset_finish(path, "ok")
-    return dataset_out, minimizer_refs
+    return dataset_out, minimizer_refs, minimizer_cutoff
   except Exception:
     reporter.dataset_finish(path, "error")
     raise
@@ -184,6 +185,14 @@ def get_ref_seq(pathogen_json, dataset_dir):
   except Exception as e:
     raise ValueError("When reading reference sequence") from e
 
+
+def get_minimizer_cutoff(pathogen_json):
+  """
+  Resolve a dataset's minimizer cutoff from the `minimizerIndex.cutoff` exponent, or the default when
+  the field is absent. Raises on an out-of-range exponent (see `cutoff_from_exponent`).
+  """
+  minimizer_index = dict_get(pathogen_json, ["minimizerIndex"]) or {}
+  return cutoff_from_exponent(dict_get(minimizer_index, ["cutoff"]))
 
 
 def get_minimizer_refs(pathogen_json, dataset_dir):
@@ -476,19 +485,21 @@ def main():
       collections = []
       release_infos = []
       all_refs = {}
+      all_cutoffs = {}
       for collection_json_path in collection_json_paths:
-        collection, release_infos_for_dataset, refs = process_one_collection(
+        collection, release_infos_for_dataset, refs, cutoffs = process_one_collection(
           collection_json_path, index_json, args, tag, updated_at, validation_ctx
         )
         collections.append(collection)
         release_infos.extend(release_infos_for_dataset)
         all_refs.update(refs)
+        all_cutoffs.update(cutoffs)
 
       collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
       validate_shortcuts(collections)
 
     with reporter.stage("Build minimizer index"):
-      minimizer_index = make_ref_search_index(all_refs)
+      minimizer_index = make_ref_search_index(all_refs, all_cutoffs)
 
       minimizer_index_json_path = "minimizer_index.json"
       json_write(
@@ -564,17 +575,19 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
 
   datasets = []
   refs = {}
+  cutoffs = {}
   for pathogen_json_path in find_files("pathogen.json", collection_dir):
     dataset_dir = dirname(pathogen_json_path)
     path = relpath(dataset_dir, args.input_dir)
     dataset_from_index = find(lambda dataset: dataset["path"] == path, datasets_from_index_json) or {}
 
     try:
-      dataset, ref = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at, validation_ctx)
+      dataset, ref, cutoff = index_one_dataset(args, pathogen_json_path, dataset_from_index, tag, updated_at, validation_ctx)
       datasets.append(dataset)
       # exclude deprecated datasets from list of refs that is later used to build minimizer index
       if not dataset['attributes'].get('deprecated', False):
         refs.update({dataset["path"]: ref})
+        cutoffs.update({dataset["path"]: cutoff})
     except Exception as e:
       raise ValueError(f"When processing '{pathogen_json_path}'") from e
 
@@ -604,7 +617,7 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
     "datasets": datasets,
   }
 
-  return collection_info, release_infos, refs
+  return collection_info, release_infos, refs, cutoffs
 
 
 def get_datasets_from_index_json(index_json, collection_id):
