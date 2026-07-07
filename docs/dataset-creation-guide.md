@@ -195,6 +195,24 @@ Initial release.
 (The heading `## Unreleased` is required for the CHANGELOG to be accepted by the Nextclade data repo).
 Ultimately, both README and CHANGELOG are intended for users of the dataset and should provide information on what the dataset is intended for and what has changed in the dataset at each update. Notes for dataset creators and curators should instead be documented in the workflow that creates the dataset, not in the dataset itself.
 
+## Multiple reference sequences for dataset suggestion (`minimizerIndex`)
+
+Nextclade can suggest which dataset a query sequence belongs to before analysis (the "sort" step). Suggestion uses a minimizer index built across all datasets: each dataset contributes a set of minimizers (a subsampled fingerprint of short k-mers) derived from its reference sequence, and a query is scored against every dataset by the fraction of its minimizers that match. By default a dataset's fingerprint comes from its single `reference.fasta`.
+
+For a genetically diverse pathogen, a single reference may not be similar enough to every query for reliable suggestion. The optional `minimizerIndex` field in `pathogen.json` lets a dataset contribute minimizers from several reference sequences at once, so the dataset is suggested for the full diversity it covers without splitting it into multiple datasets:
+
+```json
+{
+  "minimizerIndex": {
+    "references": ["minimizer_refs/additional_refs.fasta"]
+  }
+}
+```
+
+- `references` is an array of FASTA file paths relative to the dataset directory. Every sequence in every listed file contributes minimizers for this dataset; a single file may hold many sequences. When `minimizerIndex.references` is absent, the dataset's main `reference.fasta` is used. These references only affect dataset suggestion -- alignment and mutation calling still use `files.reference`.
+
+A dataset with multiple references stores the union of its references' minimizers, but a query only ever resembles one of them. The suggestion score therefore divides matched minimizers by the expected number of hits from a single reference, not by the union size, so adding references broadens coverage without depressing the score.
+
 ## Testing the minimal dataset
 
 All the files described above are contained in the [`minimal-dataset`](./minimal-dataset) directory with a flat structure:
