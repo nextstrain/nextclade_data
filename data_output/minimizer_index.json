@@ -173036,562 +173036,655 @@
     {
       "name": "community/genspectrum/marburg/HK1980/all-lineages",
       "length": 19111,
-      "nMinimizers": 1196
+      "nMinimizers": 1193,
+      "expectedMinimizerHits": 1193.375
     },
     {
       "name": "community/isuvdl/mazeller/prrsv1/orf5/yimim2025",
       "length": 606,
-      "nMinimizers": 32
+      "nMinimizers": 37,
+      "expectedMinimizerHits": 36.8125
     },
     {
       "name": "community/isuvdl/mazeller/prrsv2/orf5/yimim2023",
       "length": 603,
-      "nMinimizers": 44
+      "nMinimizers": 37,
+      "expectedMinimizerHits": 36.625
     },
     {
       "name": "community/itps/zikav",
       "length": 10808,
-      "nMinimizers": 683
+      "nMinimizers": 674,
+      "expectedMinimizerHits": 674.4375
     },
     {
       "name": "community/masphl-bioinformatics/hav/vp1-2b-junction",
       "length": 349,
-      "nMinimizers": 16
+      "nMinimizers": 21,
+      "expectedMinimizerHits": 20.75
     },
     {
       "name": "community/masphl-bioinformatics/hav/whole-genome",
       "length": 7478,
-      "nMinimizers": 435
+      "nMinimizers": 466,
+      "expectedMinimizerHits": 466.3125
     },
     {
       "name": "community/moncla-lab/iav-h5/ha/2.3.2.1",
       "length": 1704,
-      "nMinimizers": 94
+      "nMinimizers": 105,
+      "expectedMinimizerHits": 105.4375
     },
     {
       "name": "community/moncla-lab/iav-h5/ha/2.3.4.4",
       "length": 1704,
-      "nMinimizers": 118
+      "nMinimizers": 105,
+      "expectedMinimizerHits": 105.4375
     },
     {
       "name": "community/moncla-lab/iav-h5/ha/all-clades",
       "length": 1760,
-      "nMinimizers": 116
+      "nMinimizers": 109,
+      "expectedMinimizerHits": 108.9375
     },
     {
       "name": "community/neherlab/hiv-1/hxb2",
       "length": 9181,
-      "nMinimizers": 544
+      "nMinimizers": 573,
+      "expectedMinimizerHits": 572.75
     },
     {
       "name": "community/pathoplexus/cchfv/L",
       "length": 12108,
-      "nMinimizers": 753
+      "nMinimizers": 756,
+      "expectedMinimizerHits": 755.6875
     },
     {
       "name": "community/pathoplexus/cchfv/M",
       "length": 5366,
-      "nMinimizers": 358
+      "nMinimizers": 334,
+      "expectedMinimizerHits": 334.3125
     },
     {
       "name": "community/pathoplexus/cchfv/S",
       "length": 1672,
-      "nMinimizers": 103
+      "nMinimizers": 103,
+      "expectedMinimizerHits": 103.4375
     },
     {
       "name": "community/v-gen-lab/chikV/genotypes",
       "length": 11826,
-      "nMinimizers": 754
+      "nMinimizers": 738,
+      "expectedMinimizerHits": 738.0625
     },
     {
       "name": "community/v-gen-lab/dengue/denv1",
       "length": 10735,
-      "nMinimizers": 698
+      "nMinimizers": 670,
+      "expectedMinimizerHits": 669.875
     },
     {
       "name": "community/v-gen-lab/dengue/denv2",
       "length": 10723,
-      "nMinimizers": 656
+      "nMinimizers": 669,
+      "expectedMinimizerHits": 669.125
     },
     {
       "name": "community/v-gen-lab/dengue/denv3",
       "length": 10707,
-      "nMinimizers": 709
+      "nMinimizers": 668,
+      "expectedMinimizerHits": 668.125
     },
     {
       "name": "community/v-gen-lab/dengue/denv4",
       "length": 10649,
-      "nMinimizers": 682
+      "nMinimizers": 664,
+      "expectedMinimizerHits": 664.5
     },
     {
       "name": "enpen/enterovirus/cva16",
       "length": 7412,
-      "nMinimizers": 2020
+      "nMinimizers": 462,
+      "expectedMinimizerHits": 462.1875
     },
     {
       "name": "enpen/enterovirus/ev-d68",
       "length": 7367,
-      "nMinimizers": 429
+      "nMinimizers": 459,
+      "expectedMinimizerHits": 459.375
     },
     {
       "name": "nextstrain/dengue/all",
       "length": 10649,
-      "nMinimizers": 715
+      "nMinimizers": 664,
+      "expectedMinimizerHits": 664.5
     },
     {
       "name": "nextstrain/flu/b/ha/KX058884",
       "length": 1885,
-      "nMinimizers": 117
+      "nMinimizers": 117,
+      "expectedMinimizerHits": 116.75
     },
     {
       "name": "nextstrain/flu/b/mp",
       "length": 1147,
-      "nMinimizers": 66
+      "nMinimizers": 71,
+      "expectedMinimizerHits": 70.625
     },
     {
       "name": "nextstrain/flu/b/na/CY073894",
       "length": 1401,
-      "nMinimizers": 90
+      "nMinimizers": 86,
+      "expectedMinimizerHits": 86.5
     },
     {
       "name": "nextstrain/flu/b/np",
       "length": 1750,
-      "nMinimizers": 94
+      "nMinimizers": 108,
+      "expectedMinimizerHits": 108.3125
     },
     {
       "name": "nextstrain/flu/b/ns",
       "length": 1066,
-      "nMinimizers": 54
+      "nMinimizers": 66,
+      "expectedMinimizerHits": 65.5625
     },
     {
       "name": "nextstrain/flu/b/pa",
       "length": 2245,
-      "nMinimizers": 143
+      "nMinimizers": 139,
+      "expectedMinimizerHits": 139.25
     },
     {
       "name": "nextstrain/flu/b/pb1",
       "length": 2334,
-      "nMinimizers": 146
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 144.8125
     },
     {
       "name": "nextstrain/flu/b/pb2",
       "length": 2358,
-      "nMinimizers": 143
+      "nMinimizers": 146,
+      "expectedMinimizerHits": 146.3125
     },
     {
       "name": "nextstrain/flu/h1n1/ha",
       "length": 1778,
-      "nMinimizers": 116
+      "nMinimizers": 110,
+      "expectedMinimizerHits": 110.0625
     },
     {
       "name": "nextstrain/flu/h1n1/mp",
       "length": 1027,
-      "nMinimizers": 75
+      "nMinimizers": 63,
+      "expectedMinimizerHits": 63.125
     },
     {
       "name": "nextstrain/flu/h1n1/na",
       "length": 1413,
-      "nMinimizers": 78
+      "nMinimizers": 87,
+      "expectedMinimizerHits": 87.25
     },
     {
       "name": "nextstrain/flu/h1n1/np",
       "length": 1565,
-      "nMinimizers": 101
+      "nMinimizers": 97,
+      "expectedMinimizerHits": 96.75
     },
     {
       "name": "nextstrain/flu/h1n1/ns",
       "length": 890,
-      "nMinimizers": 61
+      "nMinimizers": 55,
+      "expectedMinimizerHits": 54.5625
     },
     {
       "name": "nextstrain/flu/h1n1/pa",
       "length": 2233,
-      "nMinimizers": 149
+      "nMinimizers": 138,
+      "expectedMinimizerHits": 138.5
     },
     {
       "name": "nextstrain/flu/h1n1/pb1",
       "length": 2341,
-      "nMinimizers": 131
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 145.25
     },
     {
       "name": "nextstrain/flu/h1n1/pb2",
       "length": 2341,
-      "nMinimizers": 124
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 145.25
     },
     {
       "name": "nextstrain/flu/h1n1pdm/ha/CY121680",
       "length": 1752,
-      "nMinimizers": 113
+      "nMinimizers": 108,
+      "expectedMinimizerHits": 108.4375
     },
     {
       "name": "nextstrain/flu/h1n1pdm/ha/MW626062",
       "length": 1752,
-      "nMinimizers": 116
+      "nMinimizers": 108,
+      "expectedMinimizerHits": 108.4375
     },
     {
       "name": "nextstrain/flu/h1n1pdm/mp",
       "length": 982,
-      "nMinimizers": 63
+      "nMinimizers": 60,
+      "expectedMinimizerHits": 60.3125
     },
     {
       "name": "nextstrain/flu/h1n1pdm/na/MW626056",
       "length": 1433,
-      "nMinimizers": 71
+      "nMinimizers": 88,
+      "expectedMinimizerHits": 88.5
     },
     {
       "name": "nextstrain/flu/h1n1pdm/np",
       "length": 1497,
-      "nMinimizers": 100
+      "nMinimizers": 92,
+      "expectedMinimizerHits": 92.5
     },
     {
       "name": "nextstrain/flu/h1n1pdm/ns",
       "length": 863,
-      "nMinimizers": 73
+      "nMinimizers": 53,
+      "expectedMinimizerHits": 52.875
     },
     {
       "name": "nextstrain/flu/h1n1pdm/pa",
       "length": 2151,
-      "nMinimizers": 137
+      "nMinimizers": 133,
+      "expectedMinimizerHits": 133.375
     },
     {
       "name": "nextstrain/flu/h1n1pdm/pb1",
       "length": 2274,
-      "nMinimizers": 142
+      "nMinimizers": 141,
+      "expectedMinimizerHits": 141.0625
     },
     {
       "name": "nextstrain/flu/h1n1pdm/pb2",
       "length": 2280,
-      "nMinimizers": 132
+      "nMinimizers": 141,
+      "expectedMinimizerHits": 141.4375
     },
     {
       "name": "nextstrain/flu/h2n2/ha",
       "length": 1773,
-      "nMinimizers": 119
+      "nMinimizers": 110,
+      "expectedMinimizerHits": 109.75
     },
     {
       "name": "nextstrain/flu/h2n2/mp",
       "length": 1027,
-      "nMinimizers": 72
+      "nMinimizers": 63,
+      "expectedMinimizerHits": 63.125
     },
     {
       "name": "nextstrain/flu/h2n2/na",
       "length": 1410,
-      "nMinimizers": 90
+      "nMinimizers": 87,
+      "expectedMinimizerHits": 87.0625
     },
     {
       "name": "nextstrain/flu/h2n2/np",
       "length": 1497,
-      "nMinimizers": 91
+      "nMinimizers": 92,
+      "expectedMinimizerHits": 92.5
     },
     {
       "name": "nextstrain/flu/h2n2/ns",
       "length": 838,
-      "nMinimizers": 38
+      "nMinimizers": 51,
+      "expectedMinimizerHits": 51.3125
     },
     {
       "name": "nextstrain/flu/h2n2/pa",
       "length": 2233,
-      "nMinimizers": 151
+      "nMinimizers": 138,
+      "expectedMinimizerHits": 138.5
     },
     {
       "name": "nextstrain/flu/h2n2/pb1",
       "length": 2341,
-      "nMinimizers": 139
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 145.25
     },
     {
       "name": "nextstrain/flu/h2n2/pb2",
       "length": 2341,
-      "nMinimizers": 139
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 145.25
     },
     {
       "name": "nextstrain/flu/h3n2/ha/CY163680",
       "length": 1737,
-      "nMinimizers": 105
+      "nMinimizers": 108,
+      "expectedMinimizerHits": 107.5
     },
     {
       "name": "nextstrain/flu/h3n2/ha/EPI1857216",
       "length": 1718,
-      "nMinimizers": 100
+      "nMinimizers": 106,
+      "expectedMinimizerHits": 106.3125
     },
     {
       "name": "nextstrain/flu/h3n2/mp",
       "length": 1027,
-      "nMinimizers": 71
+      "nMinimizers": 63,
+      "expectedMinimizerHits": 63.125
     },
     {
       "name": "nextstrain/flu/h3n2/na/EPI1857215",
       "length": 1439,
-      "nMinimizers": 95
+      "nMinimizers": 89,
+      "expectedMinimizerHits": 88.875
     },
     {
       "name": "nextstrain/flu/h3n2/np",
       "length": 1566,
-      "nMinimizers": 94
+      "nMinimizers": 97,
+      "expectedMinimizerHits": 96.8125
     },
     {
       "name": "nextstrain/flu/h3n2/ns",
       "length": 890,
-      "nMinimizers": 50
+      "nMinimizers": 55,
+      "expectedMinimizerHits": 54.5625
     },
     {
       "name": "nextstrain/flu/h3n2/pa",
       "length": 2233,
-      "nMinimizers": 148
+      "nMinimizers": 138,
+      "expectedMinimizerHits": 138.5
     },
     {
       "name": "nextstrain/flu/h3n2/pb1",
       "length": 2341,
-      "nMinimizers": 140
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 145.25
     },
     {
       "name": "nextstrain/flu/h3n2/pb2",
       "length": 2341,
-      "nMinimizers": 121
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 145.25
     },
     {
       "name": "nextstrain/flu/vic/ha/KX058884",
       "length": 1885,
-      "nMinimizers": 117
+      "nMinimizers": 117,
+      "expectedMinimizerHits": 116.75
     },
     {
       "name": "nextstrain/flu/vic/mp",
       "length": 1147,
-      "nMinimizers": 66
+      "nMinimizers": 71,
+      "expectedMinimizerHits": 70.625
     },
     {
       "name": "nextstrain/flu/vic/na/CY073894",
       "length": 1401,
-      "nMinimizers": 90
+      "nMinimizers": 86,
+      "expectedMinimizerHits": 86.5
     },
     {
       "name": "nextstrain/flu/vic/np",
       "length": 1750,
-      "nMinimizers": 94
+      "nMinimizers": 108,
+      "expectedMinimizerHits": 108.3125
     },
     {
       "name": "nextstrain/flu/vic/ns",
       "length": 1066,
-      "nMinimizers": 54
+      "nMinimizers": 66,
+      "expectedMinimizerHits": 65.5625
     },
     {
       "name": "nextstrain/flu/vic/pa",
       "length": 2245,
-      "nMinimizers": 143
+      "nMinimizers": 139,
+      "expectedMinimizerHits": 139.25
     },
     {
       "name": "nextstrain/flu/vic/pb1",
       "length": 2334,
-      "nMinimizers": 146
+      "nMinimizers": 145,
+      "expectedMinimizerHits": 144.8125
     },
     {
       "name": "nextstrain/flu/vic/pb2",
       "length": 2358,
-      "nMinimizers": 143
+      "nMinimizers": 146,
+      "expectedMinimizerHits": 146.3125
     },
     {
       "name": "nextstrain/flu/yam/ha/JN993010",
       "length": 1755,
-      "nMinimizers": 111
+      "nMinimizers": 109,
+      "expectedMinimizerHits": 108.625
     },
     {
       "name": "nextstrain/herpes/vzv/NC_001348",
       "length": 124884,
-      "nMinimizers": 7762
+      "nMinimizers": 7804,
+      "expectedMinimizerHits": 7804.1875
     },
     {
       "name": "nextstrain/hmpv/all-clades/NC_039199",
       "length": 13350,
-      "nMinimizers": 793
+      "nMinimizers": 833,
+      "expectedMinimizerHits": 833.3125
     },
     {
       "name": "nextstrain/measles/N450/WHO-2012",
       "length": 450,
-      "nMinimizers": 31
+      "nMinimizers": 27,
+      "expectedMinimizerHits": 27.0625
     },
     {
       "name": "nextstrain/measles/genome/WHO-2012",
       "length": 15894,
-      "nMinimizers": 948
+      "nMinimizers": 992,
+      "expectedMinimizerHits": 992.3125
     },
     {
       "name": "nextstrain/mpox/all-clades",
       "length": 197209,
-      "nMinimizers": 12012
+      "nMinimizers": 12324,
+      "expectedMinimizerHits": 12324.5
     },
     {
       "name": "nextstrain/mpox/clade-i",
       "length": 196967,
-      "nMinimizers": 12086
+      "nMinimizers": 12309,
+      "expectedMinimizerHits": 12309.375
     },
     {
       "name": "nextstrain/mpox/clade-iib",
       "length": 197209,
-      "nMinimizers": 12012
+      "nMinimizers": 12324,
+      "expectedMinimizerHits": 12324.5
     },
     {
       "name": "nextstrain/mpox/lineage-b.1",
       "length": 197209,
-      "nMinimizers": 12020
+      "nMinimizers": 12324,
+      "expectedMinimizerHits": 12324.5
     },
     {
       "name": "nextstrain/mumps/genome",
       "length": 15384,
-      "nMinimizers": 960
+      "nMinimizers": 960,
+      "expectedMinimizerHits": 960.4375
     },
     {
       "name": "nextstrain/mumps/sh",
       "length": 361,
-      "nMinimizers": 21
+      "nMinimizers": 22,
+      "expectedMinimizerHits": 21.5
     },
     {
       "name": "nextstrain/orthoebolavirus/ebov",
       "length": 18959,
-      "nMinimizers": 1183
+      "nMinimizers": 1184,
+      "expectedMinimizerHits": 1183.875
     },
     {
       "name": "nextstrain/orthoebolavirus/sudv",
       "length": 18875,
-      "nMinimizers": 1195
+      "nMinimizers": 1179,
+      "expectedMinimizerHits": 1178.625
     },
     {
       "name": "nextstrain/rsv/a/EPI_ISL_412866",
       "length": 15225,
-      "nMinimizers": 976
+      "nMinimizers": 950,
+      "expectedMinimizerHits": 950.5
     },
     {
       "name": "nextstrain/rsv/b/EPI_ISL_1653999",
       "length": 15222,
-      "nMinimizers": 935
+      "nMinimizers": 950,
+      "expectedMinimizerHits": 950.3125
     },
     {
       "name": "nextstrain/rubella/E1",
       "length": 1443,
-      "nMinimizers": 101
+      "nMinimizers": 89,
+      "expectedMinimizerHits": 89.125
     },
     {
       "name": "nextstrain/rubella/genome",
       "length": 9761,
-      "nMinimizers": 622
+      "nMinimizers": 609,
+      "expectedMinimizerHits": 609.0
     },
     {
       "name": "nextstrain/sars-cov-2/BA.2.86",
       "length": 29903,
-      "nMinimizers": 1839
+      "nMinimizers": 1868,
+      "expectedMinimizerHits": 1867.875
     },
     {
       "name": "nextstrain/sars-cov-2/wuhan-hu-1/orfs",
       "length": 29903,
-      "nMinimizers": 1853
+      "nMinimizers": 1868,
+      "expectedMinimizerHits": 1867.875
     },
     {
       "name": "nextstrain/sars-cov-2/wuhan-hu-1/proteins",
       "length": 29903,
-      "nMinimizers": 1853
+      "nMinimizers": 1868,
+      "expectedMinimizerHits": 1867.875
     },
     {
       "name": "nextstrain/wnv/all-lineages",
       "length": 11029,
-      "nMinimizers": 721
+      "nMinimizers": 688,
+      "expectedMinimizerHits": 688.25
     },
     {
       "name": "nextstrain/yellow-fever/prM-E",
       "length": 672,
-      "nMinimizers": 32
+      "nMinimizers": 41,
+      "expectedMinimizerHits": 40.9375
     }
   ],
   "normalization": [
-    15.979096989966555,
-    18.9375,
-    13.704545454545455,
-    15.824304538799414,
-    21.8125,
-    17.19080459770115,
-    18.127659574468087,
-    14.440677966101696,
-    15.172413793103448,
-    16.876838235294116,
-    16.0796812749004,
-    14.988826815642458,
-    16.233009708737864,
-    15.684350132625994,
-    15.379656160458453,
-    16.346036585365855,
-    15.101551480959097,
-    15.614369501466276,
-    3.6693069306930695,
-    17.172494172494172,
-    14.893706293706293,
-    16.11111111111111,
-    17.37878787878788,
-    15.566666666666666,
-    18.617021276595743,
-    19.74074074074074,
-    15.6993006993007,
-    15.986301369863014,
-    16.48951048951049,
-    15.327586206896552,
-    13.693333333333333,
-    18.115384615384617,
-    15.495049504950495,
-    14.59016393442623,
-    14.986577181208053,
-    17.870229007633586,
-    18.879032258064516,
-    15.504424778761061,
-    15.10344827586207,
-    15.587301587301587,
-    20.183098591549296,
-    14.97,
-    11.821917808219178,
-    15.700729927007298,
-    16.014084507042252,
-    17.272727272727273,
-    14.899159663865547,
-    14.26388888888889,
-    15.666666666666666,
-    16.45054945054945,
-    22.05263157894737,
-    14.788079470198676,
-    16.841726618705035,
-    16.841726618705035,
-    16.542857142857144,
-    17.18,
-    14.464788732394366,
-    15.147368421052631,
-    16.659574468085108,
-    17.8,
-    15.087837837837839,
-    16.72142857142857,
-    19.34710743801653,
-    16.11111111111111,
-    17.37878787878788,
-    15.566666666666666,
-    18.617021276595743,
-    19.74074074074074,
-    15.6993006993007,
-    15.986301369863014,
-    16.48951048951049,
-    15.81081081081081,
-    16.08915228034012,
-    16.834804539722573,
-    14.516129032258064,
-    16.765822784810126,
-    16.417665667665666,
-    16.29712063544597,
-    16.417665667665666,
-    16.406738768718803,
-    16.025,
-    17.19047619047619,
-    16.026204564666102,
-    15.794979079497908,
-    15.59938524590164,
-    16.280213903743316,
-    14.287128712871286,
-    15.692926045016078,
-    16.26046764545949,
-    16.137614678899084,
-    16.137614678899084,
-    15.296809986130375,
-    21.0
+    16.014245312663665,
+    16.461799660441425,
+    16.4641638225256,
+    16.025206190343805,
+    16.819277108433734,
+    16.036456239110038,
+    16.161232957913455,
+    16.161232957913455,
+    16.156052782558806,
+    16.02968136185072,
+    16.02249607145811,
+    16.050850626285285,
+    16.164350453172204,
+    16.023033279701924,
+    16.02537786900541,
+    16.025406314216326,
+    16.025444340505146,
+    16.025583145221972,
+    16.0367816091954,
+    16.037006802721088,
+    16.025583145221972,
+    16.14561027837259,
+    16.24070796460177,
+    16.196531791907514,
+    16.156953260242354,
+    16.259294566253576,
+    16.122082585278278,
+    16.11739318083729,
+    16.116189662537376,
+    16.154457694491764,
+    16.26930693069307,
+    16.19484240687679,
+    16.175710594315245,
+    16.311569301260022,
+    16.12274368231047,
+    16.117039586919105,
+    16.117039586919105,
+    16.156772334293947,
+    16.156772334293947,
+    16.281865284974092,
+    16.192090395480225,
+    16.183783783783785,
+    16.321513002364068,
+    16.127460168697283,
+    16.12051395657953,
+    16.120194432169686,
+    16.15489749430524,
+    16.26930693069307,
+    16.195262024407754,
+    16.183783783783785,
+    16.331303288672352,
+    16.12274368231047,
+    16.117039586919105,
+    16.117039586919105,
+    16.15813953488372,
+    16.159905937683714,
+    16.26930693069307,
+    16.19127988748242,
+    16.175597159457716,
+    16.311569301260022,
+    16.12274368231047,
+    16.117039586919105,
+    16.117039586919105,
+    16.14561027837259,
+    16.24070796460177,
+    16.196531791907514,
+    16.156953260242354,
+    16.259294566253576,
+    16.122082585278278,
+    16.11739318083729,
+    16.116189662537376,
+    16.15650172612198,
+    16.002178317730063,
+    16.02040051001275,
+    16.628175519630485,
+    16.017131699943313,
+    16.001379366302892,
+    16.001381061183043,
+    16.001379366302892,
+    16.001379366302892,
+    16.01770026680549,
+    16.790697674418606,
+    16.014359624115723,
+    16.01442358680666,
+    16.01788532351394,
+    16.0178888523512,
+    16.190743338008414,
+    16.02791461412151,
+    16.00910125142207,
+    16.00910125142207,
+    16.00910125142207,
+    16.02470032691609,
+    16.41526717557252
   ]
 }

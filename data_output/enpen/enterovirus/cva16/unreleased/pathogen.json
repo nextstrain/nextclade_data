@@ -10,11 +10,6 @@
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
-  "buildFiles": {
-    "minimizerReferences": [
-      "minimizer_refs/additional_refs.fasta"
-    ]
-  },
   "attributes": {
     "name": "Coxsackievirus A16",
     "reference name": "Coxsackievirus A16 strain G-10",
@@ -89,6 +84,11 @@
     "3C",
     "3D"
   ],
+  "minimizerIndex": {
+    "references": [
+      "minimizer_refs/additional_refs.fasta"
+    ]
+  },
   "version": {
     "tag": "unreleased",
     "compatibility": {
