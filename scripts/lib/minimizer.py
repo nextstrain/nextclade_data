@@ -23,7 +23,8 @@ KMER_LENGTH = 17
 # 1 << 28 keeps roughly 1/16 of all k-mers.
 #
 # cutoff is a raw threshold VALUE, not an exponent. Expected-hit math must use cutoff / 2**HASH_BITS,
-# never 2**(cutoff - HASH_BITS).
+# never 2**(cutoff - HASH_BITS): the latter silently computes garbage for any cutoff that is not written
+# as a power of two, including a per-dataset override such as 1 << 31.
 CUTOFF = 1 << 28
 
 JSON_SCHEMA_URL_MINIMIZER_JSON=  "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-minimizer-index-json.schema.json"
@@ -76,7 +77,28 @@ def get_ref_search_minimizers(seq: SeqRecord, k=KMER_LENGTH, cutoff=CUTOFF):
   return np.unique(minimizers)
 
 
-def make_ref_search_index(refs):
+def cutoff_from_exponent(exponent):
+  """
+  Resolve a pathogen.json `minimizerIndex.cutoff` EXPONENT to a raw hash-threshold value.
+
+  The authoring unit is an exponent (as in the cutoff experiment and the meeting notes): the retained
+  fraction of k-mers is `2**exponent / 2**HASH_BITS`, i.e. the threshold value is `1 << exponent`. For
+  example `cutoff = 28` -> `1 << 28` (~1/16 of k-mers), `cutoff = 31` -> `1 << 31` (~1/2).
+
+  A raw threshold value (e.g. `2147483648`) is rejected: a curator writing the small exponent `31` must
+  not silently produce a near-empty index. `None` (field absent) resolves to the default CUTOFF.
+  """
+  if exponent is None:
+    return CUTOFF
+  if not isinstance(exponent, int) or isinstance(exponent, bool) or not (1 <= exponent <= HASH_BITS):
+    raise ValueError(
+      f"minimizerIndex.cutoff must be an integer exponent in [1, {HASH_BITS}] "
+      f"(the threshold value used is 2**cutoff), got {exponent!r}"
+    )
+  return 1 << exponent
+
+
+def make_ref_search_index(refs, cutoffs=None):
   """
   Build minimizer search index from reference sequences.
 
@@ -84,15 +106,21 @@ def make_ref_search_index(refs):
     refs: dict mapping dataset name to either:
       - a single SeqRecord (backward compatible)
       - a list of SeqRecords (multiple references per dataset)
+    cutoffs: optional dict mapping dataset name to its minimizer cutoff. Datasets absent from the dict
+      use the default CUTOFF. A dataset's cutoff governs both which of its k-mers are stored and its
+      expected-hit denominator.
 
   Returns:
     Minimizer index dict ready for JSON serialization.
   """
+  cutoffs = cutoffs or {}
+
   # collect minimizers for each dataset (possibly from multiple references)
   minimizers_by_dataset = list()
   for name, ref_or_refs in sorted(refs.items()):
     # normalize to list for uniform handling
     ref_list = ref_or_refs if isinstance(ref_or_refs, list) else [ref_or_refs]
+    cutoff = cutoffs.get(name, CUTOFF)
 
     if not ref_list:
       raise ValueError(f"Dataset {name!r}: no reference sequences provided for the minimizer index")
@@ -101,7 +129,7 @@ def make_ref_search_index(refs):
     all_minimizers = set()
     total_length = 0
     for ref in ref_list:
-      minimizers = get_ref_search_minimizers(ref)
+      minimizers = get_ref_search_minimizers(ref, cutoff=cutoff)
       all_minimizers.update(minimizers)
       total_length += len(ref.seq)
 
@@ -123,15 +151,16 @@ def make_ref_search_index(refs):
     # expectation, not the union size. Using the union size inflates the denominator and depresses the
     # score as references are added.
     #
-    #   E = (avg_length - KMER_LENGTH) * CUTOFF / 2**HASH_BITS
+    #   E = (avg_length - KMER_LENGTH) * cutoff / 2**HASH_BITS
     #
-    # CUTOFF is a value, so the retained fraction is CUTOFF / 2**HASH_BITS. E is an approximation of the
-    # realized count: it ignores non-ACGT k-mers and hash collisions removed by np.unique, so it is
-    # generally non-integer and slightly above the true single-reference count.
-    expected_minimizer_hits = (avg_length - KMER_LENGTH) * CUTOFF / (1 << HASH_BITS)
+    # cutoff is a value, so the retained fraction is cutoff / 2**HASH_BITS (see CUTOFF note). E is an
+    # approximation of the realized count: it ignores non-ACGT k-mers and hash collisions removed by
+    # np.unique, so it is generally non-integer and slightly above the true single-reference count.
+    expected_minimizer_hits = (avg_length - KMER_LENGTH) * cutoff / (1 << HASH_BITS)
 
     minimizers_by_dataset.append({
       "minimizers": np.array(list(all_minimizers)),
+      "cutoff": cutoff,
       "meta": {
         "name": name,
         "length": int(avg_length),
@@ -156,6 +185,12 @@ def make_ref_search_index(refs):
     # reference will be a list in same order as the bit set
     index["references"].append(minimizer_set['meta'])
 
+  # Query k-mers are selected once with the single index-wide params.cutoff, before the matching dataset
+  # is known. It must reach the widest dataset, so it is the maximum of all per-dataset cutoffs; a
+  # narrower value would under-sample queries against high-cutoff datasets. Each dataset's own cutoff is
+  # still enforced by set membership (it stored nothing above it).
+  index_cutoff = max((s["cutoff"] for s in minimizers_by_dataset), default=CUTOFF)
+
   normalization = np.array([x['length'] / x['expectedMinimizerHits'] for x in index["references"]])
 
   return {
@@ -164,7 +199,7 @@ def make_ref_search_index(refs):
     "version": MINIMIZER_ALGO_VERSION,
     "params": {
       "k": KMER_LENGTH,
-      "cutoff": CUTOFF,
+      "cutoff": index_cutoff,
     },
     **index,
     "normalization": normalization
