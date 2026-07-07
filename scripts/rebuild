@@ -38,7 +38,7 @@ def get_dataset_capabilities(pathogen_json: dict, dataset_dir: str):
 
   files = dict_get_required(pathogen_json, ["files"])
   for (name, filename) in files.items():
-    # handle array of filenames (e.g., minimizerReferences)
+    # handle array of filenames (some file fields may hold a list of paths)
     filenames = filename if isinstance(filename, list) else [filename]
     for fname in filenames:
       filepath = join(dataset_dir, fname)
@@ -185,15 +185,16 @@ def get_ref_seq(pathogen_json, dataset_dir):
     raise ValueError("When reading reference sequence") from e
 
 
+
 def get_minimizer_refs(pathogen_json, dataset_dir):
   """
   Get reference sequences for minimizer index.
 
-  If buildFiles.minimizerReferences is specified (array of file paths), returns
+  If minimizerIndex.references is specified (array of file paths), returns
   sequences from all files combined. Otherwise, returns the main reference sequence.
   """
-  build_files = dict_get(pathogen_json, ["buildFiles"]) or {}
-  minimizer_refs_filenames = dict_get(build_files, ["minimizerReferences"]) or []
+  minimizer_index = dict_get(pathogen_json, ["minimizerIndex"]) or {}
+  minimizer_refs_filenames = dict_get(minimizer_index, ["references"]) or []
 
   if len(minimizer_refs_filenames) > 0:
     all_refs = []

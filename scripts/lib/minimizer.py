@@ -11,11 +11,20 @@ MINIMIZER_ALGO_VERSION = "1"
 # Increment this version, if there are changes in the layout of the output file.
 MINIMIZER_JSON_SCHEMA_VERSION = "3.0.0"
 
-# What is this?
-MAGIC_NUMBER_K = 17
+# Number of bits in the minimizer hash space. invertible_hash() masks with (1 << HASH_BITS) - 1,
+# so every k-mer hash is a HASH_BITS-wide unsigned integer in [0, 2**HASH_BITS).
+HASH_BITS = 32
 
-# minimizer cutoff. The max is 1<<32 - 1, so with 28 uses roughly 1/16 of all kmers
-# CUTOFF = 1 << 28
+# Length of the k-mer, in nucleotides, hashed into each minimizer candidate.
+KMER_LENGTH = 17
+
+# Default minimizer acceptance threshold: a value in [0, 2**HASH_BITS). A k-mer is kept as a minimizer
+# only when its hash is below the cutoff, so the retained fraction is cutoff / 2**HASH_BITS. The default
+# 1 << 28 keeps roughly 1/16 of all k-mers.
+#
+# cutoff is a raw threshold VALUE, not an exponent. Expected-hit math must use cutoff / 2**HASH_BITS,
+# never 2**(cutoff - HASH_BITS).
+CUTOFF = 1 << 28
 
 JSON_SCHEMA_URL_MINIMIZER_JSON=  "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/internal-minimizer-index-json.schema.json"
 
@@ -34,15 +43,18 @@ def invertible_hash(x):
 
 
 # turn a kmer into an integer
-def get_hash(kmer, cutoff):
+def get_hash(kmer):
   x = 0
   j = 0
   for i, nuc in enumerate(kmer):
     if i % 3 == 2:
       continue  # skip every third nucleotide to pick up conserved patterns
     if nuc not in 'ACGT':
-      return cutoff + 1  # break out of loop, return hash above cutoff
-    else:  # A=11=3, C=10=2, G=00=0, T=01=1
+      # Reject: return a hash above every possible cutoff (cutoff < 2**HASH_BITS), so the k-mer is
+      # never kept regardless of the caller's cutoff. A fixed CUTOFF+1 sentinel would be wrong for
+      # datasets built with a higher cutoff (e.g. 1 << 31), where it would fall below the threshold.
+      return 1 << HASH_BITS
+    else:  # A=11=3, C=01=1, G=00=0, T=10=2
       if nuc in 'AC':
         x += 1 << j
       if nuc in 'AT':
@@ -52,19 +64,19 @@ def get_hash(kmer, cutoff):
   return invertible_hash(x)
 
 
-def get_ref_search_minimizers(seq: SeqRecord, cutoff, k=MAGIC_NUMBER_K):
+def get_ref_search_minimizers(seq: SeqRecord, k=KMER_LENGTH, cutoff=CUTOFF):
   seq_str = preprocess_seq(seq)
   minimizers = []
   # we know the rough number of minimizers, so we can pre-allocate the array if needed
   for i in range(len(seq_str) - k):
     kmer = seq_str[i:i + k]
-    mhash = get_hash(kmer, cutoff)
+    mhash = get_hash(kmer)
     if mhash < cutoff:  # accept only hashes below cutoff --> reduces the size of the index and the number of look-ups
       minimizers.append(mhash)
   return np.unique(minimizers)
 
 
-def make_ref_search_index(refs, cutoff):
+def make_ref_search_index(refs):
   """
   Build minimizer search index from reference sequences.
 
@@ -82,25 +94,54 @@ def make_ref_search_index(refs, cutoff):
     # normalize to list for uniform handling
     ref_list = ref_or_refs if isinstance(ref_or_refs, list) else [ref_or_refs]
 
+    if not ref_list:
+      raise ValueError(f"Dataset {name!r}: no reference sequences provided for the minimizer index")
+
     # collect minimizers from all references for this dataset
     all_minimizers = set()
     total_length = 0
     for ref in ref_list:
-      minimizers = get_ref_search_minimizers(ref, cutoff)
+      minimizers = get_ref_search_minimizers(ref)
       all_minimizers.update(minimizers)
       total_length += len(ref.seq)
 
     # use average length for normalization
     avg_length = total_length / len(ref_list)
 
+    # A reference no longer than the k-mer yields no k-mers and a non-positive expected-hit denominator
+    # (E <= 0), which would make the score normalization divide by zero or a negative number. Reject it
+    # loudly instead of emitting an index with inf/negative scores.
+    if avg_length <= KMER_LENGTH:
+      raise ValueError(
+        f"Dataset {name!r}: average reference length {avg_length} <= k-mer length {KMER_LENGTH}; "
+        f"cannot build a minimizer index"
+      )
+
+    # Expected number of minimizer hits from a SINGLE reference: the denominator the client divides the
+    # query hit count by. A multi-reference dataset stores the UNION of its references' k-mers, but a
+    # query only ever matches one reference's k-mers, so the denominator must be the per-reference
+    # expectation, not the union size. Using the union size inflates the denominator and depresses the
+    # score as references are added.
+    #
+    #   E = (avg_length - KMER_LENGTH) * CUTOFF / 2**HASH_BITS
+    #
+    # CUTOFF is a value, so the retained fraction is CUTOFF / 2**HASH_BITS. E is an approximation of the
+    # realized count: it ignores non-ACGT k-mers and hash collisions removed by np.unique, so it is
+    # generally non-integer and slightly above the true single-reference count.
+    expected_minimizer_hits = (avg_length - KMER_LENGTH) * CUTOFF / (1 << HASH_BITS)
+
     minimizers_by_dataset.append({
-      "minimizers": np.array(list(all_minimizers)), # unique kmer hashes, if occurs in multiple references still only added once
-      # very divergent sequences, each will add unqiue kmers
-      # this will decrease the normalization score, in order to be assigned to the organism you still need have 10%e  kmer matches
+      "minimizers": np.array(list(all_minimizers)),
       "meta": {
         "name": name,
         "length": int(avg_length),
-        "nMinimizers": len(all_minimizers)
+        # nMinimizers is the integer field older clients read as the score denominator. It now holds the
+        # rounded expectation, not the literal minimizer count (which still builds the index below).
+        # max(1, ...) guards against a zero denominator for degenerate short references.
+        "nMinimizers": max(1, round(expected_minimizer_hits)),
+        # expectedMinimizerHits carries the exact fractional expectation. Newer clients prefer it over
+        # the rounded nMinimizers. Additive field: older clients ignore it.
+        "expectedMinimizerHits": expected_minimizer_hits,
       }
     })
 
@@ -115,16 +156,15 @@ def make_ref_search_index(refs, cutoff):
     # reference will be a list in same order as the bit set
     index["references"].append(minimizer_set['meta'])
 
-  # average length / number of unique references, if references are very divergent this score will be lower, if references are non divergent less unique kmers and thus the score will be higher
-  normalization = np.array([x['length'] / x['nMinimizers'] for x in index["references"]])
+  normalization = np.array([x['length'] / x['expectedMinimizerHits'] for x in index["references"]])
 
   return {
     "$schema": JSON_SCHEMA_URL_MINIMIZER_JSON,
     "schemaVersion": MINIMIZER_JSON_SCHEMA_VERSION,
     "version": MINIMIZER_ALGO_VERSION,
     "params": {
-      "k": MAGIC_NUMBER_K,
-      "cutoff": cutoff,
+      "k": KMER_LENGTH,
+      "cutoff": CUTOFF,
     },
     **index,
     "normalization": normalization
@@ -152,18 +192,32 @@ def deserialize_ref_search_index(data: dict) -> dict:
 def search_one_query(
   index: dict,
   qry: SeqRecord,
-  cutoff
 ) -> tuple[np.ndarray, np.ndarray]:
-  n_refs = len(index["references"])
-  minimizers = get_ref_search_minimizers(qry, cutoff)
+  refs = index["references"]
+  n_refs = len(refs)
+  # Select query minimizers with the index-wide cutoff (the max over datasets), matching how the client
+  # computes query minimizers once for all datasets.
+  cutoff = index.get("params", {}).get("cutoff", CUTOFF)
+  minimizers = get_ref_search_minimizers(qry, cutoff=cutoff)
   hit_count = np.zeros(n_refs, dtype=np.int32)
   for m in minimizers:
     if m in index["minimizers"]:
       hit_count[index["minimizers"][m]] += 1
+
   seq_len = len(preprocess_seq(qry))
-    # many divergent references, normalization score will be low, normalized hits will be lowere
-    # many references with some that are similar, then score will be higher 
-  normalized_hits = index["normalization"] * hit_count / seq_len
+  ref_len = np.array([r["length"] for r in refs], dtype=float)
+  # Denominator mirrors the client: prefer the exact fractional expectation, fall back to the rounded
+  # nMinimizers for older indexes that predate expectedMinimizerHits.
+  denominator = np.array(
+    [r["expectedMinimizerHits"] if r.get("expectedMinimizerHits") is not None else r["nMinimizers"] for r in refs],
+    dtype=float,
+  )
+  # Reproduce the client score exactly (packages/nextclade/src/sort/minimizer_search.rs): the length
+  # factor is clamped at 1.0 so a query longer than the reference is not penalized. This is why the score
+  # is computed here rather than from the pre-baked `normalization` array, which folds in the ratio
+  # without the clamp.
+  length_factor = np.maximum(ref_len / seq_len, 1.0)
+  normalized_hits = (hit_count / denominator) * length_factor
   return normalized_hits, hit_count
 
 

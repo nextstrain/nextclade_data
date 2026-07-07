@@ -10,11 +10,6 @@
     "readme": "README.md",
     "changelog": "CHANGELOG.md"
   },
-  "buildFiles": {
-    "minimizerReferences": [
-      "minimizer_refs/additional_refs.fasta"
-    ]
-  },
   "attributes": {
     "name": "Coxsackievirus A16",
     "reference name": "Coxsackievirus A16 strain G-10",
@@ -40,10 +35,8 @@
     "web": "3.0.0"
   },
   "mutLabels": {
-  "aaMutLabelMap": {
-  },
-  "nucMutLabelMap": {
-    }
+    "aaMutLabelMap": {},
+    "nucMutLabelMap": {}
   },
   "qc": {
     "frameShifts": {
@@ -76,8 +69,8 @@
       "windowSize": 100,
       "clusterCutOff": 4,
       "scoreWeight": 25
-  }
-},
+    }
+  },
   "cdsOrderPreference": [
     "VP4",
     "VP2",
@@ -90,5 +83,10 @@
     "3B",
     "3C",
     "3D"
-  ]
+  ],
+  "minimizerIndex": {
+    "references": [
+      "minimizer_refs/additional_refs.fasta"
+    ]
+  }
 }
