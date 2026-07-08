@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "Yellow Fever Virus",
+    "reference name": "Yellow fever virus, complete genome",
+    "reference accession": "NC_002031.1"
+  },
+  "alignmentParams": {
+    "retryReverseComplement": true,
+    "includeReference": false,
+    "minSeedCover": 0.01
+  },
+  "defaultCds": "M",
+  "qc": {
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 25
+    },
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 2000,
+      "scoreBias": 500
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 50
+    },
+    "privateMutations": {
+      "enabled": true,
+      "weightReversionSubstitutions": 2,
+      "weightLabeledSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1,
+      "typical": 10,
+      "cutoff": 20
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+  "cdsOrderPreference": [
+    "C",
+    "prM",
+    "M",
+    "E",
+    "NS1",
+    "NS2a",
+    "NS2b",
+    "NS3",
+    "NS4a",
+    "2K",
+    "NS4b",
+    "RdRPol"
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
+}
