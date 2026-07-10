@@ -142,9 +142,10 @@ class TestRecombinationParamsParity(unittest.TestCase):
     assert params is not None
     self.assertAlmostEqual(1.5 / 100.0, params["muW"], delta=DELTA)
 
-  def test_recombination_params_counts_insertions_as_mutations(self) -> None:
-    # Rust `test_recombination_estimate_counts_insertions_as_mutations`: the insertion `-10A` has a
-    # query base present, so B1's branch length is 2 -> mean 2 -> mu_w 0.02.
+  def test_recombination_params_excludes_insertions_from_branch_length(self) -> None:
+    # Rust `test_recombination_estimate_excludes_insertions`: the `-10A` insertion (gap reference) is
+    # an indel the decoder never observes, so it is excluded; B1's terminal branch is 1 (substitution
+    # A40C only); mean (2+1)/2 = 1.5 -> mu_w 0.015.
     tree = {
       "name": "root",
       "children": [
@@ -154,7 +155,7 @@ class TestRecombinationParamsParity(unittest.TestCase):
     }
     params = _params(tree)
     assert params is not None
-    self.assertAlmostEqual(2.0 / 100.0, params["muW"], delta=DELTA)
+    self.assertAlmostEqual(1.5 / 100.0, params["muW"], delta=DELTA)
 
   def test_recombination_params_single_clade_is_unresolved(self) -> None:
     # Rust `test_recombination_estimate_single_clade_is_unresolved`: mu_r undefined with one clade.
@@ -224,9 +225,9 @@ class TestCountBranchSubstitutions(unittest.TestCase):
     # `A15-` has a gap query base (deletion) and is not counted; `A40C` is.
     self.assertEqual(1, rp.count_branch_substitutions(["A40C", "A15-"]))
 
-  def test_count_branch_substitutions_counts_insertion(self) -> None:
-    # `-10A` has a query base present (insertion) and is counted alongside the substitution.
-    self.assertEqual(2, rp.count_branch_substitutions(["A40C", "-10A"]))
+  def test_count_branch_substitutions_excludes_insertion(self) -> None:
+    # `-10A` has a gap reference base (insertion) and is not counted; only the substitution `A40C` is.
+    self.assertEqual(1, rp.count_branch_substitutions(["A40C", "-10A"]))
 
   def test_count_branch_substitutions_counts_ambiguous_iupac(self) -> None:
     # `N` and `R` are valid IUPAC nucleotide codes accepted by the Rust `to_nuc`.
