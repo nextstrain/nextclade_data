@@ -13,8 +13,9 @@ the same values as the Rust run-time fallback, so that a dataset can carry froze
 
 where L is the reference length. Branch lengths are counted from the per-branch nucleotide mutation
 lists in the Auspice tree (`branch_attrs.mutations.nuc`), which avoids the ambiguous Auspice divergence
-units. Deletions (query base `-`) are excluded, matching the Rust model that treats the gap character
-as missing data; substitutions and insertions are counted. `mu_r` is the median over all pairs of leaves drawn
+units. Indels are excluded, matching the Rust model: a token counts only when both its reference and
+query bases are present (non-gap), so deletions (query base `-`) and insertions (reference base `-`)
+are both skipped and only true substitutions are counted. `mu_r` is the median over all pairs of leaves drawn
 from two different clades, where a leaf-to-leaf distance is the number of mutations along the tree path
 through the pair's MRCA (`root_distance(a) + root_distance(b) - 2 * root_distance(mrca)`).
 
@@ -213,18 +214,20 @@ def node_from_auspice(auspice_node: dict[str, Any], parent: Node | None) -> Node
 
 
 def count_branch_substitutions(muts: list[str]) -> int:
-  # Number of nucleotide substitutions on a branch, excluding deletions (mirrors the Rust
-  # `nuc_mutation_count`). The model treats the gap character as missing data, so a token whose query
-  # base is `-` (a deletion, e.g. "A15-") is not counted, while substitutions ("A10C") and insertions
-  # ("-10A", query base present) are. A token that does not parse is a malformed tree annotation and
-  # raises rather than being silently miscounted. Nextclade-built trees carry substitutions only;
-  # deletions appear on externally produced trees (augur/TreeTime).
+  # Number of true nucleotide substitutions on a branch (mirrors the Rust `count_nuc_mutations`). A
+  # token counts only when both its reference and query bases are present (non-gap). Indels are
+  # excluded because the decoder never observes them: deletions ("A15-", gap query) are treated as
+  # missing data, and insertions ("-10A", gap reference) have no observation channel at all, so
+  # counting either would calibrate the emission rates against events the HMM cannot score. A token
+  # that does not parse is a malformed tree annotation and raises rather than being silently
+  # miscounted. Nextclade-built trees carry substitutions only; indels appear on externally produced
+  # trees (augur/TreeTime).
   count = 0
   for m in muts:
     match = NUC_MUTATION_REGEX.search(m)
     if match is None or match.group(1) not in VALID_NUCS or match.group(3) not in VALID_NUCS:
       raise ValueError(f"Unable to parse nucleotide mutation: '{m}'")
-    if match.group(3) != GAP:
+    if match.group(1) != GAP and match.group(3) != GAP:
       count += 1
   return count
 
