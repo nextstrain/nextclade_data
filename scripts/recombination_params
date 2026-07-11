@@ -1,0 +1,270 @@
+#!/usr/bin/env python3
+
+"""
+Compute recombination HMM parameters from a dataset's reference tree and write them into pathogen.json.
+
+This is a Python mirror of the Rust estimator in
+`packages/nextclade/src/analyze/recombination_estimate.rs` of the nextclade repository. It must produce
+the same values as the Rust run-time fallback, so that a dataset can carry frozen, reviewed parameters:
+
+  gamma = 1 / L
+  mu_w  = mean terminal branch length (substitutions) / L
+  mu_r  = median pairwise inter-clade leaf-to-leaf distance (substitutions) / L
+
+where L is the reference length. Branch lengths are counted from the per-branch nucleotide mutation
+lists in the Auspice tree (`branch_attrs.mutations.nuc`), which avoids the ambiguous Auspice divergence
+units. Indels are excluded, matching the Rust model: a token counts only when both its reference and
+query bases are present (non-gap), so deletions (query base `-`) and insertions (reference base `-`)
+are both skipped and only true substitutions are counted. `mu_r` is the median over all pairs of leaves drawn
+from two different clades, where a leaf-to-leaf distance is the number of mutations along the tree path
+through the pair's MRCA (`root_distance(a) + root_distance(b) - 2 * root_distance(mrca)`).
+
+With `--pathogen` the estimates are frozen into that file in place; without it they are printed as JSON
+to stdout for inspection.
+
+Example:
+
+  ./scripts/recombination_params \
+    --input-tree data/.../tree.json \
+    --input-ref data/.../reference.fasta \
+    --pathogen data/.../pathogen.json
+
+  ./scripts/recombination_params \
+    --input-tree data/.../tree.json \
+    --input-ref data/.../reference.fasta
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import re
+import sys
+from collections.abc import Iterator
+from dataclasses import dataclass, field
+from itertools import combinations
+from pathlib import Path
+from statistics import median
+from typing import Any
+
+from Bio import SeqIO
+
+NUC_MUTATIONS_KEY = "nuc"
+
+# Mirror the Rust `NucSub` parser (`packages/nextclade/src/analyze/nuc_sub.rs`): an unanchored
+# `<ref><pos><query>` token whose ref and query are single IUPAC nucleotide letters or the gap `-`.
+NUC_MUTATION_REGEX = re.compile(r"([A-Z-])(\d{1,10})([A-Z-])")
+
+# Valid nucleotide characters accepted by the Rust `to_nuc` (`packages/nextclade/src/alphabet/nuc.rs`):
+# the IUPAC codes plus the gap. Note: no 'U' and no lowercase, matching the Rust mapping exactly.
+VALID_NUCS = frozenset("ACGTWYMHKRDSBVN-")
+
+GAP = "-"
+
+
+def main() -> None:
+  args = parse_args()
+
+  ref_len = read_reference_length(args.input_ref)
+  root = build_tree(json.loads(args.input_tree.read_text())["tree"])
+  params = estimate_params(root, ref_len)
+
+  if params is None:
+    print(
+      "Recombination parameters could not be estimated (fewer than two clades or degenerate tree)",
+      file=sys.stderr,
+    )
+    return
+
+  # With no `--pathogen` target the parameters are the sole output: print them as JSON to stdout so the
+  # result can be inspected or piped without mutating any file.
+  if args.pathogen is None:
+    print(json.dumps(params, indent=2))
+    return
+
+  pathogen = json.loads(args.pathogen.read_text())
+  recombination = pathogen.get("recombination") or {}
+  if not isinstance(recombination, dict):
+    raise ValueError(f'Expected "recombination" in {args.pathogen} to be an object, but got {type(recombination).__name__}')
+  # Preserve an explicit enablement decision (default on, matching the run-time default); freeze the estimates.
+  recombination.setdefault("enabled", True)
+  recombination.update(params)
+  pathogen["recombination"] = recombination
+  args.pathogen.write_text(json.dumps(pathogen, indent=2) + "\n")
+
+  print(f"Wrote recombination parameters to {args.pathogen}: {params}")
+
+
+def estimate_params(root: Node, ref_len: int) -> dict[str, float] | None:
+  # An empty or header-only reference leaves the model unresolved rather than dividing by zero.
+  if ref_len <= 0:
+    return None
+
+  gamma = as_probability(1.0 / ref_len)
+  mu_w = estimate_mu_w(root, ref_len)
+  mu_r = estimate_mu_r(root, ref_len)
+
+  # Mirror `RecombinationHmmParams::new`: every rate must be a valid probability, the chain must be
+  # sticky (`gamma < 0.5`, so state switching is rarer than staying), and the recombinant rate must be
+  # elevated (`mu_r > mu_w`), otherwise the two HMM states are indistinguishable. Any violation leaves
+  # the model unresolved, matching the run-time skip.
+  if gamma is None or gamma >= 0.5 or mu_w is None or mu_r is None or mu_r <= mu_w:
+    return None
+
+  return {"gamma": gamma, "muW": mu_w, "muR": mu_r}
+
+
+def estimate_mu_w(root: "Node", ref_len: int) -> float | None:
+  branch_lengths = [node.branch_muts for node in iter_nodes(root) if not node.children]
+  if not branch_lengths:
+    return None
+  return as_probability((sum(branch_lengths) / len(branch_lengths)) / ref_len)
+
+
+def estimate_mu_r(root: "Node", ref_len: int) -> float | None:
+  # Group by LEAF clade only: `mu_r` is the median pairwise distance between leaves of different
+  # clades, so a clade that labels only internal nodes cannot contribute (matching the Rust
+  # `clade_leaves` grouping and the leaf-derived "fewer than two clades" gate).
+  clade_leaves: dict[str, list[Node]] = {}
+  for node in iter_nodes(root):
+    if not node.children and node.clade is not None:
+      clade_leaves.setdefault(node.clade, []).append(node)
+
+  if len(clade_leaves) < 2:
+    return None
+
+  # Precompute root distances for ALL nodes so each leaf pair costs one lookup per endpoint plus a
+  # single MRCA search.
+  root_dists = {node: root_distance(node) for node in iter_nodes(root)}
+
+  # Exhaustive pairwise distances between leaves of different clades.
+  distances: list[float] = []
+  for leaves_a, leaves_b in combinations(clade_leaves.values(), 2):
+    for a in leaves_a:
+      # `a` is fixed across the inner loop, so compute its ancestor set once and reuse it.
+      ancestors_a = set(ancestors_inclusive(a))
+      for b in leaves_b:
+        mrca = mrca_with_ancestors(ancestors_a, b)
+        distances.append(float(root_dists[a] + root_dists[b] - 2 * root_dists[mrca]))
+
+  if not distances:
+    return None
+
+  return as_probability(median(distances) / ref_len)
+
+
+def root_distance(node: "Node") -> int:
+  total = 0
+  current: Node | None = node
+  while current is not None:
+    total += current.branch_muts
+    current = current.parent
+  return total
+
+
+def mrca_with_ancestors(ancestors_a: set["Node"], b: "Node") -> "Node":
+  # Walk `b` toward the root until it reaches a node in `a`'s inclusive ancestor set.
+  current: Node | None = b
+  while current is not None:
+    if current in ancestors_a:
+      return current
+    current = current.parent
+  raise ValueError("Nodes have no common ancestor")
+
+
+def ancestors_inclusive(node: "Node") -> list["Node"]:
+  ancestors = []
+  current: Node | None = node
+  while current is not None:
+    ancestors.append(current)
+    current = current.parent
+  return ancestors
+
+
+def iter_nodes(root: Node) -> Iterator[Node]:
+  stack = [root]
+  while stack:
+    node = stack.pop()
+    yield node
+    stack.extend(node.children)
+
+
+def build_tree(auspice_root: dict[str, Any]) -> Node:
+  # Build iteratively: real datasets can be deeply ladderized, and recursion depth would then track
+  # the number of tips and overflow the interpreter's stack (matching the iterative Rust builder).
+  root = node_from_auspice(auspice_root, None)
+  stack: list[tuple[dict[str, Any], Node]] = [(auspice_root, root)]
+  while stack:
+    auspice_node, node = stack.pop()
+    for auspice_child in auspice_node.get("children", []):
+      child = node_from_auspice(auspice_child, node)
+      node.children.append(child)
+      stack.append((auspice_child, child))
+  return root
+
+
+def node_from_auspice(auspice_node: dict[str, Any], parent: Node | None) -> Node:
+  muts = auspice_node.get("branch_attrs", {}).get("mutations", {}).get(NUC_MUTATIONS_KEY, [])
+  return Node(
+    clade=auspice_node.get("node_attrs", {}).get("clade_membership", {}).get("value"),
+    branch_muts=count_branch_substitutions(muts),
+    parent=parent,
+  )
+
+
+def count_branch_substitutions(muts: list[str]) -> int:
+  # Number of true nucleotide substitutions on a branch (mirrors the Rust `count_nuc_mutations`). A
+  # token counts only when both its reference and query bases are present (non-gap). Indels are
+  # excluded because the decoder never observes them: deletions ("A15-", gap query) are treated as
+  # missing data, and insertions ("-10A", gap reference) have no observation channel at all, so
+  # counting either would calibrate the emission rates against events the HMM cannot score. A token
+  # that does not parse is a malformed tree annotation and raises rather than being silently
+  # miscounted. Nextclade-built trees carry substitutions only; indels appear on externally produced
+  # trees (augur/TreeTime).
+  count = 0
+  for m in muts:
+    match = NUC_MUTATION_REGEX.search(m)
+    if match is None or match.group(1) not in VALID_NUCS or match.group(3) not in VALID_NUCS:
+      raise ValueError(f"Unable to parse nucleotide mutation: '{m}'")
+    if match.group(1) != GAP and match.group(3) != GAP:
+      count += 1
+  return count
+
+
+def as_probability(x: float) -> float | None:
+  return x if (math.isfinite(x) and 0.0 < x < 1.0) else None
+
+
+def read_reference_length(path: Path) -> int:
+  records = list(SeqIO.parse(path, "fasta"))
+  if len(records) != 1:
+    raise ValueError(f"Expected exactly one sequence record in {path}, but found {len(records)}")
+  return len(records[0].seq)
+
+
+# eq=False gives identity-based equality and hashing, which is required because nodes reference their
+# parent (structural equality would recurse) and are stored in sets keyed by identity.
+@dataclass(eq=False)
+class Node:
+  clade: str | None
+  branch_muts: int
+  parent: "Node | None" = None
+  children: list["Node"] = field(default_factory=list)
+
+
+def parse_args() -> argparse.Namespace:
+  parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, description=__doc__)
+  parser.add_argument("--input-tree", type=Path, required=True, help="Path to the reference tree.json")
+  parser.add_argument("--input-ref", type=Path, required=True, help="Path to the reference.fasta")
+  parser.add_argument(
+    "--pathogen",
+    type=Path,
+    default=None,
+    help="Path to pathogen.json to modify in place; if omitted, the estimated parameters are printed as JSON to stdout",
+  )
+  return parser.parse_args()
+
+
+if __name__ == "__main__":
+  main()
