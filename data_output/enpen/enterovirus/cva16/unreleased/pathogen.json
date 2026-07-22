@@ -18101,6 +18101,10 @@
       ]
     }
   },
+  "meta": {
+    "bugs": "https://github.com/enterovirus-phylo/nextclade_a16/issues",
+    "source code": "https://github.com/enterovirus-phylo/nextclade_a16"
+  },
   "qc": {
     "frameShifts": {
       "enabled": true,
