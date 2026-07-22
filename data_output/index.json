@@ -7825,6 +7825,53 @@
               "web": "3.0.0"
             }
           }
+        },
+        {
+          "path": "enpen/enterovirus/cva10",
+          "attributes": {
+            "name": "Coxsackievirus A10",
+            "reference name": "Coxsackievirus A10 inferred ancestral sequence",
+            "reference accession": "ancestral_sequence"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 9,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons",
+              "snpClusters"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0",
+                "web": "3.0.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0",
+              "web": "3.0.0"
+            }
+          }
         }
       ]
     },
