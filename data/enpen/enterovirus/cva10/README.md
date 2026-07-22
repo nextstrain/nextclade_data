@@ -34,11 +34,7 @@ Coxsackievirus A10 is divided into subgenogroups A, B, C, D, E (VP1 only), F, G 
 Overall, these designations are based on phylogenetic structure and characteristic mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universally standardized global lineage nomenclature for enteroviruses; naming instead follows conventions established in published studies and surveillance practices.
 
 ## Related Enteroviruses
-CVA2
-CVA4
-CVA5
-CVA3
-CVA8
+
 CVA10 is closely related to other EV-A viruses, including CVA8, CVA16, and EV-A71. If you are not certain that your sequences contain only CVA10, we recommend using the "[Multiple Datasets](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-web/getting-started.html#multi-dataset-mode)" tab instead of "Single Dataset".
 
 This prevents Nextclade from forcing sequences to align to the CVA10 reference tree. For example, EV-A71 sequences may still align and receive a clade assignment (often near recombinant forms).
