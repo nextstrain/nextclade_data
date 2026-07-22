@@ -7830,8 +7830,8 @@
           "path": "enpen/enterovirus/cva10",
           "attributes": {
             "name": "Coxsackievirus A10",
-            "reference name": "Human coxsackievirus A10 strain Kowalik, complete genome",
-            "reference accession": "AY421767.1"
+            "reference name": "Coxsackievirus A10 inferred ancestral sequence",
+            "reference accession": "ancestral_sequence"
           },
           "files": {
             "reference": "reference.fasta",
@@ -7849,8 +7849,8 @@
               "missingData",
               "mixedSites",
               "privateMutations",
-              "divergence",
-              "stopCodons"
+              "stopCodons",
+              "snpClusters"
             ],
             "other": [
               "mutLabels"
@@ -7860,16 +7860,16 @@
             {
               "tag": "unreleased",
               "compatibility": {
-                "cli": "3.0.0-alpha.0",
-                "web": "3.0.0-alpha.0"
+                "cli": "3.0.0",
+                "web": "3.0.0"
               }
             }
           ],
           "version": {
             "tag": "unreleased",
             "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
+              "cli": "3.0.0",
+              "web": "3.0.0"
             }
           }
         }
