@@ -2,11 +2,11 @@
 
 | Key                  | Value                                                                 |
 |----------------------|-----------------------------------------------------------------------|
-| authors              | [Nadia Neuner-Jehle](https://eve-lab.org/people/nadia-neuner-jehle/), [Alejandra González-Sánchez](https://www.vallhebron.com/en/professionals/alejandra-gonzalez-sanchez), [Emma B. Hodcroft](https://eve-lab.org/people/emma-hodcroft/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)                                                 |
-| name                 | Coxsackievirus A16                                                     |
+| authors              | [Nadia Neuner-Jehle](https://eve-lab.org/people/nadia-neuner-jehle/), [Alejandra González-Sánchez](https://www.vallhebron.com/en/professionals/alejandra-gonzalez-sanchez), [Emma B. Hodcroft](https://eve-lab.org/people/emma-hodcroft/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)                         |
+| name                 | Coxsackievirus A16                                                    |
 | reference            | [Static Inferred Ancestor](https://github.com/enterovirus-phylo/nextclade_a16/blob/master/resources/inferred-root.fasta)               |
-| workflow             | https://github.com/enterovirus-phylo/nextclade_a16                          |
-| path                 | `enpen/enterovirus/cva16`                                                                 |
+| workflow             | <https://github.com/enterovirus-phylo/nextclade_a16>                  |
+| path                 | `enpen/enterovirus/cva16`                                             |
 | clade definitions    | A–F                                                                   |
 
 ## Scope of this dataset
@@ -27,7 +27,7 @@ This dataset supports:
 
 ## Subgenogroups of Coxsackievirus A16
 
-Subgenogroups B1a, B1b and B1c represent the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and the literature. They are defined based on phylogenetic clustering and do not necessarily reflect antigenic differences. 
+Subgenogroups B1a, B1b and B1c represent the major phylogenetic divisions of CVA16 and are commonly used in virological surveillance and the literature. They are defined based on phylogenetic clustering and do not necessarily reflect antigenic differences.
 
 In recent years, additional recombinant forms have been identified and labeled C-F (also referred to as B2, B3, and D). These recombinant forms cluster with the prototype strain (clade A).
 
@@ -46,6 +46,7 @@ If you are unsure how to proceed, please contact us. We are happy to assist.
 ## Reference types
 
 This dataset includes several reference points used in analyses:
+
 - *Static Inferred Ancestor:* Reconstructed ancestral sequence inferred with an outgroup, representing the likely founder of CVA16. Serves as a stable reference.
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
@@ -59,6 +60,7 @@ This dataset includes several reference points used in analyses:
 All references use the coordinate system of the G-10 sequence.
 
 ## Issues & Contact
+
 - For questions or suggestions, please [open an issue](https://github.com/enterovirus-phylo/nextclade_a16/issues) or email: eve-group[at]swisstph.ch
 
 ## What is a Nextclade dataset?
