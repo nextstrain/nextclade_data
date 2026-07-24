@@ -25,7 +25,7 @@
     "minMatchLength": 30,
     "allowedMismatches": 15,
     "minLength": 100,
-    "minSeedCover": 0.80,
+    "minSeedCover": 0.8,
     "retryReverseComplement": true,
     "gapAlignmentSide": "left"
   },
@@ -18101,9 +18101,9 @@
       ]
     }
   },
-  "meta": { 
-    "bugs": "https://github.com/enterovirus-phylo/nextclade_a16/issues", 
-    "source code": "https://github.com/enterovirus-phylo/nextclade_a16" 
+  "meta": {
+    "bugs": "https://github.com/enterovirus-phylo/nextclade_a16/issues",
+    "source code": "https://github.com/enterovirus-phylo/nextclade_a16"
   },
   "qc": {
     "frameShifts": {
@@ -18150,5 +18150,12 @@
     "3B",
     "3C",
     "3D"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0",
+      "web": "3.0.0"
+    }
+  }
 }
