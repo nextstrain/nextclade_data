@@ -7809,7 +7809,8 @@
           },
           "versions": [
             {
-              "tag": "unreleased",
+              "updatedAt": "2026-07-29T15:14:17Z",
+              "tag": "2026-07-29--15-14-17Z",
               "compatibility": {
                 "cli": "3.0.0",
                 "web": "3.0.0"
@@ -7825,7 +7826,8 @@
             }
           ],
           "version": {
-            "tag": "unreleased",
+            "updatedAt": "2026-07-29T15:14:17Z",
+            "tag": "2026-07-29--15-14-17Z",
             "compatibility": {
               "cli": "3.0.0",
               "web": "3.0.0"
