@@ -1,6 +1,6 @@
 ## Unreleased
 
-- update reference tree
+- update reference tree with more recent sequences.
 
 ## 2026-04-14T11:55:23Z
 
