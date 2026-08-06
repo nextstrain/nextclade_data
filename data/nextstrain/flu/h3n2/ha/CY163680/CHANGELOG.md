@@ -1,3 +1,7 @@
+## Unreleased
+
+ - add designation of [J.2.4.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/d79c221035496f273b7e2a31152b21df990a21b4/subclades/J.2.4.2.yml) as a sibling of K. This subclade shares several important substitutions with K, but does not have all signature mutations of K. It has a subsitution at position 79 (79V).
+
 ## 2026-04-14T11:55:23Z
 
 - Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`
