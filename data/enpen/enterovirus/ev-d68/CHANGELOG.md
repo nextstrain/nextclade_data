@@ -1,3 +1,13 @@
+## Unreleased
+
+- Ancestral sequence is now root of the tree and taken as the alignment reference
+- The ordering in Nextclade Web results of the references has changed to display Fermon first for mutation calling
+- The `pre-ABC` clade is now assigned based on a deletion in the 5'UTR
+- New sequences in A2/D clade (released in April) were added
+- The sequences are now subsampled by country & year
+- The seed-match threshold was increased from 0.4 to 0.75 so that other EVs don't align
+- The accession numbers in the tree now have a URL to GenBank
+
 ## 2026-04-14T11:55:23Z
 
 - Remove deprecated `nucMutLabelMapReverse` field (computed at runtime in v3)
