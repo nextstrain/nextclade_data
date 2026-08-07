@@ -7380,6 +7380,10 @@
       ]
     }
   },
+  "meta": {
+    "bugs": "https://github.com/enterovirus-phylo/nextclade_d68/issues",
+    "source code": "https://github.com/enterovirus-phylo/nextclade_d68"
+  },
   "qc": {
     "frameShifts": {
       "enabled": true,
