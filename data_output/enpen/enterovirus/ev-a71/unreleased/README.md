@@ -49,13 +49,13 @@ If you are unsure how to proceed, please contact us. We are happy to assist.
 
 This dataset includes several reference points used in analyses:
 
+- *Reference:* RefSeq or similarly established prototype sequence. Here BrCr (U22521.1).
+
 - *Static Inferred Ancestor:* Reconstructed ancestral sequence inferred with an outgroup, representing the inferred common ancestor of EV-A71. Serves as a stable reference.
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
 
 - *Clade founder:* The inferred ancestral node defining a clade (e.g., B1a, B2). Mutations "since clade founder" describe changes that define that clade.
-
-- *Reference:* RefSeq or similarly established prototype sequence. Here BrCr (U22521.1).
 
 - *Tree root:* Corresponds to the root of the tree, it may change in future updates as more data become available.
 
