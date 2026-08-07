@@ -254,7 +254,8 @@
     "reference name": "A/Darwin/6/2021"
   },
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-08-07T07:54:41Z",
+    "tag": "2026-08-07--07-54-41Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
