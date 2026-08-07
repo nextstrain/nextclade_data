@@ -1,3 +1,7 @@
+## Unreleased
+
+- Add `ref_nodes.order` config to order and hide entries in the "Relative to" dropdown
+
 ## 2026-04-14T11:55:23Z
 
 - Remove deprecated `nucMutLabelMapReverse` field (computed at runtime in v3)
