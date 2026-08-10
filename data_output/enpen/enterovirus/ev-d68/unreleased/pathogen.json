@@ -7423,5 +7423,12 @@
     "3B",
     "3C",
     "3D"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0",
+      "web": "3.0.0"
+    }
+  }
 }
