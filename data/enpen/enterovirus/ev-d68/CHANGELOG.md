@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-08-12T14:03:43Z
 
 - Ancestral sequence is now root of the tree and taken as the alignment reference
 - The ordering in Nextclade Web results of the references has changed to display Fermon first for mutation calling
