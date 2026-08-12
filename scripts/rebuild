@@ -699,7 +699,7 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
     inpath = join(dataset_dir, file)
     outpath = join(out_dir, file)
     if file == dict_get(files, ["treeJson"]):
-      # Minify tree.json
+      # Minify the tree JSON file (as configured by `.files.treeJson`)
       ensure_dir(outpath)
       with open(outpath, "w") as f:
         json.dump(json_read(inpath), f, separators=(",", ":"), indent=None)
