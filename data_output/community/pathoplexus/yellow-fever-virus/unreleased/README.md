@@ -1,18 +1,18 @@
-# Yellow fever virus dataset (full genome)
+# Yellow fever virus (YFV) complete genome dataset
 
-| Key          | Value                                                                                                   |
-| ------------ | ------------------------------------------------------------------------------------------------------- |
-| name         | Yellow Fever Virus (full genome)                                                                        |
-| workflow     | <https://github.com/hodcroftlab/nextclade-yellow-fever>                                                 |
-| authors      | [Hodcroft Lab](https://github.com/hodcroftlab)                                                          |
-| reference    | [NC_002031.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002031.1)                                        |
-| dataset path | `community/pathoplexus/yellow-fever-virus`                                                              |
+| Key            | Value                                                                                |
+| -------------- | ------------------------------------------------------------------------------------ |
+| name           | Yellow fever virus (YFV) complete genome                                             |
+| reference      | 17D vaccine strain ([NC_002031.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002031.1)) |
+| workflow       | <https://github.com/hodcroftlab/nextclade-yellow-fever>                              |
+| authors        | [Hodcroft Lab](https://github.com/hodcroftlab)                                        |
+| dataset path   | `community/pathoplexus/yellow-fever-virus`                                            |
 
 ## Scope of this dataset
 
-This dataset can be used for clade assignment of yellow fever virus samples. 
+This dataset can be used for clade assignment of yellow fever virus samples.
 In contrast to the existing `nextstrain/yellow-fever/prM-E` dataset (which aligns only a short 600 nucleotide subsection of the yellow fever virus genome), this dataset aligns versus the full yellow fever virus genome.
-It also uses the NCBI reference sequence [NC_002031.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002031.1) instead of [AY640589.1](https://www.ebi.ac.uk/ena/browser/view/AY640589).
+It also uses the NCBI reference sequence [NC_002031.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_002031.1), the 17D vaccine strain, instead of [AY640589.1](https://www.ebi.ac.uk/ena/browser/view/AY640589), the wild-type Asibi strain used by the prM-E dataset.
 
 ### Clade system
 
@@ -34,7 +34,7 @@ Therefore, this dataset also supports clade assignment of sequences generated fr
 
 ## Features
 
-This dataset was created using open data from NCBI Virus and the pipeline in https://github.com/hodcroftlab.
+This dataset was created using open data from NCBI Virus and the pipeline in <https://github.com/hodcroftlab/nextclade-yellow-fever>.
 
 This dataset offers:
 

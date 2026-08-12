@@ -9315,8 +9315,8 @@
         {
           "path": "community/pathoplexus/yellow-fever-virus",
           "attributes": {
-            "name": "Yellow Fever Virus",
-            "reference name": "Yellow fever virus, complete genome",
+            "name": "Yellow fever virus (YFV) complete genome",
+            "reference name": "17D vaccine strain",
             "reference accession": "NC_002031.1"
           },
           "files": {
