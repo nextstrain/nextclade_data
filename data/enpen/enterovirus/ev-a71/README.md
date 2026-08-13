@@ -55,7 +55,7 @@ This dataset includes several reference points used in analyses:
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
 
-- *Clade founder:* The inferred ancestral node defining a clade (e.g., B1a, B2). Mutations "since clade founder" describe changes that define that clade.
+- *Clade founder:* The inferred ancestral node defining a clade (e.g., B5, C4). Mutations "since clade founder" describe changes that define that clade.
 
 - *Tree root:* Corresponds to the root of the tree, it may change in future updates as more data become available.
 
