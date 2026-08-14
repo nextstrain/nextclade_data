@@ -57,7 +57,7 @@
     "frameShifts": {
       "enabled": true,
       "scoreWeight": 50,
-      "ignoreFrameShifts": []
+      "ignoredFrameShifts": []
     },
     "stopCodons": {
       "enabled": true,
@@ -73,7 +73,7 @@
     "reference accession": "NC_075404",
     "reference name": "chicken/N. Ireland/Ulster/67"
   },
-  "geneOrderPreference": [
+  "cdsOrderPreference": [
     "N",
     "P",
     "M",
