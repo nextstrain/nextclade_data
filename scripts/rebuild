@@ -21,7 +21,7 @@ from lib.reporting_model import DefectFinding, Severity
 from lib.schema import validate_pathogen_json, ValidationContext
 from lib.date import now_iso, iso_to_iso_safe
 from lib.fasta import fasta_read_exactly_one_seq
-from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf
+from lib.fs import json_read, find_files, json_write, copy, make_zip, file_write, rmrf, ensure_dir
 from lib.git import git_get_modified_files, git_dir_is_clean, git_get_dirty_files, git_check_tag, \
   github_create_release, git_pull, git_commit_all, git_push
 from lib.logger import logger
@@ -698,8 +698,9 @@ def create_dataset_package(args, dataset, path, tag, dataset_dir):
   for _, file in files.items():
     inpath = join(dataset_dir, file)
     outpath = join(out_dir, file)
-    if file == dict_get(files, ["tree"]):
-      # Minify tree.json
+    if file == dict_get(files, ["treeJson"]):
+      # Minify the tree JSON file (as configured by `.files.treeJson`)
+      ensure_dir(outpath)
       with open(outpath, "w") as f:
         json.dump(json_read(inpath), f, separators=(",", ":"), indent=None)
     elif file == "pathogen.json":

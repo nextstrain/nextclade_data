@@ -1,0 +1,18 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_002031.1 1 10862
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11089
+NC_002031.1	RefSeq	region	1	10862	.	+	.	ID=NC_002031.1:1..10862;Dbxref=taxon:11089;gb-acronym=YFV;gbkey=Src;mol_type=genomic RNA;note=virion RNA mosquito-borne;strain=17D vaccine strain
+NC_002031.1	RefSeq	gene	119	421	.	+	.	gene_name=C;gbkey=Prot;protein_id=NP_775998.1;product=core protein C;ID=id-NP_041726.1:1..101
+NC_002031.1	RefSeq	gene	482	973	.	+	.	gene_name=prM;gbkey=Prot;protein_id=NP_776000.1;product=M protein precursor;ID=id-NP_041726.1:122..285
+NC_002031.1	RefSeq	gene	749	973	.	+	.	gene_name=M;gbkey=Prot;protein_id=NP_776001.1;product=matrix protein M;ID=id-NP_041726.1:211..285
+NC_002031.1	RefSeq	gene	974	2452	.	+	.	gene_name=E;gbkey=Prot;protein_id=NP_740305.1;product=envelope protein;ID=id-NP_041726.1:286..778
+NC_002031.1	RefSeq	gene	2453	3508	.	+	.	gene_name=NS1;gbkey=Prot;protein_id=NP_776002.1;ID=id-NP_041726.1:779..1130;product=non-structural protein NS1
+NC_002031.1	RefSeq	gene	3509	4180	.	+	.	gene_name=NS2a;gbkey=Prot;protein_id=NP_776003.1;ID=id-NP_041726.1:1131..1354;product=non-structural protein NS2a
+NC_002031.1	RefSeq	gene	4181	4570	.	+	.	gene_name=NS2b;gbkey=Prot;protein_id=NP_776004.1;ID=id-NP_041726.1:1355..1484;product=non-structural protein NS2b
+NC_002031.1	RefSeq	gene	4571	6439	.	+	.	gene_name=NS3;gbkey=Prot;protein_id=NP_776005.1;ID=id-NP_041726.1:1485..2107;product=non-structural protein NS3;Note=proteinase and putative helicase
+NC_002031.1	RefSeq	gene	6440	6817	.	+	.	gene_name=NS4a;gbkey=Prot;protein_id=NP_776006.1;ID=id-NP_041726.1:2108..2233;product=non-structural protein NS4a
+NC_002031.1	RefSeq	gene	6818	6886	.	+	.	gene_name=2K;gbkey=Prot;product=2K protein;protein_id=NP_776007.1;ID=id-NP_041726.1:2234..2256
+NC_002031.1	RefSeq	gene	6887	7636	.	+	.	gene_name=NS4b;gbkey=Prot;protein_id=NP_776008.1;ID=id-NP_041726.1:2257..2506;product=non-structural protein NS4b
+NC_002031.1	RefSeq	gene	7637	10351	.	+	.	gene_name=RdRPol;gbkey=Prot;protein_id=NP_776009.1;ID=id-NP_041726.1:2507..3411;product=RNA-dependent RNA polymerase

@@ -4,7 +4,7 @@ This repository contains Nextclade datasets and tools to maintain them.
 
 Documentation:
 
-- [Create a new dataset](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-creation-guide.md) - this guide explains how to create a new dataset from scratch.
+- [Create a new dataset](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-creation-guide.md) - this guide explains how to create a new dataset from scratch. For [FAQs](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-creation-guide.md#faqs), see the bottom of the same page.
 
 - [Add dataset to Nextclade](https://github.com/nextstrain/nextclade_data/blob/master/docs/dataset-curation-guide.md) - if you have a dataset and want to contribute it to the Nextclade official dataset collection.
 
