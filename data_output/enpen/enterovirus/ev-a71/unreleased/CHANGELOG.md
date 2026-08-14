@@ -2,4 +2,4 @@
 
 Initial release of an Enterovirus A71 dataset for lineage classification!
 
-Read more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
+Read more about Nextclade datasets in the documentation: <https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html>

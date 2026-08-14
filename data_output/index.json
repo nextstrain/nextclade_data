@@ -7883,7 +7883,7 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 22,
+            "clades": 23,
             "qc": [
               "frameShifts",
               "missingData",
