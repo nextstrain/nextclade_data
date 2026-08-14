@@ -61,7 +61,20 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [],
+      "ignoredStopCodons": [
+        {
+          "cdsName": "HN",
+          "codon": 585
+        },
+        {
+          "cdsName": "HN",
+          "codon": 591
+        },
+        {
+          "cdsName": "HN",
+          "codon": 612
+        }
+      ],
       "scoreWeight": 50
     }
   },

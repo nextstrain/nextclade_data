@@ -61,7 +61,84 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [],
+      "ignoredStopCodons": [
+        {
+          "cdsName": "HN",
+          "codon": 571
+        },
+        {
+          "cdsName": "HN",
+          "codon": 572
+        },
+        {
+          "cdsName": "HN",
+          "codon": 574
+        },
+        {
+          "cdsName": "HN",
+          "codon": 577
+        },
+        {
+          "cdsName": "HN",
+          "codon": 578
+        },
+        {
+          "cdsName": "HN",
+          "codon": 580
+        },
+        {
+          "cdsName": "HN",
+          "codon": 582
+        },
+        {
+          "cdsName": "HN",
+          "codon": 585
+        },
+        {
+          "cdsName": "HN",
+          "codon": 591
+        },
+        {
+          "cdsName": "HN",
+          "codon": 598
+        },
+        {
+          "cdsName": "HN",
+          "codon": 600
+        },
+        {
+          "cdsName": "HN",
+          "codon": 602
+        },
+        {
+          "cdsName": "HN",
+          "codon": 603
+        },
+        {
+          "cdsName": "HN",
+          "codon": 604
+        },
+        {
+          "cdsName": "HN",
+          "codon": 605
+        },
+        {
+          "cdsName": "HN",
+          "codon": 606
+        },
+        {
+          "cdsName": "HN",
+          "codon": 610
+        },
+        {
+          "cdsName": "HN",
+          "codon": 613
+        },
+        {
+          "cdsName": "HN",
+          "codon": 614
+        }
+      ],
       "scoreWeight": 50
     }
   },
