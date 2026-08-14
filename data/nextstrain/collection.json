@@ -101,6 +101,8 @@
     "nextstrain/flu/h2n2/ha",
     "nextstrain/flu/h2n2/na",
     "nextstrain/flu/h2n2/mp",
-    "nextstrain/flu/h2n2/ns"
+    "nextstrain/flu/h2n2/ns",
+    "nextstrain/ndv/class-2/NC_075404",
+    "nextstrain/ndv/class-1/AB524405"
   ]
 }
