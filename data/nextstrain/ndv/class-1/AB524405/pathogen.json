@@ -57,7 +57,7 @@
     "frameShifts": {
       "enabled": true,
       "scoreWeight": 50,
-      "ignoreFrameShifts": []
+      "ignoredFrameShifts": []
     },
     "stopCodons": {
       "enabled": true,
@@ -73,7 +73,7 @@
     "reference accession": "AB524405",
     "reference name": "Goose/Alaska/415/91"
   },
-  "geneOrderPreference": [
+  "cdsOrderPreference": [
     "N",
     "P",
     "M",
