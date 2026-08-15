@@ -7298,6 +7298,102 @@
           }
         },
         {
+          "path": "nextstrain/ndv/class-2/NC_075404",
+          "shortcuts": [
+            "ndv-class-2"
+          ],
+          "attributes": {
+            "name": "Newcastle disease virus class 2",
+            "reference accession": "NC_075404",
+            "reference name": "chicken/N. Ireland/Ulster/67"
+          },
+          "files": {
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 2,
+            "customClades": {
+              "genotype_label": 46
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "nextstrain/ndv/class-1/AB524405",
+          "shortcuts": [
+            "ndv-class-1"
+          ],
+          "attributes": {
+            "name": "Newcastle disease virus class 1",
+            "reference accession": "AB524405",
+            "reference name": "Goose/Alaska/415/91"
+          },
+          "files": {
+            "examples": "sequences.fasta",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 2,
+            "customClades": {
+              "genotype_label": 4
+            },
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
           "path": "nextstrain/sars-cov-2/BA.2",
           "shortcuts": [
             "sars-cov-2-21L"
