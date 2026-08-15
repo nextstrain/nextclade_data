@@ -137,6 +137,10 @@
         {
           "cdsName": "HN",
           "codon": 614
+        },
+        {
+          "cdsName": "L",
+          "codon": 2203
         }
       ],
       "scoreWeight": 50

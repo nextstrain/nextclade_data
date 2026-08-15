@@ -7317,7 +7317,7 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 1,
+            "clades": 2,
             "customClades": {
               "genotype_label": 46
             },
@@ -7365,7 +7365,7 @@
             "changelog": "CHANGELOG.md"
           },
           "capabilities": {
-            "clades": 1,
+            "clades": 2,
             "customClades": {
               "genotype_label": 4
             },
