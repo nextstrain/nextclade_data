@@ -132,7 +132,8 @@ Lastly, one can enable basic quality control for frame shifts, stop codons, miss
     "genomeAnnotation": "genome_annotation.gff3",
     "examples": "sequences.fasta",
     "readme": "README.md",
-    "changelog": "CHANGELOG.md"
+    "changelog": "CHANGELOG.md",
+    "treeJson": "tree.json"
   },
   "attributes": {
     "name": "Zika virus",
