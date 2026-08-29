@@ -1,0 +1,3 @@
+##sequence-region GPC 1 672
+NC_004296	feature	source	1	1476	.	+	.	gene=nuc
+NC_004296	feature	gene	1	1476	.	+	.	gene_name=GPC

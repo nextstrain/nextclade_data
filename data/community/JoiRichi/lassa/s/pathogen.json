@@ -1,0 +1,61 @@
+{
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "schemaVersion": "3.0.0",
+  "defaultCds": "NP",
+  "attributes": {
+    "name": "Lassa S Segment Tree",
+    "reference name": "Josiah",
+    "reference accession": "NC_004296"
+  },
+  "alignmentParams": {
+    "penaltyGapExtend": 1,
+    "penaltyGapOpen": 8,
+    "penaltyGapOpenInFrame": 9,
+    "penaltyGapOpenOutOfFrame": 10,
+    "penaltyMismatch": 1,
+    "scoreMatch": 5,
+    "retryReverseComplement": true,
+    "allowedMismatches": 10,
+    "minSeedCover": 0.22,
+    "minLength": 800
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 20,
+      "scoreBias": 4
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 4
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true
+    },
+    "privateMutations": {
+      "enabled": true,
+      "cutoff": 12,
+      "typical": 4,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": true,
+      "clusterCutOff": 3,
+      "scoreWeight": 50,
+      "windowSize": 50
+    }
+  }
+}
