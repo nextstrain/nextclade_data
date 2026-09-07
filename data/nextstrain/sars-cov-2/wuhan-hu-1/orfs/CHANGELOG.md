@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-09-07T17:10:15Z
 
 - Include the 2 newly designated Nextstrain clades 26A (XFG.1.1) and 26B (XFG.3.4.1). See <https://github.com/nextstrain/ncov/pull/1204> and <https://github.com/nextstrain/ncov/pull/1206> for details.
 - Add all 114 Pango lineages newly designated between 2026-06-09 and 2026-09-06. Unfold below to see a list of all newly included lineages with their designation dates:
