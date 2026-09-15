@@ -72,6 +72,8 @@ This section describes a sequence of steps to add a new Nextclade dataset for a 
 
 - Add remaining dataset files. At a very minimum, you should have required files: `reference.fasta`, `pathogen.json` and `CHANGELOG.md`. See [dataset creation guide](dataset-creation-guide.md) for a detailed walkthrough.
 
+- For genetically diverse pathogens where a single reference cannot reliably match all circulating lineages (e.g. enteroviruses), you can configure multi-reference detection via the `minimizerIndex.references` field in `pathogen.json`. This improves dataset auto-detection by `nextclade sort` and Nextclade Web without affecting alignment or analysis. See the [pathogen configuration documentation](https://docs.nextstrain.org/projects/nextclade/en/stable/user/input-files/05-pathogen-config.html#multi-reference-dataset-suggestion-minimizerindex).
+
 - Optionally, [test your dataset locally](#testing-datasets-locally)
 
 - Commit and push your changes to your forked repository on GitHub. Refer to documentation of git and of GitHub for more details.
