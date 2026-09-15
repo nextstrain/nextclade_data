@@ -25,6 +25,7 @@
   "dataset_order": [
     "enpen/enterovirus/ev-d68",
     "enpen/enterovirus/cva16",
+    "enpen/enterovirus/cva10",
     "enpen/enterovirus/ev-a71"
   ]
 }
