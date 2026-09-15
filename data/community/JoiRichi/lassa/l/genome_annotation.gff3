@@ -1,0 +1,4 @@
+##sequence-region NC_004297 1 7279
+NC_004297	source	region	1	7279	.	+	.	gene=nuc
+NC_004297	source	gene	66	365	.	+	.	gene_name=Z
+NC_004297	source	gene	466	7122	.	-	.	gene_name=L
