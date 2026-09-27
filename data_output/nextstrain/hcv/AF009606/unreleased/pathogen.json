@@ -21,18 +21,18 @@
     "reference accession": "NC_038882.1"
   },
   "alignmentParams": {
-    "penaltyGapOpen": 10,
-    "penaltyGapOpenInFrame": 16,
-    "penaltyGapOpenOutOfFrame": 18,
+    "penaltyGapOpen": 15,
+    "penaltyGapOpenInFrame": 21,
+    "penaltyGapOpenOutOfFrame": 31,
     "gapAlignmentSide": "left",
     "excessBandwidth": 100,
     "terminalBandwidth": 200,
     "kmerLength": 10,
-    "kmerDistance": 50,
+    "kmerDistance": 20,
     "minMatchLength": 40,
-    "allowedMismatches": 8,
+    "allowedMismatches": 12,
     "windowSize": 30,
-    "minSeedCover": 0.1
+    "minSeedCover": 0.05
   },
   "placementMaskRanges": [
     {
@@ -56,6 +56,7 @@
       "end": 9599
     }
   ],
+  "defaultCds": "NS3",
   "qc": {
     "missingData": {
       "enabled": true,
@@ -64,7 +65,7 @@
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 200
+      "mixedSitesThreshold": 20
     },
     "privateMutations": {
       "enabled": true,
