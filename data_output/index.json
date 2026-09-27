@@ -7418,6 +7418,44 @@
           }
         },
         {
+          "path": "nextstrain/hcv/AF009606",
+          "attributes": {
+            "name": "Hepatitis C virus (all genotypes)",
+            "reference name": "HCV isolate H77",
+            "reference accession": "NC_038882.1"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "annotation.gff",
+            "treeJson": "tree.json",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md",
+            "examples": "sequences.fasta"
+          },
+          "capabilities": {
+            "clades": 8,
+            "customClades": {
+              "subtype": 46
+            },
+            "qc": [
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased"
+            }
+          ],
+          "version": {
+            "tag": "unreleased"
+          }
+        },
+        {
           "path": "nextstrain/sars-cov-2/BA.2",
           "shortcuts": [
             "sars-cov-2-21L"

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "annotation.gff",
+    "treeJson": "tree.json",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "examples": "sequences.fasta"
+  },
+  "minimizerIndex": {
+    "references": [
+      "additional_references.fasta"
+    ]
+  },
+  "attributes": {
+    "name": "Hepatitis C virus (all genotypes)",
+    "reference name": "HCV isolate H77",
+    "reference accession": "NC_038882.1"
+  },
+  "alignmentParams": {
+    "penaltyGapOpen": 10,
+    "penaltyGapOpenInFrame": 16,
+    "penaltyGapOpenOutOfFrame": 18,
+    "gapAlignmentSide": "left",
+    "excessBandwidth": 100,
+    "terminalBandwidth": 200,
+    "kmerLength": 10,
+    "kmerDistance": 50,
+    "minMatchLength": 40,
+    "allowedMismatches": 8,
+    "windowSize": 30,
+    "minSeedCover": 0.1
+  },
+  "placementMaskRanges": [
+    {
+      "begin": 2045,
+      "end": 2070
+    },
+    {
+      "begin": 7035,
+      "end": 7060
+    },
+    {
+      "begin": 7380,
+      "end": 7490
+    },
+    {
+      "begin": 7560,
+      "end": 7590
+    },
+    {
+      "begin": 9375,
+      "end": 9599
+    }
+  ],
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "scoreBias": 1000,
+      "missingDataThreshold": 1000
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 200
+    },
+    "privateMutations": {
+      "enabled": true,
+      "typical": 500,
+      "cutoff": 1000,
+      "weightLabeledSubstitutions": 1,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "snpClusters": {
+      "enabled": false
+    },
+    "frameShifts": {
+      "enabled": true,
+      "scoreWeight": 40
+    },
+    "stopCodons": {
+      "enabled": true,
+      "scoreWeight": 40
+    }
+  },
+  "version": {
+    "tag": "unreleased"
+  }
+}
