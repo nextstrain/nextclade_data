@@ -1,6 +1,6 @@
 ## Unreleased
 
-- Add mutationPatterns config for ADAR-mediated A-to-I editing detection (A>G and T>C substitution type filtering)
+- Add example mutation patterns for ADAR-like RNA editing (A>G on both strands) and APOBEC3-like cytosine deamination (C>T in TCW context on both strands), with simulated example sequences
 
 ## 2026-07-03T09:35:04Z
 

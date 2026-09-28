@@ -1,6 +1,6 @@
 ## Unreleased
 
-- Add mutationPatterns config for ADAR editing detection
+- Add an example mutation pattern for ADAR-like RNA editing (A>G on both strands)
 
 ## 2026-04-14T11:55:23Z
 

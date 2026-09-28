@@ -32,17 +32,13 @@
       {
         "id": "adar",
         "name": "ADAR-like RNA editing",
-        "description": "ADAR-mediated A-to-I editing (observed as A>G and complementary T>C)",
+        "description": "ADAR-mediated A-to-I editing, observed as A>G, and as T>C on the opposite strand",
         "events": [
           {
             "type": "nucSubstitution",
             "ref": ["A"],
-            "qry": ["G"]
-          },
-          {
-            "type": "nucSubstitution",
-            "ref": ["T"],
-            "qry": ["C"]
+            "qry": ["G"],
+            "bothStrands": true
           }
         ],
         "cluster": {
@@ -52,14 +48,15 @@
       },
       {
         "id": "apobec",
-        "name": "APOBEC-like cytosine deamination",
-        "description": "APOBEC-like cytosine deamination (observed as G>A)",
+        "name": "APOBEC3-like cytosine deamination",
+        "description": "APOBEC3-like cytosine deamination, observed as C>T in TCW context, and as G>A in WGA context on the opposite strand",
         "events": [
           {
             "type": "nucSubstitution",
-            "ref": ["G"],
-            "qry": ["A"],
-            "motifs": ["[CT]G[ACT]"]
+            "ref": ["C"],
+            "qry": ["T"],
+            "motifs": ["T(C)W"],
+            "bothStrands": true
           }
         ],
         "cluster": {

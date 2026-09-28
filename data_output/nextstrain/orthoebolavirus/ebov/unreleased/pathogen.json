@@ -30,9 +30,9 @@
   "mutationPatterns": {
     "patterns": [
       {
-        "id": "rna_editing",
-        "name": "RNA editing signatures",
-        "description": "ADAR editing (A>G, T>C) and APOBEC-like deamination (C>T in CpG context)",
+        "id": "adar",
+        "name": "ADAR-like RNA editing",
+        "description": "ADAR-mediated A-to-I editing, observed as A>G, and as T>C on the opposite strand",
         "events": [
           {
             "type": "nucSubstitution",
@@ -41,17 +41,20 @@
             ],
             "qry": [
               "G"
-            ]
-          },
-          {
-            "type": "nucSubstitution",
-            "ref": [
-              "T"
             ],
-            "qry": [
-              "C"
-            ]
-          },
+            "bothStrands": true
+          }
+        ],
+        "cluster": {
+          "windowSize": 100,
+          "cutoff": 5
+        }
+      },
+      {
+        "id": "cpg",
+        "name": "C>T in CpG context",
+        "description": "C>T in CpG context, and G>A in CpG context on the opposite strand",
+        "events": [
           {
             "type": "nucSubstitution",
             "ref": [
@@ -61,8 +64,9 @@
               "T"
             ],
             "motifs": [
-              "[ACGT]CG"
-            ]
+              "(C)G"
+            ],
+            "bothStrands": true
           }
         ],
         "cluster": {
