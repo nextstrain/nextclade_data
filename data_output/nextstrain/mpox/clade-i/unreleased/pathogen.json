@@ -54,8 +54,7 @@
   "qc": {
     "frameShifts": {
       "enabled": true,
-      "ignoredFrameShifts": [
-      ],
+      "ignoredFrameShifts": [],
       "scoreWeight": 20
     },
     "missingData": {
@@ -83,15 +82,17 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [
-      ],
+      "ignoredStopCodons": [],
       "scoreWeight": 40
     }
   },
   "schemaVersion": "3.0.0",
-  "shortcuts": [
-  ],
+  "shortcuts": [],
   "version": {
-    "tag": "unreleased"
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
   }
 }

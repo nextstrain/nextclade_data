@@ -26,6 +26,31 @@
     "reference": "reference.fasta",
     "treeJson": "tree.json"
   },
+  "mutationPatterns": {
+    "patterns": [
+      {
+        "id": "apobec",
+        "name": "APOBEC3-like cytosine deamination",
+        "description": "APOBEC3-like cytosine deamination, observed as C>T in TCW context, and as G>A in WGA context on the opposite strand",
+        "events": [
+          {
+            "type": "nucSubstitution",
+            "ref": [
+              "C"
+            ],
+            "qry": [
+              "T"
+            ],
+            "motifs": [
+              "T(C)W"
+            ],
+            "bothStrands": true
+          }
+        ],
+        "cluster": false
+      }
+    ]
+  },
   "qc": {
     "frameShifts": {
       "enabled": true,
