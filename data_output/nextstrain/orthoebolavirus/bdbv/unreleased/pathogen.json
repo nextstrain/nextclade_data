@@ -6,19 +6,20 @@
     "allowedMismatches": 10,
     "windowSize": 40,
     "minSeedCover": 0.03,
-    "gapAlignmentSide": "left"
+    "gapAlignmentSide": "left",
+    "retryReverseComplement": true
   },
   "attributes": {
-    "name": "Sudan virus",
-    "reference accession": "NC_006432.1",
-    "reference name": "UGA/2000/Gulu-808892",
-    "experimental": true
+    "name": "Bundibugyo ebolavirus",
+    "reference accession": "NC_014373.1",
+    "reference name": "UGA/2007/Butalya-811250"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
     "web": "3.0.0-alpha.0"
   },
   "files": {
+    "treeJson": "tree.json",
     "changelog": "CHANGELOG.md",
     "examples": "examples.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
@@ -35,14 +36,42 @@
         "events": [
           {
             "type": "nucSubstitution",
-            "ref": ["A"],
-            "qry": ["G"],
+            "ref": [
+              "A"
+            ],
+            "qry": [
+              "G"
+            ],
             "bothStrands": true
           }
         ],
         "cluster": {
-          "windowSize": 80,
-          "cutoff": 4
+          "windowSize": 50,
+          "cutoff": 3
+        }
+      },
+      {
+        "id": "apobec",
+        "name": "APOBEC3-like cytosine deamination",
+        "description": "APOBEC3-like cytosine deamination, observed as C>T in TCW context, and as G>A in WGA context on the opposite strand",
+        "events": [
+          {
+            "type": "nucSubstitution",
+            "ref": [
+              "C"
+            ],
+            "qry": [
+              "T"
+            ],
+            "motifs": [
+              "T(C)W"
+            ],
+            "bothStrands": true
+          }
+        ],
+        "cluster": {
+          "windowSize": 50,
+          "cutoff": 3
         }
       }
     ]
@@ -51,7 +80,7 @@
     "frameShifts": {
       "enabled": true,
       "ignoredFrameShifts": [],
-      "scoreWeight": 20
+      "scoreWeight": 50
     },
     "missingData": {
       "enabled": true,
@@ -60,30 +89,42 @@
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 40
+      "mixedSitesThreshold": 20
     },
     "privateMutations": {
-      "cutoff": 300,
+      "cutoff": 10,
       "enabled": true,
-      "typical": 50,
-      "weightLabeledSubstitutions": 6,
-      "weightReversionSubstitutions": 6,
+      "typical": 3,
+      "weightLabeledSubstitutions": 3,
+      "weightReversionSubstitutions": 3,
       "weightUnlabeledSubstitutions": 1
     },
     "snpClusters": {
-      "clusterCutOff": 10,
-      "enabled": false,
-      "scoreWeight": 10,
-      "windowSize": 100
+      "clusterCutOff": 3,
+      "enabled": true,
+      "scoreWeight": 50,
+      "windowSize": 50
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [],
+      "ignoredStopCodons": [
+        {
+          "cdsName": "GP_003",
+          "codon": 366
+        }
+      ],
       "scoreWeight": 20
     }
   },
   "schemaVersion": "3.0.0",
   "shortcuts": [
-    "nextstrain/ebola/sudan"
-  ]
+    "nextstrain/ebola/bdbv"
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
 }

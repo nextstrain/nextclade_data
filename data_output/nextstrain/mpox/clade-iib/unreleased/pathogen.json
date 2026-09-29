@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "alignmentParams": {
-    "excessBandwidth": 100,
-    "terminalBandwidth": 300,
-    "allowedMismatches": 8,
-    "windowSize": 40,
+    "allowedMismatches": 5,
+    "excessBandwidth": 40,
+    "gapAlignmentSide": "left",
     "minSeedCover": 0.1,
-    "gapAlignmentSide": "left"
+    "terminalBandwidth": 200,
+    "windowSize": 30
   },
   "attributes": {
-    "name": "Mpox virus (Clade I)",
-    "reference accession": "DQ011155.1",
-    "reference name": "Zaire_1979-005"
+    "name": "Mpox virus (Clade IIb)",
+    "reference accession": "NC_063383.1",
+    "reference name": "MPXV-M5312_HM12_Rivers"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
@@ -55,6 +55,13 @@
     "frameShifts": {
       "enabled": true,
       "ignoredFrameShifts": [
+        {
+          "codonRange": {
+            "begin": 289,
+            "end": 346
+          },
+          "cdsName": "OPG174"
+        }
       ],
       "scoreWeight": 20
     },
@@ -84,14 +91,31 @@
     "stopCodons": {
       "enabled": true,
       "ignoredStopCodons": [
+        {
+          "codon": 187,
+          "cdsName": "OPG015_dup"
+        },
+        {
+          "codon": 187,
+          "cdsName": "OPG015"
+        },
+        {
+          "codon": 21,
+          "cdsName": "OPG176"
+        }
       ],
       "scoreWeight": 40
     }
   },
   "schemaVersion": "3.0.0",
   "shortcuts": [
+    "hMPXV"
   ],
   "version": {
-    "tag": "unreleased"
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
   }
 }

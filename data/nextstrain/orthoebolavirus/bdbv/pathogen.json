@@ -27,6 +27,45 @@
     "readme": "README.md",
     "reference": "reference.fasta"
   },
+  "mutationPatterns": {
+    "patterns": [
+      {
+        "id": "adar",
+        "name": "ADAR-like RNA editing",
+        "description": "ADAR-mediated A-to-I editing, observed as A>G, and as T>C on the opposite strand",
+        "events": [
+          {
+            "type": "nucSubstitution",
+            "ref": ["A"],
+            "qry": ["G"],
+            "bothStrands": true
+          }
+        ],
+        "cluster": {
+          "windowSize": 50,
+          "cutoff": 3
+        }
+      },
+      {
+        "id": "apobec",
+        "name": "APOBEC3-like cytosine deamination",
+        "description": "APOBEC3-like cytosine deamination, observed as C>T in TCW context, and as G>A in WGA context on the opposite strand",
+        "events": [
+          {
+            "type": "nucSubstitution",
+            "ref": ["C"],
+            "qry": ["T"],
+            "motifs": ["T(C)W"],
+            "bothStrands": true
+          }
+        ],
+        "cluster": {
+          "windowSize": 50,
+          "cutoff": 3
+        }
+      }
+    ]
+  },
   "qc": {
     "frameShifts": {
       "enabled": true,
@@ -58,7 +97,12 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [{"cdsName": "GP_003", "codon": 366}],
+      "ignoredStopCodons": [
+        {
+          "cdsName": "GP_003",
+          "codon": 366
+        }
+      ],
       "scoreWeight": 20
     }
   },

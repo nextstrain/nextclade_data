@@ -35,8 +35,12 @@
         "events": [
           {
             "type": "nucSubstitution",
-            "ref": ["A"],
-            "qry": ["G"],
+            "ref": [
+              "A"
+            ],
+            "qry": [
+              "G"
+            ],
             "bothStrands": true
           }
         ],
@@ -85,5 +89,12 @@
   "schemaVersion": "3.0.0",
   "shortcuts": [
     "nextstrain/ebola/sudan"
-  ]
+  ],
+  "version": {
+    "tag": "unreleased",
+    "compatibility": {
+      "cli": "3.0.0-alpha.0",
+      "web": "3.0.0-alpha.0"
+    }
+  }
 }
