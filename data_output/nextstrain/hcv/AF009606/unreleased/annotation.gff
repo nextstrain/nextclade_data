@@ -1,0 +1,26 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_038882.1 1 9599
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=63746
+NC_038882.1	RefSeq	region	1	9599	.	+	.	ID=NC_038882.1:1..9599;Dbxref=taxon:63746;clone=pCV-H77C;gbkey=Src;genome=genomic;mol_type=genomic RNA;note=infectious full-length cDNA;old-name=Hepatitis C virus strain H77;strain=H77
+NC_038882.1	RefSeq	gene	342	914	.	+	.	ID=gene-core;gene=core;Name=core
+NC_038882.1	RefSeq	CDS	342	914	.	+	0	Name=core;gbkey=Prot;product=core protein;protein_id=YP_009709861.1;ID=id-YP_009506357.1:1..191;Parent=gene-core
+NC_038882.1	RefSeq	gene	915	1490	.	+	.	ID=gene-E1;gene=E1;Name=E1
+NC_038882.1	RefSeq	CDS	915	1490	.	+	0	Name=E1;gbkey=Prot;product=E1 protein;protein_id=YP_009709862.1;ID=id-YP_009506357.1:192..383;Parent=gene-E1
+NC_038882.1	RefSeq	gene	1491	2579	.	+	.	ID=gene-E2;gene=E2;Name=E2
+NC_038882.1	RefSeq	CDS	1491	2579	.	+	0	Name=E2;gbkey=Prot;product=E2 protein;protein_id=YP_009709863.1;ID=id-YP_009506357.1:384..746;Parent=gene-E2
+NC_038882.1	RefSeq	gene	2580	2768	.	+	.	ID=gene-p7;gene=p7;Name=p7
+NC_038882.1	RefSeq	CDS	2580	2768	.	+	0	Name=p7;gbkey=Prot;product=p7 protein;protein_id=YP_009709864.1;ID=id-YP_009506357.1:747..809;Parent=gene-p7
+NC_038882.1	RefSeq	gene	2769	3419	.	+	.	ID=gene-NS2;gene=NS2;Name=NS2
+NC_038882.1	RefSeq	CDS	2769	3419	.	+	0	Name=NS2;gbkey=Prot;product=NS2 protein;protein_id=YP_009709865.1;ID=id-YP_009506357.1:810..1026;Parent=gene-NS2
+NC_038882.1	RefSeq	gene	3420	5312	.	+	.	ID=gene-NS3;gene=NS3;Name=NS3
+NC_038882.1	RefSeq	CDS	3420	5312	.	+	0	Name=NS3;gbkey=Prot;protein_id=YP_009709866.1;product=NS3 protease/helicase;ID=id-YP_009506357.1:1027..1657;Note=NS3 proteinase / ATPase / helicase peptide;Parent=gene-NS3
+NC_038882.1	RefSeq	gene	5313	5474	.	+	.	ID=gene-NS4A;gene=NS4A;Name=NS4A
+NC_038882.1	RefSeq	CDS	5313	5474	.	+	0	Name=NS4A;gbkey=Prot;product=NS4A protein;protein_id=YP_009709867.1;ID=id-YP_009506357.1:1658..1711;Parent=gene-NS4A
+NC_038882.1	RefSeq	gene	5475	6257	.	+	.	ID=gene-NS4B;gene=NS4B;Name=NS4B
+NC_038882.1	RefSeq	CDS	5475	6257	.	+	0	Name=NS4B;gbkey=Prot;product=NS4B protein;protein_id=YP_009709868.1;ID=id-YP_009506357.1:1712..1972;Parent=gene-NS4B
+NC_038882.1	RefSeq	gene	6258	7601	.	+	.	ID=gene-NS5A;gene=NS5A;Name=NS5A
+NC_038882.1	RefSeq	CDS	6258	7601	.	+	0	Name=NS5A;gbkey=Prot;product=NS5A protein;protein_id=YP_009709869.1;ID=id-YP_009506357.1:1973..2420;Parent=gene-NS5A
+NC_038882.1	RefSeq	gene	7602	9374	.	+	.	ID=gene-NS5B;gene=NS5B;Name=NS5B
+NC_038882.1	RefSeq	CDS	7602	9374	.	+	0	Name=NS5B;Note=RdRp;gbkey=Prot;protein_id=YP_009709870.1;ID=id-YP_009506357.1:2421..3011;product=NS5B RNA-dependent RNA polymerase;Parent=gene-NS5B
