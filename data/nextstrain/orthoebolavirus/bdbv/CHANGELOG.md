@@ -1,3 +1,8 @@
+## Unreleased
+
+ - Update reference tree with more recent genomes
+ - Include putative ADAR edit-detection. Cluster of 3 or more T->C mutations will now be highlighed.
+
 ## 2026-07-03T09:35:04Z
 
  - Include open 2026 Outbreak sequences as examples;

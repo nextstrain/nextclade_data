@@ -27,6 +27,27 @@
     "readme": "README.md",
     "reference": "reference.fasta"
   },
+  "mutationPatterns": {
+    "patterns": [
+      {
+        "id": "adar",
+        "name": "ADAR-like RNA editing",
+        "description": "ADAR-mediated A-to-I editing, observed as T>C in sequenced genomes",
+        "events": [
+          {
+            "type": "nucSubstitution",
+            "ref": ["T"],
+            "qry": ["C"],
+            "bothStrands": false
+          }
+        ],
+        "cluster": {
+          "windowSize": 50,
+          "cutoff": 2
+        }
+      }
+    ]
+  },
   "qc": {
     "frameShifts": {
       "enabled": true,
