@@ -1,0 +1,2884 @@
+{
+  "branches": {
+    "NODE_0000004": {
+      "labels": {
+        "clade": "1VII"
+      }
+    },
+    "NODE_0000008": {
+      "labels": {
+        "clade": "1VII_B"
+      }
+    },
+    "NODE_0000012": {
+      "labels": {
+        "clade": "1VII_A"
+      }
+    },
+    "NODE_0000017": {
+      "labels": {
+        "clade": "1III"
+      }
+    },
+    "NODE_0000020": {
+      "labels": {
+        "clade": "1III_B"
+      }
+    },
+    "NODE_0000025": {
+      "labels": {
+        "clade": "1III_A"
+      }
+    },
+    "NODE_0000031": {
+      "labels": {
+        "clade": "1III_A.1"
+      }
+    },
+    "NODE_0000037": {
+      "labels": {
+        "clade": "1III_A.2"
+      }
+    },
+    "NODE_0000043": {
+      "labels": {
+        "clade": "1III_A.3"
+      }
+    },
+    "NODE_0000049": {
+      "labels": {
+        "clade": "1III_A.4"
+      }
+    },
+    "NODE_0000054": {
+      "labels": {
+        "clade": "1V"
+      }
+    },
+    "NODE_0000057": {
+      "labels": {
+        "clade": "1V_A"
+      }
+    },
+    "NODE_0000062": {
+      "labels": {
+        "clade": "1V_A.2"
+      }
+    },
+    "NODE_0000068": {
+      "labels": {
+        "clade": "1V_A.1"
+      }
+    },
+    "NODE_0000075": {
+      "labels": {
+        "clade": "1V_J"
+      }
+    },
+    "NODE_0000082": {
+      "labels": {
+        "clade": "1V_H"
+      }
+    },
+    "NODE_0000090": {
+      "labels": {
+        "clade": "1V_C"
+      }
+    },
+    "NODE_0000095": {
+      "labels": {
+        "clade": "1V_B"
+      }
+    },
+    "NODE_0000102": {
+      "labels": {
+        "clade": "1V_E"
+      }
+    },
+    "NODE_0000108": {
+      "labels": {
+        "clade": "1V_E.2"
+      }
+    },
+    "NODE_0000113": {
+      "labels": {
+        "clade": "1V_E.3"
+      }
+    },
+    "NODE_0000120": {
+      "labels": {
+        "clade": "1V_E.4"
+      }
+    },
+    "NODE_0000125": {
+      "labels": {
+        "clade": "1V_E.1"
+      }
+    },
+    "NODE_0000132": {
+      "labels": {
+        "clade": "1V_G"
+      }
+    },
+    "NODE_0000138": {
+      "labels": {
+        "clade": "1V_F"
+      }
+    },
+    "NODE_0000144": {
+      "labels": {
+        "clade": "1V_F.2"
+      }
+    },
+    "NODE_0000150": {
+      "labels": {
+        "clade": "1V_F.1"
+      }
+    },
+    "NODE_0000155": {
+      "labels": {
+        "clade": "1V_D"
+      }
+    },
+    "NODE_0000156": {
+      "labels": {
+        "clade": "1V_D.2"
+      }
+    },
+    "NODE_0000162": {
+      "labels": {
+        "clade": "1V_D.1"
+      }
+    },
+    "NODE_0000163": {
+      "labels": {
+        "clade": "1V_D.1.2"
+      }
+    },
+    "NODE_0000171": {
+      "labels": {
+        "clade": "1V_D.1.3"
+      }
+    },
+    "NODE_0000179": {
+      "labels": {
+        "clade": "1V_D.1.4"
+      }
+    },
+    "NODE_0000185": {
+      "labels": {
+        "clade": "1V_D.1.1"
+      }
+    },
+    "NODE_0000191": {
+      "labels": {
+        "clade": "1II"
+      }
+    },
+    "NODE_0000194": {
+      "labels": {
+        "clade": "1IV"
+      }
+    },
+    "NODE_0000197": {
+      "labels": {
+        "clade": "1IV_A"
+      }
+    },
+    "NODE_0000205": {
+      "labels": {
+        "clade": "1IV_C"
+      }
+    },
+    "NODE_0000210": {
+      "labels": {
+        "clade": "1IV_B"
+      }
+    },
+    "NODE_0000215": {
+      "labels": {
+        "clade": "1IV_B.1"
+      }
+    },
+    "NODE_0000219": {
+      "labels": {
+        "clade": "1IV_B.2"
+      }
+    },
+    "NODE_0000224": {
+      "labels": {
+        "clade": "1I"
+      }
+    },
+    "NODE_0000225": {
+      "labels": {
+        "clade": "1I_B"
+      }
+    },
+    "NODE_0000230": {
+      "labels": {
+        "clade": "1I_B.2"
+      }
+    },
+    "NODE_0000235": {
+      "labels": {
+        "clade": "1I_B.1"
+      }
+    },
+    "NODE_0000241": {
+      "labels": {
+        "clade": "1I_A"
+      }
+    },
+    "NODE_0000248": {
+      "labels": {
+        "clade": "1I_C"
+      }
+    },
+    "NODE_0000254": {
+      "labels": {
+        "clade": "1I_D"
+      }
+    },
+    "NODE_0000260": {
+      "labels": {
+        "clade": "1I_E"
+      }
+    },
+    "NODE_0000266": {
+      "labels": {
+        "clade": "1I_E.4"
+      }
+    },
+    "NODE_0000272": {
+      "labels": {
+        "clade": "1I_E.3"
+      }
+    },
+    "NODE_0000278": {
+      "labels": {
+        "clade": "1I_E.2"
+      }
+    },
+    "NODE_0000284": {
+      "labels": {
+        "clade": "1I_E.1"
+      }
+    },
+    "NODE_0000288": {
+      "labels": {
+        "clade": "1I_E.1.2"
+      }
+    },
+    "NODE_0000298": {
+      "labels": {
+        "clade": "1I_E.1.1"
+      }
+    },
+    "NODE_0000306": {
+      "labels": {
+        "clade": "1I_G"
+      }
+    },
+    "NODE_0000312": {
+      "labels": {
+        "clade": "1I_F"
+      }
+    },
+    "NODE_0000318": {
+      "labels": {
+        "clade": "1I_H"
+      }
+    },
+    "NODE_0000322": {
+      "labels": {
+        "clade": "1I_H.1"
+      }
+    },
+    "NODE_0000329": {
+      "labels": {
+        "clade": "1I_H.3"
+      }
+    },
+    "NODE_0000334": {
+      "labels": {
+        "clade": "1I_H.2"
+      }
+    },
+    "NODE_0000341": {
+      "labels": {
+        "clade": "1I_J"
+      }
+    },
+    "NODE_0000347": {
+      "labels": {
+        "clade": "1I_K"
+      }
+    },
+    "NODE_0000349": {
+      "labels": {
+        "clade": "1I_K.7"
+      }
+    },
+    "NODE_0000357": {
+      "labels": {
+        "clade": "1I_K.6"
+      }
+    },
+    "NODE_0000362": {
+      "labels": {
+        "clade": "1I_K.5"
+      }
+    },
+    "NODE_0000370": {
+      "labels": {
+        "clade": "1I_K.4"
+      }
+    },
+    "NODE_0000377": {
+      "labels": {
+        "clade": "1I_K.3"
+      }
+    },
+    "NODE_0000383": {
+      "labels": {
+        "clade": "1I_K.2"
+      }
+    },
+    "NODE_0000390": {
+      "labels": {
+        "clade": "1I_K.1"
+      }
+    },
+    "NODE_0000391": {
+      "labels": {
+        "clade": "1I_K.1.2"
+      }
+    },
+    "NODE_0000399": {
+      "labels": {
+        "clade": "1I_K.1.1"
+      }
+    },
+    "NODE_0000404": {
+      "labels": {
+        "clade": "1I_K.1.1.2"
+      }
+    },
+    "NODE_0000412": {
+      "labels": {
+        "clade": "1I_K.1.1.1"
+      }
+    },
+    "PP_005HTUC|2014": {
+      "labels": {
+        "clade": "1VI"
+      }
+    }
+  },
+  "generated_by": {
+    "program": "augur",
+    "version": "34.1.4"
+  },
+  "nodes": {
+    "EPI_ISL_14908852|2022-04-04": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000000": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000001": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000002": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000003": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000004": {
+      "clade_membership": "1VII"
+    },
+    "NODE_0000005": {
+      "clade_membership": "1VII"
+    },
+    "NODE_0000006": {
+      "clade_membership": "1VII"
+    },
+    "NODE_0000007": {
+      "clade_membership": "1VII"
+    },
+    "NODE_0000008": {
+      "clade_membership": "1VII_B"
+    },
+    "NODE_0000009": {
+      "clade_membership": "1VII_B"
+    },
+    "NODE_0000010": {
+      "clade_membership": "1VII_B"
+    },
+    "NODE_0000011": {
+      "clade_membership": "1VII_B"
+    },
+    "NODE_0000012": {
+      "clade_membership": "1VII_A"
+    },
+    "NODE_0000013": {
+      "clade_membership": "1VII_A"
+    },
+    "NODE_0000014": {
+      "clade_membership": "1VII_A"
+    },
+    "NODE_0000015": {
+      "clade_membership": "1VII_A"
+    },
+    "NODE_0000016": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000017": {
+      "clade_membership": "1III"
+    },
+    "NODE_0000018": {
+      "clade_membership": "1III"
+    },
+    "NODE_0000019": {
+      "clade_membership": "1III"
+    },
+    "NODE_0000020": {
+      "clade_membership": "1III_B"
+    },
+    "NODE_0000021": {
+      "clade_membership": "1III_B"
+    },
+    "NODE_0000022": {
+      "clade_membership": "1III_B"
+    },
+    "NODE_0000023": {
+      "clade_membership": "1III_B"
+    },
+    "NODE_0000024": {
+      "clade_membership": "1III"
+    },
+    "NODE_0000025": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000026": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000027": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000028": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000029": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000030": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000031": {
+      "clade_membership": "1III_A.1"
+    },
+    "NODE_0000032": {
+      "clade_membership": "1III_A.1"
+    },
+    "NODE_0000033": {
+      "clade_membership": "1III_A.1"
+    },
+    "NODE_0000034": {
+      "clade_membership": "1III_A.1"
+    },
+    "NODE_0000035": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000036": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000037": {
+      "clade_membership": "1III_A.2"
+    },
+    "NODE_0000038": {
+      "clade_membership": "1III_A.2"
+    },
+    "NODE_0000039": {
+      "clade_membership": "1III_A.2"
+    },
+    "NODE_0000040": {
+      "clade_membership": "1III_A.2"
+    },
+    "NODE_0000041": {
+      "clade_membership": "1III_A.2"
+    },
+    "NODE_0000042": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000043": {
+      "clade_membership": "1III_A.3"
+    },
+    "NODE_0000044": {
+      "clade_membership": "1III_A.3"
+    },
+    "NODE_0000045": {
+      "clade_membership": "1III_A.3"
+    },
+    "NODE_0000046": {
+      "clade_membership": "1III_A.3"
+    },
+    "NODE_0000047": {
+      "clade_membership": "1III_A.3"
+    },
+    "NODE_0000048": {
+      "clade_membership": "1III_A"
+    },
+    "NODE_0000049": {
+      "clade_membership": "1III_A.4"
+    },
+    "NODE_0000050": {
+      "clade_membership": "1III_A.4"
+    },
+    "NODE_0000051": {
+      "clade_membership": "1III_A.4"
+    },
+    "NODE_0000052": {
+      "clade_membership": "1III_A.4"
+    },
+    "NODE_0000053": {
+      "clade_membership": "1III_A.4"
+    },
+    "NODE_0000054": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000055": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000056": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000057": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000058": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000059": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000060": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000061": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000062": {
+      "clade_membership": "1V_A.2"
+    },
+    "NODE_0000063": {
+      "clade_membership": "1V_A.2"
+    },
+    "NODE_0000064": {
+      "clade_membership": "1V_A.2"
+    },
+    "NODE_0000065": {
+      "clade_membership": "1V_A.2"
+    },
+    "NODE_0000066": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000067": {
+      "clade_membership": "1V_A"
+    },
+    "NODE_0000068": {
+      "clade_membership": "1V_A.1"
+    },
+    "NODE_0000069": {
+      "clade_membership": "1V_A.1"
+    },
+    "NODE_0000070": {
+      "clade_membership": "1V_A.1"
+    },
+    "NODE_0000071": {
+      "clade_membership": "1V_A.1"
+    },
+    "NODE_0000072": {
+      "clade_membership": "1V_A.1"
+    },
+    "NODE_0000073": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000074": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000075": {
+      "clade_membership": "1V_J"
+    },
+    "NODE_0000076": {
+      "clade_membership": "1V_J"
+    },
+    "NODE_0000077": {
+      "clade_membership": "1V_J"
+    },
+    "NODE_0000078": {
+      "clade_membership": "1V_J"
+    },
+    "NODE_0000079": {
+      "clade_membership": "1V_J"
+    },
+    "NODE_0000080": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000081": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000082": {
+      "clade_membership": "1V_H"
+    },
+    "NODE_0000083": {
+      "clade_membership": "1V_H"
+    },
+    "NODE_0000084": {
+      "clade_membership": "1V_H"
+    },
+    "NODE_0000085": {
+      "clade_membership": "1V_H"
+    },
+    "NODE_0000086": {
+      "clade_membership": "1V_H"
+    },
+    "NODE_0000087": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000088": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000089": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000090": {
+      "clade_membership": "1V_C"
+    },
+    "NODE_0000091": {
+      "clade_membership": "1V_C"
+    },
+    "NODE_0000092": {
+      "clade_membership": "1V_C"
+    },
+    "NODE_0000093": {
+      "clade_membership": "1V_C"
+    },
+    "NODE_0000094": {
+      "clade_membership": "1V_C"
+    },
+    "NODE_0000095": {
+      "clade_membership": "1V_B"
+    },
+    "NODE_0000096": {
+      "clade_membership": "1V_B"
+    },
+    "NODE_0000097": {
+      "clade_membership": "1V_B"
+    },
+    "NODE_0000098": {
+      "clade_membership": "1V_B"
+    },
+    "NODE_0000099": {
+      "clade_membership": "1V_B"
+    },
+    "NODE_0000100": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000101": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000102": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000103": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000104": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000105": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000106": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000107": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000108": {
+      "clade_membership": "1V_E.2"
+    },
+    "NODE_0000109": {
+      "clade_membership": "1V_E.2"
+    },
+    "NODE_0000110": {
+      "clade_membership": "1V_E.2"
+    },
+    "NODE_0000111": {
+      "clade_membership": "1V_E.2"
+    },
+    "NODE_0000112": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000113": {
+      "clade_membership": "1V_E.3"
+    },
+    "NODE_0000114": {
+      "clade_membership": "1V_E.3"
+    },
+    "NODE_0000115": {
+      "clade_membership": "1V_E.3"
+    },
+    "NODE_0000116": {
+      "clade_membership": "1V_E.3"
+    },
+    "NODE_0000117": {
+      "clade_membership": "1V_E.3"
+    },
+    "NODE_0000118": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000119": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000120": {
+      "clade_membership": "1V_E.4"
+    },
+    "NODE_0000121": {
+      "clade_membership": "1V_E.4"
+    },
+    "NODE_0000122": {
+      "clade_membership": "1V_E.4"
+    },
+    "NODE_0000123": {
+      "clade_membership": "1V_E.4"
+    },
+    "NODE_0000124": {
+      "clade_membership": "1V_E"
+    },
+    "NODE_0000125": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000126": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000127": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000128": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000129": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000130": {
+      "clade_membership": "1V_E.1"
+    },
+    "NODE_0000131": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000132": {
+      "clade_membership": "1V_G"
+    },
+    "NODE_0000133": {
+      "clade_membership": "1V_G"
+    },
+    "NODE_0000134": {
+      "clade_membership": "1V_G"
+    },
+    "NODE_0000135": {
+      "clade_membership": "1V_G"
+    },
+    "NODE_0000136": {
+      "clade_membership": "1V_G"
+    },
+    "NODE_0000137": {
+      "clade_membership": "1V"
+    },
+    "NODE_0000138": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000139": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000140": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000141": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000142": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000143": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000144": {
+      "clade_membership": "1V_F.2"
+    },
+    "NODE_0000145": {
+      "clade_membership": "1V_F.2"
+    },
+    "NODE_0000146": {
+      "clade_membership": "1V_F.2"
+    },
+    "NODE_0000147": {
+      "clade_membership": "1V_F.2"
+    },
+    "NODE_0000148": {
+      "clade_membership": "1V_F.2"
+    },
+    "NODE_0000149": {
+      "clade_membership": "1V_F"
+    },
+    "NODE_0000150": {
+      "clade_membership": "1V_F.1"
+    },
+    "NODE_0000151": {
+      "clade_membership": "1V_F.1"
+    },
+    "NODE_0000152": {
+      "clade_membership": "1V_F.1"
+    },
+    "NODE_0000153": {
+      "clade_membership": "1V_F.1"
+    },
+    "NODE_0000154": {
+      "clade_membership": "1V_F.1"
+    },
+    "NODE_0000155": {
+      "clade_membership": "1V_D"
+    },
+    "NODE_0000156": {
+      "clade_membership": "1V_D.2"
+    },
+    "NODE_0000157": {
+      "clade_membership": "1V_D.2"
+    },
+    "NODE_0000158": {
+      "clade_membership": "1V_D.2"
+    },
+    "NODE_0000159": {
+      "clade_membership": "1V_D.2"
+    },
+    "NODE_0000160": {
+      "clade_membership": "1V_D.2"
+    },
+    "NODE_0000161": {
+      "clade_membership": "1V_D.2"
+    },
+    "NODE_0000162": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000163": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "NODE_0000164": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "NODE_0000165": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "NODE_0000166": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "NODE_0000167": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000168": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000169": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000170": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000171": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "NODE_0000172": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "NODE_0000173": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "NODE_0000174": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "NODE_0000175": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "NODE_0000176": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000177": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000178": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000179": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "NODE_0000180": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "NODE_0000181": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "NODE_0000182": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "NODE_0000183": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "NODE_0000184": {
+      "clade_membership": "1V_D.1"
+    },
+    "NODE_0000185": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "NODE_0000186": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "NODE_0000187": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "NODE_0000188": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "NODE_0000189": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "NODE_0000190": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000191": {
+      "clade_membership": "1II"
+    },
+    "NODE_0000192": {
+      "clade_membership": "1II"
+    },
+    "NODE_0000193": {
+      "clade_membership": "unassigned"
+    },
+    "NODE_0000194": {
+      "clade_membership": "1IV"
+    },
+    "NODE_0000195": {
+      "clade_membership": "1IV"
+    },
+    "NODE_0000196": {
+      "clade_membership": "1IV"
+    },
+    "NODE_0000197": {
+      "clade_membership": "1IV_A"
+    },
+    "NODE_0000198": {
+      "clade_membership": "1IV_A"
+    },
+    "NODE_0000199": {
+      "clade_membership": "1IV_A"
+    },
+    "NODE_0000200": {
+      "clade_membership": "1IV_A"
+    },
+    "NODE_0000201": {
+      "clade_membership": "1IV_A"
+    },
+    "NODE_0000202": {
+      "clade_membership": "1IV"
+    },
+    "NODE_0000203": {
+      "clade_membership": "1IV"
+    },
+    "NODE_0000204": {
+      "clade_membership": "1IV"
+    },
+    "NODE_0000205": {
+      "clade_membership": "1IV_C"
+    },
+    "NODE_0000206": {
+      "clade_membership": "1IV_C"
+    },
+    "NODE_0000207": {
+      "clade_membership": "1IV_C"
+    },
+    "NODE_0000208": {
+      "clade_membership": "1IV_C"
+    },
+    "NODE_0000209": {
+      "clade_membership": "1IV_C"
+    },
+    "NODE_0000210": {
+      "clade_membership": "1IV_B"
+    },
+    "NODE_0000211": {
+      "clade_membership": "1IV_B"
+    },
+    "NODE_0000212": {
+      "clade_membership": "1IV_B"
+    },
+    "NODE_0000213": {
+      "clade_membership": "1IV_B"
+    },
+    "NODE_0000214": {
+      "clade_membership": "1IV_B"
+    },
+    "NODE_0000215": {
+      "clade_membership": "1IV_B.1"
+    },
+    "NODE_0000216": {
+      "clade_membership": "1IV_B.1"
+    },
+    "NODE_0000217": {
+      "clade_membership": "1IV_B.1"
+    },
+    "NODE_0000218": {
+      "clade_membership": "1IV_B.1"
+    },
+    "NODE_0000219": {
+      "clade_membership": "1IV_B.2"
+    },
+    "NODE_0000220": {
+      "clade_membership": "1IV_B.2"
+    },
+    "NODE_0000221": {
+      "clade_membership": "1IV_B.2"
+    },
+    "NODE_0000222": {
+      "clade_membership": "1IV_B.2"
+    },
+    "NODE_0000223": {
+      "clade_membership": "1IV_B.2"
+    },
+    "NODE_0000224": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000225": {
+      "clade_membership": "1I_B"
+    },
+    "NODE_0000226": {
+      "clade_membership": "1I_B"
+    },
+    "NODE_0000227": {
+      "clade_membership": "1I_B"
+    },
+    "NODE_0000228": {
+      "clade_membership": "1I_B"
+    },
+    "NODE_0000229": {
+      "clade_membership": "1I_B"
+    },
+    "NODE_0000230": {
+      "clade_membership": "1I_B.2"
+    },
+    "NODE_0000231": {
+      "clade_membership": "1I_B.2"
+    },
+    "NODE_0000232": {
+      "clade_membership": "1I_B.2"
+    },
+    "NODE_0000233": {
+      "clade_membership": "1I_B.2"
+    },
+    "NODE_0000234": {
+      "clade_membership": "1I_B"
+    },
+    "NODE_0000235": {
+      "clade_membership": "1I_B.1"
+    },
+    "NODE_0000236": {
+      "clade_membership": "1I_B.1"
+    },
+    "NODE_0000237": {
+      "clade_membership": "1I_B.1"
+    },
+    "NODE_0000238": {
+      "clade_membership": "1I_B.1"
+    },
+    "NODE_0000239": {
+      "clade_membership": "1I_B.1"
+    },
+    "NODE_0000240": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000241": {
+      "clade_membership": "1I_A"
+    },
+    "NODE_0000242": {
+      "clade_membership": "1I_A"
+    },
+    "NODE_0000243": {
+      "clade_membership": "1I_A"
+    },
+    "NODE_0000244": {
+      "clade_membership": "1I_A"
+    },
+    "NODE_0000245": {
+      "clade_membership": "1I_A"
+    },
+    "NODE_0000246": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000247": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000248": {
+      "clade_membership": "1I_C"
+    },
+    "NODE_0000249": {
+      "clade_membership": "1I_C"
+    },
+    "NODE_0000250": {
+      "clade_membership": "1I_C"
+    },
+    "NODE_0000251": {
+      "clade_membership": "1I_C"
+    },
+    "NODE_0000252": {
+      "clade_membership": "1I_C"
+    },
+    "NODE_0000253": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000254": {
+      "clade_membership": "1I_D"
+    },
+    "NODE_0000255": {
+      "clade_membership": "1I_D"
+    },
+    "NODE_0000256": {
+      "clade_membership": "1I_D"
+    },
+    "NODE_0000257": {
+      "clade_membership": "1I_D"
+    },
+    "NODE_0000258": {
+      "clade_membership": "1I_D"
+    },
+    "NODE_0000259": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000260": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000261": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000262": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000263": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000264": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000265": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000266": {
+      "clade_membership": "1I_E.4"
+    },
+    "NODE_0000267": {
+      "clade_membership": "1I_E.4"
+    },
+    "NODE_0000268": {
+      "clade_membership": "1I_E.4"
+    },
+    "NODE_0000269": {
+      "clade_membership": "1I_E.4"
+    },
+    "NODE_0000270": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000271": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000272": {
+      "clade_membership": "1I_E.3"
+    },
+    "NODE_0000273": {
+      "clade_membership": "1I_E.3"
+    },
+    "NODE_0000274": {
+      "clade_membership": "1I_E.3"
+    },
+    "NODE_0000275": {
+      "clade_membership": "1I_E.3"
+    },
+    "NODE_0000276": {
+      "clade_membership": "1I_E.3"
+    },
+    "NODE_0000277": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000278": {
+      "clade_membership": "1I_E.2"
+    },
+    "NODE_0000279": {
+      "clade_membership": "1I_E.2"
+    },
+    "NODE_0000280": {
+      "clade_membership": "1I_E.2"
+    },
+    "NODE_0000281": {
+      "clade_membership": "1I_E.2"
+    },
+    "NODE_0000282": {
+      "clade_membership": "1I_E.2"
+    },
+    "NODE_0000283": {
+      "clade_membership": "1I_E"
+    },
+    "NODE_0000284": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000285": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000286": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000287": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000288": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "NODE_0000289": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "NODE_0000290": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "NODE_0000291": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "NODE_0000292": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000293": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000294": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000295": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000296": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000297": {
+      "clade_membership": "1I_E.1"
+    },
+    "NODE_0000298": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "NODE_0000299": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "NODE_0000300": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "NODE_0000301": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "NODE_0000302": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "NODE_0000303": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000304": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000305": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000306": {
+      "clade_membership": "1I_G"
+    },
+    "NODE_0000307": {
+      "clade_membership": "1I_G"
+    },
+    "NODE_0000308": {
+      "clade_membership": "1I_G"
+    },
+    "NODE_0000309": {
+      "clade_membership": "1I_G"
+    },
+    "NODE_0000310": {
+      "clade_membership": "1I_G"
+    },
+    "NODE_0000311": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000312": {
+      "clade_membership": "1I_F"
+    },
+    "NODE_0000313": {
+      "clade_membership": "1I_F"
+    },
+    "NODE_0000314": {
+      "clade_membership": "1I_F"
+    },
+    "NODE_0000315": {
+      "clade_membership": "1I_F"
+    },
+    "NODE_0000316": {
+      "clade_membership": "1I_F"
+    },
+    "NODE_0000317": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000318": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000319": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000320": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000321": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000322": {
+      "clade_membership": "1I_H.1"
+    },
+    "NODE_0000323": {
+      "clade_membership": "1I_H.1"
+    },
+    "NODE_0000324": {
+      "clade_membership": "1I_H.1"
+    },
+    "NODE_0000325": {
+      "clade_membership": "1I_H.1"
+    },
+    "NODE_0000326": {
+      "clade_membership": "1I_H.1"
+    },
+    "NODE_0000327": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000328": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000329": {
+      "clade_membership": "1I_H.3"
+    },
+    "NODE_0000330": {
+      "clade_membership": "1I_H.3"
+    },
+    "NODE_0000331": {
+      "clade_membership": "1I_H.3"
+    },
+    "NODE_0000332": {
+      "clade_membership": "1I_H.3"
+    },
+    "NODE_0000333": {
+      "clade_membership": "1I_H"
+    },
+    "NODE_0000334": {
+      "clade_membership": "1I_H.2"
+    },
+    "NODE_0000335": {
+      "clade_membership": "1I_H.2"
+    },
+    "NODE_0000336": {
+      "clade_membership": "1I_H.2"
+    },
+    "NODE_0000337": {
+      "clade_membership": "1I_H.2"
+    },
+    "NODE_0000338": {
+      "clade_membership": "1I_H.2"
+    },
+    "NODE_0000339": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000340": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000341": {
+      "clade_membership": "1I_J"
+    },
+    "NODE_0000342": {
+      "clade_membership": "1I_J"
+    },
+    "NODE_0000343": {
+      "clade_membership": "1I_J"
+    },
+    "NODE_0000344": {
+      "clade_membership": "1I_J"
+    },
+    "NODE_0000345": {
+      "clade_membership": "1I_J"
+    },
+    "NODE_0000346": {
+      "clade_membership": "1I"
+    },
+    "NODE_0000347": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000348": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000349": {
+      "clade_membership": "1I_K.7"
+    },
+    "NODE_0000350": {
+      "clade_membership": "1I_K.7"
+    },
+    "NODE_0000351": {
+      "clade_membership": "1I_K.7"
+    },
+    "NODE_0000352": {
+      "clade_membership": "1I_K.7"
+    },
+    "NODE_0000353": {
+      "clade_membership": "1I_K.7"
+    },
+    "NODE_0000354": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000355": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000356": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000357": {
+      "clade_membership": "1I_K.6"
+    },
+    "NODE_0000358": {
+      "clade_membership": "1I_K.6"
+    },
+    "NODE_0000359": {
+      "clade_membership": "1I_K.6"
+    },
+    "NODE_0000360": {
+      "clade_membership": "1I_K.6"
+    },
+    "NODE_0000361": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000362": {
+      "clade_membership": "1I_K.5"
+    },
+    "NODE_0000363": {
+      "clade_membership": "1I_K.5"
+    },
+    "NODE_0000364": {
+      "clade_membership": "1I_K.5"
+    },
+    "NODE_0000365": {
+      "clade_membership": "1I_K.5"
+    },
+    "NODE_0000366": {
+      "clade_membership": "1I_K.5"
+    },
+    "NODE_0000367": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000368": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000369": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000370": {
+      "clade_membership": "1I_K.4"
+    },
+    "NODE_0000371": {
+      "clade_membership": "1I_K.4"
+    },
+    "NODE_0000372": {
+      "clade_membership": "1I_K.4"
+    },
+    "NODE_0000373": {
+      "clade_membership": "1I_K.4"
+    },
+    "NODE_0000374": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000375": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000376": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000377": {
+      "clade_membership": "1I_K.3"
+    },
+    "NODE_0000378": {
+      "clade_membership": "1I_K.3"
+    },
+    "NODE_0000379": {
+      "clade_membership": "1I_K.3"
+    },
+    "NODE_0000380": {
+      "clade_membership": "1I_K.3"
+    },
+    "NODE_0000381": {
+      "clade_membership": "1I_K.3"
+    },
+    "NODE_0000382": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000383": {
+      "clade_membership": "1I_K.2"
+    },
+    "NODE_0000384": {
+      "clade_membership": "1I_K.2"
+    },
+    "NODE_0000385": {
+      "clade_membership": "1I_K.2"
+    },
+    "NODE_0000386": {
+      "clade_membership": "1I_K.2"
+    },
+    "NODE_0000387": {
+      "clade_membership": "1I_K.2"
+    },
+    "NODE_0000388": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000389": {
+      "clade_membership": "1I_K"
+    },
+    "NODE_0000390": {
+      "clade_membership": "1I_K.1"
+    },
+    "NODE_0000391": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000392": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000393": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000394": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000395": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000396": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000397": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000398": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "NODE_0000399": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000400": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000401": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000402": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000403": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000404": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "NODE_0000405": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "NODE_0000406": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "NODE_0000407": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "NODE_0000408": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "NODE_0000409": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000410": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000411": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "NODE_0000412": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "NODE_0000413": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "NODE_0000414": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "NODE_0000415": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "PP_005310N|2001": {
+      "clade_membership": "1V_H"
+    },
+    "PP_00535Q3|1994": {
+      "clade_membership": "1I"
+    },
+    "PP_0054UFX|1982": {
+      "clade_membership": "1I_B"
+    },
+    "PP_0054UHS|1981": {
+      "clade_membership": "1I_B"
+    },
+    "PP_0056LAB|1972": {
+      "clade_membership": "unassigned"
+    },
+    "PP_0056Z74|2005": {
+      "clade_membership": "1III_A"
+    },
+    "PP_0056Z82|2006": {
+      "clade_membership": "1IV_B"
+    },
+    "PP_0057BLX|1998": {
+      "clade_membership": "1V_J"
+    },
+    "PP_0057J0X|2003": {
+      "clade_membership": "1I_C"
+    },
+    "PP_0057JNL|2006": {
+      "clade_membership": "1I_H.2"
+    },
+    "PP_005820B|1997": {
+      "clade_membership": "1I_A"
+    },
+    "PP_0058BBE|1998": {
+      "clade_membership": "1V_J"
+    },
+    "PP_0058CH0|1993": {
+      "clade_membership": "1V_J"
+    },
+    "PP_0058DV9|2008": {
+      "clade_membership": "1I_E"
+    },
+    "PP_0058LEZ|2003": {
+      "clade_membership": "1I_K"
+    },
+    "PP_0058LGV|2003": {
+      "clade_membership": "1I_K"
+    },
+    "PP_0058V58|2003": {
+      "clade_membership": "1I_D"
+    },
+    "PP_0058WUU|1997": {
+      "clade_membership": "1V_B"
+    },
+    "PP_0058YKA|2004": {
+      "clade_membership": "1V_F"
+    },
+    "PP_0058Z2A|2005": {
+      "clade_membership": "1V_E"
+    },
+    "PP_0058ZAU|2006": {
+      "clade_membership": "1V_E"
+    },
+    "PP_00593H7|2001": {
+      "clade_membership": "1V_H"
+    },
+    "PP_0059407|2007": {
+      "clade_membership": "1V_A"
+    },
+    "PP_00596CF|2007": {
+      "clade_membership": "1I_K.7"
+    },
+    "PP_0059J6F|2007": {
+      "clade_membership": "1I_D"
+    },
+    "PP_0059ZXH|2006": {
+      "clade_membership": "1V_G"
+    },
+    "PP_005A017|2007": {
+      "clade_membership": "1V_G"
+    },
+    "PP_005A033|2008": {
+      "clade_membership": "1V_D.1"
+    },
+    "PP_005A108|1985": {
+      "clade_membership": "1V_A"
+    },
+    "PP_005A116|2004": {
+      "clade_membership": "1IV_B"
+    },
+    "PP_005A1J5|2003": {
+      "clade_membership": "1I_K.7"
+    },
+    "PP_005A2L0|1998": {
+      "clade_membership": "1V_C"
+    },
+    "PP_005A2NW|2008": {
+      "clade_membership": "1I_H.2"
+    },
+    "PP_005A4VE|2008": {
+      "clade_membership": "1I_C"
+    },
+    "PP_005A6Y6|2008": {
+      "clade_membership": "1I_E"
+    },
+    "PP_005A79J|2004": {
+      "clade_membership": "1V"
+    },
+    "PP_005AALS|2001": {
+      "clade_membership": "1V"
+    },
+    "PP_005B1SM|2007": {
+      "clade_membership": "1I_H.2"
+    },
+    "PP_005BDA8|2007": {
+      "clade_membership": "1I_G"
+    },
+    "PP_005BWHA|2009": {
+      "clade_membership": "1III_A"
+    },
+    "PP_005BY41|2007": {
+      "clade_membership": "1I_D"
+    },
+    "PP_005CU9T|2011-03": {
+      "clade_membership": "1III_A"
+    },
+    "PP_005CUAR|2011-04": {
+      "clade_membership": "1IV_C"
+    },
+    "PP_005CXJ5|1986": {
+      "clade_membership": "1I_B"
+    },
+    "PP_005CXK3|1990": {
+      "clade_membership": "1I_B.1"
+    },
+    "PP_005CXQT|1990": {
+      "clade_membership": "1I_B"
+    },
+    "PP_005CXYB|2005-01-01": {
+      "clade_membership": "1IV_A"
+    },
+    "PP_005CYNW|2006": {
+      "clade_membership": "1V_B"
+    },
+    "PP_005CYYA|2001": {
+      "clade_membership": "1I_D"
+    },
+    "PP_005D6E3|2011-09": {
+      "clade_membership": "1I_K"
+    },
+    "PP_005DAXY|2004": {
+      "clade_membership": "1I_D"
+    },
+    "PP_005DSN0|2009-06-09": {
+      "clade_membership": "1IV_A"
+    },
+    "PP_005DTPX|1963": {
+      "clade_membership": "1V"
+    },
+    "PP_005DTQV|1982": {
+      "clade_membership": "1III"
+    },
+    "PP_005DTRT|1971": {
+      "clade_membership": "1VII"
+    },
+    "PP_005DTSR|1960": {
+      "clade_membership": "1II"
+    },
+    "PP_005DTTP|2005": {
+      "clade_membership": "1III_A"
+    },
+    "PP_005EC79|1997": {
+      "clade_membership": "1V_H"
+    },
+    "PP_005EJHG|2010-12-29": {
+      "clade_membership": "1V_F"
+    },
+    "PP_005EK64|2012-01-09": {
+      "clade_membership": "1I_E"
+    },
+    "PP_005EK72|2007-12-13": {
+      "clade_membership": "1IV_C"
+    },
+    "PP_005EK80|2008-02-15": {
+      "clade_membership": "1I_K.4"
+    },
+    "PP_005EKEN|2008-04-17": {
+      "clade_membership": "1I_K.4"
+    },
+    "PP_005EKGJ|2008-03-15": {
+      "clade_membership": "1I_K.4"
+    },
+    "PP_005EKJD|2008-02-15": {
+      "clade_membership": "1I_K.4"
+    },
+    "PP_005EL0F|2010-03-03": {
+      "clade_membership": "1I_K.4"
+    },
+    "PP_005EL47|2007-12-11": {
+      "clade_membership": "1IV_C"
+    },
+    "PP_005EYY6|1956": {
+      "clade_membership": "1V"
+    },
+    "PP_005F48D|2010": {
+      "clade_membership": "1V_A"
+    },
+    "PP_005F49B|2011": {
+      "clade_membership": "1V_E"
+    },
+    "PP_005F4D3|2001": {
+      "clade_membership": "1V_H"
+    },
+    "PP_005F78A|2013-05": {
+      "clade_membership": "1VII_A"
+    },
+    "PP_005FBDW|2001": {
+      "clade_membership": "1I_D"
+    },
+    "PP_005FBXT|2007": {
+      "clade_membership": "1V_C"
+    },
+    "PP_005FCA1|1998": {
+      "clade_membership": "1V_J"
+    },
+    "PP_005FCBZ|1998": {
+      "clade_membership": "1V_J"
+    },
+    "PP_005FCCX|1995": {
+      "clade_membership": "1V_J"
+    },
+    "PP_005FFR1|2013-08-23": {
+      "clade_membership": "1I_K.6"
+    },
+    "PP_005FJQ0|1998": {
+      "clade_membership": "1V_G"
+    },
+    "PP_005FJRY|2005": {
+      "clade_membership": "1V_G"
+    },
+    "PP_005FL7Z|2012": {
+      "clade_membership": "1V_E.3"
+    },
+    "PP_005FLDM|2010": {
+      "clade_membership": "1V_E.3"
+    },
+    "PP_005FLFH|2010": {
+      "clade_membership": "1V_E.3"
+    },
+    "PP_005FLGF|2010": {
+      "clade_membership": "1V_E.3"
+    },
+    "PP_005FLK8|2010": {
+      "clade_membership": "1V_E.3"
+    },
+    "PP_005FV5U|2013-07": {
+      "clade_membership": "1I_H.1"
+    },
+    "PP_005G0D5|2013": {
+      "clade_membership": "1III_B"
+    },
+    "PP_005GRDE|2010-10-13": {
+      "clade_membership": "1V_A"
+    },
+    "PP_005GVZ3|2004": {
+      "clade_membership": "1III_B"
+    },
+    "PP_005GW1Z|2006": {
+      "clade_membership": "1IV_B.1"
+    },
+    "PP_005HTUC|2014": {
+      "clade_membership": "1VI"
+    },
+    "PP_005JKPU|2002": {
+      "clade_membership": "1IV_C"
+    },
+    "PP_005JKQS|2006": {
+      "clade_membership": "1I_H.1"
+    },
+    "PP_005JKUJ|2011": {
+      "clade_membership": "1I_G"
+    },
+    "PP_005JZRA|2012": {
+      "clade_membership": "1V_E"
+    },
+    "PP_005K00Q|2010": {
+      "clade_membership": "1I_B.2"
+    },
+    "PP_005K02L|2008": {
+      "clade_membership": "1I_F"
+    },
+    "PP_005K03J|2010": {
+      "clade_membership": "1IV_C"
+    },
+    "PP_005L3YN|2012": {
+      "clade_membership": "1I_K.2"
+    },
+    "PP_005L40J|2012": {
+      "clade_membership": "1I_K"
+    },
+    "PP_005NWVX|2014": {
+      "clade_membership": "1V_F"
+    },
+    "PP_005NWWV|2014": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "PP_005P238|2006": {
+      "clade_membership": "1I_K.5"
+    },
+    "PP_005P246|2008": {
+      "clade_membership": "1I_K.5"
+    },
+    "PP_005P329|2001": {
+      "clade_membership": "1I_K.7"
+    },
+    "PP_005P3K8|2006": {
+      "clade_membership": "1I_H.3"
+    },
+    "PP_005P3YG|2004": {
+      "clade_membership": "1I_H.3"
+    },
+    "PP_005P7DH|2000": {
+      "clade_membership": "1I_F"
+    },
+    "PP_005P7GB|1998": {
+      "clade_membership": "1I"
+    },
+    "PP_005P7UL|2002": {
+      "clade_membership": "1I_G"
+    },
+    "PP_005P7WG|2002": {
+      "clade_membership": "1I_E"
+    },
+    "PP_005P8BL|2004": {
+      "clade_membership": "1I_A"
+    },
+    "PP_005PSXV|2010-07-06": {
+      "clade_membership": "1I_K.5"
+    },
+    "PP_005QMJQ|2017": {
+      "clade_membership": "1I_E.3"
+    },
+    "PP_005QPGT|2017-11": {
+      "clade_membership": "1III_A"
+    },
+    "PP_005QUKF|2021-06-30": {
+      "clade_membership": "1VII_B"
+    },
+    "PP_005RK5H|2012-03": {
+      "clade_membership": "1III_B"
+    },
+    "PP_005RKFX|2013-04": {
+      "clade_membership": "1I_K.3"
+    },
+    "PP_005RKLL|2013-12": {
+      "clade_membership": "1III_A.3"
+    },
+    "PP_005SQ4C|2016": {
+      "clade_membership": "1III_B"
+    },
+    "PP_005SVEM|2014-12": {
+      "clade_membership": "1I_K"
+    },
+    "PP_005T0UK|2015": {
+      "clade_membership": "1I_K.6"
+    },
+    "PP_005T1L0|2016": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_005T1UJ|2017": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_005T49L|2012": {
+      "clade_membership": "1V_E"
+    },
+    "PP_005T4DC|2012": {
+      "clade_membership": "1VII_B"
+    },
+    "PP_005U4MT|2015-10-02": {
+      "clade_membership": "1V_D.1"
+    },
+    "PP_005VN80|2012": {
+      "clade_membership": "1III_A"
+    },
+    "PP_005VTXG|2017-10-22": {
+      "clade_membership": "1III_A.3"
+    },
+    "PP_005VUAQ|2016": {
+      "clade_membership": "1IV_A"
+    },
+    "PP_005W9HS|2017-04-22": {
+      "clade_membership": "1III_A.3"
+    },
+    "PP_005WJGL|2016-08-26": {
+      "clade_membership": "1III_A"
+    },
+    "PP_005WJVT|2016-10-25": {
+      "clade_membership": "1III_B"
+    },
+    "PP_005WNN3|2015-09-10": {
+      "clade_membership": "1I_J"
+    },
+    "PP_005WPJA|2017-09-19": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_005WPRW|2016-02-25": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_005WWCG|2011": {
+      "clade_membership": "1V_G"
+    },
+    "PP_005WWH5|2013": {
+      "clade_membership": "1V_G"
+    },
+    "PP_005X3GZ|2010-08-03": {
+      "clade_membership": "1I_K.5"
+    },
+    "PP_005X55K|2012-10-01": {
+      "clade_membership": "1I_K.5"
+    },
+    "PP_005XG58|2019-09-01": {
+      "clade_membership": "1I_K.3"
+    },
+    "PP_005XGWR|2019-07": {
+      "clade_membership": "1VII_A"
+    },
+    "PP_005XMYG|2018-10": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_005XMZE|2018-10": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_005XN0C|2018-10": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_005XN1A|2018-10": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_005XWX9|2017-07-18": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "PP_005XWZ5|2017-07-18": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "PP_005XX2Z|2017-07-18": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "PP_005XX3X|2017-07-18": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "PP_005XXAH|2017-07-18": {
+      "clade_membership": "1I_E.1.2"
+    },
+    "PP_005XXCD|2017-07-31": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "PP_005XXG5|2017-07-31": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "PP_005XXH2|2017-07-31": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "PP_005XXKY|2017-07-31": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "PP_005XXNS|2017-07-31": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "PP_005XXSJ|2017-07-31": {
+      "clade_membership": "1I_E.1.1"
+    },
+    "PP_005YEJF|2019-01-20": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_005YEN7|2019-05-09": {
+      "clade_membership": "1III_A.2"
+    },
+    "PP_005YGP3|2014-07-24": {
+      "clade_membership": "1I_K.6"
+    },
+    "PP_005YGRZ|2014-09-23": {
+      "clade_membership": "1I_J"
+    },
+    "PP_005YH0F|2017-07-31": {
+      "clade_membership": "1I_K.3"
+    },
+    "PP_005YH2B|2018-08-09": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_005YH47|2018-10-16": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_005YNVK|2019-11-16": {
+      "clade_membership": "1I_H.1"
+    },
+    "PP_005ZF1D|2015": {
+      "clade_membership": "1IV_B.2"
+    },
+    "PP_005ZF63|2012": {
+      "clade_membership": "1IV_B.2"
+    },
+    "PP_005ZF71|2012": {
+      "clade_membership": "1IV_B.2"
+    },
+    "PP_005ZFEM|2013": {
+      "clade_membership": "1IV_B.2"
+    },
+    "PP_005ZKHA|2019-03-19": {
+      "clade_membership": "1V_E.1"
+    },
+    "PP_005ZMFD|2019-04-08": {
+      "clade_membership": "1V_F.1"
+    },
+    "PP_005ZNK3|2017-05-08": {
+      "clade_membership": "1V_E.1"
+    },
+    "PP_00600JR|2016-06-19": {
+      "clade_membership": "1VII_A"
+    },
+    "PP_00600S9|2019-11-30": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "PP_00600U5|2019-11-30": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "PP_00601GV|2016-04-06": {
+      "clade_membership": "1I_E.4"
+    },
+    "PP_00601HS|2016-08-07": {
+      "clade_membership": "1I_E.4"
+    },
+    "PP_00601KN|2016-02-09": {
+      "clade_membership": "1I_E"
+    },
+    "PP_0060298|2012-04-28": {
+      "clade_membership": "1IV_A"
+    },
+    "PP_00602A6|2012-05-16": {
+      "clade_membership": "1I_E"
+    },
+    "PP_00602S7|2016-04-27": {
+      "clade_membership": "1I_E.2"
+    },
+    "PP_0060975|2017-04-12": {
+      "clade_membership": "1I_E.2"
+    },
+    "PP_00609BX|2017-03-17": {
+      "clade_membership": "1I_E.2"
+    },
+    "PP_00609DT|2017-03-29": {
+      "clade_membership": "1I_E.2"
+    },
+    "PP_00609ER|2017-03-24": {
+      "clade_membership": "1I_E.2"
+    },
+    "PP_00609JG|2017-06-05": {
+      "clade_membership": "1I_E.2"
+    },
+    "PP_0060EWM|2014-12-10": {
+      "clade_membership": "1V_F"
+    },
+    "PP_0060FDM|2019-10": {
+      "clade_membership": "1I_H.1"
+    },
+    "PP_0062F33|2019-06-21": {
+      "clade_membership": "1IV"
+    },
+    "PP_0062N2Y|2018-07": {
+      "clade_membership": "1I_J"
+    },
+    "PP_0062YNF|1999": {
+      "clade_membership": "1I_K"
+    },
+    "PP_0062YWZ|1998": {
+      "clade_membership": "1I"
+    },
+    "PP_0062ZKL|1995": {
+      "clade_membership": "1I_B"
+    },
+    "PP_0062ZPC|2012": {
+      "clade_membership": "1I_J"
+    },
+    "PP_0062ZR8|1997": {
+      "clade_membership": "1I_A"
+    },
+    "PP_0062ZWY|1994": {
+      "clade_membership": "1I_B.1"
+    },
+    "PP_0062ZXW|1995": {
+      "clade_membership": "1I_B.1"
+    },
+    "PP_006300N|1964": {
+      "clade_membership": "1II"
+    },
+    "PP_00630GQ|2013": {
+      "clade_membership": "1I_K.6"
+    },
+    "PP_0063185|2004": {
+      "clade_membership": "1I_H"
+    },
+    "PP_0063268|2006": {
+      "clade_membership": "1I_H.3"
+    },
+    "PP_00632ES|1994": {
+      "clade_membership": "1I_B.1"
+    },
+    "PP_00632LD|2003": {
+      "clade_membership": "1I_H"
+    },
+    "PP_00632Q5|2011": {
+      "clade_membership": "1I_H"
+    },
+    "PP_006350H|1995": {
+      "clade_membership": "1I_B.1"
+    },
+    "PP_006352D|1995": {
+      "clade_membership": "1I_A"
+    },
+    "PP_0063656|2010": {
+      "clade_membership": "1V_E"
+    },
+    "PP_0063672|2003": {
+      "clade_membership": "1I_F"
+    },
+    "PP_00636HF|1996": {
+      "clade_membership": "1I_B.1"
+    },
+    "PP_00636KB|2003": {
+      "clade_membership": "1I_H"
+    },
+    "PP_00636M7|1999": {
+      "clade_membership": "1I"
+    },
+    "PP_00636N5|2006": {
+      "clade_membership": "1I_H.3"
+    },
+    "PP_00636TV|2010": {
+      "clade_membership": "1I_F"
+    },
+    "PP_00637BT|1996": {
+      "clade_membership": "1I_F"
+    },
+    "PP_00637P2|2006": {
+      "clade_membership": "1I_H.3"
+    },
+    "PP_00638CQ|2006": {
+      "clade_membership": "1I_K"
+    },
+    "PP_00638JB|1996": {
+      "clade_membership": "1I"
+    },
+    "PP_00638N3|1980": {
+      "clade_membership": "1III"
+    },
+    "PP_006398X|1999": {
+      "clade_membership": "1I_G"
+    },
+    "PP_00639AT|1998": {
+      "clade_membership": "1I_A"
+    },
+    "PP_00639UQ|1997": {
+      "clade_membership": "1I_H"
+    },
+    "PP_0063AK7|1995": {
+      "clade_membership": "1I_A"
+    },
+    "PP_0063B19|2000": {
+      "clade_membership": "1I_J"
+    },
+    "PP_0063B35|2006": {
+      "clade_membership": "1I_K.7"
+    },
+    "PP_0063BL4|2014": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_00640A0|2014": {
+      "clade_membership": "1V_B"
+    },
+    "PP_00640BY|2013": {
+      "clade_membership": "1V_C"
+    },
+    "PP_00641HJ|2016-04-06": {
+      "clade_membership": "1VII_A"
+    },
+    "PP_00641KE|2019-05-28": {
+      "clade_membership": "1VII_A"
+    },
+    "PP_0064LRH|2011": {
+      "clade_membership": "1I_B.2"
+    },
+    "PP_0064Q7G|1997": {
+      "clade_membership": "1IV"
+    },
+    "PP_0064QU7|2019-09-26": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "PP_0064QW3|2019-09-26": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "PP_0064RT8|1983": {
+      "clade_membership": "1IV"
+    },
+    "PP_0064RU6|1997": {
+      "clade_membership": "1V_H"
+    },
+    "PP_0064T4K|2016-02-08": {
+      "clade_membership": "1IV_A"
+    },
+    "PP_0064XHN|2019-12": {
+      "clade_membership": "1IV_B.2"
+    },
+    "PP_0064XT2|2020-12": {
+      "clade_membership": "1IV_B.1"
+    },
+    "PP_00650GL|2020-02-18": {
+      "clade_membership": "1V_E.2"
+    },
+    "PP_00650LB|2013-07-24": {
+      "clade_membership": "1V_E.3"
+    },
+    "PP_0065DDD|2009-12-14": {
+      "clade_membership": "1I_F"
+    },
+    "PP_0065DG7|2011-06-09": {
+      "clade_membership": "1I_K.6"
+    },
+    "PP_0065DK0|2012-11-26": {
+      "clade_membership": "1I_K.5"
+    },
+    "PP_0065P4M|2023-07-01": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "PP_0065VB1|2000": {
+      "clade_membership": "1V_H"
+    },
+    "PP_00661N4|2021": {
+      "clade_membership": "1III_A.3"
+    },
+    "PP_00662SV|2021-05-07": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "PP_00663P0|2020": {
+      "clade_membership": "1III_A.3"
+    },
+    "PP_006640C|2018": {
+      "clade_membership": "1III_A.4"
+    },
+    "PP_006677V|2020-01-22": {
+      "clade_membership": "1V_C"
+    },
+    "PP_00667DH|2021-03-15": {
+      "clade_membership": "1V_A.2"
+    },
+    "PP_00668J5|2021-03-29": {
+      "clade_membership": "1V_A.2"
+    },
+    "PP_0066AUH|2022-04-12": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "PP_0066B8P|2022-04-04": {
+      "clade_membership": "1V_E.1"
+    },
+    "PP_0066CBG|2022-03-25": {
+      "clade_membership": "1V_F.1"
+    },
+    "PP_0066F1Z|2020-08-24": {
+      "clade_membership": "1III_A.4"
+    },
+    "PP_0066HC9|2019": {
+      "clade_membership": "1III_A.3"
+    },
+    "PP_0066HV8|2019-06-21": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "PP_0066P3M|2019-07": {
+      "clade_membership": "1I_H.1"
+    },
+    "PP_00675NY|2022-04": {
+      "clade_membership": "1III_A.1"
+    },
+    "PP_0067AMV|1983": {
+      "clade_membership": "1IV"
+    },
+    "PP_0067ANT|1997": {
+      "clade_membership": "1III"
+    },
+    "PP_0067ARM|2019-03-21": {
+      "clade_membership": "1V_F.1"
+    },
+    "PP_0067ATH|2019-03-30": {
+      "clade_membership": "1V_F.1"
+    },
+    "PP_0067AX9|2019-04-10": {
+      "clade_membership": "1V_E"
+    },
+    "PP_0067BCD|2020-08-17": {
+      "clade_membership": "1I_H.1"
+    },
+    "PP_0067J8E|2017-02-24": {
+      "clade_membership": "1I_E.3"
+    },
+    "PP_0067KX0|2017-07-06": {
+      "clade_membership": "1I_E.3"
+    },
+    "PP_0067WJF|2022-10-01": {
+      "clade_membership": "1V_E.2"
+    },
+    "PP_0068250|2014-02-27": {
+      "clade_membership": "1V_A"
+    },
+    "PP_00682AQ|2015-05-13": {
+      "clade_membership": "1V_E.4"
+    },
+    "PP_00682DJ|2015-12-18": {
+      "clade_membership": "1V_E.4"
+    },
+    "PP_00682J7|2016-01-29": {
+      "clade_membership": "1V_E.4"
+    },
+    "PP_00682L3|2016-04-02": {
+      "clade_membership": "1V_A.1"
+    },
+    "PP_00682NZ|2016-01-24": {
+      "clade_membership": "1V_E.4"
+    },
+    "PP_00682YD|2017-03-27": {
+      "clade_membership": "1V_A"
+    },
+    "PP_0068G9C|2017-06-24": {
+      "clade_membership": "1VII_B"
+    },
+    "PP_0068GAA|2017-06-21": {
+      "clade_membership": "1VII_B"
+    },
+    "PP_0068GD4|2017-04-13": {
+      "clade_membership": "1VII_B"
+    },
+    "PP_0068GHV|2013-06-18": {
+      "clade_membership": "1V_D.1"
+    },
+    "PP_0068GJT|2015-10-09": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_0068JHT|2022-03-31": {
+      "clade_membership": "1V_A.1"
+    },
+    "PP_0068QCY|2016-07-12": {
+      "clade_membership": "1V_D.1"
+    },
+    "PP_0068QDW|2016-03-15": {
+      "clade_membership": "1V_C"
+    },
+    "PP_0068QNB|2021-11-16": {
+      "clade_membership": "1V_E.2"
+    },
+    "PP_0068QXT|2022-08-28": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "PP_0068RFR|2019-08-23": {
+      "clade_membership": "1V_C"
+    },
+    "PP_0068RLE|2022-12-07": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "PP_0068RXS|2013-08-29": {
+      "clade_membership": "1V_E.2"
+    },
+    "PP_0068S1J|2019-10-23": {
+      "clade_membership": "1V_D.1"
+    },
+    "PP_00697RL|2020-09": {
+      "clade_membership": "1I_E.3"
+    },
+    "PP_00697SJ|2020-09": {
+      "clade_membership": "1I_E.3"
+    },
+    "PP_0069SXP|2023-03-03": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "PP_0069V8Z|2023-03-23": {
+      "clade_membership": "1V_E.1"
+    },
+    "PP_006ASJD|2022-03-24": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "PP_006ATTU|2022-04-06": {
+      "clade_membership": "1V_A.1"
+    },
+    "PP_006AW0C|2022-04-17": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "PP_006AWXH|2022-04-15": {
+      "clade_membership": "1V_E.1"
+    },
+    "PP_006AYBN|1986": {
+      "clade_membership": "1V"
+    },
+    "PP_006AYDJ|1988": {
+      "clade_membership": "1V"
+    },
+    "PP_006AYNZ|1970": {
+      "clade_membership": "1VII"
+    },
+    "PP_006AYQV|1985": {
+      "clade_membership": "1VII"
+    },
+    "PP_006AYUM|1985": {
+      "clade_membership": "1IV_A"
+    },
+    "PP_006AZ6X|1963": {
+      "clade_membership": "1II"
+    },
+    "PP_006B1SL|2019-03-11": {
+      "clade_membership": "1III_A.4"
+    },
+    "PP_006B3DB|2019-10-30": {
+      "clade_membership": "1III_A.4"
+    },
+    "PP_006B4E8|2020-01-06": {
+      "clade_membership": "1III_A.4"
+    },
+    "PP_006B59H|2018-11-30": {
+      "clade_membership": "1IV_B.1"
+    },
+    "PP_006B8Y1|2016-01-19": {
+      "clade_membership": "1V_A.1"
+    },
+    "PP_006B93R|2016-02-02": {
+      "clade_membership": "1V_E.4"
+    },
+    "PP_006BASB|2021-11-25": {
+      "clade_membership": "1V_F.2"
+    },
+    "PP_006BAZX|2021-11-24": {
+      "clade_membership": "1V_F.2"
+    },
+    "PP_006BC3N|2022-01-23": {
+      "clade_membership": "1V_F.2"
+    },
+    "PP_006BC6G|2022-02-10": {
+      "clade_membership": "1V_E.1"
+    },
+    "PP_006BHHN|2023-09-18": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_006BLFQ|2023-04": {
+      "clade_membership": "1I_K.3"
+    },
+    "PP_006BZFB|2023-09-12": {
+      "clade_membership": "1III_A.1"
+    },
+    "PP_006BZH6|2023-09-12": {
+      "clade_membership": "1III_A.1"
+    },
+    "PP_006BZNW|2023-09-12": {
+      "clade_membership": "1III_A.1"
+    },
+    "PP_006C79D|2023-06": {
+      "clade_membership": "1IV_B"
+    },
+    "PP_006CSK7|2019": {
+      "clade_membership": "1I_K.2"
+    },
+    "PP_006CSTR|2020": {
+      "clade_membership": "1I_K.2"
+    },
+    "PP_006CT0B|2019": {
+      "clade_membership": "1I_K.3"
+    },
+    "PP_006CTBP|2018": {
+      "clade_membership": "1I_K.2"
+    },
+    "PP_006CTHA|2019": {
+      "clade_membership": "1I_K"
+    },
+    "PP_006CU18|2020": {
+      "clade_membership": "1IV_C"
+    },
+    "PP_006D28J|2023-12-06": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_006D32V|2019-07-01": {
+      "clade_membership": "1V_B"
+    },
+    "PP_006D35P|2019-07-01": {
+      "clade_membership": "1III_A.4"
+    },
+    "PP_006D3LS|2018-07-01": {
+      "clade_membership": "1V_D.1.1"
+    },
+    "PP_006D48G|2011-12-07": {
+      "clade_membership": "1I_G"
+    },
+    "PP_006D5Y0|2012-03-21": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_006D8JR|2015-05-28": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_006D90T|2013-09-06": {
+      "clade_membership": "1I_E"
+    },
+    "PP_006D98B|2015-10-12": {
+      "clade_membership": "1I_E.4"
+    },
+    "PP_006DA2N|2015-01-07": {
+      "clade_membership": "1I_E.3"
+    },
+    "PP_006DC7A|2015-12-22": {
+      "clade_membership": "1I_E.4"
+    },
+    "PP_006DCQ9|2016-12-21": {
+      "clade_membership": "1I_E.4"
+    },
+    "PP_006DCU1|2017-02-06": {
+      "clade_membership": "1I_E.1"
+    },
+    "PP_006DVCH|2017-06-28": {
+      "clade_membership": "1III_A.2"
+    },
+    "PP_006DZ8M|2023-08-28": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "PP_006DZF7|2023-09-29": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_006E0QK|2023-10-13": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "PP_006E1E5|2023-10-08": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "PP_006E2BA|2023-11-10": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "PP_006EK71|2012": {
+      "clade_membership": "1I_B.2"
+    },
+    "PP_006F3SA|2022-04-06": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_006F3V4|2021-08-24": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "PP_006F46G|2022-07-24": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "PP_006F4RB|2023-11-23": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "PP_006F4ZV|2024-02-20": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "PP_006FCGN|2023-09-25": {
+      "clade_membership": "1V_D.1.2"
+    },
+    "PP_006FEAY|2019-08-07": {
+      "clade_membership": "1I_K.1.1.2"
+    },
+    "PP_006FFBV|2023-09-14": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_006FFVS|2024-06-05": {
+      "clade_membership": "1V_B"
+    },
+    "PP_006FGCS|2013-05": {
+      "clade_membership": "1I_B.2"
+    },
+    "PP_006FGFL|2010-04": {
+      "clade_membership": "1I_B.2"
+    },
+    "PP_006FK0D|2024-08-16": {
+      "clade_membership": "1V_E.2"
+    },
+    "PP_006FLK7|2019-07-12": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_006FP6X|2024-04-14": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_006FPDH|2024-04-17": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_006FPEF|2024-04-13": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_006FRYA|2024-07-09": {
+      "clade_membership": "1III_A.1"
+    },
+    "PP_006FY3U|2024-08-24": {
+      "clade_membership": "1V_B"
+    },
+    "PP_006G7U0|2008": {
+      "clade_membership": "1I_K.7"
+    },
+    "PP_006G7XU|2008": {
+      "clade_membership": "1I_H.2"
+    },
+    "PP_006G7YS|2008": {
+      "clade_membership": "1I_H.2"
+    },
+    "PP_006G94D|2009": {
+      "clade_membership": "1I_G"
+    },
+    "PP_006G9DV|2008": {
+      "clade_membership": "1I_C"
+    },
+    "PP_006GA0L|2008": {
+      "clade_membership": "1I_H.2"
+    },
+    "PP_006GA68|2008": {
+      "clade_membership": "1I_K.7"
+    },
+    "PP_006GAES|2007": {
+      "clade_membership": "1I_C"
+    },
+    "PP_006GAGN|2008": {
+      "clade_membership": "1I_C"
+    },
+    "PP_006GB4B|2008": {
+      "clade_membership": "1I_C"
+    },
+    "PP_006GB67|2024-04-11": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "PP_006GB75|2024-04-14": {
+      "clade_membership": "1V_D.1.3"
+    },
+    "PP_006GB83|2024-06-24": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_006GE1E|2024-11-12": {
+      "clade_membership": "1IV_B.1"
+    },
+    "PP_006GFYJ|2011-03-01": {
+      "clade_membership": "1V_D.2"
+    },
+    "PP_006GK51|2023-12-27": {
+      "clade_membership": "1I_K.1.1.1"
+    },
+    "PP_006GKQW|2024-03": {
+      "clade_membership": "1I_K.3"
+    },
+    "PP_006GM6X|2015-11-12": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_006GM9R|2017-06-12": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_006GMH8|2015-11-12": {
+      "clade_membership": "1IV_B"
+    },
+    "PP_006GMK4|2018-09-11": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_006GMSQ|2019-08-20": {
+      "clade_membership": "1I_K.1.2"
+    },
+    "PP_006GMTN|2019-08-20": {
+      "clade_membership": "1I_J"
+    },
+    "PP_006GSCE|2024-10": {
+      "clade_membership": "1I_K"
+    },
+    "PP_006GWPM|2023-10-24": {
+      "clade_membership": "1III_A.2"
+    },
+    "PP_006GWQK|2023-10-10": {
+      "clade_membership": "1III_A.2"
+    },
+    "PP_006GWSF|2024-08-13": {
+      "clade_membership": "1V_D.1"
+    },
+    "PP_006H34G|2024-10-20": {
+      "clade_membership": "1I_K.1.1"
+    },
+    "PP_006H3U1|2024-09-07": {
+      "clade_membership": "1I_K.2"
+    },
+    "PP_006H3WX|2024-10-23": {
+      "clade_membership": "1IV_B.2"
+    },
+    "PP_006H3XV|2024-12-13": {
+      "clade_membership": "1IV_B.1"
+    },
+    "PP_006HCWN|2021-04-20": {
+      "clade_membership": "1III_A.2"
+    },
+    "PP_006HD9W|2025-01-16": {
+      "clade_membership": "1III_A.2"
+    },
+    "PP_006HGPY|2025-04-05": {
+      "clade_membership": "1I_K.2"
+    },
+    "PP_006LGY8|2022-04-20": {
+      "clade_membership": "1V_A.1"
+    },
+    "PP_006NXVV|2023-03-29": {
+      "clade_membership": "1V_A.2"
+    },
+    "PP_006NZHH|2023-02-03": {
+      "clade_membership": "1V_A.2"
+    },
+    "PP_006RZHB|2019-03-25": {
+      "clade_membership": "1V_F.1"
+    },
+    "PP_006S08T|2021-05-26": {
+      "clade_membership": "1V_A.1"
+    },
+    "PP_006S1BL|2019-08-19": {
+      "clade_membership": "1V_F"
+    },
+    "PP_006S5MV|2022-03-23": {
+      "clade_membership": "1V_F.1"
+    },
+    "PP_006SEQE|2021-04-06": {
+      "clade_membership": "1V_F"
+    },
+    "PP_00745M5|2022-03-10": {
+      "clade_membership": "1V_F.2"
+    },
+    "PP_00746P0|2021-03-29": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "PP_00747CN|2022-04-22": {
+      "clade_membership": "1V_F.2"
+    },
+    "PP_0074851|2021-04-01": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "PP_0074CSN|2021-04-13": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "PP_0074CUJ|2021-04-13": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "PP_0074D30|2022-03-21": {
+      "clade_membership": "1V_A.2"
+    },
+    "PP_0074E7R|2022-03-23": {
+      "clade_membership": "1V_F.2"
+    },
+    "PP_0074F5U|2021-05-08": {
+      "clade_membership": "1V_D.1.4"
+    },
+    "PP_0074FBG|2021-05-03": {
+      "clade_membership": "1V_D.1.4"
+    }
+  }
+}

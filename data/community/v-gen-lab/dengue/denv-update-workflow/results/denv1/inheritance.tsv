@@ -1,0 +1,76 @@
+clade	status	parent_clade	reason
+1I	skipped		no named ancestral lineage
+1II	skipped		no named ancestral lineage
+1III	skipped		no named ancestral lineage
+1III_A	inherited	1III	
+1III_A.1	inherited	1III_A	
+1III_A.2	inherited	1III_A	
+1III_A.3	inherited	1III_A	
+1III_A.4	inherited	1III_A	
+1III_B	inherited	1III	
+1IV	skipped		no named ancestral lineage
+1IV_A	inherited	1IV	
+1IV_B	inherited	1IV	
+1IV_B.1	inherited	1IV_B	
+1IV_B.2	inherited	1IV_B	
+1IV_C	inherited	1IV	
+1I_A	inherited	1I	
+1I_B	inherited	1I	
+1I_B.1	inherited	1I_B	
+1I_B.2	inherited	1I_B	
+1I_C	inherited	1I	
+1I_D	inherited	1I	
+1I_E	inherited	1I	
+1I_E.1	inherited	1I_E	
+1I_E.1.1	inherited	1I_E.1	
+1I_E.1.2	inherited	1I_E.1	
+1I_E.2	inherited	1I_E	
+1I_E.3	inherited	1I_E	
+1I_E.4	inherited	1I_E	
+1I_F	inherited	1I	
+1I_G	inherited	1I	
+1I_H	inherited	1I	
+1I_H.1	inherited	1I_H	
+1I_H.2	inherited	1I_H	
+1I_H.3	inherited	1I_H	
+1I_J	inherited	1I	
+1I_K	inherited	1I	
+1I_K.1	inherited	1I_K	
+1I_K.1.1	inherited	1I_K.1	
+1I_K.1.1.1	inherited	1I_K.1.1	
+1I_K.1.1.2	inherited	1I_K.1.1	
+1I_K.1.2	inherited	1I_K.1	
+1I_K.2	inherited	1I_K	
+1I_K.3	inherited	1I_K	
+1I_K.4	inherited	1I_K	
+1I_K.5	inherited	1I_K	
+1I_K.6	inherited	1I_K	
+1I_K.7	inherited	1I_K	
+1V	skipped		no named ancestral lineage
+1VI	skipped		no named ancestral lineage
+1VII	skipped		no named ancestral lineage
+1VII_A	inherited	1VII	
+1VII_B	inherited	1VII	
+1V_A	inherited	1V	
+1V_A.1	inherited	1V_A	
+1V_A.2	inherited	1V_A	
+1V_B	inherited	1V	
+1V_C	inherited	1V	
+1V_D	inherited	1V	
+1V_D.1	inherited	1V_D	
+1V_D.1.1	inherited	1V_D.1	
+1V_D.1.2	inherited	1V_D.1	
+1V_D.1.3	inherited	1V_D.1	
+1V_D.1.4	inherited	1V_D.1	
+1V_D.2	inherited	1V_D	
+1V_E	inherited	1V	
+1V_E.1	inherited	1V_E	
+1V_E.2	inherited	1V_E	
+1V_E.3	inherited	1V_E	
+1V_E.4	inherited	1V_E	
+1V_F	inherited	1V	
+1V_F.1	inherited	1V_F	
+1V_F.2	inherited	1V_F	
+1V_G	inherited	1V	
+1V_H	inherited	1V	
+1V_J	inherited	1V	

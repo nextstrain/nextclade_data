@@ -1,0 +1,75 @@
+Assuming unrestricted shared filesystem usage.
+host: thinkpad
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+add_clade_inheritance          4
+align                          4
+all                            1
+ancestral                      4
+assemble_dataset               4
+assign_colors                  4
+clades                         4
+compare_definitions            4
+crop_coding_region             4
+discover_markers               4
+export_tree                    4
+generate_metadata              4
+refine                         4
+supplied_tree_to_newick        4
+translate                      4
+validate                       4
+total                         61
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Sep 22 11:20:00 2026]
+localrule align:
+    input: input/package/DENV4_representatives.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3
+    output: results/denv4/aligned.fasta
+    jobid: 45
+    reason: Missing output files: results/denv4/aligned.fasta
+    wildcards: build=denv4
+    threads: 8
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/james/Documentos/GitHub/pessoal/denv-update-workflow/Snakefile", line 50:
+Command 'set -euo pipefail;  
+        nextclade3 run --jobs 8 --input-ref ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta \
+          --input-pathogen-json ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json --input-annotation ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3 \
+          --output-fasta results/denv4/aligned.fasta --silent input/package/DENV4_representatives.fasta' returned non-zero exit status 127.
+[Tue Sep 22 11:20:00 2026]
+Error in rule align:
+    message: None
+    jobid: 45
+    input: input/package/DENV4_representatives.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3
+    output: results/denv4/aligned.fasta
+    shell:
+        
+        nextclade3 run --jobs 8 --input-ref ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta \
+          --input-pathogen-json ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json --input-annotation ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3 \
+          --output-fasta results/denv4/aligned.fasta --silent input/package/DENV4_representatives.fasta
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Sep 22 11:20:00 2026]
+Error in rule align:
+    message: None
+    jobid: 45
+    input: input/package/DENV4_representatives.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3
+    output: results/denv4/aligned.fasta
+    shell:
+        
+        nextclade3 run --jobs 8 --input-ref ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta \
+          --input-pathogen-json ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json --input-annotation ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3 \
+          --output-fasta results/denv4/aligned.fasta --silent input/package/DENV4_representatives.fasta
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/james/Documentos/GitHub/pessoal/denv-update-workflow/.snakemake/log/2026-09-22T112000.251750.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

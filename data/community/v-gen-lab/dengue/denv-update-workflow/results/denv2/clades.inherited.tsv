@@ -1,0 +1,277 @@
+clade	gene	site	alt
+2I	nuc	381	A
+2I	nuc	530	C
+2II	nuc	8868	A
+2II	nuc	3628	C
+2III	nuc	7557	A
+2III	nuc	4703	G
+2III_A	nuc	3552	A
+2III_A	nuc	6930	G
+2III_B	nuc	432	A
+2III_B	nuc	9372	C
+2III_C	nuc	4839	C
+2III_C	nuc	7743	A
+2III_D	nuc	4578	G
+2III_D	nuc	7548	A
+2III_E	nuc	4750	G
+2III_E	nuc	4104	G
+2II_A	nuc	2127	A
+2II_A	nuc	1089	G
+2II_B	nuc	2535	T
+2II_B	nuc	7530	C
+2II_C	nuc	5433	T
+2II_C	nuc	5334	C
+2II_D	nuc	1092	C
+2II_D	nuc	8799	C
+2II_E	nuc	9033	T
+2II_E	nuc	6006	G
+2II_F	nuc	2385	A
+2II_F	nuc	7116	A
+2IV	nuc	841	T
+2IV	nuc	1564	C
+2V	nuc	3264	T
+2V	nuc	4887	A
+2VI	nuc	270	C
+2VI	nuc	462	G
+2V_A	nuc	6135	G
+2V_A	nuc	7344	A
+2V_B	nuc	1893	A
+2V_B	nuc	3483	A
+2V_C	nuc	9735	A
+2V_C	nuc	6693	G
+2V_D	nuc	606	A
+2V_D	nuc	1236	G
+2V_E	nuc	8580	C
+2V_E	nuc	6420	G
+2V_F	nuc	3270	A
+2V_F	nuc	3492	C
+2III_A.1	nuc	913	G
+2III_A.1	nuc	1122	G
+2III_A.2	nuc	3477	A
+2III_A.2	nuc	6693	C
+2III_C.1	nuc	873	C
+2III_C.1	nuc	3432	C
+2III_C.2	nuc	2043	T
+2III_C.2	nuc	9627	G
+2III_C.3	nuc	2434	G
+2III_C.3	nuc	8812	A
+2III_D.1	nuc	5958	T
+2III_D.1	nuc	5266	A
+2III_D.2	nuc	729	T
+2III_D.2	nuc	4221	C
+2III_D.3	nuc	588	C
+2III_D.3	nuc	720	A
+2II_A.1	nuc	948	T
+2II_A.1	nuc	8953	A
+2II_A.2	nuc	2724	G
+2II_A.2	nuc	3504	G
+2II_C.1	nuc	931	C
+2II_C.1	nuc	7509	T
+2II_C.2	nuc	10041	A
+2II_C.2	nuc	4029	A
+2II_D.1	nuc	2727	T
+2II_D.1	nuc	5577	T
+2II_D.2	nuc	813	G
+2II_D.2	nuc	3817	G
+2II_D.3	nuc	4260	A
+2II_D.3	nuc	7513	T
+2II_D.4	nuc	4877	C
+2II_D.4	nuc	6021	C
+2II_E.1	nuc	3417	T
+2II_E.1	nuc	6450	C
+2II_E.2	nuc	3813	A
+2II_E.2	nuc	6993	A
+2II_F.1	nuc	5037	T
+2II_F.1	nuc	6385	C
+2II_F.2	nuc	9512	A
+2II_F.2	nuc	7710	G
+2V_A.1	nuc	1530	A
+2V_A.1	nuc	1415	T
+2V_A.2	nuc	6723	T
+2V_A.2	nuc	3949	A
+2V_A.3	nuc	1041	T
+2V_A.3	nuc	582	G
+2V_A.4	nuc	2541	G
+2V_A.4	nuc	3615	A
+2V_A.5	nuc	1149	G
+2V_A.5	nuc	6060	A
+2III_C.1.1	nuc	10252	A
+2III_C.1.1	nuc	9732	T
+2III_C.1.2	nuc	8518	T
+2III_C.1.2	nuc	5163	C
+2III_D.1.1	nuc	414	G
+2III_D.1.1	nuc	8167	C
+2III_D.1.2	nuc	7197	G
+2III_D.1.2	nuc	429	G
+2III_D.1.3	nuc	5254	A
+2III_D.1.3	nuc	5853	T
+2III_D.2.1	nuc	2670	T
+2III_D.2.1	nuc	4389	C
+2III_D.2.2	nuc	146	G
+2III_D.2.2	nuc	3482	T
+2III_D.3.1	nuc	2370	A
+2III_D.3.1	nuc	3153	C
+2III_D.3.2	nuc	4942	A
+2III_D.3.2	nuc	6540	C
+2II_A.1.1	nuc	8142	C
+2II_A.1.1	nuc	2706	T
+2II_A.1.2	nuc	7065	A
+2II_A.1.2	nuc	8871	A
+2II_A.2.1	nuc	6741	A
+2II_A.2.1	nuc	7890	G
+2II_A.2.2	nuc	7104	G
+2II_A.2.2	nuc	8435	G
+2II_D.1.1	nuc	6017	G
+2II_D.1.1	nuc	2052	T
+2II_D.1.2	nuc	4210	T
+2II_D.1.2	nuc	8052	G
+2II_D.4.1	nuc	4203	T
+2II_D.4.1	nuc	3737	A
+2II_D.4.2	nuc	4521	G
+2II_D.4.2	nuc	5913	C
+2II_F.1.1	nuc	1086	G
+2II_F.1.1	nuc	7779	T
+2II_F.1.2	nuc	3039	A
+2II_F.1.2	nuc	9558	C
+2II_F.1.3	nuc	6612	A
+2II_F.1.3	nuc	9234	T
+2II_F.2.1	nuc	4409	T
+2II_F.2.1	nuc	219	G
+2II_F.2.2	nuc	1795	C
+2II_F.2.2	nuc	4998	G
+2II_F.2.3	nuc	8571	G
+2II_F.2.3	nuc	7536	C
+2V_A.1.1	nuc	5814	T
+2V_A.1.1	nuc	3177	C
+2V_A.1.2	nuc	3278	C
+2V_A.1.2	nuc	3646	A
+2V_A.1.3	nuc	438	A
+2V_A.1.3	nuc	9363	G
+2III_D.1.2.1	nuc	258	G
+2III_D.1.2.1	nuc	1371	G
+2III_D.1.2.2	nuc	6837	A
+2III_D.1.2.2	nuc	8490	A
+2III_D.1.2.3	nuc	2736	T
+2III_D.1.2.3	nuc	4246	G
+2II_A.1.1.1	nuc	2640	C
+2II_A.1.1.1	nuc	5208	C
+2II_A.1.1.2	nuc	5742	T
+2II_A.1.1.2	nuc	8802	A
+2II_F.1.1.1	nuc	1785	A
+2II_F.1.1.1	nuc	6021	T
+2II_F.1.1.10	nuc	5048	T
+2II_F.1.1.10	nuc	4162	A
+2II_F.1.1.2	nuc	1890	G
+2II_F.1.1.2	nuc	9096	G
+2II_F.1.1.3	nuc	1926	A
+2II_F.1.1.3	nuc	8274	A
+2II_F.1.1.4	nuc	3288	T
+2II_F.1.1.4	nuc	2289	A
+2II_F.1.1.5	nuc	4886	T
+2II_F.1.1.5	nuc	3651	T
+2II_F.1.1.6	nuc	2241	T
+2II_F.1.1.6	nuc	9034	C
+2II_F.1.1.7	nuc	5036	T
+2II_F.1.1.7	nuc	6363	T
+2II_F.1.1.8	nuc	2553	G
+2II_F.1.1.8	nuc	5902	A
+2II_F.1.1.9	nuc	942	G
+2II_F.1.1.9	nuc	4233	C
+2II_F.1.3.1	nuc	8430	A
+2II_F.1.3.1	nuc	3702	C
+2II_F.1.3.2	nuc	6804	T
+2II_F.1.3.2	nuc	4990	C
+2II_F.1.1.2.1	nuc	2018	G
+2II_F.1.1.2.1	nuc	2235	G
+2II_F.1.1.2.2	nuc	2535	A
+2II_F.1.1.2.2	nuc	7893	A
+2II_F.1.1.2.3	nuc	3988	A
+2II_F.1.1.2.3	nuc	4929	A
+2III_A	clade	2III	
+2III_A.1	clade	2III_A	
+2III_A.2	clade	2III_A	
+2III_B	clade	2III	
+2III_C	clade	2III	
+2III_C.1	clade	2III_C	
+2III_C.1.1	clade	2III_C.1	
+2III_C.1.2	clade	2III_C.1	
+2III_C.2	clade	2III_C	
+2III_C.3	clade	2III_C	
+2III_D	clade	2III	
+2III_D.1	clade	2III_D	
+2III_D.1.1	clade	2III_D.1	
+2III_D.1.2	clade	2III_D.1	
+2III_D.1.2.1	clade	2III_D.1.2	
+2III_D.1.2.2	clade	2III_D.1.2	
+2III_D.1.2.3	clade	2III_D.1.2	
+2III_D.1.3	clade	2III_D.1	
+2III_D.2	clade	2III_D	
+2III_D.2.1	clade	2III_D.2	
+2III_D.2.2	clade	2III_D.2	
+2III_D.3	clade	2III_D	
+2III_D.3.1	clade	2III_D.3	
+2III_D.3.2	clade	2III_D.3	
+2III_E	clade	2III	
+2II_A	clade	2II	
+2II_A.1	clade	2II_A	
+2II_A.1.1	clade	2II_A.1	
+2II_A.1.1.1	clade	2II_A.1.1	
+2II_A.1.1.2	clade	2II_A.1.1	
+2II_A.1.2	clade	2II_A.1	
+2II_A.2	clade	2II_A	
+2II_A.2.1	clade	2II_A.2	
+2II_A.2.2	clade	2II_A.2	
+2II_B	clade	2II	
+2II_C	clade	2II	
+2II_C.1	clade	2II_C	
+2II_C.2	clade	2II_C	
+2II_D	clade	2II	
+2II_D.1	clade	2II_D	
+2II_D.1.1	clade	2II_D.1	
+2II_D.1.2	clade	2II_D.1	
+2II_D.2	clade	2II_D	
+2II_D.3	clade	2II_D	
+2II_D.4	clade	2II_D	
+2II_D.4.1	clade	2II_D.4	
+2II_D.4.2	clade	2II_D.4	
+2II_E	clade	2II	
+2II_E.1	clade	2II_E	
+2II_E.2	clade	2II_E	
+2II_F	clade	2II	
+2II_F.1	clade	2II_F	
+2II_F.1.1	clade	2II_F.1	
+2II_F.1.1.1	clade	2II_F.1.1	
+2II_F.1.1.10	clade	2II_F.1.1	
+2II_F.1.1.2	clade	2II_F.1.1	
+2II_F.1.1.2.1	clade	2II_F.1.1.2	
+2II_F.1.1.2.2	clade	2II_F.1.1.2	
+2II_F.1.1.2.3	clade	2II_F.1.1.2	
+2II_F.1.1.3	clade	2II_F.1.1	
+2II_F.1.1.4	clade	2II_F.1.1	
+2II_F.1.1.5	clade	2II_F.1.1	
+2II_F.1.1.6	clade	2II_F.1.1	
+2II_F.1.1.7	clade	2II_F.1.1	
+2II_F.1.1.8	clade	2II_F.1.1	
+2II_F.1.1.9	clade	2II_F.1.1	
+2II_F.1.2	clade	2II_F.1	
+2II_F.1.3	clade	2II_F.1	
+2II_F.1.3.1	clade	2II_F.1.3	
+2II_F.1.3.2	clade	2II_F.1.3	
+2II_F.2	clade	2II_F	
+2II_F.2.1	clade	2II_F.2	
+2II_F.2.2	clade	2II_F.2	
+2II_F.2.3	clade	2II_F.2	
+2V_A	clade	2V	
+2V_A.1	clade	2V_A	
+2V_A.1.1	clade	2V_A.1	
+2V_A.1.2	clade	2V_A.1	
+2V_A.1.3	clade	2V_A.1	
+2V_A.2	clade	2V_A	
+2V_A.3	clade	2V_A	
+2V_A.4	clade	2V_A	
+2V_A.5	clade	2V_A	
+2V_B	clade	2V	
+2V_C	clade	2V	
+2V_D	clade	2V	
+2V_E	clade	2V	
+2V_F	clade	2V	

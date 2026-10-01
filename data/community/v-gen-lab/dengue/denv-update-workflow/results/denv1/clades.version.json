@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "path": "definitions/2025/denv1/clades.tsv",
+    "rows": 1294,
+    "sha256": "845b130c5818c4bcf07b56c384ce57a45aa7f16609729ead0ebbffb6259aa461"
+  },
+  "baseline_version": "2025",
+  "comparison": {
+    "added": 42,
+    "maintained": 108,
+    "removed": 1186
+  },
+  "proposal": {
+    "path": "results/denv1/clades.proposed.tsv",
+    "rows": 150,
+    "sha256": "301c0f938ce1e022771018e6ed1cd954866d5e382ecb556d1bca43468653fa6a"
+  }
+}

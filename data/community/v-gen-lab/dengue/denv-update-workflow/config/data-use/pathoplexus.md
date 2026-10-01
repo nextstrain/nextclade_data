@@ -1,0 +1,1 @@
+This dataset includes sequences obtained from [Pathoplexus](https://pathoplexus.org/). See the [Pathoplexus Data Use Terms](https://pathoplexus.org/about/terms-of-use/data-use-terms) for the applicable requirements for use, redistribution, and attribution.

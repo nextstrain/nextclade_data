@@ -1,0 +1,86 @@
+{
+  "title": "Dengue Lineages of DENV-1",
+  "maintainers": [
+    {
+      "name": "James Siqueira",
+      "url": ""
+    },
+    {
+      "name": "Alex Ranieri",
+      "url": ""
+    }
+  ],
+  "data_provenance": [
+    {
+      "name": "Pathoplexus",
+      "url": "https://pathoplexus.org/dengue"
+    },
+    {
+      "name": "GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/genbank/"
+    }
+  ],
+  "build_url": "https://github.com/V-GEN-Lab/dengue-lineages-nextclade",
+  "colorings": [
+    {
+      "key": "serotype",
+      "title": "Serotype",
+      "type": "categorical"
+    },
+    {
+      "key": "clade_membership",
+      "title": "clade",
+      "type": "categorical"
+    },
+    {
+      "key": "region",
+      "title": "Region",
+      "type": "categorical"
+    },
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "division",
+      "title": "Division",
+      "type": "categorical"
+    },
+    {
+      "key": "location",
+      "title": "Location",
+      "type": "categorical"
+    },
+    {
+      "key": "dataUseTerms",
+      "title": "Data use terms",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "region",
+    "country",
+    "division",
+    "location"
+  ],
+  "display_defaults": {
+    "map_triplicate": true,
+    "color_by": "country"
+  },
+  "filters": [
+    "clade_membership",
+    "country"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy",
+    "frequencies"
+  ],
+  "metadata_columns": [
+    "PPX_accession",
+    "INSDC_accession",
+    "restrictedUntil"
+  ]
+}

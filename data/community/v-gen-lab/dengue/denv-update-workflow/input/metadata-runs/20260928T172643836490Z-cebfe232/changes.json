@@ -1,0 +1,11 @@
+{
+  "previousDataVersion": "1790298231",
+  "currentDataVersion": "1790298231",
+  "added": [],
+  "removed": [
+    "PP_0064LPM"
+  ],
+  "changes": [],
+  "previousSnapshot": "input/package/pathoplexus-metadata-2026-09-28.json",
+  "previousSnapshotSha256": "0bd1be1c7fe36389d267a11eff7e6ef6a1f5f0d795fb13a8856da7e7195e1d82"
+}

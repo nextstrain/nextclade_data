@@ -1,0 +1,42 @@
+clade	status	parent_clade	reason
+3I	skipped		no named ancestral lineage
+3II	skipped		no named ancestral lineage
+3III	skipped		no named ancestral lineage
+3III_A	inherited	3III	
+3III_A.1	inherited	3III_A	
+3III_A.2	inherited	3III_A	
+3III_B	inherited	3III	
+3III_B.1	inherited	3III_B	
+3III_B.2	inherited	3III_B	
+3III_B.2.1	inherited	3III_B.2	
+3III_B.2.2	inherited	3III_B.2	
+3III_B.3	inherited	3III_B	
+3III_B.3.1	inherited	3III_B.3	
+3III_B.3.2	inherited	3III_B.3	
+3III_B.4	inherited	3III_B	
+3III_B.5	inherited	3III_B	
+3III_C	inherited	3III	
+3III_C.1	inherited	3III_C	
+3III_C.2	inherited	3III_C	
+3III_C.2.1	inherited	3III_C.2	
+3III_C.2.2	inherited	3III_C.2	
+3II_A	inherited	3II	
+3II_A.1	inherited	3II_A	
+3II_A.2	inherited	3II_A	
+3II_A.3	inherited	3II_A	
+3II_A.4	inherited	3II_A	
+3II_A.5	inherited	3II_A	
+3II_B	inherited	3II	
+3I_A	inherited	3I	
+3I_A.1	inherited	3I_A	
+3I_A.1.1	inherited	3I_A.1	
+3I_A.1.2	inherited	3I_A.1	
+3I_A.2	inherited	3I_A	
+3I_B	inherited	3I	
+3I_C	inherited	3I	
+3I_C.1	inherited	3I_C	
+3I_C.2	inherited	3I_C	
+3I_C.2.1	inherited	3I_C.2	
+3I_C.2.2	inherited	3I_C.2	
+3I_C.2.3	inherited	3I_C.2	
+3V	skipped		no named ancestral lineage

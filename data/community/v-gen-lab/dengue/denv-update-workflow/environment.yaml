@@ -1,0 +1,11 @@
+name: dengue-nextclade-2026
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - augur >=31.4.0
+  - biopython
+  - nextclade
+  - snakemake
+  - python >=3.10
+  - pyyaml

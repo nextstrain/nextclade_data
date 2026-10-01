@@ -1,0 +1,313 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+assemble_dataset         4
+assign_colors            4
+export_tree              4
+generate_metadata        4
+validate                 4
+total                   21
+
+Select jobs to execute...
+Execute 4 jobs...
+
+[Tue Sep 22 07:22:48 2026]
+localrule generate_metadata:
+    input: input/package/sequence_lineages.csv
+    output: results/denv3/metadata.tsv, results/denv3/color_ordering.tsv
+    jobid: 35
+    reason: Missing output files: results/denv3/metadata.tsv
+    wildcards: build=denv3
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:48 2026]
+localrule generate_metadata:
+    input: input/package/sequence_lineages.csv
+    output: results/denv2/metadata.tsv, results/denv2/color_ordering.tsv
+    jobid: 23
+    reason: Missing output files: results/denv2/metadata.tsv
+    wildcards: build=denv2
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:48 2026]
+localrule generate_metadata:
+    input: input/package/sequence_lineages.csv
+    output: results/denv1/metadata.tsv, results/denv1/color_ordering.tsv
+    jobid: 11
+    reason: Missing output files: results/denv1/metadata.tsv
+    wildcards: build=denv1
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:48 2026]
+localrule generate_metadata:
+    input: input/package/sequence_lineages.csv
+    output: results/denv4/metadata.tsv, results/denv4/color_ordering.tsv
+    jobid: 47
+    reason: Missing output files: results/denv4/metadata.tsv
+    wildcards: build=denv4
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:48 2026]
+Finished job 35.
+1 of 21 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 22 07:22:48 2026]
+localrule assign_colors:
+    input: results/denv3/color_ordering.tsv, results/denv3/metadata.tsv, config/color_schemes.tsv
+    output: results/denv3/colors.tsv
+    jobid: 36
+    reason: Input files updated by another job: results/denv3/color_ordering.tsv, results/denv3/metadata.tsv
+    wildcards: build=denv3
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:48 2026]
+Finished job 11.
+2 of 21 steps (10%) done
+[Tue Sep 22 07:22:48 2026]
+Finished job 23.
+3 of 21 steps (14%) done
+[Tue Sep 22 07:22:48 2026]
+Finished job 47.
+4 of 21 steps (19%) done
+Select jobs to execute...
+Execute 3 jobs...
+
+[Tue Sep 22 07:22:48 2026]
+localrule assign_colors:
+    input: results/denv4/color_ordering.tsv, results/denv4/metadata.tsv, config/color_schemes.tsv
+    output: results/denv4/colors.tsv
+    jobid: 48
+    reason: Input files updated by another job: results/denv4/color_ordering.tsv, results/denv4/metadata.tsv
+    wildcards: build=denv4
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:48 2026]
+localrule assign_colors:
+    input: results/denv2/color_ordering.tsv, results/denv2/metadata.tsv, config/color_schemes.tsv
+    output: results/denv2/colors.tsv
+    jobid: 24
+    reason: Input files updated by another job: results/denv2/metadata.tsv, results/denv2/color_ordering.tsv
+    wildcards: build=denv2
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:48 2026]
+localrule assign_colors:
+    input: results/denv1/color_ordering.tsv, results/denv1/metadata.tsv, config/color_schemes.tsv
+    output: results/denv1/colors.tsv
+    jobid: 12
+    reason: Input files updated by another job: results/denv1/metadata.tsv, results/denv1/color_ordering.tsv
+    wildcards: build=denv1
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:48 2026]
+Finished job 36.
+5 of 21 steps (24%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 22 07:22:48 2026]
+localrule export_tree:
+    input: results/denv3/tree.nwk, results/denv3/branch_lengths.json, results/denv3/muts.json, results/denv3/clades.json, results/denv3/metadata.tsv, results/denv3/colors.tsv, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/tree.json
+    output: results/denv3/tree.json
+    jobid: 26
+    reason: Forced execution
+    wildcards: build=denv3
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:48 2026]
+Finished job 12.
+6 of 21 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 22 07:22:48 2026]
+localrule export_tree:
+    input: results/denv1/tree.nwk, results/denv1/branch_lengths.json, results/denv1/muts.json, results/denv1/clades.json, results/denv1/metadata.tsv, results/denv1/colors.tsv, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/tree.json
+    output: results/denv1/tree.json
+    jobid: 2
+    reason: Forced execution
+    wildcards: build=denv1
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:48 2026]
+Finished job 48.
+7 of 21 steps (33%) done
+[Tue Sep 22 07:22:48 2026]
+Finished job 24.
+8 of 21 steps (38%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Sep 22 07:22:48 2026]
+localrule export_tree:
+    input: results/denv2/tree.nwk, results/denv2/branch_lengths.json, results/denv2/muts.json, results/denv2/clades.json, results/denv2/metadata.tsv, results/denv2/colors.tsv, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/tree.json
+    output: results/denv2/tree.json
+    jobid: 14
+    reason: Forced execution
+    wildcards: build=denv2
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:48 2026]
+localrule export_tree:
+    input: results/denv4/tree.nwk, results/denv4/branch_lengths.json, results/denv4/muts.json, results/denv4/clades.json, results/denv4/metadata.tsv, results/denv4/colors.tsv, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/tree.json
+    output: results/denv4/tree.json
+    jobid: 38
+    reason: Forced execution
+    wildcards: build=denv4
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:49 2026]
+Finished job 26.
+9 of 21 steps (43%) done
+Removing temporary output results/denv3/metadata.tsv.
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Sep 22 07:22:49 2026]
+localrule validate:
+    input: results/denv3/tree.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/genome_annotation.gff3, input/package/DENV3_test_set.fasta, input/package/test_set.csv
+    output: results/denv3/validation.tsv
+    jobid: 25
+    reason: Input files updated by another job: results/denv3/tree.json
+    wildcards: build=denv3
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:49 2026]
+localrule assemble_dataset:
+    input: results/denv3/tree.json, input/package/DENV3_test_set.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/README.md, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/genome_annotation.gff3, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv3/2026-04-14--11-55-23Z/CHANGELOG.md
+    output: results/denv3/dataset/README.md, results/denv3/dataset/CHANGELOG.md, results/denv3/dataset/reference.fasta, results/denv3/dataset/pathogen.json, results/denv3/dataset/genome_annotation.gff3, results/denv3/dataset/sequences.fasta, results/denv3/dataset/tree.json
+    jobid: 55
+    reason: Input files updated by another job: results/denv3/tree.json
+    wildcards: build=denv3
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:49 2026]
+Finished job 38.
+10 of 21 steps (48%) done
+Removing temporary output results/denv4/metadata.tsv.
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Sep 22 07:22:49 2026]
+localrule validate:
+    input: results/denv4/tree.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3, input/package/DENV4_test_set.fasta, input/package/test_set.csv
+    output: results/denv4/validation.tsv
+    jobid: 37
+    reason: Input files updated by another job: results/denv4/tree.json
+    wildcards: build=denv4
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:49 2026]
+localrule assemble_dataset:
+    input: results/denv4/tree.json, input/package/DENV4_test_set.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/README.md, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/genome_annotation.gff3, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv4/2026-04-14--11-55-23Z/CHANGELOG.md
+    output: results/denv4/dataset/README.md, results/denv4/dataset/CHANGELOG.md, results/denv4/dataset/reference.fasta, results/denv4/dataset/pathogen.json, results/denv4/dataset/genome_annotation.gff3, results/denv4/dataset/sequences.fasta, results/denv4/dataset/tree.json
+    jobid: 56
+    reason: Input files updated by another job: results/denv4/tree.json
+    wildcards: build=denv4
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:49 2026]
+Finished job 55.
+11 of 21 steps (52%) done
+[Tue Sep 22 07:22:49 2026]
+Finished job 56.
+12 of 21 steps (57%) done
+[Tue Sep 22 07:22:50 2026]
+Finished job 25.
+13 of 21 steps (62%) done
+[Tue Sep 22 07:22:50 2026]
+Finished job 37.
+14 of 21 steps (67%) done
+[Tue Sep 22 07:22:50 2026]
+Finished job 2.
+15 of 21 steps (71%) done
+Removing temporary output results/denv1/metadata.tsv.
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Sep 22 07:22:50 2026]
+localrule validate:
+    input: results/denv1/tree.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/genome_annotation.gff3, input/package/DENV1_test_set.fasta, input/package/test_set.csv
+    output: results/denv1/validation.tsv
+    jobid: 1
+    reason: Input files updated by another job: results/denv1/tree.json
+    wildcards: build=denv1
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:50 2026]
+localrule assemble_dataset:
+    input: results/denv1/tree.json, input/package/DENV1_test_set.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/README.md, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/genome_annotation.gff3, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv1/2026-04-14--11-55-23Z/CHANGELOG.md
+    output: results/denv1/dataset/README.md, results/denv1/dataset/CHANGELOG.md, results/denv1/dataset/reference.fasta, results/denv1/dataset/pathogen.json, results/denv1/dataset/genome_annotation.gff3, results/denv1/dataset/sequences.fasta, results/denv1/dataset/tree.json
+    jobid: 53
+    reason: Input files updated by another job: results/denv1/tree.json
+    wildcards: build=denv1
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:50 2026]
+Finished job 53.
+16 of 21 steps (76%) done
+[Tue Sep 22 07:22:50 2026]
+Finished job 14.
+17 of 21 steps (81%) done
+Removing temporary output results/denv2/metadata.tsv.
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Sep 22 07:22:50 2026]
+localrule validate:
+    input: results/denv2/tree.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/genome_annotation.gff3, input/package/DENV2_test_set.fasta, input/package/test_set.csv
+    output: results/denv2/validation.tsv
+    jobid: 13
+    reason: Input files updated by another job: results/denv2/tree.json
+    wildcards: build=denv2
+    resources: tmpdir=/tmp
+
+
+[Tue Sep 22 07:22:50 2026]
+localrule assemble_dataset:
+    input: results/denv2/tree.json, input/package/DENV2_test_set.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/README.md, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/reference.fasta, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/pathogen.json, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/genome_annotation.gff3, ../nextclade_data/data_output/community/v-gen-lab/dengue/denv2/2026-04-14--11-55-23Z/CHANGELOG.md
+    output: results/denv2/dataset/README.md, results/denv2/dataset/CHANGELOG.md, results/denv2/dataset/reference.fasta, results/denv2/dataset/pathogen.json, results/denv2/dataset/genome_annotation.gff3, results/denv2/dataset/sequences.fasta, results/denv2/dataset/tree.json
+    jobid: 54
+    reason: Input files updated by another job: results/denv2/tree.json
+    wildcards: build=denv2
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:50 2026]
+Finished job 54.
+18 of 21 steps (86%) done
+[Tue Sep 22 07:22:50 2026]
+Finished job 1.
+19 of 21 steps (90%) done
+[Tue Sep 22 07:22:51 2026]
+Finished job 13.
+20 of 21 steps (95%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 22 07:22:51 2026]
+localrule all:
+    input: results/denv1/validation.tsv, results/denv2/validation.tsv, results/denv3/validation.tsv, results/denv4/validation.tsv, results/denv1/tree.json, results/denv2/tree.json, results/denv3/tree.json, results/denv4/tree.json, results/denv1/clades.diff.tsv, results/denv2/clades.diff.tsv, results/denv3/clades.diff.tsv, results/denv4/clades.diff.tsv, results/denv1/clades.version.json, results/denv2/clades.version.json, results/denv3/clades.version.json, results/denv4/clades.version.json, results/denv1/dataset/README.md, results/denv1/dataset/CHANGELOG.md, results/denv1/dataset/reference.fasta, results/denv1/dataset/pathogen.json, results/denv1/dataset/genome_annotation.gff3, results/denv1/dataset/sequences.fasta, results/denv1/dataset/tree.json, results/denv2/dataset/README.md, results/denv2/dataset/CHANGELOG.md, results/denv2/dataset/reference.fasta, results/denv2/dataset/pathogen.json, results/denv2/dataset/genome_annotation.gff3, results/denv2/dataset/sequences.fasta, results/denv2/dataset/tree.json, results/denv3/dataset/README.md, results/denv3/dataset/CHANGELOG.md, results/denv3/dataset/reference.fasta, results/denv3/dataset/pathogen.json, results/denv3/dataset/genome_annotation.gff3, results/denv3/dataset/sequences.fasta, results/denv3/dataset/tree.json, results/denv4/dataset/README.md, results/denv4/dataset/CHANGELOG.md, results/denv4/dataset/reference.fasta, results/denv4/dataset/pathogen.json, results/denv4/dataset/genome_annotation.gff3, results/denv4/dataset/sequences.fasta, results/denv4/dataset/tree.json
+    jobid: 0
+    reason: Input files updated by another job: results/denv2/dataset/tree.json, results/denv1/dataset/reference.fasta, results/denv1/dataset/tree.json, results/denv3/dataset/CHANGELOG.md, results/denv4/dataset/sequences.fasta, results/denv4/validation.tsv, results/denv3/tree.json, results/denv1/validation.tsv, results/denv3/dataset/tree.json, results/denv2/dataset/sequences.fasta, results/denv4/dataset/CHANGELOG.md, results/denv3/validation.tsv, results/denv3/dataset/README.md, results/denv4/dataset/README.md, results/denv4/dataset/pathogen.json, results/denv3/dataset/reference.fasta, results/denv4/dataset/reference.fasta, results/denv4/dataset/tree.json, results/denv2/dataset/reference.fasta, results/denv4/tree.json, results/denv1/dataset/genome_annotation.gff3, results/denv1/dataset/pathogen.json, results/denv3/dataset/genome_annotation.gff3, results/denv3/dataset/sequences.fasta, results/denv1/dataset/sequences.fasta, results/denv2/dataset/genome_annotation.gff3, results/denv1/dataset/CHANGELOG.md, results/denv3/dataset/pathogen.json, results/denv2/dataset/README.md, results/denv4/dataset/genome_annotation.gff3, results/denv1/dataset/README.md, results/denv2/tree.json, results/denv1/tree.json, results/denv2/dataset/pathogen.json, results/denv2/dataset/CHANGELOG.md, results/denv2/validation.tsv
+    resources: tmpdir=/tmp
+
+[Tue Sep 22 07:22:51 2026]
+Finished job 0.
+21 of 21 steps (100%) done
+Complete log: .snakemake/log/2026-09-22T072248.452899.snakemake.log
