@@ -1,3 +1,13 @@
+## Unreleased
+
+- 2026 Annual update: added new lineages to the classification system as determined by the scientific committee.
+- Updated representative tree sequences to reduce assignment errors.
+- Outgroup sequences are now labeled `unassigned` instead of `Outgroup`.
+- Restored country coloring and the map using Pathoplexus country metadata where available.
+- Most reference-tree tips now use Pathoplexus accessions (`PP_...`) as their identifiers.
+- Corrected placement masks to match each serotype's GFF3 coding bounds and reference length.
+- New lineages: 3III_B.5, 3I_C.2.1, 3I_C.2.2, 3I_C.2.3
+
 ## 2026-04-14T11:55:23Z
 
 - Move `placementMaskRanges` to tree.json
