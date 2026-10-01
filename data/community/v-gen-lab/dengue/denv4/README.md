@@ -10,7 +10,7 @@
 
 ## Scope of This Dataset
 
-This dataset is based on the dengue virus lineage system from [Hill V, Cleemput S, Pereira JS, et al., 2024](https://doi.org/10.1371/journal.pbio.3002834) and is suitable for the analysis of DENV-4 viral sequences. The systems are independent, so sequences from other serotypes may not be classified or may be assigned as "Outgroup."
+This dataset is based on the dengue virus lineage system from [Hill V, Cleemput S, Pereira JS, et al., 2024](https://doi.org/10.1371/journal.pbio.3002834) and is suitable for the analysis of DENV-4 viral sequences. The systems are independent, so sequences from other serotypes may be reported as `unassigned`.
 
 ## Dengue Lineages System Project
 
@@ -33,3 +33,7 @@ For bugs, please open an [issue](https://github.com/V-GEN-Lab/dengue-lineages-wo
 ² University of São Paulo [(USP)](https://www5.usp.br/english/institutional/).
 
 Read more about Nextclade datasets in the Nextclade documentation: [Nextclade Datasets](https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html).
+
+<!-- workflow:data-use:start -->
+This dataset includes sequences obtained from [Pathoplexus](https://pathoplexus.org/). See the [Pathoplexus Data Use Terms](https://pathoplexus.org/about/terms-of-use/data-use-terms) for the applicable requirements for use, redistribution, and attribution.
+<!-- workflow:data-use:end -->
