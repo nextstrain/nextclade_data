@@ -163,7 +163,8 @@
     "L"
   ],
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-09-29T08:40:32Z",
+    "tag": "2026-09-29--08-40-32Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
