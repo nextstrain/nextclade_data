@@ -30,6 +30,10 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
+      # Change detection in `rebuild` diffs against release tags, which forks usually lack
+      - name: "Fetch release tags from base repository"
+        run: "git fetch --no-tags 'https://github.com/${{ github.repository }}' '+refs/tags/*:refs/tags/*'"
+
       - name: "Install system dependencies"
         run: "sudo apt-get install genometools python3 --yes -qq >/dev/null"
 
