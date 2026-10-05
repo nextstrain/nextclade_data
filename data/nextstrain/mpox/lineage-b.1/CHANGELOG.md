@@ -1,3 +1,7 @@
+## Unreleased
+
+- Alignment: deletions that start before a CDS and run into it now pay an additional penalty (`penaltyGapEnterCds: 2`, available in Nextclade versions newer than 3.24.0). Ambiguous deletions next to a CDS start no longer remove its start codon, and a deletion that would cut into a CDS start is placed as an in-frame deletion inside of the CDS when that is equally good. Indel coordinates at CDS starts change: for example, OPG204 deletions in the `ATGAAG` repeat move from 174531-174542 to 174520-174531, and false aa deletions such as `OPG204:M1-` disappear.
+
 ## 2026-07-07T14:07:11Z
 
 - A new `outbreakLineage` field has been added that concatenates outbreak and lineage separated by a slash, e.g. `sh2017/B.1`. It unambiguously identifies a lineage across outbreaks: clade Ib outbreak sh2023 now also has a lineage system that reuses the same lineage names (e.g. root lineage `A`) as clade IIb outbreak sh2017. Existing `clade`, `outbreak`, and `lineage` fields remain unchanged.
