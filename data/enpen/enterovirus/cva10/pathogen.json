@@ -20,6 +20,7 @@
     "penaltyGapExtend": 1,
     "penaltyGapOpenInFrame": 18,
     "penaltyGapOpenOutOfFrame": 23,
+    "penaltyGapEnterCds": 6,
     "kmerLength": 6,
     "kmerDistance": 25,
     "minMatchLength": 30,
