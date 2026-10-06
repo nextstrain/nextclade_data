@@ -1,0 +1,17 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region AY421767.1 1 7409
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=42769
+AY421767.1	Genbank	region	1	7409	.	+	.	ID=AY421767.1:1..7409;Dbxref=taxon:42769;gb-acronym=CV-A10;gbkey=Src;isolate=CA10;mol_type=genomic RNA;strain=Kowalik
+AY421767.1	Genbank	CDS	745	951	.	+	.	Name=VP4;product=VP4;gbkey=Prot;ID=id-AAR38847.1:1..69
+AY421767.1	Genbank	CDS	952	1716	.	+	.	Name=VP2;product=VP2;gbkey=Prot;ID=id-AAR38847.1:70..324
+AY421767.1	Genbank	CDS	1717	2436	.	+	.	Name=VP3;product=VP3;gbkey=Prot;ID=id-AAR38847.1:325..564
+AY421767.1	Genbank	CDS	2437	3330	.	+	.	Name=VP1;product=VP1;gbkey=Prot;ID=id-AAR38847.1:565..862
+AY421767.1	Genbank	CDS	3331	3780	.	+	.	Name=2A;product=2A;gbkey=Prot;ID=id-AAR38847.1:863..1012
+AY421767.1	Genbank	CDS	3781	4077	.	+	.	Name=2B;product=2B;gbkey=Prot;ID=id-AAR38847.1:1013..1111
+AY421767.1	Genbank	CDS	4078	5064	.	+	.	Name=2C;product=2C;gbkey=Prot;ID=id-AAR38847.1:1112..1440
+AY421767.1	Genbank	CDS	5065	5322	.	+	.	Name=3A;product=3A;gbkey=Prot;ID=id-AAR38847.1:1441..1526
+AY421767.1	Genbank	CDS	5323	5388	.	+	.	Name=3B;product=3B;gbkey=Prot;ID=id-AAR38847.1:1527..1548
+AY421767.1	Genbank	CDS	5389	5937	.	+	.	Name=3C;product=3C;gbkey=Prot;ID=id-AAR38847.1:1549..1731
+AY421767.1	Genbank	CDS	5938	7323	.	+	.	Name=3D;product=3D;gbkey=Prot;ID=id-AAR38847.1:1732..2193
