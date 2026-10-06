@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-10-06T17:37:18Z
 
 - 2026 Annual update: added new lineages to the classification system as determined by the scientific committee.
 - Updated representative tree sequences to reduce assignment errors.
@@ -6,7 +6,7 @@
 - Restored country coloring and the map using Pathoplexus country metadata where available.
 - Most reference-tree tips now use Pathoplexus accessions (`PP_...`) as their identifiers.
 - Corrected placement masks to match each serotype's GFF3 coding bounds and reference length.
-- New lineages: 4II_A.1.3, 4II_B.3
+- New lineages: 2III_C.3, 2III_D.1.2.1, 2III_D.1.2.2, 2III_D.1.2.3, 2II_D.4.1, 2II_D.4.2, 2II_F.1.1.10, 2II_F.1.1.2.1, 2II_F.1.1.2.2, 2II_F.1.1.2.3, 2II_F.1.1.9, 2V_F
 
 ## 2026-04-14T11:55:23Z
 
@@ -33,6 +33,6 @@ Fix GFF3 format issues in genome annotation
 
 ## 2024-08-31T20:44:06Z
 
-Initial release of a DENV-4 dataset for Lineage classification!
+Initial release of a DENV-2 dataset for Lineage classification!
 
 Read more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html

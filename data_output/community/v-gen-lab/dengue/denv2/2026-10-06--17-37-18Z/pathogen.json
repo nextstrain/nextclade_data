@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "attributes": {
-    "name": "DENV-3",
-    "reference accession": "NC_001475.2",
-    "reference name": "D3/H/IMTSSA-SRI/2000",
+    "name": "DENV-2",
+    "reference accession": "NC_001474.2",
+    "reference name": "Thailand/CDC-16681/1964",
     "experimental": true
   },
   "compatibility": {
@@ -37,9 +37,9 @@
       "mixedSitesThreshold": 8
     },
     "privateMutations": {
-      "cutoff": 210,
+      "cutoff": 216,
       "enabled": true,
-      "typical": 70,
+      "typical": 72,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
@@ -56,7 +56,8 @@
   },
   "schemaVersion": "3.0.0",
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-10-06T17:37:18Z",
+    "tag": "2026-10-06--17-37-18Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"

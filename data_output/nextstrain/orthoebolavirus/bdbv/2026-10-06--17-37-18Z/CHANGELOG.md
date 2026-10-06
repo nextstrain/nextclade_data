@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-10-06T17:37:18Z
 
  - Update reference tree with more recent genomes
  - Include putative ADAR edit-detection. Cluster of 3 or more T->C mutations will now be highlighed.

@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "attributes": {
-    "name": "DENV-1",
-    "reference accession": "NC_001477.1",
-    "reference name": "Nauru/NMRI-45AZ5PDK-0/1974",
+    "name": "DENV-3",
+    "reference accession": "NC_001475.2",
+    "reference name": "D3/H/IMTSSA-SRI/2000",
     "experimental": true
   },
   "compatibility": {
@@ -37,9 +37,9 @@
       "mixedSitesThreshold": 8
     },
     "privateMutations": {
-      "cutoff": 168,
+      "cutoff": 210,
       "enabled": true,
-      "typical": 56,
+      "typical": 70,
       "weightLabeledSubstitutions": 2,
       "weightReversionSubstitutions": 1,
       "weightUnlabeledSubstitutions": 1
@@ -56,7 +56,8 @@
   },
   "schemaVersion": "3.0.0",
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-10-06T17:37:18Z",
+    "tag": "2026-10-06--17-37-18Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"

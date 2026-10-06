@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-10-06T17:37:18Z
 
 - 2026 Annual update: added new lineages to the classification system as determined by the scientific committee.
 - Updated representative tree sequences to reduce assignment errors.
@@ -6,7 +6,7 @@
 - Restored country coloring and the map using Pathoplexus country metadata where available.
 - Most reference-tree tips now use Pathoplexus accessions (`PP_...`) as their identifiers.
 - Corrected placement masks to match each serotype's GFF3 coding bounds and reference length.
-- New lineages: 3III_B.5, 3I_C.2.1, 3I_C.2.2, 3I_C.2.3
+- New lineages: 1V_A.1, 1V_A.2, 1V_D.1.4, 1V_F.1, 1V_F.2
 
 ## 2026-04-14T11:55:23Z
 
@@ -22,6 +22,10 @@ Add schema definition url to `pathogen.json`. This is a purely technical change,
 Annual update: added new lineages to the classification system as determined by the scientific committee.
 Updated representative tree sequences to retain only publicly available data and to avoid assignment errors
 
+## 2025-04-02T19:11:08Z
+
+Fix minor typo of "Outgoup" to "Outgroup"
+
 ## 2025-03-26T11:47:13Z
 
 Fix GFF3 format issues in genome annotation
@@ -33,6 +37,6 @@ Fix GFF3 format issues in genome annotation
 
 ## 2024-08-31T20:44:06Z
 
-Initial release of a DENV-3 dataset for Lineage classification!
+Initial release of a DENV-1 dataset for Lineage classification!
 
 Read more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
