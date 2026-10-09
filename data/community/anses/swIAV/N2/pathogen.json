@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "3.0.0",
+  "alignmentParams": {
+    "excessBandwidth": 9,
+    "terminalBandwidth": 100,
+    "allowedMismatches": 4,
+    "gapAlignmentSide": "right",
+    "minSeedCover": 0.01
+  },
+  "compatibility": {
+    "cli": "3.0.0-alpha.0",
+    "web": "3.0.0-alpha.0"
+  },
+  "defaultCds": "NA",
+  "files": {
+    "changelog": "CHANGELOG.md",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "pathogenJson": "pathogen.json",
+    "readme": "README.md",
+    "reference": "reference.fasta",
+    "treeJson": "tree.json"
+  },
+  "qc": {
+    "privateMutations": {
+      "enabled": true,
+      "typical": 20,
+      "cutoff": 35,
+      "weightLabeledSubstitutions": 2,
+      "weightReversionSubstitutions": 1,
+      "weightUnlabeledSubstitutions": 1
+    },
+    "missingData": {
+      "enabled": false,
+      "missingDataThreshold": 100,
+      "scoreBias": 10
+    },
+    "snpClusters": {
+      "enabled": false,
+      "windowSize": 100,
+      "clusterCutOff": 5,
+      "scoreWeight": 50
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15
+    },
+    "frameShifts": {
+      "enabled": false
+    },
+    "stopCodons": {
+      "enabled": true,
+      "ignoredStopCodons": []
+    }
+  },
+  "cdsOrderPreference": [
+    "NA"
+  ],
+  "maintenance": {
+    "organizations": [
+      "Anses",
+	  "USDA-ARS"
+    ],
+    "authors": [
+      "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+	  "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+    ]
+  },
+  "nucMutLabelMap": {},
+  "nucMutLabelMapReverse": {},
+  "shortcuts": [
+    "anses/swIAV/N2"
+  ],
+  "aaMotifs": [
+    {
+      "name": "glycosylation",
+      "nameShort": "Glyc.",
+      "nameFriendly": "Glycosylation",
+      "description": "N-linked glycosylation motifs (N-X-S/T with X any amino acid other than P)",
+      "includeCdses": [
+        {
+          "cds": "NA",
+          "ranges": [
+            {
+              "begin": 33,
+              "end": 470
+            }
+          ]
+        }
+      ],
+      "motifs": [
+        "N[^P][ST]"
+      ]
+    }
+  ],
+  "attributes": {
+    "name": "Swine Influenza A - N2 (segment 6)",
+    "segment": "na",
+    "reference accession": "CY114383",
+    "reference name": "A/Wisconsin/67/2005"
+  }
+}
