@@ -21,4 +21,4 @@ This dataset supports
 
 ## Citation
 
-Preprint link
+Gautier Richard, Benjamin C. Mollett, Pia Ryt-Hansen, Séverine Hervé, Martí Cortey Marquès, Enric Mateu, Ana Moreno, Chiara Chiapponi, Lars Erik Larsen, Timm Harder, Helen E. Everett, Gaëlle Simon. (2026). Genetic diversity and phylogeography of swine influenza A virus in 2013-2022 in Europe using a harmonized genotyping nomenclature. bioRxiv 2026.09.21.753142; doi: https://doi.org/10.64898/2026.09.21.753142
