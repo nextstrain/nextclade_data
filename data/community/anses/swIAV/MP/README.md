@@ -22,6 +22,17 @@ This dataset supports
 
 Gautier Richard, Benjamin C. Mollett, Pia Ryt-Hansen, Séverine Hervé, Martí Cortey Marquès, Enric Mateu, Ana Moreno, Chiara Chiapponi, Lars Erik Larsen, Timm Harder, Helen E. Everett, Gaëlle Simon. (2026). Genetic diversity and phylogeography of swine influenza A virus in 2013-2022 in Europe using a harmonized genotyping nomenclature. bioRxiv 2026.09.21.753142; doi: https://doi.org/10.64898/2026.09.21.753142
 
-## GISAID Dataset Reference
+## GISAID dataset reference
 
 EPI_SET_261013ch - https://doi.org/10.55876/gis8.261013ch
+
+## Clades definition
+
+| Lineage                     | Clade         | Colloquial Name |
+|-----------------------------|---------------|-----------------|
+| Human seasonal (2020)       | HS (H)        |                 |
+| Eurasian avian              | EA (E)        |                 |
+| 2009 pandemic               | pdm (P)       | pdm09           |
+| Triple Reassortant Genotype | TRIG (T)      |                 |
+| Avian spillover             | spillover (S) |                 |
+| Texas/1985                  | LAIV (L)      |                 |

@@ -23,6 +23,24 @@ This dataset supports
 
 Gautier Richard, Benjamin C. Mollett, Pia Ryt-Hansen, Séverine Hervé, Martí Cortey Marquès, Enric Mateu, Ana Moreno, Chiara Chiapponi, Lars Erik Larsen, Timm Harder, Helen E. Everett, Gaëlle Simon. (2026). Genetic diversity and phylogeography of swine influenza A virus in 2013-2022 in Europe using a harmonized genotyping nomenclature. bioRxiv 2026.09.21.753142; doi: https://doi.org/10.64898/2026.09.21.753142
 
-## GISAID Dataset Reference
+## GISAID dataset reference
 
 EPI_SET_261013ch - https://doi.org/10.55876/gis8.261013ch
+
+## Clades definition
+
+| Lineage             | Clade    | Colloquial Name | Geographic Distribution (genotyping on all NCBI swIAV available on 03-05-2026)                                                                                                                  |
+|---------------------|----------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Classical swine     | N1.C.1   |                 | Brazil, Canada, China, Hong Kong, Japan, Mexico, Singapore, South Korea, Sweden, Switzerland, Taiwan, UK, USA                                                                                   |
+|                     | N1.C.1.1 |                 | Argentina, Brazil, Canada, China, Hong Kong, Russia, Taiwan, USA                                                                                                                                |
+|                     | N1.C.1.2 |                 | Canada, USA                                                                                                                                                                                     |
+|                     | N1.C.2   |                 | Mexico, South Korea, USA                                                                                                                                                                        |
+|                     | N1.C.2.1 |                 | USA                                                                                                                                                                                             |
+|                     | N1.C.3   |                 | Brazil, Canada, China, Hong Kong, Mexico, South Korea, Taiwan, UK, USA                                                                                                                          |
+|                     | N1.C.3.1 |                 | USA                                                                                                                                                                                             |
+|                     | N1.C.3.2 |                 | USA                                                                                                                                                                                             |
+| Eurasian avian (av) | N1EA.1   |                 | Austria, Belgium, Croatia, Denmark, France, Germany, Italy, Netherlands, Poland, Russia, Serbia, Spain, Switzerland, Thailand, UK                                                               |
+|                     | N1EA.2   |                 | Austria, Belgium, France, Germany, Hungary, Italy, Netherlands, Poland, Portugal, Russia, Spain                                                                                                 |
+|                     | N1EA.3   |                 | Croatia, Denmark, Finland, Germany, Italy, Poland, Spain, Sweden                                                                                                                                |
+|                     | N1EA.4   |                 | Belgium, Cambodia, China, Croatia, Czech Republic, Denmark, France, Germany, Hong Kong, Indonesia, Ireland, Italy, Mexico, Netherlands, Poland, South Korea, Spain, Thailand, UK, USA, Viet Nam |
+| Pandemic 2009 (pdm) | N1P      | pdm09           | Worldwide                                                                                                                                                                                       |
