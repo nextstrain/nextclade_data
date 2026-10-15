@@ -9,7 +9,7 @@
 
 
 ## Scope of this dataset
-This dataset uses A/Wisconsin/67/2005(H3N2) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the N2 NA segment.
+This dataset uses A/Wisconsin/67/2005(H3N2) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the N2 subtype of the NA segment, coding for the neuraminidase protein. It supports swIAV sequences worldwide, with a focus on Europe and the USA.
 
 ## Features
 This dataset supports

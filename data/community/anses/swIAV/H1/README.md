@@ -9,7 +9,7 @@
 
 
 ## Scope of this dataset
-This dataset uses A/California/07/2009(H1N1) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the H1 HA segment.
+This dataset uses A/California/07/2009(H1N1) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the H1 subtype of the HA segment, coding for the hemagglutinin protein subunits HA1 (head) and HA2 (stem). It supports swIAV sequences worldwide, with a focus on Europe and the USA.
 
 ## Features
 This dataset supports

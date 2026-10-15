@@ -9,7 +9,7 @@
 
 
 ## Scope of this dataset
-This dataset uses A/Wisconsin/67/2005(H3N2) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the H3 HA segment.
+This dataset uses A/Wisconsin/67/2005(H3N2) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the H3 subtype of the HA segment, coding for the hemagglutinin protein subunits HA1 (head) and HA2 (stem). It supports swIAV sequences worldwide, with a focus on Europe and the USA.
 
 ## Features
 This dataset supports

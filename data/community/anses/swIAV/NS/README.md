@@ -9,7 +9,7 @@
 
 
 ## Scope of this dataset
-This dataset uses A/California/07/2009(H1N1) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the NS segment.
+This dataset uses A/California/07/2009(H1N1) as a reference sequence to assign clades to swIAV strains based on an improved OctoFlu nomenclature for the NS segment, coding for the nuclear export protein (NEP) and nonstructural protein 1 (NS1). It supports swIAV sequences worldwide, with a focus on Europe and the USA.
 
 ## Features
 This dataset supports
