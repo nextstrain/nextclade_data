@@ -1,6 +1,7 @@
 {
   "schemaVersion": "3.0.0",
   "alignmentParams": {
+	"alignmentPreset": "high-diversity",
     "excessBandwidth": 9,
     "terminalBandwidth": 100,
     "allowedMismatches": 4,
