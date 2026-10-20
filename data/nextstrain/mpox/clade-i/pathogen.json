@@ -15,8 +15,8 @@
     "reference name": "Zaire_1979-005"
   },
   "compatibility": {
-    "cli": "3.0.0-alpha.0",
-    "web": "3.0.0-alpha.0"
+    "cli": "3.25.0",
+    "web": "3.25.0"
   },
   "files": {
     "changelog": "CHANGELOG.md",

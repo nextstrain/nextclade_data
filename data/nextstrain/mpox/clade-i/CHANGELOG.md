@@ -1,6 +1,6 @@
 ## Unreleased
 
-- Alignment: deletions that start before a CDS and run into it now pay an additional penalty (`penaltyGapEnterCds: 2`, available in Nextclade versions newer than 3.24.0). Ambiguous deletions next to the low-coordinate end of a CDS no longer remove its first bases, and a deletion that would cut into a CDS start is placed as an in-frame deletion inside of the CDS when that is equally good. Indel coordinates next to CDS starts (and next to the ends of reverse-strand CDSs) change.
+- Alignment: deletions that start before a CDS and run into it now pay an additional penalty (`penaltyGapEnterCds: 2`, requires Nextclade 3.25.0 or newer). Ambiguous deletions next to the low-coordinate end of a CDS no longer remove its first bases, and a deletion that would cut into a CDS start is placed as an in-frame deletion inside of the CDS when that is equally good. Indel coordinates next to CDS starts (and next to the ends of reverse-strand CDSs) change.
 
 ## 2026-07-07T14:07:11Z
 
