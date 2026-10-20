@@ -1842,6 +1842,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.25.0",
+                "web": "3.25.0"
+              }
+            },
+            {
               "updatedAt": "2026-07-07T14:07:11Z",
               "tag": "2026-07-07--14-07-11Z",
               "compatibility": {
@@ -1931,11 +1938,10 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-07-07T14:07:11Z",
-            "tag": "2026-07-07--14-07-11Z",
+            "tag": "unreleased",
             "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
+              "cli": "3.25.0",
+              "web": "3.25.0"
             }
           }
         },
@@ -1972,6 +1978,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.25.0",
+                "web": "3.25.0"
+              }
+            },
             {
               "updatedAt": "2026-07-07T14:07:11Z",
               "tag": "2026-07-07--14-07-11Z",
@@ -2038,11 +2051,10 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-07-07T14:07:11Z",
-            "tag": "2026-07-07--14-07-11Z",
+            "tag": "unreleased",
             "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
+              "cli": "3.25.0",
+              "web": "3.25.0"
             }
           }
         },
@@ -2082,6 +2094,13 @@
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.25.0",
+                "web": "3.25.0"
+              }
+            },
             {
               "updatedAt": "2026-07-07T14:07:11Z",
               "tag": "2026-07-07--14-07-11Z",
@@ -2148,11 +2167,10 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-07-07T14:07:11Z",
-            "tag": "2026-07-07--14-07-11Z",
+            "tag": "unreleased",
             "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
+              "cli": "3.25.0",
+              "web": "3.25.0"
             }
           }
         },
@@ -2196,6 +2214,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.25.0",
+                "web": "3.25.0"
+              }
+            },
+            {
               "updatedAt": "2026-07-07T14:07:11Z",
               "tag": "2026-07-07--14-07-11Z",
               "compatibility": {
@@ -2261,11 +2286,10 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-07-07T14:07:11Z",
-            "tag": "2026-07-07--14-07-11Z",
+            "tag": "unreleased",
             "compatibility": {
-              "cli": "3.0.0-alpha.0",
-              "web": "3.0.0-alpha.0"
+              "cli": "3.25.0",
+              "web": "3.25.0"
             }
           }
         },
@@ -7995,6 +8019,53 @@
             "compatibility": {
               "cli": "3.0.0",
               "web": "3.0.0"
+            }
+          }
+        },
+        {
+          "path": "enpen/enterovirus/cva10",
+          "attributes": {
+            "name": "Coxsackievirus A10",
+            "reference name": "Coxsackievirus A10 inferred ancestral sequence",
+            "reference accession": "ancestral_sequence"
+          },
+          "files": {
+            "reference": "reference.fasta",
+            "pathogenJson": "pathogen.json",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "treeJson": "tree.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "changelog": "CHANGELOG.md"
+          },
+          "capabilities": {
+            "clades": 9,
+            "qc": [
+              "frameShifts",
+              "missingData",
+              "mixedSites",
+              "privateMutations",
+              "stopCodons",
+              "snpClusters"
+            ],
+            "other": [
+              "mutLabels"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.25.0",
+                "web": "3.25.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.25.0",
+              "web": "3.25.0"
             }
           }
         },
