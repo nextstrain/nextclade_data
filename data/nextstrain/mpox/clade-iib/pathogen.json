@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
   "alignmentParams": {
+    "penaltyGapEnterCds": 2,
     "allowedMismatches": 5,
     "excessBandwidth": 40,
     "gapAlignmentSide": "left",
@@ -14,8 +15,8 @@
     "reference name": "MPXV-M5312_HM12_Rivers"
   },
   "compatibility": {
-    "cli": "3.0.0-alpha.0",
-    "web": "3.0.0-alpha.0"
+    "cli": "3.25.0",
+    "web": "3.25.0"
   },
   "files": {
     "changelog": "CHANGELOG.md",
