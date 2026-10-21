@@ -39,10 +39,13 @@
     "frameShifts": {
       "enabled": true
     },
-    "stopCodons": {
-      "enabled": true,
-      "ignoredStopCodons": []
-    }
+	"stopCodons": {
+	  "enabled": true,
+	  "ignoredStopCodons": [
+		{ "cdsName": "NS1", "codon": 217 },
+		{ "cdsName": "NS1", "codon": 219 }
+	  ]
+	}
   },
   "cdsOrderPreference": [],
   "maintenance": {

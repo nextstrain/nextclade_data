@@ -39,10 +39,12 @@
     "frameShifts": {
       "enabled": true
     },
-    "stopCodons": {
-      "enabled": true,
-      "ignoredStopCodons": []
-    }
+	"stopCodons": {
+	  "enabled": true,
+	  "ignoredStopCodons": [
+		{ "cdsName": "PA-X", "codon": 232 }
+	  ]
+	}
   },
   "cdsOrderPreference": [],
   "maintenance": {
