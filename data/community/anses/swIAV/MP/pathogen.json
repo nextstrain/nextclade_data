@@ -61,7 +61,7 @@
     "name": "Swine Influenza A - MP (segment 7)",
     "segment": "mp",
     "reference accession": "NC_026431",
-    "reference name": "A/California/07/2009"
+    "reference name": "Inferred from A/California/07/2009 (72 mutations)"
   },
   "defaultCds": "M2"
 }

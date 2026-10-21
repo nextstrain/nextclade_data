@@ -61,7 +61,7 @@
     "name": "Swine Influenza A - NP (segment 5)",
     "segment": "np",
     "reference accession": "NC_026436",
-    "reference name": "A/California/07/2009"
+    "reference name": "Inferred from A/California/07/2009 (136 mutations)"
   },
   "defaultCds": "NP"
 }

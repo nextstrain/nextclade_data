@@ -61,7 +61,7 @@
     "name": "Swine Influenza A - PB1 (segment 2)",
     "segment": "pb1",
     "reference accession": "NC_026435",
-    "reference name": "A/California/07/2009"
+    "reference name": "Inferred from A/California/07/2009 (205 mutations)"
   },
   "defaultCds": "PB1"
 }

@@ -61,7 +61,7 @@
     "name": "Swine Influenza A - PA (segment 3)",
     "segment": "pa",
     "reference accession": "NC_026437",
-    "reference name": "A/California/07/2009"
+    "reference name": "Inferred from A/California/07/2009 (174 mutations)"
   },
   "defaultCds": "PA"
 }

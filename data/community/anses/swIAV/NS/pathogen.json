@@ -61,7 +61,7 @@
     "name": "Swine Influenza A - NS (segment 8)",
     "segment": "ns",
     "reference accession": "NC_026432",
-    "reference name": "A/California/07/2009"
+    "reference name": "Inferred from A/California/07/2009 (100 mutations)"
   },
   "defaultCds": "NS1"
 }
