@@ -1,0 +1,12 @@
+##gff-version 3
+##sequence-region 1944_KM204119_Hawaii 1 10736
+1944_KM204119_Hawaii	feature	gene	96	437	.	+	.	codon_start=1;gene=C;gene_name=C;
+1944_KM204119_Hawaii	feature	gene	438	935	.	+	.	codon_start=1;gene=prM;gene_name=prM;
+1944_KM204119_Hawaii	feature	gene	936	2420	.	+	.	codon_start=1;gene=E;gene_name=E;
+1944_KM204119_Hawaii	feature	gene	2421	3476	.	+	.	codon_start=1;gene=NS1;gene_name=NS1;
+1944_KM204119_Hawaii	feature	gene	3477	4130	.	+	.	codon_start=1;gene=NS2A;gene_name=NS2A;
+1944_KM204119_Hawaii	feature	gene	4131	4520	.	+	.	codon_start=1;gene=NS2B;gene_name=NS2B;
+1944_KM204119_Hawaii	feature	gene	4521	6377	.	+	.	codon_start=1;gene=NS3;gene_name=NS3;
+1944_KM204119_Hawaii	feature	gene	6378	6758	.	+	.	codon_start=1;gene=NS4A;gene_name=NS4A;
+1944_KM204119_Hawaii	feature	gene	6828	7574	.	+	.	codon_start=1;gene=NS4B;gene_name=NS4B;
+1944_KM204119_Hawaii	feature	gene	7575	10271	.	+	.	codon_start=1;gene=NS5;gene_name=NS5;

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "reference.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "genome_annotation.gff3",
+    "treeJson": "tree.json",
+    "examples": "sequences.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "GISDD Dengue Virus 1",
+    "reference name": "DENV1 strain Hawaii 1944 (KM204119.1)",
+    "reference accession": "KM204119.1"
+  },
+  "compatibility": {
+    "cli": "3.0.0",
+    "web": "3.0.0"
+  },
+  "defaultCds": "E",
+  "cdsOrderPreference": [
+    "C",
+    "prM",
+    "E",
+    "NS1",
+    "NS2A",
+    "NS2B",
+    "NS3",
+    "NS4A",
+    "NS4B",
+    "NS5"
+  ],
+  "alignmentParams": {
+    "alignmentPreset": "short-sequences"
+  }
+}
