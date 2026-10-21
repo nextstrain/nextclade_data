@@ -17,6 +17,7 @@
     "changelog": "CHANGELOG.md",
     "genomeAnnotation": "genome_annotation.gff3",
     "pathogenJson": "pathogen.json",
+	"examples": "sequences.fasta",
     "readme": "README.md",
     "reference": "reference.fasta",
     "treeJson": "tree.json"
