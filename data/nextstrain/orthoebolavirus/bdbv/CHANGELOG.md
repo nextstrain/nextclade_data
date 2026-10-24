@@ -1,3 +1,7 @@
+## Unreleased
+
+Include additional 2026 outbreak sequences and update reference tree.
+
 ## 2026-10-06T17:37:18Z
 
  - Update reference tree with more recent genomes
