@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-10-26T15:30:38Z
 
 Include additional 2026 outbreak sequences and update reference tree.
 
