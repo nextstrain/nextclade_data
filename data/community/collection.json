@@ -46,6 +46,16 @@
     "community/itps/orov/S/tefe",
     "community/itps/orov/S/refseq",
     "community/pathoplexus/yellow-fever-virus",
-    "community/UdeM-LMIVV/BabyV/PRRSV2/nsp3-4-5/Baby2026"
+    "community/UdeM-LMIVV/BabyV/PRRSV2/nsp3-4-5/Baby2026",
+    "community/anses/swIAV/PB1",
+    "community/anses/swIAV/N2",
+    "community/anses/swIAV/MP",
+    "community/anses/swIAV/PB2",
+    "community/anses/swIAV/N1",
+    "community/anses/swIAV/H3",
+    "community/anses/swIAV/NS",
+    "community/anses/swIAV/H1",
+    "community/anses/swIAV/PA",
+    "community/anses/swIAV/NP"
   ]
 }

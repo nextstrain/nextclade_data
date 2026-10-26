@@ -9621,6 +9621,568 @@
               "web": "3.0.0"
             }
           }
+        },
+        {
+          "path": "community/anses/swIAV/PB1",
+          "shortcuts": [
+            "anses/swIAV/PB1"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - PB1 (segment 2)",
+            "segment": "pb1",
+            "reference accession": "NC_026435",
+            "reference name": "Inferred from A/California/07/2009 (205 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 6,
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/N2",
+          "shortcuts": [
+            "anses/swIAV/N2"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - N2 (segment 6)",
+            "segment": "na",
+            "reference accession": "CY114383",
+            "reference name": "Inferred from A/Wisconsin/67/2005 (125 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 17,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/MP",
+          "shortcuts": [
+            "anses/swIAV/MP"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - MP (segment 7)",
+            "segment": "mp",
+            "reference accession": "NC_026431",
+            "reference name": "Inferred from A/California/07/2009 (72 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 6,
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/PB2",
+          "shortcuts": [
+            "anses/swIAV/PB2"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - PB2 (segment 1)",
+            "segment": "pb2",
+            "reference accession": "NC_026438",
+            "reference name": "Inferred from A/California/07/2009 (183 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 5,
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/N1",
+          "shortcuts": [
+            "anses/swIAV/N1"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - N1 (segment 6)",
+            "segment": "na",
+            "reference accession": "NC_026434",
+            "reference name": "Inferred from A/California/07/2009 (48 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 14,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/H3",
+          "shortcuts": [
+            "anses/swIAV/H3"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - H3 (segment 4)",
+            "segment": "ha",
+            "reference accession": "CY163680",
+            "reference name": "Inferred from A/Wisconsin/67/2005 (109 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 19,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/NS",
+          "shortcuts": [
+            "anses/swIAV/NS"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - NS (segment 8)",
+            "segment": "ns",
+            "reference accession": "NC_026432",
+            "reference name": "Inferred from A/California/07/2009 (100 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 5,
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/H1",
+          "shortcuts": [
+            "anses/swIAV/H1"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - H1 (segment 4)",
+            "segment": "ha",
+            "reference accession": "CY121680",
+            "reference name": "Inferred from A/California/07/2009 (261 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 34,
+            "qc": [
+              "privateMutations",
+              "mixedSites",
+              "stopCodons"
+            ],
+            "other": [
+              "aaMotifs"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/PA",
+          "shortcuts": [
+            "anses/swIAV/PA"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - PA (segment 3)",
+            "segment": "pa",
+            "reference accession": "NC_026437",
+            "reference name": "Inferred from A/California/07/2009 (174 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 6,
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
+        },
+        {
+          "path": "community/anses/swIAV/NP",
+          "shortcuts": [
+            "anses/swIAV/NP"
+          ],
+          "attributes": {
+            "name": "Swine Influenza A - NP (segment 5)",
+            "segment": "np",
+            "reference accession": "NC_026436",
+            "reference name": "Inferred from A/California/07/2009 (136 mutations)"
+          },
+          "maintenance": {
+            "organizations": [
+              "Anses",
+              "USDA-ARS"
+            ],
+            "authors": [
+              "Gautier Richard <https://orcid.org/0000-0003-3663-4569>",
+              "Tavis Anderson <https://orcid.org/0000-0002-3138-5535>"
+            ]
+          },
+          "files": {
+            "changelog": "CHANGELOG.md",
+            "genomeAnnotation": "genome_annotation.gff3",
+            "pathogenJson": "pathogen.json",
+            "examples": "sequences.fasta",
+            "readme": "README.md",
+            "reference": "reference.fasta",
+            "treeJson": "tree.json"
+          },
+          "capabilities": {
+            "clades": 6,
+            "qc": [
+              "mixedSites",
+              "frameShifts",
+              "stopCodons"
+            ]
+          },
+          "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            }
+          ],
+          "version": {
+            "tag": "unreleased",
+            "compatibility": {
+              "cli": "3.0.0-alpha.0",
+              "web": "3.0.0-alpha.0"
+            }
+          }
         }
       ]
     }
