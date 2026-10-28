@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-10-28T15:04:26Z
 
 - Include the 4 newly designated Nextstrain clades 26C (PQ.16.1.1), 26D (RF.5), 26E (RK.1) and 26F (PJ.2.1). See <https://github.com/nextstrain/ncov/pull/1226>, <https://github.com/nextstrain/ncov/pull/1227>, <https://github.com/nextstrain/ncov/pull/1228> and <https://github.com/nextstrain/ncov/pull/1232> for details.
 - Add labeled mutations for clades 26A (XFG.1.1), 26B (XFG.3.4.1), 26C (PQ.16.1.1), 26D (RF.5), 26E (RK.1) and 26F (PJ.2.1) to help identify recombinants

@@ -2695,7 +2695,8 @@
   },
   "schemaVersion": "3.0.0",
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-10-28T15:04:26Z",
+    "tag": "2026-10-28--15-04-26Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
@@ -9633,13 +9634,8 @@
     }
   },
   "attributes": {
-    "name": "SARS-CoV-2",
+    "name": "SARS-CoV-2 (Mature proteins)",
     "reference name": "Wuhan-Hu-1/2019",
     "reference accession": "MN908947"
-  },
-  "shortcuts": [
-    "sars-cov-2",
-    "nextstrain/sars-cov-2",
-    "nextstrain/sars-cov-2/wuhan-hu-1"
-  ]
+  }
 }
