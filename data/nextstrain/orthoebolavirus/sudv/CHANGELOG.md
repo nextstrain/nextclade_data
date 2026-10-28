@@ -1,3 +1,7 @@
+## Unreleased
+
+Add outbreak annotation
+
 ## 2026-04-14T11:55:23Z
 
 - Align `pathogen.json` metadata with the current Nextclade schema layout.

@@ -6,7 +6,8 @@
     "allowedMismatches": 10,
     "windowSize": 40,
     "minSeedCover": 0.03,
-    "gapAlignmentSide": "left"
+    "gapAlignmentSide": "left",
+    "retryReverseComplement": true
   },
   "attributes": {
     "name": "Sudan virus",
@@ -19,6 +20,7 @@
     "web": "3.0.0-alpha.0"
   },
   "files": {
+    "treeJson": "tree.json",
     "changelog": "CHANGELOG.md",
     "examples": "examples.fasta",
     "genomeAnnotation": "genome_annotation.gff3",
@@ -29,8 +31,7 @@
   "qc": {
     "frameShifts": {
       "enabled": true,
-      "ignoredFrameShifts": [
-      ],
+      "ignoredFrameShifts": [],
       "scoreWeight": 20
     },
     "missingData": {
@@ -58,8 +59,7 @@
     },
     "stopCodons": {
       "enabled": true,
-      "ignoredStopCodons": [
-      ],
+      "ignoredStopCodons": [],
       "scoreWeight": 20
     }
   },
