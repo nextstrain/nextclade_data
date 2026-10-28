@@ -12,8 +12,7 @@
   "attributes": {
     "name": "Sudan virus",
     "reference accession": "NC_006432.1",
-    "reference name": "UGA/2000/Gulu-808892",
-    "experimental": true
+    "reference name": "UGA/2000/Gulu-808892"
   },
   "compatibility": {
     "cli": "3.0.0-alpha.0",
