@@ -1,6 +1,6 @@
 ## Unreleased
 
-Add outbreak annotation
+Add reference tree with outbreak annotation; private mutation QC relative to tree; enable SNP cluster QC and ADAR pattern
 
 ## 2026-04-14T11:55:23Z
 
