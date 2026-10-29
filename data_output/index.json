@@ -2342,10 +2342,10 @@
           "attributes": {
             "name": "Sudan virus",
             "reference accession": "NC_006432.1",
-            "reference name": "UGA/2000/Gulu-808892",
-            "experimental": true
+            "reference name": "UGA/2000/Gulu-808892"
           },
           "files": {
+            "treeJson": "tree.json",
             "changelog": "CHANGELOG.md",
             "examples": "examples.fasta",
             "genomeAnnotation": "genome_annotation.gff3",
@@ -2354,15 +2354,26 @@
             "reference": "reference.fasta"
           },
           "capabilities": {
+            "customClades": {
+              "outbreak": 10
+            },
             "qc": [
               "frameShifts",
               "missingData",
               "mixedSites",
               "privateMutations",
+              "snpClusters",
               "stopCodons"
             ]
           },
           "versions": [
+            {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
             {
               "updatedAt": "2026-04-14T11:55:23Z",
               "tag": "2026-04-14--11-55-23Z",
@@ -2381,8 +2392,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-04-14T11:55:23Z",
-            "tag": "2026-04-14--11-55-23Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
