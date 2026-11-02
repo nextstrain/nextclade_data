@@ -1,3 +1,7 @@
+## Unreleased
+
+- Correct the description of the genotyping window and of the reference sequence in the README.
+
 ## 2026-04-14T11:55:23Z
 
 - Fix typo: `excessBandwith` to `excessBandwidth`
