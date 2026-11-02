@@ -608,7 +608,7 @@ def process_one_collection(collection_json_path, index_json, args, tag, updated_
 
 
 def get_datasets_from_index_json(index_json, collection_id):
-  collections = dict_get(index_json, ["collections"])
+  collections = dict_get(index_json, ["collections"]) or []
   collection = find(lambda c: dict_get_required(c, ["meta", "id"]) == collection_id, collections)
   return dict_get(collection, ["datasets"]) or []
 
