@@ -1,11 +1,10 @@
-# Nextclade dataset for Sudan virus (formerly Ebola virus Sudan)
+# Nextclade dataset for Sudan virus (Orthoebolavirus sudanense)
 
 | Key                    | Value                                                                           |
 | ---------------------- | ------------------------------------------------------------------------------- |
 | authors                | [Cornelius Roemer](https://neherlab.org), [Richard Neher](https://neherlab.org) |
 | data source            | Genbank                                                                         |
-| nextclade dataset path | nextstrain/orthoebolavirus/sudv                                                          |
-| annotation             | [NC_006432.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_006432)                   |
+| nextclade dataset path | nextstrain/orthoebolavirus/sudv                                                 |
+| annotation             | [NC_006432.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_006432.1)                 |
 
-Sudan virus was formerly known as Ebola virus Sudan, but has been [renamed as Sudan virus (SUDV) in the genus Orthoebolavirus by ICTV](https://ictv.global/report/chapter/filoviridae/filoviridae/orthoebolavirus).
-
+This Nextclade dataset for Sudan virus [(Orthoebolavirus sudanense)](https://ictv.global/report/chapter/filoviridae/filoviridae/orthoebolavirus) aligns to the reference sequence [NC_006432.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_006432) and translates major CDS. It scores the sequence with respect to unexpected frameshifts or stop codons, missing sequence (in form of `NNN`s) and mixed bases.
