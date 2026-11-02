@@ -1,22 +1,20 @@
-# Measles dataset
+# Rubella virus (complete genome) dataset
 
-| Key               | Value                                                                                                                                                            |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name           | Measles complete genome
-| authors           | [Nextstrain](https://nextstrain.org)                                            |
-| reference         | NC_001498.1                                                                                                                        |
-| workflow          | https://github.com/nextstrain/measles/tree/main/nextclade                                                                                     |
-| path              | `nextstrain/measles/genome/WHO-2012`                                                                                                                                  |
-
+| Key       | Value                                   |
+| --------- | --------------------------------------- |
+| name      | Rubella virus complete genome           |
+| authors   | [Nextstrain](https://nextstrain.org)    |
+| reference | NC_076948.1                             |
+| workflow  | <https://github.com/nextstrain/rubella> |
+| path      | `nextstrain/rubella/genome`             |
 
 ## Scope of this dataset
 
-This dataset assigns genotypes to measles samples based on [criteria outlined by the WHO](https://www.who.int/publications/i/item/WER8709).
-The WHO has defined 24 measles genotypes based on N gene and H gene sequences from 28 reference strains. For new measles samples, genotypes can be assigned based on genetic similarity to the reference strains in the "N450" region (a 450 bp region of the N gene).
+This dataset assigns genotypes to rubella virus samples based on the WHO nomenclature in [Rubella virus nomenclature update: 2013][]. The nomenclature defines 13 genotypes, 1A to 1J and 2A to 2C, from a 739 nucleotide window of the E1 gene, which encodes one of the two envelope glycoproteins.
 
-The reference tree used in this dataset includes sequences for the 28 reference strains, along with (nearly) complete genomes of other representative strains for most genotypes.
-This dataset can be used to assign genotypes to any sequence that includes at least 400 bp of the N450 region, including whole genome sequences.
-In addition, this dataset implements simple quality control metrics based to the amount of missing sequence, the number of ambiguous nucleotides, frameshifts or stop codons, and clusters of mutations relative to sequences in the reference tree.
+The reference tree is built from complete rubella virus genomes. The reference sequence is the complete genome of strain RVi/Bismarck.ND.USA/23.08/2B (genotype 2B). The genotypes on the tree are defined by nucleotide changes in the E1 gene, so they follow the WHO definition.
+
+The dataset aligns sequences against the complete genome and reports mutations in the non-structural polyprotein (NSP) and in the structural polyprotein (SP). For sequences that cover only the E1 region, use the `nextstrain/rubella/E1` dataset.
 
 ## Features
 
@@ -28,4 +26,6 @@ This dataset supports:
 
 ## What are Nextclade datasets
 
-Read more about Nextclade datasets in the Nextclade documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html
+Read more about Nextclade datasets in the Nextclade documentation: <https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html>
+
+[Rubella virus nomenclature update: 2013]: https://www.who.int/publications/i/item/WER8832
