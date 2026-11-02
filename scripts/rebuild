@@ -466,6 +466,8 @@ def main():
 
     with reporter.stage("Build collections"):
       collection_json_paths = list(find_files("collection.json", args.input_dir))
+      if not collection_json_paths:
+        raise ValueError(f"No 'collection.json' found in input directory '{args.input_dir}'")
 
       index_json_path = join(args.output_dir, "index.json")
       try:

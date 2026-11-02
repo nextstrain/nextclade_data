@@ -54,6 +54,18 @@ class TestRebuild(unittest.TestCase):
       index = json.loads((output_dir / "index.json").read_text())
       self.assertEqual([c["meta"]["id"] for c in index["collections"]], ["test"])
 
+  def test_rebuild_fails_when_input_dir_has_no_collection(self) -> None:
+    with TemporaryDirectory() as tmp_dir:
+      input_dir = Path(tmp_dir) / "input"
+      output_dir = Path(tmp_dir) / "output"
+      input_dir.mkdir()
+
+      result = run_rebuild(input_dir, output_dir)
+
+      self.assertNotEqual(result.returncode, 0)
+      self.assertIn("collection.json", result.stderr)
+      self.assertFalse((output_dir / "index.json").exists())
+
 
 if __name__ == "__main__":
   unittest.main()
