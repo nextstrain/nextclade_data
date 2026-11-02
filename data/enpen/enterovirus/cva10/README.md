@@ -31,7 +31,7 @@ Coxsackievirus A10 is divided into subgenogroups A, B, C, D, E (VP1 only), F, G 
 
 ***Note:** Genotypes E and H are based on VP1 sequences only.*
 
-Overall, these designations are based on phylogenetic structure and characteristic mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universally standardized global lineage nomenclature for enteroviruses; naming instead follows conventions established in published studies and surveillance practices.
+Overall, these designations are based on phylogenetic structure and characteristic mutations, and are widely used in molecular epidemiology, similar to subgenotype systems for other enteroviruses. Unlike influenza (H1N1, H3N2) or SARS-CoV-2, there is no universally standardized global lineage nomenclature for enteroviruses; naming instead follows conventions established in published studies ([Tian et al., PLoS One 2014](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0084233); [Tian et al., PLoS One 2017](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176604); [Ji et al., Sci Rep 2018](https://www.nature.com/articles/s41598-018-31616-x); [Wang et al., Virol Sin 2022](https://www.sciencedirect.com/science/article/pii/S1995820X22000281)) and surveillance practices.
 
 ## Related Enteroviruses
 
@@ -47,13 +47,13 @@ If you are unsure how to proceed, please contact us. We are happy to assist.
 
 This dataset includes several reference points used in analyses:
 
-- *Reference:* RefSeq or similarly established prototype sequence. Here Kowalik (AY421767.1).
+- *Reference:* RefSeq or similarly established prototype sequence. Here Kowalik (AY421767.1). Serving as the default reference for mutation calling.
 
-- *Static Inferred Ancestor:* Reconstructed ancestral sequence inferred with an outgroup, used to root the tree and serving as the default reference for mutation calling. Appears in the tree as the rooting outgroup, not as the tree's root node itself — see *Tree root*.
+- *Static Inferred Ancestor:* Reconstructed ancestral sequence inferred with an outgroup, used to root the tree. Appears in the tree as the rooting outgroup, not as the tree's root node itself — see *Tree root*.
 
 - *Parent:* The nearest ancestral node of a sample in the tree, used to infer branch-specific mutations.
 
-- *Clade founder:* The inferred ancestral node defining a clade (e.g., B5, C4). Mutations "since clade founder" describe changes that define that clade.
+- *Clade founder:* The inferred ancestral node defining a clade (e.g., C, D). Mutations "since clade founder" describe changes that define that clade.
 
 - *Tree root:* Corresponds to the root of the tree, it may change in future updates as more data become available.
 
