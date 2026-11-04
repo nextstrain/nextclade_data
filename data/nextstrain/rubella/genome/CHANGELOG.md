@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-04T12:19:40Z
 
 - Replace the README text, which described the measles dataset, with a description of the rubella genome dataset.
 
