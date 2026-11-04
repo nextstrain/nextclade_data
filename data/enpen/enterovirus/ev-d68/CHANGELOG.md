@@ -1,3 +1,9 @@
+## Unreleased
+
+- Correct the reference strain name in the dataset overview: it is now `ancestral_sequence` (previously `Fermon`)
+- Add new EV-D68 sequences released since the last update in August 2026
+- Add `snpClusters` QC metric with `clusterCutOff` set to 5
+
 ## 2026-08-12T14:03:43Z
 
 - Ancestral sequence is now root of the tree and taken as the alignment reference
