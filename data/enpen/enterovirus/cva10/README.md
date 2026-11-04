@@ -4,7 +4,7 @@
 |----------------------|-----------------------------------------------------------------------|
 | authors              | [Alejandra González-Sánchez](https://eve-lab.org/people/alejandra-gonzalez-sanchez/), [Nadia Neuner-Jehle](https://eve-lab.org/people/nadia-neuner-jehle/), [Emma B. Hodcroft](https://eve-lab.org/people/emma-hodcroft/), [ENPEN](https://escv.eu/european-non-polio-enterovirus-network-enpen/)                                                 |
 | name                 | Coxsackievirus A10                                                    |
-| reference            | [AY421767.1](https://www.ncbi.nlm.nih.gov/nuccore/AY421767.1)         |
+| reference            | [Static Inferred Ancestor](https://github.com/enterovirus-phylo/nextclade_a10/blob/master/resources/inferred-root.fasta)         |
 | workflow             | <https://github.com/enterovirus-phylo/nextclade_a10>                  |
 | path                 | `enpen/enterovirus/cva10`                                             |
 | clade definitions    |  A-H                                                                  |
