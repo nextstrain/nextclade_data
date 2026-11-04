@@ -28,7 +28,16 @@
   },
   "qc": {
     "frameShifts": {
-      "enabled": true
+      "enabled": true,
+      "ignoredFrameShifts": [
+        {
+          "cdsName": "Gc",
+          "codonRange": {
+            "begin": 912,
+            "end": 941
+          }
+        }
+      ]
     },
     "missingData": {
       "enabled": true,
@@ -58,5 +67,11 @@
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "M"
+  "defaultCds": "M",
+  "cdsOrderPreference": [
+    "M",
+    "Gn",
+    "NSm",
+    "Gc"
+  ]
 }

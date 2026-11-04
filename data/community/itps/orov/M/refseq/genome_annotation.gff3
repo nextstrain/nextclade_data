@@ -4,4 +4,8 @@
 ##sequence-region NC_005775.1 1 4385
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=118655
 NC_005775.1	RefSeq	region	1	4385	.	+	.	ID=NC_005775.1:1..4385;Dbxref=taxon:118655;Name=M;gbkey=Src;mol_type=genomic RNA;segment=M;strain=BeAn19991
-NC_005775.1	GenBank	gene	32	4294	.	+	.	gene_name=M
+NC_005775.1	GenBank	gene	32	4294	.	+	.	ID=gene-M;Name=M;gene_name=M
+NC_005775.1	GenBank	CDS	32	4294	.	+	0	ID=cds-M;Parent=gene-M;Name=M;product=glycoprotein precursor
+NC_005775.1	GenBank	CDS	80	949	.	+	0	ID=cds-Gn;Parent=gene-M;Name=Gn;product=glycoprotein Gn
+NC_005775.1	GenBank	CDS	950	1474	.	+	0	ID=cds-NSm;Parent=gene-M;Name=NSm;product=nonstructural protein NSm
+NC_005775.1	GenBank	CDS	1472	4294	.	+	0	ID=cds-Gc;Parent=gene-M;Name=Gc;product=glycoprotein Gc
