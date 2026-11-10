@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-10T06:33:44Z
 
 - Correct the reference strain name in the dataset overview: it is now `ancestral_sequence` (previously `Fermon`)
 - Add new EV-D68 sequences released since the last update in August 2026

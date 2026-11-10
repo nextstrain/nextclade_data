@@ -7387,7 +7387,8 @@
     "3D"
   ],
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-11-10T06:33:44Z",
+    "tag": "2026-11-10--06-33-44Z",
     "compatibility": {
       "cli": "3.0.0",
       "web": "3.0.0"
