@@ -1,7 +1,7 @@
 """Cross-implementation parity tests for the recombination parameter estimator.
 
 The authoritative implementation is the Rust estimator in
-`packages/nextclade/src/analyze/recombination_estimate.rs` of the nextclade repository. Each fixture and
+`packages/nextclade/src/analyze/recombination/estimate.rs` of the nextclade repository. Each fixture and
 expected value here is transcribed from that file's unit tests, which serve as the oracle: the Python
 helper must produce bit-identical parameters so a dataset can carry frozen, reviewed values.
 
@@ -57,7 +57,7 @@ class TestRecombinationParamsParity(unittest.TestCase):
     self.assertAlmostEqual(mu_r, params["muR"], delta=DELTA)
 
   def test_recombination_params_all_params_from_two_clade_tree(self) -> None:
-    # Rust `test_recombination_estimate_all_params_from_tree`: gamma 0.01, mu_w 0.02, mu_r 0.05.
+    # Rust `test_recombination_estimate_all_params_from_tree`: gamma 0.0001, mu_w 0.02, mu_r 0.05.
     # Leaves A1 (rd 2), B1 (rd 2), B2 (rd 4); mean terminal (2+1+3)/3 = 2. Inter-clade leaf pairs
     # A1<->B1 = 4, A1<->B2 = 6; median{4, 6} = 5.
     tree = {
@@ -75,7 +75,7 @@ class TestRecombinationParamsParity(unittest.TestCase):
         },
       ],
     }
-    self._assert_params(_params(tree), gamma=1.0 / 100.0, mu_w=2.0 / 100.0, mu_r=5.0 / 100.0)
+    self._assert_params(_params(tree), gamma=0.01 / 100.0, mu_w=2.0 / 100.0, mu_r=5.0 / 100.0)
 
   def test_recombination_params_three_clades_uses_nonroot_mrca(self) -> None:
     # Rust `test_recombination_estimate_three_clades_uses_nonroot_mrca`: mu_w 0.04, mu_r 0.09.
@@ -96,7 +96,7 @@ class TestRecombinationParamsParity(unittest.TestCase):
         _leaf("C1", "C", ["A70C", "A80G", "A90T", "A100C", "A110G", "A120T"]),
       ],
     }
-    self._assert_params(_params(tree), gamma=1.0 / 100.0, mu_w=4.0 / 100.0, mu_r=9.0 / 100.0)
+    self._assert_params(_params(tree), gamma=0.01 / 100.0, mu_w=4.0 / 100.0, mu_r=9.0 / 100.0)
 
   def test_recombination_params_nested_clades_uses_leaf_distance(self) -> None:
     # Rust `test_recombination_estimate_nested_clades_uses_leaf_distance`: mu_w 0.04, mu_r 0.09.
@@ -126,7 +126,7 @@ class TestRecombinationParamsParity(unittest.TestCase):
         _leaf("O1", "other", ["A40C", "A41C", "A42C", "A43C"]),
       ],
     }
-    self._assert_params(_params(tree), gamma=1.0 / 100.0, mu_w=4.0 / 100.0, mu_r=9.0 / 100.0)
+    self._assert_params(_params(tree), gamma=0.01 / 100.0, mu_w=4.0 / 100.0, mu_r=9.0 / 100.0)
 
   def test_recombination_params_excludes_deletions_from_branch_length(self) -> None:
     # Rust `test_recombination_estimate_excludes_deletions_from_branch_length`: the `A15-` deletion is
@@ -244,7 +244,7 @@ class TestCountBranchSubstitutions(unittest.TestCase):
       rp.count_branch_substitutions(["A10Z"])
 
 
-# The two-clade oracle tree (gamma 0.01, mu_w 0.02, mu_r 0.05 at ref_len 100) as an Auspice file body.
+# The two-clade oracle tree (gamma 0.0001, mu_w 0.02, mu_r 0.05 at ref_len 100) as an Auspice file body.
 _TWO_CLADE_AUSPICE = {
   "version": "v2",
   "meta": {},
@@ -289,7 +289,7 @@ class TestRecombinationParamsCli(unittest.TestCase):
       tree, ref = self._write_inputs(Path(tmp_dir))
       result = self._run("--input-tree", str(tree), "--input-ref", str(ref))
       params = json.loads(result.stdout)
-      self.assertAlmostEqual(1.0 / 100.0, params["gamma"], delta=DELTA)
+      self.assertAlmostEqual(0.01 / 100.0, params["gamma"], delta=DELTA)
       self.assertAlmostEqual(2.0 / 100.0, params["muW"], delta=DELTA)
       self.assertAlmostEqual(5.0 / 100.0, params["muR"], delta=DELTA)
 
@@ -301,8 +301,23 @@ class TestRecombinationParamsCli(unittest.TestCase):
       pathogen.write_text(json.dumps({"schemaVersion": "3.0.0"}))
       self._run("--input-tree", str(tree), "--input-ref", str(ref), "--pathogen", str(pathogen))
       written = json.loads(pathogen.read_text())["recombination"]
-      self.assertEqual(True, written["enabled"])
+      # Only the three parameters are written: freezing them does not switch detection on.
+      self.assertEqual(["gamma", "muR", "muW"], sorted(written))
       self.assertAlmostEqual(5.0 / 100.0, written["muR"], delta=DELTA)
+
+  def test_recombination_params_cli_keeps_other_recombination_settings(self) -> None:
+    with TemporaryDirectory() as tmp_dir:
+      tmp = Path(tmp_dir)
+      tree, ref = self._write_inputs(tmp)
+      pathogen = tmp / "pathogen.json"
+      settings = {"enabled": True, "minRegionLength": 30, "gamma": 0.5}
+      pathogen.write_text(json.dumps({"schemaVersion": "3.0.0", "recombination": settings}))
+      self._run("--input-tree", str(tree), "--input-ref", str(ref), "--pathogen", str(pathogen))
+      written = json.loads(pathogen.read_text())["recombination"]
+      # The curator's settings stay; the estimate replaces the stale `gamma`.
+      self.assertEqual(True, written["enabled"])
+      self.assertEqual(30, written["minRegionLength"])
+      self.assertAlmostEqual(0.01 / 100.0, written["gamma"], delta=DELTA)
 
 
 if __name__ == "__main__":
