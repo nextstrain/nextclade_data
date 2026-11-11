@@ -64,5 +64,8 @@
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "E1"
+  "defaultCds": "E1",
+  "recombination": {
+    "enabled": true
+  }
 }

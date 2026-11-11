@@ -59,5 +59,8 @@
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "E"
+  "defaultCds": "E",
+  "recombination": {
+    "enabled": true
+  }
 }

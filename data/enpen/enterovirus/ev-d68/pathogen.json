@@ -7385,5 +7385,8 @@
     "3B",
     "3C",
     "3D"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }

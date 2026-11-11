@@ -9637,5 +9637,8 @@
     "sars-cov-2",
     "nextstrain/sars-cov-2",
     "nextstrain/sars-cov-2/wuhan-hu-1"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }

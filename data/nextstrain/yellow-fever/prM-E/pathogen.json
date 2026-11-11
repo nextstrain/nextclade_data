@@ -48,5 +48,8 @@
       "scoreWeight": 50,
       "windowSize": 50
     }
+  },
+  "recombination": {
+    "enabled": true
   }
 }

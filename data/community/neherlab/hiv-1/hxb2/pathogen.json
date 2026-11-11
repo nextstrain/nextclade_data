@@ -69,5 +69,8 @@
   },
   "shortcuts": [
     "neherlab/hiv-1"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }

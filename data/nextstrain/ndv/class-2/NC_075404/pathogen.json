@@ -161,5 +161,8 @@
     "F",
     "HN",
     "L"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }

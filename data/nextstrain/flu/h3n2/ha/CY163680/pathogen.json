@@ -114,5 +114,8 @@
     "segment": "ha",
     "reference accession": "CY163680",
     "reference name": "A/Wisconsin/67/2005-egg"
+  },
+  "recombination": {
+    "enabled": true
   }
 }

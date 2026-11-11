@@ -97,5 +97,8 @@
     "segment": "na",
     "reference accession": "NC_026434",
     "reference name": "Inferred from A/California/07/2009 (48 mutations)"
+  },
+  "recombination": {
+    "enabled": true
   }
 }

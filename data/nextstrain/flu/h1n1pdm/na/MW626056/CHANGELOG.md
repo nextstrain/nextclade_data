@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-04-14T11:55:23Z
  - add subclade [D.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/main/subclades/D.3.yml)
  - add HA clade annotations to tree

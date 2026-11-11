@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-10-28T15:04:26Z
 
 - Include the 4 newly designated Nextstrain clades 26C (PQ.16.1.1), 26D (RF.5), 26E (RK.1) and 26F (PJ.2.1). See <https://github.com/nextstrain/ncov/pull/1226>, <https://github.com/nextstrain/ncov/pull/1227>, <https://github.com/nextstrain/ncov/pull/1228> and <https://github.com/nextstrain/ncov/pull/1232> for details.

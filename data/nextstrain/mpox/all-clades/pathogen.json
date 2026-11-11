@@ -209,5 +209,8 @@
   ],
   "version": {
     "tag": "unreleased"
+  },
+  "recombination": {
+    "enabled": true
   }
 }

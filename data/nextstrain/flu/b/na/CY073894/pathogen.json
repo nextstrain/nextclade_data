@@ -399,5 +399,8 @@
     "segment": "na",
     "reference accession": "CY073894",
     "reference name": "B/Brisbane/60/2008-egg"
+  },
+  "recombination": {
+    "enabled": true
   }
 }

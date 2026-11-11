@@ -116,5 +116,8 @@
     "nextstrain/flu/yam",
     "nextstrain/flu/yam/ha",
     "nextstrain/flu/yam/ha/wisconsin-1-2010"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }

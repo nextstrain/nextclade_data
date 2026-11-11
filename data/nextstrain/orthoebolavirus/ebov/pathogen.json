@@ -69,5 +69,8 @@
     "ebola",
     "nextstrain/ebola",
     "nextstrain/ebola/zaire"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }

@@ -91,5 +91,8 @@
     "SH",
     "G",
     "L"
-  ]
+  ],
+  "recombination": {
+    "enabled": true
+  }
 }
