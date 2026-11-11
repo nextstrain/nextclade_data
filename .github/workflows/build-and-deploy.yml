@@ -97,7 +97,7 @@ jobs:
 
       - name: "Install Python dependencies"
         run: |
-          pip3 install -r requirements.txt
+          pip3 install --require-hashes --no-deps --only-binary ':all:' -r requirements.txt
 
       - name: "Validate GFF files"
         run: |

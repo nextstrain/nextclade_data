@@ -38,7 +38,7 @@ jobs:
         run: "sudo apt-get install genometools python3 --yes -qq >/dev/null"
 
       - name: "Install Python dependencies"
-        run: "pip3 install -r requirements.txt"
+        run: "pip3 install --require-hashes --no-deps --only-binary ':all:' -r requirements.txt"
 
       - name: "Validate GFF files"
         run: "./scripts/validate-gff 'data/'"
