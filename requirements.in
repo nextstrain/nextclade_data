@@ -1,0 +1,9 @@
+# Direct Python dependencies. `requirements.txt` pins them and their dependencies by exact version and hash.
+# After a change here, regenerate it with a cutoff 7 days before today, so that each pinned release is at least a week old:
+#   uv pip compile requirements.in --output-file requirements.txt --generate-hashes --universal --python-version 3.12 --exclude-newer "$(date -u -d '7 days ago' +%Y-%m-%dT00:00:00Z)"
+# Install with: pip3 install --require-hashes --no-deps --only-binary ':all:' -r requirements.txt
+biopython
+jsonschema
+numpy
+rapidfuzz>=3.0
+repro-zipfile
