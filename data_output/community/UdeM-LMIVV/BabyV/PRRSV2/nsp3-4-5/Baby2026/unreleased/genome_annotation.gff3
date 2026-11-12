@@ -1,0 +1,4 @@
+##gff-version 3
+##sequence-region NC_038291.1-nsp3-4-5 1 1815
+NC_038291.1-nsp3-4-5	feature	CDS	1	1815	.	+	0	Parent=gene-ORF1;gene_name=nsp3-4-5;product=nsp3-4-5
+NC_038291.1-nsp3-4-5	feature	gene	1	1815	.	+	.	ID=gene-ORF1;gene_name=ORF1;Note=Partial ORF1

@@ -1,0 +1,14 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
+## 2026-04-14T11:55:23Z
+
+- Move `placementMaskRanges` to tree.json
+- Unify attributes per schema update
+
+## 2025-09-24T07:29:03Z
+
+Initial release of a Chikungunya Virus  (chikV) dataset for genotype classification!
+
+Read more about Nextclade datasets in the documentation: https://docs.nextstrain.org/projects/nextclade/en/stable/user/datasets.html

@@ -1,0 +1,21 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_035889.1 1 10808
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=64320
+NC_035889.1	RefSeq	region	1	10808	.	+	.	ID=NC_035889.1:1..10808;Dbxref=taxon:64320;collection-date=2015;country=Brazil: Rio Grande do Norte%2C Natal;gbkey=Src;genome=genomic;isolation-source=fetus' brain autopsy;mol_type=genomic RNA;nat-host=Homo sapiens;strain=Natal RGN
+NC_035889.1	RefSeq	region	1	10808	.	+	.	ID=id-NC_035889.1:1..10808;Note=Mature peptides were annotated by RefSeq staff using homoloy to NC_012532.1 and the cleavage sites reported in Kuno and Chang%2C 2007 (PMID 17195954). Questions about the annotation of this sequence should be directed to info@ncbi.nlm.nih.gov.;gbkey=Comment
+NC_035889.1	GenBank	CDS	108	473	.	+	.	gene_name=ancC
+NC_035889.1	GenBank	CDS	108	419	.	+	.	gene_name=C
+NC_035889.1	GenBank	CDS	474	977	.	+	.	gene_name=prM
+NC_035889.1	GenBank	CDS	474	752	.	+	.	gene_name=pr
+NC_035889.1	GenBank	CDS	753	977	.	+	.	gene_name=M
+NC_035889.1	GenBank	CDS	978	2489	.	+	.	gene_name=E
+NC_035889.1	GenBank	CDS	2490	3545	.	+	.	gene_name=NS1
+NC_035889.1	GenBank	CDS	3546	4223	.	+	.	gene_name=NS2A
+NC_035889.1	GenBank	CDS	4224	4613	.	+	.	gene_name=NS2B
+NC_035889.1	GenBank	CDS	4614	6464	.	+	.	gene_name=NS3
+NC_035889.1	GenBank	CDS	6465	6845	.	+	.	gene_name=NS4A
+NC_035889.1	GenBank	CDS	6846	6914	.	+	.	gene_name=2K
+NC_035889.1	GenBank	CDS	6915	7667	.	+	.	gene_name=NS4B
+NC_035889.1	GenBank	CDS	7668	10376	.	+	.	gene_name=NS5

@@ -1,0 +1,18 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+#!genome-build ASM281537v1
+#!genome-build-accession NCBI_Assembly:GCF_002815375.1
+##sequence-region NC_039199.1 1 13350
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=162145
+NC_039199.1	RefSeq	region	1	13350	.	+	.	ID=NC_039199.1:1..13350;Dbxref=taxon:162145;gb-acronym=HMPV;gbkey=Src;genome=genomic;isolate=00-1;mol_type=genomic RNA
+NC_039199.1	RefSeq	CDS	40	1224	.	+	0	Name=N;Dbxref=GenBank:YP_009513265.1,GeneID:37626968;gbkey=CDS;gene=N;locus_tag=D1Y22_gp1;product=nucleoprotein;protein_id=N
+NC_039199.1	RefSeq	CDS	1248	2132	.	+	0	Name=P;Dbxref=GenBank:YP_009513266.1,GeneID:37626964;gbkey=CDS;gene=P;locus_tag=D1Y22_gp2;product=phosphoprotein;protein_id=P
+NC_039199.1	RefSeq	CDS	2165	2929	.	+	0	Name=M;Dbxref=GenBank:YP_009513267.1,GeneID:37626965;gbkey=CDS;gene=M;locus_tag=D1Y22_gp3;product=matrix protein;protein_id=M
+NC_039199.1	RefSeq	CDS	3052	4671	.	+	0	Name=F;Dbxref=GenBank:YP_009513268.1,GeneID:37626966;gbkey=CDS;gene=F;locus_tag=D1Y22_gp4;product=fusion protein;protein_id=F
+NC_039199.1	RefSeq	CDS	4737	5300	.	+	0	Name=M2-1;Dbxref=GenBank:YP_009513269.1,GeneID:37626967;gbkey=CDS;gene=M2-1;locus_tag=D1Y22_gp5;product=matrix protein 2-1;protein_id=M2-1
+NC_039199.1	RefSeq	CDS	5248	5463	.	+	0	Name=M2-2;Dbxref=GenBank:YP_009513270.1,GeneID:37626967;gbkey=CDS;gene=M2-2;locus_tag=D1Y22_gp5;product=matrix protein 2-2;protein_id=M2-2
+NC_039199.1	RefSeq	CDS	5494	6045	.	+	0	Name=SH;Dbxref=GenBank:YP_009513271.1,GeneID:37626961;gbkey=CDS;gene=SH;locus_tag=D1Y22_gp6;product=small hydrophobic protein;protein_id=SH
+NC_039199.1	RefSeq	CDS	6247	6957	.	+	0	Name=G;Dbxref=GenBank:YP_009513272.1,GeneID:37626962;gbkey=CDS;gene=G;locus_tag=D1Y22_gp7;product=attachment glycoprotein;protein_id=G
+NC_039199.1	RefSeq	CDS	7167	13184	.	+	0	Name=L;Dbxref=GenBank:YP_009513273.1,GeneID:37626963;gbkey=CDS;gene=L;locus_tag=D1Y22_gp8;product=RNA-dependent RNA polymerase;protein_id=L
+###
