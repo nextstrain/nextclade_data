@@ -61,6 +61,9 @@
   },
   "defaultCds": "E",
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 9.25240562546262e-07,
+    "muW": 0.0010342949712831043,
+    "muR": 0.15266469282013323
   }
 }

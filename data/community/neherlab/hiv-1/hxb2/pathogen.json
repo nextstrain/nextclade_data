@@ -71,6 +71,9 @@
     "neherlab/hiv-1"
   ],
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 1.0892059688487094e-06,
+    "muW": 0.031093199724067818,
+    "muR": 0.25574556148567695
   }
 }

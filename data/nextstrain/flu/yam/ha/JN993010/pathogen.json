@@ -118,6 +118,9 @@
     "nextstrain/flu/yam/ha/wisconsin-1-2010"
   ],
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 5.6980056980056985e-06,
+    "muW": 0.0009887053365314235,
+    "muR": 0.02507122507122507
   }
 }

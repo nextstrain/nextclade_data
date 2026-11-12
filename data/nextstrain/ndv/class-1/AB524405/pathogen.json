@@ -95,6 +95,9 @@
     "L"
   ],
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 6.579813133307014e-07,
+    "muW": 0.0037164728612616494,
+    "muR": 0.31267272009474933
   }
 }

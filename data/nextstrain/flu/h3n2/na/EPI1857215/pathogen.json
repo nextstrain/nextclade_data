@@ -254,6 +254,9 @@
     "reference name": "A/Darwin/6/2021"
   },
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 6.9492703266157055e-06,
+    "muW": 0.0010030074703685984,
+    "muR": 0.017373175816539264
   }
 }

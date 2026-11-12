@@ -9639,6 +9639,9 @@
     "nextstrain/sars-cov-2/wuhan-hu-1"
   ],
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 3.344146072300438e-07,
+    "muW": 0.00017091059676747105,
+    "muR": 0.006119787312309802
   }
 }

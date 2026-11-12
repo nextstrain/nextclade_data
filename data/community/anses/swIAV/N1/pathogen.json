@@ -99,6 +99,9 @@
     "reference name": "Inferred from A/California/07/2009 (48 mutations)"
   },
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 7.092198581560284e-06,
+    "muW": 0.013101480722480059,
+    "muR": 0.28936170212765955
   }
 }

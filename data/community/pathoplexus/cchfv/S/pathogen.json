@@ -58,5 +58,11 @@
   },
   "mutLabels": {
     "nucMutLabelMap": {}
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 5.980861244019139e-06,
+    "muW": 0.004614522231787151,
+    "muR": 0.1901913875598086
   }
 }

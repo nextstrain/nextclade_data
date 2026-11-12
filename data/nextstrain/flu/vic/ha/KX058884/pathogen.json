@@ -118,6 +118,9 @@
     "reference name": "B/Brisbane/60/2008-egg"
   },
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 5.305039787798409e-06,
+    "muW": 0.0007922034861690034,
+    "muR": 0.01856763925729443
   }
 }

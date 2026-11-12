@@ -153,6 +153,9 @@
     "reference name": "hRSV/B/Australia/VIC-RCH056/2019"
   },
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 6.56943896991197e-07,
+    "muW": 0.0009061584849545444,
+    "muR": 0.015503875968992248
   }
 }

@@ -51,6 +51,9 @@
     "web": "3.0.0"
   },
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 5.509641873278237e-06,
+    "muW": 0.010822802698294326,
+    "muR": 0.3046831955922865
   }
 }

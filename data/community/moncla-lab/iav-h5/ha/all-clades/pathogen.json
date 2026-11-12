@@ -111,6 +111,9 @@
     "tag": "unreleased"
   },
   "recombination": {
-    "enabled": true
+    "enabled": true,
+    "gamma": 5.681818181818182e-06,
+    "muW": 0.07735690235690236,
+    "muR": 0.24829545454545454
   }
 }
