@@ -7425,7 +7425,7 @@
           "attributes": {
             "name": "Hepatitis C virus (all genotypes)",
             "reference name": "HCV isolate H77",
-            "reference accession": "NC_038882.1"
+            "reference accession": "NC_004102.1"
           },
           "files": {
             "reference": "reference.fasta",
