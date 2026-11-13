@@ -57,6 +57,7 @@
     }
   ],
   "defaultCds": "NS3",
+  "shortcuts": ["hcv"],
   "qc": {
     "missingData": {
       "enabled": true,
