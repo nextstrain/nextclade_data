@@ -18,12 +18,12 @@
   "attributes": {
     "name": "Hepatitis C virus (all genotypes)",
     "reference name": "HCV isolate H77",
-    "reference accession": "NC_038882.1"
+    "reference accession": "NC_004102.1"
   },
   "alignmentParams": {
     "penaltyGapOpen": 15,
-    "penaltyGapOpenInFrame": 21,
-    "penaltyGapOpenOutOfFrame": 31,
+    "penaltyGapOpenInFrame": 51,
+    "penaltyGapOpenOutOfFrame": 71,
     "gapAlignmentSide": "left",
     "excessBandwidth": 100,
     "terminalBandwidth": 200,
@@ -32,9 +32,18 @@
     "minMatchLength": 40,
     "allowedMismatches": 12,
     "windowSize": 30,
-    "minSeedCover": 0.05
+    "minSeedCover": 0.05,
+    "retryReverseComplement": true
   },
   "placementMaskRanges": [
+    {
+      "begin": 0,
+      "end": 50
+    },
+    {
+      "begin": 1490,
+      "end": 1570
+    },
     {
       "begin": 2045,
       "end": 2070
@@ -53,7 +62,7 @@
     },
     {
       "begin": 9375,
-      "end": 9599
+      "end": 9646
     }
   ],
   "defaultCds": "NS3",
@@ -68,7 +77,7 @@
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 20
+      "mixedSitesThreshold": 50
     },
     "privateMutations": {
       "enabled": true,
@@ -87,7 +96,177 @@
     },
     "stopCodons": {
       "enabled": true,
-      "scoreWeight": 40
+      "scoreWeight": 40,
+      "ignoredStopCodons": [
+        {
+          "cdsName": "F",
+          "codon": 120
+        },
+        {
+          "cdsName": "F",
+          "codon": 121
+        },
+        {
+          "cdsName": "F",
+          "codon": 122
+        },
+        {
+          "cdsName": "F",
+          "codon": 123
+        },
+        {
+          "cdsName": "F",
+          "codon": 124
+        },
+        {
+          "cdsName": "F",
+          "codon": 125
+        },
+        {
+          "cdsName": "F",
+          "codon": 126
+        },
+        {
+          "cdsName": "F",
+          "codon": 127
+        },
+        {
+          "cdsName": "F",
+          "codon": 128
+        },
+        {
+          "cdsName": "F",
+          "codon": 129
+        },
+        {
+          "cdsName": "F",
+          "codon": 130
+        },
+        {
+          "cdsName": "F",
+          "codon": 131
+        },
+        {
+          "cdsName": "F",
+          "codon": 132
+        },
+        {
+          "cdsName": "F",
+          "codon": 133
+        },
+        {
+          "cdsName": "F",
+          "codon": 134
+        },
+        {
+          "cdsName": "F",
+          "codon": 135
+        },
+        {
+          "cdsName": "F",
+          "codon": 136
+        },
+        {
+          "cdsName": "F",
+          "codon": 137
+        },
+        {
+          "cdsName": "F",
+          "codon": 138
+        },
+        {
+          "cdsName": "F",
+          "codon": 139
+        },
+        {
+          "cdsName": "F",
+          "codon": 140
+        },
+        {
+          "cdsName": "F",
+          "codon": 141
+        },
+        {
+          "cdsName": "F",
+          "codon": 142
+        },
+        {
+          "cdsName": "F",
+          "codon": 143
+        },
+        {
+          "cdsName": "F",
+          "codon": 144
+        },
+        {
+          "cdsName": "F",
+          "codon": 145
+        },
+        {
+          "cdsName": "F",
+          "codon": 146
+        },
+        {
+          "cdsName": "F",
+          "codon": 147
+        },
+        {
+          "cdsName": "F",
+          "codon": 148
+        },
+        {
+          "cdsName": "F",
+          "codon": 149
+        },
+        {
+          "cdsName": "F",
+          "codon": 150
+        },
+        {
+          "cdsName": "F",
+          "codon": 151
+        },
+        {
+          "cdsName": "F",
+          "codon": 152
+        },
+        {
+          "cdsName": "F",
+          "codon": 153
+        },
+        {
+          "cdsName": "F",
+          "codon": 154
+        },
+        {
+          "cdsName": "F",
+          "codon": 155
+        },
+        {
+          "cdsName": "F",
+          "codon": 156
+        },
+        {
+          "cdsName": "F",
+          "codon": 157
+        },
+        {
+          "cdsName": "F",
+          "codon": 158
+        },
+        {
+          "cdsName": "F",
+          "codon": 159
+        },
+        {
+          "cdsName": "F",
+          "codon": 160
+        },
+        {
+          "cdsName": "F",
+          "codon": 161
+        }
+      ]
     }
   },
   "version": {
