@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region AB524405.1 1 15198
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2560319
+AB524405.1	DDBJ	region	1	15198	.	+	.	ID=AB524405.1:1..15198;Dbxref=taxon:2560319;gbkey=Src;isolate=Goose/Alaska/415/91;mol_type=viral cRNA;note=lineage 6;old-name=Avian orthoavulavirus 1
+AB524405.1	DDBJ	CDS	122	1591	.	+	0	Name=N;gene=N;gbkey=CDS;protein_id=BAI66067.1;ID=cds-BAI66067.1;Dbxref=NCBI_GP:BAI66067.1;product=nucleocapsid protein
+AB524405.1	DDBJ	CDS	1887	3086	.	+	0	Name=P;gene=P;gbkey=CDS;protein_id=BAI66068.1;ID=cds-BAI66068.1;product=phosphoprotein;Dbxref=NCBI_GP:BAI66068.1
+AB524405.1	DDBJ	CDS	3302	4396	.	+	0	Name=M;gene=M;gbkey=CDS;protein_id=BAI66069.1;ID=cds-BAI66069.1;product=matrix protein;Dbxref=NCBI_GP:BAI66069.1
+AB524405.1	DDBJ	CDS	4556	6217	.	+	0	Name=F;gene=F;gbkey=CDS;protein_id=BAI66070.1;ID=cds-BAI66070.1;product=fusion protein;Dbxref=NCBI_GP:BAI66070.1
+AB524405.1	DDBJ	CDS	6424	8274	.	+	0	Name=HN;gene=HN;gbkey=CDS;protein_id=BAI66071.1;ID=cds-BAI66071.1;Dbxref=NCBI_GP:BAI66071.1;product=hemagglutinin-neuraminidase protein
+AB524405.1	DDBJ	CDS	8393	15007	.	+	0	Name=L;gene=L;gbkey=CDS;protein_id=BAI66072.1;ID=cds-BAI66072.1;Dbxref=NCBI_GP:BAI66072.1;product=large polymerase protein

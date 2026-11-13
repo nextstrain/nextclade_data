@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-08-19T11:35:25Z
 
 Initial release of an Enterovirus A71 dataset for lineage classification!

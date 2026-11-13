@@ -1,0 +1,3 @@
+##gff-version 3
+##sequence-region AF144305.1 1 1760
+AF144305.1	feature	gene	22	1728	.	+	.	gene_name="HA"

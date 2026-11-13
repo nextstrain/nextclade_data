@@ -102,5 +102,11 @@
     "segment": "ha",
     "reference accession": "CY121680",
     "reference name": "Inferred from A/California/07/2009 (261 mutations)"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 5.707762557077626e-06,
+    "muW": 0.03874243558278649,
+    "muR": 0.4920091324200913
   }
 }

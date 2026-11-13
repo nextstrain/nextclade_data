@@ -116,5 +116,11 @@
     "segment": "ha",
     "reference accession": "KX058884",
     "reference name": "B/Brisbane/60/2008-egg"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 5.305039787798409e-06,
+    "muW": 0.0010607725964333374,
+    "muR": 0.12254641909814323
   }
 }

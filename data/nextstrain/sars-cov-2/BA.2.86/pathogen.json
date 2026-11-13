@@ -9961,5 +9961,11 @@
   "attributes": {
     "name": "SARS-CoV-2 (BA.2.86)",
     "reference name": "Wuhan-Hu-1 with BA.2.86 SNPs"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 3.344146072300438e-07,
+    "muW": 0.00011697206266229998,
+    "muR": 0.0034779119151924554
   }
 }

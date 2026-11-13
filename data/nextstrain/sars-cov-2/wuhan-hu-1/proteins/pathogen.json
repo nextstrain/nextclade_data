@@ -9632,5 +9632,11 @@
     "name": "SARS-CoV-2 (Mature proteins)",
     "reference name": "Wuhan-Hu-1/2019",
     "reference accession": "MN908947"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 3.344146072300438e-07,
+    "muW": 0.00017088428562606823,
+    "muR": 0.006119787312309802
   }
 }

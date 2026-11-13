@@ -135,5 +135,11 @@
     "name": "RSV-A",
     "reference accession": "EPI_ISL_412866",
     "reference name": "hRSV/A/England/397/2017"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 6.568144499178982e-07,
+    "muW": 0.0009103753770955054,
+    "muR": 0.017142857142857144
   }
 }

@@ -96,5 +96,11 @@
     "segment": "na",
     "reference accession": "CY114383",
     "reference name": "Inferred from A/Wisconsin/67/2005 (125 mutations)"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 6.963788300835654e-06,
+    "muW": 0.03263897299261233,
+    "muR": 0.26880222841225626
   }
 }

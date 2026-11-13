@@ -57,5 +57,11 @@
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 1.658374792703151e-05,
+    "muW": 0.011253149933047449,
+    "muR": 0.23383084577114427
   }
 }
