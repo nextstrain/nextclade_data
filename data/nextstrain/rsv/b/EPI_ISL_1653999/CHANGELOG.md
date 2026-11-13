@@ -1,3 +1,7 @@
+## Unreleased
+
+QC: the thresholds of the private mutations, mixed sites and missing data rules scale with the length of each sequence. A sequence that covers only a part of the genome, such as one gene, is judged by the density of mutations, ambiguous nucleotides and missing data, instead of by thresholds for the full genome. Nextclade versions without QC length scaling ignore this setting and keep the thresholds for the full genome.
+
 ## 2026-04-14T11:55:23Z
 
 - Remove redundant `geneOrderPreference` (superseded by `cdsOrderPreference`)
