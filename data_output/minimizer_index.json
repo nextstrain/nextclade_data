@@ -197309,7 +197309,7 @@
       "expectedMinimizerHits": 108.625
     },
     {
-      "name": "nextstrain/hcv/AF009606",
+      "name": "nextstrain/hcv/NC_004102",
       "length": 9479,
       "nMinimizers": 591,
       "expectedMinimizerHits": 591.3839285714286

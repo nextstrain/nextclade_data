@@ -7418,7 +7418,10 @@
           }
         },
         {
-          "path": "nextstrain/hcv/AF009606",
+          "path": "nextstrain/hcv/NC_004102",
+          "shortcuts": [
+            "hcv"
+          ],
           "attributes": {
             "name": "Hepatitis C virus (all genotypes)",
             "reference name": "HCV isolate H77",
@@ -7436,7 +7439,7 @@
           "capabilities": {
             "clades": 8,
             "customClades": {
-              "subtype": 46
+              "subtype": 92
             },
             "qc": [
               "missingData",
