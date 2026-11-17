@@ -8,6 +8,11 @@
 | RefName              | Oropouche virus segment L                |
 | RefAccession         | NC_005776.1                              |
 
+## Genome Annotation
+
+The L segment encodes one RNA-dependent RNA polymerase, annotated as the CDS `RdRp`. Unlike the M
+polyprotein, the L protein is not known to be processed into separate mature proteins.
+
 ## Scope of This Dataset
 
 The dataset aims to enable the quality control of segment L ofOropouche virus using ncbi refseq as reference.

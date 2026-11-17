@@ -53,21 +53,21 @@
             "begin": 788,
             "end": 792
           },
-          "cdsName": "L"
+          "cdsName": "RdRp"
         },
         {
           "codonRange": {
             "begin": 797,
             "end": 800
           },
-          "cdsName": "L"
+          "cdsName": "RdRp"
         },
         {
           "codonRange": {
             "begin": 846,
             "end": 855
           },
-          "cdsName": "L"
+          "cdsName": "RdRp"
         }
       ]
     },
@@ -99,5 +99,5 @@
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "L"
+  "defaultCds": "RdRp"
 }

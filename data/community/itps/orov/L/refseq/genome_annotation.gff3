@@ -4,4 +4,4 @@
 ##sequence-region NC_005776.1 1 6846
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=118655
 NC_005776.1	RefSeq	region	1	6846	.	+	.	ID=NC_005776.1:1..6846;Dbxref=taxon:118655;Name=L;gbkey=Src;genome=genomic;mol_type=genomic RNA;segment=L
-NC_005776.1	GenBank	gene	44	6796	.	+	.	gene_name=L
+NC_005776.1	GenBank	CDS	44	6796	.	+	0	ID=cds-RdRp;Name=RdRp;product=RNA polymerase
