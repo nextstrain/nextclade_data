@@ -29,15 +29,7 @@
   "qc": {
     "frameShifts": {
       "enabled": true,
-      "ignoredFrameShifts": [
-        {
-          "cdsName": "Gc",
-          "codonRange": {
-            "begin": 912,
-            "end": 941
-          }
-        }
-      ]
+      "scoreWeight": 37.5
     },
     "missingData": {
       "enabled": true,
@@ -60,16 +52,17 @@
       "enabled": false
     },
     "stopCodons": {
-      "enabled": true
+      "enabled": true,
+      "scoreWeight": 37.5
     }
   },
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "M",
+  "defaultCds": "Gpc",
   "cdsOrderPreference": [
-    "M",
+    "Gpc",
     "Gn",
     "NSm",
     "Gc"

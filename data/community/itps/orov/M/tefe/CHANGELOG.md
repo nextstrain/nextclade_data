@@ -1,28 +1,36 @@
 ## Unreleased
 
-Added the mature products of the M-segment glycoprotein precursor as separate CDS, so that amino
-acid changes are now reported against Gn, NSm and Gc in addition to the precursor. The GenBank
-record PP154171.1 annotates only the uncleaved precursor.
+Renamed the precursor CDS from `M` to `Gpc` and added the mature products of the M-segment
+glycoprotein precursor as separate CDS, so that amino acid changes are now reported against Gn,
+NSm and Gc in addition to the precursor. The GenBank record PP154171.1 annotates only the
+uncleaved precursor.
 
 | CDS | Precursor residues | Nucleotides in PP154171.1 |
-| --- | ------------------ | ------------------- |
-| M (precursor, unchanged) | 1-1420 | 21..4283 |
-| Gn | 17-306 | 69..938 |
-| NSm | 307-481 | 939..1463 |
-| Gc | 481-1420 | 1461..4283 |
+| --- | ------------------ | -------------------------- |
+| Gpc (precursor) | 1-1420 | 21..4283 |
+| Gn | 17-335 | 69..1025 |
+| NSm | 336-481 | 1026..1463 |
+| Gc | 482-1420 | 1464..4283 |
 
-The boundaries follow the conserved domain regions annotated on the reference's own protein record
-(Bunya_G2 and bunya_NSm) together with the chain boundaries of reviewed Orthobunyavirus envelopment
-polyproteins (Schmallenberg H2AM12, Bunyamwera P04505, La Crosse P09612, snowshoe hare P04875,
-Guaroa P12430) projected onto the Oropouche precursor by alignment.
+The boundaries follow Barbosa et al., J Virol 2023 (https://doi.org/10.1128/jvi.01331-22): the
+secretion signal sequence is residues 1-16, SignalP 5.0 predicts signal peptidase cleavage between
+G335 and E336, and the study expresses Gc as residues 482-1420. Unlike Bunyamwera virus, OROV
+retains both Gn transmembrane domains during maturation. The Gc boundary is inferred by homology
+with the Bunyamwera Gc N-terminus rather than measured for OROV, and processing of the polyprotein
+is an active research topic, so the boundaries are provisional.
 
-The precursor CDS keeps the name `M`, so existing `M:` amino acid mutation labels are unaffected.
-The reference tree carries amino acid mutations for the new CDS.
+**Breaking change**: the precursor CDS is now named `Gpc` instead of `M`, because `M` names the
+segment rather than a protein. Amino acid mutation labels that previously read `M:` now read
+`Gpc:`, and `defaultCds` changed accordingly.
 
-Because Gc overlaps the precursor, a frameshift in the overlap is detected once per CDS and would
-be scored twice by the frameshift QC rule. The known frameshift at the 3' end of the precursor is
-therefore listed in `qc.frameShifts.ignoredFrameShifts` for Gc, so that it is still reported but
-scored only once, as in the previous release.
+Because the products overlap the precursor, a frameshift or a premature stop codon inside residues
+17-1420 is detected once for `Gpc` and once for the product that contains it. The frame shift and
+stop codon QC score weights are therefore halved to 37.5, so that such an event contributes the
+same QC score as in the previous release.
+
+The exception is residues 1-16, the secretion signal sequence, which belong to no product. An
+event there is detected once, so it now scores 37.5 rather than 75, and such a sequence can be
+reported as `good` where the previous release reported `mediocre`.
 
 ## 2026-05-12T16:39:06Z
 

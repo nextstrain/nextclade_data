@@ -10,21 +10,32 @@
 
 ## Genome Annotation
 
-The RefSeq record NC_005775.1 annotates only the uncleaved M-segment glycoprotein precursor. This
-dataset additionally annotates its mature products, so that amino acid changes are reported per
-protein:
+The RefSeq record NC_005775.1 annotates only the uncleaved M-segment glycoprotein precursor as a
+single CDS. This dataset names that CDS `Gpc` and additionally annotates its mature products, so
+that amino acid changes are reported per protein:
 
 | CDS | Product | Precursor residues | Nucleotides |
 | --- | ------- | ------------------ | ----------- |
-| M   | glycoprotein precursor | 1-1420 | 32..4294 |
-| Gn  | glycoprotein Gn | 17-306 | 80..949 |
-| NSm | nonstructural protein NSm | 307-481 | 950..1474 |
-| Gc  | glycoprotein Gc | 481-1420 | 1472..4294 |
+| Gpc | glycoprotein precursor | 1-1420 | 32..4294 |
+| Gn  | glycoprotein Gn | 17-335 | 80..1036 |
+| NSm | nonstructural protein NSm | 336-481 | 1037..1474 |
+| Gc  | glycoprotein Gc | 482-1420 | 1475..4294 |
 
-The product boundaries follow the conserved domain regions annotated on the reference's own protein
-record (Bunya_G2, bunya_NSm) together with the chain boundaries of reviewed Orthobunyavirus
-envelopment polyproteins projected onto the Oropouche precursor by alignment. Gn, NSm and Gc overlap
-the precursor CDS, which is retained unchanged under the name `M`.
+The boundaries follow [Barbosa et al., J Virol 2023](https://doi.org/10.1128/jvi.01331-22), which
+studied processing of the OROV M polyprotein directly:
+
+- Residues 1-16 are the secretion signal sequence, so mature Gn starts at residue 17.
+- SignalP 5.0 predicts signal peptidase cleavage between G335 and E336. Unlike Bunyamwera virus,
+  OROV retains both Gn transmembrane domains during maturation, so Gn extends to residue 335
+  rather than ending near residue 312.
+- The study expresses Gc as precursor residues 482-1420. That boundary is inferred by homology
+  with the experimentally mapped Bunyamwera Gc N-terminus ([Shi et al., PNAS
+  2016](https://doi.org/10.1073/pnas.1603364113)), not measured for OROV.
+
+Processing of the orthobunyavirus M polyprotein is an active research topic and further cleavage
+events may exist, so these product boundaries should be treated as provisional. Gn, NSm and Gc
+overlap the precursor CDS `Gpc`, so a change inside residues 17-1420 is reported both on `Gpc` and
+on the product that contains it.
 
 ## Scope of This Dataset
 
