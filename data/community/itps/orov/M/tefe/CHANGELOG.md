@@ -32,6 +32,10 @@ The exception is residues 1-16, the secretion signal sequence, which belong to n
 event there is detected once, so it now scores 37.5 rather than 75, and such a sequence can be
 reported as `good` where the previous release reported `mediocre`.
 
+The dataset is now maintained directly in nextstrain/nextclade_data rather than rebuilt from
+InstitutoTodosPelaSaude/nextclade-datasets-workflows. `meta.bugs`, `meta["source code"]` and the README
+now point to this repository, and `pathogen.json` gains a `maintenance` block naming the maintainers.
+
 ## 2026-05-12T16:39:06Z
 
 Initial release of a Oropouche Virus (OROV) dataset for segment M based on Tefe outbreak reference genome (ILMD_TF29).
