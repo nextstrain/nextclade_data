@@ -411,3 +411,7 @@ Exceptions to this recommendation include cases where relevant diversity is not 
 ### How do I add multiple nomenclature systems to my dataset?
 
 Nextclade supports adding multiple 'clade-like' attributes to the reference tree. These need to be assigned to the nodes of the reference tree (for example using `augur clades`) and specified in the `tree.json` file. Please consult the documentation on [clade-like attributes](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/04-reference-tree.html#clade-like-attributes).
+
+### Can Nextclade detect recombinant sequences?
+
+Nextclade can flag putative recombinant intervals: regions where private mutations relative to the parent are much denser than in the rest of the sequence, suggesting descent from a different lineage. Recombination detection is enabled by setting `recombination.enabled` in `pathogen.json`. It is best suited to pathogens where recombination between well-separated clades occurs, and requires the `qc.privateMutations` rule to be configured. Model parameters left unset are estimated from the reference tree, but we recommend tuning them on representative sequences and setting them explicitly in `pathogen.json`. See the documentation on [recombination detection](https://docs.nextstrain.org/projects/nextclade/en/latest/user/algorithm/08-recombination-detection.html) and the [pathogen configuration](https://docs.nextstrain.org/projects/nextclade/en/latest/user/input-files/05-pathogen-config.html#recombination).
