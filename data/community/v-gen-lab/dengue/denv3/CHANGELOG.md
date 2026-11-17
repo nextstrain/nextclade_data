@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-10-06T17:37:18Z
 
 - 2026 Annual update: added new lineages to the classification system as determined by the scientific committee.

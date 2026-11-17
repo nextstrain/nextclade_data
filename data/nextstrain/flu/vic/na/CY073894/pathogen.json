@@ -399,5 +399,11 @@
     "segment": "na",
     "reference accession": "CY073894",
     "reference name": "B/Brisbane/60/2008"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 7.137758743754461e-06,
+    "muW": 0.0009369311747312423,
+    "muR": 0.01641684511063526
   }
 }

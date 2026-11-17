@@ -242,5 +242,11 @@
     "segment": "na",
     "reference accession": "MW626056",
     "reference name": "A/Wisconsin/588/2019"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 6.978367062107467e-06,
+    "muW": 0.0008842213402824264,
+    "muR": 0.018143754361479414
   }
 }

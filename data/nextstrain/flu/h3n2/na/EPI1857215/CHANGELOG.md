@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-08-07T07:54:41Z
 
 - update reference tree with more recent sequences.

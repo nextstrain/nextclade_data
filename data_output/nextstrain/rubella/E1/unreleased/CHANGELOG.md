@@ -1,0 +1,19 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
+## 2026-11-04T12:19:40Z
+
+- Correct the description of the genotyping window and of the reference sequence in the README.
+
+## 2026-04-14T11:55:23Z
+
+- Fix typo: `excessBandwith` to `excessBandwidth`
+
+## 2025-09-09T12:13:13Z
+
+Add schema definition url to `pathogen.json`. This is a purely technical change, for convenience of dataset authors. The data itself is not modified.
+
+## 2025-07-01T21:21:21Z
+
+Initial release of rubella virus (E1 region only) dataset.

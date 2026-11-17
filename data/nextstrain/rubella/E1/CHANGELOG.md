@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-11-04T12:19:40Z
 
 - Correct the description of the genotyping window and of the reference sequence in the README.

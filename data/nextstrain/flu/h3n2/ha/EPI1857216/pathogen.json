@@ -187,5 +187,11 @@
     "segment": "ha",
     "reference accession": "EPI1857216",
     "reference name": "A/Darwin/6/2021"
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 5.820721769499418e-06,
+    "muW": 0.0010272753214023269,
+    "muR": 0.027357392316647265
   }
 }

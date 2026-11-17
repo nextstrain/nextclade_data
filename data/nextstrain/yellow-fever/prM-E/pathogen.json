@@ -48,5 +48,11 @@
       "scoreWeight": 50,
       "windowSize": 50
     }
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 1.4880952380952381e-05,
+    "muW": 0.005107142857142857,
+    "muR": 0.21279761904761904
   }
 }

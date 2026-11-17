@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-11-10T06:33:44Z
 
 - Correct the reference strain name in the dataset overview: it is now `ancestral_sequence` (previously `Fermon`)

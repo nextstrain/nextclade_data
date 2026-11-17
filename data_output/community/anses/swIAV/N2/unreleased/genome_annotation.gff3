@@ -1,0 +1,10 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region CY114383.1 1 1436
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=393902
+N2_root_from_reference_CY114383.1	Genbank	region	1	1436	.	+	.	ID=CY114383.1:1..1436;Dbxref=taxon:393902;Name=6;bio-material=CEIRS#CIP047WI6705#;collection-date=2005;country=USA: Wisconsin;gbkey=Src;lab-host=xMDCK2 passage(s);mol_type=viral cRNA;nat-host=human;segment=6;serotype=H3N2;strain=A/Wisconsin/67/2005
+N2_root_from_reference_CY114383.1	Genbank	sequence_feature	1	1436	.	+	.	ID=id-CY114383.1:1..1436;Dbxref=IRD:NIGSP_CEIRS_CIP047_RFH3_00274.NA;gbkey=misc_feature
+N2_root_from_reference_CY114383.1	Genbank	gene	4	1413	.	+	.	ID=gene-NA;Name=NA;gbkey=Gene;gene=NA;gene_biotype=protein_coding
+N2_root_from_reference_CY114383.1	Genbank	CDS	4	1413	.	+	0	ID=cds-AFH00651.1;Parent=gene-NA;Dbxref=NCBI_GP:AFH00651.1;Name=NA;gbkey=CDS;gene=NA;product=neuraminidase;protein_id=AFH00651.1
+

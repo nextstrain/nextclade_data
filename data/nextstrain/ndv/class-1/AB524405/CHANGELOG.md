@@ -1,3 +1,7 @@
+## Unreleased
+
+- Preview only: enable recombination detection
+
 ## 2026-09-29T08:40:32Z
 
  - initial release of the draft NDV class 1 dataset

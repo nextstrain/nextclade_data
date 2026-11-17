@@ -48097,5 +48097,11 @@
     "name": "SARS-CoV-2 (XBB)",
     "reference name": "Wuhan-Hu-1 with XBB SNPs",
     "deprecated": true
+  },
+  "recombination": {
+    "enabled": true,
+    "gamma": 3.344146072300438e-07,
+    "muW": 0.00011796973372424806,
+    "muR": 0.0024077851720563153
   }
 }

@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_075404.1 1 15186
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2560319
+NC_075404.1	RefSeq	region	1	15186	.	+	.	ID=NC_075404.1:1..15186;Dbxref=taxon:2560319;country=United Kingdom: N. Ireland;gbkey=Src;genome=genomic;isolate=chicken/N. Ireland/Ulster/67;mol_type=genomic RNA;old-name=Newcastle disease virus
+NC_075404.1	RefSeq	CDS	122	1591	.	+	0	Name=N;gene=N;gbkey=CDS;locus_tag=QKC91_gp1;product=nucleoprotein;protein_id=YP_010790286.1;ID=cds-YP_010790286.1;Dbxref=GenBank:YP_010790286.1,GeneID:80527638
+NC_075404.1	RefSeq	CDS	1887	3074	.	+	0	Name=P;gene=P;gbkey=CDS;locus_tag=QKC91_gp2;product=phosphoprotein;protein_id=YP_010790287.1;ID=cds-YP_010790287.1;Dbxref=GenBank:YP_010790287.1,GeneID:80527633
+NC_075404.1	RefSeq	CDS	3290	4384	.	+	0	Name=M;gene=M;gbkey=CDS;locus_tag=QKC91_gp3;product=matrix protein;protein_id=YP_010790288.1;ID=cds-YP_010790288.1;Dbxref=GenBank:YP_010790288.1,GeneID:80527634
+NC_075404.1	RefSeq	CDS	4544	6205	.	+	0	Name=F;gene=F;gbkey=CDS;locus_tag=QKC91_gp4;product=fusion protein;protein_id=YP_010790289.1;ID=cds-YP_010790289.1;Dbxref=GenBank:YP_010790289.1,GeneID:80527635
+NC_075404.1	RefSeq	CDS	6412	8262	.	+	0	Name=HN;gene=HN;gbkey=CDS;locus_tag=QKC91_gp5;protein_id=YP_010790290.1;ID=cds-YP_010790290.1;product=hemagglutinin-neuraminidase;Dbxref=GenBank:YP_010790290.1,GeneID:80527636
+NC_075404.1	RefSeq	CDS	8381	14995	.	+	0	Name=L;gene=L;gbkey=CDS;locus_tag=QKC91_gp6;protein_id=YP_010790291.1;ID=cds-YP_010790291.1;product=RNA-dependent RNA polymerase;Dbxref=GenBank:YP_010790291.1,GeneID:80527637

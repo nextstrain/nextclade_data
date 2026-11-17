@@ -58,5 +58,11 @@
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "E"
+  "defaultCds": "E",
+  "recombination": {
+    "enabled": true,
+    "gamma": 9.339684318670029e-07,
+    "muW": 0.004316811029586243,
+    "muR": 0.08545811151583077
+  }
 }

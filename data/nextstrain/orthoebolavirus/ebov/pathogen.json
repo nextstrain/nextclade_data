@@ -69,5 +69,11 @@
     "ebola",
     "nextstrain/ebola",
     "nextstrain/ebola/zaire"
-  ]
+  ],
+  "recombination": {
+    "enabled": true,
+    "gamma": 5.274539796402764e-07,
+    "muW": 0.00010526146811082038,
+    "muR": 0.026689171369797985
+  }
 }
