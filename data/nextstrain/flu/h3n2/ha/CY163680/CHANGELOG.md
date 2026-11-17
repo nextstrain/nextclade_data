@@ -3,7 +3,6 @@ Designation of subclades K.1-K.4
 - [K.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/subclades/K.1.yml)
 - [K.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/subclades/K.2.yml)
 - [K.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/subclades/K.3.yml)
-- [K.4](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_HA/blob/main/subclades/K.4.yml)
 
 ## 2026-08-07T07:54:41Z
 
