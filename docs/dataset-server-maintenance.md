@@ -61,7 +61,49 @@ The build process can also be reproduced locally. This is useful when developing
 >
 > Note that due to 3-tier branch system, development is never blocked by the unreleased changes.
 
-The release is done by simply fast-forwarding the `release` branch to the current `master` branch. The Continuous integration will then deploy the dataset server directory to the `release` environment and the updated datasets will become available in the `release` deployment of Nextclade Web and for release versions of Nextclade CLI.
+A release fast-forwards the `staging` and `release` branches to the current `master` branch. The CI then deploys each branch to its environment (see the table above), and the updated datasets become available in the `release` deployment of Nextclade Web and for release versions of Nextclade CLI.
+
+#### Before the release
+
+- Update your local copy with `git fetch origin`, because a stale local branch releases an old commit
+- Check that the latest CI run on `master` succeeded, and that no CI run is in progress on `master`, `staging`, or `release`
+- Review the changes to release: `git log --oneline origin/release..origin/master` and `git diff --stat origin/release origin/master -- data/`
+- Check that each changed dataset has a `## Unreleased` section at the top of its `CHANGELOG.md`. The release CI fails for a changed dataset without this section
+
+#### Make the release
+
+- Run `./scripts/release.sh`, or push the branches directly: `git push origin origin/master:staging origin/master:release`
+- If the message of the newest commit on `master` contains `[skip ci]` (usually the bot commit `chore: rebuild [skip ci]`), GitHub starts no CI run for the push. In this case, push an empty commit to `master` first, wait until its CI run succeeds, and then release this commit:
+
+  ```bash
+  git commit --allow-empty -m "chore: skip ci"
+  git push origin master
+  ```
+
+#### What the release CI does
+
+On the `release` branch, the CI:
+
+- replaces the `## Unreleased` heading in the changelog of each released dataset with the release date
+- commits these changes as `chore: release '<tag>'` on the `release` branch, where `<tag>` is the release timestamp
+- creates a GitHub release with this tag, the list of released datasets, and their release notes
+- deploys the dataset server to the `release` environment
+
+#### After the release
+
+- Fast-forward `master` and `staging` to the release commit, so that the next release can fast-forward again:
+
+  ```bash
+  git fetch origin
+  git push origin origin/release:master origin/release:staging
+  ```
+
+- Check that the CI runs on `master` and `staging` succeed
+- Open each released dataset in Nextclade Web with its example sequences: `https://clades.nextstrain.org/?dataset-name=<path>&input-fasta=example`, where `<path>` is the dataset path relative to `data/`, for example `nextstrain/flu/h3n2/ha/EPI1857216`
+
+#### When CI fails
+
+- GitHub Actions sometimes fails for reasons unrelated to the datasets: a lost runner, a network timeout, or a GitHub server error. Rerun the failed jobs on the run page, or with `gh run rerun <run-id> --failed`
 
 ## Maintenance of a custom Nextclade dataset server
 
