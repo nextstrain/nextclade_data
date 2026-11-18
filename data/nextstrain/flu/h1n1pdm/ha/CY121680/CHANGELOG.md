@@ -1,3 +1,12 @@
+## Unreleased
+- Alias D.3.1.1 as E
+- Add subclades
+  * [E.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/E.1.yml)
+  * [E.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/E.2.yml)
+  * [E.3](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/E.3.yml)
+  * [E.4](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/E.4.yml)
+
+
 ## 2026-04-14T11:55:23Z
 
 - Remove empty `nucMutLabelMap` and legacy `nucMutLabelMapReverse`

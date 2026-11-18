@@ -1,3 +1,9 @@
+## Unreleased
+- Alias of C for B.4.2.2
+- Designation of subclades
+  * [C.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/main/subclades/C.1.yml)
+  * [C.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/main/subclades/C.2.yml)
+
 ## 2026-08-07T07:54:41Z
 
 - update reference tree with more recent sequences.
