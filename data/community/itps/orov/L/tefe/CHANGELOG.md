@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-18T10:44:04Z
 
 **Breaking change**: renamed the CDS from `L` to `RdRp`, because `L` names the segment rather than
 the encoded RNA-dependent RNA polymerase. Amino acid mutation labels that previously read `L:` now

@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-18T10:44:04Z
 Add subclades
   - [D.1.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/main/subclades/D.1.1.yml)
   - [D.1.2](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_NA/blob/main/subclades/D.1.2.yml)

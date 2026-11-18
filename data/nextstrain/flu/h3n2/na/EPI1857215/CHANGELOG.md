@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-18T10:44:04Z
 - Alias of C for B.4.2.2
 - Designation of subclades
   * [C.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H3N2_NA/blob/main/subclades/C.1.yml)

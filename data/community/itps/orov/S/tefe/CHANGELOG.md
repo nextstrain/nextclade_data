@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-18T10:44:04Z
 
 The dataset is now maintained directly in nextstrain/nextclade_data rather than rebuilt from
 InstitutoTodosPelaSaude/nextclade-datasets-workflows. `meta.bugs`, `meta["source code"]` and the README

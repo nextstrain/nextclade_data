@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-18T10:44:04Z
 
 Renamed the precursor CDS from `M` to `Gpc` and added the mature products of the M-segment
 glycoprotein precursor as separate CDS, so that amino acid changes are now reported against Gn,

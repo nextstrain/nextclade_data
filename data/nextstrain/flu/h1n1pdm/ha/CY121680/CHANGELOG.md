@@ -1,4 +1,4 @@
-## Unreleased
+## 2026-11-18T10:44:04Z
 - Alias D.3.1.1 as E
 - Add subclades
   * [E.1](https://github.com/influenza-clade-nomenclature/seasonal_A-H1N1pdm_HA/blob/main/subclades/E.1.yml)
