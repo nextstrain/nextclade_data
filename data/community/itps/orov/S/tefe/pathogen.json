@@ -23,8 +23,25 @@
     "treeJson": "tree.json"
   },
   "meta": {
-    "bugs": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/issues",
-    "source code": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/tree/main/orov"
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/S/tefe"
+  },
+  "maintenance": {
+    "website": [
+      "https://www.itps.org.br/"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/S/tefe"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/nextclade_data/issues"
+    ],
+    "organizations": [
+      "Instituto Todos pela Saúde (ITpS)"
+    ],
+    "authors": [
+      "Filipe Moreira <https://github.com/filiperomero2>"
+    ]
   },
   "qc": {
     "frameShifts": {

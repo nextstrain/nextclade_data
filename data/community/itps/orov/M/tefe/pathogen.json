@@ -23,12 +23,30 @@
     "treeJson": "tree.json"
   },
   "meta": {
-    "bugs": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/issues",
-    "source code": "https://github.com/InstitutoTodosPelaSaude/nextclade-datasets-workflows/tree/main/orov"
+    "bugs": "https://github.com/nextstrain/nextclade_data/issues",
+    "source code": "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/M/tefe"
+  },
+  "maintenance": {
+    "website": [
+      "https://www.itps.org.br/"
+    ],
+    "source code": [
+      "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/M/tefe"
+    ],
+    "issues": [
+      "https://github.com/nextstrain/nextclade_data/issues"
+    ],
+    "organizations": [
+      "Instituto Todos pela Saúde (ITpS)"
+    ],
+    "authors": [
+      "Filipe Moreira <https://github.com/filiperomero2>"
+    ]
   },
   "qc": {
     "frameShifts": {
-      "enabled": true
+      "enabled": true,
+      "scoreWeight": 37.5
     },
     "missingData": {
       "enabled": true,
@@ -51,12 +69,19 @@
       "enabled": false
     },
     "stopCodons": {
-      "enabled": true
+      "enabled": true,
+      "scoreWeight": 37.5
     }
   },
   "schemaVersion": "3.0.0",
   "version": {
     "tag": "unreleased"
   },
-  "defaultCds": "M"
+  "defaultCds": "Gpc",
+  "cdsOrderPreference": [
+    "Gpc",
+    "Gn",
+    "NSm",
+    "Gc"
+  ]
 }
