@@ -1,0 +1,10 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_005775.1 1 4385
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=118655
+NC_005775.1	RefSeq	region	1	4385	.	+	.	ID=NC_005775.1:1..4385;Dbxref=taxon:118655;Name=M;gbkey=Src;mol_type=genomic RNA;segment=M;strain=BeAn19991
+NC_005775.1	GenBank	CDS	32	4294	.	+	0	ID=cds-Gpc;Name=Gpc;product=glycoprotein precursor
+NC_005775.1	GenBank	CDS	80	1036	.	+	0	ID=cds-Gn;Name=Gn;product=glycoprotein Gn
+NC_005775.1	GenBank	CDS	1037	1474	.	+	0	ID=cds-NSm;Name=NSm;product=nonstructural protein NSm
+NC_005775.1	GenBank	CDS	1475	4294	.	+	0	ID=cds-Gc;Name=Gc;product=glycoprotein Gc

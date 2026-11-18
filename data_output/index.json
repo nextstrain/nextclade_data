@@ -9412,6 +9412,23 @@
             "reference name": "Oropouche virus, L segment",
             "experimental": true
           },
+          "maintenance": {
+            "website": [
+              "https://www.itps.org.br/"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/L/refseq"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Instituto Todos pela Saúde (ITpS)"
+            ],
+            "authors": [
+              "Filipe Moreira <https://github.com/filiperomero2>"
+            ]
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -9432,6 +9449,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-12T16:39:06Z",
               "tag": "2026-05-12--16-39-06Z",
               "compatibility": {
@@ -9441,8 +9465,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-12T16:39:06Z",
-            "tag": "2026-05-12--16-39-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -9457,6 +9480,23 @@
             "reference name": "Oropouche virus, M segment",
             "experimental": true
           },
+          "maintenance": {
+            "website": [
+              "https://www.itps.org.br/"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/M/refseq"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Instituto Todos pela Saúde (ITpS)"
+            ],
+            "authors": [
+              "Filipe Moreira <https://github.com/filiperomero2>"
+            ]
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -9477,6 +9517,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-12T16:39:06Z",
               "tag": "2026-05-12--16-39-06Z",
               "compatibility": {
@@ -9486,8 +9533,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-12T16:39:06Z",
-            "tag": "2026-05-12--16-39-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -9502,6 +9548,23 @@
             "reference name": "Oropouche virus ILMD_TF29 (tefe), M segment",
             "experimental": true
           },
+          "maintenance": {
+            "website": [
+              "https://www.itps.org.br/"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/M/tefe"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Instituto Todos pela Saúde (ITpS)"
+            ],
+            "authors": [
+              "Filipe Moreira <https://github.com/filiperomero2>"
+            ]
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -9522,6 +9585,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-12T16:39:06Z",
               "tag": "2026-05-12--16-39-06Z",
               "compatibility": {
@@ -9531,8 +9601,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-12T16:39:06Z",
-            "tag": "2026-05-12--16-39-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -9547,6 +9616,23 @@
             "reference name": "Oropouche virus ILMD_TF29 (tefe), L segment",
             "experimental": true
           },
+          "maintenance": {
+            "website": [
+              "https://www.itps.org.br/"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/L/tefe"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Instituto Todos pela Saúde (ITpS)"
+            ],
+            "authors": [
+              "Filipe Moreira <https://github.com/filiperomero2>"
+            ]
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -9567,6 +9653,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-12T16:39:06Z",
               "tag": "2026-05-12--16-39-06Z",
               "compatibility": {
@@ -9576,8 +9669,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-12T16:39:06Z",
-            "tag": "2026-05-12--16-39-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -9592,6 +9684,23 @@
             "reference name": "Oropouche virus ILMD_TF29 (tefe), S segment",
             "experimental": true
           },
+          "maintenance": {
+            "website": [
+              "https://www.itps.org.br/"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/S/tefe"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Instituto Todos pela Saúde (ITpS)"
+            ],
+            "authors": [
+              "Filipe Moreira <https://github.com/filiperomero2>"
+            ]
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -9612,6 +9721,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-12T16:39:06Z",
               "tag": "2026-05-12--16-39-06Z",
               "compatibility": {
@@ -9621,8 +9737,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-12T16:39:06Z",
-            "tag": "2026-05-12--16-39-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
@@ -9637,6 +9752,23 @@
             "reference name": "Oropouche virus, S segment",
             "experimental": true
           },
+          "maintenance": {
+            "website": [
+              "https://www.itps.org.br/"
+            ],
+            "source code": [
+              "https://github.com/nextstrain/nextclade_data/tree/master/data/community/itps/orov/S/refseq"
+            ],
+            "issues": [
+              "https://github.com/nextstrain/nextclade_data/issues"
+            ],
+            "organizations": [
+              "Instituto Todos pela Saúde (ITpS)"
+            ],
+            "authors": [
+              "Filipe Moreira <https://github.com/filiperomero2>"
+            ]
+          },
           "files": {
             "changelog": "CHANGELOG.md",
             "examples": "sequences.fasta",
@@ -9657,6 +9789,13 @@
           },
           "versions": [
             {
+              "tag": "unreleased",
+              "compatibility": {
+                "cli": "3.0.0-alpha.0",
+                "web": "3.0.0-alpha.0"
+              }
+            },
+            {
               "updatedAt": "2026-05-12T16:39:06Z",
               "tag": "2026-05-12--16-39-06Z",
               "compatibility": {
@@ -9666,8 +9805,7 @@
             }
           ],
           "version": {
-            "updatedAt": "2026-05-12T16:39:06Z",
-            "tag": "2026-05-12--16-39-06Z",
+            "tag": "unreleased",
             "compatibility": {
               "cli": "3.0.0-alpha.0",
               "web": "3.0.0-alpha.0"
