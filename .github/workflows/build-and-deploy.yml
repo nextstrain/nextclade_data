@@ -9,8 +9,8 @@ on:
   workflow_call:
 
 concurrency:
-  group: cli-${{ github.workflow }}-${{ github.ref_type }}-${{ github.head_ref || github.ref_name || github.run_id }}
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.head.repo.full_name || github.repository }}-${{ github.head_ref || github.ref_name || github.run_id }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/release' }}
 
 defaults:
   run:
