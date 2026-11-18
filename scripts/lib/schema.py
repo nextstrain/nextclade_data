@@ -21,6 +21,8 @@ SCHEMA_FILENAME = "input-pathogen-json.schema.json"
 SCHEMA_PATH = f"packages/nextclade-schemas/{SCHEMA_FILENAME}"
 SCHEMA_URL_TEMPLATE = "https://raw.githubusercontent.com/{repo}/refs/heads/{branch}/{path}"
 FUZZY_MATCH_THRESHOLD = 80.0
+WORKFLOW_ROW_PATTERN = re.compile(r"^\|\s*workflow\s*\|(?P<value>[^|\n]*)\|", re.IGNORECASE | re.MULTILINE)
+GITHUB_REPO_PATTERN = re.compile(r"github\.com/(?P<owner>[\w.-]+)/(?P<repo>[\w.-]+)")
 
 
 def validate_pathogen_json(
@@ -43,7 +45,7 @@ def validate_pathogen_json(
     raise ValidationError(f"Schema validation failed for '{filepath}':\n" + '\n'.join(errors))
 
   dataset_path = dataset_path or _extract_dataset_path(filepath)
-  upstream_repo = _infer_upstream_repo(dataset_path)
+  upstream_repo = _read_upstream_repo(data, filepath)
   findings = _check_known_defects(data, dataset_path, filepath, upstream_repo)
   ctx.validated_files.add(filepath)
 
@@ -141,15 +143,25 @@ def _extract_dataset_path(filepath: str) -> str:
     return filepath
 
 
-def _infer_upstream_repo(dataset_path: str) -> str | None:
-  parts = dataset_path.split("/")
-  if len(parts) >= 2:
-    collection, org = parts[0], parts[1]
-    if collection == "nextstrain":
-      return f"nextstrain/{org}"
-    if collection == "community":
-      return f"{org}/{parts[2]}" if len(parts) >= 3 else org
-  return None
+def parse_workflow_repo(readme: str) -> str | None:
+  """Return the GitHub 'owner/repo' of the 'workflow' row in a dataset README table."""
+  row = WORKFLOW_ROW_PATTERN.search(readme)
+  if row is None:
+    return None
+  repo = GITHUB_REPO_PATTERN.search(row["value"])
+  if repo is None:
+    return None
+  return f"{repo['owner']}/{repo['repo'].removesuffix('.git')}"
+
+
+def _read_upstream_repo(data: dict, filepath: str) -> str | None:
+  readme_name = (data.get("files") or {}).get("readme") or "README.md"
+  readme_path = Path(filepath).parent / readme_name
+  try:
+    readme = readme_path.read_text(encoding="utf-8")
+  except FileNotFoundError:
+    return None
+  return parse_workflow_repo(readme)
 
 
 def _build_schema_index(schema: dict) -> SchemaIndex:
