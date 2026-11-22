@@ -71,19 +71,28 @@
     "missingData": {
       "enabled": true,
       "scoreBias": 1000,
-      "missingDataThreshold": 1000
+      "missingDataThreshold": 1000,
+      "lengthScaling": {
+        "minLength": 1000
+      }
     },
     "mixedSites": {
       "enabled": true,
-      "mixedSitesThreshold": 50
+      "mixedSitesThreshold": 75,
+      "lengthScaling": {
+        "minLength": 1000
+      }
     },
     "privateMutations": {
       "enabled": true,
-      "typical": 500,
-      "cutoff": 1000,
+      "typical": 750,
+      "cutoff": 1300,
       "weightLabeledSubstitutions": 1,
       "weightReversionSubstitutions": 1,
-      "weightUnlabeledSubstitutions": 1
+      "weightUnlabeledSubstitutions": 1,
+      "lengthScaling": {
+        "minLength": 1000
+      }
     },
     "snpClusters": {
       "enabled": false
