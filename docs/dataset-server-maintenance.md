@@ -45,11 +45,11 @@ This allows each environment to act as an independent static file web server and
 
 This table contains a list of environments:
 
-| Dataset repo branch | Data domain name            | Nextclade Web domain name | Nextclade repo branch | Meaning                                                                                                                       |
-| ------------------- | --------------------------- | ------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| release             | data.clades.nextstrain.org  | clades.nextstrain.org     | release               | Final release, targeting all end users                                                                                        |
-| staging             | data.staging.nextstrain.org | staging.nextstrain.org    | staging               | Staging release, for last-minute testing and fixes before a final release is made, to not block progress on the master branch |
-| master              | data.master.nextstrain.org  | master.nextstrain.org     | all other branches    | Main development branch - accumulates features and bug fixes from pull requests branches                                      |
+| Dataset repo branch | Data domain name                   | Nextclade Web domain name     | Nextclade repo branch | Meaning                                                                                                                       |
+| ------------------- | ---------------------------------- | ----------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| release             | data.clades.nextstrain.org         | clades.nextstrain.org         | release               | Final release, targeting all end users                                                                                        |
+| staging             | data.staging.clades.nextstrain.org | staging.clades.nextstrain.org | staging               | Staging release, for last-minute testing and fixes before a final release is made, to not block progress on the master branch |
+| master              | data.master.clades.nextstrain.org  | master.clades.nextstrain.org  | all other branches    | Main development branch - accumulates features and bug fixes from pull requests branches                                      |
 
 ### Build locally
 
