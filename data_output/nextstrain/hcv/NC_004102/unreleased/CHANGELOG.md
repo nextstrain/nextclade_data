@@ -1,4 +1,5 @@
 ## Unreleased
+
 - Initial dataset creation
 - GFF3 annotation with CDS
-- Reference FASTA AF009606.1
+- Reference FASTA NC_004102.1
