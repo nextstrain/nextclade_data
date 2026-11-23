@@ -288,24 +288,21 @@ def get_new_dataset_order(datasets, dataset_order):
       f"Please make sure the entries are unique, to avoid ambiguity."
     )
 
-  # extra = set(dataset_order).difference(set(paths))
-  # if len(extra) > 0:
-  #   raise ValueError(
-  #     f"The '.dataset_order' list in 'collection.json' contains entries for datasets that are not found: "
-  #     f"{format_list(extra)}. "
-  #     f"Please double check the existence of datasets and the spelling of their paths in the '.dataset_order' list. "
-  #     f"The full list of datasets that are found:\n  {format_list(paths)}."
-  #   )
+  extra = [entry for entry in dataset_order if entry not in paths]
+  if extra:
+    logger.info(
+      f"Removing '.dataset_order' entries from 'collection.json' for datasets that are not found: {format_list(extra)}. "
+      f"A dataset that is renamed or removed leaves its old entry behind."
+    )
 
-  missing = set(paths).difference(set(dataset_order))
-  if len(missing):
+  missing = sorted(set(paths).difference(dataset_order))
+  if missing:
     logger.info(
       f"Adding '.dataset_order' entries to 'collection.json' for the following datasets: {format_list(missing)}. "
       f"Please reorder them manually as needed. This order is used when displaying datasets of the collection in the "
       f"user interface."
     )
-    dataset_order += list(missing)
-  return dataset_order
+  return [entry for entry in dataset_order if entry in paths] + missing
 
 
 def sort_collections(collections, head=None, tail=None):
@@ -489,6 +486,12 @@ def main():
       collections = sort_collections(collections, head=["nextstrain"], tail=["community"])
       validate_shortcuts(collections)
 
+      remove_unreleased_outputs_of_missing_datasets(
+        args.output_dir,
+        collection_dirs=[relpath(dirname(path), args.input_dir) for path in collection_json_paths],
+        dataset_paths={dataset["path"] for collection in collections for dataset in collection["datasets"]},
+      )
+
     with reporter.stage("Build minimizer index"):
       minimizer_index = make_ref_search_index(all_refs)
 
@@ -533,6 +536,30 @@ def main():
 
   if reporter.error_count() > 0:
     sys.exit(1)
+
+
+def remove_unreleased_outputs_of_missing_datasets(
+  output_dir: str, collection_dirs: list[str], dataset_paths: set[str]
+) -> None:
+  """Remove the 'unreleased' output of each dataset of the given collections that is not in the input directory.
+
+  A dataset that is renamed or removed before its release leaves this output behind, and the upload publishes it.
+  Released versions stay, so that the data server keeps serving them.
+  """
+  output_root = Path(output_dir)
+  for collection_dir in collection_dirs:
+    collection_output = output_root / collection_dir
+    unreleased_dirs = sorted(p for p in collection_output.rglob("unreleased") if p.is_dir())
+    for unreleased in unreleased_dirs:
+      path = unreleased.parent.relative_to(output_root).as_posix()
+      if path in dataset_paths:
+        continue
+      logger.info(f"Removing the unreleased output of '{path}': the input directory has no dataset with this path")
+      rmrf(str(unreleased))
+      for parent in unreleased.parents:
+        if parent == collection_output or any(parent.iterdir()):
+          break
+        parent.rmdir()
 
 
 def dataset_has_changes(dataset_from_index, dataset_dir):
