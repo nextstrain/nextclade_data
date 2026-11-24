@@ -65,7 +65,8 @@
     "RdRPol"
   ],
   "version": {
-    "tag": "unreleased",
+    "updatedAt": "2026-11-24T15:17:06Z",
+    "tag": "2026-11-24--15-17-06Z",
     "compatibility": {
       "cli": "3.0.0-alpha.0",
       "web": "3.0.0-alpha.0"
